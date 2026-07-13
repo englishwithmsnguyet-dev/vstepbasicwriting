@@ -1927,7 +1927,7 @@ const nounsTheoryData = [
                 <div class="np-content">
                     <p><b>Khái niệm (<i>Danh từ ghép</i>):</b> Hai danh từ đứng cạnh nhau. Danh từ đứng trước làm chức năng bổ nghĩa, phân loại cho danh từ đứng sau.</p>
                     <div style="background: rgba(239,68,68,0.05); padding: 8px; border-left: 2px solid #ef4444; margin-bottom: 12px; font-size: 0.95rem;">
-                        <b>Lưu ý vàng:</b> Danh từ đứng trước (bổ nghĩa) thường luôn ở dạng <b>số ít</b>. (<i>Ví dụ: shoe store, không phải shoes store</i>).
+                        <b>Lưu ý vàng:</b> Danh từ đứng trước (bổ nghĩa) phần lớn ở dạng <b>số ít</b> (<i>Ví dụ: shoe store, book shop</i>). Tuy nhiên vẫn có một số ít ngoại lệ luôn dùng số nhiều như: <i>sports center, clothes shop, sales manager...</i>
                     </div>
                     <div class="np-examples">
                         <b>Ví dụ:</b><br>
