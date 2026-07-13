@@ -2130,17 +2130,8 @@ window.renderNounsDetail = function(activeTab = 'theory') {
                         </div>
 
                         <div id="correction_step_${idx}" style="display: none; flex-direction: column; gap: 12px; padding: 16px; background: #f8fafc; border-radius: 8px; border: 1px dashed #cbd5e1; margin-bottom: 16px;">
-                            <p style="font-size: 1rem; color: var(--text-main); font-weight: 500;">Sửa lại thành:</p>
-                            ${q.options.map((opt, oIdx) => {
-                                if (opt.includes("Giữ nguyên")) return '';
-                                return `
-                                <label style="display: flex; align-items: center; gap: 12px; padding: 12px 16px; background: white; border: 2px solid #e2e8f0; border-radius: 8px; cursor: pointer; transition: all 0.2s;" class="option-label" onclick="selectNounsCorrection(this, ${idx}, ${oIdx})">
-                                    <input type="radio" name="nounsq_${idx}" value="${oIdx}" style="display: none;">
-                                    <div class="radio-custom" style="width: 20px; height: 20px; border-radius: 50%; border: 2px solid #cbd5e1; position: relative;"></div>
-                                    <span style="font-size: 1.1rem; font-weight: 500; color: #334155;">${opt}</span>
-                                </label>
-                                `;
-                            }).join('')}
+                            <p style="font-size: 1rem; color: var(--text-main); font-weight: 500;">Nhập từ/cụm từ sửa lại cho đúng:</p>
+                            <input type="text" id="correction_input_${idx}" placeholder="Nhập đáp án của bạn..." style="padding: 12px 16px; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 1.1rem; outline: none; transition: border-color 0.2s;" onfocus="this.style.borderColor='var(--primary-color)'" onblur="this.style.borderColor='#e2e8f0'" oninput="window.nounsAnswers[${idx}].correction = this.value; document.getElementById('nounsexp_${idx}').style.display='none';">
                         </div>
 
                         <div id="nounsexp_${idx}" style="display: none; margin-top: 16px; padding: 12px 16px; border-radius: 8px; font-size: 1.05rem;"></div>
@@ -2266,26 +2257,6 @@ window.selectTrueFalseNouns = function(qIdx, isTrue) {
     document.getElementById(`nounsexp_${qIdx}`).style.display = 'none';
 }
 
-window.selectNounsCorrection = function(labelEl, qIdx, oIdx) {
-    const parent = labelEl.closest('.correction-step') || document.getElementById(`correction_step_${qIdx}`);
-    parent.querySelectorAll('.option-label').forEach(lbl => {
-        lbl.style.borderColor = '#e2e8f0';
-        lbl.style.background = 'white';
-        lbl.querySelector('.radio-custom').style.background = 'transparent';
-        lbl.querySelector('.radio-custom').style.borderColor = '#cbd5e1';
-    });
-
-    labelEl.style.borderColor = 'var(--primary-color)';
-    labelEl.style.background = 'rgba(87,70,227,0.05)';
-    labelEl.querySelector('.radio-custom').style.background = 'var(--primary-color)';
-    labelEl.querySelector('.radio-custom').style.borderColor = 'var(--primary-color)';
-    
-    labelEl.querySelector('input').checked = true;
-    window.nounsAnswers[qIdx].correction = oIdx;
-    
-    // hide explanation if showing
-    document.getElementById(`nounsexp_${qIdx}`).style.display = 'none';
-}
 
 window.checkNounsSingleAnswer = function(idx) {
     const ans = window.nounsAnswers[idx];
@@ -2297,10 +2268,10 @@ window.checkNounsSingleAnswer = function(idx) {
         expDiv.innerHTML = '<b>⚠️ Bạn chưa chọn!</b> Vui lòng xác định từ in đậm là ĐÚNG hay SAI trước khi kiểm tra.';
         return;
     }
-    if (ans.tf === false && ans.correction === null) {
+    if (ans.tf === false && (!ans.correction || ans.correction.trim() === '')) {
         expDiv.style.display = 'block';
         expDiv.style.background = '#fffbeb'; expDiv.style.color = '#b45309'; expDiv.style.borderLeft = '4px solid #f59e0b';
-        expDiv.innerHTML = '<b>⚠️ Bạn chưa chọn phương án sửa!</b> Vui lòng chọn một đáp án sửa lỗi.';
+        expDiv.innerHTML = '<b>⚠️ Bạn chưa nhập phương án sửa!</b> Vui lòng nhập từ bạn muốn sửa.';
         return;
     }
     
@@ -2322,7 +2293,12 @@ window.checkNounsSingleAnswer = function(idx) {
             expDiv.style.background = '#fef2f2'; expDiv.style.color = '#991b1b'; expDiv.style.borderLeft = '4px solid #ef4444';
             expDiv.innerHTML = `<b>❌ SAI RỒI!</b> Từ in đậm bị sai ngữ pháp. Đáp án đúng là <b>${nounsPractice2Data[idx].options[correctIdx]}</b>. ${nounsPractice2Data[idx].explanation}`;
         } else {
-            if (ans.correction === correctIdx) {
+            const userCorrection = ans.correction.trim().toLowerCase();
+            const correctStr = nounsPractice2Data[idx].options[correctIdx].toLowerCase();
+            const validAnswers = correctStr.split('/').map(s => s.trim());
+            const isCorrect = validAnswers.includes(userCorrection);
+
+            if (isCorrect) {
                 expDiv.style.background = '#f0fdf4'; expDiv.style.color = '#166534'; expDiv.style.borderLeft = '4px solid #22c55e';
                 expDiv.innerHTML = `<b>✅ CHÍNH XÁC!</b> Bạn đã tìm và sửa lỗi rất chuẩn. ${nounsPractice2Data[idx].explanation}`;
             } else {
