@@ -2856,7 +2856,7 @@ window.renderPronounsDetail = function(activeTab = 'theory') {
                 </div>
                 <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 16px; padding-left: 44px;">
                     ${q.options.map((opt, oIdx) => `
-                        <label style="display: flex; align-items: center; gap: 8px; padding: 10px 16px; background: #f8fafc; border: 2px solid #e2e8f0; border-radius: 8px; cursor: pointer; transition: all 0.2s;" onclick="window.pronounsAnswers1[${idx}] = ${oIdx}; document.getElementById('proexp1_${idx}').style.display='none';">
+                        <label style="display: flex; align-items: center; gap: 8px; padding: 10px 16px; background: ${window.pronounsAnswers1[idx] === oIdx ? '#eff6ff' : '#f8fafc'}; border: 2px solid ${window.pronounsAnswers1[idx] === oIdx ? 'var(--primary-color)' : '#e2e8f0'}; border-radius: 8px; cursor: pointer; transition: all 0.2s;" onclick="window.selectPronouns1Option(this, ${idx}, ${oIdx})">
                             <input type="radio" name="pro_q1_${idx}" value="${oIdx}" style="display:none;" ${window.pronounsAnswers1[idx] === oIdx ? 'checked' : ''}>
                             <div class="radio-custom" style="width: 18px; height: 18px; border-radius: 50%; border: 2px solid #cbd5e1; background: ${window.pronounsAnswers1[idx] === oIdx ? 'var(--primary-color)' : 'transparent'};"></div>
                             <span style="font-weight: 500;">${opt}</span>
@@ -2919,6 +2919,29 @@ window.renderPronounsDetail = function(activeTab = 'theory') {
         ${contentHtml}
     `;
 }
+
+window.selectPronouns1Option = function(el, idx, oIdx) {
+    window.pronounsAnswers1[idx] = oIdx;
+    const exp = document.getElementById(`proexp1_${idx}`);
+    if (exp) exp.style.display = 'none';
+    const container = el.parentElement;
+    const labels = container.querySelectorAll('label');
+    labels.forEach((label, lIdx) => {
+        const radioCircle = label.querySelector('.radio-custom');
+        const radioInput = label.querySelector('input[type="radio"]');
+        if (lIdx === oIdx) {
+            label.style.background = '#eff6ff';
+            label.style.borderColor = 'var(--primary-color)';
+            if (radioCircle) radioCircle.style.background = 'var(--primary-color)';
+            if (radioInput) radioInput.checked = true;
+        } else {
+            label.style.background = '#f8fafc';
+            label.style.borderColor = '#e2e8f0';
+            if (radioCircle) radioCircle.style.background = 'transparent';
+            if (radioInput) radioInput.checked = false;
+        }
+    });
+};
 
 window.checkPronouns1 = function(idx) {
     const ans = window.pronounsAnswers1[idx];
