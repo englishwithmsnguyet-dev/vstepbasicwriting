@@ -2076,13 +2076,13 @@ const nounsPractice2Data = [
 
 const nounsPractice3Data = [
     { q: "một môi trường học tập tích cực", a: ["a positive learning environment"] },
-    { q: "những lợi ích của việc học trực tuyến", a: ["the benefits of online learning", "benefits of online learning"] },
+    { q: "những lợi ích của việc học trực tuyến", a: ["the benefits of online learning", "benefits of online learning"], exp: "Nên có mạo từ 'the' vì cụm 'N1 of N2' chỉ những lợi ích xác định của một việc cụ thể." },
     { q: "các kỹ năng mềm quan trọng", a: ["important soft skills"] },
-    { q: "những nguyên nhân của ô nhiễm không khí", a: ["the causes of air pollution", "causes of air pollution"] },
+    { q: "những nguyên nhân của ô nhiễm không khí", a: ["the causes of air pollution", "causes of air pollution"], exp: "Nên có mạo từ 'the' vì cụm 'N1 of N2' chỉ những nguyên nhân xác định." },
     { q: "một bài kiểm tra cuối kỳ", a: ["a final exam", "a final test"] },
     { q: "một tách cà phê nóng", a: ["a hot cup of coffee", "a cup of hot coffee"] },
     { q: "nhiều thông tin quan trọng", a: ["a lot of important information", "much important information", "lots of important information"] },
-    { q: "những học sinh của lớp này", a: ["the students of this class", "the students in this class", "this class's students"] },
+    { q: "những học sinh của lớp này", a: ["the students of this class", "the students in this class", "this class's students"], exp: "Bắt buộc có mạo từ 'the' (the students) vì đây là những học sinh xác định thuộc về một lớp học cụ thể, không phải học sinh nói chung." },
     { q: "các kỹ năng mềm thiết yếu", a: ["essential soft skills", "crucial soft skills", "necessary soft skills"] },
     { q: "kết nối Internet không ổn định", a: ["unstable internet connection", "an unstable internet connection"] },
     { q: "những thiết bị công nghệ hiện đại", a: ["modern technological devices", "modern technology devices"] },
@@ -2334,10 +2334,10 @@ window.checkNounsTranslation = function(idx) {
     expDiv.style.display = 'block';
     if (isCorrect) {
         expDiv.style.background = '#f0fdf4'; expDiv.style.color = '#166534'; expDiv.style.borderLeft = '4px solid #22c55e';
-        expDiv.innerHTML = `<b>✅ CHÍNH XÁC!</b>`;
+        expDiv.innerHTML = `<b>✅ CHÍNH XÁC!</b>` + (nounsPractice3Data[idx].exp ? ` ${nounsPractice3Data[idx].exp}` : '');
     } else {
         expDiv.style.background = '#fef2f2'; expDiv.style.color = '#991b1b'; expDiv.style.borderLeft = '4px solid #ef4444';
-        expDiv.innerHTML = `<b>❌ CHƯA CHÍNH XÁC.</b> Tham khảo: <b>${validAnswers[0]}</b>`;
+        expDiv.innerHTML = `<b>❌ CHƯA CHÍNH XÁC.</b> Tham khảo: <b>${validAnswers[0]}</b>` + (nounsPractice3Data[idx].exp ? `<div style="margin-top: 8px; font-size: 0.95rem; color: #b91c1c;">💡 <b>Giải thích:</b> ${nounsPractice3Data[idx].exp}</div>` : '');
     }
 }
 
