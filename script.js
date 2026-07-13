@@ -2900,15 +2900,17 @@ window.renderPronounsDetail = function(activeTab = 'theory') {
         `;
     }
 
-    const modalTitle = document.getElementById('modal-title');
-    const modalIcon = document.getElementById('modal-icon');
-    const modalContent = document.getElementById('modal-content-body');
-    const modal = document.getElementById('lesson-modal');
-
-    modalTitle.textContent = "CHỦ ĐIỂM 02: ĐẠI TỪ (PRONOUNS)";
-    modalIcon.textContent = "✨";
-    modalContent.innerHTML = tabsHtml + contentHtml;
-    modal.classList.add('active');
+    contentWrapper.innerHTML = `
+        <div class="topic-detail-header" style="margin-bottom: 32px;">
+            <button class="btn-back" onclick="renderView('chapter2')" style="margin-bottom: 16px; background: none; border: none; color: var(--primary-color); font-weight: bold; cursor: pointer; display: flex; align-items: center; gap: 8px; font-size: 1.05rem;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                QUAY LẠI CHƯƠNG 02
+            </button>
+            <h1 class="page-title" style="text-align: left; margin-bottom: 24px;">CHỦ ĐIỂM 02: ĐẠI TỪ (PRONOUNS)</h1>
+            ${tabsHtml}
+        </div>
+        ${contentHtml}
+    `;
 }
 
 window.checkPronouns1 = function(idx) {
