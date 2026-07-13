@@ -2307,8 +2307,8 @@ window.checkNounsDragDrop = function() {
     });
 
     const res = document.getElementById('drag-result');
-    res.innerHTML = `Bạn đã kéo đúng ${p1Correct}/12 từ.`;
-    if(p1Correct === 12) {
+    res.innerHTML = `Bạn đã kéo đúng ${p1Correct}/10 từ.`;
+    if(p1Correct === 10) {
         res.style.color = '#10b981';
     } else {
         res.style.color = '#f59e0b';
