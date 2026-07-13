@@ -2111,7 +2111,8 @@ window.renderNounsDetail = function(activeTab = 'theory') {
         `).join('');
         
         // Bài 2: Sửa lỗi sai
-        const errorCorrectionList = nounsPractice2Data.map((q, idx) => `
+        const errorCorrectionList = nounsPractice2Data.map((q, idx) => {
+            return `
             <div class="quiz-item" style="background: var(--bg-card); border-radius: 12px; padding: 24px; margin-bottom: 16px; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color);">
                 <div style="display: flex; gap: 16px; align-items: flex-start;">
                     <div style="background: var(--primary-light); color: var(--primary-color); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0; font-size: 1.2rem;">
@@ -2119,15 +2120,29 @@ window.renderNounsDetail = function(activeTab = 'theory') {
                     </div>
                     <div style="flex: 1;">
                         <p style="font-size: 1.15rem; font-weight: 500; margin-bottom: 16px; color: var(--text-main);">${q.question}</p>
-                        <div style="display: flex; flex-direction: column; gap: 12px;">
-                            ${q.options.map((opt, oIdx) => `
-                                <label style="display: flex; align-items: center; gap: 12px; padding: 12px 16px; background: #f8fafc; border: 2px solid #e2e8f0; border-radius: 8px; cursor: pointer; transition: all 0.2s;" class="option-label" onclick="selectNounsOption(this, ${idx}, ${oIdx})">
+                        
+                        <div style="margin-bottom: 16px;">
+                            <p style="font-size: 1rem; color: var(--text-muted); margin-bottom: 8px;">Từ in đậm trên đúng hay sai?</p>
+                            <div style="display: flex; gap: 12px;">
+                                <button id="btn_true_${idx}" onclick="selectTrueFalseNouns(${idx}, true)" style="flex: 1; padding: 10px; border: 2px solid #e2e8f0; background: white; color: #64748b; border-radius: 8px; font-weight: bold; cursor: pointer; transition: all 0.2s;">ĐÚNG</button>
+                                <button id="btn_false_${idx}" onclick="selectTrueFalseNouns(${idx}, false)" style="flex: 1; padding: 10px; border: 2px solid #e2e8f0; background: white; color: #64748b; border-radius: 8px; font-weight: bold; cursor: pointer; transition: all 0.2s;">SAI</button>
+                            </div>
+                        </div>
+
+                        <div id="correction_step_${idx}" style="display: none; flex-direction: column; gap: 12px; padding: 16px; background: #f8fafc; border-radius: 8px; border: 1px dashed #cbd5e1; margin-bottom: 16px;">
+                            <p style="font-size: 1rem; color: var(--text-main); font-weight: 500;">Sửa lại thành:</p>
+                            ${q.options.map((opt, oIdx) => {
+                                if (opt.includes("Giữ nguyên")) return '';
+                                return `
+                                <label style="display: flex; align-items: center; gap: 12px; padding: 12px 16px; background: white; border: 2px solid #e2e8f0; border-radius: 8px; cursor: pointer; transition: all 0.2s;" class="option-label" onclick="selectNounsCorrection(this, ${idx}, ${oIdx})">
                                     <input type="radio" name="nounsq_${idx}" value="${oIdx}" style="display: none;">
                                     <div class="radio-custom" style="width: 20px; height: 20px; border-radius: 50%; border: 2px solid #cbd5e1; position: relative;"></div>
                                     <span style="font-size: 1.1rem; font-weight: 500; color: #334155;">${opt}</span>
                                 </label>
-                            `).join('')}
+                                `;
+                            }).join('')}
                         </div>
+
                         <div id="nounsexp_${idx}" style="display: none; margin-top: 16px; padding: 12px 16px; border-radius: 8px; font-size: 1.05rem;"></div>
                         <div style="margin-top: 16px;">
                             <button onclick="checkNounsSingleAnswer(${idx})" style="padding: 8px 20px; background: white; color: var(--primary-color); border: 2px solid var(--primary-color); border-radius: 20px; font-weight: bold; cursor: pointer; transition: all 0.2s;" onmouseover="this.style.background='var(--primary-color)'; this.style.color='white'" onmouseout="this.style.background='white'; this.style.color='var(--primary-color)'">Kiểm tra</button>
@@ -2135,7 +2150,8 @@ window.renderNounsDetail = function(activeTab = 'theory') {
                     </div>
                 </div>
             </div>
-        `).join('');
+            `;
+        }).join('');
 
         contentHtml = `
             <div style="margin-top: 24px;">
@@ -2190,7 +2206,7 @@ window.renderNounsDetail = function(activeTab = 'theory') {
     `;
     
     // reset global vars for nouns quiz
-    window.nounsAnswers = new Array(nounsPractice2Data.length).fill(null);
+    window.nounsAnswers = new Array(nounsPractice2Data.length).fill(null).map(() => ({ tf: null, correction: null }));
 }
 
 // DRAG AND DROP LOGIC
@@ -2228,11 +2244,33 @@ window.dropPool = function(ev) {
     container.appendChild(el);
 }
 
-window.selectNounsOption = function(labelEl, qIdx, oIdx) {
-    const parent = labelEl.closest('.quiz-item');
+window.selectTrueFalseNouns = function(qIdx, isTrue) {
+    const btnTrue = document.getElementById(`btn_true_${qIdx}`);
+    const btnFalse = document.getElementById(`btn_false_${qIdx}`);
+    const correctionStep = document.getElementById(`correction_step_${qIdx}`);
+    
+    // Reset buttons
+    btnTrue.style.background = 'white'; btnTrue.style.color = '#64748b'; btnTrue.style.borderColor = '#e2e8f0';
+    btnFalse.style.background = 'white'; btnFalse.style.color = '#64748b'; btnFalse.style.borderColor = '#e2e8f0';
+    
+    if (isTrue) {
+        btnTrue.style.background = '#e0e7ff'; btnTrue.style.color = '#4338ca'; btnTrue.style.borderColor = '#4338ca';
+        correctionStep.style.display = 'none';
+    } else {
+        btnFalse.style.background = '#e0e7ff'; btnFalse.style.color = '#4338ca'; btnFalse.style.borderColor = '#4338ca';
+        correctionStep.style.display = 'flex';
+    }
+    window.nounsAnswers[qIdx].tf = isTrue;
+    
+    // hide explanation if showing
+    document.getElementById(`nounsexp_${qIdx}`).style.display = 'none';
+}
+
+window.selectNounsCorrection = function(labelEl, qIdx, oIdx) {
+    const parent = labelEl.closest('.correction-step') || document.getElementById(`correction_step_${qIdx}`);
     parent.querySelectorAll('.option-label').forEach(lbl => {
         lbl.style.borderColor = '#e2e8f0';
-        lbl.style.background = '#f8fafc';
+        lbl.style.background = 'white';
         lbl.querySelector('.radio-custom').style.background = 'transparent';
         lbl.querySelector('.radio-custom').style.borderColor = '#cbd5e1';
     });
@@ -2243,34 +2281,55 @@ window.selectNounsOption = function(labelEl, qIdx, oIdx) {
     labelEl.querySelector('.radio-custom').style.borderColor = 'var(--primary-color)';
     
     labelEl.querySelector('input').checked = true;
-    window.nounsAnswers[qIdx] = oIdx;
+    window.nounsAnswers[qIdx].correction = oIdx;
+    
+    // hide explanation if showing
+    document.getElementById(`nounsexp_${qIdx}`).style.display = 'none';
 }
 
-
 window.checkNounsSingleAnswer = function(idx) {
-    const selected = window.nounsAnswers[idx];
+    const ans = window.nounsAnswers[idx];
     const expDiv = document.getElementById(`nounsexp_${idx}`);
-    if (selected === null || selected === undefined) {
+    
+    if (ans.tf === null) {
         expDiv.style.display = 'block';
-        expDiv.style.background = '#fffbeb'; // yellow
-        expDiv.style.color = '#b45309';
-        expDiv.style.borderLeft = '4px solid #f59e0b';
-        expDiv.innerHTML = '<b>⚠️ Bạn chưa chọn đáp án!</b> Vui lòng chọn một đáp án trước khi kiểm tra.';
+        expDiv.style.background = '#fffbeb'; expDiv.style.color = '#b45309'; expDiv.style.borderLeft = '4px solid #f59e0b';
+        expDiv.innerHTML = '<b>⚠️ Bạn chưa chọn!</b> Vui lòng xác định từ in đậm là ĐÚNG hay SAI trước khi kiểm tra.';
+        return;
+    }
+    if (ans.tf === false && ans.correction === null) {
+        expDiv.style.display = 'block';
+        expDiv.style.background = '#fffbeb'; expDiv.style.color = '#b45309'; expDiv.style.borderLeft = '4px solid #f59e0b';
+        expDiv.innerHTML = '<b>⚠️ Bạn chưa chọn phương án sửa!</b> Vui lòng chọn một đáp án sửa lỗi.';
         return;
     }
     
     const correctIdx = nounsPractice2Data[idx].answer;
+    const isActuallyCorrect = nounsPractice2Data[idx].options[correctIdx].includes("Giữ nguyên");
+    
     expDiv.style.display = 'block';
-    if (selected === correctIdx) {
-        expDiv.style.background = '#f0fdf4';
-        expDiv.style.color = '#166534';
-        expDiv.style.borderLeft = '4px solid #22c55e';
-        expDiv.innerHTML = `<b>✅ CHÍNH XÁC!</b> ${nounsPractice2Data[idx].explanation}`;
+    
+    if (isActuallyCorrect) {
+        if (ans.tf === true) {
+            expDiv.style.background = '#f0fdf4'; expDiv.style.color = '#166534'; expDiv.style.borderLeft = '4px solid #22c55e';
+            expDiv.innerHTML = `<b>✅ CHÍNH XÁC!</b> ${nounsPractice2Data[idx].explanation}`;
+        } else {
+            expDiv.style.background = '#fef2f2'; expDiv.style.color = '#991b1b'; expDiv.style.borderLeft = '4px solid #ef4444';
+            expDiv.innerHTML = `<b>❌ SAI RỒI!</b> Từ này vốn dĩ đã đúng. ${nounsPractice2Data[idx].explanation}`;
+        }
     } else {
-        expDiv.style.background = '#fef2f2';
-        expDiv.style.color = '#991b1b';
-        expDiv.style.borderLeft = '4px solid #ef4444';
-        expDiv.innerHTML = `<b>❌ SAI RỒI!</b> Đáp án đúng là <b>${nounsPractice2Data[idx].options[correctIdx]}</b>.<br>${nounsPractice2Data[idx].explanation}`;
+        if (ans.tf === true) {
+            expDiv.style.background = '#fef2f2'; expDiv.style.color = '#991b1b'; expDiv.style.borderLeft = '4px solid #ef4444';
+            expDiv.innerHTML = `<b>❌ SAI RỒI!</b> Từ in đậm bị sai ngữ pháp. Đáp án đúng là <b>${nounsPractice2Data[idx].options[correctIdx]}</b>. ${nounsPractice2Data[idx].explanation}`;
+        } else {
+            if (ans.correction === correctIdx) {
+                expDiv.style.background = '#f0fdf4'; expDiv.style.color = '#166534'; expDiv.style.borderLeft = '4px solid #22c55e';
+                expDiv.innerHTML = `<b>✅ CHÍNH XÁC!</b> Bạn đã tìm và sửa lỗi rất chuẩn. ${nounsPractice2Data[idx].explanation}`;
+            } else {
+                expDiv.style.background = '#fef2f2'; expDiv.style.color = '#991b1b'; expDiv.style.borderLeft = '4px solid #ef4444';
+                expDiv.innerHTML = `<b>❌ SAI RỒI!</b> Bạn đã phát hiện lỗi đúng nhưng sửa chưa đúng. Đáp án sửa đúng phải là <b>${nounsPractice2Data[idx].options[correctIdx]}</b>. ${nounsPractice2Data[idx].explanation}`;
+            }
+        }
     }
 }
 
