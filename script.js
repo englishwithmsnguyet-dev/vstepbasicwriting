@@ -2814,6 +2814,47 @@ const pronounsPractice2Data = [
     }
 ];
 
+const pronounsParagraphData = {
+    segments: [
+        { text: "(1 - tôi) ", placeholder: "1. tôi" },
+        { text: " am working on a group presentation with my friends. (2 - của chúng tôi) ", placeholder: "2. của chúng tôi" },
+        { text: " group includes Khoa, Mai, and me. Last week, our teacher gave (3 - chúng tôi) ", placeholder: "3. chúng tôi" },
+        { text: " the topic \"air pollution in big cities.\" Khoa is very responsible. (4 - anh ấy) ", placeholder: "4. anh ấy" },
+        { text: " found many useful statistics and shared them with us. We really appreciate (5 - của anh ấy) ", placeholder: "5. của anh ấy" },
+        { text: " hard work and dedication. Mai also did a great job. (6 - cô ấy) ", placeholder: "6. cô ấy" },
+        { text: " designed a colorful poster for the presentation. Everyone liked (7 - của cô ấy) ", placeholder: "7. của cô ấy" },
+        { text: " idea because it was creative and eye-catching. (8 - chúng tôi) ", placeholder: "8. chúng tôi" },
+        { text: " practiced together every afternoon after class. Sometimes, our teacher stayed to give (9 - chúng tôi) ", placeholder: "9. chúng tôi" },
+        { text: " feedback. She said, \"(10 - các em) ", placeholder: "10. các em" },
+        { text: " are making good progress, but don't forget to check your sources.\" I replied, \"Yes, thank you for helping (11 - chúng em) ", placeholder: "11. chúng em" },
+        { text: " improve.\" During the process, I also used a learning app. (12 - nó) ", placeholder: "12. nó" },
+        { text: " sends daily tips and reminds me to review. I like (13 - của nó) ", placeholder: "13. của nó" },
+        { text: " design because it's simple and user-friendly. Tomorrow is our presentation day. (14 - chúng tôi) ", placeholder: "14. chúng tôi" },
+        { text: " hope everything will go well. Khoa is a bit nervous, but I told (15 - anh ấy) ", placeholder: "15. anh ấy" },
+        { text: " to just do his best. Our teacher believes in (16 - chúng tôi) ", placeholder: "16. chúng tôi" },
+        { text: ", and that gives us confidence." }
+    ],
+    answers: ["I", "Our", "us", "He", "his", "She", "her", "We", "us", "You", "us", "It", "its", "We", "him", "us"],
+    explanations: [
+        "Đứng trước động từ 'am' và đóng vai trò làm chủ ngữ ngôi số ít -> dùng đại từ nhân xưng 'I'.",
+        "Đứng trước danh từ 'group' bổ nghĩa sở hữu -> dùng tính từ sở hữu 'Our' (viết hoa đầu câu).",
+        "Đứng sau động từ 'gave' (tặng cho ai cái gì) đóng vai trò tân ngữ -> dùng đại từ tân ngữ 'us'.",
+        "Đứng trước động từ 'found' làm chủ ngữ cho câu mới -> dùng đại từ nhân xưng 'He' (viết hoa).",
+        "Đứng trước danh từ 'hard work' bổ nghĩa sở hữu -> dùng tính từ sở hữu 'his'.",
+        "Đứng trước động từ 'designed' làm chủ ngữ chỉ Mai (cô ấy) -> dùng đại từ nhân xưng 'She' (viết hoa).",
+        "Đứng trước danh từ 'idea' để sở hữu -> dùng tính từ sở hữu 'her'.",
+        "Đứng trước động từ 'practiced' làm chủ ngữ đại diện cho cả nhóm (chúng tôi) -> dùng đại từ nhân xưng 'We' (viết hoa).",
+        "Đứng sau cụm động từ 'give' đóng vai trò tân ngữ -> dùng đại từ tân ngữ 'us'.",
+        "Đứng trước động từ 'are' làm chủ ngữ khi giáo viên đối thoại trực tiếp (các em) -> dùng đại từ nhân xưng 'You' (viết hoa).",
+        "Đứng sau cụm giới từ 'helping' làm tân ngữ -> dùng đại từ tân ngữ 'us' (chúng em).",
+        "Đứng trước động từ 'sends' làm chủ ngữ thay thế cho 'app' (nó) -> dùng đại từ nhân xưng 'It' (viết hoa).",
+        "Đứng trước danh từ 'design' bổ nghĩa sở hữu cho ứng dụng (của nó) -> dùng tính từ sở hữu 'its'.",
+        "Đứng trước động từ 'hope' làm chủ ngữ chỉ cả nhóm (chúng tôi) -> dùng đại từ nhân xưng 'We' (viết hoa).",
+        "Đứng sau động từ 'told' làm tân ngữ chỉ Khoa (anh ấy) -> dùng đại từ tân ngữ 'him'.",
+        "Đứng sau giới từ 'believes in' đóng vai trò tân ngữ -> dùng đại từ tân ngữ 'us'."
+    ]
+};
+
 
 window.renderPronounsDetail = function(activeTab = 'theory') {
     let tabsHtml = `
@@ -2841,12 +2882,20 @@ window.renderPronounsDetail = function(activeTab = 'theory') {
                 </div>
             </div>
         `;
-    } else {
         // Initialize tracking arrays if not exists
         if (!window.pronounsAnswers1) {
             window.pronounsAnswers1 = new Array(pronounsPractice1Data.length).fill(null);
             window.pronounsAnswers2 = new Array(pronounsPractice2Data.length).fill('');
+            window.pronounsAnswersPara = new Array(16).fill('');
         }
+
+        let paraHtml = '';
+        pronounsParagraphData.segments.forEach((seg, idx) => {
+            paraHtml += seg.text;
+            if (idx < pronounsParagraphData.answers.length) {
+                paraHtml += `<input type="text" id="pro_para_${idx}" class="para-input" placeholder="(${idx + 1})" value="${window.pronounsAnswersPara[idx] || ''}" oninput="window.pronounsAnswersPara[idx] = this.value; document.getElementById('pro_para_explanation').style.display='none';" style="width: 80px; padding: 4px 8px; border: 2px solid #cbd5e1; border-radius: 6px; font-size: 1.05rem; text-align: center; font-weight: 700; color: var(--primary-color); outline: none; margin: 0 4px; transition: all 0.2s; background: white;">`;
+            }
+        });
 
         const p1Html = pronounsPractice1Data.map((q, idx) => `
             <div class="quiz-item" style="background: var(--bg-card); border-radius: 12px; padding: 20px; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color);">
@@ -2901,6 +2950,29 @@ window.renderPronounsDetail = function(activeTab = 'theory') {
                     <p style="color: var(--text-muted); margin-bottom: 24px;">Sử dụng Đại từ chỉ định (This/These/That/Those) để thay thế và liên kết ý của câu trước đó. Kỹ năng này rất hữu ích trong Writing.</p>
                     <div style="display: flex; flex-direction: column; gap: 24px;">
                         ${p2Html}
+                    </div>
+                </div>
+
+                <hr style="border-top: 2px solid var(--border-color); margin-bottom: 40px;">
+
+                <div style="margin-bottom: 40px;">
+                    <h2 style="color: var(--primary-color); font-size: 1.4rem; margin-bottom: 16px;">BÀI 3: LUYỆN TẬP ĐIỀN ĐẠI TỪ TRONG ĐOẠN VĂN</h2>
+                    <p style="color: var(--text-muted); margin-bottom: 24px;">Đọc đoạn văn kể về công việc thuyết trình nhóm dưới đây và điền Đại từ nhân xưng, Đại từ tân ngữ, Tính từ sở hữu thích hợp vào chỗ trống.</p>
+                    <div class="quiz-item" style="background: var(--bg-card); border-radius: 12px; padding: 24px; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color); line-height: 2.2;">
+                        <p style="font-size: 1.15rem; color: var(--text-main); font-weight: 500; text-align: justify; margin: 0;">
+                            ${paraHtml}
+                        </p>
+                        <div style="margin-top: 28px; text-align: center;">
+                            <button onclick="window.checkPronounsParagraph()" style="padding: 10px 28px; background: var(--primary-color); color: white; border: none; border-radius: 24px; font-weight: bold; cursor: pointer; font-size: 1.05rem; box-shadow: 0 4px 12px rgba(99,102,241,0.2); transition: all 0.2s;">
+                                Kiểm tra đáp án
+                            </button>
+                        </div>
+                        <div id="pro_para_explanation" style="display: none; margin-top: 28px; padding: 20px; border-radius: 12px; background: #f8fafc; border: 1px solid var(--border-color);">
+                            <h3 style="color: var(--primary-color); font-size: 1.2rem; margin-bottom: 16px;">Giải thích chi tiết:</h3>
+                            <div id="pro_para_exp_list" style="margin: 0; font-size: 1rem; line-height: 1.8; color: var(--text-main);">
+                                <!-- Result and explanations list -->
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -2996,4 +3068,67 @@ window.checkPronouns2 = function(idx) {
         expDiv.style.background = '#fef2f2'; expDiv.style.color = '#991b1b'; expDiv.style.borderLeft = '4px solid #ef4444';
         expDiv.innerHTML = `<b>❌ CHƯA ĐÚNG.</b> Tham khảo: <b>${validAnswers[0]}</b>. ${pronounsPractice2Data[idx].exp}`;
     }
+}
+
+window.checkPronounsParagraph = function() {
+    const data = pronounsParagraphData;
+    const expDiv = document.getElementById('pro_para_explanation');
+    const expList = document.getElementById('pro_para_exp_list');
+    
+    let html = '';
+    let correctCount = 0;
+    
+    data.answers.forEach((correctAnswer, idx) => {
+        const input = document.getElementById(`pro_para_${idx}`);
+        if (!input) return;
+        
+        const val = input.value.trim();
+        const isCorrect = val.toLowerCase() === correctAnswer.toLowerCase();
+        
+        if (isCorrect) {
+            input.style.borderColor = '#22c55e';
+            input.style.background = '#f0fdf4';
+            input.style.color = '#15803d';
+            correctCount++;
+            html += `<li style="margin-bottom: 8px;"><span style="color:#15803d; font-weight:bold;">Câu ${idx + 1} (Đúng):</span> Đáp án là <b>${correctAnswer}</b>. ${data.explanations[idx]}</li>`;
+        } else {
+            input.style.borderColor = '#ef4444';
+            input.style.background = '#fef2f2';
+            input.style.color = '#b91c1c';
+            html += `<li style="margin-bottom: 8px;"><span style="color:#b91c1c; font-weight:bold;">Câu ${idx + 1} (Sai):</span> Bạn điền "${val || 'trống'}", đáp án đúng là <b style="color:#15803d;">${correctAnswer}</b>. ${data.explanations[idx]}</li>`;
+        }
+    });
+    
+    const summaryHtml = `<div style="background: ${correctCount === data.answers.length ? '#f0fdf4' : '#fffbeb'}; border-left: 4px solid ${correctCount === data.answers.length ? '#22c55e' : '#f59e0b'}; padding: 12px; margin-bottom: 16px; border-radius: 4px; font-weight: bold; color: ${correctCount === data.answers.length ? '#166534' : '#b45309'}; font-size: 1.1rem;">
+        📊 Kết quả: Bạn làm đúng ${correctCount} / ${data.answers.length} câu.
+    </div>`;
+    
+    expList.innerHTML = summaryHtml + '<ol style="padding-left: 20px; margin: 0;">' + html + '</ol>';
+    expDiv.style.display = 'block';
+    
+    try {
+        const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        const playTone = (freq, duration, type) => {
+            const osc = audioCtx.createOscillator();
+            const gain = audioCtx.createGain();
+            osc.connect(gain);
+            gain.connect(audioCtx.destination);
+            osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
+            osc.type = type;
+            gain.gain.setValueAtTime(0.1, audioCtx.currentTime);
+            gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + duration);
+            osc.start();
+            osc.stop(audioCtx.currentTime + duration);
+        };
+        if (correctCount === data.answers.length) {
+            playTone(523.25, 0.15, 'sine'); // C5
+            setTimeout(() => playTone(659.25, 0.15, 'sine'), 150); // E5
+            setTimeout(() => playTone(783.99, 0.3, 'sine'), 300); // G5
+        } else if (correctCount > 0) {
+            playTone(523.25, 0.15, 'sine');
+            setTimeout(() => playTone(659.25, 0.2, 'sine'), 150);
+        } else {
+            playTone(220, 0.3, 'sawtooth'); // A3
+        }
+    } catch(e) {}
 }
