@@ -2072,6 +2072,30 @@ const nounsPractice2Data = [
     }
 ];
 
+const nounsPractice3Data = [
+    { q: "một môi trường học tập tích cực", a: ["a positive learning environment"] },
+    { q: "những lợi ích của việc học trực tuyến", a: ["the benefits of online learning", "benefits of online learning"] },
+    { q: "các kỹ năng mềm quan trọng", a: ["important soft skills"] },
+    { q: "những nguyên nhân của ô nhiễm không khí", a: ["the causes of air pollution", "causes of air pollution"] },
+    { q: "một bài kiểm tra cuối kỳ", a: ["a final exam", "a final test"] },
+    { q: "một tách cà phê nóng", a: ["a hot cup of coffee", "a cup of hot coffee"] },
+    { q: "nhiều thông tin quan trọng", a: ["a lot of important information", "much important information", "lots of important information"] },
+    { q: "những học sinh của lớp này", a: ["the students of this class", "the students in this class", "this class's students"] },
+    { q: "các kỹ năng mềm thiết yếu", a: ["essential soft skills", "crucial soft skills", "necessary soft skills"] },
+    { q: "kết nối Internet không ổn định", a: ["unstable internet connection", "an unstable internet connection"] },
+    { q: "những thiết bị công nghệ hiện đại", a: ["modern technological devices", "modern technology devices"] },
+    { q: "ngày tốt nghiệp của tôi", a: ["my graduation day"] },
+    { q: "sức khoẻ tinh thần của chúng ta", a: ["our mental health"] },
+    { q: "những thói quen ăn uống lành mạnh", a: ["healthy eating habits"] },
+    { q: "một lối sống lành mạnh", a: ["a healthy lifestyle"] },
+    { q: "các vấn đề kỹ thuật", a: ["technical problems", "technical issues"] },
+    { q: "chất lượng âm thanh kém", a: ["poor sound quality", "bad sound quality"] },
+    { q: "một môi trường tốt hơn", a: ["a better environment"] },
+    { q: "một khoá học tiếng Anh ngắn hạn", a: ["a short-term english course", "a short english course"] },
+    { q: "một mùi khó chịu", a: ["an unpleasant smell", "a bad smell"] }
+];
+
+
 
 
 window.renderNounsDetail = function(activeTab = 'theory') {
@@ -2181,6 +2205,29 @@ window.renderNounsDetail = function(activeTab = 'theory') {
                     <div id="nouns-final-result" style="margin-top: 24px; font-size: 1.5rem; font-weight: bold; display: none;"></div>
                 </div>
             </div>
+                <hr style="border-top: 2px solid var(--border-color); margin-bottom: 40px; margin-top: 40px;">
+                <div style="margin-bottom: 32px;">
+                    <h2 style="color: var(--primary-color); font-size: 1.4rem; margin-bottom: 16px;">BÀI 3: DỊCH CỤM DANH TỪ</h2>
+                    <p style="color: var(--text-muted); margin-bottom: 24px;">Hãy dịch các cụm danh từ sau sang tiếng Anh.</p>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
+                        ${nounsPractice3Data.map((q, idx) => `
+                            <div class="quiz-item" style="background: var(--bg-card); border-radius: 12px; padding: 20px; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color);">
+                                <div style="display: flex; gap: 12px; align-items: flex-start; margin-bottom: 12px;">
+                                    <div style="background: var(--primary-light); color: var(--primary-color); width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">
+                                        ${idx + 1}
+                                    </div>
+                                    <p style="font-size: 1.1rem; font-weight: 500; color: var(--text-main); margin-top: 4px;">${q.q}</p>
+                                </div>
+                                <div style="display: flex; flex-direction: column; gap: 8px;">
+                                    <input type="text" id="trans_input_${idx}" placeholder="Nhập bản dịch tiếng Anh..." style="padding: 10px 16px; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 1.05rem; outline: none; transition: border-color 0.2s; width: 100%; box-sizing: border-box;" onfocus="this.style.borderColor='var(--primary-color)'" onblur="this.style.borderColor='#e2e8f0'" oninput="window.nounsTransAnswers[${idx}] = this.value; document.getElementById('transexp_${idx}').style.display='none';">
+                                    <button onclick="checkNounsTranslation(${idx})" style="padding: 8px 16px; background: white; color: var(--primary-color); border: 2px solid var(--primary-color); border-radius: 20px; font-weight: bold; cursor: pointer; transition: all 0.2s; align-self: flex-start;" onmouseover="this.style.background='var(--primary-color)'; this.style.color='white'" onmouseout="this.style.background='white'; this.style.color='var(--primary-color)'">Kiểm tra</button>
+                                </div>
+                                <div id="transexp_${idx}" style="display: none; margin-top: 12px; padding: 10px 12px; border-radius: 8px; font-size: 1rem;"></div>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+                
         `;
     }
 
@@ -2198,6 +2245,7 @@ window.renderNounsDetail = function(activeTab = 'theory') {
     
     // reset global vars for nouns quiz
     window.nounsAnswers = new Array(nounsPractice2Data.length).fill(null).map(() => ({ tf: null, correction: null }));
+    window.nounsTransAnswers = new Array(nounsPractice3Data.length).fill('');
 }
 
 // DRAG AND DROP LOGIC
@@ -2257,6 +2305,39 @@ window.selectTrueFalseNouns = function(qIdx, isTrue) {
     document.getElementById(`nounsexp_${qIdx}`).style.display = 'none';
 }
 
+
+
+window.checkNounsTranslation = function(idx) {
+    const userInput = window.nounsTransAnswers[idx];
+    const expDiv = document.getElementById(`transexp_${idx}`);
+    
+    if (!userInput || userInput.trim() === '') {
+        expDiv.style.display = 'block';
+        expDiv.style.background = '#fffbeb'; expDiv.style.color = '#b45309'; expDiv.style.borderLeft = '4px solid #f59e0b';
+        expDiv.innerHTML = '<b>⚠️ Bạn chưa nhập bản dịch!</b> Vui lòng nhập đáp án của bạn.';
+        return;
+    }
+    
+    const cleanUser = userInput.trim().toLowerCase().replace(/[.,!?;:]/g, '').replace(/\s+/g, ' ');
+    const validAnswers = nounsPractice3Data[idx].a;
+    let isCorrect = false;
+    
+    for (let ans of validAnswers) {
+        if (cleanUser === ans.toLowerCase()) {
+            isCorrect = true;
+            break;
+        }
+    }
+    
+    expDiv.style.display = 'block';
+    if (isCorrect) {
+        expDiv.style.background = '#f0fdf4'; expDiv.style.color = '#166534'; expDiv.style.borderLeft = '4px solid #22c55e';
+        expDiv.innerHTML = `<b>✅ CHÍNH XÁC!</b>`;
+    } else {
+        expDiv.style.background = '#fef2f2'; expDiv.style.color = '#991b1b'; expDiv.style.borderLeft = '4px solid #ef4444';
+        expDiv.innerHTML = `<b>❌ CHƯA CHÍNH XÁC.</b> Tham khảo: <b>${validAnswers[0]}</b>`;
+    }
+}
 
 window.checkNounsSingleAnswer = function(idx) {
     const ans = window.nounsAnswers[idx];
