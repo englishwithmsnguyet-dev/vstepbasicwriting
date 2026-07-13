@@ -2882,6 +2882,7 @@ window.renderPronounsDetail = function(activeTab = 'theory') {
                 </div>
             </div>
         `;
+    } else {
         // Initialize tracking arrays if not exists
         if (!window.pronounsAnswers1) {
             window.pronounsAnswers1 = new Array(pronounsPractice1Data.length).fill(null);
