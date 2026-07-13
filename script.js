@@ -2060,9 +2060,9 @@ const nounsPractice2Data = [
     },
     { 
       question: "I think you should make friends with <strong>native speaker</strong>.", 
-      options: ["a native speaker", "native speaking", "Giữ nguyên vì đã đúng"], 
+      options: ["a native speaker / native speakers", "native speaking", "Giữ nguyên vì đã đúng"], 
       answer: 0, 
-      explanation: "Thiếu mạo từ 'a' trước danh từ đếm được số ít 'native speaker'" 
+      explanation: "Danh từ đếm được 'native speaker' không được đứng trơ trọi một mình. Bạn phải thêm mạo từ 'a' (a native speaker) hoặc chuyển sang số nhiều (native speakers)." 
     },
     { 
       question: "You should take an English <strong>courses</strong> at River English Center.", 
