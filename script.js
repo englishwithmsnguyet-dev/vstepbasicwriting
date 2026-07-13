@@ -1971,7 +1971,7 @@ const nounsTheoryData = [
                     <div class="np-examples">
                         <b>Ví dụ:</b><br>
                         • the <span style="color: #06b6d4; font-weight: bold;">impact of technology</span><br>
-                        • a <span style="color: #06b6d4; font-weight: bold;">lack of experience</span><br>
+                        • the <span style="color: #06b6d4; font-weight: bold;">role of education</span><br>
                         • the <span style="color: #06b6d4; font-weight: bold;">quality of life</span>
                     </div>
                 </div>
