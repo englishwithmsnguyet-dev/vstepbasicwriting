@@ -2616,10 +2616,17 @@ const pronounsTheoryData = [
                 <tr><td style="padding: 10px; border: 1px solid var(--border-color); font-weight: bold;">Ngôi 3 số nhiều</td><td style="padding: 10px; border: 1px solid var(--border-color);">They</td><td style="padding: 10px; border: 1px solid var(--border-color);">them</td></tr>
             </table>
             
+            <div style="background: #eff6ff; border-left: 4px solid #3b82f6; padding: 12px; margin-bottom: 16px; border-radius: 4px;">
+                <b style="color: #1d4ed8;">📍 Vị trí trong câu:</b>
+                <ul style="margin-top: 8px; margin-bottom: 0; padding-left: 20px;">
+                    <li><b>Đại từ Chủ ngữ:</b> Đứng <b>TRƯỚC</b> động từ chính.</li>
+                    <li><b>Đại từ Tân ngữ:</b> Đứng <b>SAU</b> động từ hoặc <b>SAU</b> giới từ (in, on, at, with, about...).</li>
+                </ul>
+            </div>
+            
             <div class="form-example">
                 <div class="en"><span style="color:var(--primary-color); font-weight:bold;">She</span> likes <span style="color:#10b981; font-weight:bold;">him</span>, but <span style="color:var(--primary-color); font-weight:bold;">he</span> doesn't like <span style="color:#10b981; font-weight:bold;">her</span>.</div>
                 <div class="vn">(Cô ấy thích anh ấy, nhưng anh ấy không thích cô ấy)</div>
-                <div class="note" style="margin-top: 8px; font-size: 0.95rem; color: #64748b;">*She, he đứng trước động từ làm Chủ ngữ. Him, her đứng sau động từ làm Tân ngữ.</div>
             </div>
         </div>
         `
