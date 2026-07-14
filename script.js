@@ -584,7 +584,7 @@ const topicsData = [
         id: 'structures',
         title: 'CHỦ ĐIỂM 02: CÁC CẤU TRÚC CÂU CƠ BẢN',
         desc: 'Nắm vững 6 cấu trúc câu Tiếng Anh phổ biến nhất để có thể tự viết câu chính xác.',
-        status: 'unlocked'
+        status: 'locked'
     }
 ];
 
@@ -787,7 +787,7 @@ function showLockToast() {
 window.openTopic = function(topicId, status) {
     if (status === 'locked') {
         const pass = prompt('Vui lòng nhập mật khẩu để mở khóa chủ điểm này:');
-        if (pass === 'missnguyet2026' || pass === 'ONB103' || pass === 'CB211') {
+        if (pass === 'missnguyet2026' || pass === 'ONB103' || pass === 'CB211' || pass === 'CB213') {
             const topic1 = topicsData.find(t => t.id === topicId);
             if (topic1) topic1.status = 'unlocked';
             
