@@ -594,13 +594,13 @@ const chapter2TopicsData = [
         id: 'nouns',
         title: 'CHỦ ĐIỂM 01: DANH TỪ',
         desc: 'Hiểu rõ vị trí, cách nhận biết và phân loại Danh từ để thiết lập thành phần Chủ ngữ và Tân ngữ chính xác.',
-        status: 'unlocked'
+        status: 'locked'
     },
     {
         id: 'pronouns',
         title: 'CHỦ ĐIỂM 02: ĐẠI TỪ',
         desc: 'Sử dụng Đại từ để thay thế Danh từ, giúp tránh lặp từ và tạo sự liên kết chặt chẽ cho câu văn.',
-        status: 'unlocked'
+        status: 'locked'
     },
     {
         id: 'verbs',
@@ -787,14 +787,23 @@ function showLockToast() {
 window.openTopic = function(topicId, status) {
     if (status === 'locked') {
         const pass = prompt('Vui lòng nhập mật khẩu để mở khóa chủ điểm này:');
-        if (pass === 'missnguyet2026') {
-            const topic = topicsData.find(t => t.id === topicId);
-            if (topic) topic.status = 'unlocked';
+        if (pass === 'missnguyet2026' || pass === 'ONB103' || pass === 'CB211') {
+            const topic1 = topicsData.find(t => t.id === topicId);
+            if (topic1) topic1.status = 'unlocked';
+            
+            const topic2 = typeof chapter2TopicsData !== 'undefined' ? chapter2TopicsData.find(t => t.id === topicId) : null;
+            if (topic2) topic2.status = 'unlocked';
+            
             alert('Mở khóa thành công!');
-            renderTopicsGrid(); // re-render to update lock icons
+            
+            if (topic1) renderTopicsGrid(); // re-render chapter 1 grid
+            if (topic2 && typeof renderChapter2 === 'function') renderChapter2(); // re-render chapter 2 grid
+            
             if (topicId === 'components') renderComponentsDetail();
             else if (topicId === 'structures') renderStructuresDetail();
             else if (topicId === 'practice') renderPracticeDetail();
+            else if (topicId === 'nouns' && typeof renderNounsDetail === 'function') renderNounsDetail();
+            else if (topicId === 'pronouns' && typeof renderPronounsDetail === 'function') renderPronounsDetail();
         } else if (pass !== null) {
             alert('Mật khẩu không đúng!');
         }
