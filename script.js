@@ -1335,6 +1335,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const savedTheme = localStorage.getItem('theme') || 'light';
     document.documentElement.setAttribute('data-theme', savedTheme);
 
+    if (typeof loadProgress === 'function') loadProgress();
+
     renderNav();
     const chapter1Nav = document.querySelector('.nav-item[data-target="chapter1"]');
     if(chapter1Nav) chapter1Nav.click();
@@ -2254,9 +2256,35 @@ window.renderNounsDetail = function(activeTab = 'theory') {
         ${contentHtml}
     `;
     
-    // reset global vars for nouns quiz
-    window.nounsAnswers = new Array(nounsPractice2Data.length).fill(null).map(() => ({ tf: null, correction: null }));
-    window.nounsTransAnswers = new Array(nounsPractice3Data.length).fill('');
+    // init global vars for nouns quiz if not exist
+    if (!window.nounsAnswers) window.nounsAnswers = new Array(nounsPractice2Data.length).fill(null).map(() => ({ tf: null, correction: null }));
+    if (!window.nounsTransAnswers) window.nounsTransAnswers = new Array(nounsPractice3Data.length).fill('');
+    
+    // pre-fill saved answers
+    setTimeout(() => {
+        if (activeTab === 'practice') {
+            if (window.nounsAnswers) {
+                window.nounsAnswers.forEach((ans, idx) => {
+                    if (ans.tf !== null) {
+                        window.selectTrueFalseNouns(idx, ans.tf);
+                        if (ans.tf === false && ans.correction) {
+                            const input = document.getElementById(`correction_input_${idx}`);
+                            if (input) input.value = ans.correction;
+                        }
+                    }
+                });
+            }
+            if (window.nounsTransAnswers) {
+                window.nounsTransAnswers.forEach((val, idx) => {
+                    if (val) {
+                        const input = document.getElementById(`trans_input_${idx}`);
+                        if (input) input.value = val;
+                    }
+                });
+            }
+        }
+    }, 50);
+
 }
 
 // DRAG AND DROP LOGIC
@@ -3155,4 +3183,54 @@ window.checkPronounsParagraph = function() {
             playTone(220, 0.3, 'sawtooth'); // A3
         }
     } catch(e) {}
+}
+
+// --- PROGRESS SAVE & LOAD ---
+window.saveProgress = function() {
+    const state = {
+        chapter1Topics: typeof topicsData !== 'undefined' ? topicsData.map(t => ({ id: t.id, status: t.status })) : [],
+        chapter2Topics: typeof chapter2TopicsData !== 'undefined' ? chapter2TopicsData.map(t => ({ id: t.id, status: t.status })) : [],
+        nounsAnswers: window.nounsAnswers,
+        nounsTransAnswers: window.nounsTransAnswers,
+        pronounsAnswers1: window.pronounsAnswers1,
+        pronounsAnswers2: window.pronounsAnswers2,
+        pronounsAnswersPara: window.pronounsAnswersPara
+    };
+    localStorage.setItem('studentProgress', JSON.stringify(state));
+    alert('✅ Tiến độ học tập của bạn đã được lưu lại!');
+}
+
+window.clearProgress = function() {
+    if (confirm('⚠️ CẢNH BÁO: Bạn có chắc chắn muốn xóa toàn bộ lịch sử học tập và làm bài không? Hành động này không thể hoàn tác!')) {
+        localStorage.removeItem('studentProgress');
+        alert('🗑 Đã xóa toàn bộ lịch sử!');
+        location.reload();
+    }
+}
+
+window.loadProgress = function() {
+    const saved = localStorage.getItem('studentProgress');
+    if (!saved) return;
+    try {
+        const state = JSON.parse(saved);
+        if (state.chapter1Topics && typeof topicsData !== 'undefined') {
+            state.chapter1Topics.forEach(st => {
+                const t = topicsData.find(x => x.id === st.id);
+                if (t) t.status = st.status;
+            });
+        }
+        if (state.chapter2Topics && typeof chapter2TopicsData !== 'undefined') {
+            state.chapter2Topics.forEach(st => {
+                const t = chapter2TopicsData.find(x => x.id === st.id);
+                if (t) t.status = st.status;
+            });
+        }
+        if (state.nounsAnswers) window.nounsAnswers = state.nounsAnswers;
+        if (state.nounsTransAnswers) window.nounsTransAnswers = state.nounsTransAnswers;
+        if (state.pronounsAnswers1) window.pronounsAnswers1 = state.pronounsAnswers1;
+        if (state.pronounsAnswers2) window.pronounsAnswers2 = state.pronounsAnswers2;
+        if (state.pronounsAnswersPara) window.pronounsAnswersPara = state.pronounsAnswersPara;
+    } catch(e) {
+        console.error('Error loading progress', e);
+    }
 }
