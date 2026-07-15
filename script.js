@@ -2168,7 +2168,7 @@ window.renderNounsDetail = function(activeTab = 'theory') {
 
                         <div id="correction_step_${idx}" style="display: none; flex-direction: column; gap: 12px; padding: 16px; background: #f8fafc; border-radius: 8px; border: 1px dashed #cbd5e1; margin-bottom: 16px;">
                             <p style="font-size: 1rem; color: var(--text-main); font-weight: 500;">Nhập từ/cụm từ sửa lại cho đúng:</p>
-                            <input type="text" id="correction_input_${idx}" placeholder="Nhập đáp án của bạn..." style="padding: 12px 16px; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 1.1rem; outline: none; transition: border-color 0.2s;" onfocus="this.style.borderColor='var(--primary-color)'" onblur="this.style.borderColor='#e2e8f0'" oninput="window.nounsAnswers[${idx}].correction = this.value; document.getElementById('nounsexp_${idx}').style.display='none';">
+                            <input type="text" id="correction_input_${idx}" placeholder="Nhập đáp án của bạn..." style="padding: 12px 16px; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 1.1rem; outline: none; transition: border-color 0.2s;" onfocus="this.style.borderColor='var(--primary-color)'" onblur="this.style.borderColor='#e2e8f0'" oninput="window.nounsAnswers[${idx}].correction = this.value; document.getElementById('nounsexp_${idx}').style.display='none'; window.saveProgress(true);">
                         </div>
 
                         <div id="nounsexp_${idx}" style="display: none; margin-top: 16px; padding: 12px 16px; border-radius: 8px; font-size: 1.05rem;"></div>
@@ -2227,7 +2227,7 @@ window.renderNounsDetail = function(activeTab = 'theory') {
                                     <p style="font-size: 1.1rem; font-weight: 500; color: var(--text-main); margin-top: 4px;">${q.q}</p>
                                 </div>
                                 <div style="display: flex; flex-direction: column; gap: 8px;">
-                                    <input type="text" id="trans_input_${idx}" placeholder="Nhập bản dịch tiếng Anh..." style="padding: 10px 16px; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 1.05rem; outline: none; transition: border-color 0.2s; width: 100%; box-sizing: border-box;" onfocus="this.style.borderColor='var(--primary-color)'" onblur="this.style.borderColor='#e2e8f0'" oninput="window.nounsTransAnswers[${idx}] = this.value; document.getElementById('transexp_${idx}').style.display='none';">
+                                    <input type="text" id="trans_input_${idx}" placeholder="Nhập bản dịch tiếng Anh..." style="padding: 10px 16px; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 1.05rem; outline: none; transition: border-color 0.2s; width: 100%; box-sizing: border-box;" onfocus="this.style.borderColor='var(--primary-color)'" onblur="this.style.borderColor='#e2e8f0'" oninput="window.nounsTransAnswers[${idx}] = this.value; document.getElementById('transexp_${idx}').style.display='none'; window.saveProgress(true);">
                                     <button onclick="checkNounsTranslation(${idx})" style="padding: 8px 16px; background: white; color: var(--primary-color); border: 2px solid var(--primary-color); border-radius: 20px; font-weight: bold; cursor: pointer; transition: all 0.2s; align-self: flex-start;" onmouseover="this.style.background='var(--primary-color)'; this.style.color='white'" onmouseout="this.style.background='white'; this.style.color='var(--primary-color)'">Kiểm tra</button>
                                 </div>
                                 <div id="transexp_${idx}" style="display: none; margin-top: 12px; padding: 10px 12px; border-radius: 8px; font-size: 1rem;"></div>
@@ -2339,6 +2339,7 @@ window.selectTrueFalseNouns = function(qIdx, isTrue) {
         correctionStep.style.display = 'flex';
     }
     window.nounsAnswers[qIdx].tf = isTrue;
+    window.saveProgress(true);
     
     // hide explanation if showing
     document.getElementById(`nounsexp_${qIdx}`).style.display = 'none';
@@ -2945,7 +2946,7 @@ window.renderPronounsDetail = function(activeTab = 'theory') {
         pronounsParagraphData.segments.forEach((seg, idx) => {
             paraHtml += seg.text;
             if (idx < pronounsParagraphData.answers.length) {
-                paraHtml += `<input type="text" id="pro_para_${idx}" class="para-input" placeholder="(${idx + 1})" value="${window.pronounsAnswersPara[idx] || ''}" oninput="window.pronounsAnswersPara[${idx}] = this.value; document.getElementById('pro_para_explanation').style.display='none';" style="width: 80px; padding: 4px 8px; border: 2px solid #cbd5e1; border-radius: 6px; font-size: 1.05rem; text-align: center; font-weight: 700; color: var(--primary-color); outline: none; margin: 0 4px; transition: all 0.2s; background: white;">`;
+                paraHtml += `<input type="text" id="pro_para_${idx}" class="para-input" placeholder="(${idx + 1})" value="${window.pronounsAnswersPara[idx] || ''}" oninput="window.pronounsAnswersPara[${idx}] = this.value; document.getElementById('pro_para_explanation').style.display='none'; window.saveProgress(true);" style="width: 80px; padding: 4px 8px; border: 2px solid #cbd5e1; border-radius: 6px; font-size: 1.05rem; text-align: center; font-weight: 700; color: var(--primary-color); outline: none; margin: 0 4px; transition: all 0.2s; background: white;">`;
             }
         });
 
@@ -2978,7 +2979,7 @@ window.renderPronounsDetail = function(activeTab = 'theory') {
                     <p style="font-size: 1.1rem; font-weight: 500; color: var(--text-main); margin-top: 4px; line-height: 1.6;">${q.q}</p>
                 </div>
                 <div style="display: flex; flex-direction: column; gap: 8px; padding-left: 44px;">
-                    <input type="text" id="pro_input2_${idx}" placeholder="Nhập từ chỉ định..." value="${window.pronounsAnswers2[idx] || ''}" style="padding: 10px 16px; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 1.05rem; outline: none; width: 100%; box-sizing: border-box;" oninput="window.pronounsAnswers2[${idx}] = this.value; document.getElementById('proexp2_${idx}').style.display='none';">
+                    <input type="text" id="pro_input2_${idx}" placeholder="Nhập từ chỉ định..." value="${window.pronounsAnswers2[idx] || ''}" style="padding: 10px 16px; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 1.05rem; outline: none; width: 100%; box-sizing: border-box;" oninput="window.pronounsAnswers2[${idx}] = this.value; document.getElementById('proexp2_${idx}').style.display='none'; window.saveProgress(true);">
                     <button onclick="checkPronouns2(${idx})" style="padding: 8px 16px; background: white; color: var(--primary-color); border: 2px solid var(--primary-color); border-radius: 20px; font-weight: bold; cursor: pointer; align-self: flex-start;">Kiểm tra</button>
                 </div>
                 <div id="proexp2_${idx}" style="display: none; margin-top: 12px; margin-left: 44px; padding: 10px 12px; border-radius: 8px; font-size: 1rem;"></div>
@@ -3186,7 +3187,7 @@ window.checkPronounsParagraph = function() {
 }
 
 // --- PROGRESS SAVE & LOAD ---
-window.saveProgress = function() {
+window.saveProgress = function(silent = false) {
     const state = {
         chapter1Topics: typeof topicsData !== 'undefined' ? topicsData.map(t => ({ id: t.id, status: t.status })) : [],
         chapter2Topics: typeof chapter2TopicsData !== 'undefined' ? chapter2TopicsData.map(t => ({ id: t.id, status: t.status })) : [],
@@ -3197,7 +3198,7 @@ window.saveProgress = function() {
         pronounsAnswersPara: window.pronounsAnswersPara
     };
     localStorage.setItem('studentProgress', JSON.stringify(state));
-    alert('✅ Tiến độ học tập của bạn đã được lưu lại!');
+    if(!silent) alert('✅ Tiến độ học tập của bạn đã được lưu lại!');
 }
 
 window.clearProgress = function() {
