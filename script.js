@@ -2210,11 +2210,6 @@ window.renderNounsDetail = function(activeTab = 'theory') {
                     <p style="color: var(--text-muted); margin-bottom: 24px;">Chọn phương án đúng nhất để sửa lỗi (hoặc giữ nguyên) cho phần in đậm trong câu.</p>
                     ${errorCorrectionList}
                 </div>
-                
-                <div style="text-align: center; margin-top: 40px;">
-                    <button class="btn-primary" onclick="submitNounsPractice()" style="padding: 16px 40px; font-size: 1.3rem; border-radius: 30px; box-shadow: 0 4px 15px rgba(87,70,227,0.4); border: none;">NỘP BÀI VÀ XEM KẾT QUẢ</button>
-                    <div id="nouns-final-result" style="margin-top: 24px; font-size: 1.5rem; font-weight: bold; display: none;"></div>
-                </div>
             </div>
                 <hr style="border-top: 2px solid var(--border-color); margin-bottom: 40px; margin-top: 40px;">
                 <div style="margin-bottom: 32px;">
@@ -2237,6 +2232,11 @@ window.renderNounsDetail = function(activeTab = 'theory') {
                             </div>
                         `).join('')}
                     </div>
+                </div>
+                
+                <div style="text-align: center; margin-top: 40px; margin-bottom: 40px;">
+                    <button class="btn-primary" onclick="submitNounsPractice()" style="padding: 16px 40px; font-size: 1.3rem; border-radius: 30px; box-shadow: 0 4px 15px rgba(87,70,227,0.4); border: none;">NỘP BÀI VÀ XEM KẾT QUẢ</button>
+                    <div id="nouns-final-result" style="margin-top: 24px; font-size: 1.5rem; font-weight: bold; display: none;"></div>
                 </div>
                 
         `;
@@ -2443,76 +2443,90 @@ window.checkNounsDragDrop = function() {
 }
 
 window.submitNounsPractice = function() {
-    // Grade Practice 1 (Drag and Drop)
     let p1Correct = 0;
     const countableZone = document.getElementById('zone-countable');
     const uncountableZone = document.getElementById('zone-uncountable');
     
+    // Evaluate P1
     countableZone.querySelectorAll('.drag-word').forEach(el => {
-        if(el.getAttribute('data-type') === 'countable') {
-            el.style.backgroundColor = '#d1fae5'; el.style.borderColor = '#10b981';
-            p1Correct++;
-        } else {
-            el.style.backgroundColor = '#fee2e2'; el.style.borderColor = '#ef4444';
-        }
+        if(el.getAttribute('data-type') === 'countable') p1Correct++;
     });
-    
     uncountableZone.querySelectorAll('.drag-word').forEach(el => {
-        if(el.getAttribute('data-type') === 'uncountable') {
-            el.style.backgroundColor = '#d1fae5'; el.style.borderColor = '#10b981';
-            p1Correct++;
+        if(el.getAttribute('data-type') === 'uncountable') p1Correct++;
+    });
+    window.checkNounsDragDrop(); // Update UI
+    
+    // Evaluate P2
+    let p2Correct = 0;
+    let p2Completed = true;
+    nounsPractice2Data.forEach((q, idx) => {
+        const ans = window.nounsAnswers[idx];
+        if (ans.tf === null || (ans.tf === false && (!ans.correction || ans.correction.trim() === ''))) {
+            p2Completed = false;
         } else {
-            el.style.backgroundColor = '#fee2e2'; el.style.borderColor = '#ef4444';
+            const correctIdx = nounsPractice2Data[idx].answer;
+            const isActuallyCorrect = nounsPractice2Data[idx].options[correctIdx].includes("Giữ nguyên");
+            if (isActuallyCorrect && ans.tf === true) {
+                p2Correct++;
+            } else if (!isActuallyCorrect && ans.tf === false) {
+                const userCorrection = ans.correction.trim().toLowerCase();
+                const correctStr = nounsPractice2Data[idx].options[correctIdx].toLowerCase();
+                const validAnswers = correctStr.split('/').map(s => s.trim());
+                if (validAnswers.includes(userCorrection)) {
+                    p2Correct++;
+                }
+            }
         }
+        window.checkNounsSingleAnswer(idx); // Update UI
     });
     
-    const wordsInPool = document.getElementById('words-pool').querySelectorAll('.drag-word').length;
-    if (wordsInPool > 0) {
-        document.getElementById('drag-result').innerHTML = `<span style="color:#f59e0b;">Bạn chưa phân loại hết các từ! (Đúng ${p1Correct}/10)</span>`;
-    } else {
-        document.getElementById('drag-result').innerHTML = `<span style="color:#10b981;">Kết quả bài 1: Bạn phân loại đúng ${p1Correct}/10 từ.</span>`;
-    }
-
-    // Grade Practice 2
-    let p2Correct = 0;
-    if (!window.nounsAnswers || window.nounsAnswers.includes(null)) {
-        alert("Bạn chưa hoàn thành tất cả các câu của Bài 2. Hãy kiểm tra lại nhé!");
-        return;
-    }
-
-    nounsPractice2Data.forEach((q, idx) => {
-        const expDiv = document.getElementById(`nounsexp_${idx}`);
-        expDiv.style.display = 'block';
-        
-        if (window.nounsAnswers[idx] === q.answer) {
-            p2Correct++;
-            expDiv.style.background = '#d1fae5';
-            expDiv.style.color = '#065f46';
-            expDiv.style.borderLeft = '4px solid #10b981';
-            expDiv.innerHTML = `✅ <strong>Chính xác!</strong> ${q.explanation}`;
+    // Evaluate P3
+    let p3Correct = 0;
+    let p3Completed = true;
+    nounsPractice3Data.forEach((q, idx) => {
+        const userInput = window.nounsTransAnswers[idx];
+        if (!userInput || userInput.trim() === '') {
+            p3Completed = false;
         } else {
-            expDiv.style.background = '#fee2e2';
-            expDiv.style.color = '#991b1b';
-            expDiv.style.borderLeft = '4px solid #ef4444';
-            expDiv.innerHTML = `❌ <strong>Chưa đúng.</strong> Sửa lại: <strong>${q.options[q.answer]}</strong><br>${q.explanation}`;
+            const cleanUser = userInput.trim().toLowerCase().replace(/[.,!?;:]/g, '').replace(/\s+/g, ' ');
+            const validAnswers = q.a;
+            let isCorrect = false;
+            for (let ans of validAnswers) {
+                if (cleanUser === ans.toLowerCase()) {
+                    isCorrect = true;
+                    break;
+                }
+            }
+            if (isCorrect) p3Correct++;
         }
+        window.checkNounsTranslation(idx); // Update UI
     });
+    
+    if (document.getElementById('words-pool').querySelectorAll('.drag-word').length > 0 || !p2Completed || !p3Completed) {
+        alert("Bạn chưa hoàn thành tất cả các bài tập. Vui lòng điền nốt và kiểm tra lại những câu bị đánh dấu cảnh báo màu cam nhé!");
+    }
 
     const finalRes = document.getElementById('nouns-final-result');
     finalRes.style.display = 'block';
     
-    const totalScore = p1Correct + p2Correct;
+    const totalScore = p1Correct + p2Correct + p3Correct;
+    const maxScore = 10 + nounsPractice2Data.length + nounsPractice3Data.length;
     
-    if (totalScore >= 16) {
-        finalRes.innerHTML = `🎉 Xuất sắc! Tổng điểm: ${totalScore}/20 <br><span style="font-size:1.1rem; font-weight:normal; color:var(--text-muted);">Bạn nắm rất chắc kiến thức về Danh từ!</span>`;
-        finalRes.style.color = '#10b981';
-        party.confetti(finalRes, { count: party.variation.range(40, 60) });
-    } else if (totalScore >= 10) {
-        finalRes.innerHTML = `👍 Khá tốt! Tổng điểm: ${totalScore}/20 <br><span style="font-size:1.1rem; font-weight:normal; color:var(--text-muted);">Hãy xem lại những phần giải thích bị sai nhé.</span>`;
-        finalRes.style.color = '#f59e0b';
-    } else {
-        finalRes.innerHTML = `💪 Cố lên! Tổng điểm: ${totalScore}/20 <br><span style="font-size:1.1rem; font-weight:normal; color:var(--text-muted);">Bạn cần ôn tập lại lý thuyết Chủ điểm này.</span>`;
-        finalRes.style.color = '#ef4444';
+    finalRes.innerHTML = `<div style="background: white; padding: 24px; border-radius: 12px; border: 2px solid var(--primary-color); box-shadow: var(--shadow-md);">
+        <h3 style="color: var(--primary-color); margin-bottom: 16px; font-size: 1.8rem;">TỔNG KẾT ĐIỂM SỐ BÀI TẬP DANH TỪ</h3>
+        <ul style="list-style: none; padding: 0; margin-bottom: 24px; font-size: 1.2rem; color: var(--text-main); text-align: left; display: inline-block;">
+            <li style="margin-bottom: 12px;">🔹 <b>Bài 1 (Phân loại từ):</b> ${p1Correct} / 10</li>
+            <li style="margin-bottom: 12px;">🔹 <b>Bài 2 (Sửa lỗi sai):</b> ${p2Correct} / ${nounsPractice2Data.length}</li>
+            <li style="margin-bottom: 12px;">🔹 <b>Bài 3 (Dịch cụm danh từ):</b> ${p3Correct} / ${nounsPractice3Data.length}</li>
+        </ul>
+        <div style="font-size: 2rem; color: ${totalScore >= maxScore * 0.8 ? '#10b981' : (totalScore >= maxScore * 0.5 ? '#f59e0b' : '#ef4444')}; border-top: 2px dashed #e2e8f0; padding-top: 16px;">
+            <b>TỔNG ĐIỂM: ${totalScore} / ${maxScore}</b>
+        </div>
+        <p style="font-size: 1.1rem; font-weight: normal; color: var(--text-muted); margin-top: 12px;">${totalScore >= maxScore * 0.8 ? '🎉 Xuất sắc! Bạn nắm rất chắc kiến thức về Danh từ!' : (totalScore >= maxScore * 0.5 ? '👍 Khá tốt! Hãy xem lại những phần giải thích bị sai nhé.' : '💪 Cố lên! Bạn cần ôn tập lại lý thuyết Chủ điểm này.')}</p>
+    </div>`;
+    
+    if (totalScore >= maxScore * 0.8) {
+        try { party.confetti(finalRes, { count: party.variation.range(50, 80) }); } catch(e) {}
     }
 
     // Gửi điểm lên Google form
