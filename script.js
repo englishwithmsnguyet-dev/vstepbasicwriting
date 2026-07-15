@@ -2945,7 +2945,7 @@ window.renderPronounsDetail = function(activeTab = 'theory') {
         pronounsParagraphData.segments.forEach((seg, idx) => {
             paraHtml += seg.text;
             if (idx < pronounsParagraphData.answers.length) {
-                paraHtml += `<input type="text" id="pro_para_${idx}" class="para-input" placeholder="(${idx + 1})" value="${window.pronounsAnswersPara[idx] || ''}" oninput="window.pronounsAnswersPara[idx] = this.value; document.getElementById('pro_para_explanation').style.display='none';" style="width: 80px; padding: 4px 8px; border: 2px solid #cbd5e1; border-radius: 6px; font-size: 1.05rem; text-align: center; font-weight: 700; color: var(--primary-color); outline: none; margin: 0 4px; transition: all 0.2s; background: white;">`;
+                paraHtml += `<input type="text" id="pro_para_${idx}" class="para-input" placeholder="(${idx + 1})" value="${window.pronounsAnswersPara[idx] || ''}" oninput="window.pronounsAnswersPara[${idx}] = this.value; document.getElementById('pro_para_explanation').style.display='none';" style="width: 80px; padding: 4px 8px; border: 2px solid #cbd5e1; border-radius: 6px; font-size: 1.05rem; text-align: center; font-weight: 700; color: var(--primary-color); outline: none; margin: 0 4px; transition: all 0.2s; background: white;">`;
             }
         });
 
