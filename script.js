@@ -1335,7 +1335,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const savedTheme = localStorage.getItem('theme') || 'light';
     document.documentElement.setAttribute('data-theme', savedTheme);
 
-    if (typeof loadProgress === 'function') loadProgress();
+    if (typeof window.loadProgress === 'function') window.loadProgress();
 
     renderNav();
     const chapter1Nav = document.querySelector('.nav-item[data-target="chapter1"]');
@@ -2263,6 +2263,19 @@ window.renderNounsDetail = function(activeTab = 'theory') {
     // pre-fill saved answers
     setTimeout(() => {
         if (activeTab === 'practice') {
+            
+            if (window.nounsDragDropState) {
+                ['countable', 'uncountable', 'pool'].forEach(zone => {
+                    const container = document.getElementById(zone === 'pool' ? 'words-pool' : `zone-${zone}`);
+                    if (container && window.nounsDragDropState[zone]) {
+                        window.nounsDragDropState[zone].forEach(id => {
+                            const el = document.getElementById(id);
+                            if (el) container.appendChild(el);
+                        });
+                    }
+                });
+            }
+
             if (window.nounsAnswers) {
                 window.nounsAnswers.forEach((ans, idx) => {
                     if (ans.tf !== null) {
@@ -2285,6 +2298,20 @@ window.renderNounsDetail = function(activeTab = 'theory') {
         }
     }, 50);
 
+}
+
+
+window.saveDragDropState = function() {
+    const cZone = document.getElementById('zone-countable');
+    const uZone = document.getElementById('zone-uncountable');
+    const pZone = document.getElementById('words-pool');
+    if (cZone && uZone && pZone) {
+        const countable = Array.from(cZone.children).filter(el => el.classList.contains('drag-word')).map(el => el.id);
+        const uncountable = Array.from(uZone.children).filter(el => el.classList.contains('drag-word')).map(el => el.id);
+        const pool = Array.from(pZone.children).filter(el => el.classList.contains('drag-word')).map(el => el.id);
+        window.nounsDragDropState = { countable, uncountable, pool };
+        window.saveProgress(true);
+    }
 }
 
 // DRAG AND DROP LOGIC
@@ -2311,6 +2338,7 @@ window.drop = function(ev, targetType) {
     
     if (container.id === 'zone-countable' || container.id === 'zone-uncountable') {
         container.appendChild(el);
+        window.saveDragDropState();
     }
 }
 window.dropPool = function(ev) {
@@ -2320,6 +2348,7 @@ window.dropPool = function(ev) {
     let container = ev.target;
     if(container.id !== 'words-pool') container = document.getElementById('words-pool');
     container.appendChild(el);
+    window.saveDragDropState();
 }
 
 window.selectTrueFalseNouns = function(qIdx, isTrue) {
@@ -3193,6 +3222,7 @@ window.saveProgress = function(silent = false) {
         chapter2Topics: typeof chapter2TopicsData !== 'undefined' ? chapter2TopicsData.map(t => ({ id: t.id, status: t.status })) : [],
         nounsAnswers: window.nounsAnswers,
         nounsTransAnswers: window.nounsTransAnswers,
+        nounsDragDropState: window.nounsDragDropState,
         pronounsAnswers1: window.pronounsAnswers1,
         pronounsAnswers2: window.pronounsAnswers2,
         pronounsAnswersPara: window.pronounsAnswersPara
@@ -3226,6 +3256,7 @@ window.loadProgress = function() {
                 if (t) t.status = st.status;
             });
         }
+        if (state.nounsDragDropState) window.nounsDragDropState = state.nounsDragDropState;
         if (state.nounsAnswers) window.nounsAnswers = state.nounsAnswers;
         if (state.nounsTransAnswers) window.nounsTransAnswers = state.nounsTransAnswers;
         if (state.pronounsAnswers1) window.pronounsAnswers1 = state.pronounsAnswers1;
