@@ -390,7 +390,7 @@ const structuresData = [
     {
         formula: '<span style="color: #3b82f6;">S</span> + <span style="color: #f59e0b;">V</span> + <span style="color: #ef4444;">O</span>',
         name: 'Dạng 01: S + V + O',
-        desc: 'Cấu trúc cơ bản nhất của câu chủ động. Trong đó, Chủ ngữ (S) thực hiện một hành động tác động trực tiếp lên một đối tượng là Tân ngữ (O).',
+        desc: 'Đây là cấu trúc cơ bản nhất của câu chủ động. Trong đó, Chủ ngữ (S) thực hiện một hành động tác động trực tiếp lên một đối tượng là Tân ngữ (O).',
         note: '💡 <strong>LƯU Ý:</strong> <strong style="color: #f59e0b;">Động từ (V)</strong> trong cấu trúc này bắt buộc phải là <strong>Ngoại động từ (Transitive Verb)</strong>. Ngoại động từ đòi hỏi phải có đối tượng tiếp nhận hành động đi kèm. Nếu thiếu <strong style="color: #ef4444;">Tân ngữ (O)</strong>, câu sẽ bị sai ngữ pháp và không trọn vẹn ý nghĩa (Ví dụ: Bạn không thể chỉ nói "She loves...").',
         examples: [
             { en: '<span style="color: #3b82f6;">She</span> <span style="color: #f59e0b;">loves</span> <span style="color: #ef4444;">music</span>.', vi: 'Cô ấy yêu âm nhạc.' },
@@ -404,7 +404,7 @@ const structuresData = [
     {
         formula: '<span style="color: #3b82f6;">S</span> + <span style="color: #f59e0b;">V</span> + <span style="color: #a855f7;">C</span>',
         name: 'Dạng 02: S + V + C',
-        desc: 'Cấu trúc miêu tả tính chất, trạng thái, hoặc định danh lại cho Chủ ngữ. Bổ ngữ (C) đóng vai trò cung cấp thông tin chi tiết cho Chủ ngữ.',
+        desc: 'Đây là cấu trúc dùng để miêu tả tính chất, trạng thái, hoặc định danh lại cho Chủ ngữ. Bổ ngữ (C) đóng vai trò cung cấp thông tin chi tiết cho Chủ ngữ.',
         note: '💡 <strong>LƯU Ý QUAN TRỌNG:</strong> <strong style="color: #f59e0b;">Động từ (V)</strong> ở đây là <strong>ĐỘNG TỪ LIÊN KẾT (Linking Verb)</strong> như: is, am, are, look, feel, become, seem... Động từ liên kết <strong>hoàn toàn không diễn tả hành động</strong>, mà đóng vai trò như một "chiếc cầu nối" giữa <strong style="color: #3b82f6;">Chủ ngữ (S)</strong> và phần <strong style="color: #a855f7;">Bổ ngữ (C)</strong>.',
         examples: [
             { en: '<span style="color: #3b82f6;">She</span> <span style="color: #f59e0b;">is</span> <span style="color: #a855f7;">a doctor</span>.', vi: 'Cô ấy là một bác sĩ.' },
@@ -418,7 +418,7 @@ const structuresData = [
     {
         formula: '<span style="color: #3b82f6;">S</span> + <span style="color: #f59e0b;">V</span>',
         name: 'Dạng 03: S + V',
-        desc: 'Cấu trúc tối giản nhất trong tiếng Anh. Chỉ cần một Chủ ngữ (S) thực hiện hành động (V) là câu đã diễn đạt trọn vẹn ý nghĩa.',
+        desc: 'Đây là cấu trúc tối giản nhất trong tiếng Anh. Chỉ cần một Chủ ngữ (S) thực hiện hành động (V) là câu đã diễn đạt trọn vẹn ý nghĩa.',
         note: '💡 <strong>LƯU Ý:</strong> <strong style="color: #f59e0b;">Động từ (V)</strong> trong cấu trúc này bắt buộc phải là <strong>Nội động từ (Intransitive Verb)</strong>. Bản thân nội động từ đã mang ý nghĩa hoàn chỉnh, hành động không tác động lên bất kỳ ai hay sự vật nào khác. Do đó, tuyệt đối không có <strong style="color: #ef4444;">Tân ngữ (O)</strong> theo sau.',
         examples: [
             { en: '<span style="color: #3b82f6;">The baby</span> <span style="color: #f59e0b;">cries</span>.', vi: 'Em bé khóc.' },
@@ -432,7 +432,7 @@ const structuresData = [
     {
         formula: '<span style="color: #3b82f6;">S</span> + <span style="color: #f59e0b;">V</span> + <span style="color: #ef4444;">O</span> + <span style="color: #10b981;">Adv</span>',
         name: 'Dạng 04: S + V + O + Adv',
-        desc: 'Cấu trúc mở rộng của Dạng 1, cung cấp thêm thông tin về bối cảnh (thời gian, địa điểm, cách thức, lý do...) của hành động.',
+        desc: 'Đây là cấu trúc mở rộng của Dạng 1, cung cấp thêm thông tin về bối cảnh (thời gian, địa điểm, cách thức, lý do...) của hành động.',
         note: '💡 <strong>LƯU Ý:</strong> <strong style="color: #10b981;">Trạng ngữ (Adv)</strong> thường được đặt ở cuối câu để bổ nghĩa cho toàn bộ hành động hoặc cung cấp bối cảnh cụ thể. Việc sử dụng linh hoạt Trạng ngữ giúp câu văn trở nên chi tiết, tự nhiên và mang tính học thuật cao hơn.',
         examples: [
             { en: '<span style="color: #3b82f6;">She</span> <span style="color: #f59e0b;">sings</span> <span style="color: #ef4444;">a song</span> <span style="color: #10b981;">beautifully</span>.', vi: 'Cô ấy hát một bài hát rất hay.' },
@@ -446,7 +446,7 @@ const structuresData = [
     {
         formula: '<span style="color: #3b82f6;">S</span> + <span style="color: #f59e0b;">V</span> + <span style="color: #ef4444;">O</span> + <span style="color: #a855f7;">C</span>',
         name: 'Dạng 05: S + V + O + C',
-        desc: 'Cấu trúc phức hợp thể hiện việc Chủ ngữ thực hiện hành động khiến cho Tân ngữ thay đổi trạng thái, hoặc để đưa ra đánh giá, nhận xét về Tân ngữ đó.',
+        desc: 'Đây là cấu trúc phức hợp thể hiện việc Chủ ngữ thực hiện hành động khiến cho Tân ngữ thay đổi trạng thái, hoặc để đưa ra đánh giá, nhận xét về Tân ngữ đó.',
         note: '💡 <strong>LƯU Ý:</strong> Các <strong style="color: #f59e0b;">Động từ (V)</strong> phổ biến trong cấu trúc này mang ý nghĩa tác động (make, leave, paint) hoặc nhận thức/đánh giá (find, consider, name). <strong style="color: #a855f7;">Bổ ngữ (C)</strong> đứng ngay sau <strong style="color: #ef4444;">Tân ngữ (O)</strong> để miêu tả đặc điểm hoặc kết quả của Tân ngữ đó.',
         examples: [
             { en: '<span style="color: #3b82f6;">The news</span> <span style="color: #f59e0b;">made</span> <span style="color: #ef4444;">me</span> <span style="color: #a855f7;">sad</span>.', vi: 'Tin tức đó đã làm cho tôi buồn.' },
@@ -460,7 +460,7 @@ const structuresData = [
     {
         formula: '<span style="color: #3b82f6;">S</span> + <span style="color: #f59e0b;">V</span> + <span style="color: #ec4899;">O1</span> + <span style="color: #ef4444;">O2</span>',
         name: 'Dạng 06: S + V + O1 + O2',
-        desc: 'Cấu trúc mang ý nghĩa "trao chuyển" (cho, tặng, gửi ai cái gì). Đặc trưng bởi việc sử dụng hai Tân ngữ đồng thời để làm rõ đối tượng tiếp nhận.',
+        desc: 'Đây là cấu trúc mang ý nghĩa "trao chuyển" (cho, tặng, gửi ai cái gì). Đặc trưng bởi việc sử dụng hai Tân ngữ đồng thời để làm rõ đối tượng tiếp nhận.',
         note: '💡 <strong>LƯU Ý:</strong> Cấu trúc này thường đi kèm với các <strong style="color: #f59e0b;">Động từ (V)</strong> như: give, send, tell, buy, offer, show... Trong đó, <strong style="color: #ec4899;">O1 (Tân ngữ gián tiếp)</strong> là người nhận hành động, và <strong style="color: #ef4444;">O2 (Tân ngữ trực tiếp)</strong> là sự vật/sự việc được trao chuyển.',
         examples: [
             { en: '<span style="color: #3b82f6;">He</span> <span style="color: #f59e0b;">told</span> <span style="color: #ec4899;">me</span> <span style="color: #ef4444;">a story</span>.', vi: 'Anh ấy đã kể cho tôi một câu chuyện.' },
@@ -1231,22 +1231,36 @@ window.renderSingleStructure = function(idx) {
     const color = colors[idx % colors.length];
 
     let html = `
-        <div style="margin-bottom: 32px;">
-            <button class="btn-primary" style="padding: 10px 20px; background: var(--bg-card); color: var(--text-main); border: 1px solid var(--border-color); border-radius: 30px; font-weight: bold; cursor: pointer; transition: all 0.2s;" onclick="renderStructuresDetail()" onmouseover="this.style.borderColor='var(--primary-color)'" onmouseout="this.style.borderColor='var(--border-color)'">
-                &larr; Quay lại danh sách cấu trúc
+        <div style="margin-bottom: 32px; display: flex; justify-content: space-between; align-items: center;">
+            <button class="btn-primary" style="padding: 10px 24px; background: white; color: var(--text-main); border: 2px solid #e2e8f0; border-radius: 30px; font-weight: bold; cursor: pointer; transition: all 0.3s; box-shadow: 0 4px 6px rgba(0,0,0,0.05);" onclick="renderStructuresDetail()" onmouseover="this.style.borderColor='var(--primary-color)'; this.style.color='var(--primary-color)'; this.style.transform='translateX(-4px)';" onmouseout="this.style.borderColor='#e2e8f0'; this.style.color='var(--text-main)'; this.style.transform='translateX(0)';">
+                &larr; Quay lại danh sách
             </button>
         </div>
-        <div style="background: var(--bg-card); border-top: 12px solid ${color}; border-radius: 24px; padding: 48px; color: var(--text-main); text-align: center; box-shadow: 0 20px 40px rgba(0,0,0,0.08); margin-bottom: 40px; position: relative; overflow: hidden;">
-            <div style="font-size: 1.5rem; font-weight: 900; margin-bottom: 16px; color: ${color}; text-transform: uppercase;">Cấu Trúc ${idx + 1}</div>
-            <div style="font-size: 4.5rem; font-weight: 900; font-family: monospace; letter-spacing: 4px; text-shadow: 2px 2px 8px rgba(0,0,0,0.05); margin-bottom: 24px; background: rgba(0,0,0,0.03); padding: 20px; border-radius: 16px; display: inline-block;">${s.formula}</div>
-            <p style="font-size: 1.4rem; line-height: 1.6; max-width: 800px; margin: 0 auto; opacity: 0.95; margin-bottom: 24px;">${s.desc}</p>
-            ${s.note ? `<div style="background: var(--bg-card); color: var(--text-main); font-size: 1.2rem; line-height: 1.6; padding: 24px 32px; border-radius: 8px 24px 24px 8px; text-align: left; max-width: 800px; margin: 0 auto; border-left: 8px solid ${color}; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
-                ${s.note.replace('💡 <strong>LƯU Ý:</strong>', `<div style="color: ${color}; font-size: 1.2rem; font-weight: 900; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 1px; display: flex; align-items: center; gap: 8px;"><span style="font-size: 1.5rem;">💡</span> LƯU Ý</div><div style="opacity: 0.95;">`).replace('💡 <strong>LƯU Ý QUAN TRỌNG:</strong>', `<div style="color: ${color}; font-size: 1.2rem; font-weight: 900; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 1px; display: flex; align-items: center; gap: 8px;"><span style="font-size: 1.5rem;">💡</span> LƯU Ý QUAN TRỌNG</div><div style="opacity: 0.95;">`)}</div>
+
+        <div style="background: white; border-top: 0; border-radius: 32px; padding: 56px 40px; color: var(--text-main); text-align: center; box-shadow: 0 20px 60px rgba(0,0,0,0.05); margin-bottom: 48px; position: relative; overflow: hidden; border: 1px solid rgba(0,0,0,0.03);">
+            <!-- Decorative Background blob -->
+            <div style="position: absolute; top: -100px; left: -100px; width: 300px; height: 300px; background: radial-gradient(circle, ${color}30 0%, transparent 70%); border-radius: 50%; pointer-events: none;"></div>
+            <div style="position: absolute; bottom: -100px; right: -100px; width: 300px; height: 300px; background: radial-gradient(circle, ${color}20 0%, transparent 70%); border-radius: 50%; pointer-events: none;"></div>
+            
+            <div style="display: inline-block; padding: 6px 16px; background: ${color}15; color: ${color}; font-weight: 800; border-radius: 20px; font-size: 1.1rem; letter-spacing: 1px; margin-bottom: 24px; border: 1px solid ${color}40;">CẤU TRÚC ${idx + 1}</div>
+            
+            <div style="font-size: 5rem; font-weight: 900; font-family: 'Inter', system-ui, sans-serif; letter-spacing: 6px; margin-bottom: 32px; background: #f8fafc; padding: 24px 72px; border-radius: 100px; display: inline-block; box-shadow: 0 10px 25px rgba(0,0,0,0.05), inset 0 2px 4px rgba(255,255,255,1); border: 2px solid #e2e8f0; position: relative; z-index: 1;">${s.formula}</div>
+            
+            <p style="font-size: 1.35rem; line-height: 1.8; max-width: 750px; margin: 0 auto; color: #475569; font-weight: 500; margin-bottom: 40px;">${s.desc}</p>
+            
+            ${s.note ? `<div style="background: ${color}10; color: #334155; font-size: 1.15rem; line-height: 1.8; padding: 32px 40px; border-radius: 24px; text-align: left; max-width: 800px; margin: 0 auto; border: 2px solid ${color}30; box-shadow: 0 10px 30px rgba(0,0,0,0.02); position: relative;">
+                ${s.note.replace('💡 <strong>LƯU Ý:</strong>', `<div style="color: ${color}; font-size: 1.25rem; font-weight: 900; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 1px; display: flex; align-items: center; gap: 8px;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg> LƯU Ý</div><div style="opacity: 0.95;">`).replace('💡 <strong>LƯU Ý QUAN TRỌNG:</strong>', `<div style="color: ${color}; font-size: 1.25rem; font-weight: 900; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 1px; display: flex; align-items: center; gap: 8px;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg> LƯU Ý QUAN TRỌNG</div><div style="opacity: 0.95;">`)}</div>
             </div>` : ''}
         </div>
 
-        <h2 style="font-size: 2rem; color: var(--text-main); font-weight: 900; margin-bottom: 24px; border-bottom: 2px solid var(--border-color); padding-bottom: 16px;">📚 VÍ DỤ PHÂN TÍCH (Nhấn để mở)</h2>
-        <div style="display: flex; flex-direction: column; gap: 16px;">
+        <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 32px; gap: 16px;">
+            <div style="height: 2px; background: #e2e8f0; flex: 1;"></div>
+            <h2 style="font-size: 1.8rem; color: #1e293b; font-weight: 900; text-transform: uppercase; letter-spacing: 1px; margin: 0;">📚 VÍ DỤ PHÂN TÍCH</h2>
+            <div style="height: 2px; background: #e2e8f0; flex: 1;"></div>
+        </div>
+        <p style="text-align: center; color: var(--text-muted); font-size: 1.1rem; margin-top: -16px; margin-bottom: 32px;">(Nhấn vào từng ô để xem phân tích chi tiết)</p>
+
+        <div style="display: flex; flex-direction: column; gap: 20px; max-width: 900px; margin: 0 auto;">
     `;
 
     s.examples.forEach((exObj, exIdx) => {
