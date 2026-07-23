@@ -693,7 +693,11 @@ function renderView(viewId) {
                         </li>
                     </ul>
                 </div>
+            
+            <div style="text-align: center; margin-top: 24px; margin-bottom: 40px;">
+                <button onclick="window.submitNouns3()" style="padding: 12px 32px; background: var(--primary-color); color: white; border: none; border-radius: 20px; font-weight: bold; cursor: pointer; transition: all 0.2s; font-size: 1.1rem; box-shadow: 0 4px 12px rgba(87,70,227,0.3);">NỘP BÀI 3</button>
             </div>
+</div>
         `;
         contentWrapper.innerHTML = html;
     }
@@ -804,6 +808,7 @@ window.openTopic = function(topicId, status) {
             else if (topicId === 'practice') renderPracticeDetail();
             else if (topicId === 'nouns' && typeof renderNounsDetail === 'function') renderNounsDetail();
             else if (topicId === 'pronouns' && typeof renderPronounsDetail === 'function') renderPronounsDetail();
+            else if (topicId === 'verbs' && typeof renderVerbsDetail === 'function') renderVerbsDetail();
         } else if (pass !== null) {
             alert('Mật khẩu không đúng!');
         }
@@ -1005,7 +1010,11 @@ window.renderStructuresDetail = function(tab = 'theory') {
         </div>
         <div style="margin-top: 36px;">
             ${contentHtml}
-        </div>
+        
+            <div style="text-align: center; margin-top: 24px; margin-bottom: 40px;">
+                <button onclick="window.submitNouns3()" style="padding: 12px 32px; background: var(--primary-color); color: white; border: none; border-radius: 20px; font-weight: bold; cursor: pointer; transition: all 0.2s; font-size: 1.1rem; box-shadow: 0 4px 12px rgba(87,70,227,0.3);">NỘP BÀI 3</button>
+            </div>
+</div>
     `;
 
     contentWrapper.innerHTML = html;
@@ -1135,7 +1144,11 @@ window.renderSingleStructure = function(idx) {
     });
 
     html += `
-        </div>
+        
+            <div style="text-align: center; margin-top: 24px; margin-bottom: 40px;">
+                <button onclick="window.submitNouns3()" style="padding: 12px 32px; background: var(--primary-color); color: white; border: none; border-radius: 20px; font-weight: bold; cursor: pointer; transition: all 0.2s; font-size: 1.1rem; box-shadow: 0 4px 12px rgba(87,70,227,0.3);">NỘP BÀI 3</button>
+            </div>
+</div>
     `;
 
     contentWrapper.innerHTML = html;
@@ -2236,10 +2249,7 @@ window.renderNounsDetail = function(activeTab = 'theory') {
                     </div>
                 </div>
                 
-                <div style="text-align: center; margin-top: 40px; margin-bottom: 40px;">
-                    <button class="btn-primary" onclick="submitNounsPractice()" style="padding: 16px 40px; font-size: 1.3rem; border-radius: 30px; box-shadow: 0 4px 15px rgba(87,70,227,0.4); border: none;">NỘP BÀI VÀ XEM KẾT QUẢ</button>
-                    <div id="nouns-final-result" style="margin-top: 24px; font-size: 1.5rem; font-weight: bold; display: none;"></div>
-                </div>
+                
                 
         `;
     }
@@ -2500,27 +2510,85 @@ window.checkNounsDragDrop = function() {
     }
 }
 
-window.submitNounsPractice = function() {
+
+window.showExerciseResult = function(score, total, title) {
+    const studentName = localStorage.getItem('studentName') || 'Học viên';
+    let resultModal = document.getElementById('exercise-result-modal');
+    if (!resultModal) {
+        resultModal = document.createElement('div');
+        resultModal.id = 'exercise-result-modal';
+        resultModal.style.cssText = 'position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0,0,0,0.6); display: flex; align-items: center; justify-content: center; z-index: 9999; backdrop-filter: blur(5px); opacity: 0; transition: opacity 0.3s;';
+        document.body.appendChild(resultModal);
+    }
+    
+    const percentage = score / total;
+    let message = '';
+    let color = '';
+    if (percentage >= 0.8) {
+        message = '🎉 Xuất sắc! Bạn làm rất tốt!';
+        color = '#10b981';
+    } else if (percentage >= 0.5) {
+        message = '👍 Khá tốt! Hãy cố gắng hơn nhé!';
+        color = '#f59e0b';
+    } else {
+        message = '💪 Cố lên! Bạn cần ôn tập lại kỹ hơn.';
+        color = '#ef4444';
+    }
+
+    resultModal.innerHTML = `
+        <div style="background: white; padding: 32px; border-radius: 20px; width: 90%; max-width: 450px; text-align: center; box-shadow: 0 10px 25px rgba(0,0,0,0.2); transform: scale(0.9); transition: transform 0.3s; border-top: 8px solid ${color};">
+            <h2 style="color: var(--primary-color); margin-bottom: 8px; font-size: 1.8rem;">${title}</h2>
+            <div style="font-size: 1.2rem; color: var(--text-main); margin-bottom: 24px; font-weight: 500;">
+                🎓 Học viên: <span style="color: var(--primary-color);">${studentName}</span>
+            </div>
+            
+            <div style="font-size: 3rem; font-weight: 800; color: ${color}; margin-bottom: 8px;">
+                ${score} <span style="font-size: 1.5rem; color: var(--text-muted);">/ ${total}</span>
+            </div>
+            <p style="font-size: 1.15rem; color: var(--text-main); margin-bottom: 24px;">${message}</p>
+            
+            <button onclick="document.getElementById('exercise-result-modal').style.opacity = '0'; setTimeout(() => document.getElementById('exercise-result-modal').style.display = 'none', 300);" style="padding: 12px 32px; background: var(--primary-color); color: white; border: none; border-radius: 30px; font-size: 1.1rem; font-weight: bold; cursor: pointer; transition: transform 0.2s; box-shadow: 0 4px 12px rgba(87,70,227,0.3);" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">Đóng lại</button>
+        </div>
+    `;
+    
+    resultModal.style.display = 'flex';
+    setTimeout(() => {
+        resultModal.style.opacity = '1';
+        resultModal.firstElementChild.style.transform = 'scale(1)';
+        if (percentage >= 0.8) {
+            try { party.confetti(resultModal.firstElementChild, { count: party.variation.range(50, 80) }); } catch(e) {}
+        }
+    }, 10);
+}
+
+window.submitNouns1 = function() {
     let p1Correct = 0;
     const countableZone = document.getElementById('zone-countable');
     const uncountableZone = document.getElementById('zone-uncountable');
+    const pool = document.getElementById('words-pool');
     
-    // Evaluate P1
+    if (pool && pool.querySelectorAll('.drag-word').length > 0) {
+        alert("Vui lòng kéo hết các từ vào 2 cột trước khi nộp bài!");
+        return;
+    }
+    
     countableZone.querySelectorAll('.drag-word').forEach(el => {
         if(el.getAttribute('data-type') === 'countable') p1Correct++;
     });
     uncountableZone.querySelectorAll('.drag-word').forEach(el => {
         if(el.getAttribute('data-type') === 'uncountable') p1Correct++;
     });
-    window.checkNounsDragDrop(); // Update UI
-    
-    // Evaluate P2
+    window.checkNounsDragDrop();
+    window.showExerciseResult(p1Correct, 10, "KẾT QUẢ BÀI 1 (DANH TỪ)");
+}
+
+window.submitNouns2 = function() {
     let p2Correct = 0;
-    let p2Completed = true;
+    let completed = true;
     nounsPractice2Data.forEach((q, idx) => {
         const ans = window.nounsAnswers[idx];
         if (ans.tf === null || (ans.tf === false && (!ans.correction || ans.correction.trim() === ''))) {
-            p2Completed = false;
+            completed = false;
         } else {
             const correctIdx = nounsPractice2Data[idx].answer;
             const isActuallyCorrect = nounsPractice2Data[idx].options[correctIdx].includes("Giữ nguyên");
@@ -2535,16 +2603,22 @@ window.submitNounsPractice = function() {
                 }
             }
         }
-        window.checkNounsSingleAnswer(idx); // Update UI
+        window.checkNounsSingleAnswer(idx);
     });
-    
-    // Evaluate P3
+    if (!completed) {
+        alert("Vui lòng trả lời hết các câu hỏi trước khi nộp bài!");
+        return;
+    }
+    window.showExerciseResult(p2Correct, nounsPractice2Data.length, "KẾT QUẢ BÀI 2 (DANH TỪ)");
+}
+
+window.submitNouns3 = function() {
     let p3Correct = 0;
-    let p3Completed = true;
+    let completed = true;
     nounsPractice3Data.forEach((q, idx) => {
         const userInput = window.nounsTransAnswers[idx];
         if (!userInput || userInput.trim() === '') {
-            p3Completed = false;
+            completed = false;
         } else {
             const cleanUser = userInput.trim().toLowerCase().replace(/[.,!?;:]/g, '').replace(/\s+/g, ' ');
             const validAnswers = q.a;
@@ -2557,521 +2631,13 @@ window.submitNounsPractice = function() {
             }
             if (isCorrect) p3Correct++;
         }
-        window.checkNounsTranslation(idx); // Update UI
+        window.checkNounsTranslation(idx);
     });
-    
-    if (document.getElementById('words-pool').querySelectorAll('.drag-word').length > 0 || !p2Completed || !p3Completed) {
-        alert("Bạn chưa hoàn thành tất cả các bài tập. Vui lòng điền nốt và kiểm tra lại những câu bị đánh dấu cảnh báo màu cam nhé!");
+    if (!completed) {
+        alert("Vui lòng điền hết tất cả các câu trước khi nộp bài!");
+        return;
     }
-
-    const finalRes = document.getElementById('nouns-final-result');
-    finalRes.style.display = 'block';
-    
-    const totalScore = p1Correct + p2Correct + p3Correct;
-    const maxScore = 10 + nounsPractice2Data.length + nounsPractice3Data.length;
-    
-    finalRes.innerHTML = `<div style="background: white; padding: 24px; border-radius: 12px; border: 2px solid var(--primary-color); box-shadow: var(--shadow-md);">
-        <h3 style="color: var(--primary-color); margin-bottom: 16px; font-size: 1.8rem;">TỔNG KẾT ĐIỂM SỐ BÀI TẬP DANH TỪ</h3>
-        <ul style="list-style: none; padding: 0; margin-bottom: 24px; font-size: 1.2rem; color: var(--text-main); text-align: left; display: inline-block;">
-            <li style="margin-bottom: 12px;">🔹 <b>Bài 1 (Phân loại từ):</b> ${p1Correct} / 10</li>
-            <li style="margin-bottom: 12px;">🔹 <b>Bài 2 (Sửa lỗi sai):</b> ${p2Correct} / ${nounsPractice2Data.length}</li>
-            <li style="margin-bottom: 12px;">🔹 <b>Bài 3 (Dịch cụm danh từ):</b> ${p3Correct} / ${nounsPractice3Data.length}</li>
-        </ul>
-        <div style="font-size: 2rem; color: ${totalScore >= maxScore * 0.8 ? '#10b981' : (totalScore >= maxScore * 0.5 ? '#f59e0b' : '#ef4444')}; border-top: 2px dashed #e2e8f0; padding-top: 16px;">
-            <b>TỔNG ĐIỂM: ${totalScore} / ${maxScore}</b>
-        </div>
-        <p style="font-size: 1.1rem; font-weight: normal; color: var(--text-muted); margin-top: 12px;">${totalScore >= maxScore * 0.8 ? '🎉 Xuất sắc! Bạn nắm rất chắc kiến thức về Danh từ!' : (totalScore >= maxScore * 0.5 ? '👍 Khá tốt! Hãy xem lại những phần giải thích bị sai nhé.' : '💪 Cố lên! Bạn cần ôn tập lại lý thuyết Chủ điểm này.')}</p>
-    </div>`;
-    
-    if (totalScore >= maxScore * 0.8) {
-        try { party.confetti(finalRes, { count: party.variation.range(50, 80) }); } catch(e) {}
-    }
-
-    // Gửi điểm lên Google form
-    const studentInfo = JSON.parse(localStorage.getItem('studentInfo'));
-    if (studentInfo) {
-        const formData = new FormData();
-        formData.append('entry.1234567890', studentInfo.name); 
-        formData.append('entry.0987654321', studentInfo.classId);
-        formData.append('entry.1111111111', `Chương 2 - Danh từ`); 
-        formData.append('entry.2222222222', totalScore + "/20"); 
-
-        /* Uncomment when having real Form URL
-        fetch('YOUR_GOOGLE_FORM_SUBMIT_URL', {
-            method: 'POST',
-            mode: 'no-cors',
-            body: formData
-        }).then(() => console.log('Score submitted'));
-        */
-    }
-}
-
-window.showNounExample = function(type, el) {
-    const display = document.getElementById('noun-example-display');
-    
-    // Reset all nodes
-    document.querySelectorAll('.noun-node').forEach(n => {
-        n.style.transform = 'scale(1)';
-        n.style.boxShadow = 'none';
-    });
-    
-    // Highlight clicked node
-    if (el) {
-        el.style.transform = 'scale(1.05)';
-        el.style.boxShadow = '0 10px 25px rgba(0,0,0,0.15)';
-    }
-    
-    if (type === 'subject') {
-        display.style.background = 'rgba(87,70,227,0.05)';
-        display.style.borderColor = 'var(--primary-color)';
-        display.innerHTML = `
-            <div style="width: 100%;">
-                <div style="font-weight: 800; color: var(--primary-color); margin-bottom: 16px; font-size: 1.15rem; text-transform: uppercase;">1. Danh từ làm Chủ ngữ (S)</div>
-                <div class="example-reveal" onclick="this.classList.toggle('revealed')" style="cursor: pointer; background: #fff; padding: 16px; border-radius: 8px; border-left: 4px solid var(--primary-color); box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
-                    <div style="font-size: 1.25rem; font-weight: 500; margin-bottom: 8px;"><span style="color: var(--primary-color); font-weight: 700; border-bottom: 2px solid var(--primary-color);">Technology</span> changes our lives.</div>
-                    <div class="vie" style="display: none; color: var(--text-main); font-style: italic; border-top: 1px dashed rgba(87,70,227,0.3); padding-top: 12px; margin-top: 8px;">👉 <span style="font-weight:bold; color:var(--primary-color);">Công nghệ</span> thay đổi cuộc sống của chúng ta.</div>
-                    <div style="font-size: 0.85rem; color: #94a3b8; margin-top: 12px; display: flex; align-items: center; gap: 6px;">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg> 
-                        Nhấp vào thẻ này để ẩn/hiện nghĩa tiếng Việt
-                    </div>
-                </div>
-            </div>
-        `;
-    } else if (type === 'object') {
-        display.style.background = 'rgba(16,185,129,0.05)';
-        display.style.borderColor = '#10b981';
-        display.innerHTML = `
-            <div style="width: 100%;">
-                <div style="font-weight: 800; color: #10b981; margin-bottom: 16px; font-size: 1.15rem; text-transform: uppercase;">2. Danh từ làm Tân ngữ (O)</div>
-                <div class="example-reveal" onclick="this.classList.toggle('revealed')" style="cursor: pointer; background: #fff; padding: 16px; border-radius: 8px; border-left: 4px solid #10b981; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
-                    <div style="font-size: 1.25rem; font-weight: 500; margin-bottom: 8px;">They discussed the <span style="color: #10b981; font-weight: 700; border-bottom: 2px solid #10b981;">problem</span>.</div>
-                    <div class="vie" style="display: none; color: var(--text-main); font-style: italic; border-top: 1px dashed rgba(16,185,129,0.3); padding-top: 12px; margin-top: 8px;">👉 Họ đã thảo luận về <span style="font-weight:bold; color:#10b981;">vấn đề đó</span>.</div>
-                    <div style="font-size: 0.85rem; color: #94a3b8; margin-top: 12px; display: flex; align-items: center; gap: 6px;">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg> 
-                        Nhấp vào thẻ này để ẩn/hiện nghĩa tiếng Việt
-                    </div>
-                </div>
-            </div>
-        `;
-    } else if (type === 'complement') {
-        display.style.background = 'rgba(239,68,68,0.05)';
-        display.style.borderColor = '#ef4444';
-        display.innerHTML = `
-            <div style="width: 100%;">
-                <div style="font-weight: 800; color: #ef4444; margin-bottom: 16px; font-size: 1.15rem; text-transform: uppercase;">3. Danh từ làm Bổ ngữ (C)</div>
-                <div class="example-reveal" onclick="this.classList.toggle('revealed')" style="cursor: pointer; background: #fff; padding: 16px; border-radius: 8px; border-left: 4px solid #ef4444; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
-                    <div style="font-size: 1.25rem; font-weight: 500; margin-bottom: 8px;">She is an excellent <span style="color: #ef4444; font-weight: 700; border-bottom: 2px solid #ef4444;">teacher</span>.</div>
-                    <div class="vie" style="display: none; color: var(--text-main); font-style: italic; border-top: 1px dashed rgba(239,68,68,0.3); padding-top: 12px; margin-top: 8px;">👉 Cô ấy là một <span style="font-weight:bold; color:#ef4444;">giáo viên</span> xuất sắc.</div>
-                    <div style="font-size: 0.85rem; color: #94a3b8; margin-top: 12px; display: flex; align-items: center; gap: 6px;">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg> 
-                        Nhấp vào thẻ này để ẩn/hiện nghĩa tiếng Việt
-                    </div>
-                </div>
-            </div>
-        `;
-    }
-}
-
-
-
-// --- CHỦ ĐIỂM 02: ĐẠI TỪ (PRONOUNS) ---
-const pronounsTheoryData = [
-    {
-        title: '1. Đại từ Nhân xưng (Personal Pronouns)',
-        content: `
-        <div class="form-rich-content">
-            <div class="form-note" style="margin-bottom: 20px;">
-                Đại từ nhân xưng thay thế cho danh từ chỉ người hoặc vật. Tùy vào vị trí trong câu mà chia làm 2 loại: <b>Chủ ngữ (Subject)</b> và <b>Tân ngữ (Object)</b>.
-            </div>
-            
-            <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px; text-align: center; font-size: 1.05rem;">
-                <tr style="background: var(--primary-light); color: var(--primary-color);">
-                    <th style="padding: 12px; border: 1px solid var(--border-color);">Ngôi</th>
-                    <th style="padding: 12px; border: 1px solid var(--border-color);">Làm Chủ Ngữ (S)</th>
-                    <th style="padding: 12px; border: 1px solid var(--border-color);">Làm Tân Ngữ (O)</th>
-                </tr>
-                <tr><td style="padding: 10px; border: 1px solid var(--border-color); font-weight: bold;">Ngôi 1 số ít</td><td style="padding: 10px; border: 1px solid var(--border-color);">I</td><td style="padding: 10px; border: 1px solid var(--border-color);">me</td></tr>
-                <tr style="background: #f8fafc;"><td style="padding: 10px; border: 1px solid var(--border-color); font-weight: bold;">Ngôi 1 số nhiều</td><td style="padding: 10px; border: 1px solid var(--border-color);">We</td><td style="padding: 10px; border: 1px solid var(--border-color);">us</td></tr>
-                <tr><td style="padding: 10px; border: 1px solid var(--border-color); font-weight: bold;">Ngôi 2</td><td style="padding: 10px; border: 1px solid var(--border-color);">You</td><td style="padding: 10px; border: 1px solid var(--border-color);">you</td></tr>
-                <tr style="background: #f8fafc;"><td style="padding: 10px; border: 1px solid var(--border-color); font-weight: bold;">Ngôi 3 số ít</td><td style="padding: 10px; border: 1px solid var(--border-color);">He / She / It</td><td style="padding: 10px; border: 1px solid var(--border-color);">him / her / it</td></tr>
-                <tr><td style="padding: 10px; border: 1px solid var(--border-color); font-weight: bold;">Ngôi 3 số nhiều</td><td style="padding: 10px; border: 1px solid var(--border-color);">They</td><td style="padding: 10px; border: 1px solid var(--border-color);">them</td></tr>
-            </table>
-            
-            <div style="background: #eff6ff; border-left: 4px solid #3b82f6; padding: 12px; margin-bottom: 16px; border-radius: 4px;">
-                <b style="color: #1d4ed8;">📍 Vị trí trong câu:</b>
-                <ul style="margin-top: 8px; margin-bottom: 0; padding-left: 20px;">
-                    <li><b>Đại từ Chủ ngữ:</b> Đứng <b>TRƯỚC</b> động từ chính.</li>
-                    <li><b>Đại từ Tân ngữ:</b> Đứng <b>SAU</b> động từ hoặc <b>SAU</b> giới từ (in, on, at, with, about...).</li>
-                </ul>
-            </div>
-            
-            <div class="form-example">
-                <div class="en"><span style="color:var(--primary-color); font-weight:bold;">She</span> likes <span style="color:#10b981; font-weight:bold;">him</span>, but <span style="color:var(--primary-color); font-weight:bold;">he</span> doesn't like <span style="color:#10b981; font-weight:bold;">her</span>.</div>
-                <div class="vn">(Cô ấy thích anh ấy, nhưng anh ấy không thích cô ấy)</div>
-            </div>
-        </div>
-        `
-    },
-    {
-        title: '2. Sở hữu (Possessives)',
-        content: `
-        <div class="form-rich-content">
-            <div class="form-note" style="margin-bottom: 20px;">
-                Dùng để chỉ sự sở hữu. Có 2 dạng dễ nhầm lẫn là <b>Tính từ sở hữu (Possessive Adjectives)</b> và <b>Đại từ sở hữu (Possessive Pronouns)</b>.
-            </div>
-            
-            <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px; text-align: center; font-size: 1.05rem;">
-                <tr style="background: var(--primary-light); color: var(--primary-color);">
-                    <th style="padding: 12px; border: 1px solid var(--border-color);">Tính từ sở hữu (+ Danh từ)</th>
-                    <th style="padding: 12px; border: 1px solid var(--border-color);">Đại từ sở hữu (Không cần Danh từ)</th>
-                </tr>
-                <tr><td style="padding: 10px; border: 1px solid var(--border-color);">my (của tôi)</td><td style="padding: 10px; border: 1px solid var(--border-color);">mine</td></tr>
-                <tr style="background: #f8fafc;"><td style="padding: 10px; border: 1px solid var(--border-color);">our (của chúng tôi)</td><td style="padding: 10px; border: 1px solid var(--border-color);">ours</td></tr>
-                <tr><td style="padding: 10px; border: 1px solid var(--border-color);">your (của bạn)</td><td style="padding: 10px; border: 1px solid var(--border-color);">yours</td></tr>
-                <tr style="background: #f8fafc;"><td style="padding: 10px; border: 1px solid var(--border-color);">his / her / its</td><td style="padding: 10px; border: 1px solid var(--border-color);">his / hers / its</td></tr>
-                <tr><td style="padding: 10px; border: 1px solid var(--border-color);">their (của họ)</td><td style="padding: 10px; border: 1px solid var(--border-color);">theirs</td></tr>
-            </table>
-            
-            <div style="background: #fffbeb; border-left: 4px solid #f59e0b; padding: 12px; margin-bottom: 16px; border-radius: 4px;">
-                <b style="color: #b45309;">Công thức:</b> Đại từ sở hữu = Tính từ sở hữu + Danh từ (đã nhắc đến trước đó)
-            </div>
-            
-            <div class="form-example">
-                <div class="en">My car is old. <span style="color:var(--primary-color); font-weight:bold;">Yours</span> is new. <i>(= Your car is new)</i></div>
-                <div class="vn">(Xe của tôi thì cũ. Xe của bạn thì mới.)</div>
-            </div>
-        </div>
-        `
-    },
-    {
-        title: '3. Đại từ Phản thân (Reflexive Pronouns)',
-        content: `
-        <div class="form-rich-content">
-            <div class="form-note" style="margin-bottom: 20px;">
-                Dùng khi Chủ ngữ và Tân ngữ cùng là một người/vật (tự làm gì đó). Hoặc dùng để nhấn mạnh chính người đó làm chứ không ai khác.
-            </div>
-            
-            <ul style="list-style: none; padding: 0; line-height: 1.8; margin-bottom: 16px;">
-                <li>🔹 <b>myself:</b> chính tôi</li>
-                <li>🔹 <b>yourself:</b> chính bạn (số ít) / <b>yourselves:</b> chính các bạn (số nhiều)</li>
-                <li>🔹 <b>ourselves:</b> chính chúng tôi</li>
-                <li>🔹 <b>himself / herself / itself:</b> chính anh ấy / cô ấy / nó</li>
-                <li>🔹 <b>themselves:</b> chính họ</li>
-            </ul>
-            
-            <div class="form-example" style="margin-bottom: 16px;">
-                <div class="en">She cut <span style="color:var(--primary-color); font-weight:bold;">herself</span> while cooking.</div>
-                <div class="vn">(Cô ấy vô tình cắt vào tay chính mình khi đang nấu ăn)</div>
-            </div>
-            <div class="form-example">
-                <div class="en">I will do it <span style="color:var(--primary-color); font-weight:bold;">myself</span>.</div>
-                <div class="vn">(Tôi sẽ tự tay làm việc đó - Nhấn mạnh)</div>
-            </div>
-        </div>
-        `
-    },
-    {
-        title: '4. Đại từ Chỉ định (Demonstrative Pronouns)',
-        content: `
-        <div class="form-rich-content">
-            <div class="form-note" style="margin-bottom: 20px;">
-                Chỉ định người hoặc vật cụ thể dựa trên khoảng cách. Cực kỳ hữu ích trong thi Viết (Writing) để <b>nối câu (cohesion)</b> thay vì lặp lại ý.
-            </div>
-            
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 20px; text-align: center;">
-                <div style="background: #f8fafc; padding: 16px; border-radius: 8px; border: 1px solid var(--border-color);">
-                    <div style="font-weight: bold; color: var(--primary-color); margin-bottom: 8px;">GẦN</div>
-                    <div style="font-size: 1.1rem;"><b>This</b> (Cái này - số ít)</div>
-                    <div style="font-size: 1.1rem;"><b>These</b> (Những cái này - số nhiều)</div>
-                </div>
-                <div style="background: #f8fafc; padding: 16px; border-radius: 8px; border: 1px solid var(--border-color);">
-                    <div style="font-weight: bold; color: #ef4444; margin-bottom: 8px;">XA</div>
-                    <div style="font-size: 1.1rem;"><b>That</b> (Cái kia - số ít)</div>
-                    <div style="font-size: 1.1rem;"><b>Those</b> (Những cái kia - số nhiều)</div>
-                </div>
-            </div>
-            
-            <div style="background: #f0fdf4; border-left: 4px solid #22c55e; padding: 12px; margin-bottom: 16px; border-radius: 4px;">
-                <b style="color: #166534;">🔥 Ứng dụng B1 Writing (Nối câu):</b> "This + Danh từ" dùng để thay thế cho cả một cụm hoặc một câu phía trước.
-            </div>
-            
-            <div class="form-example">
-                <div class="en">Many students play games all day. <span style="color:var(--primary-color); font-weight:bold;">This bad habit</span> affects their grades.</div>
-                <div class="vn">(Nhiều học sinh chơi game cả ngày. <b>Thói quen xấu này</b> ảnh hưởng đến điểm số của họ.)</div>
-            </div>
-        </div>
-        `
-    }
-];
-
-const pronounsPractice1Data = [
-    { 
-        q: "Peter loves sports. ___ plays football every weekend.", 
-        options: ["He", "His", "Him"], 
-        a: 0, 
-        exp: "Vị trí cần điền đứng trước động từ 'plays' -> cần Đại từ nhân xưng làm Chủ ngữ (He)." 
-    },
-    { 
-        q: "This book is not mine. Is it ___?", 
-        options: ["your", "yours", "you"], 
-        a: 1, 
-        exp: "Cuối câu không có danh từ -> cần dùng Đại từ sở hữu (yours = your book)." 
-    },
-    { 
-        q: "The cat licked ___ paws after eating.", 
-        options: ["it", "it's", "its"], 
-        a: 2, 
-        exp: "Trước danh từ 'paws' cần Tính từ sở hữu (its). Lưu ý 'it\'s' = it is." 
-    },
-    { 
-        q: "They built the house all by ___.", 
-        options: ["them", "theirs", "themselves"], 
-        a: 2, 
-        exp: "Cụm 'by oneself' nghĩa là tự mình làm. Ở đây chủ ngữ là They -> themselves." 
-    },
-    { 
-        q: "My parents are angry. I need to talk to ___.", 
-        options: ["they", "them", "their"], 
-        a: 1, 
-        exp: "Đứng sau giới từ 'to' và động từ 'talk' -> cần Đại từ nhân xưng làm Tân ngữ (them)." 
-    },
-    { 
-        q: "___ are the shoes I bought yesterday.", 
-        options: ["This", "That", "These"], 
-        a: 2, 
-        exp: "Động từ là 'are' (số nhiều) và 'shoes' (số nhiều) -> cần Đại từ chỉ định số nhiều (These / Those)." 
-    },
-    { 
-        q: "Sarah and I are going to the cinema. Do you want to come with ___?", 
-        options: ["us", "we", "me"], 
-        a: 0, 
-        exp: "'Sarah and I' = We. Tân ngữ của We là us." 
-    },
-    { 
-        q: "Everyone is responsible for ___ own actions.", 
-        options: ["his", "their", "there"], 
-        a: 1, 
-        exp: "Với các đại từ bất định chỉ người như everyone/everybody, ta thường dùng tính từ sở hữu 'their' thay thế." 
-    },
-    { 
-        q: "Look at ___ bird in the sky! It's so beautiful.", 
-        options: ["this", "that", "these"], 
-        a: 1, 
-        exp: "'in the sky' chỉ khoảng cách xa, 'bird' là số ít -> dùng that." 
-    },
-    { 
-        q: "We enjoyed ___ very much at the party.", 
-        options: ["ourselves", "us", "our"], 
-        a: 0, 
-        exp: "Cụm 'enjoy oneself' = có khoảng thời gian vui vẻ. Chủ ngữ We -> ourselves." 
-    }
-];
-
-const pronounsPractice2Data = [
-    { 
-        q: "People are using too much plastic. ___ causes environmental problems. (sử dụng This/These)", 
-        a: ["This", "This problem", "This habit", "This action"],
-        exp: "Thay thế cho toàn bộ sự việc 'sử dụng quá nhiều nhựa' -> Dùng 'This' hoặc 'This + Danh từ khái quát'." 
-    },
-    { 
-        q: "Some students don't sleep enough. ___ leads to poor health.", 
-        a: ["This", "This problem", "This habit"],
-        exp: "Thay thế cho sự việc 'thiếu ngủ' -> Dùng 'This'." 
-    },
-    { 
-        q: "Smartphones and laptops are expensive. However, ___ devices are necessary for study.", 
-        a: ["these", "those"],
-        exp: "Smartphones and laptops là số nhiều -> dùng 'These' (hoặc 'Those')." 
-    },
-    { 
-        q: "I forgot to do my homework. ___ made the teacher angry.", 
-        a: ["This", "This mistake", "This action"],
-        exp: "Thay thế cho việc 'quên làm bài tập' (sự việc) -> dùng 'This'." 
-    },
-    { 
-        q: "Fresh air, trees, and clean water. ___ are things we need to protect.", 
-        a: ["These", "Those"],
-        exp: "Liệt kê nhiều thứ (fresh air, trees, clean water) -> dùng 'These' (số nhiều)." 
-    }
-];
-
-const pronounsParagraphData = {
-    segments: [
-        { text: "(1 - tôi) ", placeholder: "1. tôi" },
-        { text: " am working on a group presentation with my friends. (2 - của chúng tôi) ", placeholder: "2. của chúng tôi" },
-        { text: " group includes Khoa, Mai, and me. Last week, our teacher gave (3 - chúng tôi) ", placeholder: "3. chúng tôi" },
-        { text: " the topic \"air pollution in big cities.\" Khoa is very responsible. (4 - anh ấy) ", placeholder: "4. anh ấy" },
-        { text: " found many useful statistics and shared them with us. We really appreciate (5 - của anh ấy) ", placeholder: "5. của anh ấy" },
-        { text: " hard work and dedication. Mai also did a great job. (6 - cô ấy) ", placeholder: "6. cô ấy" },
-        { text: " designed a colorful poster for the presentation. Everyone liked (7 - của cô ấy) ", placeholder: "7. của cô ấy" },
-        { text: " idea because it was creative and eye-catching. (8 - chúng tôi) ", placeholder: "8. chúng tôi" },
-        { text: " practiced together every afternoon after class. Sometimes, our teacher stayed to give (9 - chúng tôi) ", placeholder: "9. chúng tôi" },
-        { text: " feedback. She said, \"(10 - các em) ", placeholder: "10. các em" },
-        { text: " are making good progress, but don't forget to check your sources.\" I replied, \"Yes, thank you for helping (11 - chúng em) ", placeholder: "11. chúng em" },
-        { text: " improve.\" During the process, I also used a learning app. (12 - nó) ", placeholder: "12. nó" },
-        { text: " sends daily tips and reminds me to review. I like (13 - của nó) ", placeholder: "13. của nó" },
-        { text: " design because it's simple and user-friendly. Tomorrow is our presentation day. (14 - chúng tôi) ", placeholder: "14. chúng tôi" },
-        { text: " hope everything will go well. Khoa is a bit nervous, but I told (15 - anh ấy) ", placeholder: "15. anh ấy" },
-        { text: " to just do his best. Our teacher believes in (16 - chúng tôi) ", placeholder: "16. chúng tôi" },
-        { text: ", and that gives us confidence." }
-    ],
-    answers: ["I", "Our", "us", "He", "his", "She", "her", "We", "us", "You", "us", "It", "its", "We", "him", "us"],
-    explanations: [
-        "Đứng trước động từ 'am' và đóng vai trò làm chủ ngữ ngôi số ít -> dùng đại từ nhân xưng 'I'.",
-        "Đứng trước danh từ 'group' bổ nghĩa sở hữu -> dùng tính từ sở hữu 'Our' (viết hoa đầu câu).",
-        "Đứng sau động từ 'gave' (tặng cho ai cái gì) đóng vai trò tân ngữ -> dùng đại từ tân ngữ 'us'.",
-        "Đứng trước động từ 'found' làm chủ ngữ cho câu mới -> dùng đại từ nhân xưng 'He' (viết hoa).",
-        "Đứng trước danh từ 'hard work' bổ nghĩa sở hữu -> dùng tính từ sở hữu 'his'.",
-        "Đứng trước động từ 'designed' làm chủ ngữ chỉ Mai (cô ấy) -> dùng đại từ nhân xưng 'She' (viết hoa).",
-        "Đứng trước danh từ 'idea' để sở hữu -> dùng tính từ sở hữu 'her'.",
-        "Đứng trước động từ 'practiced' làm chủ ngữ đại diện cho cả nhóm (chúng tôi) -> dùng đại từ nhân xưng 'We' (viết hoa).",
-        "Đứng sau cụm động từ 'give' đóng vai trò tân ngữ -> dùng đại từ tân ngữ 'us'.",
-        "Đứng trước động từ 'are' làm chủ ngữ khi giáo viên đối thoại trực tiếp (các em) -> dùng đại từ nhân xưng 'You' (viết hoa).",
-        "Đứng sau cụm giới từ 'helping' làm tân ngữ -> dùng đại từ tân ngữ 'us' (chúng em).",
-        "Đứng trước động từ 'sends' làm chủ ngữ thay thế cho 'app' (nó) -> dùng đại từ nhân xưng 'It' (viết hoa).",
-        "Đứng trước danh từ 'design' bổ nghĩa sở hữu cho ứng dụng (của nó) -> dùng tính từ sở hữu 'its'.",
-        "Đứng trước động từ 'hope' làm chủ ngữ chỉ cả nhóm (chúng tôi) -> dùng đại từ nhân xưng 'We' (viết hoa).",
-        "Đứng sau động từ 'told' làm tân ngữ chỉ Khoa (anh ấy) -> dùng đại từ tân ngữ 'him'.",
-        "Đứng sau giới từ 'believes in' đóng vai trò tân ngữ -> dùng đại từ tân ngữ 'us'."
-    ]
-};
-
-
-window.renderPronounsDetail = function(activeTab = 'theory') {
-    let tabsHtml = `
-        <div class="custom-tabs" style="display: flex; gap: 16px;">
-            <button class="tab-btn ${activeTab === 'theory' ? 'active' : ''}" onclick="renderPronounsDetail('theory')" style="padding: 12px 32px; font-size: 1.1rem; font-weight: bold; border-radius: 30px; border: none; cursor: pointer; background: ${activeTab === 'theory' ? 'var(--primary-color)' : 'var(--bg-card)'}; color: ${activeTab === 'theory' ? '#fff' : 'var(--text-main)'}; border: 2px solid ${activeTab === 'theory' ? 'transparent' : 'var(--border-color)'}; transition: all 0.3s;">📚 LÝ THUYẾT</button>
-            <button class="tab-btn ${activeTab === 'practice' ? 'active' : ''}" onclick="renderPronounsDetail('practice')" style="padding: 12px 32px; font-size: 1.1rem; font-weight: bold; border-radius: 30px; border: none; cursor: pointer; background: ${activeTab === 'practice' ? 'var(--primary-color)' : 'var(--bg-card)'}; color: ${activeTab === 'practice' ? '#fff' : 'var(--text-main)'}; border: 2px solid ${activeTab === 'practice' ? 'transparent' : 'var(--border-color)'}; transition: all 0.3s;">✏️ BÀI TẬP</button>
-        </div>
-    `;
-
-    let contentHtml = '';
-
-    if (activeTab === 'theory') {
-        const theoryCards = pronounsTheoryData.map((item, idx) => `
-            <div class="theory-card" style="background: var(--bg-card); border-radius: 12px; padding: 24px; box-shadow: var(--shadow-sm); border-left: 5px solid var(--primary-color);">
-                <h3 style="color: var(--primary-color); margin-bottom: 12px; font-size: 1.3rem;">${item.title}</h3>
-                <div style="color: var(--text-main); font-size: 1.1rem; line-height: 1.6;">${item.content}</div>
-            </div>
-        `).join('');
-
-        contentHtml = `
-            <div style="margin-top: 24px;">
-                <p style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 24px;">Đại từ là công cụ tuyệt vời giúp bài viết của bạn tránh lặp từ và chuyên nghiệp hơn.</p>
-                <div style="display: grid; grid-template-columns: 1fr; gap: 24px;">
-                    ${theoryCards}
-                </div>
-            </div>
-        `;
-    } else {
-        // Initialize tracking arrays if not exists
-        if (!window.pronounsAnswers1) {
-            window.pronounsAnswers1 = new Array(pronounsPractice1Data.length).fill(null);
-            window.pronounsAnswers2 = new Array(pronounsPractice2Data.length).fill('');
-            window.pronounsAnswersPara = new Array(16).fill('');
-        }
-
-        let paraHtml = '';
-        pronounsParagraphData.segments.forEach((seg, idx) => {
-            paraHtml += seg.text;
-            if (idx < pronounsParagraphData.answers.length) {
-                paraHtml += `<input type="text" id="pro_para_${idx}" class="para-input" placeholder="(${idx + 1})" value="${window.pronounsAnswersPara[idx] || ''}" oninput="window.pronounsAnswersPara[${idx}] = this.value; document.getElementById('pro_para_explanation').style.display='none'; window.saveProgress(true);" style="width: 80px; padding: 4px 8px; border: 2px solid #cbd5e1; border-radius: 6px; font-size: 1.05rem; text-align: center; font-weight: 700; color: var(--primary-color); outline: none; margin: 0 4px; transition: all 0.2s; background: white;">`;
-            }
-        });
-
-        const p1Html = pronounsPractice1Data.map((q, idx) => `
-            <div class="quiz-item" style="background: var(--bg-card); border-radius: 12px; padding: 20px; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color);">
-                <div style="display: flex; gap: 12px; align-items: flex-start; margin-bottom: 16px;">
-                    <div style="background: var(--primary-light); color: var(--primary-color); width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">${idx + 1}</div>
-                    <p style="font-size: 1.15rem; font-weight: 500; color: var(--text-main); margin-top: 4px;">${q.q}</p>
-                </div>
-                <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 16px; padding-left: 44px;">
-                    ${q.options.map((opt, oIdx) => `
-                        <label style="display: flex; align-items: center; gap: 8px; padding: 10px 16px; background: ${window.pronounsAnswers1[idx] === oIdx ? '#eff6ff' : '#f8fafc'}; border: 2px solid ${window.pronounsAnswers1[idx] === oIdx ? 'var(--primary-color)' : '#e2e8f0'}; border-radius: 8px; cursor: pointer; transition: all 0.2s;" onclick="window.selectPronouns1Option(this, ${idx}, ${oIdx})">
-                            <input type="radio" name="pro_q1_${idx}" value="${oIdx}" style="display:none;" ${window.pronounsAnswers1[idx] === oIdx ? 'checked' : ''}>
-                            <div class="radio-custom" style="width: 18px; height: 18px; border-radius: 50%; border: 2px solid #cbd5e1; background: ${window.pronounsAnswers1[idx] === oIdx ? 'var(--primary-color)' : 'transparent'};"></div>
-                            <span style="font-weight: 500;">${opt}</span>
-                        </label>
-                    `).join('')}
-                </div>
-                <div style="padding-left: 44px;">
-                    <button onclick="checkPronouns1(${idx})" style="padding: 8px 20px; background: white; color: var(--primary-color); border: 2px solid var(--primary-color); border-radius: 20px; font-weight: bold; cursor: pointer; transition: all 0.2s;">Kiểm tra</button>
-                    <div id="proexp1_${idx}" style="display: none; margin-top: 16px; padding: 12px 16px; border-radius: 8px; font-size: 1.05rem;"></div>
-                </div>
-            </div>
-        `).join('');
-
-        const p2Html = pronounsPractice2Data.map((q, idx) => `
-            <div class="quiz-item" style="background: var(--bg-card); border-radius: 12px; padding: 20px; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color);">
-                <div style="display: flex; gap: 12px; align-items: flex-start; margin-bottom: 12px;">
-                    <div style="background: var(--primary-light); color: var(--primary-color); width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">${idx + 1}</div>
-                    <p style="font-size: 1.1rem; font-weight: 500; color: var(--text-main); margin-top: 4px; line-height: 1.6;">${q.q}</p>
-                </div>
-                <div style="display: flex; flex-direction: column; gap: 8px; padding-left: 44px;">
-                    <input type="text" id="pro_input2_${idx}" placeholder="Nhập từ chỉ định..." value="${window.pronounsAnswers2[idx] || ''}" style="padding: 10px 16px; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 1.05rem; outline: none; width: 100%; box-sizing: border-box;" oninput="window.pronounsAnswers2[${idx}] = this.value; document.getElementById('proexp2_${idx}').style.display='none'; window.saveProgress(true);">
-                    <button onclick="checkPronouns2(${idx})" style="padding: 8px 16px; background: white; color: var(--primary-color); border: 2px solid var(--primary-color); border-radius: 20px; font-weight: bold; cursor: pointer; align-self: flex-start;">Kiểm tra</button>
-                </div>
-                <div id="proexp2_${idx}" style="display: none; margin-top: 12px; margin-left: 44px; padding: 10px 12px; border-radius: 8px; font-size: 1rem;"></div>
-            </div>
-        `).join('');
-
-        contentHtml = `
-            <div style="margin-top: 24px;">
-                <div style="margin-bottom: 40px;">
-                    <h2 style="color: var(--primary-color); font-size: 1.4rem; margin-bottom: 16px;">BÀI 1: CHỌN ĐẠI TỪ PHÙ HỢP</h2>
-                    <p style="color: var(--text-muted); margin-bottom: 24px;">Lựa chọn Đại từ đúng để điền vào chỗ trống trong các câu sau.</p>
-                    <div style="display: flex; flex-direction: column; gap: 24px;">
-                        ${p1Html}
-                    </div>
-                </div>
-                
-                <hr style="border-top: 2px solid var(--border-color); margin-bottom: 40px;">
-                
-                <div style="margin-bottom: 40px;">
-                    <h2 style="color: var(--primary-color); font-size: 1.4rem; margin-bottom: 16px;">BÀI 2: DÙNG THIS / THESE ĐỂ NỐI CÂU</h2>
-                    <p style="color: var(--text-muted); margin-bottom: 24px;">Sử dụng Đại từ chỉ định (This/These/That/Those) để thay thế và liên kết ý của câu trước đó. Kỹ năng này rất hữu ích trong Writing.</p>
-                    <div style="display: flex; flex-direction: column; gap: 24px;">
-                        ${p2Html}
-                    </div>
-                </div>
-
-                <hr style="border-top: 2px solid var(--border-color); margin-bottom: 40px;">
-
-                <div style="margin-bottom: 40px;">
-                    <h2 style="color: var(--primary-color); font-size: 1.4rem; margin-bottom: 16px;">BÀI 3: LUYỆN TẬP ĐIỀN ĐẠI TỪ TRONG ĐOẠN VĂN</h2>
-                    <p style="color: var(--text-muted); margin-bottom: 24px;">Đọc đoạn văn kể về công việc thuyết trình nhóm dưới đây và điền Đại từ nhân xưng, Đại từ tân ngữ, Tính từ sở hữu thích hợp vào chỗ trống.</p>
-                    <div class="quiz-item" style="background: var(--bg-card); border-radius: 12px; padding: 24px; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color); line-height: 2.2;">
-                        <p style="font-size: 1.15rem; color: var(--text-main); font-weight: 500; text-align: justify; margin: 0;">
-                            ${paraHtml}
-                        </p>
-                        <div style="margin-top: 28px; text-align: center;">
-                            <button onclick="window.checkPronounsParagraph()" style="padding: 10px 28px; background: var(--primary-color); color: white; border: none; border-radius: 24px; font-weight: bold; cursor: pointer; font-size: 1.05rem; box-shadow: 0 4px 12px rgba(99,102,241,0.2); transition: all 0.2s;">
-                                Kiểm tra đáp án
-                            </button>
-                        </div>
-                        <div id="pro_para_explanation" style="display: none; margin-top: 28px; padding: 20px; border-radius: 12px; background: #f8fafc; border: 1px solid var(--border-color);">
-                            <h3 style="color: var(--primary-color); font-size: 1.2rem; margin-bottom: 16px;">Giải thích chi tiết:</h3>
-                            <div id="pro_para_exp_list" style="margin: 0; font-size: 1rem; line-height: 1.8; color: var(--text-main);">
-                                <!-- Result and explanations list -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        `;
-    }
-
-    contentWrapper.innerHTML = `
-        <div class="topic-detail-header" style="margin-bottom: 32px;">
-            <button class="btn-back" onclick="renderView('chapter2')" style="margin-bottom: 16px; background: none; border: none; color: var(--primary-color); font-weight: bold; cursor: pointer; display: flex; align-items: center; gap: 8px; font-size: 1.05rem;">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
-                QUAY LẠI CHƯƠNG 02
-            </button>
-            <h1 class="page-title" style="text-align: left; margin-bottom: 24px;">CHỦ ĐIỂM 02: ĐẠI TỪ (PRONOUNS)</h1>
-            ${tabsHtml}
-        </div>
-        ${contentHtml}
-    `;
+    window.showExerciseResult(p3Correct, nounsPractice3Data.length, "KẾT QUẢ BÀI 3 (DANH TỪ)");
 }
 
 window.selectPronouns1Option = function(el, idx, oIdx) {
@@ -3096,6 +2662,76 @@ window.selectPronouns1Option = function(el, idx, oIdx) {
         }
     });
 };
+
+
+window.submitPronouns1 = function() {
+    let correctCount = 0;
+    let completed = true;
+    pronounsPractice1Data.forEach((q, idx) => {
+        if (window.pronounsAnswers1[idx] === null) {
+            completed = false;
+        } else {
+            if (window.pronounsAnswers1[idx] === q.a) correctCount++;
+        }
+        window.checkPronouns1(idx); // update UI
+    });
+    if (!completed) {
+        alert("Vui lòng trả lời hết các câu hỏi trước khi nộp bài!");
+        return;
+    }
+    window.showExerciseResult(correctCount, pronounsPractice1Data.length, "KẾT QUẢ BÀI 1 (ĐẠI TỪ)");
+}
+
+window.submitPronouns2 = function() {
+    let correctCount = 0;
+    let completed = true;
+    pronounsPractice2Data.forEach((q, idx) => {
+        const userInput = window.pronounsAnswers2[idx];
+        if (!userInput || userInput.trim() === '') {
+            completed = false;
+        } else {
+            const cleanUser = userInput.trim().toLowerCase().replace(/[.,!?;:]/g, '').replace(/\s+/g, ' ');
+            const validAnswers = q.a;
+            let isCorrect = false;
+            for (let ans of validAnswers) {
+                if (cleanUser === ans.toLowerCase()) {
+                    isCorrect = true;
+                    break;
+                }
+            }
+            if (isCorrect) correctCount++;
+        }
+        window.checkPronouns2(idx);
+    });
+    if (!completed) {
+        alert("Vui lòng điền hết tất cả các câu trước khi nộp bài!");
+        return;
+    }
+    window.showExerciseResult(correctCount, pronounsPractice2Data.length, "KẾT QUẢ BÀI 2 (ĐẠI TỪ)");
+}
+
+window.submitPronouns3 = function() {
+    const data = pronounsParagraphData;
+    let correctCount = 0;
+    let completed = true;
+    data.answers.forEach((ans, idx) => {
+        const userInput = window.pronounsAnswersPara[idx];
+        if (!userInput || userInput.trim() === '') {
+            completed = false;
+        } else {
+            const cleanUser = userInput.trim().toLowerCase();
+            if (cleanUser === ans.toLowerCase()) {
+                correctCount++;
+            }
+        }
+    });
+    if (!completed) {
+        alert("Vui lòng điền hết tất cả các ô trống trước khi nộp bài!");
+        return;
+    }
+    window.checkPronounsParagraph(); // update UI (color and explanation)
+    window.showExerciseResult(correctCount, data.answers.length, "KẾT QUẢ BÀI 3 (ĐẠI TỪ)");
+}
 
 window.checkPronouns1 = function(idx) {
     const ans = window.pronounsAnswers1[idx];
@@ -3215,6 +2851,318 @@ window.checkPronounsParagraph = function() {
     } catch(e) {}
 }
 
+
+// ==================== VERBS LOGIC ====================
+window.renderVerbsDetail = function(activeTab = 'theory') {
+    const contentWrapper = document.getElementById('main-content');
+    
+    // Init global vars if not exist
+    if (!window.verbsAnswers1) window.verbsAnswers1 = new Array(verbsPractice1Data.length).fill(null);
+    if (!window.verbsAnswers2) window.verbsAnswers2 = new Array(verbsPractice2Data.length).fill('');
+    if (!window.verbsAnswersPara) window.verbsAnswersPara = new Array(verbsPracticeParaData.answers.length).fill('');
+
+    const tabsHtml = `
+        <div class="tabs" style="display: flex; gap: 8px; margin-bottom: 24px;">
+            <button onclick="renderVerbsDetail('theory')" class="btn-tab ${activeTab === 'theory' ? 'active' : ''}">📖 LÝ THUYẾT</button>
+            <button onclick="renderVerbsDetail('practice')" class="btn-tab ${activeTab === 'practice' ? 'active' : ''}">✏️ BÀI TẬP</button>
+        </div>
+    `;
+
+    let contentHtml = '';
+    
+    if (activeTab === 'theory') {
+        const theoryCards = verbsTheoryData.map((item, idx) => `
+            <div class="theory-card" style="background: var(--bg-card); border-radius: 12px; padding: 24px; box-shadow: var(--shadow-sm); border-left: 5px solid var(--primary-color);">
+                <h3 style="color: var(--primary-color); margin-bottom: 12px; font-size: 1.3rem;">${item.title}</h3>
+                <div style="color: var(--text-main); font-size: 1.1rem; line-height: 1.6;">${item.content}</div>
+            </div>
+        `).join('');
+
+        contentHtml = `
+            <div style="margin-top: 24px;">
+                <div style="display: grid; grid-template-columns: 1fr; gap: 24px;">
+                    ${theoryCards}
+                </div>
+            </div>
+        `;
+    } else {
+        // PRACTICE
+        // BÀI 1: Trắc nghiệm
+        const p1Html = verbsPractice1Data.map((q, idx) => `
+            <div class="quiz-item" style="background: var(--bg-card); border-radius: 12px; padding: 20px; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color);">
+                <div style="display: flex; gap: 12px; align-items: flex-start; margin-bottom: 16px;">
+                    <div style="background: var(--primary-light); color: var(--primary-color); width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">${idx + 1}</div>
+                    <p style="font-size: 1.15rem; font-weight: 500; color: var(--text-main); margin-top: 4px;">${q.q}</p>
+                </div>
+                <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 16px; padding-left: 44px;">
+                    ${q.options.map((opt, oIdx) => `
+                        <label style="display: flex; align-items: center; gap: 8px; padding: 10px 16px; background: ${window.verbsAnswers1[idx] === oIdx ? '#eff6ff' : '#f8fafc'}; border: 2px solid ${window.verbsAnswers1[idx] === oIdx ? 'var(--primary-color)' : '#e2e8f0'}; border-radius: 8px; cursor: pointer; transition: all 0.2s;" onclick="window.selectVerbs1Option(this, ${idx}, ${oIdx})">
+                            <input type="radio" name="verb_q1_${idx}" value="${oIdx}" style="display:none;" ${window.verbsAnswers1[idx] === oIdx ? 'checked' : ''}>
+                            <div class="radio-custom" style="width: 18px; height: 18px; border-radius: 50%; border: 2px solid #cbd5e1; background: ${window.verbsAnswers1[idx] === oIdx ? 'var(--primary-color)' : 'transparent'};"></div>
+                            <span style="font-weight: 500;">${opt}</span>
+                        </label>
+                    `).join('')}
+                </div>
+                <div style="padding-left: 44px;">
+                    <div id="verbexp1_${idx}" style="display: none; margin-top: 16px; padding: 12px 16px; border-radius: 8px; font-size: 1.05rem;"></div>
+                </div>
+            </div>
+        `).join('');
+
+        // BÀI 2: Sửa lỗi sai
+        const p2Html = verbsPractice2Data.map((q, idx) => `
+            <div class="quiz-item" style="background: var(--bg-card); border-radius: 12px; padding: 20px; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color);">
+                <div style="display: flex; gap: 12px; align-items: flex-start; margin-bottom: 16px;">
+                    <div style="background: var(--primary-light); color: var(--primary-color); width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">${idx + 1}</div>
+                    <div style="flex-grow: 1;">
+                        <p style="font-size: 1.15rem; font-weight: 500; color: var(--text-main); margin-bottom: 12px; margin-top: 4px;">${q.q}</p>
+                        <input type="text" id="verb_input2_${idx}" placeholder="Sửa phần bôi đậm thành..." value="${window.verbsAnswers2[idx] || ''}" style="width: 100%; max-width: 400px; padding: 12px 16px; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 1.1rem; outline: none; transition: border-color 0.2s;" onfocus="this.style.borderColor='var(--primary-color)'" onblur="this.style.borderColor='#e2e8f0'" oninput="window.verbsAnswers2[${idx}] = this.value; document.getElementById('verbexp2_${idx}').style.display='none'; window.saveProgress(true);">
+                    </div>
+                </div>
+                <div style="padding-left: 44px;">
+                    <div id="verbexp2_${idx}" style="display: none; margin-top: 16px; padding: 12px 16px; border-radius: 8px; font-size: 1.05rem;"></div>
+                </div>
+            </div>
+        `).join('');
+
+        // BÀI 3: Chia động từ trong đoạn văn
+        let paraHtml = '';
+        verbsPracticeParaData.segments.forEach((seg, idx) => {
+            paraHtml += seg.text;
+            if (idx < verbsPracticeParaData.answers.length) {
+                paraHtml += `<input type="text" id="verb_para_${idx}" class="para-input" placeholder="(${idx + 1})" value="${window.verbsAnswersPara[idx] || ''}" oninput="window.verbsAnswersPara[${idx}] = this.value; document.getElementById('verb_para_explanation').style.display='none'; window.saveProgress(true);" style="width: 120px; padding: 4px 8px; border: 2px solid #cbd5e1; border-radius: 6px; font-size: 1.05rem; text-align: center; font-weight: 700; color: var(--primary-color); outline: none; margin: 0 4px; transition: all 0.2s; background: white;">`;
+            }
+        });
+
+        contentHtml = `
+            <div style="margin-top: 24px; animation: fadeIn 0.3s ease-out;">
+                <!-- BÀI 1 -->
+                <div style="background: white; border-radius: 16px; padding: 24px; box-shadow: var(--shadow-md); margin-bottom: 32px; border-top: 6px solid var(--primary-color);">
+                    <h2 style="color: var(--primary-color); margin-bottom: 16px; font-size: 1.4rem;">Bài 1: Sự hòa hợp Chủ - Vị</h2>
+                    <p style="font-size: 1.1rem; margin-bottom: 24px; color: var(--text-muted);">Chọn dạng động từ đúng nhất để hoàn thành các câu sau.</p>
+                    <div style="display: grid; gap: 16px;">
+                        ${p1Html}
+                    </div>
+                    <div style="text-align: center; margin-top: 24px;">
+                        <button onclick="window.submitVerbs1()" style="padding: 12px 32px; background: var(--primary-color); color: white; border: none; border-radius: 20px; font-weight: bold; cursor: pointer; transition: all 0.2s; font-size: 1.1rem; box-shadow: 0 4px 12px rgba(87,70,227,0.3);">NỘP BÀI 1</button>
+                    </div>
+                </div>
+
+                <!-- BÀI 2 -->
+                <div style="background: white; border-radius: 16px; padding: 24px; box-shadow: var(--shadow-md); margin-bottom: 32px; border-top: 6px solid #f59e0b;">
+                    <h2 style="color: #d97706; margin-bottom: 16px; font-size: 1.4rem;">Bài 2: Sửa lỗi sai về Thì / Động từ</h2>
+                    <p style="font-size: 1.1rem; margin-bottom: 24px; color: var(--text-muted);">Tìm ra lỗi sai trong cách chia động từ (phần bôi đậm) và viết lại dạng đúng.</p>
+                    <div style="display: grid; gap: 16px;">
+                        ${p2Html}
+                    </div>
+                    <div style="text-align: center; margin-top: 24px;">
+                        <button onclick="window.submitVerbs2()" style="padding: 12px 32px; background: var(--primary-color); color: white; border: none; border-radius: 20px; font-weight: bold; cursor: pointer; transition: all 0.2s; font-size: 1.1rem; box-shadow: 0 4px 12px rgba(87,70,227,0.3);">NỘP BÀI 2</button>
+                    </div>
+                </div>
+
+                <!-- BÀI 3 -->
+                <div style="background: white; border-radius: 16px; padding: 24px; box-shadow: var(--shadow-md); margin-bottom: 32px; border-top: 6px solid #10b981;">
+                    <h2 style="color: #059669; margin-bottom: 16px; font-size: 1.4rem;">Bài 3: Chia động từ trong đoạn văn</h2>
+                    <p style="font-size: 1.1rem; margin-bottom: 24px; color: var(--text-muted);">Chia động từ trong ngoặc theo đúng thì để hoàn thành bức thư sau.</p>
+                    <div style="background: #f8fafc; padding: 24px; border-radius: 12px; border: 1px solid #e2e8f0; font-size: 1.15rem; line-height: 2.2; color: var(--text-main); font-family: 'Georgia', serif;">
+                        ${paraHtml}
+                    </div>
+                    <div id="verb_para_explanation" style="display: none; margin-top: 24px; padding: 20px; background: white; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+                        <h3 style="color: var(--primary-color); margin-bottom: 16px; font-size: 1.2rem;">GIẢI THÍCH ĐÁP ÁN:</h3>
+                        <div id="verb_para_exp_list" style="font-size: 1.1rem; color: var(--text-main); line-height: 1.6;"></div>
+                    </div>
+                    <div style="text-align: center; margin-top: 24px;">
+                        <button class="btn-primary" onclick="window.submitVerbs3()" style="padding: 16px 40px; font-size: 1.3rem; border-radius: 30px; box-shadow: 0 4px 15px rgba(16,185,129,0.4); border: none; background: #10b981; color: white; cursor: pointer; transition: all 0.3s;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(16,185,129,0.6)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(16,185,129,0.4)'">NỘP BÀI 3</button>
+                    </div>
+                </div>
+            </div>
+        `;
+    }
+
+    contentWrapper.innerHTML = `
+        <div class="topic-detail-header" style="margin-bottom: 32px;">
+            <button class="btn-back" onclick="renderView('chapter2')" style="margin-bottom: 16px; background: none; border: none; color: var(--primary-color); font-weight: bold; cursor: pointer; display: flex; align-items: center; gap: 8px; font-size: 1.05rem;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                QUAY LẠI CHƯƠNG 02
+            </button>
+            <h1 class="page-title" style="text-align: left; margin-bottom: 24px;">CHỦ ĐIỂM 03: ĐỘNG TỪ (VERBS)</h1>
+            ${tabsHtml}
+        </div>
+        ${contentHtml}
+    `;
+}
+
+window.selectVerbs1Option = function(el, idx, oIdx) {
+    window.verbsAnswers1[idx] = oIdx;
+    window.saveProgress(true);
+    const exp = document.getElementById(`verbexp1_${idx}`);
+    if (exp) exp.style.display = 'none';
+    const container = el.parentElement;
+    const labels = container.querySelectorAll('label');
+    labels.forEach((label, lIdx) => {
+        const radioCircle = label.querySelector('.radio-custom');
+        const radioInput = label.querySelector('input[type="radio"]');
+        if (lIdx === oIdx) {
+            label.style.background = '#eff6ff';
+            label.style.borderColor = 'var(--primary-color)';
+            if (radioCircle) radioCircle.style.background = 'var(--primary-color)';
+            if (radioInput) radioInput.checked = true;
+        } else {
+            label.style.background = '#f8fafc';
+            label.style.borderColor = '#e2e8f0';
+            if (radioCircle) radioCircle.style.background = 'transparent';
+            if (radioInput) radioInput.checked = false;
+        }
+    });
+};
+
+window.checkVerbs1 = function(idx) {
+    const ans = window.verbsAnswers1[idx];
+    const expDiv = document.getElementById(`verbexp1_${idx}`);
+    
+    const correctIdx = verbsPractice1Data[idx].answer;
+    expDiv.style.display = 'block';
+    
+    if (ans === correctIdx) {
+        expDiv.style.background = '#f0fdf4'; expDiv.style.color = '#166534'; expDiv.style.borderLeft = '4px solid #22c55e';
+        expDiv.innerHTML = `<b>✅ CHÍNH XÁC!</b> ${verbsPractice1Data[idx].exp}`;
+    } else {
+        expDiv.style.background = '#fef2f2'; expDiv.style.color = '#991b1b'; expDiv.style.borderLeft = '4px solid #ef4444';
+        expDiv.innerHTML = `<b>❌ SAI RỒI!</b> Đáp án đúng là <b>${verbsPractice1Data[idx].options[correctIdx]}</b>. ${verbsPractice1Data[idx].exp}`;
+    }
+}
+
+window.checkVerbs2 = function(idx) {
+    const userInput = window.verbsAnswers2[idx];
+    const expDiv = document.getElementById(`verbexp2_${idx}`);
+    
+    const cleanUser = userInput.trim().toLowerCase().replace(/[.,!?;:]/g, '').replace(/\s+/g, ' ');
+    const validAnswers = verbsPractice2Data[idx].answer;
+    let isCorrect = false;
+    
+    for (let ans of validAnswers) {
+        if (cleanUser === ans.toLowerCase()) {
+            isCorrect = true;
+            break;
+        }
+    }
+    
+    expDiv.style.display = 'block';
+    if (isCorrect) {
+        expDiv.style.background = '#f0fdf4'; expDiv.style.color = '#166534'; expDiv.style.borderLeft = '4px solid #22c55e';
+        expDiv.innerHTML = `<b>✅ CHÍNH XÁC!</b> ${verbsPractice2Data[idx].exp}`;
+    } else {
+        expDiv.style.background = '#fef2f2'; expDiv.style.color = '#991b1b'; expDiv.style.borderLeft = '4px solid #ef4444';
+        expDiv.innerHTML = `<b>❌ CHƯA ĐÚNG.</b> Tham khảo: <b>${validAnswers[0]}</b>. ${verbsPractice2Data[idx].exp}`;
+    }
+}
+
+window.checkVerbsParagraph = function() {
+    const data = verbsPracticeParaData;
+    const expDiv = document.getElementById('verb_para_explanation');
+    const expList = document.getElementById('verb_para_exp_list');
+    
+    let html = '';
+    let correctCount = 0;
+    
+    data.answers.forEach((correctAnswer, idx) => {
+        const input = document.getElementById(`verb_para_${idx}`);
+        if (!input) return;
+        
+        const val = input.value.trim();
+        const isCorrect = val.toLowerCase() === correctAnswer.toLowerCase();
+        
+        if (isCorrect) {
+            input.style.borderColor = '#22c55e';
+            input.style.background = '#f0fdf4';
+            input.style.color = '#15803d';
+            correctCount++;
+            html += `<li style="margin-bottom: 8px;"><span style="color:#15803d; font-weight:bold;">Câu ${idx + 1} (Đúng):</span> Đáp án là <b>${correctAnswer}</b>. ${data.explanations[idx]}</li>`;
+        } else {
+            input.style.borderColor = '#ef4444';
+            input.style.background = '#fef2f2';
+            input.style.color = '#b91c1c';
+            html += `<li style="margin-bottom: 8px;"><span style="color:#b91c1c; font-weight:bold;">Câu ${idx + 1} (Sai):</span> Bạn điền "${val || 'trống'}", đáp án đúng là <b style="color:#15803d;">${correctAnswer}</b>. ${data.explanations[idx]}</li>`;
+        }
+    });
+    
+    const summaryHtml = `<div style="background: ${correctCount === data.answers.length ? '#f0fdf4' : '#fffbeb'}; border-left: 4px solid ${correctCount === data.answers.length ? '#22c55e' : '#f59e0b'}; padding: 12px; margin-bottom: 16px; border-radius: 4px; font-weight: bold; color: ${correctCount === data.answers.length ? '#166534' : '#b45309'}; font-size: 1.1rem;">
+        📊 Kết quả: Bạn làm đúng ${correctCount} / ${data.answers.length} câu.
+    </div>`;
+    
+    expList.innerHTML = summaryHtml + '<ol style="padding-left: 20px; margin: 0;">' + html + '</ol>';
+    expDiv.style.display = 'block';
+}
+
+window.submitVerbs1 = function() {
+    let correctCount = 0;
+    let completed = true;
+    verbsPractice1Data.forEach((q, idx) => {
+        if (window.verbsAnswers1[idx] === null) {
+            completed = false;
+        } else {
+            if (window.verbsAnswers1[idx] === q.answer) correctCount++;
+        }
+        window.checkVerbs1(idx);
+    });
+    if (!completed) {
+        alert("Vui lòng trả lời hết các câu hỏi trước khi nộp bài!");
+        return;
+    }
+    window.showExerciseResult(correctCount, verbsPractice1Data.length, "KẾT QUẢ BÀI 1 (ĐỘNG TỪ)");
+}
+
+window.submitVerbs2 = function() {
+    let correctCount = 0;
+    let completed = true;
+    verbsPractice2Data.forEach((q, idx) => {
+        const userInput = window.verbsAnswers2[idx];
+        if (!userInput || userInput.trim() === '') {
+            completed = false;
+        } else {
+            const cleanUser = userInput.trim().toLowerCase().replace(/[.,!?;:]/g, '').replace(/\s+/g, ' ');
+            const validAnswers = q.answer;
+            let isCorrect = false;
+            for (let ans of validAnswers) {
+                if (cleanUser === ans.toLowerCase()) {
+                    isCorrect = true;
+                    break;
+                }
+            }
+            if (isCorrect) correctCount++;
+        }
+        window.checkVerbs2(idx);
+    });
+    if (!completed) {
+        alert("Vui lòng điền hết tất cả các câu trước khi nộp bài!");
+        return;
+    }
+    window.showExerciseResult(correctCount, verbsPractice2Data.length, "KẾT QUẢ BÀI 2 (ĐỘNG TỪ)");
+}
+
+window.submitVerbs3 = function() {
+    const data = verbsPracticeParaData;
+    let correctCount = 0;
+    let completed = true;
+    data.answers.forEach((ans, idx) => {
+        const userInput = window.verbsAnswersPara[idx];
+        if (!userInput || userInput.trim() === '') {
+            completed = false;
+        } else {
+            const cleanUser = userInput.trim().toLowerCase();
+            if (cleanUser === ans.toLowerCase()) {
+                correctCount++;
+            }
+        }
+    });
+    if (!completed) {
+        alert("Vui lòng điền hết tất cả các ô trống trước khi nộp bài!");
+        return;
+    }
+    window.checkVerbsParagraph();
+    window.showExerciseResult(correctCount, data.answers.length, "KẾT QUẢ BÀI 3 (ĐỘNG TỪ)");
+}
+
 // --- PROGRESS SAVE & LOAD ---
 window.saveProgress = function(silent = false) {
     const state = {
@@ -3225,7 +3173,10 @@ window.saveProgress = function(silent = false) {
         nounsDragDropState: window.nounsDragDropState,
         pronounsAnswers1: window.pronounsAnswers1,
         pronounsAnswers2: window.pronounsAnswers2,
-        pronounsAnswersPara: window.pronounsAnswersPara
+        pronounsAnswersPara: window.pronounsAnswersPara,
+        verbsAnswers1: window.verbsAnswers1,
+        verbsAnswers2: window.verbsAnswers2,
+        verbsAnswersPara: window.verbsAnswersPara
     };
     localStorage.setItem('studentProgress', JSON.stringify(state));
     if(!silent) alert('✅ Tiến độ học tập của bạn đã được lưu lại!');
@@ -3262,6 +3213,9 @@ window.loadProgress = function() {
         if (state.pronounsAnswers1) window.pronounsAnswers1 = state.pronounsAnswers1;
         if (state.pronounsAnswers2) window.pronounsAnswers2 = state.pronounsAnswers2;
         if (state.pronounsAnswersPara) window.pronounsAnswersPara = state.pronounsAnswersPara;
+        if (state.verbsAnswers1) window.verbsAnswers1 = state.verbsAnswers1;
+        if (state.verbsAnswers2) window.verbsAnswers2 = state.verbsAnswers2;
+        if (state.verbsAnswersPara) window.verbsAnswersPara = state.verbsAnswersPara;
     } catch(e) {
         console.error('Error loading progress', e);
     }
