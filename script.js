@@ -927,7 +927,7 @@ window.openTopic = function(topicId, status) {
             alert('Mở khóa thành công!');
             
             if (topic1) renderTopicsGrid(); // re-render chapter 1 grid
-            if (topic2 && typeof renderChapter2 === 'function') renderChapter2(); // re-render chapter 2 grid
+            if (topic2 && typeof renderChapter2TopicsGrid === 'function') renderChapter2TopicsGrid(); // re-render chapter 2 grid
             
             if (topicId === 'components') renderComponentsDetail();
             else if (topicId === 'structures') renderStructuresDetail();
@@ -935,6 +935,7 @@ window.openTopic = function(topicId, status) {
             else if (topicId === 'nouns' && typeof renderNounsDetail === 'function') renderNounsDetail();
             else if (topicId === 'pronouns' && typeof renderPronounsDetail === 'function') renderPronounsDetail();
             else if (topicId === 'verbs' && typeof renderVerbsDetail === 'function') renderVerbsDetail();
+            else alert('Chủ điểm này đang được cập nhật nội dung. Bạn vui lòng quay lại sau nhé!');
         } else if (pass !== null) {
             alert('Mật khẩu không đúng!');
         }
@@ -949,10 +950,15 @@ window.openTopic = function(topicId, status) {
         renderPracticeDetail();
     } else if (topicId === 'nouns') {
         if(typeof renderNounsDetail === 'function') renderNounsDetail();
+        else alert('Chủ điểm này đang được cập nhật nội dung. Bạn vui lòng quay lại sau nhé!');
     } else if (topicId === 'pronouns') {
         if(typeof renderPronounsDetail === 'function') renderPronounsDetail();
+        else alert('Chủ điểm này đang được cập nhật nội dung. Bạn vui lòng quay lại sau nhé!');
     } else if (topicId === 'verbs') {
         if(typeof renderVerbsDetail === 'function') renderVerbsDetail();
+        else alert('Chủ điểm này đang được cập nhật nội dung. Bạn vui lòng quay lại sau nhé!');
+    } else {
+        alert('Chủ điểm này đang được cập nhật nội dung. Bạn vui lòng quay lại sau nhé!');
     }
 }
 
