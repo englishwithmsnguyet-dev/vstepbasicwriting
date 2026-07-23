@@ -2982,7 +2982,7 @@ window.checkPronounsParagraph = function() {
 
 // ==================== VERBS LOGIC ====================
 window.renderVerbsDetail = function(activeTab = 'theory') {
-    const contentWrapper = document.getElementById('main-content');
+    const contentWrapper = document.getElementById('content-wrapper');
     
     // Init global vars if not exist
     if (!window.verbsAnswers1) window.verbsAnswers1 = new Array(verbsPractice1Data.length).fill(null);
