@@ -391,7 +391,7 @@ const structuresData = [
         formula: '<span style="color: #3b82f6;">S</span> + <span style="color: #f59e0b;">V</span> + <span style="color: #ef4444;">O</span>',
         name: 'Dạng 01: S + V + O',
         desc: 'Hành động tác động lên đối tượng. Chủ ngữ thực hiện một hành động trực tiếp lên một tân ngữ.',
-        note: '💡 <strong>LƯU Ý:</strong> <strong style="color: #f59e0b;">Động từ (V)</strong> ở đây là <strong>ĐỘNG TỪ HÀNH ĐỘNG (Action Verb)</strong>. Cụ thể là Ngoại động từ, bắt buộc phải có đối tượng tiếp nhận hành động theo sau. Nếu không có <strong style="color: #ef4444;">Tân ngữ (O)</strong>, câu sẽ bị lửng lơ và vô nghĩa (Ví dụ: Bạn không thể chỉ nói "She loves...").',
+        note: '💡 <b style="color: var(--primary-color);">LƯU Ý:</b> <strong style="color: #f59e0b;">Động từ (V)</b> ở đây là <b style="color: var(--primary-color);">ĐỘNG TỪ HÀNH ĐỘNG (Action Verb)</b>. Cụ thể là Ngoại động từ, bắt buộc phải có đối tượng tiếp nhận hành động theo sau. Nếu không có <strong style="color: #ef4444;">Tân ngữ (O)</b>, câu sẽ bị lửng lơ và vô nghĩa (Ví dụ: Bạn không thể chỉ nói "She loves...").',
         examples: [
             { en: '<span style="color: #3b82f6;">She</span> <span style="color: #f59e0b;">loves</span> <span style="color: #ef4444;">music</span>.', vi: 'Cô ấy yêu âm nhạc.' },
             { en: '<span style="color: #3b82f6;">They</span> <span style="color: #f59e0b;">eat</span> <span style="color: #ef4444;">pizza</span>.', vi: 'Họ ăn bánh pizza.' },
@@ -405,7 +405,7 @@ const structuresData = [
         formula: '<span style="color: #3b82f6;">S</span> + <span style="color: #f59e0b;">V</span> + <span style="color: #a855f7;">C</span>',
         name: 'Dạng 02: S + V + C',
         desc: 'Miêu tả tính chất, trạng thái hoặc nhận dạng của chủ ngữ.',
-        note: '💡 <strong>LƯU Ý QUAN TRỌNG:</strong> <strong style="color: #f59e0b;">Động từ (V)</strong> ở đây là <strong>ĐỘNG TỪ LIÊN KẾT (Linking Verb)</strong> (is, am, are, look, feel, become, seem...). Nó <strong>không diễn tả hành động</strong>, mà chỉ giống như một "dấu bằng (=)" để nối <strong style="color: #3b82f6;">Chủ ngữ (S)</strong> với phần <strong style="color: #a855f7;">Bổ ngữ (C)</strong>.',
+        note: '💡 <b style="color: var(--primary-color);">LƯU Ý QUAN TRỌNG:</b> <strong style="color: #f59e0b;">Động từ (V)</b> ở đây là <b style="color: var(--primary-color);">ĐỘNG TỪ LIÊN KẾT (Linking Verb)</b> (is, am, are, look, feel, become, seem...). Nó <b style="color: var(--primary-color);">không diễn tả hành động</b>, mà chỉ giống như một "dấu bằng (=)" để nối <strong style="color: #3b82f6;">Chủ ngữ (S)</b> với phần <strong style="color: #a855f7;">Bổ ngữ (C)</b>.',
         examples: [
             { en: '<span style="color: #3b82f6;">She</span> <span style="color: #f59e0b;">is</span> <span style="color: #a855f7;">beautiful</span>.', vi: 'Cô ấy thì xinh đẹp.' },
             { en: '<span style="color: #3b82f6;">My brother</span> <span style="color: #f59e0b;">is</span> <span style="color: #a855f7;">a student</span>.', vi: 'Anh trai tôi là một học sinh.' },
@@ -419,7 +419,7 @@ const structuresData = [
         formula: '<span style="color: #3b82f6;">S</span> + <span style="color: #f59e0b;">V</span> + <span style="color: #10b981;">Adv</span>',
         name: 'Dạng 03: S + V + Adv',
         desc: 'Diễn tả hành động của chủ ngữ kèm theo thông tin phụ (như cách thức, thời gian, địa điểm).',
-        note: '💡 <strong>LƯU Ý:</strong> <strong style="color: #f59e0b;">Động từ (V)</strong> ở đây là <strong>ĐỘNG TỪ HÀNH ĐỘNG (Action Verb)</strong>. Cụ thể là Nội động từ, tự bản thân nó đã trọn vẹn ý nghĩa. Hành động không tác động lên ai/cái gì cả, do đó tuyệt đối không có <strong style="color: #ef4444;">Tân ngữ (O)</strong> theo sau.',
+        note: '💡 <b style="color: var(--primary-color);">LƯU Ý:</b> <strong style="color: #f59e0b;">Động từ (V)</b> ở đây là <b style="color: var(--primary-color);">ĐỘNG TỪ HÀNH ĐỘNG (Action Verb)</b>. Cụ thể là Nội động từ, tự bản thân nó đã trọn vẹn ý nghĩa. Hành động không tác động lên ai/cái gì cả, do đó tuyệt đối không có <strong style="color: #ef4444;">Tân ngữ (O)</b> theo sau.',
         examples: [
             { en: '<span style="color: #3b82f6;">She</span> <span style="color: #f59e0b;">smiled</span> <span style="color: #10b981;">happily</span>.', vi: 'Cô ấy đã mỉm cười một cách hạnh phúc.' },
             { en: '<span style="color: #3b82f6;">The baby</span> <span style="color: #f59e0b;">cried</span> <span style="color: #10b981;">loudly</span>.', vi: 'Em bé đã khóc rất lớn.' },
@@ -433,7 +433,7 @@ const structuresData = [
         formula: '<span style="color: #3b82f6;">S</span> + <span style="color: #f59e0b;">V</span> + <span style="color: #ef4444;">O</span> + <span style="color: #10b981;">Adv</span>',
         name: 'Dạng 04: S + V + O + Adv',
         desc: 'Hành động có đối tượng tiếp nhận (O) và được bổ sung thêm hoàn cảnh, thời gian hoặc cách thức xảy ra (Adv).',
-        note: '💡 <strong>LƯU Ý:</strong> Giống như Dạng 1, <strong style="color: #f59e0b;">Động từ (V)</strong> vẫn là <strong>ĐỘNG TỪ HÀNH ĐỘNG (Action Verb)</strong>, nhưng câu được gắn thêm phần <strong style="color: #10b981;">Trạng ngữ (Adv) ở đuôi</strong> để câu văn chi tiết hơn (như làm việc đó ở đâu, khi nào, như thế nào...).',
+        note: '💡 <b style="color: var(--primary-color);">LƯU Ý:</b> Giống như Dạng 1, <strong style="color: #f59e0b;">Động từ (V)</b> vẫn là <b style="color: var(--primary-color);">ĐỘNG TỪ HÀNH ĐỘNG (Action Verb)</b>, nhưng câu được gắn thêm phần <strong style="color: #10b981;">Trạng ngữ (Adv) ở đuôi</b> để câu văn chi tiết hơn (như làm việc đó ở đâu, khi nào, như thế nào...).',
         examples: [
             { en: '<span style="color: #3b82f6;">She</span> <span style="color: #f59e0b;">finished</span> <span style="color: #ef4444;">her homework</span> <span style="color: #10b981;">quickly</span>.', vi: 'Cô ấy đã hoàn thành bài tập về nhà một cách nhanh chóng.' },
             { en: '<span style="color: #3b82f6;">They</span> <span style="color: #f59e0b;">decorated</span> <span style="color: #ef4444;">the room</span> <span style="color: #10b981;">beautifully</span>.', vi: 'Họ đã trang trí căn phòng thật đẹp.' },
@@ -447,7 +447,7 @@ const structuresData = [
         formula: '<span style="color: #3b82f6;">S</span> + <span style="color: #f59e0b;">V</span> + <span style="color: #ef4444;">O</span> + <span style="color: #a855f7;">C</span>',
         name: 'Dạng 05: S + V + O + C',
         desc: 'Chủ ngữ thực hiện hành động làm cho Tân ngữ thay đổi trạng thái, hoặc để đánh giá về Tân ngữ đó.',
-        note: '💡 <strong>LƯU Ý:</strong> <strong style="color: #f59e0b;">Động từ (V)</strong> ở đây là <strong>ĐỘNG TỪ HÀNH ĐỘNG (Action Verb)</strong> mang ý nghĩa tác động làm biến đổi (make, paint) hoặc nhận xét, đánh giá (find, consider...). <strong style="color: #a855f7;">Bổ ngữ (C)</strong> đứng ngay sau để làm rõ <strong style="color: #ef4444;">Tân ngữ (O)</strong> đó ra sao.',
+        note: '💡 <b style="color: var(--primary-color);">LƯU Ý:</b> <strong style="color: #f59e0b;">Động từ (V)</b> ở đây là <b style="color: var(--primary-color);">ĐỘNG TỪ HÀNH ĐỘNG (Action Verb)</b> mang ý nghĩa tác động làm biến đổi (make, paint) hoặc nhận xét, đánh giá (find, consider...). <strong style="color: #a855f7;">Bổ ngữ (C)</b> đứng ngay sau để làm rõ <strong style="color: #ef4444;">Tân ngữ (O)</b> đó ra sao.',
         examples: [
             { en: '<span style="color: #3b82f6;">The news</span> <span style="color: #f59e0b;">made</span> <span style="color: #ef4444;">me</span> <span style="color: #a855f7;">sad</span>.', vi: 'Tin tức đó đã làm cho tôi buồn.' },
             { en: '<span style="color: #3b82f6;">She</span> <span style="color: #f59e0b;">painted</span> <span style="color: #ef4444;">her room</span> <span style="color: #a855f7;">blue</span>.', vi: 'Cô ấy đã sơn căn phòng của mình màu xanh.' },
@@ -461,7 +461,7 @@ const structuresData = [
         formula: '<span style="color: #3b82f6;">S</span> + <span style="color: #f59e0b;">V</span> + <span style="color: #ec4899;">O1</span> + <span style="color: #ef4444;">O2</span>',
         name: 'Dạng 06: S + V + O1 + O2',
         desc: 'Cấu trúc "cho/tặng/gửi ai cái gì". Có hai tân ngữ: O1 là Người nhận, O2 là Vật được cho/tặng.',
-        note: '💡 <strong>LƯU Ý:</strong> <strong style="color: #f59e0b;">Động từ (V)</strong> ở đây là <strong>ĐỘNG TỪ HÀNH ĐỘNG (Action Verb)</strong>. Tuy nhiên nó đặc biệt ở chỗ <strong>cần đến tận 2 đối tượng tiếp nhận hành động cùng lúc</strong> (như give, send, tell, buy...). Gồm <strong style="color: #ec4899;">người nhận (O1)</strong> và <strong style="color: #ef4444;">vật được cho (O2)</strong>.',
+        note: '💡 <b style="color: var(--primary-color);">LƯU Ý:</b> <strong style="color: #f59e0b;">Động từ (V)</b> ở đây là <b style="color: var(--primary-color);">ĐỘNG TỪ HÀNH ĐỘNG (Action Verb)</b>. Tuy nhiên nó đặc biệt ở chỗ <b style="color: var(--primary-color);">cần đến tận 2 đối tượng tiếp nhận hành động cùng lúc</b> (như give, send, tell, buy...). Gồm <strong style="color: #ec4899;">người nhận (O1)</b> và <strong style="color: #ef4444;">vật được cho (O2)</b>.',
         examples: [
             { en: '<span style="color: #3b82f6;">He</span> <span style="color: #f59e0b;">told</span> <span style="color: #ec4899;">me</span> <span style="color: #ef4444;">a story</span>.', vi: 'Anh ấy đã kể cho tôi một câu chuyện.' },
             { en: '<span style="color: #3b82f6;">She</span> <span style="color: #f59e0b;">gave</span> <span style="color: #ec4899;">me</span> <span style="color: #ef4444;">a gift</span>.', vi: 'Cô ấy đã tặng tôi một món quà.' },
@@ -668,7 +668,7 @@ function renderView(viewId) {
                 </div>
                 <h2 style="font-size: 2rem; margin-bottom: 16px; color: var(--primary-color);">HƯỚNG DẪN HỌC</h2>
                 <div style="font-size: 1.1rem; color: var(--text-main); max-width: 600px; margin: 0 auto; text-align: left; background: var(--bg-card); padding: 32px 24px; border-radius: 12px; border: 1px solid var(--border-color); box-shadow: var(--shadow-sm);">
-                    <div style="margin-bottom: 24px; text-align: center;">Chào mừng bạn đến với hệ thống học tập của <strong>MISS NGUYET</strong>.</div>
+                    <div style="margin-bottom: 24px; text-align: center;">Chào mừng bạn đến với hệ thống học tập của <b style="color: var(--primary-color);">MISS NGUYET</b>.</div>
                     <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 24px;">
                         <li style="display: flex; flex-direction: column; gap: 6px;">
                             <div style="display: flex; align-items: center; gap: 12px;">
@@ -1177,11 +1177,11 @@ window.submitStructurePractice = function() {
         if (userVal === q.answer) {
             totalCorrect++;
             document.getElementById(`sq-card-${qIdx}`).style.borderColor = 'var(--success)';
-            feedbackEl.innerHTML = `<div style="padding: 16px; background: rgba(16, 185, 129, 0.1); border-left: 4px solid var(--success); border-radius: 4px; color: var(--success); margin-top: 16px;"><strong style="font-size: 1.2rem;">🎉 Chính xác!</strong><br><span style="color: var(--text-main); display: inline-block; margin-top: 8px;">Giải thích: <strong>${q.explanation}</strong></span></div>`;
+            feedbackEl.innerHTML = `<div style="padding: 16px; background: rgba(16, 185, 129, 0.1); border-left: 4px solid var(--success); border-radius: 4px; color: var(--success); margin-top: 16px;"><strong style="font-size: 1.2rem;">🎉 Chính xác!</b><br><span style="color: var(--text-main); display: inline-block; margin-top: 8px;">Giải thích: <b style="color: var(--primary-color);">${q.explanation}</b></span></div>`;
         } else {
             document.getElementById(`sq-card-${qIdx}`).style.borderColor = 'var(--danger)';
             const correctName = structuresData[q.answer].name;
-            feedbackEl.innerHTML = `<div style="padding: 16px; background: rgba(239, 68, 68, 0.1); border-left: 4px solid var(--danger); border-radius: 4px; color: var(--danger); margin-top: 16px;"><strong style="font-size: 1.2rem;">❌ Sai rồi! (Đáp án đúng: ${correctName})</strong><br><span style="color: var(--text-main); display: inline-block; margin-top: 8px;">Giải thích: <strong>${q.explanation}</strong></span></div>`;
+            feedbackEl.innerHTML = `<div style="padding: 16px; background: rgba(239, 68, 68, 0.1); border-left: 4px solid var(--danger); border-radius: 4px; color: var(--danger); margin-top: 16px;"><strong style="font-size: 1.2rem;">❌ Sai rồi! (Đáp án đúng: ${correctName})</b><br><span style="color: var(--text-main); display: inline-block; margin-top: 8px;">Giải thích: <b style="color: var(--primary-color);">${q.explanation}</b></span></div>`;
         }
     });
 
@@ -1204,13 +1204,13 @@ window.submitStructurePractice = function() {
                 <h2 style="color: ${totalCorrect >= 8 ? 'var(--success)' : 'var(--danger)'}; font-size: 2rem; margin-bottom: 12px; font-weight: 800; text-transform: uppercase;">${totalCorrect >= 8 ? 'Hoàn Thành Xuất Sắc!' : 'Cố gắng lên nhé!'}</h2>
                 <div style="background: rgba(0,0,0,0.05); padding: 16px; border-radius: 12px; margin-bottom: 24px; display: inline-block;">
                     <span style="font-size: 1.2rem; color: var(--text-main);">KẾT QUẢ TỔNG KẾT</span><br>
-                    <strong style="font-size: 2.5rem; color: ${totalCorrect >= 8 ? 'var(--success)' : 'var(--danger)'};">${totalCorrect}/10</strong>
+                    <strong style="font-size: 2.5rem; color: ${totalCorrect >= 8 ? 'var(--success)' : 'var(--danger)'};">${totalCorrect}/10</b>
                 </div>
                 <div style="margin-bottom: 32px; padding: 16px; background: rgba(87,70,227,0.1); border-radius: 12px; display: inline-block; border: 1px dashed var(--primary-color);">
                     <span style="font-size: 1.1rem; color: var(--text-muted);">Học viên:</span> 
-                    <strong style="font-size: 1.3rem; color: var(--primary-color);">${studentName}</strong><br>
+                    <strong style="font-size: 1.3rem; color: var(--primary-color);">${studentName}</b><br>
                     <span style="font-size: 1.1rem; color: var(--text-muted);">Lớp:</span> 
-                    <strong style="font-size: 1.3rem; color: var(--primary-color);">${studentClass}</strong>
+                    <strong style="font-size: 1.3rem; color: var(--primary-color);">${studentClass}</b>
                 </div>
                 <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
                     <button class="btn-primary" onclick="renderStructuresDetail('practice')" style="background: var(--text-main); font-size: 1.15rem; padding: 12px 24px; border-radius: 30px; border: none; cursor: pointer;">LÀM LẠI LẦN NỮA 🔄</button>
@@ -1241,7 +1241,7 @@ window.renderSingleStructure = function(idx) {
             <div style="font-size: 4.5rem; font-weight: 900; font-family: monospace; letter-spacing: 4px; text-shadow: 2px 2px 8px rgba(0,0,0,0.05); margin-bottom: 24px; background: rgba(0,0,0,0.03); padding: 20px; border-radius: 16px; display: inline-block;">${s.formula}</div>
             <p style="font-size: 1.4rem; line-height: 1.6; max-width: 800px; margin: 0 auto; opacity: 0.95; margin-bottom: 24px;">${s.desc}</p>
             ${s.note ? `<div style="background: var(--bg-card); color: var(--text-main); font-size: 1.2rem; line-height: 1.6; padding: 24px 32px; border-radius: 8px 24px 24px 8px; text-align: left; max-width: 800px; margin: 0 auto; border-left: 8px solid ${color}; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
-                ${s.note.replace('💡 <strong>LƯU Ý:</strong>', `<div style="color: ${color}; font-size: 1.2rem; font-weight: 900; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 1px; display: flex; align-items: center; gap: 8px;"><span style="font-size: 1.5rem;">💡</span> LƯU Ý</div><div style="opacity: 0.95;">`).replace('💡 <strong>LƯU Ý QUAN TRỌNG:</strong>', `<div style="color: ${color}; font-size: 1.2rem; font-weight: 900; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 1px; display: flex; align-items: center; gap: 8px;"><span style="font-size: 1.5rem;">💡</span> LƯU Ý QUAN TRỌNG</div><div style="opacity: 0.95;">`)}</div>
+                ${s.note.replace('💡 <b style="color: var(--primary-color);">LƯU Ý:</b>', `<div style="color: ${color}; font-size: 1.2rem; font-weight: 900; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 1px; display: flex; align-items: center; gap: 8px;"><span style="font-size: 1.5rem;">💡</span> LƯU Ý</div><div style="opacity: 0.95;">`).replace('💡 <b style="color: var(--primary-color);">LƯU Ý QUAN TRỌNG:</b>', `<div style="color: ${color}; font-size: 1.2rem; font-weight: 900; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 1px; display: flex; align-items: center; gap: 8px;"><span style="font-size: 1.5rem;">💡</span> LƯU Ý QUAN TRỌNG</div><div style="opacity: 0.95;">`)}</div>
             </div>` : ''}
         </div>
 
@@ -1422,13 +1422,13 @@ window.submitAllAnswers = function() {
                 <h2 style="color: ${totalCorrect >= 8 ? 'var(--success)' : 'var(--danger)'}; font-size: 2rem; margin-bottom: 12px; font-weight: 800; text-transform: uppercase;">${totalCorrect >= 8 ? 'Hoàn Thành Xuất Sắc!' : 'Cố gắng lên nhé!'}</h2>
                 <div style="background: rgba(0,0,0,0.05); padding: 16px; border-radius: 12px; margin-bottom: 24px; display: inline-block;">
                     <span style="font-size: 1.2rem; color: var(--text-main);">KẾT QUẢ TỔNG KẾT</span><br>
-                    <strong style="font-size: 2.5rem; color: ${totalCorrect >= 8 ? 'var(--success)' : 'var(--danger)'};">${totalCorrect}/10</strong>
+                    <strong style="font-size: 2.5rem; color: ${totalCorrect >= 8 ? 'var(--success)' : 'var(--danger)'};">${totalCorrect}/10</b>
                 </div>
                 <div style="margin-bottom: 32px; padding: 16px; background: rgba(87,70,227,0.1); border-radius: 12px; display: inline-block; border: 1px dashed var(--primary-color);">
                     <span style="font-size: 1.1rem; color: var(--text-muted);">Học viên:</span> 
-                    <strong style="font-size: 1.3rem; color: var(--primary-color);">${studentName}</strong><br>
+                    <strong style="font-size: 1.3rem; color: var(--primary-color);">${studentName}</b><br>
                     <span style="font-size: 1.1rem; color: var(--text-muted);">Lớp:</span> 
-                    <strong style="font-size: 1.3rem; color: var(--primary-color);">${studentClass}</strong>
+                    <strong style="font-size: 1.3rem; color: var(--primary-color);">${studentClass}</b>
                 </div>
                 <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
                     <button class="btn-primary" onclick="renderComponentsDetail('practice')" style="background: var(--text-main); font-size: 1.15rem; padding: 12px 24px; border-radius: 30px; border: none; cursor: pointer;">LÀM LẠI LẦN NỮA 🔄</button>
@@ -2165,61 +2165,61 @@ const nounsPractice1Data = [
 
 const nounsPractice2Data = [
     { 
-      question: "Reading books can help me gain a lot of <strong>knowledges</strong>.", 
+      question: "Reading books can help me gain a lot of <b style="color: var(--primary-color);">knowledges</b>.", 
       options: ["knowledge", "knowings", "Giữ nguyên vì đã đúng"], 
       answer: 0, 
       explanation: "knowledge là danh từ không đếm được -> không thêm '-s'" 
     },
     { 
-      question: "You should take part in many <strong>activity</strong> at school.", 
+      question: "You should take part in many <b style="color: var(--primary-color);">activity</b> at school.", 
       options: ["activitys", "activities", "Giữ nguyên vì đã đúng"], 
       answer: 1, 
       explanation: "sau 'many' phải dùng danh từ đếm được số nhiều 'activities'" 
     },
     { 
-      question: "We need to order additional <strong>furniture</strong> for the meeting room.", 
+      question: "We need to order additional <b style="color: var(--primary-color);">furniture</b> for the meeting room.", 
       options: ["furnitures", "a furniture", "Giữ nguyên vì đã đúng"], 
       answer: 2, 
       explanation: "furniture là danh từ không đếm được -> không thêm 's' và câu này đã sử dụng đúng." 
     },
     { 
-      question: "A cleaner came to my office to clean up my <strong>kitchen</strong>.", 
+      question: "A cleaner came to my office to clean up my <b style="color: var(--primary-color);">kitchen</b>.", 
       options: ["kitchens", "kitchening", "Giữ nguyên vì đã đúng"], 
       answer: 2, 
       explanation: "kitchen là danh từ đếm được số ít, dùng đúng ngữ cảnh." 
     },
     { 
-      question: "I purchased some <strong>furnitures</strong> at your store last week.", 
+      question: "I purchased some <b style="color: var(--primary-color);">furnitures</b> at your store last week.", 
       options: ["furniture", "pieces of furnitures", "Giữ nguyên vì đã đúng"], 
       answer: 0, 
       explanation: "furniture là danh từ không đếm được -> không thêm 's'" 
     },
     { 
-      question: "The staff took a lot of <strong>times</strong> to complete the task.", 
+      question: "The staff took a lot of <b style="color: var(--primary-color);">times</b> to complete the task.", 
       options: ["time", "timing", "Giữ nguyên vì đã đúng"], 
       answer: 0, 
       explanation: "time (thời gian) là danh từ không đếm được -> không thêm 's'" 
     },
     { 
-      question: "Can you give me some <strong>advice</strong>?", 
+      question: "Can you give me some <b style="color: var(--primary-color);">advice</b>?", 
       options: ["advices", "advicing", "Giữ nguyên vì đã đúng"], 
       answer: 2, 
       explanation: "advice là danh từ không đếm được -> đi với 'some' là chính xác." 
     },
     { 
-      question: "They sell a lot of <strong>products</strong> in Cai Rang floating market.", 
+      question: "They sell a lot of <b style="color: var(--primary-color);">products</b> in Cai Rang floating market.", 
       options: ["product", "product's", "Giữ nguyên vì đã đúng"], 
       answer: 2, 
       explanation: "products là danh từ đếm được -> đi với a lot of thêm 's' là chính xác." 
     },
     { 
-      question: "I think you should make friends with <strong>native speaker</strong>.", 
+      question: "I think you should make friends with <b style="color: var(--primary-color);">native speaker</b>.", 
       options: ["a native speaker / native speakers", "native speaking", "Giữ nguyên vì đã đúng"], 
       answer: 0, 
       explanation: "Danh từ đếm được 'native speaker' không được đứng trơ trọi một mình. Bạn phải thêm mạo từ 'a' (a native speaker) hoặc chuyển sang số nhiều (native speakers)." 
     },
     { 
-      question: "You should take an English <strong>courses</strong> at River English Center.", 
+      question: "You should take an English <b style="color: var(--primary-color);">courses</b> at River English Center.", 
       options: ["course", "coursing", "Giữ nguyên vì đã đúng"], 
       answer: 0, 
       explanation: "course là danh từ đếm được -> nếu dùng mạo từ 'an' thì phải là số ít 'course'" 
