@@ -825,6 +825,8 @@ window.openTopic = function(topicId, status) {
         if(typeof renderNounsDetail === 'function') renderNounsDetail();
     } else if (topicId === 'pronouns') {
         if(typeof renderPronounsDetail === 'function') renderPronounsDetail();
+    } else if (topicId === 'verbs') {
+        if(typeof renderVerbsDetail === 'function') renderVerbsDetail();
     }
 }
 
