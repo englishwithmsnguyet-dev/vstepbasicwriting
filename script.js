@@ -2256,26 +2256,26 @@ const nounsPractice2Data = [
 ];
 
 const nounsPractice3Data = [
-    { q: "một môi trường học tập tích cực", a: ["a positive learning environment"] },
-    { q: "những lợi ích của việc học trực tuyến", a: ["the benefits of online learning", "benefits of online learning"], exp: "Nên có mạo từ 'the' vì cụm 'N1 of N2' chỉ những lợi ích xác định của một việc cụ thể." },
-    { q: "các kỹ năng mềm quan trọng", a: ["important soft skills"] },
-    { q: "những nguyên nhân của ô nhiễm không khí", a: ["the causes of air pollution", "causes of air pollution"], exp: "Nên có mạo từ 'the' vì cụm 'N1 of N2' chỉ những nguyên nhân xác định." },
-    { q: "một bài kiểm tra cuối kỳ", a: ["a final exam", "a final test"] },
-    { q: "một tách cà phê nóng", a: ["a hot cup of coffee", "a cup of hot coffee"] },
-    { q: "nhiều thông tin quan trọng", a: ["a lot of important information", "much important information", "lots of important information"] },
-    { q: "những học sinh của lớp này", a: ["the students of this class", "the students in this class", "this class's students"], exp: "Bắt buộc có mạo từ 'the' (the students) vì đây là những học sinh xác định thuộc về một lớp học cụ thể, không phải học sinh nói chung." },
-    { q: "các kỹ năng mềm thiết yếu", a: ["essential soft skills", "crucial soft skills", "necessary soft skills"] },
-    { q: "kết nối Internet không ổn định", a: ["unstable internet connection", "an unstable internet connection"] },
-    { q: "những thiết bị công nghệ hiện đại", a: ["modern technological devices", "modern technology devices"] },
-    { q: "ngày tốt nghiệp của tôi", a: ["my graduation day"] },
-    { q: "sức khoẻ tinh thần của chúng ta", a: ["our mental health"] },
-    { q: "những thói quen ăn uống lành mạnh", a: ["healthy eating habits"] },
-    { q: "một lối sống lành mạnh", a: ["a healthy lifestyle"] },
-    { q: "các vấn đề kỹ thuật", a: ["technical problems", "technical issues"] },
-    { q: "chất lượng âm thanh kém", a: ["poor sound quality", "bad sound quality"] },
-    { q: "một môi trường tốt hơn", a: ["a better environment"] },
-    { q: "một khoá học tiếng Anh ngắn hạn", a: ["a short-term english course", "a short english course"] },
-    { q: "một mùi khó chịu", a: ["an unpleasant smell", "a bad smell"] }
+    { q: "một khóa học trực tuyến miễn phí", a: ["a free online course"] },
+    { q: "những cơ hội nghề nghiệp tốt hơn", a: ["better career opportunities"] },
+    { q: "một kế hoạch học tập rõ ràng", a: ["a clear study plan", "a clear learning plan"] },
+    { q: "một quyết định quan trọng", a: ["an important decision"] },
+    { q: "những phương pháp giảng dạy hiện đại", a: ["modern teaching methods"] },
+    { q: "một hệ thống giao thông công cộng", a: ["a public transportation system"] },
+    { q: "các nguồn năng lượng tái tạo", a: ["renewable energy sources"] },
+    { q: "một vấn đề xã hội nghiêm trọng", a: ["a serious social problem"] },
+    { q: "những dịch vụ chăm sóc sức khỏe", a: ["healthcare services"] },
+    { q: "một chương trình trao đổi sinh viên", a: ["a student exchange program"] },
+    { q: "các thành viên câu lạc bộ", a: ["club members", "the club members"] },
+    { q: "những lợi ích của việc tập thể dục thường xuyên", a: ["the benefits of regular exercise", "benefits of regular exercise"] },
+    { q: "một thói quen học tập tốt", a: ["a good study habit"] },
+    { q: "các phương tiện giao thông công cộng", a: ["public transportation", "means of public transportation"] },
+    { q: "một mục tiêu nghề nghiệp dài hạn", a: ["a long-term career goal"] },
+    { q: "những hoạt động xây dựng đội nhóm", a: ["team-building activities"] },
+    { q: "chất lượng giáo dục đại học", a: ["the quality of higher education", "higher education quality"] },
+    { q: "một cơ hội học tập quý giá", a: ["a valuable learning opportunity", "a valuable study opportunity"] },
+    { q: "những giải pháp cho biến đổi khí hậu", a: ["solutions for climate change", "solutions to climate change"] },
+    { q: "các hoạt động ngoại khóa bổ ích", a: ["beneficial extracurricular activities"] }
 ];
 
 
@@ -2386,7 +2386,58 @@ window.renderNounsDetail = function(activeTab = 'theory') {
                 <hr style="border-top: 2px solid var(--border-color); margin-bottom: 40px; margin-top: 40px;">
                 <div style="margin-bottom: 32px;">
                     <h2 style="color: var(--primary-color); font-size: 1.4rem; margin-bottom: 16px;">BÀI 3: DỊCH CỤM DANH TỪ</h2>
-                    <p style="color: var(--text-muted); margin-bottom: 24px;">Hãy dịch các cụm danh từ sau sang tiếng Anh.</p>
+                    <p style="color: var(--text-muted); margin-bottom: 24px;">Dịch các cụm danh từ sau từ tiếng Việt sang tiếng Anh. Các cụm danh từ trong bài được xây dựng theo 8 cách thành lập cụm danh từ thường gặp. Vui lòng sử dụng đúng a/an/the, dạng số ít/nhiều và trật tự từ.</p>
+                    <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px; margin-bottom: 32px;">
+                        <h3 style="margin-top: 0; color: #475569; font-size: 1.1rem; display: flex; align-items: center; gap: 8px;">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                            GỢI Ý TỪ VỰNG CỐT LÕI (BÀI 3)
+                        </h3>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 12px 24px; font-size: 0.95rem; color: #334155;">
+                            <div>• <b>course</b> (n): khóa học</div>
+                            <div>• <b>online</b> (adj): trực tuyến</div>
+                            <div>• <b>free</b> (adj): miễn phí</div>
+                            <div>• <b>opportunity</b> (n): cơ hội</div>
+                            <div>• <b>career</b> (n): nghề nghiệp</div>
+                            <div>• <b>plan</b> (n): kế hoạch</div>
+                            <div>• <b>clear</b> (adj): rõ ràng</div>
+                            <div>• <b>activity</b> (n): hoạt động</div>
+                            <div>• <b>extracurricular</b> (adj): ngoại khóa</div>
+                            <div>• <b>beneficial</b> (adj): bổ ích</div>
+                            <div>• <b>decision</b> (n): quyết định</div>
+                            <div>• <b>important</b> (adj): quan trọng</div>
+                            <div>• <b>method</b> (n): phương pháp</div>
+                            <div>• <b>teaching</b> (n): việc giảng dạy</div>
+                            <div>• <b>modern</b> (adj): hiện đại</div>
+                            <div>• <b>system</b> (n): hệ thống</div>
+                            <div>• <b>public</b> (adj): công cộng</div>
+                            <div>• <b>transportation</b> (n): giao thông công cộng</div>
+                            <div>• <b>renewable</b> (adj): tái tạo</div>
+                            <div>• <b>energy</b> (n): năng lượng</div>
+                            <div>• <b>source</b> (n): nguồn</div>
+                            <div>• <b>problem</b> (n): vấn đề</div>
+                            <div>• <b>social</b> (adj): xã hội</div>
+                            <div>• <b>serious</b> (adj): nghiêm trọng</div>
+                            <div>• <b>service</b> (n): dịch vụ</div>
+                            <div>• <b>healthcare</b> (n): chăm sóc sức khỏe</div>
+                            <div>• <b>program</b> (n): chương trình</div>
+                            <div>• <b>exchange</b> (n): trao đổi</div>
+                            <div>• <b>student</b> (n): sinh viên</div>
+                            <div>• <b>member</b> (n): thành viên</div>
+                            <div>• <b>club</b> (n): câu lạc bộ</div>
+                            <div>• <b>benefit</b> (n): lợi ích</div>
+                            <div>• <b>exercise</b> (n): việc tập thể dục</div>
+                            <div>• <b>habit</b> (n): thói quen</div>
+                            <div>• <b>goal</b> (n): mục tiêu</div>
+                            <div>• <b>long-term</b> (adj): dài hạn</div>
+                            <div>• <b>team-building</b> (adj): xây dựng đội nhóm</div>
+                            <div>• <b>quality</b> (n): chất lượng</div>
+                            <div>• <b>higher education</b> (n): giáo dục đại học</div>
+                            <div>• <b>valuable</b> (adj): quý giá</div>
+                            <div>• <b>solution</b> (n): giải pháp</div>
+                            <div>• <b>climate change</b> (n): biến đổi khí hậu</div>
+                        </div>
+                    </div>
+
                     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
                         ${nounsPractice3Data.map((q, idx) => `
                             <div class="quiz-item" style="background: var(--bg-card); border-radius: 12px; padding: 20px; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color);">
