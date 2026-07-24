@@ -2392,7 +2392,7 @@ window.renderNounsDetail = function(activeTab = 'theory') {
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
                             GỢI Ý TỪ VỰNG CỐT LÕI (BÀI 3)
                         </h3>
-                        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 12px 24px; font-size: 0.95rem; color: #334155;">
+                        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px 24px; font-size: 0.95rem; color: #334155; line-height: 1.6;">
                             <div>• <b>course</b> (n): khóa học</div>
                             <div>• <b>online</b> (adj): trực tuyến</div>
                             <div>• <b>free</b> (adj): miễn phí</div>
