@@ -2388,9 +2388,9 @@ window.renderNounsDetail = function(activeTab = 'theory') {
                     <h2 style="color: var(--primary-color); font-size: 1.4rem; margin-bottom: 16px;">BÀI 3: DỊCH CỤM DANH TỪ</h2>
                     <p style="color: var(--text-muted); margin-bottom: 24px;">Dịch các cụm danh từ sau từ tiếng Việt sang tiếng Anh. Các cụm danh từ trong bài được xây dựng theo 8 cách thành lập cụm danh từ thường gặp. Vui lòng sử dụng đúng a/an/the, dạng số ít/nhiều và trật tự từ.</p>
                     <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px; margin-bottom: 32px;">
-                        <h3 style="margin-top: 0; color: #475569; font-size: 1.1rem; display: flex; align-items: center; gap: 8px;">
+                        <h3 style="margin-top: 0; margin-bottom: 24px; color: #475569; font-size: 1.1rem; display: flex; align-items: center; gap: 8px;">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
-                            GỢI Ý TỪ VỰNG CỐT LÕI (BÀI 3)
+                            GỢI Ý TỪ VỰNG CỐT LÕI
                         </h3>
                         <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px 24px; font-size: 0.95rem; color: #334155; line-height: 1.6;">
                             <div>• <b>course</b> (n): khóa học</div>
