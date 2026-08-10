@@ -6218,14 +6218,6 @@ window.renderPrepositionsDetail = function(activeTab = 'theory') {
                     </div>
                 </div>
 
-                <div style="margin-bottom: 40px;">
-                    <h2 style="color: var(--primary-color); font-size: 1.4rem; margin-bottom: 16px;">BÀI TẬP THÊM 3 (DỊCH CÂU)</h2>
-                    <p style="font-size: 1.05rem; color: #475569; margin-bottom: 24px;"><i>Áp dụng các kiến thức đã học, chuyển các câu sau đây sang tiếng Anh.</i></p>
-                    <div>${extra3Html}</div>
-                    <div style="margin-top: 24px; text-align: center;">
-                        <button onclick="window.submitPrepositionsExtra3()" style="padding: 12px 32px; background: var(--primary-color); color: white; border: none; border-radius: 30px; font-weight: bold; font-size: 1.1rem; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.1)'">Kiểm tra Bài 3</button>
-                    </div>
-                </div>
             </div>
         `;
     }
@@ -7091,6 +7083,15 @@ window.renderAdverbsDetail = function(activeTab = 'theory') {
                     <div>${extra2Html}</div>
                     <div style="margin-top: 24px; text-align: center;">
                         <button onclick="window.submitAdverbsExtra2()" style="padding: 12px 32px; background: var(--primary-color); color: white; border: none; border-radius: 30px; font-weight: bold; font-size: 1.1rem; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.1)'">Kiểm tra Bài 2</button>
+                    </div>
+                </div>
+
+                <div style="margin-bottom: 40px;">
+                    <h2 style="color: var(--primary-color); font-size: 1.4rem; margin-bottom: 16px;">BÀI TẬP THÊM 3 (TÌM LỖI SAI)</h2>
+                    <p style="font-size: 1.05rem; color: #475569; margin-bottom: 24px;"><i>Chọn từ bị sai ngữ pháp trong các câu sau.</i></p>
+                    <div>${extra3Html}</div>
+                    <div style="margin-top: 24px; text-align: center;">
+                        <button onclick="window.submitAdverbsExtra3()" style="padding: 12px 32px; background: var(--primary-color); color: white; border: none; border-radius: 30px; font-weight: bold; font-size: 1.1rem; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.1)'">Kiểm tra Bài 3</button>
                     </div>
                 </div>
             </div>
