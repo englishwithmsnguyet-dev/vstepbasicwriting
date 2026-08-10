@@ -5519,6 +5519,8 @@ window.renderAdjectivesDetail = function(activeTab = 'theory') {
     
     window.currentTopic = 'adjectives';
     window.currentTab = activeTab;
+    if (!window.adverbsAnswersExtra1) window.adverbsAnswersExtra1 = new Array(adverbsPracticeExtra1.length).fill('');
+    if (!window.adverbsAnswersExtra2) window.adverbsAnswersExtra2 = new Array(adverbsPracticeExtra2.length).fill('');
 
     if (!window.adjectivesAnswersBook1) window.adjectivesAnswersBook1 = new Array(adjectivesPracticeBook1.length).fill('');
     if (!window.adjectivesAnswersBook2) window.adjectivesAnswersBook2 = new Array(adjectivesPracticeBook2.length).fill('');
@@ -6283,6 +6285,53 @@ window.submitPrepositionsExtra3 = function() {
 
 
 // ---------------- ADVERBS ----------------
+const adverbsPracticeExtra1 = [
+    {
+        q: "He speaks English very _______.",
+        options: ["fluent", "fluently", "fluency"],
+        a: "fluently"
+    },
+    {
+        q: "She is a _______ driver.",
+        options: ["careful", "carefully"],
+        a: "careful"
+    },
+    {
+        q: "They worked very _______ to pass the final exam.",
+        options: ["hard", "hardly"],
+        a: "hard"
+    },
+    {
+        q: "I have been feeling very tired _______.",
+        options: ["late", "lately"],
+        a: "lately"
+    },
+    {
+        q: "The children are playing _______ in the garden.",
+        options: ["happy", "happily"],
+        a: "happily"
+    }
+];
+
+const adverbsPracticeExtra2 = [
+    {
+        q: "Gần đây, tôi rất bận rộn với công việc.",
+        a: ["Recently, I have been very busy with work.", "I have been very busy with work recently.", "Recently, I am very busy with work.", "I am very busy with work recently."]
+    },
+    {
+        q: "Cô ấy luôn luôn thức dậy sớm vào buổi sáng.",
+        a: ["She always wakes up early in the morning.", "She always gets up early in the morning."]
+    },
+    {
+        q: "Bọn họ hoàn toàn đồng ý với kế hoạch của bạn.",
+        a: ["They completely agree with your plan.", "They totally agree with your plan."]
+    },
+    {
+        q: "Thật may mắn, không ai bị thương trong vụ tai nạn.",
+        a: ["Fortunately, nobody was hurt in the accident.", "Luckily, nobody was hurt in the accident.", "Fortunately, no one was hurt in the accident.", "Luckily, no one was hurt in the accident."]
+    }
+];
+
 window.checkAdverbsBook1 = function(idx) {
     const inputId = `adv_book1_${idx}`;
     const expId = `advexp_book1_${idx}`;
@@ -6450,12 +6499,134 @@ window.submitAdverbsBook4 = function() {
     adverbsPracticeBook4.forEach((_, i) => window.checkAdverbsBook4(i));
 };
 
+
+window.checkAdverbsExtra1 = function(qIdx, optIdx, selectedOpt) {
+    window.adverbsAnswersExtra1[qIdx] = selectedOpt;
+    const buttons = document.querySelectorAll('.adv-extra1-btn-' + qIdx);
+    buttons.forEach(btn => {
+        btn.classList.remove('selected');
+        btn.style.background = 'white';
+        btn.style.color = 'var(--text-main)';
+        btn.style.borderColor = 'var(--border-color)';
+    });
+    
+    const selectedBtn = document.getElementById(`adv_extra1_btn_${qIdx}_${optIdx}`);
+    if (selectedBtn) {
+        selectedBtn.classList.add('selected');
+        selectedBtn.style.background = 'var(--primary-color)';
+        selectedBtn.style.color = 'white';
+        selectedBtn.style.borderColor = 'var(--primary-color)';
+    }
+}
+
+window.submitAdverbsExtra1 = function() {
+    let score = 0;
+    adverbsPracticeExtra1.forEach((q, idx) => {
+        const expDiv = document.getElementById('advexp_extra1_' + idx);
+        const userAnswer = window.adverbsAnswersExtra1[idx];
+        
+        if (!userAnswer) {
+            expDiv.innerHTML = `<span style="color: #ea580c;">⚠️ Bạn chưa chọn đáp án cho câu này.</span>`;
+            expDiv.style.display = 'block';
+            expDiv.style.background = '#fff7ed';
+            expDiv.style.border = '1px solid #fdba74';
+            return;
+        }
+
+        if (userAnswer === q.a) {
+            score++;
+            expDiv.innerHTML = `<span style="color: #16a34a;">✅ Chính xác! Đáp án: <b>${q.a}</b></span>`;
+            expDiv.style.background = '#f0fdf4';
+            expDiv.style.border = '1px solid #bbf7d0';
+        } else {
+            expDiv.innerHTML = `<span style="color: #dc2626;">❌ Sai rồi. Đáp án đúng là: <b>${q.a}</b></span>`;
+            expDiv.style.background = '#fef2f2';
+            expDiv.style.border = '1px solid #fecaca';
+        }
+        expDiv.style.display = 'block';
+    });
+    window.saveProgress();
+    
+    if (score === adverbsPracticeExtra1.length) {
+        window.showCelebration('Xuất sắc! Bạn đã nắm vững cách dùng tính/trạng từ! 🎉');
+    }
+}
+
+window.checkAdverbsExtra2 = function(idx) {
+    const input = document.getElementById('adv_extra2_' + idx);
+    const expDiv = document.getElementById('advexp_extra2_' + idx);
+    if (!input || !expDiv) return;
+
+    const userAnswer = window.normalizeText(input.value);
+    window.adverbsAnswersExtra2[idx] = input.value;
+    window.saveProgress();
+
+    if (!userAnswer) {
+        expDiv.innerHTML = `<span style="color: #ea580c;">⚠️ Bạn chưa nhập câu trả lời.</span>`;
+        expDiv.style.display = 'block';
+        expDiv.style.background = '#fff7ed';
+        expDiv.style.border = '1px solid #fdba74';
+        return;
+    }
+
+    const correctAnswers = adverbsPracticeExtra2[idx].a;
+    let isCorrect = false;
+    for (let ans of correctAnswers) {
+        if (userAnswer === window.normalizeText(ans)) {
+            isCorrect = true;
+            break;
+        }
+    }
+
+    if (isCorrect) {
+        expDiv.innerHTML = `<span style="color: #16a34a;">✅ Tuyệt vời! Bạn dịch rất chuẩn.</span>`;
+        expDiv.style.background = '#f0fdf4';
+        expDiv.style.border = '1px solid #bbf7d0';
+    } else {
+        expDiv.innerHTML = `
+            <span style="color: #dc2626;">❌ Chưa chính xác. Tham khảo đáp án:</span>
+            <ul style="color: #991b1b; margin-top: 8px; padding-left: 20px;">
+                ${correctAnswers.map(a => `<li>${a}</li>`).join('')}
+            </ul>
+        `;
+        expDiv.style.background = '#fef2f2';
+        expDiv.style.border = '1px solid #fecaca';
+    }
+    expDiv.style.display = 'block';
+}
+
+window.submitAdverbsExtra2 = function() {
+    let score = 0;
+    adverbsPracticeExtra2.forEach((q, idx) => {
+        const input = document.getElementById('adv_extra2_' + idx);
+        if (input && input.value.trim() !== '') {
+            window.checkAdverbsExtra2(idx);
+            const expDiv = document.getElementById('advexp_extra2_' + idx);
+            if (expDiv.innerHTML.includes('Tuyệt vời')) {
+                score++;
+            }
+        } else {
+            const expDiv = document.getElementById('advexp_extra2_' + idx);
+            expDiv.innerHTML = `<span style="color: #ea580c;">⚠️ Bạn chưa làm câu này.</span>`;
+            expDiv.style.display = 'block';
+            expDiv.style.background = '#fff7ed';
+            expDiv.style.border = '1px solid #fdba74';
+        }
+    });
+    
+    if (score === adverbsPracticeExtra2.length) {
+        window.showCelebration('Quá đỉnh! Kỹ năng dịch của bạn rất tốt! 🚀');
+    }
+}
+
 window.renderAdverbsDetail = function(activeTab = 'theory') {
     const contentWrapper = document.getElementById('content-wrapper');
     if (!contentWrapper) return;
     
     window.currentTopic = 'adverbs';
     window.currentTab = activeTab;
+    if (!window.adverbsAnswersExtra1) window.adverbsAnswersExtra1 = new Array(adverbsPracticeExtra1.length).fill('');
+    if (!window.adverbsAnswersExtra2) window.adverbsAnswersExtra2 = new Array(adverbsPracticeExtra2.length).fill('');
 
     if (!window.adverbsAnswersBook1) window.adverbsAnswersBook1 = new Array(adverbsPracticeBook1.length).fill('');
     if (!window.adverbsAnswersBook2) window.adverbsAnswersBook2 = new Array(adverbsPracticeBook2.length).fill('');
@@ -6599,10 +6770,67 @@ window.renderAdverbsDetail = function(activeTab = 'theory') {
             </div>
         `;
     } else if (activeTab === 'practice_extra') {
+        const extra1Html = adverbsPracticeExtra1.map((q, idx) => {
+            const optionsHtml = q.options.map((opt, optIdx) => {
+                const isSelected = window.adverbsAnswersExtra1[idx] === opt;
+                let btnStyle = "padding: 10px 20px; background: white; border: 2px solid var(--border-color); border-radius: 8px; cursor: pointer; font-size: 1.1rem; transition: all 0.2s;";
+                if (isSelected) {
+                    btnStyle = "padding: 10px 20px; background: var(--primary-color); color: white; border: 2px solid var(--primary-color); border-radius: 8px; cursor: pointer; font-size: 1.1rem; transition: all 0.2s;";
+                }
+                return `
+                    <button id="adv_extra1_btn_${idx}_${optIdx}" class="adv-extra1-btn-${idx} ${isSelected ? 'selected' : ''}" onclick="window.checkAdverbsExtra1(${idx}, ${optIdx}, '${opt.replace(/'/g, "\'")}')" style="${btnStyle}" onmouseover="if(!this.classList.contains('selected')){this.style.borderColor='var(--primary-color)'; this.style.color='var(--primary-color)';}" onmouseout="if(!this.classList.contains('selected')){this.style.borderColor='var(--border-color)'; this.style.color='var(--text-main)';}">
+                        ${opt}
+                    </button>
+                `;
+            }).join('');
+            
+            return `
+            <div class="quiz-item" style="background: white; border-radius: 12px; padding: 20px; margin-bottom: 16px; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color);">
+                <p style="font-size: 1.15rem; font-weight: 500; color: var(--text-main); margin-bottom: 16px;"><b>${idx + 1}.</b> ${q.q}</p>
+                <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 12px;">
+                    ${optionsHtml}
+                </div>
+                <div id="advexp_extra1_${idx}" style="display: none; padding: 12px; border-radius: 8px; font-size: 1.05rem; margin-top: 8px;"></div>
+            </div>
+            `;
+        }).join('');
+
+        const extra2Html = adverbsPracticeExtra2.map((q, idx) => `
+            <div class="quiz-item" style="background: white; border-radius: 12px; padding: 20px; margin-bottom: 16px; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color);">
+                <p style="font-size: 1.15rem; font-weight: 500; color: var(--text-main); margin-bottom: 16px;"><b>${idx + 1}.</b> ${q.q}</p>
+                <div style="display: flex; flex-direction: column; gap: 12px;">
+                    <input type="text" id="adv_extra2_${idx}" 
+                           value="${(window.adverbsAnswersExtra2[idx] || '').replace(/"/g, '&quot;')}"
+                           placeholder="Nhập bản dịch tiếng Anh..." 
+                           style="width: 100%; padding: 12px 16px; font-size: 1.1rem; border: 2px solid var(--border-color); border-radius: 8px; outline: none; transition: border-color 0.2s;"
+                           onfocus="this.style.borderColor='var(--primary-color)'"
+                           onblur="this.style.borderColor='var(--border-color)'"
+                           onkeypress="if(event.key === 'Enter') window.checkAdverbsExtra2(${idx})">
+                    <button onclick="window.checkAdverbsExtra2(${idx})" style="padding: 8px 16px; background: white; color: var(--primary-color); border: 2px solid var(--primary-color); border-radius: 20px; font-weight: bold; cursor: pointer; transition: all 0.2s; align-self: flex-start;" onmouseover="this.style.background='var(--primary-color)'; this.style.color='white'" onmouseout="this.style.background='white'; this.style.color='var(--primary-color)'">Kiểm tra</button>
+                    <div id="advexp_extra2_${idx}" style="display: none; padding: 12px; border-radius: 8px; font-size: 1.05rem; margin-top: 8px;"></div>
+                </div>
+            </div>
+        `).join('');
+
         contentHtml = `
-            <div style="margin-top: 40px; text-align: center; padding: 40px; background: white; border-radius: 12px; border: 2px dashed #cbd5e1;">
-                <p style="font-size: 1.2rem; color: #64748b; margin-bottom: 16px;">Trạng từ là chủ điểm khá dễ, tài liệu chính thức đã bao quát đủ các dạng bài thi.</p>
-                <p style="font-size: 1.1rem; color: #94a3b8;"><i>Hiện tại chưa có bài tập thêm (bài tập tự soạn) cho phần này.</i></p>
+            <div style="margin-top: 24px;">
+                <div style="margin-bottom: 40px;">
+                    <h2 style="color: var(--primary-color); font-size: 1.4rem; margin-bottom: 16px;">BÀI TẬP THÊM 1 (TRẮC NGHIỆM)</h2>
+                    <p style="font-size: 1.05rem; color: #475569; margin-bottom: 24px;"><i>Chọn đáp án đúng (Chú ý phân biệt tính từ và trạng từ).</i></p>
+                    <div>${extra1Html}</div>
+                    <div style="margin-top: 24px; text-align: center;">
+                        <button onclick="window.submitAdverbsExtra1()" style="padding: 12px 32px; background: var(--primary-color); color: white; border: none; border-radius: 30px; font-weight: bold; font-size: 1.1rem; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.1)'">Kiểm tra Bài 1</button>
+                    </div>
+                </div>
+
+                <div style="margin-bottom: 40px;">
+                    <h2 style="color: var(--primary-color); font-size: 1.4rem; margin-bottom: 16px;">BÀI TẬP THÊM 2 (DỊCH CÂU)</h2>
+                    <p style="font-size: 1.05rem; color: #475569; margin-bottom: 24px;"><i>Vận dụng trạng từ để dịch các câu sau sang Tiếng Anh.</i></p>
+                    <div>${extra2Html}</div>
+                    <div style="margin-top: 24px; text-align: center;">
+                        <button onclick="window.submitAdverbsExtra2()" style="padding: 12px 32px; background: var(--primary-color); color: white; border: none; border-radius: 30px; font-weight: bold; font-size: 1.1rem; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.1)'">Kiểm tra Bài 2</button>
+                    </div>
+                </div>
             </div>
         `;
     }
