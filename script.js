@@ -4601,7 +4601,7 @@ const adverbsTheoryData = [
         title: "1. ĐỊNH NGHĨA VÀ CHỨC NĂNG",
         content: `
             <p style="font-size: 1.1rem; line-height: 1.6; color: var(--text-main); margin-bottom: 12px;">
-                <b>Trạng từ (Adverbs)</b> là những từ dùng để bổ nghĩa cho động từ, tính từ, một trạng từ khác, hoặc cho cả câu. Nó thường trả lời cho các câu hỏi <i>How? When? Where? How often?</i>
+                <b>Trạng từ (Adverbs)</b> là những từ dùng để bổ nghĩa cho động từ, tính từ, một trạng từ khác, hoặc cho cả câu. Nó thường trả lời cho các câu hỏi <b><i>How? When? Where? How often?</i></b>
             </p>
             <div style="background: #f8fafc; padding: 16px; border-radius: 8px; border-left: 4px solid var(--primary-color);">
                 <p style="font-size: 1.1rem; font-weight: bold; color: #334155; margin-bottom: 8px;">Các chức năng chính:</p>
@@ -4620,23 +4620,23 @@ const adverbsTheoryData = [
                 <ul style="list-style-type: disc; margin-left: 20px; color: #334155;">
                     <li style="margin-bottom: 12px;"><b>Trạng từ chỉ Thời gian (Time):</b> 
                         <span style="color: #475569;">Cho biết hành động xảy ra khi nào.</span><br>
-                        <i style="color: #64748b;">Ví dụ: recently (gần đây), lately, eventually (cuối cùng thì), soon, now, yesterday...</i>
+                        <i style="color: #64748b;">Ví dụ: <b>recently</b> (gần đây), <b>lately</b>, <b>eventually</b> (cuối cùng thì), <b>soon</b>, <b>now</b>, <b>yesterday</b>...</i>
                     </li>
                     <li style="margin-bottom: 12px;"><b>Trạng từ chỉ Nơi chốn (Place):</b> 
                         <span style="color: #475569;">Cho biết hành động xảy ra ở đâu.</span><br>
-                        <i style="color: #64748b;">Ví dụ: here, there, everywhere, outside, inside, locally...</i>
+                        <i style="color: #64748b;">Ví dụ: <b>here</b>, <b>there</b>, <b>everywhere</b>, <b>outside</b>, <b>inside</b>, <b>locally</b>...</i>
                     </li>
                     <li style="margin-bottom: 12px;"><b>Trạng từ chỉ Cách thức (Manner):</b> 
                         <span style="color: #475569;">Cho biết hành động diễn ra như thế nào.</span><br>
-                        <i style="color: #64748b;">Ví dụ: fluently (trôi chảy), carefully (cẩn thận), reluctantly (miễn cưỡng), quickly...</i>
+                        <i style="color: #64748b;">Ví dụ: <b>fluently</b> (trôi chảy), <b>carefully</b> (cẩn thận), <b>reluctantly</b> (miễn cưỡng), <b>quickly</b>...</i>
                     </li>
                     <li style="margin-bottom: 12px;"><b>Trạng từ chỉ Tần suất (Frequency):</b> 
                         <span style="color: #475569;">Cho biết mức độ thường xuyên.</span><br>
-                        <i style="color: #64748b;">Ví dụ: always, usually, occasionally (thỉnh thoảng), rarely (hiếm khi), never...</i>
+                        <i style="color: #64748b;">Ví dụ: <b>always</b>, <b>usually</b>, <b>occasionally</b> (thỉnh thoảng), <b>rarely</b> (hiếm khi), <b>never</b>...</i>
                     </li>
                     <li style="margin-bottom: 12px;"><b>Trạng từ chỉ Mức độ (Degree):</b> 
                         <span style="color: #475569;">Cho biết cường độ của tính từ/trạng từ khác.</span><br>
-                        <i style="color: #64748b;">Ví dụ: extremely (cực kỳ), completely (hoàn toàn), quite (khá), slightly (hơi hơi)...</i>
+                        <i style="color: #64748b;">Ví dụ: <b>extremely</b> (cực kỳ), <b>completely</b> (hoàn toàn), <b>quite</b> (khá), <b>slightly</b> (hơi hơi)...</i>
                     </li>
                 </ul>
             </div>
