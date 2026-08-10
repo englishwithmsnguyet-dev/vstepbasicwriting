@@ -865,23 +865,95 @@ const verbsTheoryData = [
         <div style="font-size: 1.1rem; line-height: 1.7; color: var(--text-main);">
             <p>Không diễn tả hành động, mà dùng để <b>nối Chủ ngữ với Đặc điểm/Trạng thái</b> của nó (thường là Tính từ hoặc Danh từ).</p>
             
-            <div style="background: white; border: 1px solid #e2e8f0; border-radius: 12px; overflow: hidden; margin: 16px 0;">
-                <div style="background: #f1f5f9; padding: 10px 16px; font-weight: bold; border-bottom: 1px solid #e2e8f0;">📌 Các nhóm động từ liên kết phổ biến</div>
-                <div style="padding: 16px;">
-                    <ul style="margin: 0; padding-left: 20px; display: grid; gap: 10px;">
-                        <li><b>Nhóm TO BE:</b> is, am, are, was, were...</li>
-                        <li><b>Chỉ sự biến đổi:</b> become, get, turn, grow... <br><i style="color: #64748b;">(VD: The weather <b>gets</b> cold.)</i></li>
-                        <li><b>Chỉ cảm giác/nhận thức:</b> feel, look, sound, smell, taste, seem, appear... <br><i style="color: #64748b;">(VD: She <b>looks</b> tired.)</i></li>
-                    </ul>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; margin: 24px 0;">
+                <div style="background: white; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px rgba(0,0,0,0.05); overflow: hidden; transition: transform 0.2s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
+                    <div style="background: linear-gradient(135deg, #eff6ff, #dbeafe); padding: 12px 16px; border-bottom: 1px solid #bfdbfe;">
+                        <h4 style="color: #1e40af; font-size: 1.1rem; font-weight: 800; margin: 0; display: flex; align-items: center; gap: 8px;">
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+                            Nhóm TO BE
+                        </h4>
+                    </div>
+                    <div style="padding: 16px;">
+                        <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                            <span style="background: #f1f5f9; color: #475569; padding: 4px 12px; border-radius: 20px; font-weight: 600; border: 1px solid #e2e8f0;">is</span>
+                            <span style="background: #f1f5f9; color: #475569; padding: 4px 12px; border-radius: 20px; font-weight: 600; border: 1px solid #e2e8f0;">am</span>
+                            <span style="background: #f1f5f9; color: #475569; padding: 4px 12px; border-radius: 20px; font-weight: 600; border: 1px solid #e2e8f0;">are</span>
+                            <span style="background: #f1f5f9; color: #475569; padding: 4px 12px; border-radius: 20px; font-weight: 600; border: 1px solid #e2e8f0;">was</span>
+                            <span style="background: #f1f5f9; color: #475569; padding: 4px 12px; border-radius: 20px; font-weight: 600; border: 1px solid #e2e8f0;">were</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="background: white; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px rgba(0,0,0,0.05); overflow: hidden; transition: transform 0.2s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
+                    <div style="background: linear-gradient(135deg, #fdf4ff, #fae8ff); padding: 12px 16px; border-bottom: 1px solid #f5d0fe;">
+                        <h4 style="color: #86198f; font-size: 1.1rem; font-weight: 800; margin: 0; display: flex; align-items: center; gap: 8px;">
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 4V1L8 5l4 4V6c3.31 0 6 2.69 6 6 0 1.01-.25 1.97-.7 2.8l1.46 1.46C19.54 15.03 20 13.57 20 12c0-4.42-3.58-8-8-8zm0 14c-3.31 0-6-2.69-6-6 0-1.01.25-1.97.7-2.8L5.24 7.74C4.46 8.97 4 10.43 4 12c0 4.42 3.58 8 8 8v3l4-4-4-4v3z"/></svg>
+                            Chỉ sự biến đổi
+                        </h4>
+                    </div>
+                    <div style="padding: 16px;">
+                        <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px;">
+                            <span style="background: #f1f5f9; color: #475569; padding: 4px 12px; border-radius: 20px; font-weight: 600; border: 1px solid #e2e8f0;">become</span>
+                            <span style="background: #f1f5f9; color: #475569; padding: 4px 12px; border-radius: 20px; font-weight: 600; border: 1px solid #e2e8f0;">get</span>
+                            <span style="background: #f1f5f9; color: #475569; padding: 4px 12px; border-radius: 20px; font-weight: 600; border: 1px solid #e2e8f0;">turn</span>
+                            <span style="background: #f1f5f9; color: #475569; padding: 4px 12px; border-radius: 20px; font-weight: 600; border: 1px solid #e2e8f0;">grow</span>
+                        </div>
+                        <div style="background: #f8fafc; padding: 8px 12px; border-radius: 8px; font-size: 0.95rem; color: #64748b; font-style: italic; border-left: 3px solid #cbd5e1;">
+                            VD: The weather <b style="color: #475569;">gets</b> cold.
+                        </div>
+                    </div>
+                </div>
+
+                <div style="background: white; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px rgba(0,0,0,0.05); overflow: hidden; transition: transform 0.2s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
+                    <div style="background: linear-gradient(135deg, #f0fdf4, #dcfce7); padding: 12px 16px; border-bottom: 1px solid #bbf7d0;">
+                        <h4 style="color: #15803d; font-size: 1.1rem; font-weight: 800; margin: 0; display: flex; align-items: center; gap: 8px;">
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/></svg>
+                            Chỉ cảm giác/nhận thức
+                        </h4>
+                    </div>
+                    <div style="padding: 16px;">
+                        <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px;">
+                            <span style="background: #f1f5f9; color: #475569; padding: 4px 12px; border-radius: 20px; font-weight: 600; border: 1px solid #e2e8f0;">feel</span>
+                            <span style="background: #f1f5f9; color: #475569; padding: 4px 12px; border-radius: 20px; font-weight: 600; border: 1px solid #e2e8f0;">look</span>
+                            <span style="background: #f1f5f9; color: #475569; padding: 4px 12px; border-radius: 20px; font-weight: 600; border: 1px solid #e2e8f0;">sound</span>
+                            <span style="background: #f1f5f9; color: #475569; padding: 4px 12px; border-radius: 20px; font-weight: 600; border: 1px solid #e2e8f0;">smell</span>
+                            <span style="background: #f1f5f9; color: #475569; padding: 4px 12px; border-radius: 20px; font-weight: 600; border: 1px solid #e2e8f0;">taste</span>
+                        </div>
+                        <div style="background: #f8fafc; padding: 8px 12px; border-radius: 8px; font-size: 0.95rem; color: #64748b; font-style: italic; border-left: 3px solid #cbd5e1;">
+                            VD: She <b style="color: #475569;">looks</b> tired.
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <div style="margin-top: 16px; padding: 16px; background: #fef2f2; border: 2px dashed #ef4444; border-radius: 12px;">
-                <div style="color: #b91c1c; font-weight: bold; margin-bottom: 8px;">⚠️ LƯU Ý CỰC KỲ QUAN TRỌNG</div>
-                Sau động từ liên kết, chúng ta cộng với <b>TÍNH TỪ (Adjective)</b> hoặc <b>DANH TỪ (Noun)</b>, KHÔNG dùng Trạng từ (Adverb).<br>
-                <div style="margin-top: 8px; font-family: monospace; font-size: 1.05rem; display: flex; flex-direction: column; gap: 4px;">
-                    <div><span style="color: #ef4444; text-decoration: line-through;">She looks beautifully.</span> ➡️ <b style="color: #10b981;">She looks beautiful.</b> <i>(Tính từ)</i></div>
-                    <div><b style="color: #10b981;">She became a teacher.</b> <i>(Danh từ)</i></div>
+            <div style="margin-top: 16px; padding: 24px; background: linear-gradient(135deg, #fff1f2, #fef2f2); border-left: 6px solid #ef4444; border-radius: 12px; box-shadow: 0 4px 12px rgba(220,38,38,0.08);">
+                <div style="color: #b91c1c; font-size: 1.25rem; font-weight: 800; margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+                    <svg width="28" height="28" fill="currentColor" viewBox="0 0 24 24"><path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/></svg>
+                    LƯU Ý CỰC KỲ QUAN TRỌNG
+                </div>
+                <p style="color: #7f1d1d; margin-bottom: 20px; font-size: 1.05rem;">
+                    Sau động từ liên kết, chúng ta cộng với <b>TÍNH TỪ (Adjective)</b> hoặc <b>DANH TỪ (Noun)</b>, 
+                    <span style="background: #fecaca; padding: 2px 6px; border-radius: 4px; font-weight: 700;">KHÔNG</span> dùng Trạng từ (Adverb).
+                </p>
+                
+                <div style="display: flex; flex-direction: column; gap: 12px;">
+                    <div style="background: white; padding: 12px 16px; border-radius: 8px; display: flex; align-items: center; flex-wrap: wrap; gap: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+                        <div style="color: #ef4444; font-weight: 500; text-decoration: line-through; opacity: 0.8;">She looks beautifully.</div>
+                        <div style="color: #cbd5e1;">&rarr;</div>
+                        <div style="color: #059669; font-weight: 700; background: #ecfdf5; padding: 4px 12px; border-radius: 20px; display: flex; align-items: center; gap: 6px;">
+                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                            She looks beautiful.
+                        </div>
+                        <i style="color: #64748b; font-size: 0.95rem;">(Tính từ)</i>
+                    </div>
+                    
+                    <div style="background: white; padding: 12px 16px; border-radius: 8px; display: flex; align-items: center; flex-wrap: wrap; gap: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+                        <div style="color: #059669; font-weight: 700; background: #ecfdf5; padding: 4px 12px; border-radius: 20px; display: flex; align-items: center; gap: 6px;">
+                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                            She became a teacher.
+                        </div>
+                        <i style="color: #64748b; font-size: 0.95rem;">(Danh từ)</i>
+                    </div>
                 </div>
             </div>
         </div>`
