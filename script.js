@@ -4695,6 +4695,12 @@ window.checkNounsDragDropExtra = function() {
 // ==================== PREPOSITIONS LOGIC ====================
 
 // ---------------- ADJECTIVES ----------------
+
+window.normalizeText = function(text) {
+    if (!text) return '';
+    return text.toString().trim().toLowerCase().replace(/[.,!?;:]/g, '').replace(/\s+/g, ' ');
+};
+
 const adjectivesTheoryData = [
     {
         title: "1. TÍNH TỪ LÀ GÌ?",
