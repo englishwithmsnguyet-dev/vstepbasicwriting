@@ -4692,16 +4692,46 @@ const adverbsTheoryData = [
                     </div>
                 </div>
 
-                <h4 style="color: #ef4444; margin-bottom: 12px; font-size: 1.15rem;">⚠️ CÁC TRƯỜNG HỢP BẤT QUY TẮC THƯỜNG GẶP (HAY THI)</h4>
-                <div style="background: #fef2f2; border-left: 4px solid #ef4444; padding: 16px; border-radius: 8px;">
-                    <ul style="list-style: none; padding-left: 0; color: #991b1b;">
-                        <li style="margin-bottom: 8px;">• <b>good</b> (Tốt) &rarr; Trạng từ là: <b>well</b></li>
-                        <li style="margin-bottom: 8px;">• <b>fast</b> (Nhanh) &rarr; Trạng từ là: <b>fast</b> <i>(KHÔNG CÓ fastly)</i></li>
-                        <li style="margin-bottom: 8px;">• <b>hard</b> (Chăm chỉ/Khó) &rarr; Trạng từ là: <b>hard</b> 
-                            <br><span style="font-size: 0.95em; color: #b91c1c;">(Lưu ý: "hardly" là trạng từ chỉ tần suất mang nghĩa "hầu như không", KHÔNG PHẢI là "chăm chỉ một cách...")</span>
+                <h4 style="color: #ea580c; margin-bottom: 12px; font-size: 1.15rem; display: flex; align-items: center; gap: 8px;">
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L1 21h22L12 2zm1 14h-2v-2h2v2zm0-4h-2V7h2v5z"/></svg>
+                    CÁC TRƯỜNG HỢP BẤT QUY TẮC THƯỜNG GẶP (HAY THI)
+                </h4>
+                <div style="background: #fff7ed; border-left: 4px solid #f97316; padding: 16px; border-radius: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.05);">
+                    <ul style="list-style: none; padding-left: 0; color: #334155; margin-bottom: 0;">
+                        <li style="margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px dashed #fed7aa;">
+                            <div style="display: flex; align-items: center; margin-bottom: 4px;">
+                                <span style="font-weight: 600; width: 60px;">good</span> 
+                                <span style="color: #64748b; margin-right: 12px;">(Tốt)</span>
+                                <span style="color: #f97316;">&rarr;</span>
+                                <span style="margin-left: 12px;">Trạng từ: <b style="color: #0f172a; background: #ffedd5; padding: 2px 8px; border-radius: 4px;">well</b></span>
+                            </div>
                         </li>
-                        <li>• <b>late</b> (Muộn) &rarr; Trạng từ là: <b>late</b> 
-                            <br><span style="font-size: 0.95em; color: #b91c1c;">(Lưu ý: "lately" có nghĩa là "gần đây", tương đương với "recently")</span>
+                        <li style="margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px dashed #fed7aa;">
+                            <div style="display: flex; align-items: center; margin-bottom: 4px;">
+                                <span style="font-weight: 600; width: 60px;">fast</span> 
+                                <span style="color: #64748b; margin-right: 12px;">(Nhanh)</span>
+                                <span style="color: #f97316;">&rarr;</span>
+                                <span style="margin-left: 12px;">Trạng từ: <b style="color: #0f172a; background: #ffedd5; padding: 2px 8px; border-radius: 4px;">fast</b></span>
+                            </div>
+                            <div style="font-size: 0.95em; color: #ea580c; margin-left: 72px;"><i>(Tuyệt đối KHÔNG CÓ từ "fastly")</i></div>
+                        </li>
+                        <li style="margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px dashed #fed7aa;">
+                            <div style="display: flex; align-items: center; margin-bottom: 4px;">
+                                <span style="font-weight: 600; width: 60px;">hard</span> 
+                                <span style="color: #64748b; margin-right: 12px;">(Khó/Chăm chỉ)</span>
+                                <span style="color: #f97316;">&rarr;</span>
+                                <span style="margin-left: 12px;">Trạng từ: <b style="color: #0f172a; background: #ffedd5; padding: 2px 8px; border-radius: 4px;">hard</b></span>
+                            </div>
+                            <div style="font-size: 0.95em; color: #ea580c; margin-left: 72px;"><i>(Lưu ý: "hardly" là trạng từ tần suất mang nghĩa "hầu như không")</i></div>
+                        </li>
+                        <li>
+                            <div style="display: flex; align-items: center; margin-bottom: 4px;">
+                                <span style="font-weight: 600; width: 60px;">late</span> 
+                                <span style="color: #64748b; margin-right: 12px;">(Muộn)</span>
+                                <span style="color: #f97316;">&rarr;</span>
+                                <span style="margin-left: 12px;">Trạng từ: <b style="color: #0f172a; background: #ffedd5; padding: 2px 8px; border-radius: 4px;">late</b></span>
+                            </div>
+                            <div style="font-size: 0.95em; color: #ea580c; margin-left: 72px;"><i>(Lưu ý: "lately" có nghĩa là "gần đây", tương đương với "recently")</i></div>
                         </li>
                     </ul>
                 </div>
