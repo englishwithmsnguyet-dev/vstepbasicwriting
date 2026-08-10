@@ -4700,23 +4700,41 @@ const adverbsTheoryData = [
         title: "3. VỊ TRÍ CỦA TRẠNG TỪ TRONG CÂU",
         content: `
             <div style="font-size: 1.1rem; line-height: 1.6; color: var(--text-main);">
-                <p style="margin-bottom: 12px;"><b>1. Bổ nghĩa cho động từ:</b> Đứng trước hoặc sau động từ chính. <span style="color: #ef4444; font-weight: bold;">(KHÔNG chen vào giữa Động từ và Tân ngữ)</span></p>
-                <div style="background: #f0fdf4; padding: 12px 16px; border-radius: 8px; margin-bottom: 16px; border-left: 4px solid #22c55e;">
-                    <p style="color: #166534; margin-bottom: 4px;">✔ He drives <b>carefully</b>.</p>
-                    <p style="color: #166534; margin-bottom: 4px;">✔ She <b>completely</b> focuses on reading.</p>
-                    <p style="color: #991b1b; font-style: italic;">✘ She reads <b>completely</b> the book. (Sai vị trí)</p>
+                <div style="margin-bottom: 24px;">
+                    <h4 style="font-size: 1.15rem; font-weight: 800; color: #475569; margin-bottom: 8px; display: flex; align-items: center; gap: 8px;">
+                        <span style="background: var(--primary-color); color: white; width: 24px; height: 24px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: 0.9rem;">a</span>
+                        Bổ nghĩa cho Động từ
+                    </h4>
+                    <p style="margin-bottom: 12px; margin-left: 32px; color: #475569;">Đứng trước hoặc sau động từ chính. <span style="color: #ef4444; font-weight: 700; background: #fef2f2; padding: 2px 6px; border-radius: 4px;">(KHÔNG chen vào giữa Động từ và Tân ngữ)</span></p>
+                    <div style="background: #f0fdf4; padding: 12px 16px; border-radius: 8px; margin-left: 32px; border-left: 4px solid #22c55e;">
+                        <p style="color: #166534; margin-bottom: 4px;">✔ He drives <b>carefully</b>.</p>
+                        <p style="color: #166534; margin-bottom: 4px;">✔ She <b>completely</b> focuses on reading.</p>
+                        <p style="color: #991b1b; font-style: italic;">✘ She reads <b>completely</b> the book. (Sai vị trí)</p>
+                    </div>
                 </div>
 
-                <p style="margin-bottom: 12px;"><b>2. Bổ nghĩa cho tính từ/trạng từ khác:</b> Luôn đứng TRƯỚC từ mà nó bổ nghĩa.</p>
-                <div style="background: #f0fdf4; padding: 12px 16px; border-radius: 8px; margin-bottom: 16px; border-left: 4px solid #22c55e;">
-                    <p style="color: #166534; margin-bottom: 4px;">✔ She is <b>very</b> intelligent. <i>(very bổ nghĩa cho tính từ intelligent)</i></p>
-                    <p style="color: #166534;">✔ He speaks <b>quite</b> fluently. <i>(quite bổ nghĩa cho trạng từ fluently)</i></p>
+                <div style="margin-bottom: 24px;">
+                    <h4 style="font-size: 1.15rem; font-weight: 800; color: #475569; margin-bottom: 8px; display: flex; align-items: center; gap: 8px;">
+                        <span style="background: var(--primary-color); color: white; width: 24px; height: 24px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: 0.9rem;">b</span>
+                        Bổ nghĩa cho Tính từ / Trạng từ khác
+                    </h4>
+                    <p style="margin-bottom: 12px; margin-left: 32px; color: #475569;">Luôn đứng <span style="font-weight: 700; color: var(--primary-color);">TRƯỚC</span> từ mà nó bổ nghĩa.</p>
+                    <div style="background: #f0fdf4; padding: 12px 16px; border-radius: 8px; margin-left: 32px; border-left: 4px solid #22c55e;">
+                        <p style="color: #166534; margin-bottom: 4px;">✔ She is <b>very</b> intelligent. <i>(very bổ nghĩa cho tính từ intelligent)</i></p>
+                        <p style="color: #166534;">✔ He speaks <b>quite</b> fluently. <i>(quite bổ nghĩa cho trạng từ fluently)</i></p>
+                    </div>
                 </div>
 
-                <p style="margin-bottom: 12px;"><b>3. Bổ nghĩa cho cả câu:</b> Thường đứng đầu câu hoặc cuối câu, ngăn cách với mệnh đề chính bằng dấu phẩy (,).</p>
-                <div style="background: #f0fdf4; padding: 12px 16px; border-radius: 8px; margin-bottom: 16px; border-left: 4px solid #22c55e;">
-                    <p style="color: #166534; margin-bottom: 4px;">✔ <b>Fortunately</b>, nobody was hurt.</p>
-                    <p style="color: #166534;">✔ We missed the last bus, <b>unfortunately</b>.</p>
+                <div style="margin-bottom: 24px;">
+                    <h4 style="font-size: 1.15rem; font-weight: 800; color: #475569; margin-bottom: 8px; display: flex; align-items: center; gap: 8px;">
+                        <span style="background: var(--primary-color); color: white; width: 24px; height: 24px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: 0.9rem;">c</span>
+                        Bổ nghĩa cho Cả câu
+                    </h4>
+                    <p style="margin-bottom: 12px; margin-left: 32px; color: #475569;">Thường đứng đầu câu hoặc cuối câu, ngăn cách với mệnh đề chính bằng dấu phẩy (,).</p>
+                    <div style="background: #f0fdf4; padding: 12px 16px; border-radius: 8px; margin-left: 32px; border-left: 4px solid #22c55e;">
+                        <p style="color: #166534; margin-bottom: 4px;">✔ <b>Fortunately</b>, nobody was hurt.</p>
+                        <p style="color: #166534;">✔ We missed the last bus, <b>unfortunately</b>.</p>
+                    </div>
                 </div>
             </div>
         `
