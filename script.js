@@ -4632,55 +4632,65 @@ const adverbsTheoryData = [
                 <div style="background: #fdf4ff; border: 1px solid #fae8ff; padding: 16px; border-radius: 12px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
                     <h4 style="color: #a21caf; font-size: 1.15rem; margin-bottom: 8px; display: flex; align-items: center; gap: 6px;">⏱️ Thời gian (Time)</h4>
                     <p style="color: #701a75; font-size: 0.95rem; margin-bottom: 12px;">Cho biết hành động xảy ra khi nào.</p>
-                    <div style="display: flex; flex-wrap: wrap; gap: 6px;">
+                    <div style="display: flex; flex-wrap: wrap; gap: 6px; align-items: center;">
                         <span style="background: white; color: #86198f; padding: 4px 10px; border-radius: 20px; font-size: 0.9rem; font-weight: 500; border: 1px solid #f5d0fe; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">recently</span>
                         <span style="background: white; color: #86198f; padding: 4px 10px; border-radius: 20px; font-size: 0.9rem; font-weight: 500; border: 1px solid #f5d0fe; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">lately</span>
                         <span style="background: white; color: #86198f; padding: 4px 10px; border-radius: 20px; font-size: 0.9rem; font-weight: 500; border: 1px solid #f5d0fe; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">soon</span>
                         <span style="background: white; color: #86198f; padding: 4px 10px; border-radius: 20px; font-size: 0.9rem; font-weight: 500; border: 1px solid #f5d0fe; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">yesterday</span>
+                        <span style="background: white; color: #86198f; padding: 4px 10px; border-radius: 20px; font-size: 0.9rem; font-weight: 500; border: 1px solid #f5d0fe; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">now</span>
+                        <span style="padding: 4px; font-size: 1rem; color: #a21caf; font-weight: 700; letter-spacing: 2px;">...</span>
                     </div>
                 </div>
 
                 <div style="background: #f0fdf4; border: 1px solid #dcfce7; padding: 16px; border-radius: 12px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
                     <h4 style="color: #15803d; font-size: 1.15rem; margin-bottom: 8px; display: flex; align-items: center; gap: 6px;">📍 Nơi chốn (Place)</h4>
                     <p style="color: #14532d; font-size: 0.95rem; margin-bottom: 12px;">Cho biết hành động xảy ra ở đâu.</p>
-                    <div style="display: flex; flex-wrap: wrap; gap: 6px;">
+                    <div style="display: flex; flex-wrap: wrap; gap: 6px; align-items: center;">
                         <span style="background: white; color: #166534; padding: 4px 10px; border-radius: 20px; font-size: 0.9rem; font-weight: 500; border: 1px solid #bbf7d0; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">here</span>
                         <span style="background: white; color: #166534; padding: 4px 10px; border-radius: 20px; font-size: 0.9rem; font-weight: 500; border: 1px solid #bbf7d0; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">there</span>
                         <span style="background: white; color: #166534; padding: 4px 10px; border-radius: 20px; font-size: 0.9rem; font-weight: 500; border: 1px solid #bbf7d0; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">everywhere</span>
                         <span style="background: white; color: #166534; padding: 4px 10px; border-radius: 20px; font-size: 0.9rem; font-weight: 500; border: 1px solid #bbf7d0; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">outside</span>
+                        <span style="background: white; color: #166534; padding: 4px 10px; border-radius: 20px; font-size: 0.9rem; font-weight: 500; border: 1px solid #bbf7d0; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">inside</span>
+                        <span style="padding: 4px; font-size: 1rem; color: #15803d; font-weight: 700; letter-spacing: 2px;">...</span>
                     </div>
                 </div>
 
                 <div style="background: #eff6ff; border: 1px solid #dbeafe; padding: 16px; border-radius: 12px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
                     <h4 style="color: #1d4ed8; font-size: 1.15rem; margin-bottom: 8px; display: flex; align-items: center; gap: 6px;">🎭 Cách thức (Manner)</h4>
                     <p style="color: #1e3a8a; font-size: 0.95rem; margin-bottom: 12px;">Cho biết hành động diễn ra như thế nào.</p>
-                    <div style="display: flex; flex-wrap: wrap; gap: 6px;">
+                    <div style="display: flex; flex-wrap: wrap; gap: 6px; align-items: center;">
                         <span style="background: white; color: #1e40af; padding: 4px 10px; border-radius: 20px; font-size: 0.9rem; font-weight: 500; border: 1px solid #bfdbfe; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">fluently</span>
                         <span style="background: white; color: #1e40af; padding: 4px 10px; border-radius: 20px; font-size: 0.9rem; font-weight: 500; border: 1px solid #bfdbfe; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">carefully</span>
                         <span style="background: white; color: #1e40af; padding: 4px 10px; border-radius: 20px; font-size: 0.9rem; font-weight: 500; border: 1px solid #bfdbfe; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">reluctantly</span>
                         <span style="background: white; color: #1e40af; padding: 4px 10px; border-radius: 20px; font-size: 0.9rem; font-weight: 500; border: 1px solid #bfdbfe; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">quickly</span>
+                        <span style="background: white; color: #1e40af; padding: 4px 10px; border-radius: 20px; font-size: 0.9rem; font-weight: 500; border: 1px solid #bfdbfe; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">slowly</span>
+                        <span style="padding: 4px; font-size: 1rem; color: #1d4ed8; font-weight: 700; letter-spacing: 2px;">...</span>
                     </div>
                 </div>
 
                 <div style="background: #fffbeb; border: 1px solid #fef3c7; padding: 16px; border-radius: 12px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
                     <h4 style="color: #b45309; font-size: 1.15rem; margin-bottom: 8px; display: flex; align-items: center; gap: 6px;">🔄 Tần suất (Frequency)</h4>
                     <p style="color: #78350f; font-size: 0.95rem; margin-bottom: 12px;">Cho biết mức độ thường xuyên.</p>
-                    <div style="display: flex; flex-wrap: wrap; gap: 6px;">
+                    <div style="display: flex; flex-wrap: wrap; gap: 6px; align-items: center;">
                         <span style="background: white; color: #92400e; padding: 4px 10px; border-radius: 20px; font-size: 0.9rem; font-weight: 500; border: 1px solid #fde68a; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">always</span>
                         <span style="background: white; color: #92400e; padding: 4px 10px; border-radius: 20px; font-size: 0.9rem; font-weight: 500; border: 1px solid #fde68a; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">usually</span>
                         <span style="background: white; color: #92400e; padding: 4px 10px; border-radius: 20px; font-size: 0.9rem; font-weight: 500; border: 1px solid #fde68a; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">occasionally</span>
                         <span style="background: white; color: #92400e; padding: 4px 10px; border-radius: 20px; font-size: 0.9rem; font-weight: 500; border: 1px solid #fde68a; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">rarely</span>
+                        <span style="background: white; color: #92400e; padding: 4px 10px; border-radius: 20px; font-size: 0.9rem; font-weight: 500; border: 1px solid #fde68a; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">never</span>
+                        <span style="padding: 4px; font-size: 1rem; color: #b45309; font-weight: 700; letter-spacing: 2px;">...</span>
                     </div>
                 </div>
 
                 <div style="background: #fef2f2; border: 1px solid #fee2e2; padding: 16px; border-radius: 12px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
                     <h4 style="color: #b91c1c; font-size: 1.15rem; margin-bottom: 8px; display: flex; align-items: center; gap: 6px;">📈 Mức độ (Degree)</h4>
                     <p style="color: #7f1d1d; font-size: 0.95rem; margin-bottom: 12px;">Cho biết cường độ của tính/trạng từ khác.</p>
-                    <div style="display: flex; flex-wrap: wrap; gap: 6px;">
+                    <div style="display: flex; flex-wrap: wrap; gap: 6px; align-items: center;">
                         <span style="background: white; color: #991b1b; padding: 4px 10px; border-radius: 20px; font-size: 0.9rem; font-weight: 500; border: 1px solid #fecaca; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">extremely</span>
                         <span style="background: white; color: #991b1b; padding: 4px 10px; border-radius: 20px; font-size: 0.9rem; font-weight: 500; border: 1px solid #fecaca; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">completely</span>
                         <span style="background: white; color: #991b1b; padding: 4px 10px; border-radius: 20px; font-size: 0.9rem; font-weight: 500; border: 1px solid #fecaca; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">quite</span>
                         <span style="background: white; color: #991b1b; padding: 4px 10px; border-radius: 20px; font-size: 0.9rem; font-weight: 500; border: 1px solid #fecaca; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">slightly</span>
+                        <span style="background: white; color: #991b1b; padding: 4px 10px; border-radius: 20px; font-size: 0.9rem; font-weight: 500; border: 1px solid #fecaca; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">very</span>
+                        <span style="padding: 4px; font-size: 1rem; color: #b91c1c; font-weight: 700; letter-spacing: 2px;">...</span>
                     </div>
                 </div>
             </div>
