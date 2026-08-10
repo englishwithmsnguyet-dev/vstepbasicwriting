@@ -50,7 +50,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto Serif', serif;
+    font-family: 'Inter', sans-serif;
     font-weight: 300;
 }
 
@@ -1402,7 +1402,7 @@ body {
 .tab-pill {
     padding: 12px 40px;
     font-size: 1.25rem;
-    font-family: 'Roboto Serif', serif;
+    font-family: 'Inter', sans-serif;
     font-weight: 700;
     border-radius: 9999px;
     border: 2px solid #e2e8f0;
