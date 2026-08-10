@@ -4743,69 +4743,140 @@ const adverbsTheoryData = [
         title: "4. CÁCH THÀNH LẬP TRẠNG TỪ (TỪ TÍNH TỪ)",
         content: `
             <div style="font-size: 1.1rem; line-height: 1.7; color: var(--text-main);">
-                <p style="margin-bottom: 16px;">Để tạo ra một trạng từ chỉ cách thức, ta thường thêm đuôi <b>-ly</b> vào sau Tính từ.</p>
-                
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 20px;">
-                    <div style="background: #f1f5f9; padding: 16px; border-radius: 8px;">
-                        <h4 style="color: #334155; margin-bottom: 8px; border-bottom: 1px solid #cbd5e1; padding-bottom: 4px;">Quy tắc chung (Tính từ + -ly)</h4>
-                        <ul style="list-style: none; padding-left: 0;">
-                            <li>• careful &rarr; <b>carefully</b></li>
-                            <li>• quick &rarr; <b>quickly</b></li>
-                            <li>• extreme &rarr; <b>extremely</b></li>
-                        </ul>
+                <p style="margin-bottom: 24px; font-size: 1.15rem; color: #475569;">Để tạo ra một trạng từ chỉ cách thức, ta thường thêm đuôi <b style="color: var(--primary-color); background: #e0e7ff; padding: 2px 8px; border-radius: 4px; border: 1px solid #c7d2fe;">-ly</b> vào sau Tính từ.</p>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-bottom: 32px;">
+                    <!-- Quy tắc chung -->
+                    <div style="background: white; border: 1px solid #e2e8f0; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); overflow: hidden; transition: transform 0.2s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
+                        <div style="background: linear-gradient(135deg, #eff6ff, #dbeafe); padding: 16px; border-bottom: 1px solid #bfdbfe;">
+                            <h4 style="color: #1e40af; font-size: 1.15rem; font-weight: 800; display: flex; align-items: center; gap: 8px; margin: 0;">
+                                <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+                                Quy tắc chung
+                            </h4>
+                            <p style="color: #3b82f6; font-size: 0.95rem; margin-top: 4px; margin-bottom: 0;">Thêm trực tiếp -ly vào tính từ</p>
+                        </div>
+                        <div style="padding: 16px;">
+                            <div style="display: flex; flex-direction: column; gap: 12px;">
+                                <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px dashed #e2e8f0; padding-bottom: 8px;">
+                                    <span style="color: #475569; font-weight: 500;">careful</span>
+                                    <span style="color: #94a3b8;">&rarr;</span>
+                                    <span style="color: #1d4ed8; font-weight: 700; background: #eff6ff; padding: 4px 12px; border-radius: 20px;">carefully</span>
+                                </div>
+                                <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px dashed #e2e8f0; padding-bottom: 8px;">
+                                    <span style="color: #475569; font-weight: 500;">quick</span>
+                                    <span style="color: #94a3b8;">&rarr;</span>
+                                    <span style="color: #1d4ed8; font-weight: 700; background: #eff6ff; padding: 4px 12px; border-radius: 20px;">quickly</span>
+                                </div>
+                                <div style="display: flex; align-items: center; justify-content: space-between;">
+                                    <span style="color: #475569; font-weight: 500;">extreme</span>
+                                    <span style="color: #94a3b8;">&rarr;</span>
+                                    <span style="color: #1d4ed8; font-weight: 700; background: #eff6ff; padding: 4px 12px; border-radius: 20px;">extremely</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div style="background: #f1f5f9; padding: 16px; border-radius: 8px;">
-                        <h4 style="color: #334155; margin-bottom: 8px; border-bottom: 1px solid #cbd5e1; padding-bottom: 4px;">Quy tắc đổi đuôi</h4>
-                        <ul style="list-style: none; padding-left: 0;">
-                            <li>• -y &rarr; -ily: happy &rarr; <b>happily</b></li>
-                            <li>• -le &rarr; -ly: terrible &rarr; <b>terribly</b></li>
-                            <li>• -ic &rarr; -ically: basic &rarr; <b>basically</b></li>
-                        </ul>
+
+                    <!-- Quy tắc đổi đuôi -->
+                    <div style="background: white; border: 1px solid #e2e8f0; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); overflow: hidden; transition: transform 0.2s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
+                        <div style="background: linear-gradient(135deg, #fdf4ff, #fae8ff); padding: 16px; border-bottom: 1px solid #f5d0fe;">
+                            <h4 style="color: #86198f; font-size: 1.15rem; font-weight: 800; display: flex; align-items: center; gap: 8px; margin: 0;">
+                                <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M7 7h10v3l4-4-4-4v3H5v6h2V7zm10 10H7v-3l-4 4 4 4v-3h12v-6h-2v4z"/></svg>
+                                Quy tắc đổi đuôi
+                            </h4>
+                            <p style="color: #a21caf; font-size: 0.95rem; margin-top: 4px; margin-bottom: 0;">Biến đổi chữ cái cuối trước khi thêm -ly</p>
+                        </div>
+                        <div style="padding: 16px;">
+                            <div style="display: flex; flex-direction: column; gap: 12px;">
+                                <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px dashed #e2e8f0; padding-bottom: 8px;">
+                                    <span style="color: #475569; font-weight: 500;">happ<b style="color: #d946ef">y</b></span>
+                                    <span style="color: #94a3b8;">&rarr;</span>
+                                    <span style="color: #701a75; font-weight: 700; background: #fdf4ff; padding: 4px 12px; border-radius: 20px;">happ<b style="color: #d946ef">ily</b></span>
+                                </div>
+                                <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px dashed #e2e8f0; padding-bottom: 8px;">
+                                    <span style="color: #475569; font-weight: 500;">terrib<b style="color: #d946ef">le</b></span>
+                                    <span style="color: #94a3b8;">&rarr;</span>
+                                    <span style="color: #701a75; font-weight: 700; background: #fdf4ff; padding: 4px 12px; border-radius: 20px;">terrib<b style="color: #d946ef">ly</b></span>
+                                </div>
+                                <div style="display: flex; align-items: center; justify-content: space-between;">
+                                    <span style="color: #475569; font-weight: 500;">bas<b style="color: #d946ef">ic</b></span>
+                                    <span style="color: #94a3b8;">&rarr;</span>
+                                    <span style="color: #701a75; font-weight: 700; background: #fdf4ff; padding: 4px 12px; border-radius: 20px;">bas<b style="color: #d946ef">ically</b></span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <h4 style="color: #ea580c; margin-bottom: 12px; font-size: 1.15rem; display: flex; align-items: center; gap: 8px;">
-                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L1 21h22L12 2zm1 14h-2v-2h2v2zm0-4h-2V7h2v5z"/></svg>
-                    CÁC TRƯỜNG HỢP BẤT QUY TẮC THƯỜNG GẶP (HAY THI)
-                </h4>
-                <div style="background: #fff7ed; border-left: 4px solid #f97316; padding: 16px; border-radius: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.05);">
-                    <ul style="list-style: none; padding-left: 0; color: #334155; margin-bottom: 0;">
-                        <li style="margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px dashed #fed7aa;">
-                            <div style="display: flex; align-items: center; margin-bottom: 4px;">
-                                <span style="font-weight: 600; width: 60px;">good</span> 
-                                <span style="color: #64748b; margin-right: 12px;">(Tốt)</span>
-                                <span style="color: #f97316;">&rarr;</span>
-                                <span style="margin-left: 12px;">Trạng từ: <b style="color: #0f172a; background: #ffedd5; padding: 2px 8px; border-radius: 4px;">well</b></span>
+                <div style="background: linear-gradient(135deg, #fff1f2, #fef2f2); border: 2px solid #fecaca; padding: 24px; border-radius: 12px; box-shadow: 0 4px 12px rgba(220,38,38,0.08);">
+                    <h4 style="color: #b91c1c; font-size: 1.25rem; font-weight: 800; margin-bottom: 24px; display: flex; align-items: center; gap: 10px;">
+                        <svg width="28" height="28" fill="currentColor" viewBox="0 0 24 24"><path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/></svg>
+                        CÁC TRƯỜNG HỢP BẤT QUY TẮC HAY THI
+                    </h4>
+                    
+                    <div style="display: flex; flex-direction: column; gap: 16px;">
+                        <!-- good -> well -->
+                        <div style="background: white; padding: 16px; border-radius: 8px; border-left: 4px solid #ef4444; box-shadow: 0 1px 3px rgba(0,0,0,0.05); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;">
+                            <div style="display: flex; align-items: center; gap: 12px;">
+                                <span style="font-size: 1.2rem; font-weight: 700; color: #334155; width: 60px;">good</span>
+                                <span style="color: #94a3b8; font-style: italic;">(Tốt)</span>
                             </div>
-                        </li>
-                        <li style="margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px dashed #fed7aa;">
-                            <div style="display: flex; align-items: center; margin-bottom: 4px;">
-                                <span style="font-weight: 600; width: 60px;">fast</span> 
-                                <span style="color: #64748b; margin-right: 12px;">(Nhanh)</span>
-                                <span style="color: #f97316;">&rarr;</span>
-                                <span style="margin-left: 12px;">Trạng từ: <b style="color: #0f172a; background: #ffedd5; padding: 2px 8px; border-radius: 4px;">fast</b></span>
+                            <div style="display: flex; align-items: center; gap: 16px;">
+                                <svg width="24" height="24" fill="#cbd5e1" viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+                                <span style="font-size: 1.2rem; font-weight: 800; color: #b91c1c; background: #fef2f2; padding: 4px 16px; border-radius: 8px; border: 1px solid #fecaca;">well</span>
                             </div>
-                            <div style="font-size: 0.95em; color: #ea580c; margin-left: 72px;"><i>(Tuyệt đối KHÔNG CÓ từ "fastly")</i></div>
-                        </li>
-                        <li style="margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px dashed #fed7aa;">
-                            <div style="display: flex; align-items: center; margin-bottom: 4px;">
-                                <span style="font-weight: 600; width: 60px;">hard</span> 
-                                <span style="color: #64748b; margin-right: 12px;">(Khó/Chăm chỉ)</span>
-                                <span style="color: #f97316;">&rarr;</span>
-                                <span style="margin-left: 12px;">Trạng từ: <b style="color: #0f172a; background: #ffedd5; padding: 2px 8px; border-radius: 4px;">hard</b></span>
+                        </div>
+
+                        <!-- fast -> fast -->
+                        <div style="background: white; padding: 16px; border-radius: 8px; border-left: 4px solid #ef4444; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+                            <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; margin-bottom: 8px;">
+                                <div style="display: flex; align-items: center; gap: 12px;">
+                                    <span style="font-size: 1.2rem; font-weight: 700; color: #334155; width: 60px;">fast</span>
+                                    <span style="color: #94a3b8; font-style: italic;">(Nhanh)</span>
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 16px;">
+                                    <svg width="24" height="24" fill="#cbd5e1" viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+                                    <span style="font-size: 1.2rem; font-weight: 800; color: #b91c1c; background: #fef2f2; padding: 4px 16px; border-radius: 8px; border: 1px solid #fecaca;">fast</span>
+                                </div>
                             </div>
-                            <div style="font-size: 0.95em; color: #ea580c; margin-left: 72px;"><i>(Lưu ý: "hardly" là trạng từ tần suất mang nghĩa "hầu như không")</i></div>
-                        </li>
-                        <li>
-                            <div style="display: flex; align-items: center; margin-bottom: 4px;">
-                                <span style="font-weight: 600; width: 60px;">late</span> 
-                                <span style="color: #64748b; margin-right: 12px;">(Muộn)</span>
-                                <span style="color: #f97316;">&rarr;</span>
-                                <span style="margin-left: 12px;">Trạng từ: <b style="color: #0f172a; background: #ffedd5; padding: 2px 8px; border-radius: 4px;">late</b></span>
+                            <div style="background: #fff7ed; color: #c2410c; padding: 8px 12px; border-radius: 6px; font-size: 0.95rem; font-weight: 600; display: flex; align-items: center; gap: 6px;">
+                                <span>⚠️</span> Tuyệt đối KHÔNG có từ "fastly"
                             </div>
-                            <div style="font-size: 0.95em; color: #ea580c; margin-left: 72px;"><i>(Lưu ý: "lately" có nghĩa là "gần đây", tương đương với "recently")</i></div>
-                        </li>
-                    </ul>
+                        </div>
+
+                        <!-- hard -> hard -->
+                        <div style="background: white; padding: 16px; border-radius: 8px; border-left: 4px solid #ef4444; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+                            <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; margin-bottom: 8px;">
+                                <div style="display: flex; align-items: center; gap: 12px;">
+                                    <span style="font-size: 1.2rem; font-weight: 700; color: #334155; width: 60px;">hard</span>
+                                    <span style="color: #94a3b8; font-style: italic;">(Khó/Chăm chỉ)</span>
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 16px;">
+                                    <svg width="24" height="24" fill="#cbd5e1" viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+                                    <span style="font-size: 1.2rem; font-weight: 800; color: #b91c1c; background: #fef2f2; padding: 4px 16px; border-radius: 8px; border: 1px solid #fecaca;">hard</span>
+                                </div>
+                            </div>
+                            <div style="background: #fff7ed; color: #c2410c; padding: 8px 12px; border-radius: 6px; font-size: 0.95rem; font-weight: 500; display: flex; align-items: center; gap: 6px;">
+                                <span>⚠️</span> "hardly" mang nghĩa là "hầu như không" (trạng từ chỉ tần suất)
+                            </div>
+                        </div>
+
+                        <!-- late -> late -->
+                        <div style="background: white; padding: 16px; border-radius: 8px; border-left: 4px solid #ef4444; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+                            <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; margin-bottom: 8px;">
+                                <div style="display: flex; align-items: center; gap: 12px;">
+                                    <span style="font-size: 1.2rem; font-weight: 700; color: #334155; width: 60px;">late</span>
+                                    <span style="color: #94a3b8; font-style: italic;">(Muộn)</span>
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 16px;">
+                                    <svg width="24" height="24" fill="#cbd5e1" viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+                                    <span style="font-size: 1.2rem; font-weight: 800; color: #b91c1c; background: #fef2f2; padding: 4px 16px; border-radius: 8px; border: 1px solid #fecaca;">late</span>
+                                </div>
+                            </div>
+                            <div style="background: #fff7ed; color: #c2410c; padding: 8px 12px; border-radius: 6px; font-size: 0.95rem; font-weight: 500; display: flex; align-items: center; gap: 6px;">
+                                <span>⚠️</span> "lately" mang nghĩa là "dạo gần đây" (= recently)
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         `
