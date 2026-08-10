@@ -4600,45 +4600,89 @@ const adverbsTheoryData = [
     {
         title: "1. ĐỊNH NGHĨA VÀ CHỨC NĂNG",
         content: `
-            <p style="font-size: 1.1rem; line-height: 1.6; color: var(--text-main); margin-bottom: 12px;">
-                <b>Trạng từ (Adverbs)</b> là những từ dùng để bổ nghĩa cho động từ, tính từ, một trạng từ khác, hoặc cho cả câu. Nó thường trả lời cho các câu hỏi <b><i>How? When? Where? How often?</i></b>
+            <p style="font-size: 1.1rem; line-height: 1.6; color: var(--text-main); margin-bottom: 20px;">
+                <b>Trạng từ (Adverbs)</b> là những từ dùng để bổ nghĩa cho <span style="color: var(--primary-color); font-weight: 600;">động từ</span>, <span style="color: var(--primary-color); font-weight: 600;">tính từ</span>, một <span style="color: var(--primary-color); font-weight: 600;">trạng từ khác</span>, hoặc cho <span style="color: var(--primary-color); font-weight: 600;">cả câu</span>. Nó thường trả lời cho các câu hỏi <span style="background: #f1f5f9; padding: 2px 8px; border-radius: 6px; font-weight: 600; color: #334155; border: 1px solid #cbd5e1;">How? When? Where? How often?</span>
             </p>
-            <div style="background: #f8fafc; padding: 16px; border-radius: 8px; border-left: 4px solid var(--primary-color);">
-                <p style="font-size: 1.1rem; font-weight: bold; color: #334155; margin-bottom: 8px;">Các chức năng chính:</p>
-                <ul style="font-size: 1.1rem; color: #334155; margin-left: 20px; line-height: 1.8;">
-                    <li><b>Bổ nghĩa cho động từ thường:</b> Jenny plays basketball <b>very well</b>. <i>(Cô ấy chơi bóng rổ như thế nào? -> Rất giỏi)</i></li>
-                    <li><b>Bổ nghĩa cho tính từ:</b> She is <b>extremely</b> intelligent. <i>(Thông minh đến mức nào? -> Cực kỳ)</i></li>
-                    <li><b>Bổ nghĩa cho cả câu:</b> <b>Recently</b>, I have taken part in an English course. <i>(Vào lúc nào? -> Gần đây)</i></li>
-                </ul>
+            <div style="background: linear-gradient(135deg, #f8fafc, #f1f5f9); padding: 20px; border-radius: 12px; border-left: 5px solid var(--primary-color); box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+                <p style="font-size: 1.15rem; font-weight: bold; color: var(--primary-color); margin-bottom: 16px; display: flex; align-items: center; gap: 8px;">
+                    <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L1 21h22L12 2zm1 14h-2v-2h2v2zm0-4h-2V7h2v5z"/></svg> 
+                    Các chức năng chính:
+                </p>
+                <div style="display: flex; flex-direction: column; gap: 12px;">
+                    <div style="background: white; padding: 12px 16px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; flex-direction: column; gap: 4px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+                        <span style="font-weight: 600; color: #334155;">1. Bổ nghĩa cho động từ thường:</span>
+                        <span style="color: #475569;">Jenny plays basketball <span style="color: var(--primary-color); font-weight: 600; background: #e0e7ff; padding: 2px 6px; border-radius: 4px;">very well</span>. <i style="color: #64748b; font-size: 0.95em;">(Cô ấy chơi bóng rổ như thế nào? &rarr; Rất giỏi)</i></span>
+                    </div>
+                    <div style="background: white; padding: 12px 16px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; flex-direction: column; gap: 4px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+                        <span style="font-weight: 600; color: #334155;">2. Bổ nghĩa cho tính từ:</span>
+                        <span style="color: #475569;">She is <span style="color: var(--primary-color); font-weight: 600; background: #e0e7ff; padding: 2px 6px; border-radius: 4px;">extremely</span> intelligent. <i style="color: #64748b; font-size: 0.95em;">(Thông minh đến mức nào? &rarr; Cực kỳ)</i></span>
+                    </div>
+                    <div style="background: white; padding: 12px 16px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; flex-direction: column; gap: 4px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+                        <span style="font-weight: 600; color: #334155;">3. Bổ nghĩa cho cả câu:</span>
+                        <span style="color: #475569;"><span style="color: var(--primary-color); font-weight: 600; background: #e0e7ff; padding: 2px 6px; border-radius: 4px;">Recently</span>, I have taken part in an English course. <i style="color: #64748b; font-size: 0.95em;">(Vào lúc nào? &rarr; Gần đây)</i></span>
+                    </div>
+                </div>
             </div>
         `
     },
     {
         title: "2. PHÂN LOẠI TRẠNG TỪ THƯỜNG GẶP",
         content: `
-            <div style="font-size: 1.1rem; line-height: 1.8; color: var(--text-main);">
-                <ul style="list-style-type: disc; margin-left: 20px; color: #334155;">
-                    <li style="margin-bottom: 12px;"><b>Trạng từ chỉ Thời gian (Time):</b> 
-                        <span style="color: #475569;">Cho biết hành động xảy ra khi nào.</span><br>
-                        <i style="color: #64748b;">Ví dụ: <b>recently</b> (gần đây), <b>lately</b>, <b>eventually</b> (cuối cùng thì), <b>soon</b>, <b>now</b>, <b>yesterday</b>...</i>
-                    </li>
-                    <li style="margin-bottom: 12px;"><b>Trạng từ chỉ Nơi chốn (Place):</b> 
-                        <span style="color: #475569;">Cho biết hành động xảy ra ở đâu.</span><br>
-                        <i style="color: #64748b;">Ví dụ: <b>here</b>, <b>there</b>, <b>everywhere</b>, <b>outside</b>, <b>inside</b>, <b>locally</b>...</i>
-                    </li>
-                    <li style="margin-bottom: 12px;"><b>Trạng từ chỉ Cách thức (Manner):</b> 
-                        <span style="color: #475569;">Cho biết hành động diễn ra như thế nào.</span><br>
-                        <i style="color: #64748b;">Ví dụ: <b>fluently</b> (trôi chảy), <b>carefully</b> (cẩn thận), <b>reluctantly</b> (miễn cưỡng), <b>quickly</b>...</i>
-                    </li>
-                    <li style="margin-bottom: 12px;"><b>Trạng từ chỉ Tần suất (Frequency):</b> 
-                        <span style="color: #475569;">Cho biết mức độ thường xuyên.</span><br>
-                        <i style="color: #64748b;">Ví dụ: <b>always</b>, <b>usually</b>, <b>occasionally</b> (thỉnh thoảng), <b>rarely</b> (hiếm khi), <b>never</b>...</i>
-                    </li>
-                    <li style="margin-bottom: 12px;"><b>Trạng từ chỉ Mức độ (Degree):</b> 
-                        <span style="color: #475569;">Cho biết cường độ của tính từ/trạng từ khác.</span><br>
-                        <i style="color: #64748b;">Ví dụ: <b>extremely</b> (cực kỳ), <b>completely</b> (hoàn toàn), <b>quite</b> (khá), <b>slightly</b> (hơi hơi)...</i>
-                    </li>
-                </ul>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; margin-top: 16px;">
+                <div style="background: #fdf4ff; border: 1px solid #fae8ff; padding: 16px; border-radius: 12px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+                    <h4 style="color: #a21caf; font-size: 1.15rem; margin-bottom: 8px; display: flex; align-items: center; gap: 6px;">⏱️ Thời gian (Time)</h4>
+                    <p style="color: #701a75; font-size: 0.95rem; margin-bottom: 12px;">Cho biết hành động xảy ra khi nào.</p>
+                    <div style="display: flex; flex-wrap: wrap; gap: 6px;">
+                        <span style="background: white; color: #86198f; padding: 4px 10px; border-radius: 20px; font-size: 0.9rem; font-weight: 500; border: 1px solid #f5d0fe; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">recently</span>
+                        <span style="background: white; color: #86198f; padding: 4px 10px; border-radius: 20px; font-size: 0.9rem; font-weight: 500; border: 1px solid #f5d0fe; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">lately</span>
+                        <span style="background: white; color: #86198f; padding: 4px 10px; border-radius: 20px; font-size: 0.9rem; font-weight: 500; border: 1px solid #f5d0fe; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">soon</span>
+                        <span style="background: white; color: #86198f; padding: 4px 10px; border-radius: 20px; font-size: 0.9rem; font-weight: 500; border: 1px solid #f5d0fe; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">yesterday</span>
+                    </div>
+                </div>
+
+                <div style="background: #f0fdf4; border: 1px solid #dcfce7; padding: 16px; border-radius: 12px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+                    <h4 style="color: #15803d; font-size: 1.15rem; margin-bottom: 8px; display: flex; align-items: center; gap: 6px;">📍 Nơi chốn (Place)</h4>
+                    <p style="color: #14532d; font-size: 0.95rem; margin-bottom: 12px;">Cho biết hành động xảy ra ở đâu.</p>
+                    <div style="display: flex; flex-wrap: wrap; gap: 6px;">
+                        <span style="background: white; color: #166534; padding: 4px 10px; border-radius: 20px; font-size: 0.9rem; font-weight: 500; border: 1px solid #bbf7d0; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">here</span>
+                        <span style="background: white; color: #166534; padding: 4px 10px; border-radius: 20px; font-size: 0.9rem; font-weight: 500; border: 1px solid #bbf7d0; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">there</span>
+                        <span style="background: white; color: #166534; padding: 4px 10px; border-radius: 20px; font-size: 0.9rem; font-weight: 500; border: 1px solid #bbf7d0; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">everywhere</span>
+                        <span style="background: white; color: #166534; padding: 4px 10px; border-radius: 20px; font-size: 0.9rem; font-weight: 500; border: 1px solid #bbf7d0; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">outside</span>
+                    </div>
+                </div>
+
+                <div style="background: #eff6ff; border: 1px solid #dbeafe; padding: 16px; border-radius: 12px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+                    <h4 style="color: #1d4ed8; font-size: 1.15rem; margin-bottom: 8px; display: flex; align-items: center; gap: 6px;">🎭 Cách thức (Manner)</h4>
+                    <p style="color: #1e3a8a; font-size: 0.95rem; margin-bottom: 12px;">Cho biết hành động diễn ra như thế nào.</p>
+                    <div style="display: flex; flex-wrap: wrap; gap: 6px;">
+                        <span style="background: white; color: #1e40af; padding: 4px 10px; border-radius: 20px; font-size: 0.9rem; font-weight: 500; border: 1px solid #bfdbfe; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">fluently</span>
+                        <span style="background: white; color: #1e40af; padding: 4px 10px; border-radius: 20px; font-size: 0.9rem; font-weight: 500; border: 1px solid #bfdbfe; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">carefully</span>
+                        <span style="background: white; color: #1e40af; padding: 4px 10px; border-radius: 20px; font-size: 0.9rem; font-weight: 500; border: 1px solid #bfdbfe; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">reluctantly</span>
+                        <span style="background: white; color: #1e40af; padding: 4px 10px; border-radius: 20px; font-size: 0.9rem; font-weight: 500; border: 1px solid #bfdbfe; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">quickly</span>
+                    </div>
+                </div>
+
+                <div style="background: #fffbeb; border: 1px solid #fef3c7; padding: 16px; border-radius: 12px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+                    <h4 style="color: #b45309; font-size: 1.15rem; margin-bottom: 8px; display: flex; align-items: center; gap: 6px;">🔄 Tần suất (Frequency)</h4>
+                    <p style="color: #78350f; font-size: 0.95rem; margin-bottom: 12px;">Cho biết mức độ thường xuyên.</p>
+                    <div style="display: flex; flex-wrap: wrap; gap: 6px;">
+                        <span style="background: white; color: #92400e; padding: 4px 10px; border-radius: 20px; font-size: 0.9rem; font-weight: 500; border: 1px solid #fde68a; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">always</span>
+                        <span style="background: white; color: #92400e; padding: 4px 10px; border-radius: 20px; font-size: 0.9rem; font-weight: 500; border: 1px solid #fde68a; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">usually</span>
+                        <span style="background: white; color: #92400e; padding: 4px 10px; border-radius: 20px; font-size: 0.9rem; font-weight: 500; border: 1px solid #fde68a; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">occasionally</span>
+                        <span style="background: white; color: #92400e; padding: 4px 10px; border-radius: 20px; font-size: 0.9rem; font-weight: 500; border: 1px solid #fde68a; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">rarely</span>
+                    </div>
+                </div>
+
+                <div style="background: #fef2f2; border: 1px solid #fee2e2; padding: 16px; border-radius: 12px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+                    <h4 style="color: #b91c1c; font-size: 1.15rem; margin-bottom: 8px; display: flex; align-items: center; gap: 6px;">📈 Mức độ (Degree)</h4>
+                    <p style="color: #7f1d1d; font-size: 0.95rem; margin-bottom: 12px;">Cho biết cường độ của tính/trạng từ khác.</p>
+                    <div style="display: flex; flex-wrap: wrap; gap: 6px;">
+                        <span style="background: white; color: #991b1b; padding: 4px 10px; border-radius: 20px; font-size: 0.9rem; font-weight: 500; border: 1px solid #fecaca; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">extremely</span>
+                        <span style="background: white; color: #991b1b; padding: 4px 10px; border-radius: 20px; font-size: 0.9rem; font-weight: 500; border: 1px solid #fecaca; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">completely</span>
+                        <span style="background: white; color: #991b1b; padding: 4px 10px; border-radius: 20px; font-size: 0.9rem; font-weight: 500; border: 1px solid #fecaca; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">quite</span>
+                        <span style="background: white; color: #991b1b; padding: 4px 10px; border-radius: 20px; font-size: 0.9rem; font-weight: 500; border: 1px solid #fecaca; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">slightly</span>
+                    </div>
+                </div>
             </div>
         `
     },
