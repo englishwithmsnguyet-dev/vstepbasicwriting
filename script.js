@@ -5565,6 +5565,7 @@ window.renderAdjectivesDetail = function(activeTab = 'theory') {
     window.currentTab = activeTab;
     if (!window.adverbsAnswersExtra1) window.adverbsAnswersExtra1 = new Array(adverbsPracticeExtra1.length).fill('');
     if (!window.adverbsAnswersExtra2) window.adverbsAnswersExtra2 = new Array(adverbsPracticeExtra2.length).fill('');
+    if (!window.adverbsAnswersExtra3) window.adverbsAnswersExtra3 = new Array(adverbsPracticeExtra3.length).fill('');
 
     if (!window.adjectivesAnswersBook1) window.adjectivesAnswersBook1 = new Array(adjectivesPracticeBook1.length).fill('');
     if (!window.adjectivesAnswersBook2) window.adjectivesAnswersBook2 = new Array(adjectivesPracticeBook2.length).fill('');
@@ -6373,6 +6374,10 @@ const adverbsPracticeExtra2 = [
     {
         q: "Thật may mắn, không ai bị thương trong vụ tai nạn.",
         a: ["Fortunately, nobody was hurt in the accident.", "Luckily, nobody was hurt in the accident.", "Fortunately, no one was hurt in the accident.", "Luckily, no one was hurt in the accident."]
+    },
+    {
+        q: "Họ đã hoàn thành bài kiểm tra một cách dễ dàng.",
+        a: ["They finished the test easily.", "They completed the test easily.", "They finished the exam easily.", "They completed the exam easily."]
     }
 ];
 
@@ -6544,6 +6549,40 @@ window.submitAdverbsBook4 = function() {
 };
 
 
+
+const adverbsPracticeExtra3 = [
+    {
+        q: "Mary dances very <u style='color:inherit;'>beautiful</u>, so she won the <u style='color:inherit;'>first</u> prize <u style='color:inherit;'>in</u> the <u style='color:inherit;'>competition</u>.",
+        options: ["beautiful", "first", "in", "competition"],
+        a: "beautiful",
+        exp: "<b>beautiful</b> sai vì 'dances' là động từ thường nên phải dùng trạng từ <b>beautifully</b>."
+    },
+    {
+        q: "The <u style='color:inherit;'>new</u> employee works very <u style='color:inherit;'>hardly</u> <u style='color:inherit;'>to impress</u> his <u style='color:inherit;'>manager</u>.",
+        options: ["new", "hardly", "to impress", "manager"],
+        a: "hardly",
+        exp: "<b>hardly</b> sai vì nó mang nghĩa 'hầu như không'. Phải dùng trạng từ <b>hard</b> (chăm chỉ)."
+    },
+    {
+        q: "He plays the <u style='color:inherit;'>guitar</u> very <u style='color:inherit;'>good</u>, <u style='color:inherit;'>which</u> makes everyone <u style='color:inherit;'>admire</u> him.",
+        options: ["guitar", "good", "which", "admire"],
+        a: "good",
+        exp: "<b>good</b> sai vì nó là tính từ. Trạng từ của good là <b>well</b>."
+    },
+    {
+        q: "The dog <u style='color:inherit;'>barked</u> <u style='color:inherit;'>loud</u> when <u style='color:inherit;'>it</u> saw a <u style='color:inherit;'>stranger</u>.",
+        options: ["barked", "loud", "it", "stranger"],
+        a: "loud",
+        exp: "<b>loud</b> sai vì 'barked' là động từ thường. Phải dùng trạng từ <b>loudly</b>."
+    },
+    {
+        q: "She <u style='color:inherit;'>is</u> a <u style='color:inherit;'>carefully</u> driver <u style='color:inherit;'>who</u> never causes <u style='color:inherit;'>accidents</u>.",
+        options: ["is", "carefully", "who", "accidents"],
+        a: "carefully",
+        exp: "<b>carefully</b> sai vì 'driver' là danh từ, cần tính từ đứng trước để bổ nghĩa. Sửa thành <b>careful</b>."
+    }
+];
+
 window.checkAdverbsExtra1 = function(qIdx, optIdx, selectedOpt) {
     window.adverbsAnswersExtra1[qIdx] = selectedOpt;
     const buttons = document.querySelectorAll('.adv-extra1-btn-' + qIdx);
@@ -6663,6 +6702,59 @@ window.submitAdverbsExtra2 = function() {
     }
 }
 
+
+window.checkAdverbsExtra3 = function(qIdx, optIdx, selectedOpt) {
+    window.adverbsAnswersExtra3[qIdx] = selectedOpt;
+    const buttons = document.querySelectorAll('.adv-extra3-btn-' + qIdx);
+    buttons.forEach(btn => {
+        btn.classList.remove('selected');
+        btn.style.background = 'white';
+        btn.style.color = 'var(--text-main)';
+        btn.style.borderColor = 'var(--border-color)';
+    });
+    
+    const selectedBtn = document.getElementById(`adv_extra3_btn_${qIdx}_${optIdx}`);
+    if (selectedBtn) {
+        selectedBtn.classList.add('selected');
+        selectedBtn.style.background = 'var(--primary-color)';
+        selectedBtn.style.color = 'white';
+        selectedBtn.style.borderColor = 'var(--primary-color)';
+    }
+}
+
+window.submitAdverbsExtra3 = function() {
+    let score = 0;
+    adverbsPracticeExtra3.forEach((q, idx) => {
+        const expDiv = document.getElementById('advexp_extra3_' + idx);
+        const userAnswer = window.adverbsAnswersExtra3[idx];
+        
+        if (!userAnswer) {
+            expDiv.innerHTML = `<span style="color: #ea580c;">⚠️ Bạn chưa chọn đáp án cho câu này.</span>`;
+            expDiv.style.display = 'block';
+            expDiv.style.background = '#fff7ed';
+            expDiv.style.border = '1px solid #fdba74';
+            return;
+        }
+
+        if (userAnswer === q.a) {
+            score++;
+            expDiv.innerHTML = `<span style="color: #16a34a;">✅ Chính xác! ${q.exp}</span>`;
+            expDiv.style.background = '#f0fdf4';
+            expDiv.style.border = '1px solid #bbf7d0';
+        } else {
+            expDiv.innerHTML = `<span style="color: #dc2626;">❌ Sai rồi. Đáp án đúng là <b>${q.a}</b>. ${q.exp}</span>`;
+            expDiv.style.background = '#fef2f2';
+            expDiv.style.border = '1px solid #fecaca';
+        }
+        expDiv.style.display = 'block';
+    });
+    window.saveProgress();
+    
+    if (score === adverbsPracticeExtra3.length) {
+        window.showCelebration('Kỹ năng phát hiện lỗi sai của bạn cực kỳ sắc bén! 🕵️‍♀️');
+    }
+}
+
 window.renderAdverbsDetail = function(activeTab = 'theory') {
     const contentWrapper = document.getElementById('content-wrapper');
     if (!contentWrapper) return;
@@ -6671,6 +6763,7 @@ window.renderAdverbsDetail = function(activeTab = 'theory') {
     window.currentTab = activeTab;
     if (!window.adverbsAnswersExtra1) window.adverbsAnswersExtra1 = new Array(adverbsPracticeExtra1.length).fill('');
     if (!window.adverbsAnswersExtra2) window.adverbsAnswersExtra2 = new Array(adverbsPracticeExtra2.length).fill('');
+    if (!window.adverbsAnswersExtra3) window.adverbsAnswersExtra3 = new Array(adverbsPracticeExtra3.length).fill('');
 
     if (!window.adverbsAnswersBook1) window.adverbsAnswersBook1 = new Array(adverbsPracticeBook1.length).fill('');
     if (!window.adverbsAnswersBook2) window.adverbsAnswersBook2 = new Array(adverbsPracticeBook2.length).fill('');
@@ -6855,6 +6948,32 @@ window.renderAdverbsDetail = function(activeTab = 'theory') {
                 </div>
             </div>
         `).join('');
+
+
+        const extra3Html = adverbsPracticeExtra3.map((q, idx) => {
+            const optionsHtml = q.options.map((opt, optIdx) => {
+                const isSelected = window.adverbsAnswersExtra3[idx] === opt;
+                let btnStyle = "padding: 10px 20px; background: white; border: 2px solid var(--border-color); border-radius: 8px; cursor: pointer; font-size: 1.1rem; transition: all 0.2s;";
+                if (isSelected) {
+                    btnStyle = "padding: 10px 20px; background: var(--primary-color); color: white; border: 2px solid var(--primary-color); border-radius: 8px; cursor: pointer; font-size: 1.1rem; transition: all 0.2s;";
+                }
+                return `
+                    <button id="adv_extra3_btn_${idx}_${optIdx}" class="adv-extra3-btn-${idx} ${isSelected ? 'selected' : ''}" onclick="window.checkAdverbsExtra3(${idx}, ${optIdx}, '${opt.replace(/'/g, "\'")}')" style="${btnStyle}" onmouseover="if(!this.classList.contains('selected')){this.style.borderColor='var(--primary-color)'; this.style.color='var(--primary-color)';}" onmouseout="if(!this.classList.contains('selected')){this.style.borderColor='var(--border-color)'; this.style.color='var(--text-main)';}">
+                        ${opt}
+                    </button>
+                `;
+            }).join('');
+            
+            return `
+            <div class="quiz-item" style="background: white; border-radius: 12px; padding: 20px; margin-bottom: 16px; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color);">
+                <p style="font-size: 1.15rem; font-weight: 500; color: var(--text-main); margin-bottom: 16px; line-height: 1.6;"><b>${idx + 1}.</b> ${q.q}</p>
+                <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 12px;">
+                    ${optionsHtml}
+                </div>
+                <div id="advexp_extra3_${idx}" style="display: none; padding: 12px; border-radius: 8px; font-size: 1.05rem; margin-top: 8px; line-height: 1.6;"></div>
+            </div>
+            `;
+        }).join('');
 
         contentHtml = `
             <div style="margin-top: 24px;">
