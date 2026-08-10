@@ -4791,7 +4791,7 @@ const adverbsPracticeBook2 = [
     }
 ];
 
-const adverbsPracticeExtra1 = [
+const adverbsPracticeBook3 = [
     {
         q: "Anh ấy là một người chăm chỉ, vì vậy anh ấy làm việc rất chăm chỉ mỗi ngày.",
         a: ["He is a hard-working person, so he works very hard every day.", "He is a hard-working person, therefore he works very hard every day."]
@@ -4814,7 +4814,7 @@ const adverbsPracticeExtra1 = [
     }
 ];
 
-const adverbsPracticeExtra2 = [
+const adverbsPracticeBook4 = [
     {
         q: "Chúng ta nên đọc sách ở những nơi yên tĩnh để tập trung tốt hơn.",
         a: ["We should read books in quiet places to concentrate better.", "We should read books in quiet places to focus better."]
@@ -6368,9 +6368,9 @@ window.checkAdverbsBook2 = function(idx, optIdx, optionStr) {
     }
 };
 
-window.checkAdverbsExtra1 = function(idx) {
-    const inputId = `adv_extra1_${idx}`;
-    const expId = `advexp_extra1_${idx}`;
+window.checkAdverbsBook3 = function(idx) {
+    const inputId = `adv_book3_${idx}`;
+    const expId = `advexp_book3_${idx}`;
     const inputEl = document.getElementById(inputId);
     const expEl = document.getElementById(expId);
     
@@ -6385,7 +6385,7 @@ window.checkAdverbsExtra1 = function(idx) {
         return;
     }
     
-    const correctAnswers = adverbsPracticeExtra1[idx].a;
+    const correctAnswers = adverbsPracticeBook3[idx].a;
     const isCorrect = correctAnswers.some(ans => window.normalizeText(val) === window.normalizeText(ans));
     
     expEl.style.display = 'block';
@@ -6401,17 +6401,17 @@ window.checkAdverbsExtra1 = function(idx) {
         inputEl.style.borderColor = '#ef4444';
     }
     
-    window.adverbsAnswersExtra1[idx] = val;
+    window.adverbsAnswersBook3[idx] = val;
     window.saveProgress();
 };
 
-window.submitAdverbsExtra1 = function() {
-    adverbsPracticeExtra1.forEach((_, i) => window.checkAdverbsExtra1(i));
+window.submitAdverbsBook3 = function() {
+    adverbsPracticeBook3.forEach((_, i) => window.checkAdverbsBook3(i));
 };
 
-window.checkAdverbsExtra2 = function(idx) {
-    const inputId = `adv_extra2_${idx}`;
-    const expId = `advexp_extra2_${idx}`;
+window.checkAdverbsBook4 = function(idx) {
+    const inputId = `adv_book4_${idx}`;
+    const expId = `advexp_book4_${idx}`;
     const inputEl = document.getElementById(inputId);
     const expEl = document.getElementById(expId);
     
@@ -6426,7 +6426,7 @@ window.checkAdverbsExtra2 = function(idx) {
         return;
     }
     
-    const correctAnswers = adverbsPracticeExtra2[idx].a;
+    const correctAnswers = adverbsPracticeBook4[idx].a;
     const isCorrect = correctAnswers.some(ans => window.normalizeText(val) === window.normalizeText(ans));
     
     expEl.style.display = 'block';
@@ -6442,12 +6442,12 @@ window.checkAdverbsExtra2 = function(idx) {
         inputEl.style.borderColor = '#ef4444';
     }
     
-    window.adverbsAnswersExtra2[idx] = val;
+    window.adverbsAnswersBook4[idx] = val;
     window.saveProgress();
 };
 
-window.submitAdverbsExtra2 = function() {
-    adverbsPracticeExtra2.forEach((_, i) => window.checkAdverbsExtra2(i));
+window.submitAdverbsBook4 = function() {
+    adverbsPracticeBook4.forEach((_, i) => window.checkAdverbsBook4(i));
 };
 
 window.renderAdverbsDetail = function(activeTab = 'theory') {
@@ -6459,8 +6459,8 @@ window.renderAdverbsDetail = function(activeTab = 'theory') {
 
     if (!window.adverbsAnswersBook1) window.adverbsAnswersBook1 = new Array(adverbsPracticeBook1.length).fill('');
     if (!window.adverbsAnswersBook2) window.adverbsAnswersBook2 = new Array(adverbsPracticeBook2.length).fill('');
-    if (!window.adverbsAnswersExtra1) window.adverbsAnswersExtra1 = new Array(adverbsPracticeExtra1.length).fill('');
-    if (!window.adverbsAnswersExtra2) window.adverbsAnswersExtra2 = new Array(adverbsPracticeExtra2.length).fill('');
+    if (!window.adverbsAnswersBook3) window.adverbsAnswersBook3 = new Array(adverbsPracticeBook3.length).fill('');
+    if (!window.adverbsAnswersBook4) window.adverbsAnswersBook4 = new Array(adverbsPracticeBook4.length).fill('');
 
     const tabsHtml = `
         <div class="tabs-container">
@@ -6528,10 +6528,44 @@ window.renderAdverbsDetail = function(activeTab = 'theory') {
             `;
         }).join('');
 
+        const book3Html = adverbsPracticeBook3.map((q, idx) => `
+            <div class="quiz-item" style="background: white; border-radius: 12px; padding: 20px; margin-bottom: 16px; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color);">
+                <p style="font-size: 1.15rem; font-weight: 500; color: var(--text-main); margin-bottom: 16px;"><b>${idx + 1}.</b> ${q.q}</p>
+                <div style="display: flex; flex-direction: column; gap: 12px;">
+                    <input type="text" id="adv_book3_${idx}" 
+                           value="${(window.adverbsAnswersBook3[idx] || '').replace(/"/g, '&quot;')}"
+                           placeholder="Nhập bản dịch tiếng Anh..." 
+                           style="width: 100%; padding: 12px 16px; font-size: 1.1rem; border: 2px solid var(--border-color); border-radius: 8px; outline: none; transition: border-color 0.2s;"
+                           onfocus="this.style.borderColor='var(--primary-color)'"
+                           onblur="this.style.borderColor='var(--border-color)'"
+                           onkeypress="if(event.key === 'Enter') window.checkAdverbsBook3(${idx})">
+                    <button onclick="window.checkAdverbsBook3(${idx})" style="padding: 8px 16px; background: white; color: var(--primary-color); border: 2px solid var(--primary-color); border-radius: 20px; font-weight: bold; cursor: pointer; transition: all 0.2s; align-self: flex-start;" onmouseover="this.style.background='var(--primary-color)'; this.style.color='white'" onmouseout="this.style.background='white'; this.style.color='var(--primary-color)'">Kiểm tra</button>
+                    <div id="advexp_book3_${idx}" style="display: none; padding: 12px; border-radius: 8px; font-size: 1.05rem; margin-top: 8px;"></div>
+                </div>
+            </div>
+        `).join('');
+
+        const book4Html = adverbsPracticeBook4.map((q, idx) => `
+            <div class="quiz-item" style="background: white; border-radius: 12px; padding: 20px; margin-bottom: 16px; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color);">
+                <p style="font-size: 1.15rem; font-weight: 500; color: var(--text-main); margin-bottom: 16px;"><b>${idx + 1}.</b> ${q.q}</p>
+                <div style="display: flex; flex-direction: column; gap: 12px;">
+                    <input type="text" id="adv_book4_${idx}" 
+                           value="${(window.adverbsAnswersBook4[idx] || '').replace(/"/g, '&quot;')}"
+                           placeholder="Nhập bản dịch tiếng Anh..." 
+                           style="width: 100%; padding: 12px 16px; font-size: 1.1rem; border: 2px solid var(--border-color); border-radius: 8px; outline: none; transition: border-color 0.2s;"
+                           onfocus="this.style.borderColor='var(--primary-color)'"
+                           onblur="this.style.borderColor='var(--border-color)'"
+                           onkeypress="if(event.key === 'Enter') window.checkAdverbsBook4(${idx})">
+                    <button onclick="window.checkAdverbsBook4(${idx})" style="padding: 8px 16px; background: white; color: var(--primary-color); border: 2px solid var(--primary-color); border-radius: 20px; font-weight: bold; cursor: pointer; transition: all 0.2s; align-self: flex-start;" onmouseover="this.style.background='var(--primary-color)'; this.style.color='white'" onmouseout="this.style.background='white'; this.style.color='var(--primary-color)'">Kiểm tra</button>
+                    <div id="advexp_book4_${idx}" style="display: none; padding: 12px; border-radius: 8px; font-size: 1.05rem; margin-top: 8px;"></div>
+                </div>
+            </div>
+        `).join('');
+
         contentHtml = `
             <div style="margin-top: 24px;">
                 <div style="margin-bottom: 40px;">
-                    <h2 style="color: var(--primary-color); font-size: 1.4rem; margin-bottom: 16px;">BÀI TẬP 1 (DỊCH CÂU)</h2>
+                    <h2 style="color: var(--primary-color); font-size: 1.4rem; margin-bottom: 16px;">BÀI TẬP ÁP DỤNG 1 (DỊCH CÂU)</h2>
                     <p style="font-size: 1.05rem; color: #475569; margin-bottom: 24px;"><i>Chuyển các câu sau đây sang tiếng Anh.</i></p>
                     <div>${book1Html}</div>
                     <div style="margin-top: 24px; text-align: center;">
@@ -6540,66 +6574,35 @@ window.renderAdverbsDetail = function(activeTab = 'theory') {
                 </div>
 
                 <div style="margin-bottom: 40px;">
-                    <h2 style="color: var(--primary-color); font-size: 1.4rem; margin-bottom: 16px;">BÀI TẬP 2 (CHỌN TRẠNG TỪ)</h2>
+                    <h2 style="color: var(--primary-color); font-size: 1.4rem; margin-bottom: 16px;">BÀI TẬP ÁP DỤNG 2 (CHỌN TRẠNG TỪ)</h2>
                     <p style="font-size: 1.05rem; color: #475569; margin-bottom: 24px;"><i>Chọn một trạng từ phù hợp trong ngoặc để hoàn thành mỗi câu sau.</i></p>
                     <div>${book2Html}</div>
+                </div>
+
+                <div style="margin-bottom: 40px;">
+                    <h2 style="color: var(--primary-color); font-size: 1.4rem; margin-bottom: 16px;">LUYỆN TẬP CHUNG - EXERCISE 1</h2>
+                    <p style="font-size: 1.05rem; color: #475569; margin-bottom: 24px;"><i>Chuyển các câu sau đây sang tiếng Anh. Chú ý phân biệt cách dùng "tính từ" và "trạng từ".</i></p>
+                    <div>${book3Html}</div>
+                    <div style="margin-top: 24px; text-align: center;">
+                        <button onclick="window.submitAdverbsBook3()" style="padding: 12px 32px; background: var(--primary-color); color: white; border: none; border-radius: 30px; font-weight: bold; font-size: 1.1rem; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.1)'">Kiểm tra Exercise 1</button>
+                    </div>
+                </div>
+
+                <div style="margin-bottom: 40px;">
+                    <h2 style="color: var(--primary-color); font-size: 1.4rem; margin-bottom: 16px;">LUYỆN TẬP CHUNG - EXERCISE 2</h2>
+                    <p style="font-size: 1.05rem; color: #475569; margin-bottom: 24px;"><i>Áp dụng các kiến thức đã học, chuyển các câu sau đây sang Tiếng Anh.</i></p>
+                    <div>${book4Html}</div>
+                    <div style="margin-top: 24px; text-align: center;">
+                        <button onclick="window.submitAdverbsBook4()" style="padding: 12px 32px; background: var(--primary-color); color: white; border: none; border-radius: 30px; font-weight: bold; font-size: 1.1rem; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.1)'">Kiểm tra Exercise 2</button>
+                    </div>
                 </div>
             </div>
         `;
     } else if (activeTab === 'practice_extra') {
-        const extra1Html = adverbsPracticeExtra1.map((q, idx) => `
-            <div class="quiz-item" style="background: white; border-radius: 12px; padding: 20px; margin-bottom: 16px; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color);">
-                <p style="font-size: 1.15rem; font-weight: 500; color: var(--text-main); margin-bottom: 16px;"><b>${idx + 1}.</b> ${q.q}</p>
-                <div style="display: flex; flex-direction: column; gap: 12px;">
-                    <input type="text" id="adv_extra1_${idx}" 
-                           value="${(window.adverbsAnswersExtra1[idx] || '').replace(/"/g, '&quot;')}"
-                           placeholder="Nhập bản dịch tiếng Anh..." 
-                           style="width: 100%; padding: 12px 16px; font-size: 1.1rem; border: 2px solid var(--border-color); border-radius: 8px; outline: none; transition: border-color 0.2s;"
-                           onfocus="this.style.borderColor='var(--primary-color)'"
-                           onblur="this.style.borderColor='var(--border-color)'"
-                           onkeypress="if(event.key === 'Enter') window.checkAdverbsExtra1(${idx})">
-                    <button onclick="window.checkAdverbsExtra1(${idx})" style="padding: 8px 16px; background: white; color: var(--primary-color); border: 2px solid var(--primary-color); border-radius: 20px; font-weight: bold; cursor: pointer; transition: all 0.2s; align-self: flex-start;" onmouseover="this.style.background='var(--primary-color)'; this.style.color='white'" onmouseout="this.style.background='white'; this.style.color='var(--primary-color)'">Kiểm tra</button>
-                    <div id="advexp_extra1_${idx}" style="display: none; padding: 12px; border-radius: 8px; font-size: 1.05rem; margin-top: 8px;"></div>
-                </div>
-            </div>
-        `).join('');
-
-        const extra2Html = adverbsPracticeExtra2.map((q, idx) => `
-            <div class="quiz-item" style="background: white; border-radius: 12px; padding: 20px; margin-bottom: 16px; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color);">
-                <p style="font-size: 1.15rem; font-weight: 500; color: var(--text-main); margin-bottom: 16px;"><b>${idx + 1}.</b> ${q.q}</p>
-                <div style="display: flex; flex-direction: column; gap: 12px;">
-                    <input type="text" id="adv_extra2_${idx}" 
-                           value="${(window.adverbsAnswersExtra2[idx] || '').replace(/"/g, '&quot;')}"
-                           placeholder="Nhập bản dịch tiếng Anh..." 
-                           style="width: 100%; padding: 12px 16px; font-size: 1.1rem; border: 2px solid var(--border-color); border-radius: 8px; outline: none; transition: border-color 0.2s;"
-                           onfocus="this.style.borderColor='var(--primary-color)'"
-                           onblur="this.style.borderColor='var(--border-color)'"
-                           onkeypress="if(event.key === 'Enter') window.checkAdverbsExtra2(${idx})">
-                    <button onclick="window.checkAdverbsExtra2(${idx})" style="padding: 8px 16px; background: white; color: var(--primary-color); border: 2px solid var(--primary-color); border-radius: 20px; font-weight: bold; cursor: pointer; transition: all 0.2s; align-self: flex-start;" onmouseover="this.style.background='var(--primary-color)'; this.style.color='white'" onmouseout="this.style.background='white'; this.style.color='var(--primary-color)'">Kiểm tra</button>
-                    <div id="advexp_extra2_${idx}" style="display: none; padding: 12px; border-radius: 8px; font-size: 1.05rem; margin-top: 8px;"></div>
-                </div>
-            </div>
-        `).join('');
-
         contentHtml = `
-            <div style="margin-top: 24px;">
-                <div style="margin-bottom: 40px;">
-                    <h2 style="color: var(--primary-color); font-size: 1.4rem; margin-bottom: 16px;">BÀI TẬP THÊM 1 (PHÂN BIỆT TÍNH TỪ/TRẠNG TỪ)</h2>
-                    <p style="font-size: 1.05rem; color: #475569; margin-bottom: 24px;"><i>Chuyển các câu sau đây sang tiếng Anh. Chú ý phân biệt cách dùng "tính từ" và "trạng từ".</i></p>
-                    <div>${extra1Html}</div>
-                    <div style="margin-top: 24px; text-align: center;">
-                        <button onclick="window.submitAdverbsExtra1()" style="padding: 12px 32px; background: var(--primary-color); color: white; border: none; border-radius: 30px; font-weight: bold; font-size: 1.1rem; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.1)'">Kiểm tra Bài 1</button>
-                    </div>
-                </div>
-
-                <div style="margin-bottom: 40px;">
-                    <h2 style="color: var(--primary-color); font-size: 1.4rem; margin-bottom: 16px;">BÀI TẬP THÊM 2 (TỔNG HỢP)</h2>
-                    <p style="font-size: 1.05rem; color: #475569; margin-bottom: 24px;"><i>Áp dụng các kiến thức đã học, chuyển các câu sau đây sang Tiếng Anh.</i></p>
-                    <div>${extra2Html}</div>
-                    <div style="margin-top: 24px; text-align: center;">
-                        <button onclick="window.submitAdverbsExtra2()" style="padding: 12px 32px; background: var(--primary-color); color: white; border: none; border-radius: 30px; font-weight: bold; font-size: 1.1rem; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.1)'">Kiểm tra Bài 2</button>
-                    </div>
-                </div>
+            <div style="margin-top: 40px; text-align: center; padding: 40px; background: white; border-radius: 12px; border: 2px dashed #cbd5e1;">
+                <p style="font-size: 1.2rem; color: #64748b; margin-bottom: 16px;">Trạng từ là chủ điểm khá dễ, tài liệu chính thức đã bao quát đủ các dạng bài thi.</p>
+                <p style="font-size: 1.1rem; color: #94a3b8;"><i>Hiện tại chưa có bài tập thêm (bài tập tự soạn) cho phần này.</i></p>
             </div>
         `;
     }
