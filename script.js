@@ -1,7 +1,4 @@
-wi
-        nounsPracticeExtra3Data.forEach((q, idx) => {
-            window.checkNounsTranslation('extra3', idx);
-        });ndow.normalizeText = function(text) {
+window.normalizeText = function(text) {
     if (!text) return '';
     // Fix extra spaces before punctuation (e.g. 'word .' -> 'word.')
     let s = text.toString().trim().toLowerCase().replace(/\s+([.,!?;:])/g, '$1').replace(/\s+/g, ' ');
@@ -1525,15 +1522,15 @@ const verbsPractice2Data = [
 const verbsPracticeParaData = {
     segments: [
         { text: "Dear Mary,<br><br>I " },
-        { text: " <strong style="font-weight: 900; color: #0f172a;">(write)</strong> this email to tell you some great news. Last month, I " },
-        { text: " <strong style="font-weight: 900; color: #0f172a;">(apply)</strong> for a new job in London, and yesterday they " },
-        { text: " <strong style="font-weight: 900; color: #0f172a;">(call)</strong> me to offer the position! I " },
-        { text: " <strong style="font-weight: 900; color: #0f172a;">(be)</strong> so happy right now.<br><br>The company " },
-        { text: " <strong style="font-weight: 900; color: #0f172a;">(specialize)</strong> in software development. Next week, I " },
-        { text: " <strong style="font-weight: 900; color: #0f172a;">(travel)</strong> to London to sign the contract. I " },
-        { text: " <strong style="font-weight: 900; color: #0f172a;">(already / start)</strong> packing my bags. My parents " },
-        { text: " <strong style="font-weight: 900; color: #0f172a;">(feel)</strong> very proud of me.<br><br>We haven't seen each other for a long time. I hope we " },
-        { text: " <strong style="font-weight: 900; color: #0f172a;">(meet)</strong> up soon when I arrive in London.<br><br>Best wishes,<br>John" }
+        { text: " <strong style='font-weight: 900; color: #0f172a;'>(write)</strong> this email to tell you some great news. Last month, I " },
+        { text: " <strong style='font-weight: 900; color: #0f172a;'>(apply)</strong> for a new job in London, and yesterday they " },
+        { text: " <strong style='font-weight: 900; color: #0f172a;'>(call)</strong> me to offer the position! I " },
+        { text: " <strong style='font-weight: 900; color: #0f172a;'>(be)</strong> so happy right now.<br><br>The company " },
+        { text: " <strong style='font-weight: 900; color: #0f172a;'>(specialize)</strong> in software development. Next week, I " },
+        { text: " <strong style='font-weight: 900; color: #0f172a;'>(travel)</strong> to London to sign the contract. I " },
+        { text: " <strong style='font-weight: 900; color: #0f172a;'>(already / start)</strong> packing my bags. My parents " },
+        { text: " <strong style='font-weight: 900; color: #0f172a;'>(feel)</strong> very proud of me.<br><br>We haven't seen each other for a long time. I hope we " },
+        { text: " <strong style='font-weight: 900; color: #0f172a;'>(meet)</strong> up soon when I arrive in London.<br><br>Best wishes,<br>John" }
     ],
     answers: ["am writing", "applied", "called", "am", "specializes", "will travel", "have already started", "feel", "will meet"],
     explanations: [
@@ -2145,8 +2142,6 @@ window.saveStudentInfo = function() {
     localStorage.setItem('studentName', name);
     localStorage.setItem('studentClass', className);
     document.getElementById('login-modal').style.display = 'none';
-    const displaySpan = document.getElementById('student-info-display');
-    if (displaySpan) displaySpan.textContent = `👋 Xin chào, ${name} - ${className}`;
 }
 
 // Initial Render
@@ -2159,11 +2154,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const prevClass = localStorage.getItem('studentClass');
         if (prevName) document.getElementById('student-name').value = prevName;
         if (prevClass) document.getElementById('student-class').value = prevClass;
-        
-        if (prevName && prevClass) {
-            const displaySpan = document.getElementById('student-info-display');
-            if (displaySpan) displaySpan.textContent = `👋 Xin chào, ${prevName} - ${prevClass}`;
-        }
         
         modal.style.display = 'flex';
     }
@@ -3196,6 +3186,32 @@ window.renderNounsDetail = function(activeTab = 'theory') {
                         `).join('')}
                     </div>
                 </div>
+
+                <div style="margin-bottom: 40px;">
+                    <h2 style="color: var(--primary-color); font-size: 1.4rem; margin-bottom: 16px;">BÀI TẬP THÊM 3: DỊCH CÂU (CHỨA CỤM DANH TỪ)</h2>
+                    <p style="font-size: 1.1rem; margin-bottom: 24px; color: var(--text-muted);">Dịch các câu sau sang tiếng Anh. Chú ý sử dụng đúng cụm danh từ.</p>
+                    <div style="display: grid; gap: 16px;">
+                        ${nounsPracticeExtra3Data.map((q, idx) => `
+                            <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px;">
+                                <div style="font-size: 1.15rem; color: #1e293b; margin-bottom: 12px; font-weight: 500;">
+                                    <span style="color: var(--primary-color); font-weight: bold; margin-right: 8px;">${idx + 1}.</span>
+                                    ${q.q}
+                                </div>
+                                <input type="text" 
+                                    value="${window.nounsAnswersExtra3[idx] || ''}"
+                                    oninput="window.nounsAnswersExtra3[${idx}] = this.value; window.saveProgress(true); document.getElementById('transexp_extra3_${idx}').style.display = 'none';"
+                                    placeholder="Nhập câu trả lời bằng tiếng Anh (nhớ có dấu chấm ở cuối câu)..."
+                                    style="width: 100%; padding: 12px 16px; border: 2px solid #cbd5e1; border-radius: 8px; font-size: 1.1rem; outline: none; transition: all 0.2s;"
+                                    onfocus="this.style.borderColor='var(--primary-color)'; this.style.boxShadow='0 0 0 3px var(--primary-light)'"
+                                    onblur="this.style.borderColor='#cbd5e1'; this.style.boxShadow='none'">
+                                <div id="transexp_extra3_${idx}" style="display: none; margin-top: 12px; padding: 12px; border-radius: 8px; font-size: 1.05rem;"></div>
+                                <div style="text-align: right; margin-top: 12px;">
+                                    <button onclick="window.checkNounsTranslation('extra3', ${idx})" style="padding: 8px 24px; background: white; color: var(--primary-color); border: 2px solid var(--primary-color); border-radius: 20px; font-weight: bold; cursor: pointer; transition: all 0.2s;" onmouseover="this.style.background='var(--primary-color)'; this.style.color='white'" onmouseout="this.style.background='white'; this.style.color='var(--primary-color)'">Kiểm tra</button>
+                                </div>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
             </div>
         `;
     } else if (activeTab === 'practice_extra') {
@@ -3310,6 +3326,32 @@ window.renderNounsDetail = function(activeTab = 'theory') {
                         `).join('')}
                     </div>
                 </div>
+
+                <div style="margin-bottom: 40px;">
+                    <h2 style="color: var(--primary-color); font-size: 1.4rem; margin-bottom: 16px;">BÀI TẬP THÊM 3: DỊCH CÂU (CHỨA CỤM DANH TỪ)</h2>
+                    <p style="font-size: 1.1rem; margin-bottom: 24px; color: var(--text-muted);">Dịch các câu sau sang tiếng Anh. Chú ý sử dụng đúng cụm danh từ.</p>
+                    <div style="display: grid; gap: 16px;">
+                        ${nounsPracticeExtra3Data.map((q, idx) => `
+                            <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px;">
+                                <div style="font-size: 1.15rem; color: #1e293b; margin-bottom: 12px; font-weight: 500;">
+                                    <span style="color: var(--primary-color); font-weight: bold; margin-right: 8px;">${idx + 1}.</span>
+                                    ${q.q}
+                                </div>
+                                <input type="text" 
+                                    value="${window.nounsAnswersExtra3[idx] || ''}"
+                                    oninput="window.nounsAnswersExtra3[${idx}] = this.value; window.saveProgress(true); document.getElementById('transexp_extra3_${idx}').style.display = 'none';"
+                                    placeholder="Nhập câu trả lời bằng tiếng Anh (nhớ có dấu chấm ở cuối câu)..."
+                                    style="width: 100%; padding: 12px 16px; border: 2px solid #cbd5e1; border-radius: 8px; font-size: 1.1rem; outline: none; transition: all 0.2s;"
+                                    onfocus="this.style.borderColor='var(--primary-color)'; this.style.boxShadow='0 0 0 3px var(--primary-light)'"
+                                    onblur="this.style.borderColor='#cbd5e1'; this.style.boxShadow='none'">
+                                <div id="transexp_extra3_${idx}" style="display: none; margin-top: 12px; padding: 12px; border-radius: 8px; font-size: 1.05rem;"></div>
+                                <div style="text-align: right; margin-top: 12px;">
+                                    <button onclick="window.checkNounsTranslation('extra3', ${idx})" style="padding: 8px 24px; background: white; color: var(--primary-color); border: 2px solid var(--primary-color); border-radius: 20px; font-weight: bold; cursor: pointer; transition: all 0.2s;" onmouseover="this.style.background='var(--primary-color)'; this.style.color='white'" onmouseout="this.style.background='white'; this.style.color='var(--primary-color)'">Kiểm tra</button>
+                                </div>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
             </div>
         `;
     }
@@ -3378,7 +3420,7 @@ window.checkNounsTranslation = function(type, idx) {
         dataArr = nounsPracticeExtra2Data;
         ansArr = window.nounsAnswersExtra2;
         prefix = 'transexp_extra2_';
-    }     } else if (type === 'extra3') {
+    } else if (type === 'extra3') {
         dataArr = nounsPracticeExtra3Data;
         ansArr = window.nounsAnswersExtra3;
         prefix = 'transexp_extra3_';
@@ -7451,29 +7493,3 @@ window.renderAdverbsDetail = function(activeTab = 'theory') {
         });
     }
 };
-                <div style="margin-bottom: 40px;">
-                    <h2 style="color: var(--primary-color); font-size: 1.4rem; margin-bottom: 16px;">BÀI TẬP THÊM 3: DỊCH CÂU (CHỨA CỤM DANH TỪ)</h2>
-                    <p style="font-size: 1.1rem; margin-bottom: 24px; color: var(--text-muted);">Dịch các câu sau sang tiếng Anh. Chú ý sử dụng đúng cụm danh từ.</p>
-                    <div style="display: grid; gap: 16px;">
-                        ${nounsPracticeExtra3Data.map((q, idx) => `
-                            <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px;">
-                                <div style="font-size: 1.15rem; color: #1e293b; margin-bottom: 12px; font-weight: 500;">
-                                    <span style="color: var(--primary-color); font-weight: bold; margin-right: 8px;">${idx + 1}.</span>
-                                    ${q.q}
-                                </div>
-                                <input type="text" 
-                                    value="${window.nounsAnswersExtra3[idx] || ''}"
-                                    oninput="window.nounsAnswersExtra3[${idx}] = this.value; window.saveProgress(true); document.getElementById('transexp_extra3_${idx}').style.display = 'none';"
-                                    placeholder="Nhập câu trả lời bằng tiếng Anh (nhớ có dấu chấm ở cuối câu)..."
-                                    style="width: 100%; padding: 12px 16px; border: 2px solid #cbd5e1; border-radius: 8px; font-size: 1.1rem; outline: none; transition: all 0.2s;"
-                                    onfocus="this.style.borderColor='var(--primary-color)'; this.style.boxShadow='0 0 0 3px var(--primary-light)'"
-                                    onblur="this.style.borderColor='#cbd5e1'; this.style.boxShadow='none'">
-                                <div id="transexp_extra3_${idx}" style="display: none; margin-top: 12px; padding: 12px; border-radius: 8px; font-size: 1.05rem;"></div>
-                                <div style="text-align: right; margin-top: 12px;">
-                                    <button onclick="window.checkNounsTranslation('extra3', ${idx})" style="padding: 8px 24px; background: white; color: var(--primary-color); border: 2px solid var(--primary-color); border-radius: 20px; font-weight: bold; cursor: pointer; transition: all 0.2s;" onmouseover="this.style.background='var(--primary-color)'; this.style.color='white'" onmouseout="this.style.background='white'; this.style.color='var(--primary-color)'">Kiểm tra</button>
-                                </div>
-                            </div>
-                        `).join('')}
-                    </div>
-                </div>
-
