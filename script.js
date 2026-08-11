@@ -1522,15 +1522,15 @@ const verbsPractice2Data = [
 const verbsPracticeParaData = {
     segments: [
         { text: "Dear Mary,<br><br>I " },
-        { text: " <b>(write)</b> this email to tell you some great news. Last month, I " },
-        { text: " <b>(apply)</b> for a new job in London, and yesterday they " },
-        { text: " <b>(call)</b> me to offer the position! I " },
-        { text: " <b>(be)</b> so happy right now.<br><br>The company " },
-        { text: " <b>(specialize)</b> in software development. Next week, I " },
-        { text: " <b>(travel)</b> to London to sign the contract. I " },
-        { text: " <b>(already / start)</b> packing my bags. My parents " },
-        { text: " <b>(feel)</b> very proud of me.<br><br>We haven't seen each other for a long time. I hope we " },
-        { text: " <b>(meet)</b> up soon when I arrive in London.<br><br>Best wishes,<br>John" }
+        { text: " <strong style="font-weight: 900; color: #0f172a;">(write)</strong> this email to tell you some great news. Last month, I " },
+        { text: " <strong style="font-weight: 900; color: #0f172a;">(apply)</strong> for a new job in London, and yesterday they " },
+        { text: " <strong style="font-weight: 900; color: #0f172a;">(call)</strong> me to offer the position! I " },
+        { text: " <strong style="font-weight: 900; color: #0f172a;">(be)</strong> so happy right now.<br><br>The company " },
+        { text: " <strong style="font-weight: 900; color: #0f172a;">(specialize)</strong> in software development. Next week, I " },
+        { text: " <strong style="font-weight: 900; color: #0f172a;">(travel)</strong> to London to sign the contract. I " },
+        { text: " <strong style="font-weight: 900; color: #0f172a;">(already / start)</strong> packing my bags. My parents " },
+        { text: " <strong style="font-weight: 900; color: #0f172a;">(feel)</strong> very proud of me.<br><br>We haven't seen each other for a long time. I hope we " },
+        { text: " <strong style="font-weight: 900; color: #0f172a;">(meet)</strong> up soon when I arrive in London.<br><br>Best wishes,<br>John" }
     ],
     answers: ["am writing", "applied", "called", "am", "specializes", "will travel", "have already started", "feel", "will meet"],
     explanations: [
