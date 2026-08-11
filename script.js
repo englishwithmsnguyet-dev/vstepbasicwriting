@@ -1,3 +1,8 @@
+window.normalizeText = function(text) {
+    if (!text) return '';
+    return text.toString().trim().toLowerCase().replace(/[.,!?;:]/g, '').replace(/\s+/g, ' ');
+};
+
 
 // DRAG AND DROP LOGIC
 window.allowDrop = function(ev) {
@@ -4645,7 +4650,7 @@ window.checkVerbsBook = function(bookId, idx) {
         return;
     }
 
-    const isCorrect = q.a.some(ans => ans.toLowerCase().trim() === val);
+    const isCorrect = q.a.some(ans => window.normalizeText(ans) === window.normalizeText(val));
     if (isCorrect) {
         expDiv.style.display = 'block';
         expDiv.style.background = '#f0fdf4';
@@ -4667,7 +4672,7 @@ window.submitVerbsBook1 = function() {
     verbsPracticeBook1.forEach((q, idx) => {
         const val = (window.verbsAnswersBook1[idx] || "").trim().toLowerCase();
         if (!val) completed = false;
-        if (val && q.a.some(ans => ans.toLowerCase().trim() === val)) {
+        if (val && q.a.some(ans => window.normalizeText(ans) === window.normalizeText(val))) {
             correctCount++;
         }
         window.checkVerbsBook(1, idx);
@@ -4685,7 +4690,7 @@ window.submitVerbsBook2 = function() {
     verbsPracticeBook2.forEach((q, idx) => {
         const val = (window.verbsAnswersBook2[idx] || "").trim().toLowerCase();
         if (!val) completed = false;
-        if (val && q.a.some(ans => ans.toLowerCase().trim() === val)) {
+        if (val && q.a.some(ans => window.normalizeText(ans) === window.normalizeText(val))) {
             correctCount++;
         }
         window.checkVerbsBook(2, idx);
@@ -4703,7 +4708,7 @@ window.submitVerbsBook3 = function() {
     verbsPracticeBook3.forEach((q, idx) => {
         const val = (window.verbsAnswersBook3[idx] || "").trim().toLowerCase();
         if (!val) completed = false;
-        if (val && q.a.some(ans => ans.toLowerCase().trim() === val)) {
+        if (val && q.a.some(ans => window.normalizeText(ans) === window.normalizeText(val))) {
             correctCount++;
         }
         window.checkVerbsBook(3, idx);
@@ -5411,10 +5416,6 @@ window.checkNounsDragDropExtra = function() {
 
 // ---------------- ADJECTIVES ----------------
 
-window.normalizeText = function(text) {
-    if (!text) return '';
-    return text.toString().trim().toLowerCase().replace(/[.,!?;:]/g, '').replace(/\s+/g, ' ');
-};
 
 const adjectivesTheoryData = [
     {
@@ -6547,7 +6548,7 @@ window.checkPrepositions1 = function(idx) {
         return;
     }
 
-    let isCorrect = q.a.some(ans => ans.toLowerCase() === userAns);
+    let isCorrect = q.a.some(ans => window.normalizeText(ans) === window.normalizeText(userAns));
     
     if (isCorrect) {
         expDiv.style.display = 'block';
@@ -6572,7 +6573,7 @@ window.checkPrepositions2 = function(idx) {
         return;
     }
 
-    let isCorrect = q.a.some(ans => ans.toLowerCase() === userAns);
+    let isCorrect = q.a.some(ans => window.normalizeText(ans) === window.normalizeText(userAns));
     
     if (isCorrect) {
         expDiv.style.display = 'block';
@@ -6597,7 +6598,7 @@ window.checkPrepositionsExtra2 = function(idx) {
         return;
     }
 
-    let isCorrect = q.a.some(ans => ans.toLowerCase() === userAns);
+    let isCorrect = q.a.some(ans => window.normalizeText(ans) === window.normalizeText(userAns));
     
     if (isCorrect) {
         expDiv.style.display = 'block';
@@ -6622,7 +6623,7 @@ window.checkPrepositionsExtra3 = function(idx) {
         return;
     }
 
-    let isCorrect = q.a.some(ans => ans.toLowerCase() === userAns);
+    let isCorrect = q.a.some(ans => window.normalizeText(ans) === window.normalizeText(userAns));
     
     if (isCorrect) {
         expDiv.style.display = 'block';
@@ -6642,7 +6643,7 @@ window.submitPrepositions1 = function() {
         const userAns = (window.prepositionsAnswers1[idx] || '').trim().toLowerCase().replace(/[.,!?;:]/g, '').replace(/\s+/g, ' ');
         if (!userAns) completed = false;
         else {
-            if (q.a.some(ans => ans.toLowerCase() === userAns)) correct++;
+            if (q.a.some(ans => window.normalizeText(ans) === window.normalizeText(userAns))) correct++;
             window.checkPrepositions1(idx);
         }
     });
@@ -6656,7 +6657,7 @@ window.submitPrepositions2 = function() {
         const userAns = (window.prepositionsAnswers2[idx] || '').trim().toLowerCase().replace(/[.,!?;:]/g, '').replace(/\s+/g, ' ');
         if (!userAns) completed = false;
         else {
-            if (q.a.some(ans => ans.toLowerCase() === userAns)) correct++;
+            if (q.a.some(ans => window.normalizeText(ans) === window.normalizeText(userAns))) correct++;
             window.checkPrepositions2(idx);
         }
     });
@@ -6700,7 +6701,7 @@ window.submitPrepositionsExtra2 = function() {
         const userAns = (window.prepositionsAnswersExtra2[idx] || '').trim().toLowerCase().replace(/[.,!?;:]/g, '').replace(/\s+/g, ' ');
         if (!userAns) completed = false;
         else {
-            if (q.a.some(ans => ans.toLowerCase() === userAns)) correct++;
+            if (q.a.some(ans => window.normalizeText(ans) === window.normalizeText(userAns))) correct++;
             window.checkPrepositionsExtra2(idx);
         }
     });
@@ -6714,7 +6715,7 @@ window.submitPrepositionsExtra3 = function() {
         const userAns = (window.prepositionsAnswersExtra3[idx] || '').trim().toLowerCase().replace(/[.,!?;:]/g, '').replace(/\s+/g, ' ');
         if (!userAns) completed = false;
         else {
-            if (q.a.some(ans => ans.toLowerCase() === userAns)) correct++;
+            if (q.a.some(ans => window.normalizeText(ans) === window.normalizeText(userAns))) correct++;
             window.checkPrepositionsExtra3(idx);
         }
     });
