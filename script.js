@@ -1515,15 +1515,15 @@ const verbsPractice2Data = [
 const verbsPracticeParaData = {
     segments: [
         { text: "Dear Mary,<br><br>I " },
-        { text: " (write) this email to tell you some great news. Last month, I " },
-        { text: " (apply) for a new job in London, and yesterday they " },
-        { text: " (call) me to offer the position! I " },
-        { text: " (be) so happy right now.<br><br>The company " },
-        { text: " (specialize) in software development. Next week, I " },
-        { text: " (travel) to London to sign the contract. I " },
-        { text: " (already / start) packing my bags. My parents " },
-        { text: " (feel) very proud of me.<br><br>We haven't seen each other for a long time. I hope we " },
-        { text: " (meet) up soon when I arrive in London.<br><br>Best wishes,<br>John" }
+        { text: " <b>(write)</b> this email to tell you some great news. Last month, I " },
+        { text: " <b>(apply)</b> for a new job in London, and yesterday they " },
+        { text: " <b>(call)</b> me to offer the position! I " },
+        { text: " <b>(be)</b> so happy right now.<br><br>The company " },
+        { text: " <b>(specialize)</b> in software development. Next week, I " },
+        { text: " <b>(travel)</b> to London to sign the contract. I " },
+        { text: " <b>(already / start)</b> packing my bags. My parents " },
+        { text: " <b>(feel)</b> very proud of me.<br><br>We haven't seen each other for a long time. I hope we " },
+        { text: " <b>(meet)</b> up soon when I arrive in London.<br><br>Best wishes,<br>John" }
     ],
     answers: ["am writing", "applied", "called", "am", "specializes", "will travel", "have already started", "feel", "will meet"],
     explanations: [
