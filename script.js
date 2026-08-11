@@ -881,6 +881,9 @@ const verbsTheoryData = [
                             <span style="background: #f1f5f9; color: #475569; padding: 4px 12px; border-radius: 20px; font-weight: 600; border: 1px solid #e2e8f0;">was</span>
                             <span style="background: #f1f5f9; color: #475569; padding: 4px 12px; border-radius: 20px; font-weight: 600; border: 1px solid #e2e8f0;">were</span>
                         </div>
+                        <div style="background: #f8fafc; padding: 8px 12px; border-radius: 6px; border-left: 3px solid #e2e8f0; margin-top: 12px;">
+                            <i style="color: #64748b; font-size: 0.95rem;">VD: She is a teacher. / They are happy.</i>
+                        </div>
                     </div>
                 </div>
 
