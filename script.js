@@ -2145,6 +2145,8 @@ window.saveStudentInfo = function() {
     localStorage.setItem('studentName', name);
     localStorage.setItem('studentClass', className);
     document.getElementById('login-modal').style.display = 'none';
+    const displaySpan = document.getElementById('student-info-display');
+    if (displaySpan) displaySpan.textContent = `👋 Xin chào, ${name} - ${className}`;
 }
 
 // Initial Render
@@ -2157,6 +2159,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const prevClass = localStorage.getItem('studentClass');
         if (prevName) document.getElementById('student-name').value = prevName;
         if (prevClass) document.getElementById('student-class').value = prevClass;
+        
+        if (prevName && prevClass) {
+            const displaySpan = document.getElementById('student-info-display');
+            if (displaySpan) displaySpan.textContent = `👋 Xin chào, ${prevName} - ${prevClass}`;
+        }
         
         modal.style.display = 'flex';
     }
