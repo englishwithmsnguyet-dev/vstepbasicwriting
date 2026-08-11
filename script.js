@@ -965,127 +965,344 @@ const verbsTheoryData = [
                         title: "🔄 3. Sự thay đổi của Động từ (Verb Transformations)",
         content: `
         <div style="font-size: 1.1rem; line-height: 1.7; color: var(--text-main);">
-            <p>Trong Tiếng Anh, <b>Động từ luôn thay đổi hình thái</b> phụ thuộc vào Thì (Tenses) và Chủ ngữ (Subject). Dưới đây là cách chia động từ chi tiết cho 5 Thì cơ bản nhất trong VSTEP Writing:</p>
+            <p style="margin-bottom: 24px; font-size: 1.15rem; color: #475569;">
+                Trong Tiếng Anh, <b style="color: var(--primary-color);">Động từ luôn thay đổi hình thái</b> phụ thuộc vào Thì (Tenses) và Chủ ngữ (Subject). Dưới đây là cách chia động từ chi tiết cho 5 Thì cơ bản nhất trong VSTEP Writing:
+            </p>
             
-            <div style="display: flex; flex-direction: column; gap: 16px; margin-top: 16px;">
+            <div style="display: flex; flex-direction: column; gap: 24px;">
                 
                 <!-- 1. HTĐ -->
-                <div style="background: #fff7ed; border-radius: 12px; border: 1px solid #fed7aa; padding: 16px;">
-                    <div style="font-weight: bold; color: #c2410c; font-size: 1.15rem; margin-bottom: 12px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
-                        <span>1. Hiện tại đơn <span style="font-size: 0.95rem; font-weight: normal; color: #78350f; margin-left: 8px;">(Sự thật, thói quen)</span></span>
-                        <div style="font-weight: bold; color: #ea580c; background: #ffedd5; padding: 4px 12px; border-radius: 6px; font-family: monospace; font-size: 1.1rem;">am/is/are & Vo / V(s/es)</div>
+                <div style="background: white; border-radius: 16px; border: 1px solid #fed7aa; padding: 24px; box-shadow: 0 4px 12px rgba(234,88,12,0.05); position: relative; overflow: hidden;">
+                    <div style="position: absolute; top: 0; left: 0; width: 6px; height: 100%; background: #ea580c;"></div>
+                    
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 16px; margin-bottom: 20px; border-bottom: 2px dashed #ffedd5; padding-bottom: 16px;">
+                        <div>
+                            <h4 style="color: #c2410c; font-size: 1.35rem; font-weight: 800; margin: 0 0 6px 0; display: flex; align-items: center; gap: 10px;">
+                                <span style="background: #ea580c; color: white; width: 32px; height: 32px; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; font-size: 1.1rem;">1</span>
+                                Hiện tại đơn
+                            </h4>
+                            <div style="color: #9a3412; font-size: 1rem; font-style: italic;">Sự thật, thói quen</div>
+                        </div>
+                        <div style="background: #fff7ed; border: 1px solid #fdba74; padding: 6px 16px; border-radius: 30px; color: #ea580c; font-weight: bold; font-family: monospace; font-size: 1.15rem; box-shadow: inset 0 2px 4px rgba(234,88,12,0.05);">am/is/are &nbsp;|&nbsp; Vo / V(s/es)</div>
                     </div>
                     
-                    <div style="display: flex; flex-direction: column; gap: 12px;">
-                        <div style="background: white; border-radius: 8px; border: 1px solid #ffedd5; overflow: hidden;">
-                            <div style="background: #ffedd5; padding: 8px 16px; font-weight: bold; color: #9a3412; font-size: 1.05rem;">🔹 Với động từ TO-BE (am / is / are)</div>
-                            <div style="padding: 12px 16px; display: flex; flex-direction: column; gap: 8px;">
-                                <div>• <b>I</b> ➡️ đi với <b style="color: #ea580c;">am</b></div>
-                                <div>• <b>He / She / It / Danh từ chung số ít / Danh từ không đếm được / Danh từ riêng chỉ có 1 / Đại từ bất định (someone, everyone, no one...)</b> ➡️ đi với <b style="color: #ea580c;">is</b></div>
-                                <div>• <b>You / We / They / Danh từ chung số nhiều / Danh từ riêng từ 2 trở lên</b> ➡️ đi với <b style="color: #ea580c;">are</b></div>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px;">
+                        <!-- TO-BE -->
+                        <div style="background: #fff7ed; border-radius: 12px; padding: 16px; border: 1px solid #ffedd5;">
+                            <div style="font-weight: 800; color: #9a3412; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; font-size: 1.1rem;">
+                                <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+                                Động từ TO-BE
+                            </div>
+                            
+                            <div style="display: grid; gap: 10px;">
+                                <div style="background: white; border-radius: 8px; padding: 12px; display: flex; align-items: center; gap: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.04);">
+                                    <div style="flex: 1; display: flex; flex-wrap: wrap; gap: 6px;">
+                                        <span style="background: #f1f5f9; color: #475569; padding: 2px 10px; border-radius: 6px; font-weight: bold; border: 1px solid #e2e8f0;">I</span>
+                                    </div>
+                                    <div style="color: #cbd5e1;">➔</div>
+                                    <div style="background: #ea580c; color: white; padding: 4px 14px; border-radius: 20px; font-weight: bold; min-width: 50px; text-align: center;">am</div>
+                                </div>
+                                
+                                <div style="background: white; border-radius: 8px; padding: 12px; display: flex; align-items: center; gap: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.04);">
+                                    <div style="flex: 1; display: flex; flex-wrap: wrap; gap: 6px;">
+                                        <span style="background: #f1f5f9; color: #475569; padding: 2px 10px; border-radius: 6px; font-weight: bold; border: 1px solid #e2e8f0;">He</span>
+                                        <span style="background: #f1f5f9; color: #475569; padding: 2px 10px; border-radius: 6px; font-weight: bold; border: 1px solid #e2e8f0;">She</span>
+                                        <span style="background: #f1f5f9; color: #475569; padding: 2px 10px; border-radius: 6px; font-weight: bold; border: 1px solid #e2e8f0;">It</span>
+                                        <div style="font-size: 0.9rem; color: #64748b; margin-top: 4px; width: 100%;">Danh từ số ít, không đếm được, đại từ bất định...</div>
+                                    </div>
+                                    <div style="color: #cbd5e1;">➔</div>
+                                    <div style="background: #ea580c; color: white; padding: 4px 14px; border-radius: 20px; font-weight: bold; min-width: 50px; text-align: center;">is</div>
+                                </div>
+
+                                <div style="background: white; border-radius: 8px; padding: 12px; display: flex; align-items: center; gap: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.04);">
+                                    <div style="flex: 1; display: flex; flex-wrap: wrap; gap: 6px;">
+                                        <span style="background: #f1f5f9; color: #475569; padding: 2px 10px; border-radius: 6px; font-weight: bold; border: 1px solid #e2e8f0;">You</span>
+                                        <span style="background: #f1f5f9; color: #475569; padding: 2px 10px; border-radius: 6px; font-weight: bold; border: 1px solid #e2e8f0;">We</span>
+                                        <span style="background: #f1f5f9; color: #475569; padding: 2px 10px; border-radius: 6px; font-weight: bold; border: 1px solid #e2e8f0;">They</span>
+                                        <div style="font-size: 0.9rem; color: #64748b; margin-top: 4px; width: 100%;">Danh từ số nhiều...</div>
+                                    </div>
+                                    <div style="color: #cbd5e1;">➔</div>
+                                    <div style="background: #ea580c; color: white; padding: 4px 14px; border-radius: 20px; font-weight: bold; min-width: 50px; text-align: center;">are</div>
+                                </div>
                             </div>
                         </div>
-                        <div style="background: white; border-radius: 8px; border: 1px solid #ffedd5; overflow: hidden;">
-                            <div style="background: #ffedd5; padding: 8px 16px; font-weight: bold; color: #9a3412; font-size: 1.05rem;">🔹 Với động từ THƯỜNG (Vo / V(s/es))</div>
-                            <div style="padding: 12px 16px; display: flex; flex-direction: column; gap: 8px;">
-                                <div>• <b>I / You / We / They / Danh từ chung số nhiều / Danh từ riêng từ 2 trở lên</b> ➡️ Động từ <b style="color: #ea580c;">giữ nguyên (Vo)</b></div>
-                                <div>• <b>He / She / It / Danh từ chung số ít / Danh từ không đếm được / Danh từ riêng chỉ có 1 / Đại từ bất định (someone, everyone, no one...)</b> ➡️ Động từ <b style="color: #ea580c;">thêm s/es</b></div>
+
+                        <!-- THƯỜNG -->
+                        <div style="background: #fff7ed; border-radius: 12px; padding: 16px; border: 1px solid #ffedd5;">
+                            <div style="font-weight: 800; color: #9a3412; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; font-size: 1.1rem;">
+                                <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/></svg>
+                                Động từ THƯỜNG
+                            </div>
+                            
+                            <div style="display: grid; gap: 10px;">
+                                <div style="background: white; border-radius: 8px; padding: 12px; display: flex; align-items: center; gap: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.04);">
+                                    <div style="flex: 1; display: flex; flex-wrap: wrap; gap: 6px;">
+                                        <span style="background: #f1f5f9; color: #475569; padding: 2px 10px; border-radius: 6px; font-weight: bold; border: 1px solid #e2e8f0;">I</span>
+                                        <span style="background: #f1f5f9; color: #475569; padding: 2px 10px; border-radius: 6px; font-weight: bold; border: 1px solid #e2e8f0;">You</span>
+                                        <span style="background: #f1f5f9; color: #475569; padding: 2px 10px; border-radius: 6px; font-weight: bold; border: 1px solid #e2e8f0;">We</span>
+                                        <span style="background: #f1f5f9; color: #475569; padding: 2px 10px; border-radius: 6px; font-weight: bold; border: 1px solid #e2e8f0;">They</span>
+                                        <div style="font-size: 0.9rem; color: #64748b; margin-top: 4px; width: 100%;">Danh từ số nhiều...</div>
+                                    </div>
+                                    <div style="color: #cbd5e1;">➔</div>
+                                    <div style="background: #ea580c; color: white; padding: 4px 14px; border-radius: 20px; font-weight: bold; min-width: 50px; text-align: center;">Vo<br><span style="font-size: 0.75rem; font-weight: normal;">(giữ nguyên)</span></div>
+                                </div>
+                                
+                                <div style="background: white; border-radius: 8px; padding: 12px; display: flex; align-items: center; gap: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.04);">
+                                    <div style="flex: 1; display: flex; flex-wrap: wrap; gap: 6px;">
+                                        <span style="background: #f1f5f9; color: #475569; padding: 2px 10px; border-radius: 6px; font-weight: bold; border: 1px solid #e2e8f0;">He</span>
+                                        <span style="background: #f1f5f9; color: #475569; padding: 2px 10px; border-radius: 6px; font-weight: bold; border: 1px solid #e2e8f0;">She</span>
+                                        <span style="background: #f1f5f9; color: #475569; padding: 2px 10px; border-radius: 6px; font-weight: bold; border: 1px solid #e2e8f0;">It</span>
+                                        <div style="font-size: 0.9rem; color: #64748b; margin-top: 4px; width: 100%;">Danh từ số ít, không đếm được...</div>
+                                    </div>
+                                    <div style="color: #cbd5e1;">➔</div>
+                                    <div style="background: #ea580c; color: white; padding: 4px 14px; border-radius: 20px; font-weight: bold; min-width: 50px; text-align: center;">V(s/es)</div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- 2. HTTD -->
-                <div style="background: #f0fdfa; border-radius: 12px; border: 1px solid #ccfbf1; padding: 16px;">
-                    <div style="font-weight: bold; color: #0f766e; font-size: 1.15rem; margin-bottom: 12px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
-                        <span>2. Hiện tại tiếp diễn <span style="font-size: 0.95rem; font-weight: normal; color: #134e4a; margin-left: 8px;">(Hành động đang xảy ra)</span></span>
-                        <div style="font-weight: bold; color: #0d9488; background: #ccfbf1; padding: 4px 12px; border-radius: 6px; font-family: monospace; font-size: 1.1rem;">am/is/are + V-ing</div>
+                <div style="background: white; border-radius: 16px; border: 1px solid #99f6e4; padding: 24px; box-shadow: 0 4px 12px rgba(13,148,136,0.05); position: relative; overflow: hidden;">
+                    <div style="position: absolute; top: 0; left: 0; width: 6px; height: 100%; background: #0d9488;"></div>
+                    
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 16px; margin-bottom: 20px; border-bottom: 2px dashed #ccfbf1; padding-bottom: 16px;">
+                        <div>
+                            <h4 style="color: #0f766e; font-size: 1.35rem; font-weight: 800; margin: 0 0 6px 0; display: flex; align-items: center; gap: 10px;">
+                                <span style="background: #0d9488; color: white; width: 32px; height: 32px; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; font-size: 1.1rem;">2</span>
+                                Hiện tại tiếp diễn
+                            </h4>
+                            <div style="color: #115e59; font-size: 1rem; font-style: italic;">Hành động đang xảy ra tại thời điểm nói</div>
+                        </div>
+                        <div style="background: #f0fdfa; border: 1px solid #5eead4; padding: 6px 16px; border-radius: 30px; color: #0d9488; font-weight: bold; font-family: monospace; font-size: 1.15rem; box-shadow: inset 0 2px 4px rgba(13,148,136,0.05);">am/is/are + V-ing</div>
                     </div>
                     
-                    <div style="display: flex; flex-direction: column; gap: 12px;">
-                        <div style="background: white; border-radius: 8px; border: 1px solid #ccfbf1; overflow: hidden;">
-                            <div style="padding: 12px 16px; display: flex; flex-direction: column; gap: 8px;">
-                                <div>• <b>I</b> + <b style="color: #0d9488;">am</b> + V-ing</div>
-                                <div>• <b>He / She / It / Danh từ chung số ít / Danh từ không đếm được / Danh từ riêng chỉ có 1 / Đại từ bất định (someone, everyone, no one...)</b> + <b style="color: #0d9488;">is</b> + V-ing</div>
-                                <div>• <b>You / We / They / Danh từ chung số nhiều / Danh từ riêng từ 2 trở lên</b> + <b style="color: #0d9488;">are</b> + V-ing</div>
+                    <div style="background: #f0fdfa; border-radius: 12px; padding: 16px; border: 1px solid #ccfbf1;">
+                        <div style="display: grid; gap: 10px;">
+                            <div style="background: white; border-radius: 8px; padding: 12px; display: flex; align-items: center; gap: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.04);">
+                                <div style="flex: 1; display: flex; flex-wrap: wrap; gap: 6px;">
+                                    <span style="background: #f1f5f9; color: #475569; padding: 2px 10px; border-radius: 6px; font-weight: bold; border: 1px solid #e2e8f0;">I</span>
+                                </div>
+                                <div style="color: #cbd5e1;">➔</div>
+                                <div style="color: #0d9488; font-weight: bold; font-size: 1.1rem;"><span style="background: #0d9488; color: white; padding: 4px 12px; border-radius: 20px;">am</span> &nbsp;+ V-ing</div>
+                            </div>
+                            
+                            <div style="background: white; border-radius: 8px; padding: 12px; display: flex; align-items: center; gap: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.04);">
+                                <div style="flex: 1; display: flex; flex-wrap: wrap; gap: 6px;">
+                                    <span style="background: #f1f5f9; color: #475569; padding: 2px 10px; border-radius: 6px; font-weight: bold; border: 1px solid #e2e8f0;">He</span>
+                                    <span style="background: #f1f5f9; color: #475569; padding: 2px 10px; border-radius: 6px; font-weight: bold; border: 1px solid #e2e8f0;">She</span>
+                                    <span style="background: #f1f5f9; color: #475569; padding: 2px 10px; border-radius: 6px; font-weight: bold; border: 1px solid #e2e8f0;">It</span>
+                                    <div style="font-size: 0.9rem; color: #64748b; margin-top: 4px; width: 100%;">Danh từ số ít, không đếm được...</div>
+                                </div>
+                                <div style="color: #cbd5e1;">➔</div>
+                                <div style="color: #0d9488; font-weight: bold; font-size: 1.1rem;"><span style="background: #0d9488; color: white; padding: 4px 12px; border-radius: 20px;">is</span> &nbsp;+ V-ing</div>
+                            </div>
+
+                            <div style="background: white; border-radius: 8px; padding: 12px; display: flex; align-items: center; gap: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.04);">
+                                <div style="flex: 1; display: flex; flex-wrap: wrap; gap: 6px;">
+                                    <span style="background: #f1f5f9; color: #475569; padding: 2px 10px; border-radius: 6px; font-weight: bold; border: 1px solid #e2e8f0;">You</span>
+                                    <span style="background: #f1f5f9; color: #475569; padding: 2px 10px; border-radius: 6px; font-weight: bold; border: 1px solid #e2e8f0;">We</span>
+                                    <span style="background: #f1f5f9; color: #475569; padding: 2px 10px; border-radius: 6px; font-weight: bold; border: 1px solid #e2e8f0;">They</span>
+                                    <div style="font-size: 0.9rem; color: #64748b; margin-top: 4px; width: 100%;">Danh từ số nhiều...</div>
+                                </div>
+                                <div style="color: #cbd5e1;">➔</div>
+                                <div style="color: #0d9488; font-weight: bold; font-size: 1.1rem;"><span style="background: #0d9488; color: white; padding: 4px 12px; border-radius: 20px;">are</span> &nbsp;+ V-ing</div>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- 3. QKĐ -->
-                <div style="background: #f8fafc; border-radius: 12px; border: 1px solid #e2e8f0; padding: 16px;">
-                    <div style="font-weight: bold; color: #334155; font-size: 1.15rem; margin-bottom: 12px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
-                        <span>3. Quá khứ đơn <span style="font-size: 0.95rem; font-weight: normal; color: #0f172a; margin-left: 8px;">(Sự việc đã kết thúc ở QK)</span></span>
-                        <div style="font-weight: bold; color: #475569; background: #e2e8f0; padding: 4px 12px; border-radius: 6px; font-family: monospace; font-size: 1.1rem;">was/were & V-ed / V2</div>
+                <div style="background: white; border-radius: 16px; border: 1px solid #cbd5e1; padding: 24px; box-shadow: 0 4px 12px rgba(71,85,105,0.05); position: relative; overflow: hidden;">
+                    <div style="position: absolute; top: 0; left: 0; width: 6px; height: 100%; background: #475569;"></div>
+                    
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 16px; margin-bottom: 20px; border-bottom: 2px dashed #e2e8f0; padding-bottom: 16px;">
+                        <div>
+                            <h4 style="color: #334155; font-size: 1.35rem; font-weight: 800; margin: 0 0 6px 0; display: flex; align-items: center; gap: 10px;">
+                                <span style="background: #475569; color: white; width: 32px; height: 32px; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; font-size: 1.1rem;">3</span>
+                                Quá khứ đơn
+                            </h4>
+                            <div style="color: #475569; font-size: 1rem; font-style: italic;">Sự việc đã xảy ra và kết thúc trong quá khứ</div>
+                        </div>
+                        <div style="background: #f8fafc; border: 1px solid #94a3b8; padding: 6px 16px; border-radius: 30px; color: #475569; font-weight: bold; font-family: monospace; font-size: 1.15rem; box-shadow: inset 0 2px 4px rgba(71,85,105,0.05);">was/were &nbsp;|&nbsp; V-ed / V2</div>
                     </div>
                     
-                    <div style="display: flex; flex-direction: column; gap: 12px;">
-                        <div style="background: white; border-radius: 8px; border: 1px solid #e2e8f0; overflow: hidden;">
-                            <div style="background: #e2e8f0; padding: 8px 16px; font-weight: bold; color: #334155; font-size: 1.05rem;">🔹 Với động từ TO-BE (was / were)</div>
-                            <div style="padding: 12px 16px; display: flex; flex-direction: column; gap: 8px;">
-                                <div>• <b>I / He / She / It / Danh từ chung số ít / Danh từ không đếm được / Danh từ riêng chỉ có 1 / Đại từ bất định (someone, everyone, no one...)</b> ➡️ đi với <b style="color: #475569;">was</b></div>
-                                <div>• <b>You / We / They / Danh từ chung số nhiều / Danh từ riêng từ 2 trở lên</b> ➡️ đi với <b style="color: #475569;">were</b></div>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px;">
+                        <!-- TO-BE -->
+                        <div style="background: #f8fafc; border-radius: 12px; padding: 16px; border: 1px solid #e2e8f0;">
+                            <div style="font-weight: 800; color: #334155; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; font-size: 1.1rem;">
+                                <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+                                Động từ TO-BE
+                            </div>
+                            
+                            <div style="display: grid; gap: 10px;">
+                                <div style="background: white; border-radius: 8px; padding: 12px; display: flex; align-items: center; gap: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.04);">
+                                    <div style="flex: 1; display: flex; flex-wrap: wrap; gap: 6px;">
+                                        <span style="background: #f1f5f9; color: #475569; padding: 2px 10px; border-radius: 6px; font-weight: bold; border: 1px solid #e2e8f0;">I</span>
+                                        <span style="background: #f1f5f9; color: #475569; padding: 2px 10px; border-radius: 6px; font-weight: bold; border: 1px solid #e2e8f0;">He</span>
+                                        <span style="background: #f1f5f9; color: #475569; padding: 2px 10px; border-radius: 6px; font-weight: bold; border: 1px solid #e2e8f0;">She</span>
+                                        <span style="background: #f1f5f9; color: #475569; padding: 2px 10px; border-radius: 6px; font-weight: bold; border: 1px solid #e2e8f0;">It</span>
+                                        <div style="font-size: 0.9rem; color: #64748b; margin-top: 4px; width: 100%;">Danh từ số ít...</div>
+                                    </div>
+                                    <div style="color: #cbd5e1;">➔</div>
+                                    <div style="background: #475569; color: white; padding: 4px 14px; border-radius: 20px; font-weight: bold; min-width: 50px; text-align: center;">was</div>
+                                </div>
+
+                                <div style="background: white; border-radius: 8px; padding: 12px; display: flex; align-items: center; gap: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.04);">
+                                    <div style="flex: 1; display: flex; flex-wrap: wrap; gap: 6px;">
+                                        <span style="background: #f1f5f9; color: #475569; padding: 2px 10px; border-radius: 6px; font-weight: bold; border: 1px solid #e2e8f0;">You</span>
+                                        <span style="background: #f1f5f9; color: #475569; padding: 2px 10px; border-radius: 6px; font-weight: bold; border: 1px solid #e2e8f0;">We</span>
+                                        <span style="background: #f1f5f9; color: #475569; padding: 2px 10px; border-radius: 6px; font-weight: bold; border: 1px solid #e2e8f0;">They</span>
+                                        <div style="font-size: 0.9rem; color: #64748b; margin-top: 4px; width: 100%;">Danh từ số nhiều...</div>
+                                    </div>
+                                    <div style="color: #cbd5e1;">➔</div>
+                                    <div style="background: #475569; color: white; padding: 4px 14px; border-radius: 20px; font-weight: bold; min-width: 50px; text-align: center;">were</div>
+                                </div>
                             </div>
                         </div>
-                        <div style="background: white; border-radius: 8px; border: 1px solid #e2e8f0; overflow: hidden;">
-                            <div style="background: #e2e8f0; padding: 8px 16px; font-weight: bold; color: #334155; font-size: 1.05rem;">🔹 Với động từ THƯỜNG (V-ed / V2)</div>
-                            <div style="padding: 12px 16px;">
-                                • <b style="color: #475569;">Tất cả các ngôi</b> đều dùng chung một dạng <b style="color: #475569;">V-ed / V2</b> (không phân biệt số ít hay số nhiều).
+
+                        <!-- THƯỜNG -->
+                        <div style="background: #f8fafc; border-radius: 12px; padding: 16px; border: 1px solid #e2e8f0;">
+                            <div style="font-weight: 800; color: #334155; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; font-size: 1.1rem;">
+                                <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/></svg>
+                                Động từ THƯỜNG
+                            </div>
+                            
+                            <div style="background: white; border-radius: 8px; padding: 16px; text-align: center; border: 2px dashed #cbd5e1; box-shadow: 0 1px 3px rgba(0,0,0,0.04);">
+                                <div style="color: #475569; font-size: 1.1rem; font-weight: 600; margin-bottom: 12px;">Tất cả các ngôi đều dùng chung:</div>
+                                <div style="display: inline-block; background: #475569; color: white; padding: 8px 24px; border-radius: 30px; font-weight: bold; font-size: 1.2rem; box-shadow: 0 2px 4px rgba(71,85,105,0.2);">V-ed / V2</div>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- 4. HTHT -->
-                <div style="background: #fdf4ff; border-radius: 12px; border: 1px solid #fae8ff; padding: 16px;">
-                    <div style="font-weight: bold; color: #86198f; font-size: 1.15rem; margin-bottom: 12px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
-                        <span>4. Hiện tại hoàn thành <span style="font-size: 0.95rem; font-weight: normal; color: #4a044e; margin-left: 8px;">(Bắt đầu ở QK, kéo dài đến HT)</span></span>
-                        <div style="font-weight: bold; color: #c026d3; background: #fae8ff; padding: 4px 12px; border-radius: 6px; font-family: monospace; font-size: 1.1rem;">have/has been & have/has + V3/ed</div>
+                <div style="background: white; border-radius: 16px; border: 1px solid #fbcfe8; padding: 24px; box-shadow: 0 4px 12px rgba(192,38,211,0.05); position: relative; overflow: hidden;">
+                    <div style="position: absolute; top: 0; left: 0; width: 6px; height: 100%; background: #c026d3;"></div>
+                    
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 16px; margin-bottom: 20px; border-bottom: 2px dashed #fce7f3; padding-bottom: 16px;">
+                        <div>
+                            <h4 style="color: #86198f; font-size: 1.35rem; font-weight: 800; margin: 0 0 6px 0; display: flex; align-items: center; gap: 10px;">
+                                <span style="background: #c026d3; color: white; width: 32px; height: 32px; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; font-size: 1.1rem;">4</span>
+                                Hiện tại hoàn thành
+                            </h4>
+                            <div style="color: #701a75; font-size: 1rem; font-style: italic;">Bắt đầu ở quá khứ, kéo dài đến hiện tại</div>
+                        </div>
+                        <div style="background: #fdf4ff; border: 1px solid #f3a8a8; padding: 6px 16px; border-radius: 30px; color: #c026d3; font-weight: bold; font-family: monospace; font-size: 1.15rem; box-shadow: inset 0 2px 4px rgba(192,38,211,0.05);">have/has + V3/ed</div>
                     </div>
                     
-                    <div style="display: flex; flex-direction: column; gap: 12px;">
-                        <div style="background: white; border-radius: 8px; border: 1px solid #fae8ff; overflow: hidden;">
-                            <div style="background: #fae8ff; padding: 8px 16px; font-weight: bold; color: #86198f; font-size: 1.05rem;">🔹 Với động từ TO-BE (have/has been)</div>
-                            <div style="padding: 12px 16px; display: flex; flex-direction: column; gap: 8px;">
-                                <div>• <b>I / You / We / They / Danh từ chung số nhiều / Danh từ riêng từ 2 trở lên</b> ➡️ đi với <b style="color: #c026d3;">have been</b></div>
-                                <div>• <b>He / She / It / Danh từ chung số ít / Danh từ không đếm được / Danh từ riêng chỉ có 1 / Đại từ bất định (someone, everyone, no one...)</b> ➡️ đi với <b style="color: #c026d3;">has been</b></div>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px;">
+                        <!-- TO-BE -->
+                        <div style="background: #fdf4ff; border-radius: 12px; padding: 16px; border: 1px solid #fae8ff;">
+                            <div style="font-weight: 800; color: #86198f; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; font-size: 1.1rem;">
+                                <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+                                Động từ TO-BE
+                            </div>
+                            
+                            <div style="display: grid; gap: 10px;">
+                                <div style="background: white; border-radius: 8px; padding: 12px; display: flex; align-items: center; gap: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.04);">
+                                    <div style="flex: 1; display: flex; flex-wrap: wrap; gap: 6px;">
+                                        <span style="background: #f1f5f9; color: #475569; padding: 2px 10px; border-radius: 6px; font-weight: bold; border: 1px solid #e2e8f0;">I</span>
+                                        <span style="background: #f1f5f9; color: #475569; padding: 2px 10px; border-radius: 6px; font-weight: bold; border: 1px solid #e2e8f0;">You</span>
+                                        <span style="background: #f1f5f9; color: #475569; padding: 2px 10px; border-radius: 6px; font-weight: bold; border: 1px solid #e2e8f0;">We</span>
+                                        <span style="background: #f1f5f9; color: #475569; padding: 2px 10px; border-radius: 6px; font-weight: bold; border: 1px solid #e2e8f0;">They</span>
+                                    </div>
+                                    <div style="color: #cbd5e1;">➔</div>
+                                    <div style="background: #c026d3; color: white; padding: 4px 14px; border-radius: 20px; font-weight: bold; min-width: 90px; text-align: center;">have been</div>
+                                </div>
+
+                                <div style="background: white; border-radius: 8px; padding: 12px; display: flex; align-items: center; gap: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.04);">
+                                    <div style="flex: 1; display: flex; flex-wrap: wrap; gap: 6px;">
+                                        <span style="background: #f1f5f9; color: #475569; padding: 2px 10px; border-radius: 6px; font-weight: bold; border: 1px solid #e2e8f0;">He</span>
+                                        <span style="background: #f1f5f9; color: #475569; padding: 2px 10px; border-radius: 6px; font-weight: bold; border: 1px solid #e2e8f0;">She</span>
+                                        <span style="background: #f1f5f9; color: #475569; padding: 2px 10px; border-radius: 6px; font-weight: bold; border: 1px solid #e2e8f0;">It</span>
+                                    </div>
+                                    <div style="color: #cbd5e1;">➔</div>
+                                    <div style="background: #c026d3; color: white; padding: 4px 14px; border-radius: 20px; font-weight: bold; min-width: 90px; text-align: center;">has been</div>
+                                </div>
                             </div>
                         </div>
-                        <div style="background: white; border-radius: 8px; border: 1px solid #fae8ff; overflow: hidden;">
-                            <div style="background: #fae8ff; padding: 8px 16px; font-weight: bold; color: #86198f; font-size: 1.05rem;">🔹 Với động từ THƯỜNG (have/has + V3/ed)</div>
-                            <div style="padding: 12px 16px; display: flex; flex-direction: column; gap: 8px;">
-                                <div>• <b>I / You / We / They / Danh từ chung số nhiều / Danh từ riêng từ 2 trở lên</b> ➡️ đi với <b style="color: #c026d3;">have + V3/ed</b></div>
-                                <div>• <b>He / She / It / Danh từ chung số ít / Danh từ không đếm được / Danh từ riêng chỉ có 1 / Đại từ bất định (someone, everyone, no one...)</b> ➡️ đi với <b style="color: #c026d3;">has + V3/ed</b></div>
+
+                        <!-- THƯỜNG -->
+                        <div style="background: #fdf4ff; border-radius: 12px; padding: 16px; border: 1px solid #fae8ff;">
+                            <div style="font-weight: 800; color: #86198f; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; font-size: 1.1rem;">
+                                <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/></svg>
+                                Động từ THƯỜNG
+                            </div>
+                            
+                            <div style="display: grid; gap: 10px;">
+                                <div style="background: white; border-radius: 8px; padding: 12px; display: flex; align-items: center; gap: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.04);">
+                                    <div style="flex: 1; display: flex; flex-wrap: wrap; gap: 6px;">
+                                        <span style="background: #f1f5f9; color: #475569; padding: 2px 10px; border-radius: 6px; font-weight: bold; border: 1px solid #e2e8f0;">I</span>
+                                        <span style="background: #f1f5f9; color: #475569; padding: 2px 10px; border-radius: 6px; font-weight: bold; border: 1px solid #e2e8f0;">You</span>
+                                        <span style="background: #f1f5f9; color: #475569; padding: 2px 10px; border-radius: 6px; font-weight: bold; border: 1px solid #e2e8f0;">We</span>
+                                        <span style="background: #f1f5f9; color: #475569; padding: 2px 10px; border-radius: 6px; font-weight: bold; border: 1px solid #e2e8f0;">They</span>
+                                    </div>
+                                    <div style="color: #cbd5e1;">➔</div>
+                                    <div style="color: #c026d3; font-weight: bold; font-size: 1.1rem;"><span style="background: #c026d3; color: white; padding: 4px 12px; border-radius: 20px;">have</span> &nbsp;+ V3/ed</div>
+                                </div>
+
+                                <div style="background: white; border-radius: 8px; padding: 12px; display: flex; align-items: center; gap: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.04);">
+                                    <div style="flex: 1; display: flex; flex-wrap: wrap; gap: 6px;">
+                                        <span style="background: #f1f5f9; color: #475569; padding: 2px 10px; border-radius: 6px; font-weight: bold; border: 1px solid #e2e8f0;">He</span>
+                                        <span style="background: #f1f5f9; color: #475569; padding: 2px 10px; border-radius: 6px; font-weight: bold; border: 1px solid #e2e8f0;">She</span>
+                                        <span style="background: #f1f5f9; color: #475569; padding: 2px 10px; border-radius: 6px; font-weight: bold; border: 1px solid #e2e8f0;">It</span>
+                                    </div>
+                                    <div style="color: #cbd5e1;">➔</div>
+                                    <div style="color: #c026d3; font-weight: bold; font-size: 1.1rem;"><span style="background: #c026d3; color: white; padding: 4px 12px; border-radius: 20px;">has</span> &nbsp;+ V3/ed</div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- 5. TLĐ -->
-                <div style="background: #eff6ff; border-radius: 12px; border: 1px solid #dbeafe; padding: 16px;">
-                    <div style="font-weight: bold; color: #1d4ed8; font-size: 1.15rem; margin-bottom: 12px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
-                        <span>5. Tương lai đơn <span style="font-size: 0.95rem; font-weight: normal; color: #1e3a8a; margin-left: 8px;">(Sự việc sẽ xảy ra)</span></span>
-                        <div style="font-weight: bold; color: #2563eb; background: #dbeafe; padding: 4px 12px; border-radius: 6px; font-family: monospace; font-size: 1.1rem;">will be & will + Vo</div>
+                <div style="background: white; border-radius: 16px; border: 1px solid #bfdbfe; padding: 24px; box-shadow: 0 4px 12px rgba(37,99,235,0.05); position: relative; overflow: hidden;">
+                    <div style="position: absolute; top: 0; left: 0; width: 6px; height: 100%; background: #2563eb;"></div>
+                    
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 16px; margin-bottom: 20px; border-bottom: 2px dashed #dbeafe; padding-bottom: 16px;">
+                        <div>
+                            <h4 style="color: #1d4ed8; font-size: 1.35rem; font-weight: 800; margin: 0 0 6px 0; display: flex; align-items: center; gap: 10px;">
+                                <span style="background: #2563eb; color: white; width: 32px; height: 32px; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; font-size: 1.1rem;">5</span>
+                                Tương lai đơn
+                            </h4>
+                            <div style="color: #1e3a8a; font-size: 1rem; font-style: italic;">Sự việc sẽ xảy ra</div>
+                        </div>
+                        <div style="background: #eff6ff; border: 1px solid #93c5fd; padding: 6px 16px; border-radius: 30px; color: #2563eb; font-weight: bold; font-family: monospace; font-size: 1.15rem; box-shadow: inset 0 2px 4px rgba(37,99,235,0.05);">will be &nbsp;|&nbsp; will + Vo</div>
                     </div>
                     
-                    <div style="display: flex; flex-direction: column; gap: 12px;">
-                        <div style="background: white; border-radius: 8px; border: 1px solid #dbeafe; overflow: hidden;">
-                            <div style="background: #dbeafe; padding: 8px 16px; font-weight: bold; color: #1d4ed8; font-size: 1.05rem;">🔹 Với động từ TO-BE (will be)</div>
-                            <div style="padding: 12px 16px;">
-                                • <b style="color: #2563eb;">Tất cả các ngôi</b> đều dùng chung một dạng <b style="color: #2563eb;">will be</b>.
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px;">
+                        <!-- TO-BE -->
+                        <div style="background: #eff6ff; border-radius: 12px; padding: 16px; border: 1px solid #dbeafe;">
+                            <div style="font-weight: 800; color: #1e3a8a; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; font-size: 1.1rem;">
+                                <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+                                Động từ TO-BE
+                            </div>
+                            <div style="background: white; border-radius: 8px; padding: 16px; text-align: center; border: 2px dashed #93c5fd; box-shadow: 0 1px 3px rgba(0,0,0,0.04);">
+                                <div style="color: #475569; font-size: 1.1rem; font-weight: 600; margin-bottom: 12px;">Tất cả các ngôi đều dùng:</div>
+                                <div style="display: inline-block; background: #2563eb; color: white; padding: 8px 24px; border-radius: 30px; font-weight: bold; font-size: 1.2rem; box-shadow: 0 2px 4px rgba(37,99,235,0.2);">will be</div>
                             </div>
                         </div>
-                        <div style="background: white; border-radius: 8px; border: 1px solid #dbeafe; overflow: hidden;">
-                            <div style="background: #dbeafe; padding: 8px 16px; font-weight: bold; color: #1d4ed8; font-size: 1.05rem;">🔹 Với động từ THƯỜNG (will + Vo)</div>
-                            <div style="padding: 12px 16px;">
-                                • <b style="color: #2563eb;">Tất cả các ngôi</b> đều dùng chung một dạng <b style="color: #2563eb;">will + Vo</b>.
+
+                        <!-- THƯỜNG -->
+                        <div style="background: #eff6ff; border-radius: 12px; padding: 16px; border: 1px solid #dbeafe;">
+                            <div style="font-weight: 800; color: #1e3a8a; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; font-size: 1.1rem;">
+                                <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/></svg>
+                                Động từ THƯỜNG
+                            </div>
+                            <div style="background: white; border-radius: 8px; padding: 16px; text-align: center; border: 2px dashed #93c5fd; box-shadow: 0 1px 3px rgba(0,0,0,0.04);">
+                                <div style="color: #475569; font-size: 1.1rem; font-weight: 600; margin-bottom: 12px;">Tất cả các ngôi đều dùng:</div>
+                                <div style="display: inline-flex; align-items: center; justify-content: center; font-size: 1.2rem; font-weight: bold; color: #2563eb;">
+                                    <span style="background: #2563eb; color: white; padding: 8px 24px; border-radius: 30px; box-shadow: 0 2px 4px rgba(37,99,235,0.2);">will</span>
+                                    <span style="margin-left: 12px;">+ Vo</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
             </div>
-        </div>`
+        </div></div>`
     },
     {
         title: "🌟 4. Động từ khiếm khuyết (Modal Verbs)",
