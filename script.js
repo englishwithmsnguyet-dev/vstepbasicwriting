@@ -2986,16 +2986,16 @@ const nounsPracticeExtra2Data = [
     { q: "các hoạt động ngoại khóa bổ ích", a: ["beneficial extracurricular activities", "useful extracurricular activities"] }
 ];
 const nounsPracticeExtra3Data = [
-    { q: "Môi trường trong sạch là một vấn đề quan trọng.", a: ["A clean environment is an important issue.", "A clean environment is an important problem."] },
-    { q: "Anh ấy là một giáo viên rất giỏi.", a: ["He is a very good teacher.", "He is a great teacher."] },
-    { q: "Việc học tiếng Anh mang lại nhiều lợi ích tuyệt vời.", a: ["Learning English brings many great benefits.", "Learning English brings a lot of great benefits."] },
-    { q: "Thành phố này có một hệ thống giao thông công cộng hiện đại.", a: ["This city has a modern public transportation system.", "This city has a modern public transport system."] },
-    { q: "Ô nhiễm không khí là một vấn đề xã hội nghiêm trọng.", a: ["Air pollution is a serious social problem.", "Air pollution is a serious social issue."] },
-    { q: "Họ đang xây dựng một tòa nhà chọc trời mới.", a: ["They are building a new skyscraper."] },
-    { q: "Cô ấy cần một vài lời khuyên hữu ích về việc học.", a: ["She needs some useful advice on studying.", "She needs some useful advice about studying."] },
-    { q: "Sự phát triển kinh tế nhanh chóng tạo ra nhiều cơ hội việc làm mới.", a: ["Rapid economic development creates many new job opportunities.", "Rapid economic growth creates many new job opportunities."] },
-    { q: "Chúng ta cần những phương pháp giảng dạy hiệu quả.", a: ["We need effective teaching methods."] },
-    { q: "Việc tham gia các hoạt động ngoại khóa là một ý tưởng hay.", a: ["Joining extracurricular activities is a good idea.", "Participating in extracurricular activities is a good idea."] }
+    { q: "Bảo vệ môi trường là một vấn đề quan trọng.", hint: "Environmental protection / important issue", a: ["Environmental protection is an important issue.", "Protecting the environment is an important issue.", "Environmental protection is an important problem."] },
+    { q: "Ông ấy là một giáo viên tiếng Anh rất giỏi.", hint: "a very good English teacher", a: ["He is a very good English teacher.", "He is a great English teacher."] },
+    { q: "Việc học tiếng Anh mang lại nhiều lợi ích tuyệt vời.", hint: "Learning English / bring / many great benefits", a: ["Learning English brings many great benefits.", "Learning English brings a lot of great benefits."] },
+    { q: "Thành phố này có một hệ thống giao thông công cộng hiện đại.", hint: "modern public transportation system", a: ["This city has a modern public transportation system.", "This city has a modern public transport system."] },
+    { q: "Ô nhiễm không khí là một vấn đề xã hội nghiêm trọng.", hint: "Air pollution / serious social problem", a: ["Air pollution is a serious social problem.", "Air pollution is a serious social issue."] },
+    { q: "Họ đang xây dựng một trung tâm thương mại mới.", hint: "build / new shopping mall", a: ["They are building a new shopping mall.", "They are building a new shopping center."] },
+    { q: "Cô ấy cần một vài lời khuyên hữu ích về việc học.", hint: "some useful advice / on studying", a: ["She needs some useful advice on studying.", "She needs some useful advice about studying."] },
+    { q: "Sự phát triển kinh tế nhanh chóng tạo ra nhiều cơ hội việc làm mới.", hint: "Rapid economic development / create / many new job opportunities", a: ["Rapid economic development creates many new job opportunities.", "Rapid economic growth creates many new job opportunities."] },
+    { q: "Chúng ta cần những phương pháp giảng dạy hiệu quả.", hint: "effective teaching methods", a: ["We need effective teaching methods."] },
+    { q: "Việc tham gia các hoạt động ngoại khóa là một trải nghiệm tuyệt vời.", hint: "Joining extracurricular activities / wonderful experience", a: ["Joining extracurricular activities is a wonderful experience.", "Participating in extracurricular activities is a wonderful experience.", "Joining extracurricular activities is a great experience."] }
 ];
 
 
@@ -3186,32 +3186,6 @@ window.renderNounsDetail = function(activeTab = 'theory') {
                         `).join('')}
                     </div>
                 </div>
-
-                <div style="margin-bottom: 40px;">
-                    <h2 style="color: var(--primary-color); font-size: 1.4rem; margin-bottom: 16px;">BÀI TẬP THÊM 3: DỊCH CÂU (CHỨA CỤM DANH TỪ)</h2>
-                    <p style="font-size: 1.1rem; margin-bottom: 24px; color: var(--text-muted);">Dịch các câu sau sang tiếng Anh. Chú ý sử dụng đúng cụm danh từ.</p>
-                    <div style="display: grid; gap: 16px;">
-                        ${nounsPracticeExtra3Data.map((q, idx) => `
-                            <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px;">
-                                <div style="font-size: 1.15rem; color: #1e293b; margin-bottom: 12px; font-weight: 500;">
-                                    <span style="color: var(--primary-color); font-weight: bold; margin-right: 8px;">${idx + 1}.</span>
-                                    ${q.q}
-                                </div>
-                                <input type="text" 
-                                    value="${window.nounsAnswersExtra3[idx] || ''}"
-                                    oninput="window.nounsAnswersExtra3[${idx}] = this.value; window.saveProgress(true); document.getElementById('transexp_extra3_${idx}').style.display = 'none';"
-                                    placeholder="Nhập câu trả lời bằng tiếng Anh (nhớ có dấu chấm ở cuối câu)..."
-                                    style="width: 100%; padding: 12px 16px; border: 2px solid #cbd5e1; border-radius: 8px; font-size: 1.1rem; outline: none; transition: all 0.2s;"
-                                    onfocus="this.style.borderColor='var(--primary-color)'; this.style.boxShadow='0 0 0 3px var(--primary-light)'"
-                                    onblur="this.style.borderColor='#cbd5e1'; this.style.boxShadow='none'">
-                                <div id="transexp_extra3_${idx}" style="display: none; margin-top: 12px; padding: 12px; border-radius: 8px; font-size: 1.05rem;"></div>
-                                <div style="text-align: right; margin-top: 12px;">
-                                    <button onclick="window.checkNounsTranslation('extra3', ${idx})" style="padding: 8px 24px; background: white; color: var(--primary-color); border: 2px solid var(--primary-color); border-radius: 20px; font-weight: bold; cursor: pointer; transition: all 0.2s;" onmouseover="this.style.background='var(--primary-color)'; this.style.color='white'" onmouseout="this.style.background='white'; this.style.color='var(--primary-color)'">Kiểm tra</button>
-                                </div>
-                            </div>
-                        `).join('')}
-                    </div>
-                </div>
             </div>
         `;
     } else if (activeTab === 'practice_extra') {
@@ -3336,6 +3310,7 @@ window.renderNounsDetail = function(activeTab = 'theory') {
                                 <div style="font-size: 1.15rem; color: #1e293b; margin-bottom: 12px; font-weight: 500;">
                                     <span style="color: var(--primary-color); font-weight: bold; margin-right: 8px;">${idx + 1}.</span>
                                     ${q.q}
+                                    ${q.hint ? `<div style="font-size: 1rem; color: #64748b; margin-top: 6px; font-weight: normal;">💡 <i>Gợi ý: ${q.hint}</i></div>` : ''}
                                 </div>
                                 <input type="text" 
                                     value="${window.nounsAnswersExtra3[idx] || ''}"
