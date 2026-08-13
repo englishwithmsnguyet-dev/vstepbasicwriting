@@ -1454,6 +1454,20 @@ const verbsPracticeBook3 = [
     { q: "Bạn có thể luyện viết mỗi ngày nếu bạn muốn giỏi kỹ năng viết.", a: ["You can practice writing every day if you want to be good at writing skills.", "You can practice writing every day if you want to be good at writing.", "You can practice writing every day if you want to be good at writing skill."], hint: "<b>Động từ khiếm khuyết:</b> có thể (can).<br><b>Từ vựng:</b> luyện tập (practice), giỏi (good at), kỹ năng viết (writing skills)." }
 ];
 
+
+const verbsPracticeExtra3Data = [
+    { q: "Học sinh phải mặc đồng phục khi đến trường.", a: ["Students must wear uniforms when going to school.", "Students have to wear uniforms when going to school.", "Students must wear a uniform when going to school.", "Students have to wear a uniform when going to school."], hint: "phải (must / have to), mặc đồng phục (wear uniforms)" },
+    { q: "Bạn nên ăn nhiều rau củ để giữ gìn sức khỏe.", a: ["You should eat more vegetables to keep healthy.", "You should eat a lot of vegetables to keep healthy.", "You should eat more vegetables to stay healthy.", "You should eat a lot of vegetables to stay healthy."], hint: "nên (should), nhiều rau củ (more vegetables / a lot of vegetables), giữ gìn sức khỏe (keep healthy / stay healthy)" },
+    { q: "Tôi có thể nói được ba ngôn ngữ.", a: ["I can speak three languages."], hint: "có thể (can), nói (speak), ba ngôn ngữ (three languages)" },
+    { q: "Chúng ta không được phép đỗ xe ở đây.", a: ["We must not park here.", "We mustn't park here.", "We are not allowed to park here."], hint: "không được phép (must not / mustn't), đỗ xe (park)" },
+    { q: "Có lẽ ngày mai trời sẽ mưa.", a: ["It may rain tomorrow.", "It might rain tomorrow.", "It will probably rain tomorrow."], hint: "có lẽ (may / might), trời mưa (rain)" },
+    { q: "Anh ấy sẽ đi du học vào năm tới.", a: ["He will study abroad next year."], hint: "sẽ (will), đi du học (study abroad), năm tới (next year)" },
+    { q: "Bạn không cần phải thức dậy sớm vào Chủ nhật.", a: ["You do not have to wake up early on Sunday.", "You don't have to wake up early on Sunday.", "You don't need to wake up early on Sunday.", "You do not need to wake up early on Sunday."], hint: "không cần phải (don't have to / don't need to), thức dậy sớm (wake up early)" },
+    { q: "Trẻ em nên nghe lời cha mẹ.", a: ["Children should listen to their parents.", "Kids should listen to their parents.", "Children ought to listen to their parents."], hint: "nên (should / ought to), nghe lời (listen to)" },
+    { q: "Cô ấy có thể bơi rất giỏi.", a: ["She can swim very well.", "She can swim very good."], hint: "có thể (can), bơi (swim), rất giỏi (very well)" },
+    { q: "Tôi phải hoàn thành bài tập này trước 10 giờ.", a: ["I must finish this assignment before 10 o'clock.", "I have to finish this assignment before 10 o'clock.", "I must finish this homework before 10 o'clock.", "I have to finish this homework before 10 o'clock."], hint: "phải (must / have to), hoàn thành (finish), bài tập này (this assignment / this homework), trước (before)" }
+];
+
 const verbsPractice1Data = [
     {
         q: "The group of students _____ waiting outside the classroom.",
@@ -4475,6 +4489,7 @@ window.renderVerbsDetail = function(activeTab = 'theory') {
     if (!window.verbsAnswers1) window.verbsAnswers1 = new Array(verbsPractice1Data.length).fill(null);
     if (!window.verbsAnswers2) window.verbsAnswers2 = new Array(verbsPractice2Data.length).fill('');
     if (!window.verbsAnswersPara) window.verbsAnswersPara = new Array(verbsPracticeParaData.answers.length).fill('');
+    if (!window.verbsAnswersExtra3) window.verbsAnswersExtra3 = new Array(verbsPracticeExtra3Data.length).fill('');
 
     const tabsHtml = `
         <div class="tabs-container">
@@ -4589,6 +4604,28 @@ window.renderVerbsDetail = function(activeTab = 'theory') {
         `).join('');
 
         // BÀI 5: Sửa lỗi sai (cũ là Bài 2)
+        
+        // BÀI 3: Dịch (Khiếm khuyết) EXTRA
+        const pExtra3Html = verbsPracticeExtra3Data.map((q, idx) => `
+            <div class="quiz-item" style="background: var(--bg-card); border-radius: 12px; padding: 20px; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color);">
+                <div style="display: flex; gap: 12px; align-items: flex-start; margin-bottom: 12px;">
+                    <div style="background: var(--primary-light); color: var(--primary-color); width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">${idx + 1}</div>
+                    <div style="flex-grow: 1;">
+                        <p style="font-size: 1.15rem; font-weight: 500; color: var(--text-main); margin-top: 4px; margin-bottom: 8px;">${q.q}</p>
+                        ${q.hint ? `<button onclick="const h = document.getElementById('verb_hint_extra3_${idx}'); h.style.display = h.style.display === 'none' ? 'block' : 'none';" style="background: none; border: none; color: #0284c7; font-size: 0.95rem; cursor: pointer; padding: 0; margin-bottom: 12px; display: flex; align-items: center; gap: 4px; font-weight: 500;"><span style="font-size: 1.1rem">💡</span> Xem gợi ý</button>
+                        <div id="verb_hint_extra3_${idx}" style="display: none; background: #f0f9ff; border-left: 4px solid #38bdf8; padding: 12px; border-radius: 4px; margin-bottom: 16px; font-size: 0.95rem; color: #0c4a6e; line-height: 1.6;">${q.hint}</div>` : ''}
+                    </div>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 8px; padding-left: 44px;">
+                    <input type="text" id="verb_trans_extra3_${idx}" placeholder="Nhập bản dịch tiếng Anh (nhớ có dấu chấm ở cuối câu)..." style="padding: 10px 16px; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 1.05rem; outline: none; transition: border-color 0.2s; width: 100%; box-sizing: border-box;" onfocus="this.style.borderColor='var(--primary-color)'" onblur="this.style.borderColor='#e2e8f0'" oninput="window.verbsAnswersExtra3[${idx}] = this.value; document.getElementById('verbexp_extra3_${idx}').style.display='none'; window.saveProgress(true);" value="${window.verbsAnswersExtra3[idx] || ''}">
+                    <button onclick="checkVerbsExtra3(${idx})" style="padding: 8px 16px; background: white; color: var(--primary-color); border: 2px solid var(--primary-color); border-radius: 20px; font-weight: bold; cursor: pointer; transition: all 0.2s; align-self: flex-start;" onmouseover="this.style.background='var(--primary-color)'; this.style.color='white'" onmouseout="this.style.background='white'; this.style.color='var(--primary-color)'">Kiểm tra</button>
+                </div>
+                <div style="padding-left: 44px;">
+                    <div id="verbexp_extra3_${idx}" style="display: none; margin-top: 12px; padding: 10px 12px; border-radius: 8px; font-size: 1rem;"></div>
+                </div>
+            </div>
+        `).join('');
+
         const p2Html = verbsPractice2Data.map((q, idx) => `
             <div class="quiz-item" style="background: var(--bg-card); border-radius: 12px; padding: 20px; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color);">
                 <div style="display: flex; gap: 12px; align-items: flex-start; margin-bottom: 16px;">
@@ -4660,33 +4697,46 @@ window.renderVerbsDetail = function(activeTab = 'theory') {
                 <div style="margin-top: 24px; animation: fadeIn 0.3s ease-out;">
                     <h1 style="color: #6366f1; font-size: 1.8rem; margin-bottom: 24px; text-align: center;">🚀 BÀI TẬP THÊM</h1>
 
-                    <!-- BÀI 4 (OLD 1) -->
+                    <!-- BÀI 1 (OLD 4) -->
                     <div style="background: white; border-radius: 16px; padding: 24px; box-shadow: var(--shadow-md); margin-bottom: 32px; border-top: 6px solid #6366f1;">
-                        <h2 style="color: #4f46e5; margin-bottom: 16px; font-size: 1.4rem;">Bài 4: Sự hòa hợp Chủ - Vị (Trắc nghiệm)</h2>
+                        <h2 style="color: #4f46e5; margin-bottom: 16px; font-size: 1.4rem;">Bài 1: Sự hòa hợp Chủ - Vị (Trắc nghiệm)</h2>
                         <p style="font-size: 1.1rem; margin-bottom: 24px; color: var(--text-muted);">Chọn dạng động từ đúng nhất để hoàn thành các câu sau.</p>
                         <div style="display: grid; gap: 16px;">
                             ${p1Html}
                         </div>
                         <div style="text-align: center; margin-top: 24px;">
-                            <button onclick="window.submitVerbs4()" style="padding: 12px 32px; background: #6366f1; color: white; border: none; border-radius: 20px; font-weight: bold; cursor: pointer; transition: all 0.2s; font-size: 1.1rem; box-shadow: 0 4px 12px rgba(99,102,241,0.3);">NỘP BÀI 4</button>
+                            <button onclick="window.submitVerbs4()" style="padding: 12px 32px; background: #6366f1; color: white; border: none; border-radius: 20px; font-weight: bold; cursor: pointer; transition: all 0.2s; font-size: 1.1rem; box-shadow: 0 4px 12px rgba(99,102,241,0.3);">NỘP BÀI 1</button>
                         </div>
                     </div>
 
-                    <!-- BÀI 5 (OLD 2) -->
+                    <!-- BÀI 2 (OLD 5) -->
                     <div style="background: white; border-radius: 16px; padding: 24px; box-shadow: var(--shadow-md); margin-bottom: 32px; border-top: 6px solid #ec4899;">
-                        <h2 style="color: #db2777; margin-bottom: 16px; font-size: 1.4rem;">Bài 5: Sửa lỗi sai về Thì / Động từ</h2>
+                        <h2 style="color: #db2777; margin-bottom: 16px; font-size: 1.4rem;">Bài 2: Sửa lỗi sai về Thì / Động từ</h2>
                         <p style="font-size: 1.1rem; margin-bottom: 24px; color: var(--text-muted);">Tìm ra lỗi sai trong cách chia động từ (phần bôi đậm) và viết lại dạng đúng.</p>
                         <div style="display: grid; gap: 16px;">
                             ${p2Html}
                         </div>
                         <div style="text-align: center; margin-top: 24px;">
-                            <button onclick="window.submitVerbs5()" style="padding: 12px 32px; background: #ec4899; color: white; border: none; border-radius: 20px; font-weight: bold; cursor: pointer; transition: all 0.2s; font-size: 1.1rem; box-shadow: 0 4px 12px rgba(236,72,153,0.3);">NỘP BÀI 5</button>
+                            <button onclick="window.submitVerbs5()" style="padding: 12px 32px; background: #ec4899; color: white; border: none; border-radius: 20px; font-weight: bold; cursor: pointer; transition: all 0.2s; font-size: 1.1rem; box-shadow: 0 4px 12px rgba(236,72,153,0.3);">NỘP BÀI 2</button>
                         </div>
                     </div>
 
-                    <!-- BÀI 6 (OLD 3) -->
+                    
+                    <!-- BÀI 3 EXTRA -->
+                    <div style="background: white; border-radius: 16px; padding: 24px; box-shadow: var(--shadow-md); margin-bottom: 32px; border-top: 6px solid #14b8a6;">
+                        <h2 style="color: #0d9488; margin-bottom: 16px; font-size: 1.4rem;">Bài 3: Động từ khiếm khuyết (Dịch câu)</h2>
+                        <p style="font-size: 1.1rem; margin-bottom: 24px; color: var(--text-muted);">Dịch các câu sau sang tiếng Anh. Chú ý sử dụng Động từ khiếm khuyết.</p>
+                        <div style="display: grid; gap: 16px;">
+                            ${pExtra3Html}
+                        </div>
+                        <div style="text-align: center; margin-top: 24px;">
+                            <button onclick="window.submitVerbsExtra3()" style="padding: 12px 32px; background: #14b8a6; color: white; border: none; border-radius: 20px; font-weight: bold; cursor: pointer; transition: all 0.2s; font-size: 1.1rem; box-shadow: 0 4px 12px rgba(20,184,166,0.3);">NỘP BÀI 3</button>
+                        </div>
+                    </div>
+
+                    <!-- BÀI 4 (OLD 6) -->
                     <div style="background: white; border-radius: 16px; padding: 24px; box-shadow: var(--shadow-md); margin-bottom: 32px; border-top: 6px solid #8b5cf6;">
-                        <h2 style="color: #7c3aed; margin-bottom: 16px; font-size: 1.4rem;">Bài 6: Điền từ vào đoạn văn</h2>
+                        <h2 style="color: #7c3aed; margin-bottom: 16px; font-size: 1.4rem;">Bài 4: Điền từ vào đoạn văn</h2>
                         <p style="font-size: 1.1rem; margin-bottom: 24px; color: var(--text-muted);">Chia động từ thích hợp vào các ô trống trong đoạn văn sau (Chú ý chia theo thì và chủ ngữ).</p>
                         <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 24px; font-size: 1.15rem; line-height: 2; color: #334155;">
                             ${paraHtml}
@@ -4694,7 +4744,7 @@ window.renderVerbsDetail = function(activeTab = 'theory') {
                         <div id="verb_para_explanation" style="display: none; margin-top: 20px; background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 12px; padding: 20px;">
                         </div>
                         <div style="text-align: center; margin-top: 24px;">
-                            <button onclick="window.submitVerbs6()" style="padding: 12px 32px; background: #8b5cf6; color: white; border: none; border-radius: 20px; font-weight: bold; cursor: pointer; transition: all 0.2s; font-size: 1.1rem; box-shadow: 0 4px 12px rgba(139,92,246,0.3);">NỘP BÀI 6</button>
+                            <button onclick="window.submitVerbs6()" style="padding: 12px 32px; background: #8b5cf6; color: white; border: none; border-radius: 20px; font-weight: bold; cursor: pointer; transition: all 0.2s; font-size: 1.1rem; box-shadow: 0 4px 12px rgba(139,92,246,0.3);">NỘP BÀI 4</button>
                         </div>
                     </div>
                 </div>
@@ -4837,6 +4887,65 @@ window.submitVerbs5 = function() {
         return;
     }
     window.showExerciseResult(correctCount, verbsPractice2Data.length, "KẾT QUẢ BÀI 5 (ĐỘNG TỪ)");
+}
+
+
+window.checkVerbsExtra3 = function(idx) {
+    const userInput = window.verbsAnswersExtra3[idx];
+    const expDiv = document.getElementById(`verbexp_extra3_${idx}`);
+    
+    if (!userInput || userInput.trim() === '') {
+        expDiv.style.display = 'block';
+        expDiv.style.background = '#fffbeb'; expDiv.style.color = '#b45309'; expDiv.style.borderLeft = '4px solid #f59e0b';
+        expDiv.innerHTML = '<b>⚠️ Bạn chưa nhập!</b> Vui lòng nhập bản dịch của bạn.';
+        return;
+    }
+    
+    const cleanUser = userInput.trim().toLowerCase().replace(/[.,!?;:]/g, '').replace(/\s+/g, ' ');
+    const validAnswers = verbsPracticeExtra3Data[idx].a;
+    let isCorrect = false;
+    
+    for (let ans of validAnswers) {
+        let cleanAns = ans.toLowerCase().replace(/[.,!?;:]/g, '').replace(/\s+/g, ' ');
+        if (cleanUser === cleanAns) {
+            isCorrect = true;
+            break;
+        }
+    }
+    
+    // Yêu cầu phải có dấu chấm ở cuối câu (giống bài danh từ)
+    const hasDot = userInput.trim().endsWith('.');
+    
+    expDiv.style.display = 'block';
+    if (isCorrect && hasDot) {
+        expDiv.style.background = '#f0fdf4'; expDiv.style.color = '#166534'; expDiv.style.borderLeft = '4px solid #22c55e';
+        expDiv.innerHTML = `<b>✅ CHÍNH XÁC!</b>`;
+    } else if (isCorrect && !hasDot) {
+        expDiv.style.background = '#fffbeb'; expDiv.style.color = '#b45309'; expDiv.style.borderLeft = '4px solid #f59e0b';
+        expDiv.innerHTML = `<b>⚠️ GẦN ĐÚNG!</b> Cuối câu bắt buộc phải có dấu chấm nhé!`;
+    } else {
+        expDiv.style.background = '#fef2f2'; expDiv.style.color = '#991b1b'; expDiv.style.borderLeft = '4px solid #ef4444';
+        expDiv.innerHTML = `<b>❌ CHƯA ĐÚNG.</b> Tham khảo: <b>${validAnswers[0]}</b>`;
+    }
+}
+
+window.submitVerbsExtra3 = function() {
+    let correctCount = 0;
+    verbsPracticeExtra3Data.forEach((q, idx) => {
+        window.checkVerbsExtra3(idx);
+        const userInput = window.verbsAnswersExtra3[idx];
+        if (userInput) {
+            const cleanUser = userInput.trim().toLowerCase().replace(/[.,!?;:]/g, '').replace(/\s+/g, ' ');
+            const hasDot = userInput.trim().endsWith('.');
+            for (let ans of q.a) {
+                if (cleanUser === ans.toLowerCase().replace(/[.,!?;:]/g, '').replace(/\s+/g, ' ') && hasDot) {
+                    correctCount++;
+                    break;
+                }
+            }
+        }
+    });
+    window.showExerciseResult(correctCount, verbsPracticeExtra3Data.length, "KẾT QUẢ BÀI 3 (ĐỘNG TỪ KHIẾM KHUYẾT)");
 }
 
 window.submitVerbs6 = function() {
