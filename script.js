@@ -3455,17 +3455,23 @@ window.checkNounsTranslation = function(type, idx) {
     const validAnswers = dataArr[idx].a;
     let isCorrect = false;
     for (let ans of validAnswers) {
-        if (cleanUser === ans.toLowerCase()) {
+        let cleanAns = ans.toLowerCase().replace(/[.,!?;:]/g, '').replace(/\s+/g, ' ');
+        if (cleanUser === cleanAns) {
             isCorrect = true;
             break;
         }
     }
     
+    const hasDot = userInput.trim().endsWith('.');
+    
     expDiv.style.display = 'block';
     
-    if (isCorrect) {
+    if (isCorrect && hasDot) {
         expDiv.style.background = '#f0fdf4'; expDiv.style.color = '#166534'; expDiv.style.borderLeft = '4px solid #22c55e';
         expDiv.innerHTML = `<b>✅ CHÍNH XÁC!</b>` + (dataArr[idx].exp ? ` ${dataArr[idx].exp}` : '');
+    } else if (isCorrect && !hasDot) {
+        expDiv.style.background = '#fffbeb'; expDiv.style.color = '#b45309'; expDiv.style.borderLeft = '4px solid #f59e0b';
+        expDiv.innerHTML = `<b>⚠️ GẦN ĐÚNG!</b> Cuối câu bắt buộc phải có dấu chấm nhé!` + (dataArr[idx].exp ? `<br><div style="margin-top: 8px; font-size: 0.95rem; color: #b45309;">📝 <b>Giải thích:</b> ${dataArr[idx].exp}</div>` : '');
     } else {
         const smartFeedback = window.generateFeedback ? window.generateFeedback(cleanUser, validAnswers) : '';
         expDiv.style.background = '#fef2f2'; expDiv.style.color = '#991b1b'; expDiv.style.borderLeft = '4px solid #ef4444';
