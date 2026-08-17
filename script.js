@@ -8186,62 +8186,109 @@ const conjunctionsPracticeBook1 = [
 const conjunctionsPracticeBook2 = [
     {
         prompt: "We should eat more vegetables and drink enough water because",
-        hint: "Gợi ý: chúng tốt cho sức khỏe của chúng ta (they are good for our health) / chúng giúp chúng ta giữ gìn sức khỏe (they help us stay healthy).",
+        hint: "<b>Gợi ý các hướng phát triển:</b> Nêu lý do về sức khỏe, duy trì vóc dáng, hoặc ngăn ngừa bệnh tật.",
+        references: [
+            "they are good for our health.",
+            "these things help us stay healthy.",
+            "we can maintain good health.",
+            "they provide essential vitamins and minerals for our body.",
+            "these habits allow us to stay healthy and prevent some health problems."
+        ],
         acceptable: [
             "they are good for our health",
             "these things help us stay healthy",
             "we can maintain good health",
+            "they provide essential vitamins and minerals for our body",
             "these habits allow us to stay healthy and prevent some health problems",
             "they help us stay healthy",
-            "it is good for our health"
+            "it is good for our health",
+            "they are very good for our health",
+            "they keep us healthy"
         ]
     },
     {
         prompt: "They do exercise regularly, so",
-        hint: "Gợi ý: họ có thể giữ dáng (they can stay in shape) / họ trở nên khỏe mạnh hơn (they become stronger and healthier).",
+        hint: "<b>Gợi ý các hướng phát triển:</b> Nêu kết quả về vóc dáng, sức bền, ít bị ốm hoặc cảm thấy tràn đầy năng lượng.",
+        references: [
+            "they can stay in shape.",
+            "they become stronger and healthier.",
+            "they rarely get sick easily.",
+            "they feel more energetic every day.",
+            "they can keep fit and reduce daily stress."
+        ],
         acceptable: [
             "they can stay in shape",
             "they become stronger and healthier",
             "they rarely get sick easily",
             "they feel more energetic every day",
+            "they can keep fit and reduce daily stress",
             "they can keep fit",
-            "they stay healthy"
+            "they stay healthy",
+            "they can maintain a good health"
         ]
     },
     {
         prompt: "Reading books can help us widen our knowledge, and",
-        hint: "Gợi ý: nó cũng cải thiện kỹ năng tư duy (it also improves our thinking skills) / chúng ta có thể làm giàu vốn từ vựng (we can enrich our vocabulary).",
+        hint: "<b>Gợi ý các hướng phát triển:</b> Bổ sung thêm lợi ích về tư duy, sáng tạo, bài học cuộc sống hoặc làm giàu vốn từ vựng.",
+        references: [
+            "it also improves our thinking skills.",
+            "it allows us to become more creative.",
+            "it gives us valuable lessons about life.",
+            "we can enrich our vocabulary.",
+            "it helps us relax after long hours of work."
+        ],
         acceptable: [
             "it also improves our thinking skills",
             "it allows us to become more creative",
             "it gives us valuable lessons about life",
             "we can enrich our vocabulary",
+            "it helps us relax after long hours of work",
             "it improves our vocabulary",
-            "it helps us relax"
+            "it helps us relax",
+            "it also enriches our vocabulary"
         ]
     },
     {
         prompt: "I still try to spend time doing homework every day although",
-        hint: "Gợi ý: tôi có rất nhiều việc khác phải làm (I have a lot of other things to do) / tôi cảm thấy mệt mỏi sau giờ học (I feel tired after school).",
+        hint: "<b>Gợi ý các hướng phát triển:</b> Nêu hoàn cảnh khó khăn đối lập như bận rộn nhiều việc, mệt mỏi sau giờ học, hoặc ít thời gian rảnh.",
+        references: [
+            "I have a lot of other things to do.",
+            "I feel tired after school.",
+            "I do not have a lot of free time.",
+            "my schedule is always busy.",
+            "I have to work a part-time job."
+        ],
         acceptable: [
             "I have a lot of other things to do",
             "I feel tired after school",
             "I do not have a lot of free time",
             "my schedule is always busy",
+            "I have to work a part-time job",
             "I am very busy",
-            "I don't have much free time"
+            "I don't have much free time",
+            "I am tired"
         ]
     },
     {
         prompt: "You can go to Ho Chi Minh City by coach, or",
-        hint: "Gợi ý: bạn có thể đi bằng máy bay nếu muốn tiết kiệm thời gian (you can travel there by plane if you want to save time) / bạn có thể đi tàu hỏa (you can take a train).",
+        hint: "<b>Gợi ý các hướng phát triển:</b> Đưa ra phương án di chuyển thay thế như máy bay, tàu hỏa, xe máy hoặc tự lái xe.",
+        references: [
+            "you can travel there by plane if you want to save time.",
+            "you can take a train for a more comfortable trip.",
+            "you can ride a motorbike if you like adventure.",
+            "you can drive there if you have a driving license.",
+            "you can book a flight for convenience."
+        ],
         acceptable: [
             "you can travel there by plane if you want to save time",
             "you can take a train for a more comfortable trip",
             "you can ride a motorbike if you like adventure",
             "you can drive there if you have a driving license",
+            "you can book a flight for convenience",
             "you can go by plane",
-            "you can take a train"
+            "you can take a train",
+            "you can travel by plane",
+            "you can travel by train"
         ]
     }
 ];
@@ -8484,7 +8531,7 @@ window.renderConjunctionsDetail = function(activeTab = 'theory') {
             </div>
         `).join('');
 
-        // BOOK 2 HTML: Hoàn thành vế câu
+        // BOOK 2 HTML: Hoàn thành vế câu (Có 5 đáp án tham khảo)
         const pBook2Html = conjunctionsPracticeBook2.map((q, idx) => `
             <div class="quiz-item" style="background: var(--bg-card); border-radius: 12px; padding: 20px; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color);">
                 <div style="display: flex; gap: 12px; align-items: flex-start; margin-bottom: 12px;">
@@ -8493,7 +8540,16 @@ window.renderConjunctionsDetail = function(activeTab = 'theory') {
                         <p style="font-size: 1.15rem; font-weight: 600; color: #1e293b; margin-top: 4px; margin-bottom: 6px;">
                             ${q.prompt} <span style="color: #db2777; font-weight: bold;">_____</span>
                         </p>
-                        <div style="font-size: 0.95rem; color: #64748b; font-style: italic;">💡 ${q.hint}</div>
+                        <div style="font-size: 0.95rem; color: #64748b; margin-bottom: 8px;">💡 ${q.hint}</div>
+                        <button onclick="const refDiv = document.getElementById('conj_ref_book2_${idx}'); refDiv.style.display = refDiv.style.display === 'none' ? 'block' : 'none';" style="background: none; border: none; color: #0284c7; font-size: 0.95rem; cursor: pointer; padding: 0; display: flex; align-items: center; gap: 4px; font-weight: 600; margin-bottom: 12px;">
+                            <span>📖</span> Xem 5 đáp án tham khảo mẫu
+                        </button>
+                        <div id="conj_ref_book2_${idx}" style="display: none; background: #f0fdf4; border-left: 4px solid #22c55e; padding: 12px 16px; border-radius: 6px; margin-bottom: 14px; font-size: 0.98rem; color: #166534; line-height: 1.6;">
+                            <b>📌 5 Đáp án tham khảo chuẩn:</b>
+                            <ol style="margin: 6px 0 0 0; padding-left: 20px; display: grid; gap: 4px;">
+                                ${q.references.map(ref => `<li><i>${q.prompt} <b>${ref}</b></i></li>`).join('')}
+                            </ol>
+                        </div>
                     </div>
                 </div>
                 <div style="display: flex; flex-direction: column; gap: 8px; padding-left: 44px;">
@@ -8724,12 +8780,12 @@ window.checkConjunctionsBook = function(bookId, idx) {
             expDiv.style.background = '#f0fdf4';
             expDiv.style.color = '#166534';
             expDiv.style.border = '1px solid #bbf7d0';
-            expDiv.innerHTML = "✅ <b>Chính xác!</b> Vế câu của bạn hoàn toàn hợp lý và đúng ngữ pháp.";
+            expDiv.innerHTML = `✅ <b>Chính xác!</b> Vế câu của bạn hoàn toàn hợp lý và đúng ngữ pháp.<br><br><b>💡 5 Đáp án tham khảo thêm:</b><br>${q.references.map((r, i) => `<b>${i+1}.</b> ${q.prompt} <i>${r}</i>`).join('<br>')}`;
         } else {
             expDiv.style.background = '#fef2f2';
             expDiv.style.color = '#991b1b';
             expDiv.style.border = '1px solid #fecaca';
-            expDiv.innerHTML = `❌ <b>Chưa phù hợp hoặc chưa khớp gợi ý.</b><br><br><b>💡 Các cách hoàn thành gợi ý:</b><br>- ${q.acceptable.slice(0, 3).join('<br>- ')}`;
+            expDiv.innerHTML = `❌ <b>Chưa phù hợp hoặc chưa đúng cấu trúc.</b><br><br><b>💡 5 Đáp án tham khảo mẫu:</b><br>${q.references.map((r, i) => `<b>${i+1}.</b> ${q.prompt} <i>${r}</i>`).join('<br>')}`;
         }
     }
 };
