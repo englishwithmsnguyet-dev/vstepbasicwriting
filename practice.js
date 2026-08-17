@@ -319,85 +319,23 @@ const selfPracticeData = {
     ],
     "structures": [
         {
-            "title": "Bài 1: Xác định cấu trúc câu S + V",
+            "title": "Bài 1: Xác định cấu trúc câu S + V + O",
             "type": "mcq",
-            "desc": "Xác định câu nào dưới đây mang cấu trúc S + V (Chủ ngữ + Nội động từ).",
-            "questions": [
-                {
-                    "q": "Câu nào dưới đây có cấu trúc <b>S + V</b>?",
-                    "options": [
-                        "The sun rises in the east.",
-                        "She loves English music.",
-                        "They bought a new car.",
-                        "He is a doctor."
-                    ],
-                    "a": 0,
-                    "exp": "The sun (S) + rises (V) + in the east (A) là cấu trúc S + V."
-                },
-                {
-                    "q": "Câu 'Many birds migrate in the winter' thuộc cấu trúc nào?",
-                    "options": [
-                        "S + V",
-                        "S + V + O",
-                        "S + V + C",
-                        "S + V + O + C"
-                    ],
-                    "a": 0,
-                    "exp": "Many birds (S) + migrate (V nội động từ) + in the winter (A)."
-                },
-                {
-                    "q": "Câu nào dưới đây sử dụng <b>Nội động từ</b> (không có tân ngữ theo sau)?",
-                    "options": [
-                        "The baby is sleeping soundly.",
-                        "She ate an apple.",
-                        "We visited our teacher.",
-                        "He wrote a letter."
-                    ],
-                    "a": 0,
-                    "exp": "is sleeping là nội động từ, soundly là trạng từ chỉ cách thức."
-                },
-                {
-                    "q": "Câu 'The accident happened last night' thuộc cấu trúc nào?",
-                    "options": [
-                        "S + V",
-                        "S + V + O",
-                        "S + V + C",
-                        "S + V + O + O"
-                    ],
-                    "a": 0,
-                    "exp": "The accident (S) + happened (V) + last night (A)."
-                },
-                {
-                    "q": "Trong câu 'Water boils at 100 degrees Celsius', động từ 'boils' là:",
-                    "options": [
-                        "Nội động từ trong cấu trúc S + V",
-                        "Ngoại động từ trong cấu trúc S + V + O",
-                        "Động từ liên kết",
-                        "Trợ động từ"
-                    ],
-                    "a": 0,
-                    "exp": "'boils' là nội động từ diễn tả hành động tự thân của chủ ngữ."
-                }
-            ]
-        },
-        {
-            "title": "Bài 2: Xác định cấu trúc câu S + V + O",
-            "type": "mcq",
-            "desc": "Xác định các thành phần trong cấu trúc S + V + O (Ngoại động từ + Tân ngữ).",
+            "desc": "Xác định các câu và thành phần thuộc cấu trúc Dạng 1: S + V + O (Ngoại động từ + Tân ngữ).",
             "questions": [
                 {
                     "q": "Câu nào dưới đây có cấu trúc <b>S + V + O</b>?",
                     "options": [
-                        "The government should protect the environment.",
-                        "The train arrived late.",
-                        "She looks very happy.",
-                        "They were sleeping."
+                        "She loves English music.",
+                        "The sun shines.",
+                        "They are students.",
+                        "He sleeps early."
                     ],
                     "a": 0,
-                    "exp": "The government (S) + should protect (V) + the environment (O)."
+                    "exp": "She (S) + loves (V) + English music (O)."
                 },
                 {
-                    "q": "Trong câu 'Many young people use social media every day', 'social media' đóng vai trò là:",
+                    "q": "Trong câu 'They eat pizza', 'pizza' đóng vai trò là:",
                     "options": [
                         "Tân ngữ (O)",
                         "Bổ ngữ (C)",
@@ -405,21 +343,10 @@ const selfPracticeData = {
                         "Trạng ngữ (A)"
                     ],
                     "a": 0,
-                    "exp": "'social media' là tân ngữ trực tiếp chịu tác động của 'use'."
+                    "exp": "'pizza' là tân ngữ chịu tác động từ hành động 'eat'."
                 },
                 {
-                    "q": "Câu nào dưới đây <b>KHÔNG</b> phải là cấu trúc S + V + O?",
-                    "options": [
-                        "The students are listening attentively.",
-                        "We finished the group assignment.",
-                        "She read an interesting book.",
-                        "He drives a modern car."
-                    ],
-                    "a": 0,
-                    "exp": "'The students are listening attentively' là cấu trúc S + V (are listening là nội động từ)."
-                },
-                {
-                    "q": "Câu 'Students should read many English books' thuộc cấu trúc nào?",
+                    "q": "Câu 'My friends visit me' thuộc cấu trúc nào?",
                     "options": [
                         "S + V + O",
                         "S + V",
@@ -427,39 +354,50 @@ const selfPracticeData = {
                         "S + V + O + C"
                     ],
                     "a": 0,
-                    "exp": "Students (S) + should read (V) + many English books (O)."
+                    "exp": "My friends (S) + visit (V) + me (O)."
                 },
                 {
-                    "q": "Xác định mô hình của câu 'This company produced modern electric cars':",
+                    "q": "Câu nào dưới đây <b>KHÔNG</b> phải là cấu trúc S + V + O?",
+                    "options": [
+                        "The baby cries.",
+                        "He drinks coffee.",
+                        "The cat chased a mouse.",
+                        "We bought a new car."
+                    ],
+                    "a": 0,
+                    "exp": "'The baby cries' là cấu trúc S + V (không có tân ngữ)."
+                },
+                {
+                    "q": "Xác định mô hình của câu 'The government protects the environment':",
                     "options": [
                         "S + V + O",
                         "S + V + C",
                         "S + V + A",
-                        "S + V + O + C"
+                        "S + V + O + O"
                     ],
                     "a": 0,
-                    "exp": "This company (S) + produced (V) + modern electric cars (O)."
+                    "exp": "The government (S) + protects (V) + the environment (O)."
                 }
             ]
         },
         {
-            "title": "Bài 3: Xác định cấu trúc câu S + V + C",
+            "title": "Bài 2: Xác định cấu trúc câu S + V + C",
             "type": "mcq",
-            "desc": "Nhận diện cấu trúc S + V + C với Động từ liên kết (Linking verbs).",
+            "desc": "Nhận diện cấu trúc Dạng 2: S + V + C với Động từ liên kết (Linking verbs: is/am/are/look/feel/seem/taste...).",
             "questions": [
                 {
                     "q": "Câu nào dưới đây có cấu trúc <b>S + V + C</b>?",
                     "options": [
-                        "Communication skills are very important for graduates.",
+                        "She is a doctor.",
                         "She bought a new dress.",
-                        "They painted the wall green.",
-                        "We gave him a gift."
+                        "They painted the wall.",
+                        "We visited our teacher."
                     ],
                     "a": 0,
-                    "exp": "Communication skills (S) + are (V liên kết) + very important (C) + for graduates (A)."
+                    "exp": "She (S) + is (V liên kết) + a doctor (C)."
                 },
                 {
-                    "q": "Trong câu 'This plan sounds very feasible', 'very feasible' là:",
+                    "q": "Trong câu 'The weather became cold', 'cold' là:",
                     "options": [
                         "Bổ ngữ cho chủ ngữ (Subject Complement)",
                         "Tân ngữ trực tiếp",
@@ -467,10 +405,10 @@ const selfPracticeData = {
                         "Tân ngữ gián tiếp"
                     ],
                     "a": 0,
-                    "exp": "'very feasible' là Bổ ngữ đứng sau linking verb 'sounds'."
+                    "exp": "'cold' là Bổ ngữ đứng sau linking verb 'became'."
                 },
                 {
-                    "q": "Câu 'The weather became colder at night' thuộc cấu trúc nào?",
+                    "q": "Câu 'He seems tired' thuộc cấu trúc nào?",
                     "options": [
                         "S + V + C",
                         "S + V + O",
@@ -478,21 +416,21 @@ const selfPracticeData = {
                         "S + V + O + C"
                     ],
                     "a": 0,
-                    "exp": "The weather (S) + became (V liên kết) + colder (C) + at night (A)."
+                    "exp": "He (S) + seems (V liên kết) + tired (C)."
                 },
                 {
                     "q": "Câu nào dưới đây sử dụng <b>Động từ liên kết (Linking verb)</b>?",
                     "options": [
-                        "She looked very confident in the interview.",
-                        "She looked at the picture.",
-                        "She bought a picture.",
-                        "She painted a picture."
+                        "The music sounds great.",
+                        "She listened to the music.",
+                        "He played the music.",
+                        "They wrote the music."
                     ],
                     "a": 0,
-                    "exp": "'looked' trong câu A mang nghĩa 'trông có vẻ' (Linking verb)."
+                    "exp": "'sounds' mang nghĩa 'nghe có vẻ' (Linking verb)."
                 },
                 {
-                    "q": "Xác định cấu trúc của câu 'This soup tastes delicious':",
+                    "q": "Xác định cấu trúc của câu 'This food tastes delicious':",
                     "options": [
                         "S + V + C",
                         "S + V + O",
@@ -500,131 +438,193 @@ const selfPracticeData = {
                         "S + V + O + O"
                     ],
                     "a": 0,
-                    "exp": "This soup (S) + tastes (V liên kết) + delicious (C)."
+                    "exp": "This food (S) + tastes (V liên kết) + delicious (C)."
                 }
             ]
         },
         {
-            "title": "Bài 4: Xác định cấu trúc câu S + V + O + O (2 Tân ngữ)",
+            "title": "Bài 3: Xác định cấu trúc câu S + V",
             "type": "mcq",
-            "desc": "Nhận diện cấu trúc 2 Tân ngữ: Tân ngữ gián tiếp (người) & Tân ngữ trực tiếp (vật).",
+            "desc": "Xác định cấu trúc Dạng 3: S + V (Chủ ngữ + Nội động từ, không có tân ngữ).",
             "questions": [
                 {
-                    "q": "Câu nào dưới đây có cấu trúc <b>S + V + O + O</b>?",
+                    "q": "Câu nào dưới đây có cấu trúc <b>S + V</b>?",
                     "options": [
-                        "The teacher sent us the revision materials via email.",
-                        "The teacher explained the lesson clearly.",
-                        "The teacher became the principal.",
-                        "The teacher made the lesson interesting."
+                        "The sun shines.",
+                        "She loves music.",
+                        "They bought a new car.",
+                        "He is a doctor."
                     ],
                     "a": 0,
-                    "exp": "The teacher (S) + sent (V) + us (O gián tiếp) + the revision materials (O trực tiếp) + via email (A)."
+                    "exp": "The sun (S) + shines (V) là cấu trúc S + V."
                 },
                 {
-                    "q": "Trong câu 'My father bought me a new laptop', 'me' và 'a new laptop' lần lượt là:",
+                    "q": "Câu 'Birds fly' thuộc cấu trúc nào?",
                     "options": [
-                        "Tân ngữ gián tiếp & Tân ngữ trực tiếp",
-                        "Tân ngữ trực tiếp & Bổ ngữ",
-                        "Chủ ngữ & Tân ngữ",
-                        "Tân ngữ & Trạng ngữ"
-                    ],
-                    "a": 0,
-                    "exp": "'me' là tân ngữ gián tiếp (chỉ người nhận), 'a new laptop' là tân ngữ trực tiếp (vật)."
-                },
-                {
-                    "q": "Câu 'They told us an interesting story' thuộc cấu trúc nào?",
-                    "options": [
-                        "S + V + O + O",
-                        "S + V + O + C",
+                        "S + V",
                         "S + V + O",
+                        "S + V + C",
+                        "S + V + O + C"
+                    ],
+                    "a": 0,
+                    "exp": "Birds (S) + fly (V nội động từ)."
+                },
+                {
+                    "q": "Câu nào dưới đây sử dụng <b>Nội động từ</b>?",
+                    "options": [
+                        "The baby is sleeping.",
+                        "She ate an apple.",
+                        "We visited our teacher.",
+                        "He wrote a letter."
+                    ],
+                    "a": 0,
+                    "exp": "'is sleeping' là nội động từ diễn tả hành động tự thân."
+                },
+                {
+                    "q": "Câu 'They laughed' thuộc cấu trúc nào?",
+                    "options": [
+                        "S + V",
+                        "S + V + O",
+                        "S + V + C",
+                        "S + V + O + O"
+                    ],
+                    "a": 0,
+                    "exp": "They (S) + laughed (V)."
+                },
+                {
+                    "q": "Trong câu 'It is raining', động từ 'is raining' là:",
+                    "options": [
+                        "Nội động từ trong cấu trúc S + V",
+                        "Ngoại động từ trong cấu trúc S + V + O",
+                        "Động từ liên kết",
+                        "Bổ ngữ"
+                    ],
+                    "a": 0,
+                    "exp": "'is raining' là nội động từ."
+                }
+            ]
+        },
+        {
+            "title": "Bài 4: Xác định cấu trúc câu S + V + O + Adv",
+            "type": "mcq",
+            "desc": "Nhận diện cấu trúc Dạng 4: S + V + O + Adv (Tân ngữ kèm Trạng ngữ bổ sung bối cảnh).",
+            "questions": [
+                {
+                    "q": "Câu nào dưới đây có cấu trúc <b>S + V + O + Adv</b>?",
+                    "options": [
+                        "She sings a song beautifully.",
+                        "She is very beautiful.",
+                        "She gave me a gift.",
+                        "The sun shines brightly."
+                    ],
+                    "a": 0,
+                    "exp": "She (S) + sings (V) + a song (O) + beautifully (Adv)."
+                },
+                {
+                    "q": "Trong câu 'They played football in the yard', 'in the yard' là:",
+                    "options": [
+                        "Trạng ngữ chỉ nơi chốn (Adv)",
+                        "Tân ngữ trực tiếp",
+                        "Bổ ngữ",
+                        "Chủ ngữ"
+                    ],
+                    "a": 0,
+                    "exp": "'in the yard' là cụm trạng ngữ chỉ nơi chốn."
+                },
+                {
+                    "q": "Câu 'I met my friends at the park' thuộc cấu trúc nào?",
+                    "options": [
+                        "S + V + O + Adv",
+                        "S + V + O + C",
+                        "S + V + C + Adv",
+                        "S + V + O + O"
+                    ],
+                    "a": 0,
+                    "exp": "I (S) + met (V) + my friends (O) + at the park (Adv)."
+                },
+                {
+                    "q": "Câu 'My mom cooked dinner yesterday' có thành phần 'yesterday' là:",
+                    "options": [
+                        "Trạng ngữ chỉ thời gian (Adv)",
+                        "Tân ngữ",
+                        "Bổ ngữ",
+                        "Động từ"
+                    ],
+                    "a": 0,
+                    "exp": "'yesterday' là trạng ngữ chỉ thời gian đứng cuối câu."
+                },
+                {
+                    "q": "Xác định cấu trúc câu 'The students read books quietly':",
+                    "options": [
+                        "S + V + O + Adv",
+                        "S + V + O + C",
+                        "S + V + O + O",
                         "S + V + C"
                     ],
                     "a": 0,
-                    "exp": "They (S) + told (V) + us (O gián tiếp) + an interesting story (O trực tiếp)."
-                },
-                {
-                    "q": "Câu nào dưới đây có thể viết lại thành cấu trúc có 'to' hoặc 'for'?",
-                    "options": [
-                        "She teaches students useful lessons.",
-                        "She is very kind to students.",
-                        "She loves teaching students.",
-                        "She makes students happy."
-                    ],
-                    "a": 0,
-                    "exp": "She teaches students useful lessons = She teaches useful lessons to students (S + V + O + O)."
-                },
-                {
-                    "q": "Xác định cấu trúc câu 'My friend lent me his dictionary':",
-                    "options": [
-                        "S + V + O + O",
-                        "S + V + O + C",
-                        "S + V + C",
-                        "S + V + O"
-                    ],
-                    "a": 0,
-                    "exp": "My friend (S) + lent (V) + me (O1) + his dictionary (O2)."
+                    "exp": "The students (S) + read (V) + books (O) + quietly (Adv)."
                 }
             ]
         },
         {
-            "title": "Bài 5: Xác định cấu trúc câu S + V + O + C (Bổ ngữ cho tân ngữ)",
+            "title": "Bài 5: Xác định cấu trúc câu S + V + O + C & S + V + O1 + O2",
             "type": "mcq",
-            "desc": "Nhận diện cấu trúc S + V + O + C với các động từ make, keep, elect, consider, find...",
+            "desc": "Phân biệt Dạng 5 (S + V + O + C) và Dạng 6 (S + V + O1 + O2).",
             "questions": [
                 {
                     "q": "Câu nào dưới đây có cấu trúc <b>S + V + O + C</b>?",
                     "options": [
-                        "Regular exercise keeps our body healthy.",
-                        "Regular exercise is good for our body.",
-                        "We do regular exercise every day.",
-                        "Regular exercise gives us many benefits."
+                        "The news made me sad.",
+                        "He told me a story.",
+                        "She gave me a gift.",
+                        "I sent him an email."
                     ],
                     "a": 0,
-                    "exp": "Regular exercise (S) + keeps (V) + our body (O) + healthy (C bổ nghĩa cho our body)."
+                    "exp": "The news (S) + made (V) + me (O) + sad (C)."
                 },
                 {
-                    "q": "Trong câu 'They elected her team leader', 'team leader' là:",
+                    "q": "Câu nào dưới đây có cấu trúc <b>S + V + O1 + O2</b> (2 Tân ngữ)?",
                     "options": [
-                        "Bổ ngữ cho tân ngữ (Object Complement)",
-                        "Tân ngữ gián tiếp",
-                        "Tân ngữ trực tiếp",
-                        "Trạng ngữ"
+                        "She gave me a gift.",
+                        "She painted her room blue.",
+                        "I found the movie boring.",
+                        "They named the baby John."
                     ],
                     "a": 0,
-                    "exp": "'team leader' là Bổ ngữ giải thích cho tân ngữ 'her' (bầu cô ấy làm gì)."
+                    "exp": "She (S) + gave (V) + me (O1 gián tiếp) + a gift (O2 trực tiếp)."
                 },
                 {
-                    "q": "Câu 'Music makes me feel relaxed after work' thuộc cấu trúc nào?",
+                    "q": "Trong câu 'I found the movie boring', 'boring' là:",
+                    "options": [
+                        "Bổ ngữ cho tân ngữ (C)",
+                        "Tân ngữ trực tiếp",
+                        "Trạng ngữ",
+                        "Tân ngữ gián tiếp"
+                    ],
+                    "a": 0,
+                    "exp": "'boring' là bổ ngữ mô tả tính chất của 'the movie'."
+                },
+                {
+                    "q": "Câu 'He told me a story' thuộc cấu trúc nào?",
+                    "options": [
+                        "S + V + O1 + O2",
+                        "S + V + O + C",
+                        "S + V + O + Adv",
+                        "S + V + C"
+                    ],
+                    "a": 0,
+                    "exp": "He (S) + told (V) + me (O1) + a story (O2)."
+                },
+                {
+                    "q": "Xác định cấu trúc của câu 'The long trip made us exhausted':",
                     "options": [
                         "S + V + O + C",
-                        "S + V + O + O",
-                        "S + V + C",
-                        "S + V + O"
+                        "S + V + O1 + O2",
+                        "S + V + O + Adv",
+                        "S + V + C"
                     ],
                     "a": 0,
-                    "exp": "Music (S) + makes (V) + me (O) + feel relaxed (C) + after work (A)."
-                },
-                {
-                    "q": "Trong câu 'I find this course extremely useful', 'extremely useful' là:",
-                    "options": [
-                        "Bổ ngữ bổ nghĩa cho 'this course'",
-                        "Tân ngữ trực tiếp",
-                        "Trạng ngữ chỉ nơi chốn",
-                        "Chủ ngữ"
-                    ],
-                    "a": 0,
-                    "exp": "Cấu trúc 'find + O + Adj/C' (thấy cái gì như thế nào)."
-                },
-                {
-                    "q": "Xác định cấu trúc của câu 'We should keep our classroom clean':",
-                    "options": [
-                        "S + V + O + C",
-                        "S + V + O + O",
-                        "S + V + C",
-                        "S + V + O"
-                    ],
-                    "a": 0,
-                    "exp": "We (S) + should keep (V) + our classroom (O) + clean (C)."
+                    "exp": "The long trip (S) + made (V) + us (O) + exhausted (C)."
                 }
             ]
         }
@@ -2710,7 +2710,7 @@ window.renderSelfPracticeView = function() {
                         <div style="background: #eff6ff; color: #2563eb; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">${qIdx + 1}</div>
                         <p style="font-size: 1.15rem; font-weight: 500; color: var(--text-main); margin: 4px 0 0 0;">${q.q}</p>
                     </div>
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding-left: 44px;">
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px; padding-left: 44px;">
                         ${q.options.map((opt, optIdx) => `
                             <button id="self_opt_${qIdx}_${optIdx}" onclick="window.selectSelfOption('${currentSelfTopicId}', ${currentSelfExerciseIdx}, ${qIdx}, ${optIdx})" style="padding: 10px 14px; border: 2px solid ${userChoice === optIdx ? 'var(--primary-color)' : '#e2e8f0'}; border-radius: 8px; background: ${userChoice === optIdx ? 'var(--primary-light)' : 'white'}; color: ${userChoice === optIdx ? 'var(--primary-color)' : '#334155'}; text-align: left; font-size: 1rem; cursor: pointer; transition: all 0.2s; font-weight: 500;">
                                 <b>${String.fromCharCode(65 + optIdx)}.</b> ${opt}
