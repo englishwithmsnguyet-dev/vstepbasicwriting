@@ -8537,13 +8537,16 @@ window.renderConjunctionsDetail = function(activeTab = 'theory') {
                 <div style="display: flex; gap: 12px; align-items: flex-start; margin-bottom: 12px;">
                     <div style="background: #fdf2f8; color: #db2777; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">${idx + 1}</div>
                     <div style="flex-grow: 1;">
-                        <p style="font-size: 1.15rem; font-weight: 600; color: #1e293b; margin-top: 4px; margin-bottom: 6px;">
+                        <p style="font-size: 1.15rem; font-weight: 600; color: #1e293b; margin-top: 4px; margin-bottom: 10px;">
                             ${q.prompt} <span style="color: #db2777; font-weight: bold;">_____</span>
                         </p>
-                        <div style="font-size: 0.95rem; color: #64748b; margin-bottom: 8px;">💡 ${q.hint}</div>
-                        <button onclick="const refDiv = document.getElementById('conj_ref_book2_${idx}'); refDiv.style.display = refDiv.style.display === 'none' ? 'block' : 'none';" style="background: none; border: none; color: #0284c7; font-size: 0.95rem; cursor: pointer; padding: 0; display: flex; align-items: center; gap: 4px; font-weight: 600; margin-bottom: 12px;">
-                            <span>📖</span> Xem 5 đáp án tham khảo mẫu
-                        </button>
+                        <div style="display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 12px;">
+                            ${q.hint ? `<button onclick="const h = document.getElementById('conj_hint_book2_${idx}'); h.style.display = h.style.display === 'none' ? 'block' : 'none';" style="background: none; border: none; color: #0284c7; font-size: 0.95rem; cursor: pointer; padding: 0; display: flex; align-items: center; gap: 4px; font-weight: 500;"><span style="font-size: 1.1rem">💡</span> Xem gợi ý</button>` : ''}
+                            <button onclick="const refDiv = document.getElementById('conj_ref_book2_${idx}'); refDiv.style.display = refDiv.style.display === 'none' ? 'block' : 'none';" style="background: none; border: none; color: #16a34a; font-size: 0.95rem; cursor: pointer; padding: 0; display: flex; align-items: center; gap: 4px; font-weight: 600;">
+                                <span style="font-size: 1.1rem">📖</span> Xem 5 đáp án tham khảo
+                            </button>
+                        </div>
+                        ${q.hint ? `<div id="conj_hint_book2_${idx}" style="display: none; background: #f0f9ff; border-left: 4px solid #38bdf8; padding: 12px; border-radius: 4px; margin-bottom: 14px; font-size: 0.95rem; color: #0c4a6e; line-height: 1.6;">${q.hint}</div>` : ''}
                         <div id="conj_ref_book2_${idx}" style="display: none; background: #f0fdf4; border-left: 4px solid #22c55e; padding: 12px 16px; border-radius: 6px; margin-bottom: 14px; font-size: 0.98rem; color: #166534; line-height: 1.6;">
                             <b>📌 5 Đáp án tham khảo chuẩn:</b>
                             <ol style="margin: 6px 0 0 0; padding-left: 20px; display: grid; gap: 4px;">
