@@ -1404,27 +1404,181 @@ const verbsTheoryData = [
         title: "🌟 4. Động từ khiếm khuyết (Modal Verbs)",
         content: `
         <div style="font-size: 1.1rem; line-height: 1.7; color: var(--text-main);">
-            <p>Động từ khiếm khuyết là những động từ đặc biệt dùng để diễn tả <b>khả năng, sự cho phép, sự bắt buộc, hoặc lời khuyên</b>. Chúng <b>không bao giờ đứng một mình</b> mà luôn đi kèm với một động từ thường ở dạng nguyên mẫu (Vo).</p>
-            
-            <div style="background: white; border: 1px solid #e2e8f0; border-radius: 12px; overflow: hidden; margin: 16px 0;">
-                <div style="background: #fdf2f8; padding: 10px 16px; font-weight: bold; border-bottom: 1px solid #fce7f3; color: #be185d;">📌 Một số Động từ khiếm khuyết thường gặp trong VSTEP</div>
-                <div style="padding: 16px; display: grid; gap: 12px;">
-                    <div><b style="color: #be185d;">Can / Could:</b> Có thể (Diễn tả khả năng).<br><i style="color: #64748b;">VD: Reading books <b>can help</b> you broaden your knowledge.</i></div>
-                    <div><b style="color: #be185d;">Should:</b> Nên (Diễn tả lời khuyên).<br><i style="color: #64748b;">VD: You <b>should study</b> hard.</i></div>
-                    <div><b style="color: #be185d;">Must / Have to:</b> Phải (Diễn tả sự bắt buộc).<br><i style="color: #64748b;">VD: Students <b>must submit</b> their assignments on time.</i></div>
-                    <div><b style="color: #be185d;">Will / Would:</b> Sẽ (Diễn tả ý định trong tương lai).<br><i style="color: #64748b;">VD: I <b>will go</b> to the library tomorrow.</i></div>
-                    <div><b style="color: #be185d;">May / Might:</b> Có lẽ (Diễn tả khả năng có thể xảy ra nhưng không chắc chắn).<br><i style="color: #64748b;">VD: It <b>might rain</b> later.</i></div>
+            <p style="margin-bottom: 16px;">
+                Động từ khiếm khuyết là những động từ đặc biệt dùng để bổ nghĩa cho động từ chính, diễn tả <b>khả năng, sự bắt buộc, lời khuyên, sự cho phép hoặc dự đoán</b>. 
+                Chúng <b>không bao giờ đứng một mình</b> mà luôn đi kèm với một động từ nguyên mẫu không "to" <b>(Vo)</b>.
+            </p>
+
+            <!-- CẤU TRÚC CHUNG -->
+            <div style="background: linear-gradient(135deg, #f8fafc, #f1f5f9); border: 2px solid #cbd5e1; border-radius: 12px; padding: 18px; margin-bottom: 24px;">
+                <div style="font-weight: 800; color: #1e293b; margin-bottom: 12px; font-size: 1.15rem; display: flex; align-items: center; gap: 8px;">
+                    <span style="background: #3b82f6; color: white; width: 28px; height: 28px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: 0.95rem;">📋</span>
+                    CẤU TRÚC NGỮ PHÁP CHUNG
+                </div>
+                <div style="display: grid; gap: 10px; font-family: monospace; font-size: 1.05rem;">
+                    <div style="background: white; padding: 8px 14px; border-radius: 8px; border: 1px solid #e2e8f0;">
+                        <b style="color: #16a34a;">(+) Khẳng định:</b> <span style="color: #2563eb; font-weight: bold;">S + Modal Verb + Vo</span>
+                        <span style="color: #64748b; font-family: sans-serif; font-size: 0.95rem; margin-left: 10px;">(VD: She <b style="color: #2563eb;">can speak</b> three languages.)</span>
+                    </div>
+                    <div style="background: white; padding: 8px 14px; border-radius: 8px; border: 1px solid #e2e8f0;">
+                        <b style="color: #dc2626;">(-) Phủ định:</b> <span style="color: #2563eb; font-weight: bold;">S + Modal Verb + not + Vo</span>
+                        <span style="color: #64748b; font-family: sans-serif; font-size: 0.95rem; margin-left: 10px;">(VD: We <b style="color: #2563eb;">should not waste</b> time.)</span>
+                    </div>
+                    <div style="background: white; padding: 8px 14px; border-radius: 8px; border: 1px solid #e2e8f0;">
+                        <b style="color: #d97706;">(?) Nghi vấn:</b> <span style="color: #2563eb; font-weight: bold;">Modal Verb + S + Vo?</span>
+                        <span style="color: #64748b; font-family: sans-serif; font-size: 0.95rem; margin-left: 10px;">(VD: <b style="color: #2563eb;">May I ask</b> a question?)</span>
+                    </div>
+                </div>
+                <div style="font-size: 0.95rem; color: #475569; margin-top: 10px; font-style: italic;">
+                    * Lưu ý: Tất cả các ngôi (I, you, he, she, they, we, danh từ số ít/số nhiều) đều dùng chung một dạng Modal Verb, <b>không thêm -s/-es</b>.
                 </div>
             </div>
 
-            <div style="margin-top: 16px; padding: 16px; background: #fffbeb; border: 2px dashed #f59e0b; border-radius: 12px;">
-                <div style="color: #b45309; font-weight: bold; margin-bottom: 8px;">⚠️ 3 NGUYÊN TẮC VÀNG</div>
-                <ol style="margin: 0; padding-left: 20px; display: grid; gap: 8px; color: #92400e;">
-                    <li><b>Không thêm s/es/ed/ing:</b> Động từ khiếm khuyết luôn giữ nguyên mẫu, không phân biệt chủ ngữ số ít hay số nhiều.<br><i style="color: #64748b;">(Đúng: He can swim. | Sai: He cans swim.)</i></li>
-                    <li><b>Luôn đi với Động từ nguyên mẫu (Vo):</b> Không có "to" ở giữa (trừ 'have to' / 'ought to').<br><i style="color: #64748b;">(Đúng: She should go. | Sai: She should to go.)</i></li>
-                    <li><b>Câu phủ định chỉ cần thêm "not" vào ngay sau nó:</b> cannot (can't), should not (shouldn't), must not (mustn't)...<br><i style="color: #64748b;">(Ngoại trừ: don't/doesn't have to)</i></li>
+            <!-- BẢNG PHÂN LOẠI CHI TIẾT -->
+            <div style="margin-bottom: 24px;">
+                <h4 style="color: #0f172a; font-size: 1.2rem; font-weight: 800; margin-bottom: 16px; display: flex; align-items: center; gap: 8px;">
+                    <span style="color: #ec4899;">📌</span> CÁC ĐỘNG TỪ KHIẾM KHUYẾT PHỔ BIẾN TRONG BÀI THI VSTEP
+                </h4>
+                
+                <div style="display: grid; gap: 16px;">
+                    
+                    <!-- 1. CAN / COULD / BE ABLE TO -->
+                    <div style="background: white; border: 1px solid #e2e8f0; border-radius: 12px; padding: 18px; border-left: 6px solid #3b82f6; box-shadow: 0 2px 4px rgba(0,0,0,0.03);">
+                        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; margin-bottom: 10px;">
+                            <div style="font-weight: 800; color: #1d4ed8; font-size: 1.15rem;">1. Can / Could / Be able to</div>
+                            <span style="background: #eff6ff; color: #1d4ed8; font-size: 0.9rem; padding: 3px 10px; border-radius: 12px; font-weight: 600;">Khả năng, năng lực</span>
+                        </div>
+                        <ul style="margin: 0; padding-left: 20px; display: grid; gap: 8px; color: #334155;">
+                            <li><b>Can + Vo:</b> Có thể làm gì ở hiện tại / tương lai.<br><i style="color: #64748b;">VD: Reading books <b>can help</b> you broaden your knowledge. (Đọc sách có thể giúp bạn mở rộng kiến thức.)</i></li>
+                            <li><b>Could + Vo:</b> Có thể làm gì trong quá khứ / Lời yêu cầu lịch sự.<br><i style="color: #64748b;">VD: In the past, people <b>could not communicate</b> as easily as today.</i></li>
+                            <li><b>Be able to + Vo:</b> Có khả năng (sau nỗ lực, dùng được cho tất cả các thì như *will be able to*).<br><i style="color: #64748b;">VD: Students <b>will be able to improve</b> their writing skills after this course.</i></li>
+                        </ul>
+                    </div>
+
+                    <!-- 2. SHOULD / OUGHT TO / HAD BETTER -->
+                    <div style="background: white; border: 1px solid #e2e8f0; border-radius: 12px; padding: 18px; border-left: 6px solid #10b981; box-shadow: 0 2px 4px rgba(0,0,0,0.03);">
+                        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; margin-bottom: 10px;">
+                            <div style="font-weight: 800; color: #047857; font-size: 1.15rem;">2. Should / Ought to / Had better</div>
+                            <span style="background: #ecfdf5; color: #047857; font-size: 0.9rem; padding: 3px 10px; border-radius: 12px; font-weight: 600;">Lời khuyên, đề xuất giải pháp (Rất phổ biến trong Viết luận)</span>
+                        </div>
+                        <ul style="margin: 0; padding-left: 20px; display: grid; gap: 8px; color: #334155;">
+                            <li><b>Should / Ought to + Vo:</b> Nên làm gì (đưa ra lời khuyên hoặc giải pháp).<br><i style="color: #64748b;">VD: The government <b>should invest</b> more money in public transport. (Chính phủ nên đầu tư nhiều tiền hơn vào giao thông công cộng.)</i></li>
+                            <li><b>Should not (Shouldn't) + Vo:</b> Không nên làm gì.<br><i style="color: #64748b;">VD: Young people <b>should not spend</b> too much time on social media.</i></li>
+                            <li><b>Had better + Vo:</b> Tốt hơn hết nên làm gì (mang tính cảnh báo hậu quả).<br><i style="color: #64748b;">VD: You <b>had better submit</b> the assignment before the deadline.</i></li>
+                        </ul>
+                    </div>
+
+                    <!-- 3. MUST / HAVE TO -->
+                    <div style="background: white; border: 1px solid #e2e8f0; border-radius: 12px; padding: 18px; border-left: 6px solid #f59e0b; box-shadow: 0 2px 4px rgba(0,0,0,0.03);">
+                        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; margin-bottom: 10px;">
+                            <div style="font-weight: 800; color: #b45309; font-size: 1.15rem;">3. Must / Have to</div>
+                            <span style="background: #fffbeb; color: #b45309; font-size: 0.9rem; padding: 3px 10px; border-radius: 12px; font-weight: 600;">Sự bắt buộc, sự cần thiết</span>
+                        </div>
+                        <ul style="margin: 0; padding-left: 20px; display: grid; gap: 8px; color: #334155;">
+                            <li><b>Must + Vo:</b> Phải làm gì (bắt buộc xuất phát từ ý thức chủ quan của người nói).<br><i style="color: #64748b;">VD: I <b>must study</b> harder to pass the VSTEP exam.</i></li>
+                            <li><b>Have to + Vo:</b> Phải làm gì (bắt buộc do luật lệ, nội quy hoặc hoàn cảnh khách quan).<br><i style="color: #64748b;">VD: Students <b>have to wear</b> uniforms on Mondays. (Học sinh phải mặc đồng phục vào thứ Hai.)</i></li>
+                        </ul>
+                        
+                        <!-- PHÂN BIỆT PHỦ ĐỊNH CỰC KỲ QUAN TRỌNG -->
+                        <div style="margin-top: 12px; background: #fff1f2; border: 1px solid #fecdd3; border-radius: 8px; padding: 12px;">
+                            <b style="color: #be123c;">⚠️ PHÂN BIỆT CỰC KỲ QUAN TRỌNG KHI PHỦ ĐỊNH:</b>
+                            <div style="display: grid; gap: 6px; margin-top: 6px; font-size: 0.98rem;">
+                                <div>• <b style="color: #e11d48;">Must not (Mustn't):</b> <b>CẤM</b>, tuyệt đối không được làm.<br><i style="color: #64748b;">VD: Candidates <b>must not use</b> smartphones in the exam room.</i></div>
+                                <div>• <b style="color: #0284c7;">Don't / Doesn't have to:</b> <b>KHÔNG CẦN PHẢI</b> làm (vẫn có thể làm nếu thích).<br><i style="color: #64748b;">VD: You <b>don't have to pay</b> for this service because it is free.</i></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 4. MAY / MIGHT -->
+                    <div style="background: white; border: 1px solid #e2e8f0; border-radius: 12px; padding: 18px; border-left: 6px solid #8b5cf6; box-shadow: 0 2px 4px rgba(0,0,0,0.03);">
+                        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; margin-bottom: 10px;">
+                            <div style="font-weight: 800; color: #6d28d9; font-size: 1.15rem;">4. May / Might</div>
+                            <span style="background: #f5f3ff; color: #6d28d9; font-size: 0.9rem; padding: 3px 10px; border-radius: 12px; font-weight: 600;">Dự đoán khả năng xảy ra (Không chắc chắn)</span>
+                        </div>
+                        <ul style="margin: 0; padding-left: 20px; display: grid; gap: 8px; color: #334155;">
+                            <li><b>May / Might + Vo:</b> Có thể / Có lẽ sẽ xảy ra.<br><i style="color: #64748b;">VD: Air pollution <b>may cause</b> severe respiratory diseases. (Ô nhiễm không khí có thể gây ra các bệnh hô hấp nghiêm trọng.)</i></li>
+                            <li><i>* Lưu ý: "May" diễn tả khả năng xảy ra cao hơn (khoảng 50%), còn "Might" diễn tả khả năng thấp hơn (khoảng 30%).</i></li>
+                        </ul>
+                    </div>
+
+                    <!-- 5. WILL / WOULD -->
+                    <div style="background: white; border: 1px solid #e2e8f0; border-radius: 12px; padding: 18px; border-left: 6px solid #0284c7; box-shadow: 0 2px 4px rgba(0,0,0,0.03);">
+                        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; margin-bottom: 10px;">
+                            <div style="font-weight: 800; color: #0369a1; font-size: 1.15rem;">5. Will / Would</div>
+                            <span style="background: #f0f9ff; color: #0369a1; font-size: 0.9rem; padding: 3px 10px; border-radius: 12px; font-weight: 600;">Ý định tương lai, lời hứa & Đề xuất lịch sự</span>
+                        </div>
+                        <ul style="margin: 0; padding-left: 20px; display: grid; gap: 8px; color: #334155;">
+                            <li><b>Will + Vo:</b> Sẽ (ý định quyết định ngay lúc nói hoặc dự đoán tương lai).<br><i style="color: #64748b;">VD: Technology <b>will continue</b> to change our lives in the future.</i></li>
+                            <li><b>Would + Vo:</b> Dùng trong câu điều kiện loại 2, 3 hoặc đề xuất, kiến nghị lịch sự trong viết thư/luận.<br><i style="color: #64748b;">VD: I <b>would recommend</b> that the manager improve the service quality.</i></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- 4 NGUYÊN TẮC VÀNG TRONG VSTEP -->
+            <div style="background: #fffbeb; border: 2px dashed #f59e0b; border-radius: 12px; padding: 20px; margin-bottom: 24px;">
+                <div style="color: #b45309; font-weight: 800; font-size: 1.15rem; margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+                    <span>⚡</span> 4 NGUYÊN TẮC VÀNG BẮT BUỘC NHỚ KHI VIẾT CÂU
+                </div>
+                <ol style="margin: 0; padding-left: 20px; display: grid; gap: 12px; color: #92400e;">
+                    <li>
+                        <b>Sau Động từ khiếm khuyết LUÔN LUÔN là Động từ nguyên mẫu (Vo):</b><br>
+                        Không bao giờ thêm <i>s/es/ed/ing</i> vào động từ theo sau, và không có "to" ở giữa (ngoại trừ <i>have to / ought to</i>).<br>
+                        <span style="color: #16a34a;">✅ Đúng: She can <b>speak</b> English.</span> | <span style="color: #dc2626;">❌ Sai: She can <b>speaks</b>... / She can <b>to speak</b>...</span>
+                    </li>
+                    <li>
+                        <b>Không biến đổi hình thức của Động từ khiếm khuyết:</b><br>
+                        Dù chủ ngữ là số ít (He, She, It) thì Modal verb vẫn giữ nguyên, không được thêm <i>s/es</i>.<br>
+                        <span style="color: #16a34a;">✅ Đúng: He <b>must</b> study hard.</span> | <span style="color: #dc2626;">❌ Sai: He <b>musts</b> study hard.</span>
+                    </li>
+                    <li>
+                        <b>Thêm trực tiếp "not" vào sau Modal Verb để tạo câu phủ định:</b><br>
+                        <i>cannot (viết liền), should not (shouldn't), must not (mustn't), will not (won't)...</i> (Trừ <i>have to</i> phải mượn trợ động từ: <i>don't / doesn't / didn't have to</i>).
+                    </li>
+                    <li>
+                        <b>Không bao giờ dùng 2 Động từ khiếm khuyết đứng liền nhau:</b><br>
+                        <span style="color: #dc2626;">❌ Sai: We <b>will can</b> finish the project soon.</span><br>
+                        <span style="color: #16a34a;">✅ Đúng: We <b>will be able to</b> finish the project soon.</span>
+                    </li>
                 </ol>
             </div>
+
+            <!-- BẢNG BẪY LỖI SAI THƯỜNG GẶP -->
+            <div style="background: white; border: 1px solid #e2e8f0; border-radius: 12px; overflow: hidden;">
+                <div style="background: #f8fafc; padding: 12px 16px; border-bottom: 1px solid #e2e8f0; font-weight: 800; color: #334155; display: flex; align-items: center; gap: 8px;">
+                    <span>🔍</span> BẢNG TỔNG HỢP CÁC LỖI SAI PHỔ BIẾN CỦA THÍ SINH
+                </div>
+                <div style="overflow-x: auto;">
+                    <table style="width: 100%; border-collapse: collapse; font-size: 1rem; text-align: left;">
+                        <thead>
+                            <tr style="background: #f1f5f9; color: #475569;">
+                                <th style="padding: 12px; border-bottom: 1px solid #e2e8f0; width: 45%;">❌ Câu Sai Ngữ Pháp</th>
+                                <th style="padding: 12px; border-bottom: 1px solid #e2e8f0; width: 55%;">✅ Câu Sửa Đúng</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="border-bottom: 1px solid #f1f5f9;">
+                                <td style="padding: 12px; color: #dc2626;">He <b>can plays</b> football very well.</td>
+                                <td style="padding: 12px; color: #16a34a;">He <b>can play</b> football very well. <i>(Sau can dùng Vo)</i></td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #f1f5f9; background: #fafafa;">
+                                <td style="padding: 12px; color: #dc2626;">You <b>should to practice</b> writing daily.</td>
+                                <td style="padding: 12px; color: #16a34a;">You <b>should practice</b> writing daily. <i>(Không có "to" sau should)</i></td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #f1f5f9;">
+                                <td style="padding: 12px; color: #dc2626;">She <b>musts do</b> her homework.</td>
+                                <td style="padding: 12px; color: #16a34a;">She <b>must do</b> her homework. <i>(Không thêm "s" vào must)</i></td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 12px; color: #dc2626;">They <b>will can</b> travel abroad.</td>
+                                <td style="padding: 12px; color: #16a34a;">They <b>will be able to</b> travel abroad. <i>(Dùng be able to thay vì can)</i></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
         </div>`
     }
 ];
