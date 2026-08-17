@@ -319,234 +319,312 @@ const selfPracticeData = {
     ],
     "structures": [
         {
-            "title": "Bài 1: Cấu trúc S + V (Nội động từ)",
-            "type": "trans",
-            "desc": "Dịch câu sử dụng cấu trúc S + V (không có tân ngữ theo sau).",
+            "title": "Bài 1: Xác định cấu trúc câu S + V",
+            "type": "mcq",
+            "desc": "Xác định câu nào dưới đây mang cấu trúc S + V (Chủ ngữ + Nội động từ).",
             "questions": [
                 {
-                    "q": "Mặt trời mọc ở hướng đông.",
-                    "a": [
-                        "The sun rises in the east."
+                    "q": "Câu nào dưới đây có cấu trúc <b>S + V</b>?",
+                    "options": [
+                        "The sun rises in the east.",
+                        "She loves English music.",
+                        "They bought a new car.",
+                        "He is a doctor."
                     ],
-                    "hint": "Mặt trời (The sun), mọc (rises), ở hướng đông (in the east)."
+                    "a": 0,
+                    "exp": "The sun (S) + rises (V) + in the east (A) là cấu trúc S + V."
                 },
                 {
-                    "q": "Nhiều loài chim di cư vào mùa đông.",
-                    "a": [
-                        "Many birds migrate in the winter.",
-                        "Many birds migrate in winter."
+                    "q": "Câu 'Many birds migrate in the winter' thuộc cấu trúc nào?",
+                    "options": [
+                        "S + V",
+                        "S + V + O",
+                        "S + V + C",
+                        "S + V + O + C"
                     ],
-                    "hint": "Nhiều loài chim (Many birds), di cư (migrate), vào mùa đông (in winter)."
+                    "a": 0,
+                    "exp": "Many birds (S) + migrate (V nội động từ) + in the winter (A)."
                 },
                 {
-                    "q": "Nước sôi ở 100 độ C.",
-                    "a": [
-                        "Water boils at 100 degrees Celsius.",
-                        "Water boils at 100 degrees C."
-                    ],
-                    "hint": "Nước (Water), sôi (boils), ở 100 độ C (at 100 degrees Celsius)."
-                },
-                {
-                    "q": "Đứa bé đang ngủ rất say.",
-                    "a": [
+                    "q": "Câu nào dưới đây sử dụng <b>Nội động từ</b> (không có tân ngữ theo sau)?",
+                    "options": [
                         "The baby is sleeping soundly.",
-                        "The baby is sleeping very soundly."
+                        "She ate an apple.",
+                        "We visited our teacher.",
+                        "He wrote a letter."
                     ],
-                    "hint": "Đứa bé (The baby), đang ngủ say (is sleeping soundly)."
+                    "a": 0,
+                    "exp": "is sleeping là nội động từ, soundly là trạng từ chỉ cách thức."
                 },
                 {
-                    "q": "Tai nạn đã xảy ra vào tối hôm qua.",
-                    "a": [
-                        "The accident happened last night.",
-                        "The accident occurred last night."
+                    "q": "Câu 'The accident happened last night' thuộc cấu trúc nào?",
+                    "options": [
+                        "S + V",
+                        "S + V + O",
+                        "S + V + C",
+                        "S + V + O + O"
                     ],
-                    "hint": "Tai nạn (The accident), đã xảy ra (happened/occurred), tối hôm qua (last night)."
+                    "a": 0,
+                    "exp": "The accident (S) + happened (V) + last night (A)."
+                },
+                {
+                    "q": "Trong câu 'Water boils at 100 degrees Celsius', động từ 'boils' là:",
+                    "options": [
+                        "Nội động từ trong cấu trúc S + V",
+                        "Ngoại động từ trong cấu trúc S + V + O",
+                        "Động từ liên kết",
+                        "Trợ động từ"
+                    ],
+                    "a": 0,
+                    "exp": "'boils' là nội động từ diễn tả hành động tự thân của chủ ngữ."
                 }
             ]
         },
         {
-            "title": "Bài 2: Cấu trúc S + V + O (Ngoại động từ)",
-            "type": "trans",
-            "desc": "Dịch câu sử dụng cấu trúc S + V + O.",
+            "title": "Bài 2: Xác định cấu trúc câu S + V + O",
+            "type": "mcq",
+            "desc": "Xác định các thành phần trong cấu trúc S + V + O (Ngoại động từ + Tân ngữ).",
             "questions": [
                 {
-                    "q": "Chính phủ nên bảo vệ môi trường.",
-                    "a": [
-                        "The government should protect the environment."
+                    "q": "Câu nào dưới đây có cấu trúc <b>S + V + O</b>?",
+                    "options": [
+                        "The government should protect the environment.",
+                        "The train arrived late.",
+                        "She looks very happy.",
+                        "They were sleeping."
                     ],
-                    "hint": "Chính phủ (The government), nên bảo vệ (should protect), môi trường (the environment)."
+                    "a": 0,
+                    "exp": "The government (S) + should protect (V) + the environment (O)."
                 },
                 {
-                    "q": "Chúng tôi đã hoàn thành bài tập nhóm vào tối qua.",
-                    "a": [
-                        "We finished the group assignment last night.",
-                        "We completed the group assignment last night."
+                    "q": "Trong câu 'Many young people use social media every day', 'social media' đóng vai trò là:",
+                    "options": [
+                        "Tân ngữ (O)",
+                        "Bổ ngữ (C)",
+                        "Chủ ngữ (S)",
+                        "Trạng ngữ (A)"
                     ],
-                    "hint": "hoàn thành (finished/completed), bài tập nhóm (the group assignment), tối qua (last night)."
+                    "a": 0,
+                    "exp": "'social media' là tân ngữ trực tiếp chịu tác động của 'use'."
                 },
                 {
-                    "q": "Nhiều người trẻ sử dụng mạng xã hội mỗi ngày.",
-                    "a": [
-                        "Many young people use social media every day.",
-                        "Many young people use social networks every day."
+                    "q": "Câu nào dưới đây <b>KHÔNG</b> phải là cấu trúc S + V + O?",
+                    "options": [
+                        "The students are listening attentively.",
+                        "We finished the group assignment.",
+                        "She read an interesting book.",
+                        "He drives a modern car."
                     ],
-                    "hint": "người trẻ (young people), sử dụng (use), mạng xã hội (social media), mỗi ngày (every day)."
+                    "a": 0,
+                    "exp": "'The students are listening attentively' là cấu trúc S + V (are listening là nội động từ)."
                 },
                 {
-                    "q": "Sinh viên nên đọc nhiều sách tiếng Anh.",
-                    "a": [
-                        "Students should read many English books.",
-                        "Students should read a lot of English books."
+                    "q": "Câu 'Students should read many English books' thuộc cấu trúc nào?",
+                    "options": [
+                        "S + V + O",
+                        "S + V",
+                        "S + V + C",
+                        "S + V + O + C"
                     ],
-                    "hint": "Sinh viên (Students), nên đọc (should read), sách tiếng Anh (English books)."
+                    "a": 0,
+                    "exp": "Students (S) + should read (V) + many English books (O)."
                 },
                 {
-                    "q": "Công ty này đã sản xuất những chiếc xe điện hiện đại.",
-                    "a": [
-                        "This company produced modern electric cars.",
-                        "This company has produced modern electric cars."
+                    "q": "Xác định mô hình của câu 'This company produced modern electric cars':",
+                    "options": [
+                        "S + V + O",
+                        "S + V + C",
+                        "S + V + A",
+                        "S + V + O + C"
                     ],
-                    "hint": "Công ty này (This company), sản xuất (produced/has produced), xe điện hiện đại (modern electric cars)."
+                    "a": 0,
+                    "exp": "This company (S) + produced (V) + modern electric cars (O)."
                 }
             ]
         },
         {
-            "title": "Bài 3: Cấu trúc S + V + C (Động từ liên kết)",
-            "type": "trans",
-            "desc": "Dịch câu sử dụng Động từ liên kết (is/am/are/look/feel/seem...).",
+            "title": "Bài 3: Xác định cấu trúc câu S + V + C",
+            "type": "mcq",
+            "desc": "Nhận diện cấu trúc S + V + C với Động từ liên kết (Linking verbs).",
             "questions": [
                 {
-                    "q": "Kỹ năng giao tiếp rất quan trọng đối với sinh viên tốt nghiệp.",
-                    "a": [
+                    "q": "Câu nào dưới đây có cấu trúc <b>S + V + C</b>?",
+                    "options": [
                         "Communication skills are very important for graduates.",
-                        "Communication skills are extremely important for graduates."
+                        "She bought a new dress.",
+                        "They painted the wall green.",
+                        "We gave him a gift."
                     ],
-                    "hint": "Kỹ năng giao tiếp (Communication skills), rất quan trọng (are very important), sinh viên tốt nghiệp (graduates)."
+                    "a": 0,
+                    "exp": "Communication skills (S) + are (V liên kết) + very important (C) + for graduates (A)."
                 },
                 {
-                    "q": "Kế hoạch này nghe có vẻ rất khả thi.",
-                    "a": [
-                        "This plan sounds very feasible.",
-                        "This plan seems very feasible.",
-                        "This plan sounds very practical."
+                    "q": "Trong câu 'This plan sounds very feasible', 'very feasible' là:",
+                    "options": [
+                        "Bổ ngữ cho chủ ngữ (Subject Complement)",
+                        "Tân ngữ trực tiếp",
+                        "Trạng ngữ chỉ thời gian",
+                        "Tân ngữ gián tiếp"
                     ],
-                    "hint": "Kế hoạch này (This plan), nghe có vẻ (sounds), khả thi (feasible / practical)."
+                    "a": 0,
+                    "exp": "'very feasible' là Bổ ngữ đứng sau linking verb 'sounds'."
                 },
                 {
-                    "q": "Thời tiết trở nên lạnh hơn vào ban đêm.",
-                    "a": [
-                        "The weather becomes colder at night.",
-                        "The weather gets colder at night."
+                    "q": "Câu 'The weather became colder at night' thuộc cấu trúc nào?",
+                    "options": [
+                        "S + V + C",
+                        "S + V + O",
+                        "S + V",
+                        "S + V + O + C"
                     ],
-                    "hint": "Thời tiết (The weather), trở nên (becomes/gets), lạnh hơn (colder), vào ban đêm (at night)."
+                    "a": 0,
+                    "exp": "The weather (S) + became (V liên kết) + colder (C) + at night (A)."
                 },
                 {
-                    "q": "Cô ấy trông rất tự tin trong buổi phỏng vấn.",
-                    "a": [
+                    "q": "Câu nào dưới đây sử dụng <b>Động từ liên kết (Linking verb)</b>?",
+                    "options": [
                         "She looked very confident in the interview.",
-                        "She looked very confident during the interview."
+                        "She looked at the picture.",
+                        "She bought a picture.",
+                        "She painted a picture."
                     ],
-                    "hint": "Cô ấy (She), trông (looked), tự tin (confident), buổi phỏng vấn (in/during the interview)."
+                    "a": 0,
+                    "exp": "'looked' trong câu A mang nghĩa 'trông có vẻ' (Linking verb)."
                 },
                 {
-                    "q": "Món súp này có mùi vị rất ngon.",
-                    "a": [
-                        "This soup tastes very delicious.",
-                        "This soup tastes delicious."
+                    "q": "Xác định cấu trúc của câu 'This soup tastes delicious':",
+                    "options": [
+                        "S + V + C",
+                        "S + V + O",
+                        "S + V",
+                        "S + V + O + O"
                     ],
-                    "hint": "Món súp này (This soup), có vị (tastes), rất ngon (very delicious)."
+                    "a": 0,
+                    "exp": "This soup (S) + tastes (V liên kết) + delicious (C)."
                 }
             ]
         },
         {
-            "title": "Bài 4: Cấu trúc S + V + O + O (2 Tân ngữ)",
-            "type": "trans",
-            "desc": "Dịch câu có 2 tân ngữ (Tân ngữ gián tiếp & Tân ngữ trực tiếp).",
+            "title": "Bài 4: Xác định cấu trúc câu S + V + O + O (2 Tân ngữ)",
+            "type": "mcq",
+            "desc": "Nhận diện cấu trúc 2 Tân ngữ: Tân ngữ gián tiếp (người) & Tân ngữ trực tiếp (vật).",
             "questions": [
                 {
-                    "q": "Giáo viên gửi cho chúng tôi tài liệu ôn tập qua email.",
-                    "a": [
+                    "q": "Câu nào dưới đây có cấu trúc <b>S + V + O + O</b>?",
+                    "options": [
                         "The teacher sent us the revision materials via email.",
-                        "The teacher sent us the review materials by email."
+                        "The teacher explained the lesson clearly.",
+                        "The teacher became the principal.",
+                        "The teacher made the lesson interesting."
                     ],
-                    "hint": "gửi cho chúng tôi (sent us), tài liệu ôn tập (revision materials / review materials), qua email (via email / by email)."
+                    "a": 0,
+                    "exp": "The teacher (S) + sent (V) + us (O gián tiếp) + the revision materials (O trực tiếp) + via email (A)."
                 },
                 {
-                    "q": "Bố tôi đã mua cho tôi một chiếc máy tính xách tay mới.",
-                    "a": [
-                        "My father bought me a new laptop.",
-                        "My dad bought me a new laptop."
+                    "q": "Trong câu 'My father bought me a new laptop', 'me' và 'a new laptop' lần lượt là:",
+                    "options": [
+                        "Tân ngữ gián tiếp & Tân ngữ trực tiếp",
+                        "Tân ngữ trực tiếp & Bổ ngữ",
+                        "Chủ ngữ & Tân ngữ",
+                        "Tân ngữ & Trạng ngữ"
                     ],
-                    "hint": "Bố tôi (My father), mua cho tôi (bought me), máy tính xách tay mới (a new laptop)."
+                    "a": 0,
+                    "exp": "'me' là tân ngữ gián tiếp (chỉ người nhận), 'a new laptop' là tân ngữ trực tiếp (vật)."
                 },
                 {
-                    "q": "Họ đã kể cho chúng tôi một câu chuyện thú vị.",
-                    "a": [
-                        "They told us an interesting story."
+                    "q": "Câu 'They told us an interesting story' thuộc cấu trúc nào?",
+                    "options": [
+                        "S + V + O + O",
+                        "S + V + O + C",
+                        "S + V + O",
+                        "S + V + C"
                     ],
-                    "hint": "Họ (They), kể cho chúng tôi (told us), câu chuyện thú vị (an interesting story)."
+                    "a": 0,
+                    "exp": "They (S) + told (V) + us (O gián tiếp) + an interesting story (O trực tiếp)."
                 },
                 {
-                    "q": "Cô ấy dạy học sinh những bài học bổ ích.",
-                    "a": [
+                    "q": "Câu nào dưới đây có thể viết lại thành cấu trúc có 'to' hoặc 'for'?",
+                    "options": [
                         "She teaches students useful lessons.",
-                        "She teaches her students useful lessons."
+                        "She is very kind to students.",
+                        "She loves teaching students.",
+                        "She makes students happy."
                     ],
-                    "hint": "dạy học sinh (teaches students), bài học bổ ích (useful lessons)."
+                    "a": 0,
+                    "exp": "She teaches students useful lessons = She teaches useful lessons to students (S + V + O + O)."
                 },
                 {
-                    "q": "Bạn tôi đã cho tôi mượn cuốn từ điển của anh ấy.",
-                    "a": [
-                        "My friend lent me his dictionary."
+                    "q": "Xác định cấu trúc câu 'My friend lent me his dictionary':",
+                    "options": [
+                        "S + V + O + O",
+                        "S + V + O + C",
+                        "S + V + C",
+                        "S + V + O"
                     ],
-                    "hint": "cho tôi mượn (lent me), từ điển của anh ấy (his dictionary)."
+                    "a": 0,
+                    "exp": "My friend (S) + lent (V) + me (O1) + his dictionary (O2)."
                 }
             ]
         },
         {
-            "title": "Bài 5: Cấu trúc S + V + O + C (Bổ ngữ cho tân ngữ)",
-            "type": "trans",
-            "desc": "Dịch câu sử dụng Bổ ngữ cho tân ngữ (make / keep / consider / find...).",
+            "title": "Bài 5: Xác định cấu trúc câu S + V + O + C (Bổ ngữ cho tân ngữ)",
+            "type": "mcq",
+            "desc": "Nhận diện cấu trúc S + V + O + C với các động từ make, keep, elect, consider, find...",
             "questions": [
                 {
-                    "q": "Tập thể dục thường xuyên giữ cho cơ thể chúng ta khỏe mạnh.",
-                    "a": [
+                    "q": "Câu nào dưới đây có cấu trúc <b>S + V + O + C</b>?",
+                    "options": [
                         "Regular exercise keeps our body healthy.",
-                        "Exercising regularly keeps our body healthy."
+                        "Regular exercise is good for our body.",
+                        "We do regular exercise every day.",
+                        "Regular exercise gives us many benefits."
                     ],
-                    "hint": "Tập thể dục thường xuyên (Regular exercise), giữ cho cơ thể (keeps our body), khỏe mạnh (healthy)."
+                    "a": 0,
+                    "exp": "Regular exercise (S) + keeps (V) + our body (O) + healthy (C bổ nghĩa cho our body)."
                 },
                 {
-                    "q": "Họ bầu cô ấy làm trưởng nhóm.",
-                    "a": [
-                        "They elected her team leader.",
-                        "They chose her as team leader.",
-                        "They appointed her team leader."
+                    "q": "Trong câu 'They elected her team leader', 'team leader' là:",
+                    "options": [
+                        "Bổ ngữ cho tân ngữ (Object Complement)",
+                        "Tân ngữ gián tiếp",
+                        "Tân ngữ trực tiếp",
+                        "Trạng ngữ"
                     ],
-                    "hint": "bầu (elected/appointed), cô ấy (her), trưởng nhóm (team leader)."
+                    "a": 0,
+                    "exp": "'team leader' là Bổ ngữ giải thích cho tân ngữ 'her' (bầu cô ấy làm gì)."
                 },
                 {
-                    "q": "Âm nhạc giúp tôi cảm thấy thư giãn sau giờ làm việc.",
-                    "a": [
-                        "Music makes me feel relaxed after work."
+                    "q": "Câu 'Music makes me feel relaxed after work' thuộc cấu trúc nào?",
+                    "options": [
+                        "S + V + O + C",
+                        "S + V + O + O",
+                        "S + V + C",
+                        "S + V + O"
                     ],
-                    "hint": "Âm nhạc (Music), làm tôi (makes me), thư giãn (feel relaxed), sau giờ làm việc (after work)."
+                    "a": 0,
+                    "exp": "Music (S) + makes (V) + me (O) + feel relaxed (C) + after work (A)."
                 },
                 {
-                    "q": "Tôi thấy khóa học này vô cùng hữu ích.",
-                    "a": [
-                        "I find this course extremely useful.",
-                        "I find this course very helpful."
+                    "q": "Trong câu 'I find this course extremely useful', 'extremely useful' là:",
+                    "options": [
+                        "Bổ ngữ bổ nghĩa cho 'this course'",
+                        "Tân ngữ trực tiếp",
+                        "Trạng ngữ chỉ nơi chốn",
+                        "Chủ ngữ"
                     ],
-                    "hint": "Tôi thấy (I find), khóa học này (this course), vô cùng hữu ích (extremely useful / very helpful)."
+                    "a": 0,
+                    "exp": "Cấu trúc 'find + O + Adj/C' (thấy cái gì như thế nào)."
                 },
                 {
-                    "q": "Chúng ta nên giữ cho lớp học luôn sạch sẽ.",
-                    "a": [
-                        "We should keep our classroom clean.",
-                        "We should keep the classroom clean."
+                    "q": "Xác định cấu trúc của câu 'We should keep our classroom clean':",
+                    "options": [
+                        "S + V + O + C",
+                        "S + V + O + O",
+                        "S + V + C",
+                        "S + V + O"
                     ],
-                    "hint": "nên giữ (should keep), lớp học (our/the classroom), sạch sẽ (clean)."
+                    "a": 0,
+                    "exp": "We (S) + should keep (V) + our classroom (O) + clean (C)."
                 }
             ]
         }
