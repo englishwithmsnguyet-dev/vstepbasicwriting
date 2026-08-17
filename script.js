@@ -4733,6 +4733,18 @@ window.renderVerbsDetail = function(activeTab = 'theory') {
                             <button onclick="window.submitVerbsBook3()" style="padding: 12px 32px; background: #10b981; color: white; border: none; border-radius: 20px; font-weight: bold; cursor: pointer; transition: all 0.2s; font-size: 1.1rem; box-shadow: 0 4px 12px rgba(16,185,129,0.3);">NỘP BÀI 3</button>
                         </div>
                     </div>
+
+                    <!-- BÀI 4 BOOK -->
+                    <div style="background: white; border-radius: 16px; padding: 24px; box-shadow: var(--shadow-md); margin-bottom: 32px; border-top: 6px solid #8b5cf6;">
+                        <h2 style="color: #7c3aed; margin-bottom: 16px; font-size: 1.4rem;">Bài 4: Luyện tập chung (Dịch câu)</h2>
+                        <p style="font-size: 1.1rem; margin-bottom: 24px; color: var(--text-muted);">Áp dụng các kiến thức đã học, chuyển các câu sau đây sang tiếng Anh.</p>
+                        <div style="display: grid; gap: 16px;">
+                            ${pBook4Html}
+                        </div>
+                        <div style="text-align: center; margin-top: 24px;">
+                            <button onclick="window.submitVerbsBook4()" style="padding: 12px 32px; background: #8b5cf6; color: white; border: none; border-radius: 20px; font-weight: bold; cursor: pointer; transition: all 0.2s; font-size: 1.1rem; box-shadow: 0 4px 12px rgba(139,92,246,0.3);">NỘP BÀI 4</button>
+                        </div>
+                    </div>
                 </div>
             `;
         } else if (activeTab === 'practice_extra') {
@@ -4766,17 +4778,7 @@ window.renderVerbsDetail = function(activeTab = 'theory') {
 
                     
 
-                    <!-- BÀI 4 BOOK -->
-                    <div style="background: white; border-radius: 16px; padding: 24px; box-shadow: var(--shadow-md); margin-bottom: 32px; border-top: 6px solid #8b5cf6;">
-                        <h2 style="color: #7c3aed; margin-bottom: 16px; font-size: 1.4rem;">Bài 4: Luyện tập chung (Dịch câu)</h2>
-                        <p style="font-size: 1.1rem; margin-bottom: 24px; color: var(--text-muted);">Áp dụng các kiến thức đã học, chuyển các câu sau đây sang tiếng Anh.</p>
-                        <div style="display: grid; gap: 16px;">
-                            ${pBook4Html}
-                        </div>
-                        <div style="text-align: center; margin-top: 24px;">
-                            <button onclick="window.submitVerbsBook4()" style="padding: 12px 32px; background: #8b5cf6; color: white; border: none; border-radius: 20px; font-weight: bold; cursor: pointer; transition: all 0.2s; font-size: 1.1rem; box-shadow: 0 4px 12px rgba(139,92,246,0.3);">NỘP BÀI 4</button>
-                        </div>
-                    </div>
+
 
                     <!-- BÀI 3 EXTRA -->
                     <div style="background: white; border-radius: 16px; padding: 24px; box-shadow: var(--shadow-md); margin-bottom: 32px; border-top: 6px solid #14b8a6;">
