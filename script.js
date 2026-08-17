@@ -1820,12 +1820,18 @@ window.openTopic = function(topicId, status) {
             'nouns': [...chap2Passes, 'b212'],
             'pronouns': chap2Passes,
             'verbs': chap2Passes,
-            'prepositions': chap2Passes,
             'adjectives': chap2Passes,
-            'adverbs': chap2Passes
+            'adverbs': chap2Passes,
+            'prepositions': chap2Passes,
+            'conjunctions': chap2Passes
         };
-        const validPasses = topicPasswords[topicId] || ['missnguyet2026'];
-        if (pass && validPasses.includes(pass.trim().toLowerCase())) {
+        const enteredPass = pass ? pass.trim().toLowerCase() : '';
+        const validPasses = topicPasswords[topicId] || chap2Passes;
+        
+        // Mật khẩu đặc biệt mở khóa tất cả các chủ điểm
+        const masterPasses = ['cb206', 'missnguyet2026'];
+        
+        if (enteredPass && (validPasses.includes(enteredPass) || masterPasses.includes(enteredPass))) {
             const topic1 = topicsData.find(t => t.id === topicId);
             if (topic1) topic1.status = 'unlocked';
             
