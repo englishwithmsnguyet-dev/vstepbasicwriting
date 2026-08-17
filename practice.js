@@ -2710,7 +2710,7 @@ window.renderSelfPracticeView = function() {
                         <div style="background: #eff6ff; color: #2563eb; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">${qIdx + 1}</div>
                         <p style="font-size: 1.15rem; font-weight: 500; color: var(--text-main); margin: 4px 0 0 0;">${q.q}</p>
                     </div>
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px; padding-left: 44px;">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding-left: 44px;">
                         ${q.options.map((opt, optIdx) => `
                             <button id="self_opt_${qIdx}_${optIdx}" onclick="window.selectSelfOption('${currentSelfTopicId}', ${currentSelfExerciseIdx}, ${qIdx}, ${optIdx})" style="padding: 10px 14px; border: 2px solid ${userChoice === optIdx ? 'var(--primary-color)' : '#e2e8f0'}; border-radius: 8px; background: ${userChoice === optIdx ? 'var(--primary-light)' : 'white'}; color: ${userChoice === optIdx ? 'var(--primary-color)' : '#334155'}; text-align: left; font-size: 1rem; cursor: pointer; transition: all 0.2s; font-weight: 500;">
                                 <b>${String.fromCharCode(65 + optIdx)}.</b> ${opt}

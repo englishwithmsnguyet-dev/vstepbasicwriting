@@ -8648,7 +8648,7 @@ window.renderConjunctionsDetail = function(activeTab = 'theory') {
                     <div style="background: #eff6ff; color: #2563eb; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">${idx + 1}</div>
                     <p style="font-size: 1.15rem; font-weight: 500; color: var(--text-main); margin-top: 4px; margin-bottom: 0;">${q.q}</p>
                 </div>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; padding-left: 44px;">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding-left: 44px;">
                     ${q.options.map((opt, optIdx) => `
                         <button class="option-btn" id="conj_extra1_opt_${idx}_${optIdx}" onclick="window.selectConjunctionsExtra1(${idx}, ${optIdx})" style="padding: 12px 16px; border: 2px solid #e2e8f0; border-radius: 8px; background: white; text-align: left; font-size: 1.05rem; cursor: pointer; transition: all 0.2s; font-weight: 500; color: #334155;">
                             <b>${String.fromCharCode(65 + optIdx)}.</b> ${opt}
