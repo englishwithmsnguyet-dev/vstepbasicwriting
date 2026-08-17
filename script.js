@@ -8382,10 +8382,10 @@ const conjunctionsPracticeExtra1 = [
         explanation: "Hai vế mang ý nghĩa tương phản (muốn đi chạy bộ nhưng trời lại mưa to) nên dùng liên từ 'but'."
     },
     {
-        q: "The weather was terrible; _____, we decided to delay our camping trip.",
-        options: ["however", "therefore", "although", "because"],
+        q: "The weather was terrible. _____, we decided to delay our camping trip.",
+        options: ["However", "Therefore", "Although", "Because"],
         answer: 1,
-        explanation: "Vế sau là kết quả tất yếu của vế trước (thời tiết xấu -> hoãn chuyến đi), đứng sau dấu chấm phẩy và trước dấu phẩy nên dùng trạng từ liên kết 'therefore'."
+        explanation: "Vế sau là kết quả tất yếu của câu trước (thời tiết xấu -> hoãn chuyến đi), đứng đầu câu và có dấu phẩy theo sau nên dùng trạng từ liên kết 'Therefore,'."
     },
     {
         q: "_____ studying online offers great flexibility, it requires a high level of self-discipline.",
@@ -8400,7 +8400,7 @@ const conjunctionsPracticeExtra1 = [
         explanation: "Câu thứ hai bổ sung thêm một lợi ích mới (giảm ùn tắc + giảm khí thải) nên dùng từ liên kết thêm ý 'Moreover,'."
     },
     {
-        q: "He didn't study for the exam, _____ he failed the test.",
+        q: "He did not study for the exam, _____ he failed the test.",
         options: ["so", "but", "because", "although"],
         answer: 0,
         explanation: "Vế sau là kết quả của vế trước trong cùng một câu (có dấu phẩy) nên dùng liên từ kết hợp 'so'."
@@ -8412,10 +8412,10 @@ const conjunctionsPracticeExtra1 = [
         explanation: "Cặp liên từ tương quan 'both ... and ...' dùng để chỉ cả hai thứ."
     },
     {
-        q: "You should leave early; _____, you might get stuck in heavy traffic.",
-        options: ["otherwise", "therefore", "furthermore", "although"],
+        q: "You should leave early. _____, you might get stuck in heavy traffic.",
+        options: ["Otherwise", "Therefore", "Furthermore", "Although"],
         answer: 0,
-        explanation: "'otherwise' mang nghĩa 'nếu không thì' (cảnh báo kết quả tiêu cực nếu không làm điều ở vế trước)."
+        explanation: "'Otherwise' mang nghĩa 'Nếu không thì' (cảnh báo kết quả tiêu cực nếu không làm điều ở câu trước)."
     },
     {
         q: "_____ the high tuition fees, many students still apply for this university.",
@@ -8428,16 +8428,15 @@ const conjunctionsPracticeExtra1 = [
 // BÀI 2 EXTRA: Dịch câu nâng cao với Từ nối (Chuẩn VSTEP Task 2 - 5 câu)
 const conjunctionsPracticeExtra2 = [
     {
-        q: "Học trực tuyến rất linh hoạt; tuy nhiên, nó đòi hỏi học sinh phải có tính tự giác cao.",
+        q: "Học trực tuyến rất linh hoạt. Tuy nhiên, nó đòi hỏi học sinh phải có tính tự giác cao.",
         a: [
-            "Online learning is very flexible; however, it requires students to have high self-discipline.",
             "Online learning is very flexible. However, it requires students to have high self-discipline.",
-            "Studying online is very flexible; however, it requires students to have high self-discipline.",
             "Studying online is very flexible. However, it requires students to have high self-discipline.",
-            "Online learning is flexible; however, it requires high self-discipline from students.",
-            "Online learning is very flexible; however, it requires students to be highly self-disciplined."
+            "Online learning is flexible. However, it requires high self-discipline from students.",
+            "Online learning is very flexible. However, it requires students to be highly self-disciplined.",
+            "Studying online is flexible. However, it requires students to have high self-discipline."
         ],
-        hint: "<b>Từ nối:</b> tuy nhiên (however - sau dấu chấm phẩy hoặc chấm câu)<br><b>Từ vựng:</b> linh hoạt (flexible), đòi hỏi (require), tính tự giác cao (high self-discipline)."
+        hint: "<b>Từ liên kết:</b> Tuy nhiên (However, - đứng đầu câu thứ 2)<br><b>Từ vựng:</b> linh hoạt (flexible), đòi hỏi (require), tính tự giác cao (high self-discipline)."
     },
     {
         q: "Không những anh ấy thông minh mà anh ấy còn rất chăm chỉ.",
