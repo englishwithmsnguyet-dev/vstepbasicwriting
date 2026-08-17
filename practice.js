@@ -1995,52 +1995,58 @@ const selfPracticeData = {
             "desc": "Tìm từ bị dùng sai.",
             "questions": [
                 {
-                    "q": "The students performed <u>good</u> in the final exam because they prepared <u>thoroughly</u>.",
+                    "q": "The students <u>performed</u> <u>good</u> in the final <u>exam</u> because they prepared <u>thoroughly</u>.",
                     "options": [
+                        "performed",
                         "good",
+                        "exam",
                         "thoroughly"
                     ],
-                    "a": 0,
+                    "a": 1,
                     "exp": "Bổ nghĩa cho động từ 'performed' phải dùng trạng từ 'well' thay vì tính từ 'good'."
                 },
                 {
-                    "q": "She speaks English very <u>fluent</u> and <u>communicates</u> with foreigners <u>easily</u>.",
+                    "q": "She <u>speaks</u> English very <u>fluent</u> and <u>communicates</u> with foreigners <u>easily</u>.",
                     "options": [
+                        "speaks",
                         "fluent",
                         "communicates",
                         "easily"
                     ],
-                    "a": 0,
+                    "a": 1,
                     "exp": "Bổ nghĩa cho động từ 'speaks' phải dùng trạng từ 'fluently'."
                 },
                 {
-                    "q": "The new policy was <u>quick</u> <u>implemented</u> by the <u>management</u> team.",
+                    "q": "The new <u>policy</u> was <u>quick</u> <u>implemented</u> by the <u>management</u> team.",
                     "options": [
+                        "policy",
                         "quick",
                         "implemented",
                         "management"
                     ],
-                    "a": 0,
+                    "a": 1,
                     "exp": "Bổ nghĩa cho động từ bị động 'implemented' phải dùng trạng từ 'quickly'."
                 },
                 {
-                    "q": "He was <u>extreme</u> <u>tired</u> after running the <u>marathon</u>.",
+                    "q": "He was <u>extreme</u> <u>tired</u> after <u>running</u> the <u>marathon</u>.",
                     "options": [
                         "extreme",
                         "tired",
+                        "running",
                         "marathon"
                     ],
                     "a": 0,
                     "exp": "Bổ nghĩa cho tính từ 'tired' phải dùng trạng từ 'extremely'."
                 },
                 {
-                    "q": "The train arrived <u>lately</u> due to <u>heavy</u> snow in the <u>region</u>.",
+                    "q": "The train <u>arrived</u> <u>lately</u> due to <u>heavy</u> snow in the <u>region</u>.",
                     "options": [
+                        "arrived",
                         "lately",
                         "heavy",
                         "region"
                     ],
-                    "a": 0,
+                    "a": 1,
                     "exp": "'late' vừa là tính từ vừa là trạng từ chỉ trễ giờ; 'lately' có nghĩa là dạo gần đây. Phải sửa 'lately' thành 'late'."
                 }
             ]
@@ -2286,49 +2292,59 @@ const selfPracticeData = {
             "desc": "Tìm giới từ bị dùng sai.",
             "questions": [
                 {
-                    "q": "The government should invest <u>on</u> public transport to reduce traffic congestion <u>in</u> cities.",
+                    "q": "The government should <u>invest</u> <u>on</u> public transport to <u>reduce</u> traffic congestion <u>in</u> cities.",
                     "options": [
+                        "invest",
                         "on",
+                        "reduce",
                         "in"
                     ],
-                    "a": 0,
+                    "a": 1,
                     "exp": "Cấu trúc chuẩn là 'invest in something' (đầu tư vào cái gì), sửa 'on' thành 'in'."
                 },
                 {
-                    "q": "She graduated <u>at</u> Harvard University <u>in</u> 2022.",
+                    "q": "She <u>graduated</u> <u>at</u> Harvard University <u>with</u> high honors <u>in</u> 2022.",
                     "options": [
+                        "graduated",
                         "at",
+                        "with",
                         "in"
                     ],
-                    "a": 0,
-                    "exp": "Cấu trúc chuẩn là 'graduate from' (tốt nghiệp từ trường nào)."
+                    "a": 1,
+                    "exp": "Cấu trúc chuẩn là 'graduate from' (tốt nghiệp từ trường nào), sửa 'at' thành 'from'."
                 },
                 {
-                    "q": "He was absent <u>from</u> the meeting because he was suffering <u>with</u> a headache.",
+                    "q": "He was <u>absent</u> <u>from</u> the meeting <u>because</u> he was suffering <u>with</u> a headache.",
                     "options": [
+                        "absent",
                         "from",
+                        "because",
                         "with"
                     ],
-                    "a": 1,
+                    "a": 3,
                     "exp": "Cấu trúc chuẩn là 'suffer from something' (chịu đựng căn bệnh gì), sửa 'with' thành 'from'."
                 },
                 {
-                    "q": "This decision depends <u>of</u> the final results <u>of</u> the exam.",
+                    "q": "This <u>important</u> decision <u>depends</u> <u>of</u> the final results <u>of</u> the examination.",
                     "options": [
-                        "depends of",
-                        "results of"
+                        "important",
+                        "depends",
+                        "of (sau depends)",
+                        "of (sau results)"
                     ],
-                    "a": 0,
-                    "exp": "Cấu trúc chuẩn là 'depend on' (phụ thuộc vào)."
+                    "a": 2,
+                    "exp": "Cấu trúc chuẩn là 'depend on' (phụ thuộc vào), sửa 'of' thành 'on'."
                 },
                 {
-                    "q": "They arrived <u>to</u> London <u>on</u> Monday morning.",
+                    "q": "They <u>arrived</u> <u>to</u> London <u>safely</u> <u>on</u> Monday morning.",
                     "options": [
+                        "arrived",
                         "to",
+                        "safely",
                         "on"
                     ],
-                    "a": 0,
-                    "exp": "Đến một thành phố/quốc gia dùng 'arrive in London'."
+                    "a": 1,
+                    "exp": "Đến một thành phố/quốc gia dùng 'arrive in London', sửa 'to' thành 'in'."
                 }
             ]
         },
