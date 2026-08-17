@@ -1846,6 +1846,7 @@ window.openTopic = function(topicId, status) {
             else if (topicId === 'prepositions' && typeof renderPrepositionsDetail === 'function') renderPrepositionsDetail();
             else if (topicId === 'adjectives' && typeof renderAdjectivesDetail === 'function') renderAdjectivesDetail();
             else if (topicId === 'adverbs' && typeof renderAdverbsDetail === 'function') renderAdverbsDetail();
+            else if (topicId === 'conjunctions' && typeof renderConjunctionsDetail === 'function') renderConjunctionsDetail();
             else alert('Chủ điểm này đang được cập nhật nội dung. Bạn vui lòng quay lại sau nhé!');
         } else if (pass !== null) {
             alert('Mật khẩu không đúng!');
@@ -1876,6 +1877,9 @@ window.openTopic = function(topicId, status) {
         else alert('Chủ điểm này đang được cập nhật nội dung. Bạn vui lòng quay lại sau nhé!');
     } else if (topicId === 'adverbs') {
         if(typeof renderAdverbsDetail === 'function') renderAdverbsDetail();
+        else alert('Chủ điểm này đang được cập nhật nội dung. Bạn vui lòng quay lại sau nhé!');
+    } else if (topicId === 'conjunctions') {
+        if(typeof renderConjunctionsDetail === 'function') renderConjunctionsDetail();
         else alert('Chủ điểm này đang được cập nhật nội dung. Bạn vui lòng quay lại sau nhé!');
     } else {
         alert('Chủ điểm này đang được cập nhật nội dung. Bạn vui lòng quay lại sau nhé!');
@@ -7888,4 +7892,853 @@ window.renderAdverbsDetail = function(activeTab = 'theory') {
             }
         });
     }
+};
+
+
+// =========================================================================
+// ==================== CHỦ ĐIỂM 07: TỪ NỐI (CONJUNCTIONS) ===================
+// =========================================================================
+
+const conjunctionsTheoryData = [
+    {
+        title: "🔍 1. Định nghĩa & Tầm quan trọng của Từ nối trong VSTEP Writing",
+        content: `
+        <div style="font-size: 1.1rem; line-height: 1.7; color: var(--text-main);">
+            <p><b>Từ nối (Connectors / Linking words)</b> là những từ hoặc cụm từ giúp kết nối các câu, các đoạn văn hoặc các ý tưởng lại với nhau một cách logic, giúp bài viết mạch lạc, trôi chảy và dễ hiểu hơn.</p>
+            
+            <div style="background: #f0fdf4; border-left: 5px solid #22c55e; padding: 16px; border-radius: 8px; margin: 16px 0;">
+                <b style="color: #166534; font-size: 1.15rem;">🎯 Tại sao cần dùng từ nối trong kỹ năng WRITING VSTEP?</b>
+                <ul style="margin: 8px 0 0 0; padding-left: 20px; color: #15803d; display: grid; gap: 6px;">
+                    <li>Từ nối giúp bài viết không bị rời rạc, chắp vá; giúp người đọc/người chấm nắm rõ mối quan hệ giữa các ý (thêm ý, đối lập, nguyên nhân – kết quả, trình tự...).</li>
+                    <li>Giúp tăng trực tiếp điểm tiêu chí <b>"Coherence and Cohesion"</b> (Tính mạch lạc và liên kết) trong thang chấm điểm bài thi Writing Task 1 & Task 2.</li>
+                </ul>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 20px 0;">
+                <div style="background: #fef2f2; border: 1px solid #fecaca; border-radius: 10px; padding: 16px;">
+                    <div style="font-weight: 800; color: #dc2626; margin-bottom: 8px; font-size: 1.05rem;">❌ Không có từ nối (Rời rạc)</div>
+                    <div style="color: #475569; font-style: italic;">"I like playing badminton. It helps me keep fit. It is fun."</div>
+                    <div style="font-size: 0.95rem; color: #991b1b; margin-top: 8px;">👉 Câu ngắn, nghe rời rạc giống như liệt kê đơn thuần.</div>
+                </div>
+                <div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 10px; padding: 16px;">
+                    <div style="font-weight: 800; color: #16a34a; margin-bottom: 8px; font-size: 1.05rem;">✅ Có từ nối (Mạch lạc, tự nhiên)</div>
+                    <div style="color: #1e293b; font-style: italic;">"I like playing badminton <b style="color: #2563eb;">because</b> it helps me keep fit. <b style="color: #2563eb;">Moreover</b>, it is fun."</div>
+                    <div style="font-size: 0.95rem; color: #166534; margin-top: 8px;">👉 Câu tự nhiên, giàu liên kết, thể hiện tư duy ngữ pháp tốt.</div>
+                </div>
+            </div>
+
+            <div style="background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 10px; padding: 16px;">
+                <b style="color: #1e40af;">📌 Phân loại Tổng quát:</b>
+                <div style="color: #1e3a8a; margin-top: 4px;">
+                    Từ nối được chia thành 2 nhóm lớn phổ biến nhất:
+                    <ol style="margin: 6px 0 0 0; padding-left: 20px;">
+                        <li><b>LIÊN TỪ (Conjunctions):</b> Dùng để nối từ, cụm từ hoặc mệnh đề trong cùng một câu.</li>
+                        <li><b>TỪ/CỤM TỪ LIÊN KẾT (Linking Adverbs / Transitional Words):</b> Dùng để nối 2 câu độc lập hoặc các đoạn văn với nhau.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>`
+    },
+    {
+        title: "🔗 2. Nhóm 1: LIÊN TỪ (Conjunctions) trong câu",
+        content: `
+        <div style="font-size: 1.1rem; line-height: 1.7; color: var(--text-main);">
+            <p>Liên từ dùng để kết nối các từ, cụm từ hoặc mệnh đề lại với nhau <b>trong cùng một câu</b>. Có 3 loại liên từ chính:</p>
+
+            <!-- 1. LIÊN TỪ KẾT HỢP -->
+            <div style="background: white; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px; margin-bottom: 20px; border-left: 6px solid #3b82f6; box-shadow: 0 2px 4px rgba(0,0,0,0.03);">
+                <div style="font-weight: 800; color: #1d4ed8; font-size: 1.2rem; margin-bottom: 8px; display: flex; align-items: center; justify-content: space-between;">
+                    <span>2.1. Liên từ kết hợp (Coordinating Conjunctions)</span>
+                    <span style="background: #dbeafe; color: #1e40af; font-size: 0.9rem; padding: 3px 12px; border-radius: 20px;">7 từ FANBOYS</span>
+                </div>
+                <p style="color: #334155; margin-bottom: 12px;">Dùng để nối 2 hoặc nhiều thành phần ngang hàng về mặt ngữ pháp (từ + từ, cụm + cụm, mệnh đề + mệnh đề).</p>
+                
+                <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 14px; margin-bottom: 12px; display: flex; flex-wrap: wrap; gap: 10px; justify-content: space-around;">
+                    <div style="text-align: center;"><b style="color: #2563eb; font-size: 1.15rem;">F</b> - For <span style="font-size: 0.9rem; color: #64748b;">(vì)</span></div>
+                    <div style="text-align: center;"><b style="color: #2563eb; font-size: 1.15rem;">A</b> - And <span style="font-size: 0.9rem; color: #64748b;">(và)</span></div>
+                    <div style="text-align: center;"><b style="color: #2563eb; font-size: 1.15rem;">N</b> - Nor <span style="font-size: 0.9rem; color: #64748b;">(cũng không)</span></div>
+                    <div style="text-align: center;"><b style="color: #2563eb; font-size: 1.15rem;">B</b> - But <span style="font-size: 0.9rem; color: #64748b;">(nhưng)</span></div>
+                    <div style="text-align: center;"><b style="color: #2563eb; font-size: 1.15rem;">O</b> - Or <span style="font-size: 0.9rem; color: #64748b;">(hoặc)</span></div>
+                    <div style="text-align: center;"><b style="color: #2563eb; font-size: 1.15rem;">Y</b> - Yet <span style="font-size: 0.9rem; color: #64748b;">(nhưng/tuy nhiên)</span></div>
+                    <div style="text-align: center;"><b style="color: #2563eb; font-size: 1.15rem;">S</b> - So <span style="font-size: 0.9rem; color: #64748b;">(vì vậy)</span></div>
+                </div>
+
+                <div style="background: #fffbeb; border: 1px solid #fef08a; padding: 12px 16px; border-radius: 8px; font-size: 1rem; color: #854d0e;">
+                    <b>⚡ Quy tắc dấu phẩy với FANBOYS:</b>
+                    <ul style="margin: 6px 0 0 0; padding-left: 20px; display: grid; gap: 4px;">
+                        <li>Khi nối 2 <b>mệnh đề độc lập</b> (S + V , FANBOYS + S + V) ➔ <b>BẮT BUỘC có dấu phẩy trước FANBOYS</b>.<br><i>(VD: I was hungry<b style="color: #dc2626;">,</b> so I made a sandwich.)</i></li>
+                        <li>Khi liệt kê từ 3 thành phần trở lên ➔ đặt dấu phẩy trước <i>and / or</i>: <i>"You can choose tea, coffee, or juice."</i></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 2. LIÊN TỪ PHỤ THUỘC -->
+            <div style="background: white; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px; margin-bottom: 20px; border-left: 6px solid #10b981; box-shadow: 0 2px 4px rgba(0,0,0,0.03);">
+                <div style="font-weight: 800; color: #047857; font-size: 1.2rem; margin-bottom: 8px;">2.2. Liên từ phụ thuộc (Subordinating Conjunctions)</div>
+                <p style="color: #334155; margin-bottom: 12px;">Dùng để mở đầu mệnh đề phụ, gắn kết mệnh đề phụ với mệnh đề chính để tạo thành <b>câu phức (Complex Sentence)</b>.</p>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin-bottom: 14px;">
+                    <div style="background: #f0fdf4; border: 1px solid #bbf7d0; padding: 10px; border-radius: 8px;">
+                        <b style="color: #166534;">🌱 Nguyên nhân:</b><br>
+                        <span style="font-family: monospace; color: #047857;">because, since, as</span>
+                    </div>
+                    <div style="background: #f0fdf4; border: 1px solid #bbf7d0; padding: 10px; border-radius: 8px;">
+                        <b style="color: #166534;">🌓 Tương phản / Nhượng bộ:</b><br>
+                        <span style="font-family: monospace; color: #047857;">although, even though, though, while</span>
+                    </div>
+                    <div style="background: #f0fdf4; border: 1px solid #bbf7d0; padding: 10px; border-radius: 8px;">
+                        <b style="color: #166534;">⏰ Thời gian:</b><br>
+                        <span style="font-family: monospace; color: #047857;">when, while, as soon as, before, after, until</span>
+                    </div>
+                    <div style="background: #f0fdf4; border: 1px solid #bbf7d0; padding: 10px; border-radius: 8px;">
+                        <b style="color: #166534;">🎯 Mục đích / Điều kiện:</b><br>
+                        <span style="font-family: monospace; color: #047857;">so that, in order that, if, unless</span>
+                    </div>
+                </div>
+
+                <div style="background: #f0fdf4; border: 1px solid #86efac; padding: 12px 16px; border-radius: 8px; font-size: 1rem; color: #14532d;">
+                    <b>⚡ Quy tắc vị trí và Dấu phẩy:</b>
+                    <ul style="margin: 6px 0 0 0; padding-left: 20px; display: grid; gap: 4px;">
+                        <li><b>Mệnh đề phụ đứng ĐẦU câu</b> ➔ <b>PHẢI CÓ DẤU PHẨY</b> ngăn cách với mệnh đề chính.<br><i>(VD: <b style="color: #047857;">Although</b> she was tired<b style="color: #dc2626;">,</b> she kept smiling.)</i></li>
+                        <li><b>Mệnh đề phụ đứng SAU mệnh đề chính</b> ➔ <b>KHÔNG CẦN DẤU PHẨY</b>.<br><i>(VD: She kept smiling <b style="color: #047857;">although</b> she was tired.)</i></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 3. LIÊN TỪ TƯƠNG QUAN -->
+            <div style="background: white; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px; border-left: 6px solid #8b5cf6; box-shadow: 0 2px 4px rgba(0,0,0,0.03);">
+                <div style="font-weight: 800; color: #6d28d9; font-size: 1.2rem; margin-bottom: 8px;">2.3. Liên từ tương quan (Correlative Conjunctions)</div>
+                <p style="color: #334155; margin-bottom: 12px;">Luôn đi thành cặp để nhấn mạnh, đối chiếu, lựa chọn giữa hai thành phần tương đương nhau trong câu.</p>
+                <div style="display: grid; gap: 8px; font-family: monospace; color: #581c87; background: #faf5ff; padding: 12px; border-radius: 8px; border: 1px solid #f3e8ff;">
+                    <div>• <b>both ... and ...</b> <i>(cả ... và ...)</i> ➔ VD: She is <b>both</b> intelligent <b>and</b> hard-working.</div>
+                    <div>• <b>not only ... but also ...</b> <i>(không những ... mà còn ...)</i> ➔ VD: It is <b>not only</b> cheap <b>but also</b> effective.</div>
+                    <div>• <b>either ... or ...</b> <i>(hoặc ... hoặc ...)</i> ➔ VD: You can <b>either</b> call <b>or</b> email me.</div>
+                    <div>• <b>neither ... nor ...</b> <i>(không ... cũng không ...)</i> ➔ VD: He likes <b>neither</b> tea <b>nor</b> coffee.</div>
+                </div>
+            </div>
+        </div>`
+    },
+    {
+        title: "🚀 3. Nhóm 2: TỪ/CỤM TỪ LIÊN KẾT (Transitional Words) trong VSTEP Writing",
+        content: `
+        <div style="font-size: 1.1rem; line-height: 1.7; color: var(--text-main);">
+            <p>Từ/Cụm từ liên kết dùng để <b>kết nối 2 câu độc lập</b> hoặc kết nối các đoạn văn trong bài viết, giúp bài văn mạch lạc và logic.</p>
+            
+            <div style="background: #fffbeb; border-left: 5px solid #f59e0b; padding: 14px 16px; border-radius: 8px; margin-bottom: 20px; color: #78350f;">
+                <b>🔍 ĐẶC ĐIỂM NGỮ PHÁP QUAN TRỌNG:</b><br>
+                Từ/Cụm từ liên kết thường đứng ở <b>ĐẦU CÂU và SAU NÓ BẮT BUỘC CÓ DẤU PHẨY (,)</b> trước khi vào mệnh đề chính.<br>
+                <span style="font-family: monospace; color: #b45309; font-weight: bold;">[Câu 1]. [Từ liên kết], [Câu 2].</span>
+            </div>
+
+            <!-- BẢNG TỪ LIÊN KẾT PHÂN THEO MỤC ĐÍCH -->
+            <div style="display: grid; gap: 16px;">
+                
+                <!-- 1. THÊM Ý -->
+                <div style="background: white; border: 1px solid #e2e8f0; border-radius: 12px; padding: 16px; border-left: 5px solid #3b82f6;">
+                    <div style="font-weight: 800; color: #1d4ed8; font-size: 1.1rem; margin-bottom: 6px;">1. THÊM Ý / BỔ SUNG THÔNG TIN</div>
+                    <div style="color: #2563eb; font-weight: bold; margin-bottom: 6px;">Moreover, In addition, Additionally, Furthermore, Also, Besides, ...</div>
+                    <div style="color: #475569; font-style: italic; font-size: 0.98rem;">📍 VD: The app is easy to use. <b>Furthermore,</b> it is completely free.</div>
+                </div>
+
+                <!-- 2. KẾT QUẢ -->
+                <div style="background: white; border: 1px solid #e2e8f0; border-radius: 12px; padding: 16px; border-left: 5px solid #10b981;">
+                    <div style="font-weight: 800; color: #047857; font-size: 1.1rem; margin-bottom: 6px;">2. KẾT QUẢ / HỆ QUẢ</div>
+                    <div style="color: #059669; font-weight: bold; margin-bottom: 6px;">Therefore, As a result, Consequently, Thus, Hence, ...</div>
+                    <div style="color: #475569; font-style: italic; font-size: 0.98rem;">📍 VD: He studied hard. <b>As a result,</b> he passed the test with high scores.</div>
+                </div>
+
+                <!-- 3. TƯƠNG PHẢN -->
+                <div style="background: white; border: 1px solid #e2e8f0; border-radius: 12px; padding: 16px; border-left: 5px solid #ef4444;">
+                    <div style="font-weight: 800; color: #b91c1c; font-size: 1.1rem; margin-bottom: 6px;">3. TƯƠNG PHẢN / ĐỐI LẬP</div>
+                    <div style="color: #dc2626; font-weight: bold; margin-bottom: 6px;">However, Nevertheless, On the other hand, In contrast, ...</div>
+                    <div style="color: #475569; font-style: italic; font-size: 0.98rem;">📍 VD: Online learning is convenient. <b>However,</b> it requires strong self-discipline.</div>
+                </div>
+
+                <!-- 4. LIỆT KÊ / TRÌNH TỰ -->
+                <div style="background: white; border: 1px solid #e2e8f0; border-radius: 12px; padding: 16px; border-left: 5px solid #8b5cf6;">
+                    <div style="font-weight: 800; color: #6d28d9; font-size: 1.1rem; margin-bottom: 6px;">4. LIỆT KÊ / TRÌNH TỰ Ý TƯỞNG (Mở đoạn / Thân bài)</div>
+                    <div style="color: #7c3aed; font-weight: bold; margin-bottom: 6px;">Firstly, First of all, To begin with, Secondly, Next, Finally, ...</div>
+                    <div style="color: #475569; font-style: italic; font-size: 0.98rem;">📍 VD: <b>Firstly,</b> we need to understand the problem. <b>Secondly,</b> we should discuss possible solutions.</div>
+                </div>
+
+                <!-- 5. VÍ DỤ -->
+                <div style="background: white; border: 1px solid #e2e8f0; border-radius: 12px; padding: 16px; border-left: 5px solid #f59e0b;">
+                    <div style="font-weight: 800; color: #b45309; font-size: 1.1rem; margin-bottom: 6px;">5. ĐƯA RA VÍ DỤ MINH HỌA</div>
+                    <div style="color: #d97706; font-weight: bold; margin-bottom: 6px;">For example, For instance, To illustrate, ...</div>
+                    <div style="color: #475569; font-style: italic; font-size: 0.98rem;">📍 VD: We all should protect the environment. <b>For instance,</b> we can plant more trees and recycle waste.</div>
+                </div>
+
+                <!-- 6. KẾT LUẬN -->
+                <div style="background: white; border: 1px solid #e2e8f0; border-radius: 12px; padding: 16px; border-left: 5px solid #06b6d4;">
+                    <div style="font-weight: 800; color: #0e7490; font-size: 1.1rem; margin-bottom: 6px;">6. TỔNG KẾT / KẾT BÀI</div>
+                    <div style="color: #0891b2; font-weight: bold; margin-bottom: 6px;">In conclusion, To sum up, In summary, Overall, ...</div>
+                    <div style="color: #475569; font-style: italic; font-size: 0.98rem;">📍 VD: <b>In conclusion,</b> regular practice is the key to improving English writing skills.</div>
+                </div>
+
+            </div>
+        </div>`
+    },
+    {
+        title: "⚡ 4. Các Bẫy & Lỗi Sai Thường Gặp Cần Tránh trong VSTEP",
+        content: `
+        <div style="font-size: 1.1rem; line-height: 1.7; color: var(--text-main);">
+            <div style="background: white; border: 1px solid #e2e8f0; border-radius: 12px; overflow: hidden; margin-bottom: 20px;">
+                <div style="background: #f8fafc; padding: 12px 16px; border-bottom: 1px solid #e2e8f0; font-weight: 800; color: #334155;">
+                    ⚠️ BẢNG TỔNG HỢP CÁC LỖI DÙNG TỪ NỐI PHỔ BIẾN
+                </div>
+                <div style="overflow-x: auto;">
+                    <table style="width: 100%; border-collapse: collapse; font-size: 1rem; text-align: left;">
+                        <thead>
+                            <tr style="background: #f1f5f9; color: #475569;">
+                                <th style="padding: 12px; border-bottom: 1px solid #e2e8f0; width: 45%;">❌ Lỗi Sai Thường Gặp</th>
+                                <th style="padding: 12px; border-bottom: 1px solid #e2e8f0; width: 55%;">✅ Cách Dùng Đúng</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="border-bottom: 1px solid #f1f5f9;">
+                                <td style="padding: 12px; color: #dc2626;"><b>Although ..., but ...</b><br><i>(Although it was raining, but we went out.)</i></td>
+                                <td style="padding: 12px; color: #16a34a;"><b>Chỉ dùng 1 trong 2 từ:</b><br><i>Although it was raining, we went out.</i></td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #f1f5f9; background: #fafafa;">
+                                <td style="padding: 12px; color: #dc2626;"><b>Because ..., so ...</b><br><i>(Because I was sick, so I stayed home.)</i></td>
+                                <td style="padding: 12px; color: #16a34a;"><b>Chỉ dùng 1 trong 2 từ:</b><br><i>Because I was sick, I stayed home.</i></td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #f1f5f9;">
+                                <td style="padding: 12px; color: #dc2626;"><b>Dùng However nối 2 câu mà không có dấu chấm phẩy / dấu phẩy:</b><br><i>(He studied hard however he failed.)</i></td>
+                                <td style="padding: 12px; color: #16a34a;"><b>Tách câu hoặc dùng dấu ; và ,:</b><br><i>He studied hard. However, he failed.</i></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>`
+    }
+];
+
+// ==================== BÀI TẬP TRONG TÀI LIỆU (BOOK) ====================
+// EXERCISE 01: Dịch các câu sau sang tiếng Anh (liên từ)
+const conjunctionsPracticeBook1 = [
+    {
+        q: "Tôi thường sử dụng phương tiện công cộng bởi vì tôi muốn tiết kiệm tiền.",
+        a: [
+            "I often use public transportation because I want to save money.",
+            "I usually use public transportation because I want to save money.",
+            "I often use public transport because I want to save money.",
+            "I usually use public transport because I want to save money.",
+            "Because I want to save money, I often use public transportation.",
+            "Because I want to save money, I usually use public transportation.",
+            "Because I want to save money, I often use public transport.",
+            "Because I want to save money, I usually use public transport."
+        ],
+        hint: "<b>Liên từ:</b> bởi vì (because)<br><b>Từ vựng:</b> phương tiện công cộng (public transportation / public transport), tiết kiệm tiền (save money)."
+    },
+    {
+        q: "Khi bạn đến Cần Thơ, bạn có thể ghé thăm Bến Ninh Kiều, Chợ nổi Cái Răng và Làng du lịch Mỹ Khánh.",
+        a: [
+            "When you come to Can Tho, you can visit Ninh Kieu Quay, Cai Rang Floating Market, and My Khanh Tourist Village.",
+            "When you visit Can Tho, you can visit Ninh Kieu Quay, Cai Rang Floating Market, and My Khanh Tourist Village.",
+            "When you come to Can Tho, you can visit Ninh Kieu Wharf, Cai Rang Floating Market, and My Khanh Tourist Village.",
+            "When you visit Can Tho, you can visit Ninh Kieu Wharf, Cai Rang Floating Market, and My Khanh Tourist Village.",
+            "You can visit Ninh Kieu Quay, Cai Rang Floating Market, and My Khanh Tourist Village when you come to Can Tho.",
+            "You can visit Ninh Kieu Wharf, Cai Rang Floating Market, and My Khanh Tourist Village when you come to Can Tho."
+        ],
+        hint: "<b>Liên từ:</b> khi (when), và (and)<br><b>Từ vựng:</b> Bến Ninh Kiều (Ninh Kieu Quay / Ninh Kieu Wharf), Chợ nổi Cái Răng (Cai Rang Floating Market), Làng du lịch Mỹ Khánh (My Khanh Tourist Village)."
+    },
+    {
+        q: "Việc xem phim có thể giúp chúng ta giải toả căng thẳng, nhưng xem phim quá nhiều có ảnh hưởng tiêu cực lên mắt của chúng ta.",
+        a: [
+            "Watching movies can help us reduce stress, but watching too much has negative effects on our eyes.",
+            "Watching films can help us reduce stress, but watching too much has negative effects on our eyes.",
+            "Watching movies can help us relieve stress, but watching too much has negative effects on our eyes.",
+            "Watching films can help us relieve stress, but watching too much has negative effects on our eyes.",
+            "Watching movies can help us relieve stress, but watching too much has a negative impact on our eyes.",
+            "Watching films can help us relieve stress, but watching too much has a negative impact on our eyes.",
+            "Watching movies can help us reduce stress, but watching too many movies has negative effects on our eyes."
+        ],
+        hint: "<b>Liên từ:</b> nhưng (but)<br><b>Từ vựng:</b> giải tỏa căng thẳng (reduce stress / relieve stress), có ảnh hưởng tiêu cực lên (has negative effects on / has a negative impact on), mắt (our eyes)."
+    },
+    {
+        q: "Mặc dù việc học tiếng Anh rất khó, nhưng tôi vẫn luôn cố gắng hết sức mình.",
+        a: [
+            "Although learning English is very difficult, I always try my best.",
+            "Although studying English is very difficult, I always try my best.",
+            "Although learning English is very hard, I always try my best.",
+            "Although studying English is very hard, I always try my best.",
+            "I always try my best although learning English is very difficult.",
+            "I always try my best although studying English is very difficult.",
+            "Even though learning English is very difficult, I always try my best.",
+            "Even though studying English is very difficult, I always try my best."
+        ],
+        hint: "<b>Liên từ:</b> mặc dù (although / even though) - <i>Lưu ý: trong tiếng Anh khi dùng Although thì KHÔNG dùng but!</i><br><b>Từ vựng:</b> việc học tiếng Anh (learning/studying English), rất khó (very difficult/hard), cố gắng hết sức (try my best)."
+    },
+    {
+        q: "Thư viện thì rất gần nhà tôi, vì vậy tôi có thể đi bộ đến đó.",
+        a: [
+            "The library is very close to my house, so I can walk there.",
+            "The library is very near my house, so I can walk there.",
+            "The library is close to my house, so I can walk there.",
+            "The library is near my house, so I can walk there."
+        ],
+        hint: "<b>Liên từ:</b> vì vậy (so - nhớ có dấu phẩy phía trước)<br><b>Từ vựng:</b> gần nhà tôi (very close to / very near my house), đi bộ đến đó (walk there)."
+    }
+];
+
+// EXERCISE 02: Nối 2 câu lại bằng từ/cụm từ liên kết phù hợp
+const conjunctionsPracticeBook2 = [
+    {
+        q: "Tôi thích đi tản bộ vào thời gian rảnh để cải thiện sức khoẻ. Tôi cũng đọc sách để thư giãn đầu óc.",
+        a: [
+            "I enjoy going for a walk in my free time to improve my health. In addition, I also read books to clear my mind.",
+            "I like going for a walk in my free time to improve my health. In addition, I also read books to clear my mind.",
+            "I enjoy going for a walk in my free time to improve my health. Moreover, I also read books to clear my mind.",
+            "I like going for a walk in my free time to improve my health. Moreover, I also read books to clear my mind.",
+            "I enjoy going for a walk in my free time to improve my health. Furthermore, I also read books to relax my mind.",
+            "I like walking in my free time to improve my health. In addition, I also read books to clear my mind.",
+            "I enjoy walking in my free time to improve my health. In addition, I also read books to clear my mind."
+        ],
+        hint: "<b>Từ liên kết (Thêm ý):</b> In addition, / Moreover, / Furthermore,<br><b>Từ vựng:</b> đi tản bộ (going for a walk / walking), cải thiện sức khỏe (improve my health), thư giãn đầu óc (clear my mind / relax my mind)."
+    },
+    {
+        q: "Việc du học có thể mang lại nhiều lợi ích. Học sinh có thể mở rộng kiến thức và có nhiều trải nghiệm mới.",
+        a: [
+            "Studying abroad can bring many benefits. For example, students can widen their knowledge and gain many new experiences.",
+            "Studying abroad can bring many benefits. For instance, students can widen their knowledge and gain many new experiences.",
+            "Studying abroad can bring a lot of benefits. For example, students can widen their knowledge and gain many new experiences.",
+            "Studying abroad can bring many benefits. For example, students can broaden their knowledge and gain many new experiences.",
+            "Studying abroad can bring many benefits. For instance, students can broaden their knowledge and gain many new experiences.",
+            "Studying abroad can bring a lot of benefits. For instance, students can widen their knowledge and gain many new experiences."
+        ],
+        hint: "<b>Từ liên kết (Ví dụ):</b> For example, / For instance,<br><b>Từ vựng:</b> du học (studying abroad), mang lại nhiều lợi ích (bring many benefits), mở rộng kiến thức (widen/broaden their knowledge), có trải nghiệm mới (gain/have new experiences)."
+    },
+    {
+        q: "Ô nhiễm môi trường là một vấn đề nghiêm trọng. Chúng ta cần có giải pháp phù hợp để giải quyết vấn đề này.",
+        a: [
+            "Environmental pollution is a serious problem. Therefore, we need to have suitable solutions to solve this issue.",
+            "Environmental pollution is a serious problem. As a result, we need to have suitable solutions to solve this issue.",
+            "Environmental pollution is a serious issue. Therefore, we need to have suitable solutions to solve this problem.",
+            "Environmental pollution is a serious problem. Therefore, we need suitable solutions to solve this issue.",
+            "Environmental pollution is a serious problem. Consequently, we need to have suitable solutions to solve this issue."
+        ],
+        hint: "<b>Từ liên kết (Kết quả):</b> Therefore, / As a result, / Consequently,<br><b>Từ vựng:</b> ô nhiễm môi trường (environmental pollution), vấn đề nghiêm trọng (serious problem/issue), giải pháp phù hợp (suitable solutions), giải quyết (solve/address)."
+    },
+    {
+        q: "Việc sử dụng phương tiện cá nhân thì rất tiện lợi. Phương tiện cá nhân có thể gây ô nhiễm môi trường.",
+        a: [
+            "Using private transportation is very convenient. However, private vehicles can cause environmental pollution.",
+            "Using private transportation is very convenient. However, it can cause environmental pollution.",
+            "Using private vehicles is very convenient. However, they can cause environmental pollution.",
+            "Using private transport is very convenient. However, it can cause environmental pollution.",
+            "Using private transportation is very convenient. Nevertheless, private vehicles can cause environmental pollution."
+        ],
+        hint: "<b>Từ liên kết (Tương phản):</b> However, / Nevertheless, / On the other hand,<br><b>Từ vựng:</b> phương tiện cá nhân (private transportation / private vehicles), tiện lợi (convenient), gây ô nhiễm (cause environmental pollution)."
+    },
+    {
+        q: "Chơi thể thao là một cách hiệu quả để giảm cân và giữ dáng. Nó có thể giúp chúng ta kết bạn mới.",
+        a: [
+            "Playing sports is an effective way to lose weight and keep fit. Moreover, it can help us make new friends.",
+            "Playing sports is an effective way to lose weight and keep fit. In addition, it can help us make new friends.",
+            "Playing sports is an effective way to lose weight and stay in shape. Moreover, it can help us make new friends.",
+            "Playing sports is an effective way to lose weight and keep fit. Furthermore, it can help us make new friends.",
+            "Playing sports is an effective way to lose weight and stay in shape. In addition, it can help us make new friends."
+        ],
+        hint: "<b>Từ liên kết (Thêm ý):</b> Moreover, / In addition, / Furthermore,<br><b>Từ vựng:</b> cách hiệu quả (an effective way), giảm cân (lose weight), giữ dáng (keep fit / stay in shape), kết bạn mới (make new friends)."
+    },
+    {
+        q: "Việc sử dụng các thiết bị điện tử quá nhiều có một vài tác hại. Trẻ em sử dụng điện thoại quá nhiều có thể bị những vấn đề về mắt.",
+        a: [
+            "Using electronic devices too much can have several negative effects. For instance, children who use phones excessively can experience eye problems.",
+            "Using electronic devices too much has several negative effects. For instance, children who use phones excessively can experience eye problems.",
+            "Using electronic devices too much can have several negative effects. For example, children who use phones excessively can experience eye problems.",
+            "Using electronic devices too much can have some negative effects. For example, children who use phones excessively can experience eye problems.",
+            "Using electronic devices too much can have several harmful effects. For instance, children who use phones excessively can experience eye problems."
+        ],
+        hint: "<b>Từ liên kết (Ví dụ):</b> For instance, / For example,<br><b>Từ vựng:</b> thiết bị điện tử (electronic devices), tác hại (negative effects / harmful effects), quá mức (excessively / too much), vấn đề về mắt (eye problems)."
+    }
+];
+
+// ==================== BÀI TẬP THÊM (EXTRA) ====================
+// BÀI 1 EXTRA: Hoàn thành vế còn lại của câu (dựa theo Slide Hoàn thành câu)
+const conjunctionsPracticeExtra1 = [
+    {
+        prompt: "We should eat more vegetables and drink enough water because",
+        hint: "Gợi ý: chúng tốt cho sức khỏe của chúng ta (they are good for our health) / chúng giúp chúng ta giữ gìn sức khỏe (they help us stay healthy).",
+        acceptable: [
+            "they are good for our health",
+            "these things help us stay healthy",
+            "we can maintain good health",
+            "these habits allow us to stay healthy and prevent some health problems",
+            "they help us stay healthy",
+            "it is good for our health"
+        ]
+    },
+    {
+        prompt: "They do exercise regularly, so",
+        hint: "Gợi ý: họ có thể giữ dáng (they can stay in shape) / họ trở nên khỏe mạnh hơn (they become stronger and healthier).",
+        acceptable: [
+            "they can stay in shape",
+            "they become stronger and healthier",
+            "they rarely get sick easily",
+            "they feel more energetic every day",
+            "they can keep fit",
+            "they stay healthy"
+        ]
+    },
+    {
+        prompt: "Reading books can help us widen our knowledge, and",
+        hint: "Gợi ý: nó cũng cải thiện kỹ năng tư duy (it also improves our thinking skills) / chúng ta có thể làm giàu vốn từ vựng (we can enrich our vocabulary).",
+        acceptable: [
+            "it also improves our thinking skills",
+            "it allows us to become more creative",
+            "it gives us valuable lessons about life",
+            "we can enrich our vocabulary",
+            "it improves our vocabulary",
+            "it helps us relax"
+        ]
+    },
+    {
+        prompt: "I still try to spend time doing homework every day although",
+        hint: "Gợi ý: tôi có rất nhiều việc khác phải làm (I have a lot of other things to do) / tôi cảm thấy mệt mỏi sau giờ học (I feel tired after school).",
+        acceptable: [
+            "I have a lot of other things to do",
+            "I feel tired after school",
+            "I do not have a lot of free time",
+            "my schedule is always busy",
+            "I am very busy",
+            "I don't have much free time"
+        ]
+    },
+    {
+        prompt: "You can go to Ho Chi Minh City by coach, or",
+        hint: "Gợi ý: bạn có thể đi bằng máy bay nếu muốn tiết kiệm thời gian (you can travel there by plane if you want to save time) / bạn có thể đi tàu hỏa (you can take a train).",
+        acceptable: [
+            "you can travel there by plane if you want to save time",
+            "you can take a train for a more comfortable trip",
+            "you can ride a motorbike if you like adventure",
+            "you can drive there if you have a driving license",
+            "you can go by plane",
+            "you can take a train"
+        ]
+    }
+];
+
+// BÀI 2 EXTRA: Trắc nghiệm liên từ & từ nối
+const conjunctionsPracticeExtra2 = [
+    {
+        q: "I wanted to go for a run, _____ it started raining heavily.",
+        options: ["so", "but", "and", "because"],
+        answer: 1,
+        explanation: "Hai vế mang ý nghĩa tương phản (muốn đi chạy bộ nhưng trời lại mưa to) nên dùng liên từ 'but'."
+    },
+    {
+        q: "The weather was terrible; _____, we decided to delay our camping trip.",
+        options: ["however", "therefore", "although", "because"],
+        answer: 1,
+        explanation: "Vế sau là kết quả tất yếu của vế trước (thời tiết xấu -> hoãn chuyến đi), đứng sau dấu chấm phẩy và trước dấu phẩy nên dùng trạng từ liên kết 'therefore'."
+    },
+    {
+        q: "_____ studying online offers great flexibility, it requires a high level of self-discipline.",
+        options: ["Because", "Although", "However", "In addition"],
+        answer: 1,
+        explanation: "Mở đầu mệnh đề phụ chỉ sự nhượng bộ / tương phản giữa 'linh hoạt' và 'cần kỷ luật cao' nên dùng 'Although'."
+    },
+    {
+        q: "Public transportation helps reduce traffic jams. _____, it significantly lowers carbon emissions.",
+        options: ["However", "Therefore", "Moreover", "Because"],
+        answer: 2,
+        explanation: "Câu thứ hai bổ sung thêm một lợi ích mới (giảm ùn tắc + giảm khí thải) nên dùng từ liên kết thêm ý 'Moreover,'."
+    },
+    {
+        q: "He didn't study for the exam, _____ he failed the test.",
+        options: ["so", "but", "because", "although"],
+        answer: 0,
+        explanation: "Vế sau là kết quả của vế trước trong cùng một câu (có dấu phẩy) nên dùng liên từ kết hợp 'so'."
+    },
+    {
+        q: "She can speak _____ English and French fluently.",
+        options: ["either", "neither", "both", "not only"],
+        answer: 2,
+        explanation: "Cặp liên từ tương quan 'both ... and ...' dùng để chỉ cả hai thứ."
+    }
+];
+
+// ==================== RENDER DETAIL ====================
+window.renderConjunctionsDetail = function(activeTab = 'theory') {
+    if (!window.conjunctionsAnswersBook1) window.conjunctionsAnswersBook1 = new Array(conjunctionsPracticeBook1.length).fill('');
+    if (!window.conjunctionsAnswersBook2) window.conjunctionsAnswersBook2 = new Array(conjunctionsPracticeBook2.length).fill('');
+    if (!window.conjunctionsAnswersExtra1) window.conjunctionsAnswersExtra1 = new Array(conjunctionsPracticeExtra1.length).fill('');
+    if (!window.conjunctionsAnswersExtra2) window.conjunctionsAnswersExtra2 = new Array(conjunctionsPracticeExtra2.length).fill(null);
+
+    let tabsHtml = `
+        <div class="tabs-container" style="margin-bottom: 24px;">
+            <button onclick="renderConjunctionsDetail('theory')" class="tab-pill ${activeTab === 'theory' ? 'active' : ''}">📚 LÝ THUYẾT</button>
+            <button onclick="renderConjunctionsDetail('practice_book')" class="tab-pill ${activeTab === 'practice_book' ? 'active' : ''}">📖 BÀI TẬP TRONG TÀI LIỆU</button>
+            <button onclick="renderConjunctionsDetail('practice_extra')" class="tab-pill ${activeTab === 'practice_extra' ? 'active' : ''}">🚀 BÀI TẬP THÊM</button>
+        </div>
+    `;
+
+    let contentHtml = '';
+
+    if (activeTab === 'theory') {
+        const theoryCards = conjunctionsTheoryData.map((item, idx) => `
+            <div style="background: white; border-radius: 16px; padding: 24px; box-shadow: var(--shadow-md); margin-bottom: 24px; border-top: 5px solid var(--primary-color);">
+                <h3 style="color: var(--primary-color); margin-bottom: 16px; font-size: 1.35rem; font-weight: 800;">${item.title}</h3>
+                ${item.content}
+            </div>
+        `).join('');
+
+        contentHtml = `
+            <div style="margin-top: 24px; animation: fadeIn 0.3s ease-out;">
+                ${theoryCards}
+            </div>
+        `;
+    } else if (activeTab === 'practice_book') {
+        // BOOK 1 HTML
+        const pBook1Html = conjunctionsPracticeBook1.map((q, idx) => `
+            <div class="quiz-item" style="background: var(--bg-card); border-radius: 12px; padding: 20px; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color);">
+                <div style="display: flex; gap: 12px; align-items: flex-start; margin-bottom: 12px;">
+                    <div style="background: var(--primary-light); color: var(--primary-color); width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">${idx + 1}</div>
+                    <div style="flex-grow: 1;">
+                        <p style="font-size: 1.15rem; font-weight: 500; color: var(--text-main); margin-top: 4px; margin-bottom: 8px;">${q.q}</p>
+                        ${q.hint ? `<button onclick="const h = document.getElementById('conj_hint_book1_${idx}'); h.style.display = h.style.display === 'none' ? 'block' : 'none';" style="background: none; border: none; color: #0284c7; font-size: 0.95rem; cursor: pointer; padding: 0; margin-bottom: 12px; display: flex; align-items: center; gap: 4px; font-weight: 500;"><span style="font-size: 1.1rem">💡</span> Xem gợi ý</button>
+                        <div id="conj_hint_book1_${idx}" style="display: none; background: #f0f9ff; border-left: 4px solid #38bdf8; padding: 12px; border-radius: 4px; margin-bottom: 16px; font-size: 0.95rem; color: #0c4a6e; line-height: 1.6;">${q.hint}</div>` : ''}
+                    </div>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 8px; padding-left: 44px;">
+                    <input type="text" id="conj_trans_book1_${idx}" placeholder="Nhập bản dịch tiếng Anh (nhớ có dấu chấm ở cuối câu)..." style="padding: 10px 16px; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 1.05rem; outline: none; transition: border-color 0.2s; width: 100%; box-sizing: border-box;" onfocus="this.style.borderColor='var(--primary-color)'" onblur="this.style.borderColor='#e2e8f0'" oninput="window.conjunctionsAnswersBook1[${idx}] = this.value; document.getElementById('conjexp_book1_${idx}').style.display='none'; window.saveProgress(true);" value="${window.conjunctionsAnswersBook1[idx] || ''}">
+                    <button onclick="checkConjunctionsBook(1, ${idx})" style="padding: 8px 16px; background: white; color: var(--primary-color); border: 2px solid var(--primary-color); border-radius: 20px; font-weight: bold; cursor: pointer; transition: all 0.2s; align-self: flex-start;" onmouseover="this.style.background='var(--primary-color)'; this.style.color='white'" onmouseout="this.style.background='white'; this.style.color='var(--primary-color)'">Kiểm tra</button>
+                </div>
+                <div style="padding-left: 44px;">
+                    <div id="conjexp_book1_${idx}" style="display: none; margin-top: 12px; padding: 10px 12px; border-radius: 8px; font-size: 1rem;"></div>
+                </div>
+            </div>
+        `).join('');
+
+        // BOOK 2 HTML
+        const pBook2Html = conjunctionsPracticeBook2.map((q, idx) => `
+            <div class="quiz-item" style="background: var(--bg-card); border-radius: 12px; padding: 20px; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color);">
+                <div style="display: flex; gap: 12px; align-items: flex-start; margin-bottom: 12px;">
+                    <div style="background: #e0e7ff; color: #4338ca; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">${idx + 1}</div>
+                    <div style="flex-grow: 1;">
+                        <p style="font-size: 1.15rem; font-weight: 500; color: var(--text-main); margin-top: 4px; margin-bottom: 8px;">${q.q}</p>
+                        ${q.hint ? `<button onclick="const h = document.getElementById('conj_hint_book2_${idx}'); h.style.display = h.style.display === 'none' ? 'block' : 'none';" style="background: none; border: none; color: #0284c7; font-size: 0.95rem; cursor: pointer; padding: 0; margin-bottom: 12px; display: flex; align-items: center; gap: 4px; font-weight: 500;"><span style="font-size: 1.1rem">💡</span> Xem gợi ý</button>
+                        <div id="conj_hint_book2_${idx}" style="display: none; background: #f0f9ff; border-left: 4px solid #38bdf8; padding: 12px; border-radius: 4px; margin-bottom: 16px; font-size: 0.95rem; color: #0c4a6e; line-height: 1.6;">${q.hint}</div>` : ''}
+                    </div>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 8px; padding-left: 44px;">
+                    <textarea id="conj_trans_book2_${idx}" rows="2" placeholder="Nối 2 câu bằng từ/cụm từ liên kết phù hợp (ví dụ: In addition, / However, / Therefore,)..." style="padding: 10px 16px; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 1.05rem; outline: none; transition: border-color 0.2s; width: 100%; box-sizing: border-box; font-family: inherit;" onfocus="this.style.borderColor='#4f46e5'" onblur="this.style.borderColor='#e2e8f0'" oninput="window.conjunctionsAnswersBook2[${idx}] = this.value; document.getElementById('conjexp_book2_${idx}').style.display='none'; window.saveProgress(true);">${window.conjunctionsAnswersBook2[idx] || ''}</textarea>
+                    <button onclick="checkConjunctionsBook(2, ${idx})" style="padding: 8px 16px; background: white; color: #4f46e5; border: 2px solid #4f46e5; border-radius: 20px; font-weight: bold; cursor: pointer; transition: all 0.2s; align-self: flex-start;" onmouseover="this.style.background='#4f46e5'; this.style.color='white'" onmouseout="this.style.background='white'; this.style.color='#4f46e5'">Kiểm tra</button>
+                </div>
+                <div style="padding-left: 44px;">
+                    <div id="conjexp_book2_${idx}" style="display: none; margin-top: 12px; padding: 10px 12px; border-radius: 8px; font-size: 1rem;"></div>
+                </div>
+            </div>
+        `).join('');
+
+        contentHtml = `
+            <div style="margin-top: 24px; animation: fadeIn 0.3s ease-out;">
+                <h1 style="color: #059669; font-size: 1.8rem; margin-bottom: 24px; text-align: center;">📖 BÀI TẬP TRONG TÀI LIỆU</h1>
+
+                <!-- BÀI 1 BOOK -->
+                <div style="background: white; border-radius: 16px; padding: 24px; box-shadow: var(--shadow-md); margin-bottom: 32px; border-top: 6px solid var(--primary-color);">
+                    <h2 style="color: var(--primary-color); margin-bottom: 16px; font-size: 1.4rem;">Bài 1: Dịch câu sử dụng Liên từ phù hợp</h2>
+                    <p style="font-size: 1.1rem; margin-bottom: 24px; color: var(--text-muted);">Dịch các câu sau sang tiếng Anh, lưu ý sử dụng các liên từ phù hợp (because, when, but, although, so...).</p>
+                    <div style="display: grid; gap: 16px;">
+                        ${pBook1Html}
+                    </div>
+                    <div style="text-align: center; margin-top: 24px;">
+                        <button onclick="window.submitConjunctionsBook1()" style="padding: 12px 32px; background: var(--primary-color); color: white; border: none; border-radius: 20px; font-weight: bold; cursor: pointer; transition: all 0.2s; font-size: 1.1rem; box-shadow: 0 4px 12px rgba(87,70,227,0.3);">NỘP BÀI 1</button>
+                    </div>
+                </div>
+
+                <!-- BÀI 2 BOOK -->
+                <div style="background: white; border-radius: 16px; padding: 24px; box-shadow: var(--shadow-md); margin-bottom: 32px; border-top: 6px solid #4f46e5;">
+                    <h2 style="color: #4338ca; margin-bottom: 16px; font-size: 1.4rem;">Bài 2: Nối câu bằng Từ/Cụm từ liên kết phù hợp</h2>
+                    <p style="font-size: 1.1rem; margin-bottom: 24px; color: var(--text-muted);">Viết lại 2 câu thành chuỗi câu liên kết hoàn chỉnh bằng các từ nối (In addition, For example, Therefore, However, Moreover, For instance...).</p>
+                    <div style="display: grid; gap: 16px;">
+                        ${pBook2Html}
+                    </div>
+                    <div style="text-align: center; margin-top: 24px;">
+                        <button onclick="window.submitConjunctionsBook2()" style="padding: 12px 32px; background: #4f46e5; color: white; border: none; border-radius: 20px; font-weight: bold; cursor: pointer; transition: all 0.2s; font-size: 1.1rem; box-shadow: 0 4px 12px rgba(79,70,229,0.3);">NỘP BÀI 2</button>
+                    </div>
+                </div>
+            </div>
+        `;
+    } else if (activeTab === 'practice_extra') {
+        // EXTRA 1 HTML: Hoàn thành câu
+        const pExtra1Html = conjunctionsPracticeExtra1.map((q, idx) => `
+            <div class="quiz-item" style="background: var(--bg-card); border-radius: 12px; padding: 20px; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color);">
+                <div style="display: flex; gap: 12px; align-items: flex-start; margin-bottom: 12px;">
+                    <div style="background: #fdf2f8; color: #db2777; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">${idx + 1}</div>
+                    <div style="flex-grow: 1;">
+                        <p style="font-size: 1.15rem; font-weight: 600; color: #1e293b; margin-top: 4px; margin-bottom: 6px;">
+                            ${q.prompt} <span style="color: #db2777; font-weight: bold;">_____</span>
+                        </p>
+                        <div style="font-size: 0.95rem; color: #64748b; font-style: italic;">💡 ${q.hint}</div>
+                    </div>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 8px; padding-left: 44px;">
+                    <input type="text" id="conj_trans_extra1_${idx}" placeholder="Nhập vế câu còn lại bằng tiếng Anh (hoặc cả câu)..." style="padding: 10px 16px; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 1.05rem; outline: none; transition: border-color 0.2s; width: 100%; box-sizing: border-box;" onfocus="this.style.borderColor='#db2777'" onblur="this.style.borderColor='#e2e8f0'" oninput="window.conjunctionsAnswersExtra1[${idx}] = this.value; document.getElementById('conjexp_extra1_${idx}').style.display='none'; window.saveProgress(true);" value="${window.conjunctionsAnswersExtra1[idx] || ''}">
+                    <button onclick="checkConjunctionsExtra1(${idx})" style="padding: 8px 16px; background: white; color: #db2777; border: 2px solid #db2777; border-radius: 20px; font-weight: bold; cursor: pointer; transition: all 0.2s; align-self: flex-start;" onmouseover="this.style.background='#db2777'; this.style.color='white'" onmouseout="this.style.background='white'; this.style.color='#db2777'">Kiểm tra</button>
+                </div>
+                <div style="padding-left: 44px;">
+                    <div id="conjexp_extra1_${idx}" style="display: none; margin-top: 12px; padding: 10px 12px; border-radius: 8px; font-size: 1rem;"></div>
+                </div>
+            </div>
+        `).join('');
+
+        // EXTRA 2 HTML: Trắc nghiệm
+        const pExtra2Html = conjunctionsPracticeExtra2.map((q, idx) => `
+            <div class="quiz-item" style="background: var(--bg-card); border-radius: 12px; padding: 20px; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color);">
+                <div style="display: flex; gap: 12px; align-items: flex-start; margin-bottom: 16px;">
+                    <div style="background: #eff6ff; color: #2563eb; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">${idx + 1}</div>
+                    <p style="font-size: 1.15rem; font-weight: 500; color: var(--text-main); margin-top: 4px; margin-bottom: 0;">${q.q}</p>
+                </div>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; padding-left: 44px;">
+                    ${q.options.map((opt, optIdx) => `
+                        <button class="option-btn" id="conj_opt_${idx}_${optIdx}" onclick="window.selectConjunctionsExtra2(${idx}, ${optIdx})" style="padding: 12px 16px; border: 2px solid #e2e8f0; border-radius: 8px; background: white; text-align: left; font-size: 1.05rem; cursor: pointer; transition: all 0.2s; font-weight: 500; color: #334155;">
+                            <b>${String.fromCharCode(65 + optIdx)}.</b> ${opt}
+                        </button>
+                    `).join('')}
+                </div>
+                <div style="padding-left: 44px;">
+                    <div id="conjexp_extra2_${idx}" style="display: none; margin-top: 16px; padding: 12px; border-radius: 8px; font-size: 1rem;"></div>
+                </div>
+            </div>
+        `).join('');
+
+        contentHtml = `
+            <div style="margin-top: 24px; animation: fadeIn 0.3s ease-out;">
+                <h1 style="color: #6366f1; font-size: 1.8rem; margin-bottom: 24px; text-align: center;">🚀 BÀI TẬP THÊM</h1>
+
+                <!-- BÀI 1 EXTRA -->
+                <div style="background: white; border-radius: 16px; padding: 24px; box-shadow: var(--shadow-md); margin-bottom: 32px; border-top: 6px solid #db2777;">
+                    <h2 style="color: #be185d; margin-bottom: 16px; font-size: 1.4rem;">Bài 1: Hoàn thành vế câu còn lại (Sentence Completion)</h2>
+                    <p style="font-size: 1.1rem; margin-bottom: 24px; color: var(--text-muted);">Viết tiếp vế câu còn lại để tạo thành câu phức/ghép hoàn chỉnh và logic.</p>
+                    <div style="display: grid; gap: 16px;">
+                        ${pExtra1Html}
+                    </div>
+                    <div style="text-align: center; margin-top: 24px;">
+                        <button onclick="window.submitConjunctionsExtra1()" style="padding: 12px 32px; background: #db2777; color: white; border: none; border-radius: 20px; font-weight: bold; cursor: pointer; transition: all 0.2s; font-size: 1.1rem; box-shadow: 0 4px 12px rgba(219,39,119,0.3);">NỘP BÀI 1</button>
+                    </div>
+                </div>
+
+                <!-- BÀI 2 EXTRA -->
+                <div style="background: white; border-radius: 16px; padding: 24px; box-shadow: var(--shadow-md); margin-bottom: 32px; border-top: 6px solid #2563eb;">
+                    <h2 style="color: #1d4ed8; margin-bottom: 16px; font-size: 1.4rem;">Bài 2: Trắc nghiệm Liên từ & Từ liên kết</h2>
+                    <p style="font-size: 1.1rem; margin-bottom: 24px; color: var(--text-muted);">Chọn từ nối phù hợp nhất để hoàn thành các câu sau.</p>
+                    <div style="display: grid; gap: 16px;">
+                        ${pExtra2Html}
+                    </div>
+                    <div style="text-align: center; margin-top: 24px;">
+                        <button onclick="window.submitConjunctionsExtra2()" style="padding: 12px 32px; background: #2563eb; color: white; border: none; border-radius: 20px; font-weight: bold; cursor: pointer; transition: all 0.2s; font-size: 1.1rem; box-shadow: 0 4px 12px rgba(37,99,235,0.3);">NỘP BÀI 2</button>
+                    </div>
+                </div>
+            </div>
+        `;
+    }
+
+    contentWrapper.innerHTML = `
+        <div class="content-fade-in" style="max-width: 900px; margin: 0 auto; padding-bottom: 40px;">
+            <div class="topic-detail-header" style="margin-bottom: 32px;">
+                <button class="btn-back" onclick="renderView('chapter2')" style="margin-bottom: 16px; background: none; border: none; color: var(--primary-color); font-weight: bold; cursor: pointer; display: flex; align-items: center; gap: 8px; font-size: 1.05rem;">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                    QUAY LẠI CHƯƠNG 02
+                </button>
+                <h1 class="page-title" style="text-align: left; margin-bottom: 24px;">CHỦ ĐIỂM 07: TỪ NỐI (CONJUNCTIONS & TRANSITIONS)</h1>
+                ${tabsHtml}
+            </div>
+            ${contentHtml}
+        </div>
+    `;
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+};
+
+// ==================== CHECK & SUBMIT LOGIC ====================
+window.checkConjunctionsBook = function(bookId, idx) {
+    const dataArray = bookId === 1 ? conjunctionsPracticeBook1 : conjunctionsPracticeBook2;
+    const ansArray = bookId === 1 ? window.conjunctionsAnswersBook1 : window.conjunctionsAnswersBook2;
+    const q = dataArray[idx];
+    const val = (ansArray[idx] || "").trim();
+    const expDiv = document.getElementById(`conjexp_book${bookId}_${idx}`);
+    
+    if (!val) {
+        expDiv.style.display = 'block';
+        expDiv.style.background = '#fffbeb';
+        expDiv.style.color = '#b45309';
+        expDiv.style.border = '1px solid #fde68a';
+        expDiv.innerHTML = "⚠️ Bạn chưa nhập câu trả lời!";
+        return;
+    }
+
+    const cleanUser = window.normalizeText(val);
+    const isCorrect = q.a.some(ans => window.normalizeText(ans) === cleanUser);
+    const hasDot = val.endsWith('.');
+
+    expDiv.style.display = 'block';
+
+    if (isCorrect && hasDot) {
+        expDiv.style.background = '#f0fdf4';
+        expDiv.style.color = '#166534';
+        expDiv.style.border = '1px solid #bbf7d0';
+        expDiv.innerHTML = "✅ <b>Chính xác!</b> Bạn đã dùng từ nối rất chuẩn.";
+    } else if (isCorrect && !hasDot) {
+        expDiv.style.background = '#fffbeb';
+        expDiv.style.color = '#b45309';
+        expDiv.style.border = '1px solid #fde68a';
+        expDiv.innerHTML = "⚠️ <b>Gần đúng!</b> Cuối câu bắt buộc phải có dấu chấm nhé!";
+    } else {
+        expDiv.style.background = '#fef2f2';
+        expDiv.style.color = '#991b1b';
+        expDiv.style.border = '1px solid #fecaca';
+        expDiv.innerHTML = `❌ <b>Chưa chính xác.</b><br><br><b>💡 Gợi ý đáp án chuẩn:</b><br>- ${q.a.slice(0, 3).join('<br>- ')}`;
+    }
+};
+
+window.submitConjunctionsBook1 = function() {
+    let correctCount = 0;
+    let completed = true;
+    conjunctionsPracticeBook1.forEach((q, idx) => {
+        const val = (window.conjunctionsAnswersBook1[idx] || "").trim();
+        if (!val) completed = false;
+        if (val && q.a.some(ans => window.normalizeText(ans) === window.normalizeText(val)) && val.endsWith('.')) {
+            correctCount++;
+        }
+        window.checkConjunctionsBook(1, idx);
+    });
+    if (!completed) {
+        alert("Vui lòng điền hết tất cả các câu trước khi nộp bài!");
+        return;
+    }
+    window.showExerciseResult(correctCount, conjunctionsPracticeBook1.length, "KẾT QUẢ BÀI 1 (LIÊN TỪ)");
+};
+
+window.submitConjunctionsBook2 = function() {
+    let correctCount = 0;
+    let completed = true;
+    conjunctionsPracticeBook2.forEach((q, idx) => {
+        const val = (window.conjunctionsAnswersBook2[idx] || "").trim();
+        if (!val) completed = false;
+        if (val && q.a.some(ans => window.normalizeText(ans) === window.normalizeText(val))) {
+            correctCount++;
+        }
+        window.checkConjunctionsBook(2, idx);
+    });
+    if (!completed) {
+        alert("Vui lòng điền hết tất cả các câu trước khi nộp bài!");
+        return;
+    }
+    window.showExerciseResult(correctCount, conjunctionsPracticeBook2.length, "KẾT QUẢ BÀI 2 (TỪ LIÊN KẾT)");
+};
+
+window.checkConjunctionsExtra1 = function(idx) {
+    const q = conjunctionsPracticeExtra1[idx];
+    const val = (window.conjunctionsAnswersExtra1[idx] || "").trim();
+    const expDiv = document.getElementById(`conjexp_extra1_${idx}`);
+    
+    if (!val) {
+        expDiv.style.display = 'block';
+        expDiv.style.background = '#fffbeb';
+        expDiv.style.color = '#b45309';
+        expDiv.style.border = '1px solid #fde68a';
+        expDiv.innerHTML = "⚠️ Bạn chưa nhập câu trả lời!";
+        return;
+    }
+
+    const cleanUser = window.normalizeText(val);
+    const isCorrect = q.acceptable.some(ans => {
+        const cleanAns = window.normalizeText(ans);
+        return cleanUser === cleanAns || cleanUser.endsWith(cleanAns);
+    });
+
+    expDiv.style.display = 'block';
+
+    if (isCorrect) {
+        expDiv.style.background = '#f0fdf4';
+        expDiv.style.color = '#166534';
+        expDiv.style.border = '1px solid #bbf7d0';
+        expDiv.innerHTML = "✅ <b>Chính xác!</b> Vế câu của bạn hoàn toàn hợp lý và đúng ngữ pháp.";
+    } else {
+        expDiv.style.background = '#fef2f2';
+        expDiv.style.color = '#991b1b';
+        expDiv.style.border = '1px solid #fecaca';
+        expDiv.innerHTML = `❌ <b>Chưa phù hợp hoặc chưa khớp gợi ý.</b><br><br><b>💡 Các cách hoàn thành gợi ý:</b><br>- ${q.acceptable.slice(0, 3).join('<br>- ')}`;
+    }
+};
+
+window.submitConjunctionsExtra1 = function() {
+    let correctCount = 0;
+    let completed = true;
+    conjunctionsPracticeExtra1.forEach((q, idx) => {
+        const val = (window.conjunctionsAnswersExtra1[idx] || "").trim();
+        if (!val) completed = false;
+        if (val) {
+            const cleanUser = window.normalizeText(val);
+            if (q.acceptable.some(ans => cleanUser === window.normalizeText(ans) || cleanUser.endsWith(window.normalizeText(ans)))) {
+                correctCount++;
+            }
+        }
+        window.checkConjunctionsExtra1(idx);
+    });
+    if (!completed) {
+        alert("Vui lòng điền hết tất cả các câu trước khi nộp bài!");
+        return;
+    }
+    window.showExerciseResult(correctCount, conjunctionsPracticeExtra1.length, "KẾT QUẢ BÀI 1 (HOÀN THÀNH CÂU)");
+};
+
+window.selectConjunctionsExtra2 = function(qIdx, optIdx) {
+    window.conjunctionsAnswersExtra2[qIdx] = optIdx;
+    window.saveProgress(true);
+    
+    for (let i = 0; i < conjunctionsPracticeExtra2[qIdx].options.length; i++) {
+        const btn = document.getElementById(`conj_opt_${qIdx}_${i}`);
+        if (btn) {
+            if (i === optIdx) {
+                btn.style.borderColor = 'var(--primary-color)';
+                btn.style.background = 'var(--primary-light)';
+                btn.style.color = 'var(--primary-color)';
+            } else {
+                btn.style.borderColor = '#e2e8f0';
+                btn.style.background = 'white';
+                btn.style.color = '#334155';
+            }
+        }
+    }
+    document.getElementById(`conjexp_extra2_${qIdx}`).style.display = 'none';
+};
+
+window.submitConjunctionsExtra2 = function() {
+    let correctCount = 0;
+    let completed = true;
+
+    conjunctionsPracticeExtra2.forEach((q, idx) => {
+        const userChoice = window.conjunctionsAnswersExtra2[idx];
+        const expDiv = document.getElementById(`conjexp_extra2_${idx}`);
+        
+        if (userChoice === null || userChoice === undefined) {
+            completed = false;
+        }
+
+        if (userChoice === q.answer) {
+            correctCount++;
+            expDiv.style.display = 'block';
+            expDiv.style.background = '#f0fdf4';
+            expDiv.style.color = '#166534';
+            expDiv.style.border = '1px solid #bbf7d0';
+            expDiv.innerHTML = `✅ <b>Chính xác!</b> ${q.explanation}`;
+        } else if (userChoice !== null && userChoice !== undefined) {
+            expDiv.style.display = 'block';
+            expDiv.style.background = '#fef2f2';
+            expDiv.style.color = '#991b1b';
+            expDiv.style.border = '1px solid #fecaca';
+            expDiv.innerHTML = `❌ <b>Sai rồi!</b> Đáp án đúng là <b>${String.fromCharCode(65 + q.answer)}. ${q.options[q.answer]}</b>.<br>${q.explanation}`;
+        }
+    });
+
+    if (!completed) {
+        alert("Vui lòng chọn đáp án cho tất cả các câu trước khi nộp bài!");
+        return;
+    }
+
+    window.showExerciseResult(correctCount, conjunctionsPracticeExtra2.length, "KẾT QUẢ BÀI 2 (TRẮC NGHIỆM TỪ NỐI)");
 };
