@@ -808,7 +808,7 @@ const selfPracticeData = {
             "desc": "Tìm từ bị dùng sai trong câu.",
             "questions": [
                 {
-                    "q": "The <b>pollute</b> (A) of water causes severe <b>damage</b> (B) to marine <b>life</b> (C) in this <b>area</b> (D).",
+                    "q": "The <u>pollute</u> of water causes severe <u>damage</u> to marine <u>life</u> in this <u>area</u>.",
                     "options": [
                         "pollute",
                         "damage",
@@ -819,7 +819,7 @@ const selfPracticeData = {
                     "exp": "Sau 'The' và trước 'of' phải là Danh từ 'pollution' thay vì động từ 'pollute'."
                 },
                 {
-                    "q": "He gave me a lot of useful <b>advices</b> (A) about <b>career</b> (B) <b>orientation</b> (C) last <b>week</b> (D).",
+                    "q": "He gave me a lot of useful <u>advices</u> about <u>career</u> <u>orientation</u> last <u>week</u>.",
                     "options": [
                         "advices",
                         "career",
@@ -830,7 +830,7 @@ const selfPracticeData = {
                     "exp": "'advice' là danh từ không đếm được, không thêm 's'."
                 },
                 {
-                    "q": "The <b>important</b> (A) of <b>education</b> (B) cannot be <b>denied</b> (C) in modern <b>society</b> (D).",
+                    "q": "The <u>important</u> of <u>education</u> cannot be <u>denied</u> in modern <u>society</u>.",
                     "options": [
                         "important",
                         "education",
@@ -841,7 +841,7 @@ const selfPracticeData = {
                     "exp": "Làm chủ ngữ phải dùng danh từ 'importance' thay vì tính từ 'important'."
                 },
                 {
-                    "q": "Many <b>child</b> (A) in the village <b>walk</b> (B) to school <b>every</b> (C) <b>morning</b> (D).",
+                    "q": "Many <u>child</u> in the village <u>walk</u> to school <u>every</u> <u>morning</u>.",
                     "options": [
                         "child",
                         "walk",
@@ -852,7 +852,7 @@ const selfPracticeData = {
                     "exp": "Sau 'Many' phải dùng danh từ số nhiều 'children'."
                 },
                 {
-                    "q": "She bought two <b>loafs</b> (A) of <b>bread</b> (B) and some <b>milk</b> (C) at the <b>supermarket</b> (D).",
+                    "q": "She bought two <u>loafs</u> of <u>bread</u> and some <u>milk</u> at the <u>supermarket</u>.",
                     "options": [
                         "loafs",
                         "bread",
@@ -1401,7 +1401,7 @@ const selfPracticeData = {
             "desc": "Tìm lỗi sai trong câu.",
             "questions": [
                 {
-                    "q": "She <b>can speaks</b> (A) three languages <b>fluently</b> (B) and <b>works</b> (C) as an <b>interpreter</b> (D).",
+                    "q": "She <u>can speaks</u> three languages <u>fluently</u> and <u>works</u> as an <u>interpreter</u>.",
                     "options": [
                         "can speaks",
                         "fluently",
@@ -1412,7 +1412,7 @@ const selfPracticeData = {
                     "exp": "Sau động từ khiếm khuyết 'can' dùng động từ nguyên mẫu 'speak' không chia 'speaks'."
                 },
                 {
-                    "q": "The committee <b>have</b> (A) <b>decided</b> (B) to <b>postpone</b> (C) the annual <b>conference</b> (D).",
+                    "q": "The committee <u>have</u> <u>decided</u> to <u>postpone</u> the annual <u>conference</u>.",
                     "options": [
                         "have",
                         "decided",
@@ -1423,7 +1423,7 @@ const selfPracticeData = {
                     "exp": "'The committee' đóng vai trò một tập thể đơn lẻ chia động từ số ít 'has'."
                 },
                 {
-                    "q": "He <b>did not went</b> (A) to <b>school</b> (B) yesterday <b>because</b> (C) he was <b>sick</b> (D).",
+                    "q": "He <u>did not went</u> to <u>school</u> yesterday <u>because</u> he was <u>sick</u>.",
                     "options": [
                         "did not went",
                         "school",
@@ -1434,7 +1434,7 @@ const selfPracticeData = {
                     "exp": "Sau trợ động từ 'did not' dùng động từ nguyên mẫu 'go' thay vì 'went'."
                 },
                 {
-                    "q": "Swimming in the ocean <b>help</b> (A) <b>improve</b> (B) physical <b>strength</b> (C) and <b>endurance</b> (D).",
+                    "q": "Swimming in the ocean <u>help</u> <u>improve</u> physical <u>strength</u> and <u>endurance</u>.",
                     "options": [
                         "help",
                         "improve",
@@ -1445,7 +1445,7 @@ const selfPracticeData = {
                     "exp": "Chủ ngữ là V-ing 'Swimming' là số ít nên động từ phải chia 'helps'."
                 },
                 {
-                    "q": "They <b>must to finish</b> (A) the <b>project</b> (B) <b>before</b> (C) the <b>deadline</b> (D).",
+                    "q": "They <u>must to finish</u> the <u>project</u> <u>before</u> the <u>deadline</u>.",
                     "options": [
                         "must to finish",
                         "project",
@@ -1995,7 +1995,7 @@ const selfPracticeData = {
             "desc": "Tìm từ bị dùng sai.",
             "questions": [
                 {
-                    "q": "The students performed <b>good</b> (A) in the final exam because they prepared <b>thoroughly</b> (B).",
+                    "q": "The students performed <u>good</u> in the final exam because they prepared <u>thoroughly</u>.",
                     "options": [
                         "good",
                         "thoroughly"
@@ -2004,7 +2004,7 @@ const selfPracticeData = {
                     "exp": "Bổ nghĩa cho động từ 'performed' phải dùng trạng từ 'well' thay vì tính từ 'good'."
                 },
                 {
-                    "q": "She speaks English very <b>fluent</b> (A) and <b>communicates</b> (B) with foreigners <b>easily</b> (C).",
+                    "q": "She speaks English very <u>fluent</u> and <u>communicates</u> with foreigners <u>easily</u>.",
                     "options": [
                         "fluent",
                         "communicates",
@@ -2014,7 +2014,7 @@ const selfPracticeData = {
                     "exp": "Bổ nghĩa cho động từ 'speaks' phải dùng trạng từ 'fluently'."
                 },
                 {
-                    "q": "The new policy was <b>quick</b> (A) <b>implemented</b> (B) by the <b>management</b> (C) team.",
+                    "q": "The new policy was <u>quick</u> <u>implemented</u> by the <u>management</u> team.",
                     "options": [
                         "quick",
                         "implemented",
@@ -2024,7 +2024,7 @@ const selfPracticeData = {
                     "exp": "Bổ nghĩa cho động từ bị động 'implemented' phải dùng trạng từ 'quickly'."
                 },
                 {
-                    "q": "He was <b>extreme</b> (A) <b>tired</b> (B) after running the <b>marathon</b> (C).",
+                    "q": "He was <u>extreme</u> <u>tired</u> after running the <u>marathon</u>.",
                     "options": [
                         "extreme",
                         "tired",
@@ -2034,7 +2034,7 @@ const selfPracticeData = {
                     "exp": "Bổ nghĩa cho tính từ 'tired' phải dùng trạng từ 'extremely'."
                 },
                 {
-                    "q": "The train arrived <b>lately</b> (A) due to <b>heavy</b> (B) snow in the <b>region</b> (C).",
+                    "q": "The train arrived <u>lately</u> due to <u>heavy</u> snow in the <u>region</u>.",
                     "options": [
                         "lately",
                         "heavy",
@@ -2286,7 +2286,7 @@ const selfPracticeData = {
             "desc": "Tìm giới từ bị dùng sai.",
             "questions": [
                 {
-                    "q": "The government should invest <b>on</b> (A) public transport to reduce traffic congestion <b>in</b> (B) cities.",
+                    "q": "The government should invest <u>on</u> public transport to reduce traffic congestion <u>in</u> cities.",
                     "options": [
                         "on",
                         "in"
@@ -2295,7 +2295,7 @@ const selfPracticeData = {
                     "exp": "Cấu trúc chuẩn là 'invest in something' (đầu tư vào cái gì), sửa 'on' thành 'in'."
                 },
                 {
-                    "q": "She graduated <b>at</b> (A) Harvard University <b>in</b> (B) 2022.",
+                    "q": "She graduated <u>at</u> Harvard University <u>in</u> 2022.",
                     "options": [
                         "at",
                         "in"
@@ -2304,7 +2304,7 @@ const selfPracticeData = {
                     "exp": "Cấu trúc chuẩn là 'graduate from' (tốt nghiệp từ trường nào)."
                 },
                 {
-                    "q": "He was absent <b>from</b> (A) the meeting because he was suffering <b>with</b> (B) a headache.",
+                    "q": "He was absent <u>from</u> the meeting because he was suffering <u>with</u> a headache.",
                     "options": [
                         "from",
                         "with"
@@ -2313,7 +2313,7 @@ const selfPracticeData = {
                     "exp": "Cấu trúc chuẩn là 'suffer from something' (chịu đựng căn bệnh gì), sửa 'with' thành 'from'."
                 },
                 {
-                    "q": "This decision depends <b>of</b> (A) the final results <b>of</b> (B) the exam.",
+                    "q": "This decision depends <u>of</u> the final results <u>of</u> the exam.",
                     "options": [
                         "depends of",
                         "results of"
@@ -2322,7 +2322,7 @@ const selfPracticeData = {
                     "exp": "Cấu trúc chuẩn là 'depend on' (phụ thuộc vào)."
                 },
                 {
-                    "q": "They arrived <b>to</b> (A) London <b>on</b> (B) Monday morning.",
+                    "q": "They arrived <u>to</u> London <u>on</u> Monday morning.",
                     "options": [
                         "to",
                         "on"
