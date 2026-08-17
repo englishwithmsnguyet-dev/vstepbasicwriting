@@ -1468,6 +1468,20 @@ const verbsPracticeExtra3Data = [
     { q: "Tôi phải hoàn thành bài tập này trước 10 giờ.", a: ["I must finish this assignment before 10 o'clock.", "I have to finish this assignment before 10 o'clock.", "I must finish this homework before 10 o'clock.", "I have to finish this homework before 10 o'clock."], hint: "phải (must / have to), hoàn thành (finish), bài tập này (this assignment / this homework), trước (before)" }
 ];
 
+
+const verbsPracticeBook4 = [
+    { q: "Những bài luận này rất hữu ích cho kỳ thi viết VSTEP.", a: ["These essays are very useful for the VSTEP writing test.", "These essays are very useful for the VSTEP writing exam.", "These essays are very helpful for the VSTEP writing test.", "These essays are very helpful for the VSTEP writing exam."], hint: "<b>Từ vựng:</b> những bài luận này (these essays), hữu ích (useful / helpful), kỳ thi viết VSTEP (VSTEP writing test / VSTEP writing exam)." },
+    { q: "Tôi hi vọng bạn sẽ đạt điểm cao trong kỳ thi này.", a: ["I hope you will get a high score in this exam.", "I hope you will get a high score in this test.", "I hope you will achieve a high score in this exam.", "I hope you will achieve a high score in this test."], hint: "<b>Từ vựng:</b> hi vọng (hope), đạt điểm cao (get a high score / achieve a high score), trong kỳ thi này (in this exam / in this test)." },
+    { q: "Chúng tôi đã cố gắng hết sức để hoàn thành bài thuyết trình đúng hạn.", a: ["We tried our best to finish the presentation on time.", "We tried our best to complete the presentation on time.", "We have tried our best to finish the presentation on time.", "We have tried our best to complete the presentation on time."], hint: "<b>Từ vựng:</b> cố gắng hết sức (try our best), hoàn thành (finish / complete), bài thuyết trình (presentation), đúng hạn (on time)." },
+    { q: "Chúng tôi vừa mới hoàn thành bản kế hoạch cho dự án của nhóm.", a: ["We have just finished the plan for our group's project.", "We have just completed the plan for our group's project.", "We have just finished the plan for our group project.", "We have just completed the plan for our group project."], hint: "<b>Thì:</b> Hiện tại hoàn thành (Dấu hiệu: vừa mới - just).<br><b>Từ vựng:</b> hoàn thành (finish / complete), bản kế hoạch (the plan), dự án của nhóm (our group's project)." },
+    { q: "Tôi thường luyện nói tiếng Anh với bạn cùng lớp sau giờ học.", a: ["I usually practice speaking English with my classmates after school.", "I usually practice speaking English with my classmates after class.", "I often practice speaking English with my classmates after school.", "I often practice speaking English with my classmates after class."], hint: "<b>Từ vựng:</b> thường (usually / often), luyện nói (practice speaking), bạn cùng lớp (classmates), sau giờ học (after school / after class)." },
+    { q: "Tôi không thể tham gia buổi học vì tôi bị ốm hôm qua.", a: ["I could not join the class because I was sick yesterday.", "I couldn't join the class because I was sick yesterday.", "I could not attend the class because I was sick yesterday.", "I couldn't attend the class because I was sick yesterday."], hint: "<b>Từ vựng:</b> không thể (could not / couldn't), tham gia buổi học (join the class / attend the class), vì (because), bị ốm (sick / ill), hôm qua (yesterday)." },
+    { q: "Tôi thích đọc sách tiếng Anh và viết nhật ký bằng tiếng Anh trong thời gian rảnh.", a: ["I like reading English books and writing diaries in English in my free time.", "I like reading English books and writing a diary in English in my free time.", "I enjoy reading English books and writing diaries in English in my free time.", "I enjoy reading English books and writing a diary in English in my free time.", "I like to read English books and write diaries in English in my free time.", "I like to read English books and write a diary in English in my free time."], hint: "<b>Từ vựng:</b> thích (like / enjoy), đọc sách (reading English books / to read English books), viết nhật ký (writing diaries / to write diaries), bằng tiếng Anh (in English), trong thời gian rảnh (in my free time)." },
+    { q: "Nghe nhạc tiếng Anh có thể giúp tôi học thêm từ vựng.", a: ["Listening to English music can help me learn more vocabulary.", "Listening to English music can help me learn new vocabulary."], hint: "<b>Từ vựng:</b> nghe nhạc tiếng Anh (listening to English music), có thể (can / could), giúp (help), học thêm từ vựng (learn more vocabulary / learn new vocabulary)." },
+    { q: "Vào Tết Trung Thu, người Việt thường ăn tối và trò chuyện cùng gia đình.", a: ["On Mid-Autumn Festival, Vietnamese people usually have dinner and chat with their family.", "On Mid-Autumn Festival, Vietnamese people often have dinner and chat with their family.", "On Mid-Autumn Festival, Vietnamese people usually eat dinner and chat with their families.", "On Mid-Autumn Festival, Vietnamese people often eat dinner and chat with their families."], hint: "<b>Từ vựng:</b> Vào Tết Trung Thu (On Mid-Autumn Festival), người Việt (Vietnamese people), thường (usually / often), ăn tối (have dinner / eat dinner), trò chuyện (chat), cùng gia đình (with their family / with their families)." },
+    { q: "Tham gia các câu lạc bộ giúp sinh viên phát triển kỹ năng mềm.", a: ["Joining clubs helps students develop soft skills.", "Participating in clubs helps students develop soft skills.", "Joining clubs helps students to develop soft skills.", "Participating in clubs helps students to develop soft skills."], hint: "<b>Từ vựng:</b> tham gia (joining / participating in), các câu lạc bộ (clubs), giúp (helps), sinh viên (students), phát triển (develop), kỹ năng mềm (soft skills)." }
+];
+
 const verbsPractice1Data = [
     {
         q: "The group of students _____ waiting outside the classroom.",
@@ -4492,6 +4506,7 @@ window.renderVerbsDetail = function(activeTab = 'theory') {
     if (!window.verbsAnswersBook1) window.verbsAnswersBook1 = new Array(verbsPracticeBook1.length).fill('');
     if (!window.verbsAnswersBook2) window.verbsAnswersBook2 = new Array(verbsPracticeBook2.length).fill('');
     if (!window.verbsAnswersBook3) window.verbsAnswersBook3 = new Array(verbsPracticeBook3.length).fill('');
+    if (!window.verbsAnswersBook4) window.verbsAnswersBook4 = new Array(verbsPracticeBook4.length).fill('');
     if (!window.verbsAnswers1) window.verbsAnswers1 = new Array(verbsPractice1Data.length).fill(null);
     if (!window.verbsAnswers2) window.verbsAnswers2 = new Array(verbsPractice2Data.length).fill('');
     if (!window.verbsAnswersPara) window.verbsAnswersPara = new Array(verbsPracticeParaData.answers.length).fill('');
@@ -4524,6 +4539,28 @@ window.renderVerbsDetail = function(activeTab = 'theory') {
         `;
     } else if (activeTab === 'practice_book' || activeTab === 'practice_extra') {
         // PRACTICE
+
+        // BÀI 4: Luyện tập chung BOOK
+        const pBook4Html = verbsPracticeBook4.map((q, idx) => `
+            <div class="quiz-item" style="background: var(--bg-card); border-radius: 12px; padding: 20px; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color);">
+                <div style="display: flex; gap: 12px; align-items: flex-start; margin-bottom: 12px;">
+                    <div style="background: var(--primary-light); color: var(--primary-color); width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">${idx + 1}</div>
+                    <div style="flex-grow: 1;">
+                        <p style="font-size: 1.15rem; font-weight: 500; color: var(--text-main); margin-top: 4px; margin-bottom: 8px;">${q.q}</p>
+                        ${q.hint ? `<button onclick="const h = document.getElementById('verb_hint_book4_${idx}'); h.style.display = h.style.display === 'none' ? 'block' : 'none';" style="background: none; border: none; color: #0284c7; font-size: 0.95rem; cursor: pointer; padding: 0; margin-bottom: 12px; display: flex; align-items: center; gap: 4px; font-weight: 500;"><span style="font-size: 1.1rem">💡</span> Xem gợi ý</button>
+                        <div id="verb_hint_book4_${idx}" style="display: none; background: #f0f9ff; border-left: 4px solid #38bdf8; padding: 12px; border-radius: 4px; margin-bottom: 16px; font-size: 0.95rem; color: #0c4a6e; line-height: 1.6;">${q.hint}</div>` : ''}
+                    </div>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 8px; padding-left: 44px;">
+                    <input type="text" id="verb_trans_book4_${idx}" placeholder="Nhập bản dịch tiếng Anh..." style="padding: 10px 16px; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 1.05rem; outline: none; transition: border-color 0.2s; width: 100%; box-sizing: border-box;" onfocus="this.style.borderColor='var(--primary-color)'" onblur="this.style.borderColor='#e2e8f0'" oninput="window.verbsAnswersBook4[${idx}] = this.value; document.getElementById('verbexp_book4_${idx}').style.display='none'; window.saveProgress(true);" value="${window.verbsAnswersBook4[idx] || ''}">
+                    <button onclick="checkVerbsBook(4, ${idx})" style="padding: 8px 16px; background: white; color: var(--primary-color); border: 2px solid var(--primary-color); border-radius: 20px; font-weight: bold; cursor: pointer; transition: all 0.2s; align-self: flex-start;" onmouseover="this.style.background='var(--primary-color)'; this.style.color='white'" onmouseout="this.style.background='white'; this.style.color='var(--primary-color)'">Kiểm tra</button>
+                </div>
+                <div style="padding-left: 44px;">
+                    <div id="verbexp_book4_${idx}" style="display: none; margin-top: 12px; padding: 10px 12px; border-radius: 8px; font-size: 1rem;"></div>
+                </div>
+            </div>
+        `).join('');
+
         // BÀI 1: Dịch (Động từ thường)
         const pBook1Html = verbsPracticeBook1.map((q, idx) => `
             <div class="quiz-item" style="background: var(--bg-card); border-radius: 12px; padding: 20px; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color);">
@@ -4728,6 +4765,19 @@ window.renderVerbsDetail = function(activeTab = 'theory') {
                     </div>
 
                     
+
+                    <!-- BÀI 4 BOOK -->
+                    <div style="background: white; border-radius: 16px; padding: 24px; box-shadow: var(--shadow-md); margin-bottom: 32px; border-top: 6px solid #8b5cf6;">
+                        <h2 style="color: #7c3aed; margin-bottom: 16px; font-size: 1.4rem;">Bài 4: Luyện tập chung (Dịch câu)</h2>
+                        <p style="font-size: 1.1rem; margin-bottom: 24px; color: var(--text-muted);">Áp dụng các kiến thức đã học, chuyển các câu sau đây sang tiếng Anh.</p>
+                        <div style="display: grid; gap: 16px;">
+                            ${pBook4Html}
+                        </div>
+                        <div style="text-align: center; margin-top: 24px;">
+                            <button onclick="window.submitVerbsBook4()" style="padding: 12px 32px; background: #8b5cf6; color: white; border: none; border-radius: 20px; font-weight: bold; cursor: pointer; transition: all 0.2s; font-size: 1.1rem; box-shadow: 0 4px 12px rgba(139,92,246,0.3);">NỘP BÀI 4</button>
+                        </div>
+                    </div>
+
                     <!-- BÀI 3 EXTRA -->
                     <div style="background: white; border-radius: 16px; padding: 24px; box-shadow: var(--shadow-md); margin-bottom: 32px; border-top: 6px solid #14b8a6;">
                         <h2 style="color: #0d9488; margin-bottom: 16px; font-size: 1.4rem;">Bài 3: Động từ khiếm khuyết (Dịch câu)</h2>
@@ -4764,8 +4814,8 @@ window.renderVerbsDetail = function(activeTab = 'theory') {
 
 // ==================== VERBS BOOK LOGIC ====================
 window.checkVerbsBook = function(bookId, idx) {
-    const dataArray = bookId === 1 ? verbsPracticeBook1 : bookId === 2 ? verbsPracticeBook2 : verbsPracticeBook3;
-    const ansArray = bookId === 1 ? window.verbsAnswersBook1 : bookId === 2 ? window.verbsAnswersBook2 : window.verbsAnswersBook3;
+    const dataArray = bookId === 1 ? verbsPracticeBook1 : bookId === 2 ? verbsPracticeBook2 : bookId === 3 ? verbsPracticeBook3 : verbsPracticeBook4;
+    const ansArray = bookId === 1 ? window.verbsAnswersBook1 : bookId === 2 ? window.verbsAnswersBook2 : bookId === 3 ? window.verbsAnswersBook3 : window.verbsAnswersBook4;
     const q = dataArray[idx];
     const val = (ansArray[idx] || "").trim().toLowerCase();
     const expDiv = document.getElementById(`verbexp_book${bookId}_${idx}`);
@@ -4829,6 +4879,25 @@ window.submitVerbsBook2 = function() {
         return;
     }
     window.showExerciseResult(correctCount, verbsPracticeBook2.length, "KẾT QUẢ BÀI 2 (ĐỘNG TỪ TRONG SÁCH)");
+}
+
+
+window.submitVerbsBook4 = function() {
+    let correctCount = 0;
+    let completed = true;
+    verbsPracticeBook4.forEach((q, idx) => {
+        const val = (window.verbsAnswersBook4[idx] || "").trim().toLowerCase();
+        if (!val) completed = false;
+        if (val && q.a.some(ans => window.normalizeText(ans) === window.normalizeText(val))) {
+            correctCount++;
+        }
+        window.checkVerbsBook(4, idx);
+    });
+    if (!completed) {
+        alert("Vui lòng điền hết tất cả các câu trước khi nộp bài!");
+        return;
+    }
+    window.showExerciseResult(correctCount, verbsPracticeBook4.length, "KẾT QUẢ BÀI 4 (LUYỆN TẬP CHUNG)");
 }
 
 window.submitVerbsBook3 = function() {
