@@ -7897,7 +7897,6 @@ window.renderAdverbsDetail = function(activeTab = 'theory') {
 
 // =========================================================================
 // ==================== CHỦ ĐIỂM 07: TỪ NỐI (CONJUNCTIONS) ===================
-// =========================================================================
 
 const conjunctionsTheoryData = [
     {
@@ -8116,7 +8115,7 @@ const conjunctionsTheoryData = [
 ];
 
 // ==================== BÀI TẬP TRONG TÀI LIỆU (BOOK) ====================
-// EXERCISE 01: Dịch các câu sau sang tiếng Anh (liên từ)
+// BÀI 1 BOOK: Dịch câu dùng liên từ (EXERCISE 01 trong tài liệu)
 const conjunctionsPracticeBook1 = [
     {
         q: "Tôi thường sử dụng phương tiện công cộng bởi vì tôi muốn tiết kiệm tiền.",
@@ -8183,8 +8182,72 @@ const conjunctionsPracticeBook1 = [
     }
 ];
 
-// EXERCISE 02: Nối 2 câu lại bằng từ/cụm từ liên kết phù hợp
+// BÀI 2 BOOK: Hoàn thành vế câu còn lại (EXERCISE 02 trong tài liệu)
 const conjunctionsPracticeBook2 = [
+    {
+        prompt: "We should eat more vegetables and drink enough water because",
+        hint: "Gợi ý: chúng tốt cho sức khỏe của chúng ta (they are good for our health) / chúng giúp chúng ta giữ gìn sức khỏe (they help us stay healthy).",
+        acceptable: [
+            "they are good for our health",
+            "these things help us stay healthy",
+            "we can maintain good health",
+            "these habits allow us to stay healthy and prevent some health problems",
+            "they help us stay healthy",
+            "it is good for our health"
+        ]
+    },
+    {
+        prompt: "They do exercise regularly, so",
+        hint: "Gợi ý: họ có thể giữ dáng (they can stay in shape) / họ trở nên khỏe mạnh hơn (they become stronger and healthier).",
+        acceptable: [
+            "they can stay in shape",
+            "they become stronger and healthier",
+            "they rarely get sick easily",
+            "they feel more energetic every day",
+            "they can keep fit",
+            "they stay healthy"
+        ]
+    },
+    {
+        prompt: "Reading books can help us widen our knowledge, and",
+        hint: "Gợi ý: nó cũng cải thiện kỹ năng tư duy (it also improves our thinking skills) / chúng ta có thể làm giàu vốn từ vựng (we can enrich our vocabulary).",
+        acceptable: [
+            "it also improves our thinking skills",
+            "it allows us to become more creative",
+            "it gives us valuable lessons about life",
+            "we can enrich our vocabulary",
+            "it improves our vocabulary",
+            "it helps us relax"
+        ]
+    },
+    {
+        prompt: "I still try to spend time doing homework every day although",
+        hint: "Gợi ý: tôi có rất nhiều việc khác phải làm (I have a lot of other things to do) / tôi cảm thấy mệt mỏi sau giờ học (I feel tired after school).",
+        acceptable: [
+            "I have a lot of other things to do",
+            "I feel tired after school",
+            "I do not have a lot of free time",
+            "my schedule is always busy",
+            "I am very busy",
+            "I don't have much free time"
+        ]
+    },
+    {
+        prompt: "You can go to Ho Chi Minh City by coach, or",
+        hint: "Gợi ý: bạn có thể đi bằng máy bay nếu muốn tiết kiệm thời gian (you can travel there by plane if you want to save time) / bạn có thể đi tàu hỏa (you can take a train).",
+        acceptable: [
+            "you can travel there by plane if you want to save time",
+            "you can take a train for a more comfortable trip",
+            "you can ride a motorbike if you like adventure",
+            "you can drive there if you have a driving license",
+            "you can go by plane",
+            "you can take a train"
+        ]
+    }
+];
+
+// BÀI 3 BOOK: Nối 2 câu bằng từ/cụm từ liên kết phù hợp (BÀI TẬP ÁP DỤNG mục 2 trong tài liệu)
+const conjunctionsPracticeBook3 = [
     {
         q: "Tôi thích đi tản bộ vào thời gian rảnh để cải thiện sức khoẻ. Tôi cũng đọc sách để thư giãn đầu óc.",
         a: [
@@ -8256,73 +8319,9 @@ const conjunctionsPracticeBook2 = [
     }
 ];
 
-// ==================== BÀI TẬP THÊM (EXTRA) ====================
-// BÀI 1 EXTRA: Hoàn thành vế còn lại của câu (dựa theo Slide Hoàn thành câu)
+// ==================== BÀI TẬP THÊM (EXTRA - SOẠN MỚI HOÀN TOÀN) ====================
+// BÀI 1 EXTRA: Trắc nghiệm Liên từ & Từ nối VSTEP (8 câu)
 const conjunctionsPracticeExtra1 = [
-    {
-        prompt: "We should eat more vegetables and drink enough water because",
-        hint: "Gợi ý: chúng tốt cho sức khỏe của chúng ta (they are good for our health) / chúng giúp chúng ta giữ gìn sức khỏe (they help us stay healthy).",
-        acceptable: [
-            "they are good for our health",
-            "these things help us stay healthy",
-            "we can maintain good health",
-            "these habits allow us to stay healthy and prevent some health problems",
-            "they help us stay healthy",
-            "it is good for our health"
-        ]
-    },
-    {
-        prompt: "They do exercise regularly, so",
-        hint: "Gợi ý: họ có thể giữ dáng (they can stay in shape) / họ trở nên khỏe mạnh hơn (they become stronger and healthier).",
-        acceptable: [
-            "they can stay in shape",
-            "they become stronger and healthier",
-            "they rarely get sick easily",
-            "they feel more energetic every day",
-            "they can keep fit",
-            "they stay healthy"
-        ]
-    },
-    {
-        prompt: "Reading books can help us widen our knowledge, and",
-        hint: "Gợi ý: nó cũng cải thiện kỹ năng tư duy (it also improves our thinking skills) / chúng ta có thể làm giàu vốn từ vựng (we can enrich our vocabulary).",
-        acceptable: [
-            "it also improves our thinking skills",
-            "it allows us to become more creative",
-            "it gives us valuable lessons about life",
-            "we can enrich our vocabulary",
-            "it improves our vocabulary",
-            "it helps us relax"
-        ]
-    },
-    {
-        prompt: "I still try to spend time doing homework every day although",
-        hint: "Gợi ý: tôi có rất nhiều việc khác phải làm (I have a lot of other things to do) / tôi cảm thấy mệt mỏi sau giờ học (I feel tired after school).",
-        acceptable: [
-            "I have a lot of other things to do",
-            "I feel tired after school",
-            "I do not have a lot of free time",
-            "my schedule is always busy",
-            "I am very busy",
-            "I don't have much free time"
-        ]
-    },
-    {
-        prompt: "You can go to Ho Chi Minh City by coach, or",
-        hint: "Gợi ý: bạn có thể đi bằng máy bay nếu muốn tiết kiệm thời gian (you can travel there by plane if you want to save time) / bạn có thể đi tàu hỏa (you can take a train).",
-        acceptable: [
-            "you can travel there by plane if you want to save time",
-            "you can take a train for a more comfortable trip",
-            "you can ride a motorbike if you like adventure",
-            "you can drive there if you have a driving license",
-            "you can go by plane",
-            "you can take a train"
-        ]
-    }
-];
-
-// BÀI 2 EXTRA: Trắc nghiệm liên từ & từ nối
-const conjunctionsPracticeExtra2 = [
     {
         q: "I wanted to go for a run, _____ it started raining heavily.",
         options: ["so", "but", "and", "because"],
@@ -8358,6 +8357,77 @@ const conjunctionsPracticeExtra2 = [
         options: ["either", "neither", "both", "not only"],
         answer: 2,
         explanation: "Cặp liên từ tương quan 'both ... and ...' dùng để chỉ cả hai thứ."
+    },
+    {
+        q: "You should leave early; _____, you might get stuck in heavy traffic.",
+        options: ["otherwise", "therefore", "furthermore", "although"],
+        answer: 0,
+        explanation: "'otherwise' mang nghĩa 'nếu không thì' (cảnh báo kết quả tiêu cực nếu không làm điều ở vế trước)."
+    },
+    {
+        q: "_____ the high tuition fees, many students still apply for this university.",
+        options: ["Although", "Despite", "Because", "However"],
+        answer: 1,
+        explanation: "Theo sau là một cụm danh từ 'the high tuition fees' nên phải dùng giới từ chỉ sự nhượng bộ 'Despite' (hoặc In spite of)."
+    }
+];
+
+// BÀI 2 EXTRA: Dịch câu nâng cao với Từ nối (Chuẩn VSTEP Task 2 - 5 câu)
+const conjunctionsPracticeExtra2 = [
+    {
+        q: "Học trực tuyến rất linh hoạt; tuy nhiên, nó đòi hỏi học sinh phải có tính tự giác cao.",
+        a: [
+            "Online learning is very flexible; however, it requires students to have high self-discipline.",
+            "Online learning is very flexible. However, it requires students to have high self-discipline.",
+            "Studying online is very flexible; however, it requires students to have high self-discipline.",
+            "Studying online is very flexible. However, it requires students to have high self-discipline.",
+            "Online learning is flexible; however, it requires high self-discipline from students.",
+            "Online learning is very flexible; however, it requires students to be highly self-disciplined."
+        ],
+        hint: "<b>Từ nối:</b> tuy nhiên (however - sau dấu chấm phẩy hoặc chấm câu)<br><b>Từ vựng:</b> linh hoạt (flexible), đòi hỏi (require), tính tự giác cao (high self-discipline)."
+    },
+    {
+        q: "Không những anh ấy thông minh mà anh ấy còn rất chăm chỉ.",
+        a: [
+            "He is not only intelligent but also very hard-working.",
+            "He is not only smart but also very hard-working.",
+            "He is not only intelligent but also very diligent.",
+            "He is not only smart but also very diligent."
+        ],
+        hint: "<b>Liên từ tương quan:</b> not only ... but also ...<br><b>Từ vựng:</b> thông minh (intelligent / smart), chăm chỉ (hard-working / diligent)."
+    },
+    {
+        q: "Chúng ta nên trồng nhiều cây xanh để bảo vệ môi trường sống.",
+        a: [
+            "We should plant more trees in order to protect our living environment.",
+            "We should plant more trees so as to protect our living environment.",
+            "We should plant more trees so that we can protect our living environment.",
+            "We should plant more green trees in order to protect the living environment.",
+            "We should plant more trees to protect our living environment."
+        ],
+        hint: "<b>Liên từ chỉ mục đích:</b> để (so that + mệnh đề / in order to + Vo / so as to + Vo)<br><b>Từ vựng:</b> trồng nhiều cây xanh (plant more trees), bảo vệ môi trường sống (protect our living environment)."
+    },
+    {
+        q: "Nhiều người trẻ thích sống ở thành phố lớn vì có nhiều cơ hội việc làm hơn.",
+        a: [
+            "Many young people like living in big cities because there are more job opportunities.",
+            "Many young people prefer living in big cities because there are more job opportunities.",
+            "Many young people like to live in big cities because there are more job opportunities.",
+            "Many young people like living in big cities since there are more job opportunities.",
+            "Many young people like living in big cities as there are more job opportunities."
+        ],
+        hint: "<b>Liên từ chỉ nguyên nhân:</b> bởi vì (because / since / as)<br><b>Từ vựng:</b> người trẻ (young people), thành phố lớn (big cities), cơ hội việc làm (job opportunities)."
+    },
+    {
+        q: "Tóm lại, việc duy trì lối sống lành mạnh là vô cùng quan trọng đối với mọi người.",
+        a: [
+            "In conclusion, maintaining a healthy lifestyle is extremely important for everyone.",
+            "To sum up, maintaining a healthy lifestyle is extremely important for everyone.",
+            "In conclusion, keeping a healthy lifestyle is extremely important for everyone.",
+            "Overall, maintaining a healthy lifestyle is extremely important for everyone.",
+            "In summary, maintaining a healthy lifestyle is extremely important for everyone."
+        ],
+        hint: "<b>Từ liên kết kết luận:</b> Tóm lại (In conclusion, / To sum up,)<br><b>Từ vựng:</b> duy trì lối sống lành mạnh (maintaining a healthy lifestyle), vô cùng quan trọng (extremely important / crucial), đối với mọi người (for everyone)."
     }
 ];
 
@@ -8365,8 +8435,9 @@ const conjunctionsPracticeExtra2 = [
 window.renderConjunctionsDetail = function(activeTab = 'theory') {
     if (!window.conjunctionsAnswersBook1) window.conjunctionsAnswersBook1 = new Array(conjunctionsPracticeBook1.length).fill('');
     if (!window.conjunctionsAnswersBook2) window.conjunctionsAnswersBook2 = new Array(conjunctionsPracticeBook2.length).fill('');
-    if (!window.conjunctionsAnswersExtra1) window.conjunctionsAnswersExtra1 = new Array(conjunctionsPracticeExtra1.length).fill('');
-    if (!window.conjunctionsAnswersExtra2) window.conjunctionsAnswersExtra2 = new Array(conjunctionsPracticeExtra2.length).fill(null);
+    if (!window.conjunctionsAnswersBook3) window.conjunctionsAnswersBook3 = new Array(conjunctionsPracticeBook3.length).fill('');
+    if (!window.conjunctionsAnswersExtra1) window.conjunctionsAnswersExtra1 = new Array(conjunctionsPracticeExtra1.length).fill(null);
+    if (!window.conjunctionsAnswersExtra2) window.conjunctionsAnswersExtra2 = new Array(conjunctionsPracticeExtra2.length).fill('');
 
     let tabsHtml = `
         <div class="tabs-container" style="margin-bottom: 24px;">
@@ -8392,7 +8463,7 @@ window.renderConjunctionsDetail = function(activeTab = 'theory') {
             </div>
         `;
     } else if (activeTab === 'practice_book') {
-        // BOOK 1 HTML
+        // BOOK 1 HTML: Dịch câu liên từ
         const pBook1Html = conjunctionsPracticeBook1.map((q, idx) => `
             <div class="quiz-item" style="background: var(--bg-card); border-radius: 12px; padding: 20px; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color);">
                 <div style="display: flex; gap: 12px; align-items: flex-start; margin-bottom: 12px;">
@@ -8413,59 +8484,8 @@ window.renderConjunctionsDetail = function(activeTab = 'theory') {
             </div>
         `).join('');
 
-        // BOOK 2 HTML
+        // BOOK 2 HTML: Hoàn thành vế câu
         const pBook2Html = conjunctionsPracticeBook2.map((q, idx) => `
-            <div class="quiz-item" style="background: var(--bg-card); border-radius: 12px; padding: 20px; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color);">
-                <div style="display: flex; gap: 12px; align-items: flex-start; margin-bottom: 12px;">
-                    <div style="background: #e0e7ff; color: #4338ca; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">${idx + 1}</div>
-                    <div style="flex-grow: 1;">
-                        <p style="font-size: 1.15rem; font-weight: 500; color: var(--text-main); margin-top: 4px; margin-bottom: 8px;">${q.q}</p>
-                        ${q.hint ? `<button onclick="const h = document.getElementById('conj_hint_book2_${idx}'); h.style.display = h.style.display === 'none' ? 'block' : 'none';" style="background: none; border: none; color: #0284c7; font-size: 0.95rem; cursor: pointer; padding: 0; margin-bottom: 12px; display: flex; align-items: center; gap: 4px; font-weight: 500;"><span style="font-size: 1.1rem">💡</span> Xem gợi ý</button>
-                        <div id="conj_hint_book2_${idx}" style="display: none; background: #f0f9ff; border-left: 4px solid #38bdf8; padding: 12px; border-radius: 4px; margin-bottom: 16px; font-size: 0.95rem; color: #0c4a6e; line-height: 1.6;">${q.hint}</div>` : ''}
-                    </div>
-                </div>
-                <div style="display: flex; flex-direction: column; gap: 8px; padding-left: 44px;">
-                    <textarea id="conj_trans_book2_${idx}" rows="2" placeholder="Nối 2 câu bằng từ/cụm từ liên kết phù hợp (ví dụ: In addition, / However, / Therefore,)..." style="padding: 10px 16px; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 1.05rem; outline: none; transition: border-color 0.2s; width: 100%; box-sizing: border-box; font-family: inherit;" onfocus="this.style.borderColor='#4f46e5'" onblur="this.style.borderColor='#e2e8f0'" oninput="window.conjunctionsAnswersBook2[${idx}] = this.value; document.getElementById('conjexp_book2_${idx}').style.display='none'; window.saveProgress(true);">${window.conjunctionsAnswersBook2[idx] || ''}</textarea>
-                    <button onclick="checkConjunctionsBook(2, ${idx})" style="padding: 8px 16px; background: white; color: #4f46e5; border: 2px solid #4f46e5; border-radius: 20px; font-weight: bold; cursor: pointer; transition: all 0.2s; align-self: flex-start;" onmouseover="this.style.background='#4f46e5'; this.style.color='white'" onmouseout="this.style.background='white'; this.style.color='#4f46e5'">Kiểm tra</button>
-                </div>
-                <div style="padding-left: 44px;">
-                    <div id="conjexp_book2_${idx}" style="display: none; margin-top: 12px; padding: 10px 12px; border-radius: 8px; font-size: 1rem;"></div>
-                </div>
-            </div>
-        `).join('');
-
-        contentHtml = `
-            <div style="margin-top: 24px; animation: fadeIn 0.3s ease-out;">
-                <h1 style="color: #059669; font-size: 1.8rem; margin-bottom: 24px; text-align: center;">📖 BÀI TẬP TRONG TÀI LIỆU</h1>
-
-                <!-- BÀI 1 BOOK -->
-                <div style="background: white; border-radius: 16px; padding: 24px; box-shadow: var(--shadow-md); margin-bottom: 32px; border-top: 6px solid var(--primary-color);">
-                    <h2 style="color: var(--primary-color); margin-bottom: 16px; font-size: 1.4rem;">Bài 1: Dịch câu sử dụng Liên từ phù hợp</h2>
-                    <p style="font-size: 1.1rem; margin-bottom: 24px; color: var(--text-muted);">Dịch các câu sau sang tiếng Anh, lưu ý sử dụng các liên từ phù hợp (because, when, but, although, so...).</p>
-                    <div style="display: grid; gap: 16px;">
-                        ${pBook1Html}
-                    </div>
-                    <div style="text-align: center; margin-top: 24px;">
-                        <button onclick="window.submitConjunctionsBook1()" style="padding: 12px 32px; background: var(--primary-color); color: white; border: none; border-radius: 20px; font-weight: bold; cursor: pointer; transition: all 0.2s; font-size: 1.1rem; box-shadow: 0 4px 12px rgba(87,70,227,0.3);">NỘP BÀI 1</button>
-                    </div>
-                </div>
-
-                <!-- BÀI 2 BOOK -->
-                <div style="background: white; border-radius: 16px; padding: 24px; box-shadow: var(--shadow-md); margin-bottom: 32px; border-top: 6px solid #4f46e5;">
-                    <h2 style="color: #4338ca; margin-bottom: 16px; font-size: 1.4rem;">Bài 2: Nối câu bằng Từ/Cụm từ liên kết phù hợp</h2>
-                    <p style="font-size: 1.1rem; margin-bottom: 24px; color: var(--text-muted);">Viết lại 2 câu thành chuỗi câu liên kết hoàn chỉnh bằng các từ nối (In addition, For example, Therefore, However, Moreover, For instance...).</p>
-                    <div style="display: grid; gap: 16px;">
-                        ${pBook2Html}
-                    </div>
-                    <div style="text-align: center; margin-top: 24px;">
-                        <button onclick="window.submitConjunctionsBook2()" style="padding: 12px 32px; background: #4f46e5; color: white; border: none; border-radius: 20px; font-weight: bold; cursor: pointer; transition: all 0.2s; font-size: 1.1rem; box-shadow: 0 4px 12px rgba(79,70,229,0.3);">NỘP BÀI 2</button>
-                    </div>
-                </div>
-            </div>
-        `;
-    } else if (activeTab === 'practice_extra') {
-        // EXTRA 1 HTML: Hoàn thành câu
-        const pExtra1Html = conjunctionsPracticeExtra1.map((q, idx) => `
             <div class="quiz-item" style="background: var(--bg-card); border-radius: 12px; padding: 20px; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color);">
                 <div style="display: flex; gap: 12px; align-items: flex-start; margin-bottom: 12px;">
                     <div style="background: #fdf2f8; color: #db2777; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">${idx + 1}</div>
@@ -8477,17 +8497,80 @@ window.renderConjunctionsDetail = function(activeTab = 'theory') {
                     </div>
                 </div>
                 <div style="display: flex; flex-direction: column; gap: 8px; padding-left: 44px;">
-                    <input type="text" id="conj_trans_extra1_${idx}" placeholder="Nhập vế câu còn lại bằng tiếng Anh (hoặc cả câu)..." style="padding: 10px 16px; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 1.05rem; outline: none; transition: border-color 0.2s; width: 100%; box-sizing: border-box;" onfocus="this.style.borderColor='#db2777'" onblur="this.style.borderColor='#e2e8f0'" oninput="window.conjunctionsAnswersExtra1[${idx}] = this.value; document.getElementById('conjexp_extra1_${idx}').style.display='none'; window.saveProgress(true);" value="${window.conjunctionsAnswersExtra1[idx] || ''}">
-                    <button onclick="checkConjunctionsExtra1(${idx})" style="padding: 8px 16px; background: white; color: #db2777; border: 2px solid #db2777; border-radius: 20px; font-weight: bold; cursor: pointer; transition: all 0.2s; align-self: flex-start;" onmouseover="this.style.background='#db2777'; this.style.color='white'" onmouseout="this.style.background='white'; this.style.color='#db2777'">Kiểm tra</button>
+                    <input type="text" id="conj_trans_book2_${idx}" placeholder="Nhập vế câu còn lại bằng tiếng Anh (hoặc cả câu)..." style="padding: 10px 16px; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 1.05rem; outline: none; transition: border-color 0.2s; width: 100%; box-sizing: border-box;" onfocus="this.style.borderColor='#db2777'" onblur="this.style.borderColor='#e2e8f0'" oninput="window.conjunctionsAnswersBook2[${idx}] = this.value; document.getElementById('conjexp_book2_${idx}').style.display='none'; window.saveProgress(true);" value="${window.conjunctionsAnswersBook2[idx] || ''}">
+                    <button onclick="checkConjunctionsBook(2, ${idx})" style="padding: 8px 16px; background: white; color: #db2777; border: 2px solid #db2777; border-radius: 20px; font-weight: bold; cursor: pointer; transition: all 0.2s; align-self: flex-start;" onmouseover="this.style.background='#db2777'; this.style.color='white'" onmouseout="this.style.background='white'; this.style.color='#db2777'">Kiểm tra</button>
                 </div>
                 <div style="padding-left: 44px;">
-                    <div id="conjexp_extra1_${idx}" style="display: none; margin-top: 12px; padding: 10px 12px; border-radius: 8px; font-size: 1rem;"></div>
+                    <div id="conjexp_book2_${idx}" style="display: none; margin-top: 12px; padding: 10px 12px; border-radius: 8px; font-size: 1rem;"></div>
                 </div>
             </div>
         `).join('');
 
-        // EXTRA 2 HTML: Trắc nghiệm
-        const pExtra2Html = conjunctionsPracticeExtra2.map((q, idx) => `
+        // BOOK 3 HTML: Nối 2 câu bằng từ liên kết
+        const pBook3Html = conjunctionsPracticeBook3.map((q, idx) => `
+            <div class="quiz-item" style="background: var(--bg-card); border-radius: 12px; padding: 20px; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color);">
+                <div style="display: flex; gap: 12px; align-items: flex-start; margin-bottom: 12px;">
+                    <div style="background: #e0e7ff; color: #4338ca; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">${idx + 1}</div>
+                    <div style="flex-grow: 1;">
+                        <p style="font-size: 1.15rem; font-weight: 500; color: var(--text-main); margin-top: 4px; margin-bottom: 8px;">${q.q}</p>
+                        ${q.hint ? `<button onclick="const h = document.getElementById('conj_hint_book3_${idx}'); h.style.display = h.style.display === 'none' ? 'block' : 'none';" style="background: none; border: none; color: #0284c7; font-size: 0.95rem; cursor: pointer; padding: 0; margin-bottom: 12px; display: flex; align-items: center; gap: 4px; font-weight: 500;"><span style="font-size: 1.1rem">💡</span> Xem gợi ý</button>
+                        <div id="conj_hint_book3_${idx}" style="display: none; background: #f0f9ff; border-left: 4px solid #38bdf8; padding: 12px; border-radius: 4px; margin-bottom: 16px; font-size: 0.95rem; color: #0c4a6e; line-height: 1.6;">${q.hint}</div>` : ''}
+                    </div>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 8px; padding-left: 44px;">
+                    <textarea id="conj_trans_book3_${idx}" rows="2" placeholder="Nối 2 câu bằng từ/cụm từ liên kết phù hợp (ví dụ: In addition, / However, / Therefore,)..." style="padding: 10px 16px; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 1.05rem; outline: none; transition: border-color 0.2s; width: 100%; box-sizing: border-box; font-family: inherit;" onfocus="this.style.borderColor='#4f46e5'" onblur="this.style.borderColor='#e2e8f0'" oninput="window.conjunctionsAnswersBook3[${idx}] = this.value; document.getElementById('conjexp_book3_${idx}').style.display='none'; window.saveProgress(true);">${window.conjunctionsAnswersBook3[idx] || ''}</textarea>
+                    <button onclick="checkConjunctionsBook(3, ${idx})" style="padding: 8px 16px; background: white; color: #4f46e5; border: 2px solid #4f46e5; border-radius: 20px; font-weight: bold; cursor: pointer; transition: all 0.2s; align-self: flex-start;" onmouseover="this.style.background='#4f46e5'; this.style.color='white'" onmouseout="this.style.background='white'; this.style.color='#4f46e5'">Kiểm tra</button>
+                </div>
+                <div style="padding-left: 44px;">
+                    <div id="conjexp_book3_${idx}" style="display: none; margin-top: 12px; padding: 10px 12px; border-radius: 8px; font-size: 1rem;"></div>
+                </div>
+            </div>
+        `).join('');
+
+        contentHtml = `
+            <div style="margin-top: 24px; animation: fadeIn 0.3s ease-out;">
+                <h1 style="color: #059669; font-size: 1.8rem; margin-bottom: 24px; text-align: center;">📖 BÀI TẬP TRONG TÀI LIỆU</h1>
+
+                <!-- BÀI 1 BOOK -->
+                <div style="background: white; border-radius: 16px; padding: 24px; box-shadow: var(--shadow-md); margin-bottom: 32px; border-top: 6px solid var(--primary-color);">
+                    <h2 style="color: var(--primary-color); margin-bottom: 16px; font-size: 1.4rem;">Bài 1: Dịch câu sử dụng Liên từ phù hợp (Exercise 01)</h2>
+                    <p style="font-size: 1.1rem; margin-bottom: 24px; color: var(--text-muted);">Dịch các câu sau sang tiếng Anh, lưu ý sử dụng các liên từ phù hợp (because, when, but, although, so...).</p>
+                    <div style="display: grid; gap: 16px;">
+                        ${pBook1Html}
+                    </div>
+                    <div style="text-align: center; margin-top: 24px;">
+                        <button onclick="window.submitConjunctionsBook1()" style="padding: 12px 32px; background: var(--primary-color); color: white; border: none; border-radius: 20px; font-weight: bold; cursor: pointer; transition: all 0.2s; font-size: 1.1rem; box-shadow: 0 4px 12px rgba(87,70,227,0.3);">NỘP BÀI 1</button>
+                    </div>
+                </div>
+
+                <!-- BÀI 2 BOOK -->
+                <div style="background: white; border-radius: 16px; padding: 24px; box-shadow: var(--shadow-md); margin-bottom: 32px; border-top: 6px solid #db2777;">
+                    <h2 style="color: #be185d; margin-bottom: 16px; font-size: 1.4rem;">Bài 2: Hoàn thành vế còn lại của câu (Exercise 02)</h2>
+                    <p style="font-size: 1.1rem; margin-bottom: 24px; color: var(--text-muted);">Hoàn thành vế còn lại của câu để tạo thành một câu hoàn chỉnh.</p>
+                    <div style="display: grid; gap: 16px;">
+                        ${pBook2Html}
+                    </div>
+                    <div style="text-align: center; margin-top: 24px;">
+                        <button onclick="window.submitConjunctionsBook2()" style="padding: 12px 32px; background: #db2777; color: white; border: none; border-radius: 20px; font-weight: bold; cursor: pointer; transition: all 0.2s; font-size: 1.1rem; box-shadow: 0 4px 12px rgba(219,39,119,0.3);">NỘP BÀI 2</button>
+                    </div>
+                </div>
+
+                <!-- BÀI 3 BOOK -->
+                <div style="background: white; border-radius: 16px; padding: 24px; box-shadow: var(--shadow-md); margin-bottom: 32px; border-top: 6px solid #4f46e5;">
+                    <h2 style="color: #4338ca; margin-bottom: 16px; font-size: 1.4rem;">Bài 3: Nối câu bằng Từ/Cụm từ liên kết phù hợp</h2>
+                    <p style="font-size: 1.1rem; margin-bottom: 24px; color: var(--text-muted);">Nối 2 câu lại bằng một từ/cụm từ liên kết phù hợp (In addition, For example, Therefore, However, Moreover, For instance...).</p>
+                    <div style="display: grid; gap: 16px;">
+                        ${pBook3Html}
+                    </div>
+                    <div style="text-align: center; margin-top: 24px;">
+                        <button onclick="window.submitConjunctionsBook3()" style="padding: 12px 32px; background: #4f46e5; color: white; border: none; border-radius: 20px; font-weight: bold; cursor: pointer; transition: all 0.2s; font-size: 1.1rem; box-shadow: 0 4px 12px rgba(79,70,229,0.3);">NỘP BÀI 3</button>
+                    </div>
+                </div>
+            </div>
+        `;
+    } else if (activeTab === 'practice_extra') {
+        // EXTRA 1 HTML: Trắc nghiệm (8 câu soạn mới)
+        const pExtra1Html = conjunctionsPracticeExtra1.map((q, idx) => `
             <div class="quiz-item" style="background: var(--bg-card); border-radius: 12px; padding: 20px; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color);">
                 <div style="display: flex; gap: 12px; align-items: flex-start; margin-bottom: 16px;">
                     <div style="background: #eff6ff; color: #2563eb; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">${idx + 1}</div>
@@ -8495,42 +8578,63 @@ window.renderConjunctionsDetail = function(activeTab = 'theory') {
                 </div>
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; padding-left: 44px;">
                     ${q.options.map((opt, optIdx) => `
-                        <button class="option-btn" id="conj_opt_${idx}_${optIdx}" onclick="window.selectConjunctionsExtra2(${idx}, ${optIdx})" style="padding: 12px 16px; border: 2px solid #e2e8f0; border-radius: 8px; background: white; text-align: left; font-size: 1.05rem; cursor: pointer; transition: all 0.2s; font-weight: 500; color: #334155;">
+                        <button class="option-btn" id="conj_extra1_opt_${idx}_${optIdx}" onclick="window.selectConjunctionsExtra1(${idx}, ${optIdx})" style="padding: 12px 16px; border: 2px solid #e2e8f0; border-radius: 8px; background: white; text-align: left; font-size: 1.05rem; cursor: pointer; transition: all 0.2s; font-weight: 500; color: #334155;">
                             <b>${String.fromCharCode(65 + optIdx)}.</b> ${opt}
                         </button>
                     `).join('')}
                 </div>
                 <div style="padding-left: 44px;">
-                    <div id="conjexp_extra2_${idx}" style="display: none; margin-top: 16px; padding: 12px; border-radius: 8px; font-size: 1rem;"></div>
+                    <div id="conjexp_extra1_${idx}" style="display: none; margin-top: 16px; padding: 12px; border-radius: 8px; font-size: 1rem;"></div>
+                </div>
+            </div>
+        `).join('');
+
+        // EXTRA 2 HTML: Dịch câu nâng cao với Từ nối (5 câu soạn mới)
+        const pExtra2Html = conjunctionsPracticeExtra2.map((q, idx) => `
+            <div class="quiz-item" style="background: var(--bg-card); border-radius: 12px; padding: 20px; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color);">
+                <div style="display: flex; gap: 12px; align-items: flex-start; margin-bottom: 12px;">
+                    <div style="background: #f0fdf4; color: #166534; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">${idx + 1}</div>
+                    <div style="flex-grow: 1;">
+                        <p style="font-size: 1.15rem; font-weight: 500; color: var(--text-main); margin-top: 4px; margin-bottom: 8px;">${q.q}</p>
+                        ${q.hint ? `<button onclick="const h = document.getElementById('conj_hint_extra2_${idx}'); h.style.display = h.style.display === 'none' ? 'block' : 'none';" style="background: none; border: none; color: #0284c7; font-size: 0.95rem; cursor: pointer; padding: 0; margin-bottom: 12px; display: flex; align-items: center; gap: 4px; font-weight: 500;"><span style="font-size: 1.1rem">💡</span> Xem gợi ý</button>
+                        <div id="conj_hint_extra2_${idx}" style="display: none; background: #f0f9ff; border-left: 4px solid #38bdf8; padding: 12px; border-radius: 4px; margin-bottom: 16px; font-size: 0.95rem; color: #0c4a6e; line-height: 1.6;">${q.hint}</div>` : ''}
+                    </div>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 8px; padding-left: 44px;">
+                    <input type="text" id="conj_trans_extra2_${idx}" placeholder="Nhập câu tiếng Anh hoàn chỉnh (nhớ có dấu chấm ở cuối câu)..." style="padding: 10px 16px; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 1.05rem; outline: none; transition: border-color 0.2s; width: 100%; box-sizing: border-box;" onfocus="this.style.borderColor='#166534'" onblur="this.style.borderColor='#e2e8f0'" oninput="window.conjunctionsAnswersExtra2[${idx}] = this.value; document.getElementById('conjexp_extra2_${idx}').style.display='none'; window.saveProgress(true);" value="${window.conjunctionsAnswersExtra2[idx] || ''}">
+                    <button onclick="checkConjunctionsExtra2(${idx})" style="padding: 8px 16px; background: white; color: #166534; border: 2px solid #166534; border-radius: 20px; font-weight: bold; cursor: pointer; transition: all 0.2s; align-self: flex-start;" onmouseover="this.style.background='#166534'; this.style.color='white'" onmouseout="this.style.background='white'; this.style.color='#166534'">Kiểm tra</button>
+                </div>
+                <div style="padding-left: 44px;">
+                    <div id="conjexp_extra2_${idx}" style="display: none; margin-top: 12px; padding: 10px 12px; border-radius: 8px; font-size: 1rem;"></div>
                 </div>
             </div>
         `).join('');
 
         contentHtml = `
             <div style="margin-top: 24px; animation: fadeIn 0.3s ease-out;">
-                <h1 style="color: #6366f1; font-size: 1.8rem; margin-bottom: 24px; text-align: center;">🚀 BÀI TẬP THÊM</h1>
+                <h1 style="color: #6366f1; font-size: 1.8rem; margin-bottom: 24px; text-align: center;">🚀 BÀI TẬP THÊM (LUYỆN TẬP NÂNG CAO)</h1>
 
                 <!-- BÀI 1 EXTRA -->
-                <div style="background: white; border-radius: 16px; padding: 24px; box-shadow: var(--shadow-md); margin-bottom: 32px; border-top: 6px solid #db2777;">
-                    <h2 style="color: #be185d; margin-bottom: 16px; font-size: 1.4rem;">Bài 1: Hoàn thành vế câu còn lại (Sentence Completion)</h2>
-                    <p style="font-size: 1.1rem; margin-bottom: 24px; color: var(--text-muted);">Viết tiếp vế câu còn lại để tạo thành câu phức/ghép hoàn chỉnh và logic.</p>
+                <div style="background: white; border-radius: 16px; padding: 24px; box-shadow: var(--shadow-md); margin-bottom: 32px; border-top: 6px solid #2563eb;">
+                    <h2 style="color: #1d4ed8; margin-bottom: 16px; font-size: 1.4rem;">Bài 1: Trắc nghiệm Liên từ & Từ liên kết</h2>
+                    <p style="font-size: 1.1rem; margin-bottom: 24px; color: var(--text-muted);">Chọn từ nối phù hợp nhất để hoàn thành các câu sau.</p>
                     <div style="display: grid; gap: 16px;">
                         ${pExtra1Html}
                     </div>
                     <div style="text-align: center; margin-top: 24px;">
-                        <button onclick="window.submitConjunctionsExtra1()" style="padding: 12px 32px; background: #db2777; color: white; border: none; border-radius: 20px; font-weight: bold; cursor: pointer; transition: all 0.2s; font-size: 1.1rem; box-shadow: 0 4px 12px rgba(219,39,119,0.3);">NỘP BÀI 1</button>
+                        <button onclick="window.submitConjunctionsExtra1()" style="padding: 12px 32px; background: #2563eb; color: white; border: none; border-radius: 20px; font-weight: bold; cursor: pointer; transition: all 0.2s; font-size: 1.1rem; box-shadow: 0 4px 12px rgba(37,99,235,0.3);">NỘP BÀI 1</button>
                     </div>
                 </div>
 
                 <!-- BÀI 2 EXTRA -->
-                <div style="background: white; border-radius: 16px; padding: 24px; box-shadow: var(--shadow-md); margin-bottom: 32px; border-top: 6px solid #2563eb;">
-                    <h2 style="color: #1d4ed8; margin-bottom: 16px; font-size: 1.4rem;">Bài 2: Trắc nghiệm Liên từ & Từ liên kết</h2>
-                    <p style="font-size: 1.1rem; margin-bottom: 24px; color: var(--text-muted);">Chọn từ nối phù hợp nhất để hoàn thành các câu sau.</p>
+                <div style="background: white; border-radius: 16px; padding: 24px; box-shadow: var(--shadow-md); margin-bottom: 32px; border-top: 6px solid #166534;">
+                    <h2 style="color: #166534; margin-bottom: 16px; font-size: 1.4rem;">Bài 2: Dịch câu nâng cao với Từ nối (VSTEP Writing)</h2>
+                    <p style="font-size: 1.1rem; margin-bottom: 24px; color: var(--text-muted);">Vận dụng các từ nối đã học để dịch các câu hoàn chỉnh sang tiếng Anh.</p>
                     <div style="display: grid; gap: 16px;">
                         ${pExtra2Html}
                     </div>
                     <div style="text-align: center; margin-top: 24px;">
-                        <button onclick="window.submitConjunctionsExtra2()" style="padding: 12px 32px; background: #2563eb; color: white; border: none; border-radius: 20px; font-weight: bold; cursor: pointer; transition: all 0.2s; font-size: 1.1rem; box-shadow: 0 4px 12px rgba(37,99,235,0.3);">NỘP BÀI 2</button>
+                        <button onclick="window.submitConjunctionsExtra2()" style="padding: 12px 32px; background: #166534; color: white; border: none; border-radius: 20px; font-weight: bold; cursor: pointer; transition: all 0.2s; font-size: 1.1rem; box-shadow: 0 4px 12px rgba(22,101,52,0.3);">NỘP BÀI 2</button>
                     </div>
                 </div>
             </div>
@@ -8555,42 +8659,78 @@ window.renderConjunctionsDetail = function(activeTab = 'theory') {
 
 // ==================== CHECK & SUBMIT LOGIC ====================
 window.checkConjunctionsBook = function(bookId, idx) {
-    const dataArray = bookId === 1 ? conjunctionsPracticeBook1 : conjunctionsPracticeBook2;
-    const ansArray = bookId === 1 ? window.conjunctionsAnswersBook1 : window.conjunctionsAnswersBook2;
-    const q = dataArray[idx];
-    const val = (ansArray[idx] || "").trim();
-    const expDiv = document.getElementById(`conjexp_book${bookId}_${idx}`);
-    
-    if (!val) {
+    if (bookId === 1 || bookId === 3) {
+        const dataArray = bookId === 1 ? conjunctionsPracticeBook1 : conjunctionsPracticeBook3;
+        const ansArray = bookId === 1 ? window.conjunctionsAnswersBook1 : window.conjunctionsAnswersBook3;
+        const q = dataArray[idx];
+        const val = (ansArray[idx] || "").trim();
+        const expDiv = document.getElementById(`conjexp_book${bookId}_${idx}`);
+        
+        if (!val) {
+            expDiv.style.display = 'block';
+            expDiv.style.background = '#fffbeb';
+            expDiv.style.color = '#b45309';
+            expDiv.style.border = '1px solid #fde68a';
+            expDiv.innerHTML = "⚠️ Bạn chưa nhập câu trả lời!";
+            return;
+        }
+
+        const cleanUser = window.normalizeText(val);
+        const isCorrect = q.a.some(ans => window.normalizeText(ans) === cleanUser);
+        const hasDot = val.endsWith('.');
+
         expDiv.style.display = 'block';
-        expDiv.style.background = '#fffbeb';
-        expDiv.style.color = '#b45309';
-        expDiv.style.border = '1px solid #fde68a';
-        expDiv.innerHTML = "⚠️ Bạn chưa nhập câu trả lời!";
-        return;
-    }
 
-    const cleanUser = window.normalizeText(val);
-    const isCorrect = q.a.some(ans => window.normalizeText(ans) === cleanUser);
-    const hasDot = val.endsWith('.');
+        if (isCorrect && hasDot) {
+            expDiv.style.background = '#f0fdf4';
+            expDiv.style.color = '#166534';
+            expDiv.style.border = '1px solid #bbf7d0';
+            expDiv.innerHTML = "✅ <b>Chính xác!</b> Bạn đã dùng từ nối rất chuẩn.";
+        } else if (isCorrect && !hasDot) {
+            expDiv.style.background = '#fffbeb';
+            expDiv.style.color = '#b45309';
+            expDiv.style.border = '1px solid #fde68a';
+            expDiv.innerHTML = "⚠️ <b>Gần đúng!</b> Cuối câu bắt buộc phải có dấu chấm nhé!";
+        } else {
+            expDiv.style.background = '#fef2f2';
+            expDiv.style.color = '#991b1b';
+            expDiv.style.border = '1px solid #fecaca';
+            expDiv.innerHTML = `❌ <b>Chưa chính xác.</b><br><br><b>💡 Gợi ý đáp án chuẩn:</b><br>- ${q.a.slice(0, 3).join('<br>- ')}`;
+        }
+    } else if (bookId === 2) {
+        // Hoàn thành câu Book 2
+        const q = conjunctionsPracticeBook2[idx];
+        const val = (window.conjunctionsAnswersBook2[idx] || "").trim();
+        const expDiv = document.getElementById(`conjexp_book2_${idx}`);
+        
+        if (!val) {
+            expDiv.style.display = 'block';
+            expDiv.style.background = '#fffbeb';
+            expDiv.style.color = '#b45309';
+            expDiv.style.border = '1px solid #fde68a';
+            expDiv.innerHTML = "⚠️ Bạn chưa nhập câu trả lời!";
+            return;
+        }
 
-    expDiv.style.display = 'block';
+        const cleanUser = window.normalizeText(val);
+        const isCorrect = q.acceptable.some(ans => {
+            const cleanAns = window.normalizeText(ans);
+            return cleanUser === cleanAns || cleanUser.endsWith(cleanAns);
+        });
 
-    if (isCorrect && hasDot) {
-        expDiv.style.background = '#f0fdf4';
-        expDiv.style.color = '#166534';
-        expDiv.style.border = '1px solid #bbf7d0';
-        expDiv.innerHTML = "✅ <b>Chính xác!</b> Bạn đã dùng từ nối rất chuẩn.";
-    } else if (isCorrect && !hasDot) {
-        expDiv.style.background = '#fffbeb';
-        expDiv.style.color = '#b45309';
-        expDiv.style.border = '1px solid #fde68a';
-        expDiv.innerHTML = "⚠️ <b>Gần đúng!</b> Cuối câu bắt buộc phải có dấu chấm nhé!";
-    } else {
-        expDiv.style.background = '#fef2f2';
-        expDiv.style.color = '#991b1b';
-        expDiv.style.border = '1px solid #fecaca';
-        expDiv.innerHTML = `❌ <b>Chưa chính xác.</b><br><br><b>💡 Gợi ý đáp án chuẩn:</b><br>- ${q.a.slice(0, 3).join('<br>- ')}`;
+        expDiv.style.display = 'block';
+
+        if (isCorrect) {
+            expDiv.style.background = '#f0fdf4';
+            expDiv.style.color = '#166534';
+            expDiv.style.border = '1px solid #bbf7d0';
+            expDiv.innerHTML = "✅ <b>Chính xác!</b> Vế câu của bạn hoàn toàn hợp lý và đúng ngữ pháp.";
+        } else {
+            expDiv.style.background = '#fef2f2';
+            expDiv.style.color = '#991b1b';
+            expDiv.style.border = '1px solid #fecaca';
+            expDiv.innerHTML = `❌ <b>Chưa phù hợp hoặc chưa khớp gợi ý.</b><br><br><b>💡 Các cách hoàn thành gợi ý:</b><br>- ${q.acceptable.slice(0, 3).join('<br>- ')}`;
+        }
     }
 };
 
@@ -8618,8 +8758,11 @@ window.submitConjunctionsBook2 = function() {
     conjunctionsPracticeBook2.forEach((q, idx) => {
         const val = (window.conjunctionsAnswersBook2[idx] || "").trim();
         if (!val) completed = false;
-        if (val && q.a.some(ans => window.normalizeText(ans) === window.normalizeText(val))) {
-            correctCount++;
+        if (val) {
+            const cleanUser = window.normalizeText(val);
+            if (q.acceptable.some(ans => cleanUser === window.normalizeText(ans) || cleanUser.endsWith(window.normalizeText(ans)))) {
+                correctCount++;
+            }
         }
         window.checkConjunctionsBook(2, idx);
     });
@@ -8627,71 +8770,33 @@ window.submitConjunctionsBook2 = function() {
         alert("Vui lòng điền hết tất cả các câu trước khi nộp bài!");
         return;
     }
-    window.showExerciseResult(correctCount, conjunctionsPracticeBook2.length, "KẾT QUẢ BÀI 2 (TỪ LIÊN KẾT)");
+    window.showExerciseResult(correctCount, conjunctionsPracticeBook2.length, "KẾT QUẢ BÀI 2 (HOÀN THÀNH CÂU)");
 };
 
-window.checkConjunctionsExtra1 = function(idx) {
-    const q = conjunctionsPracticeExtra1[idx];
-    const val = (window.conjunctionsAnswersExtra1[idx] || "").trim();
-    const expDiv = document.getElementById(`conjexp_extra1_${idx}`);
-    
-    if (!val) {
-        expDiv.style.display = 'block';
-        expDiv.style.background = '#fffbeb';
-        expDiv.style.color = '#b45309';
-        expDiv.style.border = '1px solid #fde68a';
-        expDiv.innerHTML = "⚠️ Bạn chưa nhập câu trả lời!";
-        return;
-    }
-
-    const cleanUser = window.normalizeText(val);
-    const isCorrect = q.acceptable.some(ans => {
-        const cleanAns = window.normalizeText(ans);
-        return cleanUser === cleanAns || cleanUser.endsWith(cleanAns);
-    });
-
-    expDiv.style.display = 'block';
-
-    if (isCorrect) {
-        expDiv.style.background = '#f0fdf4';
-        expDiv.style.color = '#166534';
-        expDiv.style.border = '1px solid #bbf7d0';
-        expDiv.innerHTML = "✅ <b>Chính xác!</b> Vế câu của bạn hoàn toàn hợp lý và đúng ngữ pháp.";
-    } else {
-        expDiv.style.background = '#fef2f2';
-        expDiv.style.color = '#991b1b';
-        expDiv.style.border = '1px solid #fecaca';
-        expDiv.innerHTML = `❌ <b>Chưa phù hợp hoặc chưa khớp gợi ý.</b><br><br><b>💡 Các cách hoàn thành gợi ý:</b><br>- ${q.acceptable.slice(0, 3).join('<br>- ')}`;
-    }
-};
-
-window.submitConjunctionsExtra1 = function() {
+window.submitConjunctionsBook3 = function() {
     let correctCount = 0;
     let completed = true;
-    conjunctionsPracticeExtra1.forEach((q, idx) => {
-        const val = (window.conjunctionsAnswersExtra1[idx] || "").trim();
+    conjunctionsPracticeBook3.forEach((q, idx) => {
+        const val = (window.conjunctionsAnswersBook3[idx] || "").trim();
         if (!val) completed = false;
-        if (val) {
-            const cleanUser = window.normalizeText(val);
-            if (q.acceptable.some(ans => cleanUser === window.normalizeText(ans) || cleanUser.endsWith(window.normalizeText(ans)))) {
-                correctCount++;
-            }
+        if (val && q.a.some(ans => window.normalizeText(ans) === window.normalizeText(val))) {
+            correctCount++;
         }
-        window.checkConjunctionsExtra1(idx);
+        window.checkConjunctionsBook(3, idx);
     });
     if (!completed) {
         alert("Vui lòng điền hết tất cả các câu trước khi nộp bài!");
         return;
     }
-    window.showExerciseResult(correctCount, conjunctionsPracticeExtra1.length, "KẾT QUẢ BÀI 1 (HOÀN THÀNH CÂU)");
+    window.showExerciseResult(correctCount, conjunctionsPracticeBook3.length, "KẾT QUẢ BÀI 3 (TỪ LIÊN KẾT)");
 };
 
-window.selectConjunctionsExtra2 = function(qIdx, optIdx) {
-    window.conjunctionsAnswersExtra2[qIdx] = optIdx;
+window.selectConjunctionsExtra1 = function(qIdx, optIdx) {
+    window.conjunctionsAnswersExtra1[qIdx] = optIdx;
     window.saveProgress(true);
     
-    for (let i = 0; i < conjunctionsPracticeExtra2[qIdx].options.length; i++) {
-        const btn = document.getElementById(`conj_opt_${qIdx}_${i}`);
+    for (let i = 0; i < conjunctionsPracticeExtra1[qIdx].options.length; i++) {
+        const btn = document.getElementById(`conj_extra1_opt_${qIdx}_${i}`);
         if (btn) {
             if (i === optIdx) {
                 btn.style.borderColor = 'var(--primary-color)';
@@ -8704,16 +8809,16 @@ window.selectConjunctionsExtra2 = function(qIdx, optIdx) {
             }
         }
     }
-    document.getElementById(`conjexp_extra2_${qIdx}`).style.display = 'none';
+    document.getElementById(`conjexp_extra1_${qIdx}`).style.display = 'none';
 };
 
-window.submitConjunctionsExtra2 = function() {
+window.submitConjunctionsExtra1 = function() {
     let correctCount = 0;
     let completed = true;
 
-    conjunctionsPracticeExtra2.forEach((q, idx) => {
-        const userChoice = window.conjunctionsAnswersExtra2[idx];
-        const expDiv = document.getElementById(`conjexp_extra2_${idx}`);
+    conjunctionsPracticeExtra1.forEach((q, idx) => {
+        const userChoice = window.conjunctionsAnswersExtra1[idx];
+        const expDiv = document.getElementById(`conjexp_extra1_${idx}`);
         
         if (userChoice === null || userChoice === undefined) {
             completed = false;
@@ -8740,5 +8845,61 @@ window.submitConjunctionsExtra2 = function() {
         return;
     }
 
-    window.showExerciseResult(correctCount, conjunctionsPracticeExtra2.length, "KẾT QUẢ BÀI 2 (TRẮC NGHIỆM TỪ NỐI)");
+    window.showExerciseResult(correctCount, conjunctionsPracticeExtra1.length, "KẾT QUẢ BÀI 1 (TRẮC NGHIỆM TỪ NỐI)");
+};
+
+window.checkConjunctionsExtra2 = function(idx) {
+    const q = conjunctionsPracticeExtra2[idx];
+    const val = (window.conjunctionsAnswersExtra2[idx] || "").trim();
+    const expDiv = document.getElementById(`conjexp_extra2_${idx}`);
+    
+    if (!val) {
+        expDiv.style.display = 'block';
+        expDiv.style.background = '#fffbeb';
+        expDiv.style.color = '#b45309';
+        expDiv.style.border = '1px solid #fde68a';
+        expDiv.innerHTML = "⚠️ Bạn chưa nhập câu trả lời!";
+        return;
+    }
+
+    const cleanUser = window.normalizeText(val);
+    const isCorrect = q.a.some(ans => window.normalizeText(ans) === cleanUser);
+    const hasDot = val.endsWith('.');
+
+    expDiv.style.display = 'block';
+
+    if (isCorrect && hasDot) {
+        expDiv.style.background = '#f0fdf4';
+        expDiv.style.color = '#166534';
+        expDiv.style.border = '1px solid #bbf7d0';
+        expDiv.innerHTML = "✅ <b>Chính xác!</b> Bạn dịch câu rất chuẩn xác.";
+    } else if (isCorrect && !hasDot) {
+        expDiv.style.background = '#fffbeb';
+        expDiv.style.color = '#b45309';
+        expDiv.style.border = '1px solid #fde68a';
+        expDiv.innerHTML = "⚠️ <b>Gần đúng!</b> Cuối câu bắt buộc phải có dấu chấm nhé!";
+    } else {
+        expDiv.style.background = '#fef2f2';
+        expDiv.style.color = '#991b1b';
+        expDiv.style.border = '1px solid #fecaca';
+        expDiv.innerHTML = `❌ <b>Chưa chính xác.</b><br><br><b>💡 Gợi ý đáp án chuẩn:</b><br>- ${q.a.slice(0, 3).join('<br>- ')}`;
+    }
+};
+
+window.submitConjunctionsExtra2 = function() {
+    let correctCount = 0;
+    let completed = true;
+    conjunctionsPracticeExtra2.forEach((q, idx) => {
+        const val = (window.conjunctionsAnswersExtra2[idx] || "").trim();
+        if (!val) completed = false;
+        if (val && q.a.some(ans => window.normalizeText(ans) === window.normalizeText(val)) && val.endsWith('.')) {
+            correctCount++;
+        }
+        window.checkConjunctionsExtra2(idx);
+    });
+    if (!completed) {
+        alert("Vui lòng điền hết tất cả các câu trước khi nộp bài!");
+        return;
+    }
+    window.showExerciseResult(correctCount, conjunctionsPracticeExtra2.length, "KẾT QUẢ BÀI 2 (DỊCH CÂU NÂNG CAO)");
 };
