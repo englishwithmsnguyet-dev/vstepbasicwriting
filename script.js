@@ -1516,32 +1516,87 @@ const verbsTheoryData = [
                 </div>
             </div>
 
-            <!-- 4 NGUYÊN TẮC VÀNG TRONG VSTEP -->
-            <div style="background: #fffbeb; border: 2px dashed #f59e0b; border-radius: 12px; padding: 20px; margin-bottom: 24px;">
-                <div style="color: #b45309; font-weight: 800; font-size: 1.15rem; margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
-                    <span>⚡</span> 4 NGUYÊN TẮC VÀNG BẮT BUỘC NHỚ KHI VIẾT CÂU
+            <!-- 5 QUY TẮC SỬ DỤNG TRONG VSTEP -->
+            <div style="background: #fffbeb; border: 2px dashed #f59e0b; border-radius: 12px; padding: 22px; margin-bottom: 24px;">
+                <div style="color: #b45309; font-weight: 800; font-size: 1.25rem; margin-bottom: 16px; display: flex; align-items: center; gap: 8px;">
+                    <span style="font-size: 1.4rem;">⚡</span> 5 QUY TẮC SỬ DỤNG BẮT BUỘC NHỚ KHI VIẾT CÂU
                 </div>
-                <ol style="margin: 0; padding-left: 20px; display: grid; gap: 12px; color: #92400e;">
-                    <li>
-                        <b>Sau Động từ khiếm khuyết LUÔN LUÔN là Động từ nguyên mẫu (Vo):</b><br>
-                        Không bao giờ thêm <i>s/es/ed/ing</i> vào động từ theo sau, và không có "to" ở giữa (ngoại trừ <i>have to / ought to</i>).<br>
-                        <span style="color: #16a34a;">✅ Đúng: She can <b>speak</b> English.</span> | <span style="color: #dc2626;">❌ Sai: She can <b>speaks</b>... / She can <b>to speak</b>...</span>
-                    </li>
-                    <li>
-                        <b>Không biến đổi hình thức của Động từ khiếm khuyết:</b><br>
-                        Dù chủ ngữ là số ít (He, She, It) thì Modal verb vẫn giữ nguyên, không được thêm <i>s/es</i>.<br>
-                        <span style="color: #16a34a;">✅ Đúng: He <b>must</b> study hard.</span> | <span style="color: #dc2626;">❌ Sai: He <b>musts</b> study hard.</span>
-                    </li>
-                    <li>
-                        <b>Thêm trực tiếp "not" vào sau Modal Verb để tạo câu phủ định:</b><br>
-                        <i>cannot (viết liền), should not (shouldn't), must not (mustn't), will not (won't)...</i> (Trừ <i>have to</i> phải mượn trợ động từ: <i>don't / doesn't / didn't have to</i>).
-                    </li>
-                    <li>
-                        <b>Không bao giờ dùng 2 Động từ khiếm khuyết đứng liền nhau:</b><br>
-                        <span style="color: #dc2626;">❌ Sai: We <b>will can</b> finish the project soon.</span><br>
-                        <span style="color: #16a34a;">✅ Đúng: We <b>will be able to</b> finish the project soon.</span>
-                    </li>
-                </ol>
+                
+                <div style="display: grid; gap: 16px; color: #92400e; font-size: 1.05rem; line-height: 1.6;">
+                    
+                    <!-- QUY TẮC 1 -->
+                    <div style="background: white; border-radius: 10px; padding: 14px 16px; border-left: 5px solid #f59e0b; box-shadow: 0 1px 3px rgba(0,0,0,0.03);">
+                        <b style="color: #b45309; font-size: 1.1rem;">1. Không chia theo thì (Không biến đổi theo thời gian):</b>
+                        <div style="margin-top: 6px; color: #334155;">
+                            Phần lớn ĐTKK (<i>should, must, ought to, had better...</i>) <b>không có dạng quá khứ hay tương lai</b>, luôn giữ nguyên hình thức.
+                        </div>
+                        <div style="margin-top: 8px; background: #fefce8; padding: 10px; border-radius: 6px; border: 1px solid #fef08a; font-size: 0.98rem;">
+                            <b style="color: #854d0e;">📌 Các trường hợp ngoại lệ khi lùi thì / diễn tả quá khứ:</b>
+                            <ul style="margin: 4px 0 0 0; padding-left: 20px; display: grid; gap: 4px; color: #713f12;">
+                                <li><b>can ➔ could:</b> Diễn tả khả năng trong quá khứ hoặc câu điều kiện/yêu cầu lịch sự. <br><i style="color: #64748b;">(VD: In the past, people <b>could not</b> communicate instantly.)</i></li>
+                                <li><b>have to ➔ had to:</b> Diễn tả sự bắt buộc trong quá khứ. <br><i style="color: #64748b;">(VD: Yesterday, I <b>had to</b> finish my report before 5 PM.)</i></li>
+                                <li><b>will ➔ would:</b> Diễn tả ý định trong quá khứ, câu gián tiếp hoặc câu điều kiện loại 2. <br><i style="color: #64748b;">(VD: She said she <b>would</b> help me.)</i></li>
+                                <li><b>may ➔ might:</b> Diễn tả khả năng trong quá khứ hoặc trong câu gián tiếp.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- QUY TẮC 2 -->
+                    <div style="background: white; border-radius: 10px; padding: 14px 16px; border-left: 5px solid #f59e0b; box-shadow: 0 1px 3px rgba(0,0,0,0.03);">
+                        <b style="color: #b45309; font-size: 1.1rem;">2. Không chia theo chủ từ (Không phụ thuộc vào ngôi/số lượng):</b>
+                        <div style="margin-top: 6px; color: #334155;">
+                            Dù chủ ngữ là số ít (<i>He, She, It, Danh từ số ít, Danh từ không đếm được</i>) hay số nhiều (<i>They, We, Danh từ số nhiều</i>), ĐTKK vẫn <b>giữ nguyên và tuyệt đối không thêm s/es</b>.
+                        </div>
+                        <div style="margin-top: 6px; font-size: 0.98rem;">
+                            <span style="color: #16a34a; font-weight: bold;">✅ Đúng:</span> He <b>can</b> swim. / She <b>must</b> go. / Water <b>can</b> boil at 100°C.<br>
+                            <span style="color: #dc2626; font-weight: bold;">❌ Sai:</span> He <del>cans</del> swim. / She <del>musts</del> go.
+                        </div>
+                        <div style="margin-top: 8px; background: #fefce8; padding: 8px 12px; border-radius: 6px; border: 1px solid #fef08a; font-size: 0.98rem;">
+                            <b style="color: #854d0e;">📌 Ngoại lệ duy nhất:</b> <b>have to ➔ has to</b> khi chủ từ là ngôi thứ 3 số ít (<i>He, She, It, danh từ số ít</i>) ở Hiện tại đơn.<br>
+                            <i style="color: #64748b;">(VD: She <b>has to</b> wake up early every day. | We <b>have to</b> wake up early.)</i>
+                        </div>
+                    </div>
+
+                    <!-- QUY TẮC 3 -->
+                    <div style="background: white; border-radius: 10px; padding: 14px 16px; border-left: 5px solid #f59e0b; box-shadow: 0 1px 3px rgba(0,0,0,0.03);">
+                        <b style="color: #b45309; font-size: 1.1rem;">3. Sau Động từ khiếm khuyết LUÔN LUÔN là Động từ nguyên mẫu (Vo):</b>
+                        <div style="margin-top: 6px; color: #334155;">
+                            Động từ chính đi ngay sau ĐTKK luôn ở dạng nguyên mẫu không "to" (<b>Vo</b>). Tuyệt đối <b>không chia thì, không thêm s/es/ed/ing</b>, và <b>không có "to"</b> ở giữa.
+                        </div>
+                        <div style="margin-top: 6px; font-size: 0.98rem;">
+                            <span style="color: #16a34a; font-weight: bold;">✅ Đúng:</span> You should <b>study</b> hard.<br>
+                            <span style="color: #dc2626; font-weight: bold;">❌ Sai:</span> You should <del>studies</del> / <del>to study</del> / <del>studying</del> hard.<br>
+                            <i style="color: #64748b; font-size: 0.93rem;">* Lưu ý: Chỉ các từ vốn dĩ đã có sẵn "to" như <b>have to, ought to</b> mới có "to".</i>
+                        </div>
+                    </div>
+
+                    <!-- QUY TẮC 4 -->
+                    <div style="background: white; border-radius: 10px; padding: 14px 16px; border-left: 5px solid #f59e0b; box-shadow: 0 1px 3px rgba(0,0,0,0.03);">
+                        <b style="color: #b45309; font-size: 1.1rem;">4. Quy tắc thêm "NOT" khi phủ định:</b>
+                        <div style="margin-top: 6px; color: #334155;">
+                            <b>• Với các ĐTKK thông thường:</b> Thêm trực tiếp <b>"not"</b> vào ngay sau ĐTKK.<br>
+                            <span style="display: inline-block; margin-top: 4px; font-family: monospace; font-size: 1rem; color: #2563eb; background: #eff6ff; padding: 4px 10px; border-radius: 6px;">
+                                cannot (viết liền) &nbsp;|&nbsp; should not (shouldn't) &nbsp;|&nbsp; must not (mustn't) &nbsp;|&nbsp; will not (won't) &nbsp;|&nbsp; could not (couldn't)
+                            </span>
+                        </div>
+                        <div style="margin-top: 10px; background: #fff1f2; padding: 10px 12px; border-radius: 6px; border: 1px solid #fecdd3; font-size: 0.98rem;">
+                            <b style="color: #be123c;">📌 Ngoại lệ với have to:</b> Vì là bán khiếm khuyết, bắt buộc phải <b>mượn trợ động từ do/does/did</b> để phủ định:<br>
+                            • Hiện tại: <b style="color: #e11d48;">don't have to / doesn't have to + Vo</b> <i>(Ý nghĩa: KHÔNG CẦN PHẢI làm, khác với must not = CẤM)</i><br>
+                            • Quá khứ: <b style="color: #e11d48;">didn't have to + Vo</b><br>
+                            • Tương lai: <b style="color: #e11d48;">won't have to + Vo</b>
+                        </div>
+                    </div>
+
+                    <!-- QUY TẮC 5 -->
+                    <div style="background: white; border-radius: 10px; padding: 14px 16px; border-left: 5px solid #f59e0b; box-shadow: 0 1px 3px rgba(0,0,0,0.03);">
+                        <b style="color: #b45309; font-size: 1.1rem;">5. Không bao giờ dùng 2 Động từ khiếm khuyết đứng liền nhau:</b>
+                        <div style="margin-top: 6px; font-size: 0.98rem;">
+                            <span style="color: #dc2626; font-weight: bold;">❌ Sai:</span> We <del>will can</del> finish the project soon. / You <del>should must</del> try.<br>
+                            <span style="color: #16a34a; font-weight: bold;">✅ Đúng (dùng cụm tương đương):</span> We <b>will be able to</b> finish the project soon. / You <b>should have to</b> try.
+                        </div>
+                    </div>
+
+                </div>
             </div>
 
             <!-- BẢNG BẪY LỖI SAI THƯỜNG GẶP -->
