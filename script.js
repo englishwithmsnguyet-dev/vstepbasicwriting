@@ -1837,7 +1837,7 @@ window.openTopic = function(topicId, status) {
         const validPasses = topicPasswords[topicId] || chap2Passes;
         
         // Mật khẩu đặc biệt mở khóa tất cả các chủ điểm
-        const masterPasses = ['cb206', 'missnguyet2026'];
+        const masterPasses = ['cb206', 'cb211', 'missnguyet2026'];
         
         if (enteredPass && (validPasses.includes(enteredPass) || masterPasses.includes(enteredPass))) {
             const topic1 = topicsData.find(t => t.id === topicId);
