@@ -2699,8 +2699,8 @@ let selfPracticeUserAnswers = {}; // key: `${topicId}_${exIdx}_${qIdx}`
 
 window.renderSelfPracticeView = function() {
     let topicNavHtml = selfPracticeTopics.map(t => `
-        <button onclick="window.switchSelfTopic('${t.id}')" class="tab-pill ${currentSelfTopicId === t.id ? 'active' : ''}" style="white-space: nowrap; font-size: 0.95rem; padding: 8px 16px; display: flex; align-items: center; gap: 6px;">
-            <span>${t.icon}</span> <span>${t.title}</span>
+        <button onclick="window.switchSelfTopic('${t.id}')" class="tab-pill ${currentSelfTopicId === t.id ? 'active' : ''}" style="white-space: nowrap; font-size: 1.15rem; font-weight: 700; padding: 12px 24px; display: flex; align-items: center; gap: 8px; border-radius: 9999px; letter-spacing: 0.2px;">
+            <span style="font-size: 1.25rem;">${t.icon}</span> <span>${t.title}</span>
         </button>
     `).join('');
 
