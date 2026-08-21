@@ -3701,6 +3701,53 @@ window.renderNounsDetail = function(activeTab = 'theory') {
 }
 
 
+window.selectTrueFalseNouns = function(idx, isTrue) {
+    if (!window.nounsAnswersBook2[idx]) {
+        window.nounsAnswersBook2[idx] = { tf: null, correction: null };
+    }
+    window.nounsAnswersBook2[idx].tf = isTrue;
+    window.saveProgress(true);
+
+    const btnTrue = document.getElementById(`btn_true_${idx}`);
+    const btnFalse = document.getElementById(`btn_false_${idx}`);
+    const corrStep = document.getElementById(`correction_step_${idx}`);
+    const expDiv = document.getElementById(`nounsexp_${idx}`);
+    if (expDiv) expDiv.style.display = 'none';
+
+    if (isTrue) {
+        if (btnTrue) {
+            btnTrue.style.background = 'var(--primary-color)';
+            btnTrue.style.color = 'white';
+            btnTrue.style.borderColor = 'var(--primary-color)';
+        }
+        if (btnFalse) {
+            btnFalse.style.background = 'white';
+            btnFalse.style.color = '#64748b';
+            btnFalse.style.borderColor = '#e2e8f0';
+        }
+        if (corrStep) corrStep.style.display = 'none';
+    } else {
+        if (btnFalse) {
+            btnFalse.style.background = '#ef4444';
+            btnFalse.style.color = 'white';
+            btnFalse.style.borderColor = '#ef4444';
+        }
+        if (btnTrue) {
+            btnTrue.style.background = 'white';
+            btnTrue.style.color = '#64748b';
+            btnTrue.style.borderColor = '#e2e8f0';
+        }
+        if (corrStep) {
+            corrStep.style.display = 'flex';
+            const input = document.getElementById(`correction_input_${idx}`);
+            if (input) {
+                input.value = window.nounsAnswersBook2[idx].correction || '';
+                input.focus();
+            }
+        }
+    }
+};
+
 window.checkNounsTranslation = function(type, idx) {
     let dataArr, ansArr, prefix;
     if (type === 'book3') {
