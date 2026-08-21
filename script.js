@@ -3418,6 +3418,9 @@ window.renderNounsDetail = function(activeTab = 'theory') {
                 <div style="margin-bottom: 40px;">
                     <h2 style="color: var(--primary-color); font-size: 1.4rem; margin-bottom: 16px;">BÀI TẬP ÁP DỤNG 2: XÁC ĐỊNH & SỬA LỖI</h2>
                     ${errorCorrectionList}
+                    <div style="margin-top: 24px; text-align: center;">
+                        <button onclick="window.submitNouns2()" style="padding: 12px 32px; background: var(--primary-color); color: white; border: none; border-radius: 30px; font-weight: bold; font-size: 1.1rem; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.1)'">Kiểm tra Bài 2</button>
+                    </div>
                 </div>
                 
                 <div style="margin-bottom: 40px;">
@@ -3489,6 +3492,9 @@ window.renderNounsDetail = function(activeTab = 'theory') {
                             </div>
                         `).join('')}
                     </div>
+                    <div style="margin-top: 24px; text-align: center;">
+                        <button onclick="window.submitNounsBook3()" style="padding: 12px 32px; background: var(--primary-color); color: white; border: none; border-radius: 30px; font-weight: bold; font-size: 1.1rem; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.1)'">Kiểm tra Bài 3</button>
+                    </div>
                 </div>
             </div>
         `;
@@ -3528,7 +3534,7 @@ window.renderNounsDetail = function(activeTab = 'theory') {
                     </div>
                     
                     <div style="margin-top: 24px; text-align: center;">
-                        <button onclick="checkNounsDragDropExtra()" style="padding: 12px 32px; background: var(--primary-color); color: white; border: none; border-radius: 30px; font-weight: bold; font-size: 1.1rem; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.1)'">Kiểm tra Bài 1</button>
+                        <button onclick="window.submitNounsExtra1()" style="padding: 12px 32px; background: var(--primary-color); color: white; border: none; border-radius: 30px; font-weight: bold; font-size: 1.1rem; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.1)'">Kiểm tra Bài 1</button>
                     </div>
                 </div>
 
@@ -3603,6 +3609,9 @@ window.renderNounsDetail = function(activeTab = 'theory') {
                             </div>
                         `).join('')}
                     </div>
+                    <div style="margin-top: 24px; text-align: center;">
+                        <button onclick="window.submitNounsExtra2()" style="padding: 12px 32px; background: var(--primary-color); color: white; border: none; border-radius: 30px; font-weight: bold; font-size: 1.1rem; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.1)'">Kiểm tra Bài 2</button>
+                    </div>
                 </div>
 
                 <div style="margin-bottom: 40px;">
@@ -3629,6 +3638,9 @@ window.renderNounsDetail = function(activeTab = 'theory') {
                                 </div>
                             </div>
                         `).join('')}
+                    </div>
+                    <div style="margin-top: 24px; text-align: center;">
+                        <button onclick="window.submitNounsExtra3()" style="padding: 12px 32px; background: var(--primary-color); color: white; border: none; border-radius: 30px; font-weight: bold; font-size: 1.1rem; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.1)'">Kiểm tra Bài 3</button>
                     </div>
                 </div>
             </div>
@@ -3905,8 +3917,8 @@ window.submitNouns1 = function() {
         if(el.getAttribute('data-type') === 'uncountable') p1Correct++;
     });
     window.checkNounsDragDrop();
-    window.showExerciseResult(p1Correct, 10, "KẾT QUẢ BÀI 1 (DANH TỪ)");
-}
+    window.showExerciseResult(p1Correct, 10, "KẾT QUẢ BÀI 1 (TRONG TÀI LIỆU)");
+};
 
 window.submitNouns2 = function() {
     let p2Correct = 0;
@@ -3935,276 +3947,103 @@ window.submitNouns2 = function() {
         alert("Vui lòng trả lời hết các câu hỏi trước khi nộp bài!");
         return;
     }
-    window.showExerciseResult(p2Correct, nounsPracticeBook2Data.length, "KẾT QUẢ BÀI 2 (DANH TỪ)");
-}
-
-window.submitNouns3 = function() {
-    let p3Correct = 0;
-    let completed = true;
-    nounsPractice3Data.forEach((q, idx) => {
-        const userInput = window.nounsAnswers3[idx];
-        if (!userInput || userInput.trim() === '') {
-            completed = false;
-        } else {
-            const cleanUser = userInput.trim().toLowerCase().replace(/[.,!?;:]/g, '').replace(/\s+/g, ' ');
-            const validAnswers = q.a;
-            let isCorrect = false;
-            for (let ans of validAnswers) {
-                if (cleanUser === ans.toLowerCase()) {
-                    isCorrect = true;
-                    break;
-                }
-            }
-            if (isCorrect) p3Correct++;
-        }
-        window.checkNouns3(idx);
-    });
-    if (!completed) {
-        alert("Vui lòng điền hết tất cả các câu trước khi nộp bài!");
-        return;
-    }
-    window.showExerciseResult(p3Correct, nounsPractice3Data.length, "KẾT QUẢ BÀI 3 (DANH TỪ)");
-}
-
-window.submitNouns4 = function() {
-    let p4Correct = 0;
-    let completed = true;
-    nounsPractice4Data.forEach((q, idx) => {
-        const userInput = window.nounsAnswers4[idx];
-        if (!userInput || userInput.trim() === '') {
-            completed = false;
-        } else {
-            const cleanUser = userInput.trim().toLowerCase().replace(/[.,!?;:]/g, '').replace(/\s+/g, ' ');
-            const validAnswers = q.a;
-            let isCorrect = false;
-            for (let ans of validAnswers) {
-                if (cleanUser === ans.toLowerCase()) {
-                    isCorrect = true;
-                    break;
-                }
-            }
-            if (isCorrect) p4Correct++;
-        }
-        window.checkNouns4(idx);
-    });
-    if (!completed) {
-        alert("Vui lòng điền hết tất cả các câu trước khi nộp bài!");
-        return;
-    }
-    window.showExerciseResult(p4Correct, nounsPractice4Data.length, "KẾT QUẢ BÀI 4 (DANH TỪ)");
-}
-
-window.selectPronouns1Option = function(el, idx, oIdx) {
-    window.pronounsAnswers1[idx] = oIdx;
-    const exp = document.getElementById(`proexp1_${idx}`);
-    if (exp) exp.style.display = 'none';
-    const container = el.parentElement;
-    const labels = container.querySelectorAll('label');
-    labels.forEach((label, lIdx) => {
-        const radioCircle = label.querySelector('.radio-custom');
-        const radioInput = label.querySelector('input[type="radio"]');
-        if (lIdx === oIdx) {
-            label.style.background = '#eff6ff';
-            label.style.borderColor = 'var(--primary-color)';
-            if (radioCircle) radioCircle.style.background = 'var(--primary-color)';
-            if (radioInput) radioInput.checked = true;
-        } else {
-            label.style.background = '#f8fafc';
-            label.style.borderColor = '#e2e8f0';
-            if (radioCircle) radioCircle.style.background = 'transparent';
-            if (radioInput) radioInput.checked = false;
-        }
-    });
+    window.showExerciseResult(p2Correct, nounsPracticeBook2Data.length, "KẾT QUẢ BÀI 2 (TRONG TÀI LIỆU)");
 };
 
-
-window.submitPronouns1 = function() {
+window.submitNounsBook3 = function() {
     let correctCount = 0;
     let completed = true;
-    pronounsPractice1Data.forEach((q, idx) => {
-        if (window.pronounsAnswers1[idx] === null) {
+    nounsPracticeBook3Data.forEach((q, idx) => {
+        const userInput = (window.nounsAnswersBook3[idx] || "").trim();
+        if (!userInput) {
             completed = false;
         } else {
-            if (window.pronounsAnswers1[idx] === q.a) correctCount++;
-        }
-        window.checkPronouns1(idx); // update UI
-    });
-    if (!completed) {
-        alert("Vui lòng trả lời hết các câu hỏi trước khi nộp bài!");
-        return;
-    }
-    window.showExerciseResult(correctCount, pronounsPractice1Data.length, "KẾT QUẢ BÀI 1 (ĐẠI TỪ)");
-}
-
-window.submitPronouns2 = function() {
-    let correctCount = 0;
-    let completed = true;
-    pronounsPracticeBook2Data.forEach((q, idx) => {
-        const userInput = window.pronounsAnswers2[idx];
-        if (!userInput || userInput.trim() === '') {
-            completed = false;
-        } else {
-            const cleanUser = userInput.trim().toLowerCase().replace(/[.,!?;:]/g, '').replace(/\s+/g, ' ');
+            const cleanUser = window.normalizeText(userInput);
             const validAnswers = q.a;
-            let isCorrect = false;
-            for (let ans of validAnswers) {
-                if (cleanUser === ans.toLowerCase()) {
-                    isCorrect = true;
-                    break;
-                }
-            }
-            if (isCorrect) correctCount++;
-        }
-        window.checkPronouns2(idx);
-    });
-    if (!completed) {
-        alert("Vui lòng điền hết tất cả các câu trước khi nộp bài!");
-        return;
-    }
-    window.showExerciseResult(correctCount, pronounsPracticeBook2Data.length, "KẾT QUẢ BÀI 2 (ĐẠI TỪ)");
-}
-
-window.submitPronouns3 = function() {
-    const data = pronounsParagraphData;
-    let correctCount = 0;
-    let completed = true;
-    data.answers.forEach((ans, idx) => {
-        const userInput = window.pronounsAnswersPara[idx];
-        if (!userInput || userInput.trim() === '') {
-            completed = false;
-        } else {
-            const cleanUser = userInput.trim().toLowerCase();
-            if (cleanUser === ans.toLowerCase()) {
+            if (validAnswers.some(ans => window.normalizeText(ans) === cleanUser)) {
                 correctCount++;
             }
         }
+        window.checkNounsTranslation('book3', idx);
     });
     if (!completed) {
-        alert("Vui lòng điền hết tất cả các ô trống trước khi nộp bài!");
+        alert("Vui lòng điền hết tất cả các câu trước khi nộp bài!");
         return;
     }
-    window.checkPronounsParagraph(); // update UI (color and explanation)
-    window.showExerciseResult(correctCount, data.answers.length, "KẾT QUẢ BÀI 3 (ĐẠI TỪ)");
-}
+    window.showExerciseResult(correctCount, nounsPracticeBook3Data.length, "KẾT QUẢ BÀI 3 (TRONG TÀI LIỆU)");
+};
 
-window.checkPronouns1 = function(idx) {
-    const ans = window.pronounsAnswers1[idx];
-    const expDiv = document.getElementById(`proexp1_${idx}`);
+window.submitNounsExtra1 = function() {
+    let p1Correct = 0;
+    const countableZone = document.getElementById('zone-countable-extra');
+    const uncountableZone = document.getElementById('zone-uncountable-extra');
+    const pool = document.getElementById('words-pool-extra');
     
-    if (ans === null) {
-        expDiv.style.display = 'block';
-        expDiv.style.background = '#fffbeb'; expDiv.style.color = '#b45309'; expDiv.style.borderLeft = '4px solid #f59e0b';
-        expDiv.innerHTML = '<b>⚠️ Bạn chưa chọn!</b> Vui lòng chọn một đáp án.';
-        return;
-    }
-    
-    const correctIdx = pronounsPractice1Data[idx].a;
-    expDiv.style.display = 'block';
-    
-    if (ans === correctIdx) {
-        expDiv.style.background = '#f0fdf4'; expDiv.style.color = '#166534'; expDiv.style.borderLeft = '4px solid #22c55e';
-        expDiv.innerHTML = `<b>✅ CHÍNH XÁC!</b> ${pronounsPractice1Data[idx].exp}`;
-    } else {
-        expDiv.style.background = '#fef2f2'; expDiv.style.color = '#991b1b'; expDiv.style.borderLeft = '4px solid #ef4444';
-        expDiv.innerHTML = `<b>❌ SAI RỒI!</b> Đáp án đúng là <b>${pronounsPractice1Data[idx].options[correctIdx]}</b>. ${pronounsPractice1Data[idx].exp}`;
-    }
-}
-
-window.checkPronouns2 = function(idx) {
-    const userInput = window.pronounsAnswers2[idx];
-    const expDiv = document.getElementById(`proexp2_${idx}`);
-    
-    if (!userInput || userInput.trim() === '') {
-        expDiv.style.display = 'block';
-        expDiv.style.background = '#fffbeb'; expDiv.style.color = '#b45309'; expDiv.style.borderLeft = '4px solid #f59e0b';
-        expDiv.innerHTML = '<b>⚠️ Bạn chưa nhập!</b> Vui lòng nhập đáp án của bạn.';
+    if (pool && pool.querySelectorAll('.drag-word').length > 0) {
+        alert("Vui lòng kéo hết các từ vào 2 cột trước khi nộp bài!");
         return;
     }
     
-    const cleanUser = userInput.trim().toLowerCase().replace(/[.,!?;:]/g, '').replace(/\s+/g, ' ');
-    const validAnswers = pronounsPracticeBook2Data[idx].a;
-    let isCorrect = false;
-    
-    for (let ans of validAnswers) {
-        if (cleanUser === ans.toLowerCase()) {
-            isCorrect = true;
-            break;
-        }
+    if (countableZone) {
+        countableZone.querySelectorAll('.drag-word').forEach(el => {
+            if(el.getAttribute('data-type') === 'countable') p1Correct++;
+        });
     }
-    
-    expDiv.style.display = 'block';
-    if (isCorrect) {
-        expDiv.style.background = '#f0fdf4'; expDiv.style.color = '#166534'; expDiv.style.borderLeft = '4px solid #22c55e';
-        expDiv.innerHTML = `<b>✅ CHÍNH XÁC!</b> ${pronounsPracticeBook2Data[idx].exp}`;
-    } else {
-        expDiv.style.background = '#fef2f2'; expDiv.style.color = '#991b1b'; expDiv.style.borderLeft = '4px solid #ef4444';
-        expDiv.innerHTML = `<b>❌ CHƯA ĐÚNG.</b> Tham khảo: <b>${validAnswers[0]}</b>. ${pronounsPracticeBook2Data[idx].exp}`;
+    if (uncountableZone) {
+        uncountableZone.querySelectorAll('.drag-word').forEach(el => {
+            if(el.getAttribute('data-type') === 'uncountable') p1Correct++;
+        });
     }
-}
+    window.checkNounsDragDropExtra();
+    window.showExerciseResult(p1Correct, 10, "KẾT QUẢ BÀI TẬP THÊM 1 (DANH TỪ)");
+};
 
-window.checkPronounsParagraph = function() {
-    const data = pronounsParagraphData;
-    const expDiv = document.getElementById('pro_para_explanation');
-    const expList = document.getElementById('pro_para_exp_list');
-    
-    let html = '';
+window.submitNounsExtra2 = function() {
     let correctCount = 0;
-    
-    data.answers.forEach((correctAnswer, idx) => {
-        const input = document.getElementById(`pro_para_${idx}`);
-        if (!input) return;
-        
-        const val = input.value.trim();
-        const isCorrect = val.toLowerCase() === correctAnswer.toLowerCase();
-        
-        if (isCorrect) {
-            input.style.borderColor = '#22c55e';
-            input.style.background = '#f0fdf4';
-            input.style.color = '#15803d';
-            correctCount++;
-            html += `<li style="margin-bottom: 8px;"><span style="color:#15803d; font-weight:bold;">Câu ${idx + 1} (Đúng):</span> Đáp án là <b>${correctAnswer}</b>. ${data.explanations[idx]}</li>`;
+    let completed = true;
+    nounsPracticeExtra2Data.forEach((q, idx) => {
+        const userInput = (window.nounsAnswersExtra2[idx] || "").trim();
+        if (!userInput) {
+            completed = false;
         } else {
-            input.style.borderColor = '#ef4444';
-            input.style.background = '#fef2f2';
-            input.style.color = '#b91c1c';
-            html += `<li style="margin-bottom: 8px;"><span style="color:#b91c1c; font-weight:bold;">Câu ${idx + 1} (Sai):</span> Bạn điền "${val || 'trống'}", đáp án đúng là <b style="color:#15803d;">${correctAnswer}</b>. ${data.explanations[idx]}</li>`;
+            const cleanUser = window.normalizeText(userInput);
+            const validAnswers = q.a;
+            if (validAnswers.some(ans => window.normalizeText(ans) === cleanUser)) {
+                correctCount++;
+            }
         }
+        window.checkNounsTranslation('extra2', idx);
     });
-    
-    const summaryHtml = `<div style="background: ${correctCount === data.answers.length ? '#f0fdf4' : '#fffbeb'}; border-left: 4px solid ${correctCount === data.answers.length ? '#22c55e' : '#f59e0b'}; padding: 12px; margin-bottom: 16px; border-radius: 4px; font-weight: bold; color: ${correctCount === data.answers.length ? '#166534' : '#b45309'}; font-size: 1.1rem;">
-        📊 Kết quả: Bạn làm đúng ${correctCount} / ${data.answers.length} câu.
-    </div>`;
-    
-    expList.innerHTML = summaryHtml + '<ol style="padding-left: 20px; margin: 0;">' + html + '</ol>';
-    expDiv.style.display = 'block';
-    
-    try {
-        const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-        const playTone = (freq, duration, type) => {
-            const osc = audioCtx.createOscillator();
-            const gain = audioCtx.createGain();
-            osc.connect(gain);
-            gain.connect(audioCtx.destination);
-            osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
-            osc.type = type;
-            gain.gain.setValueAtTime(0.1, audioCtx.currentTime);
-            gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + duration);
-            osc.start();
-            osc.stop(audioCtx.currentTime + duration);
-        };
-        if (correctCount === data.answers.length) {
-            playTone(523.25, 0.15, 'sine'); // C5
-            setTimeout(() => playTone(659.25, 0.15, 'sine'), 150); // E5
-            setTimeout(() => playTone(783.99, 0.3, 'sine'), 300); // G5
-        } else if (correctCount > 0) {
-            playTone(523.25, 0.15, 'sine');
-            setTimeout(() => playTone(659.25, 0.2, 'sine'), 150);
-        } else {
-            playTone(220, 0.3, 'sawtooth'); // A3
-        }
-    } catch(e) {}
-}
+    if (!completed) {
+        alert("Vui lòng điền hết tất cả các câu trước khi nộp bài!");
+        return;
+    }
+    window.showExerciseResult(correctCount, nounsPracticeExtra2Data.length, "KẾT QUẢ BÀI TẬP THÊM 2 (DANH TỪ)");
+};
 
+window.submitNounsExtra3 = function() {
+    let correctCount = 0;
+    let completed = true;
+    nounsPracticeExtra3Data.forEach((q, idx) => {
+        const userInput = (window.nounsAnswersExtra3[idx] || "").trim();
+        if (!userInput) {
+            completed = false;
+        } else {
+            const cleanUser = window.normalizeText(userInput);
+            const validAnswers = q.a;
+            const formCheck = window.checkSentencePunctuation(userInput, validAnswers.some(ans => window.normalizeText(ans) === cleanUser));
+            if (formCheck.valid) {
+                correctCount++;
+            }
+        }
+        window.checkNounsTranslation('extra3', idx);
+    });
+    if (!completed) {
+        alert("Vui lòng điền hết tất cả các câu trước khi nộp bài!");
+        return;
+    }
+    window.showExerciseResult(correctCount, nounsPracticeExtra3Data.length, "KẾT QUẢ BÀI TẬP THÊM 3 (DANH TỪ)");
+};
 
 // ==================== PRONOUNS LOGIC ====================
 const pronounsTheoryData = [
