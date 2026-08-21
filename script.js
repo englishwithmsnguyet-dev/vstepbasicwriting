@@ -4471,48 +4471,35 @@ const pronounsPracticeExtra2Data = [
     }
 ];
 
-// Dữ liệu Bài tập thêm 3: Dịch câu áp dụng Đại từ & Phản thân (5 câu)
-const pronounsPracticeExtra3Data = [
-    {
-        q: "Mỗi người nên tự chịu trách nhiệm về hành động của mình.",
-        a: [
-            "Everyone should take responsibility for their own actions.",
-            "Each person should be responsible for their own actions."
-        ],
-        hint: "Mỗi người (Everyone / Each person), tự chịu trách nhiệm (take responsibility for their own actions)."
-    },
-    {
-        q: "Họ tự nấu bữa tối cho chính mình mỗi ngày.",
-        a: [
-            "They cook dinner for themselves every day."
-        ],
-        hint: "tự nấu bữa tối (cook dinner for themselves), mỗi ngày (every day)."
-    },
-    {
-        q: "Ý kiến của bạn rất hay, nhưng ý kiến của chúng tôi thực tế hơn.",
-        a: [
-            "Your idea is great, but ours is more practical.",
-            "Your opinion is very good, but ours is more practical."
-        ],
-        hint: "ý kiến của chúng tôi (ours), thực tế hơn (more practical)."
-    },
-    {
-        q: "Không có ai ở trong phòng họp vào lúc này.",
-        a: [
-            "There is no one in the meeting room right now.",
-            "Nobody is in the meeting room right now."
-        ],
-        hint: "Không có ai (There is no one / Nobody), phòng họp (meeting room)."
-    },
-    {
-        q: "Cô ấy tự hào về bản thân mình sau khi vượt qua kỳ thi.",
-        a: [
-            "She is proud of herself after passing the exam.",
-            "She was proud of herself after passing the exam."
-        ],
-        hint: "tự hào về bản thân (proud of herself), vượt qua kỳ thi (passing the exam)."
-    }
-];
+// Dữ liệu Bài tập thêm 3: Điền Đại từ vào Lá thư (10 chỗ trống - Không có gợi ý tiếng Việt)
+const pronounsLetterData = {
+    segments: [
+        { text: "Dear Alex,<br><br>How are you? " },
+        { text: " am writing to tell you about my new job in Da Nang. " },
+        { text: " is an exciting position at an international school. The campus is very modern, and " },
+        { text: " facilities are wonderful. My new colleagues are friendly and helpful. Whenever I have a question, " },
+        { text: " always support " },
+        { text: ". My manager is also very kind; " },
+        { text: " gave " },
+        { text: " some great advice on my first day.<br><br>At weekends, my roommate and I often explore the city together. " },
+        { text: " really enjoy delicious local food and take photos by " },
+        { text: ". How about you and your new course? Please write back to " },
+        { text: " soon!<br><br>Best wishes,<br>Lan" }
+    ],
+    answers: ["I", "It", "its", "they", "me", "she", "me", "We", "ourselves", "me"],
+    explanations: [
+        "Đứng trước động từ 'am writing' làm chủ ngữ người viết thư -> điền <b>I</b> (viết hoa).",
+        "Đứng trước 'is' làm chủ ngữ thay thế cho 'my new job' (công việc) -> điền <b>It</b> (viết hoa).",
+        "Đứng trước danh từ 'facilities' bổ nghĩa sở hữu cho trường học -> điền tính từ sở hữu <b>its</b>.",
+        "Đứng trước động từ 'always support' làm chủ ngữ thay thế cho 'colleagues' (số nhiều) -> điền <b>they</b>.",
+        "Đứng sau động từ 'support' đóng vai trò tân ngữ (hỗ trợ tôi) -> điền <b>me</b>.",
+        "Đứng trước động từ 'gave' làm chủ ngữ chỉ 'My manager' -> điền <b>she</b> (hoặc <b>he</b>).",
+        "Đứng sau động từ 'gave' làm tân ngữ chỉ người nhận -> điền <b>me</b>.",
+        "Đứng trước động từ 'really enjoy' làm chủ ngữ thay thế cho 'my roommate and I' -> điền <b>We</b> (viết hoa).",
+        "Cụm từ 'by ourselves' mang nghĩa tự chúng tôi chụp ảnh/tự mình làm -> điền đại từ phản thân <b>ourselves</b>.",
+        "Đứng sau giới từ 'to' đóng vai trò tân ngữ (hồi âm cho tôi) -> điền <b>me</b>."
+    ]
+};
 
 window.renderPronounsDetail = function(activeTab = 'theory') {
     const contentWrapper = document.getElementById('content-wrapper');
@@ -4521,7 +4508,7 @@ window.renderPronounsDetail = function(activeTab = 'theory') {
     if (!window.pronounsAnswersPara) window.pronounsAnswersPara = new Array(pronounsParagraphData.answers.length).fill('');
     if (!window.pronounsAnswersExtra1) window.pronounsAnswersExtra1 = new Array(pronounsPracticeExtra1Data.length).fill(null);
     if (!window.pronounsAnswersExtra2) window.pronounsAnswersExtra2 = new Array(pronounsPracticeExtra2Data.length).fill('');
-    if (!window.pronounsAnswersExtra3) window.pronounsAnswersExtra3 = new Array(pronounsPracticeExtra3Data.length).fill('');
+    if (!window.pronounsAnswersExtra3 || window.pronounsAnswersExtra3.length < 10) window.pronounsAnswersExtra3 = new Array(10).fill('');
 
     const tabsHtml = `
         <div class="tabs-container">
@@ -4615,25 +4602,13 @@ window.renderPronounsDetail = function(activeTab = 'theory') {
             </div>
         `).join('');
 
-        const extra3Html = pronounsPracticeExtra3Data.map((q, idx) => `
-            <div class="quiz-item" style="background: var(--bg-card); border-radius: 12px; padding: 20px; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color); margin-bottom: 16px;">
-                <div style="display: flex; gap: 12px; align-items: flex-start; margin-bottom: 12px;">
-                    <div style="background: var(--primary-light); color: var(--primary-color); width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">${idx + 1}</div>
-                    <div style="flex-grow: 1;">
-                        <p style="font-size: 1.15rem; font-weight: 500; color: var(--text-main); margin-top: 4px; margin-bottom: 8px;">${q.q}</p>
-                        ${q.hint ? `<button onclick="const h = document.getElementById('pro_hint_3_${idx}'); h.style.display = h.style.display === 'none' ? 'block' : 'none';" style="background: none; border: none; color: #0284c7; font-size: 0.95rem; cursor: pointer; padding: 0; margin-bottom: 12px; display: flex; align-items: center; gap: 4px; font-weight: 500;"><span style="font-size: 1.1rem">💡</span> Xem gợi ý</button>
-                        <div id="pro_hint_3_${idx}" style="display: none; background: #f0f9ff; border-left: 4px solid #38bdf8; padding: 12px; border-radius: 4px; margin-bottom: 16px; font-size: 0.95rem; color: #0c4a6e; line-height: 1.6;">${q.hint}</div>` : ''}
-                    </div>
-                </div>
-                <div style="display: flex; flex-direction: column; gap: 8px; padding-left: 44px;">
-                    <input type="text" id="pro_extra3_input_${idx}" placeholder="Nhập bản dịch tiếng Anh..." style="padding: 10px 16px; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 1.05rem; outline: none; transition: border-color 0.2s; width: 100%; box-sizing: border-box;" onfocus="this.style.borderColor='var(--primary-color)'" onblur="this.style.borderColor='#e2e8f0'" oninput="window.pronounsAnswersExtra3[${idx}] = this.value; document.getElementById('proexp_extra3_${idx}').style.display='none'; window.saveProgress(true);" value="${window.pronounsAnswersExtra3[idx] || ''}">
-                    <button onclick="window.checkPronounsExtra3(${idx})" style="padding: 8px 16px; background: white; color: var(--primary-color); border: 2px solid var(--primary-color); border-radius: 20px; font-weight: bold; cursor: pointer; transition: all 0.2s; align-self: flex-start;" onmouseover="this.style.background='var(--primary-color)'; this.style.color='white'" onmouseout="this.style.background='white'; this.style.color='var(--primary-color)'">Kiểm tra</button>
-                </div>
-                <div style="padding-left: 44px;">
-                    <div id="proexp_extra3_${idx}" style="display: none; margin-top: 12px; padding: 10px 12px; border-radius: 8px; font-size: 1rem;"></div>
-                </div>
-            </div>
-        `).join('');
+        let letterHtml = '';
+        pronounsLetterData.segments.forEach((seg, idx) => {
+            letterHtml += seg.text;
+            if (idx < pronounsLetterData.answers.length) {
+                letterHtml += `<input type="text" id="pro_letter_${idx}" class="para-input" placeholder="(${idx + 1})" value="${window.pronounsAnswersExtra3[idx] || ''}" oninput="window.pronounsAnswersExtra3[idx] = this.value; document.getElementById('pro_letter_explanation').style.display='none'; window.saveProgress(true);" style="width: 80px; padding: 4px 8px; border: 2px solid #cbd5e1; border-radius: 6px; font-size: 1.05rem; text-align: center; font-weight: 700; color: var(--primary-color); outline: none; margin: 0 4px; transition: all 0.2s; background: white;">`;
+            }
+        });
 
         contentHtml = `
             <div style="margin-top: 24px;">
@@ -4660,11 +4635,22 @@ window.renderPronounsDetail = function(activeTab = 'theory') {
                 <hr style="border-top: 2px solid var(--border-color); margin-bottom: 40px;">
 
                 <div style="margin-bottom: 40px;">
-                    <h2 style="color: var(--primary-color); font-size: 1.4rem; margin-bottom: 16px;">BÀI TẬP THÊM 3: DỊCH CÂU ÁP DỤNG ĐẠI TỪ & PHẢN THÂN</h2>
-                    <p style="color: var(--text-muted); margin-bottom: 24px;">Dịch các câu sau sang tiếng Anh, chú ý sử dụng đúng đại từ nhân xưng, đại từ sở hữu và đại từ phản thân.</p>
-                    <div>${extra3Html}</div>
-                    <div style="margin-top: 24px; text-align: center;">
-                        <button onclick="window.submitPronounsExtra3()" style="padding: 12px 32px; background: var(--primary-color); color: white; border: none; border-radius: 30px; font-weight: bold; font-size: 1.1rem; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.1)'">Kiểm tra Bài 3</button>
+                    <h2 style="color: var(--primary-color); font-size: 1.4rem; margin-bottom: 16px;">BÀI TẬP THÊM 3: ĐIỀN ĐẠI TỪ VÀO LÁ THƯ (10 CHỖ TRỐNG)</h2>
+                    <p style="color: var(--text-muted); margin-bottom: 24px;">Đọc lá thư gửi bạn dưới đây và điền Đại từ nhân xưng, Đại từ tân ngữ, Tính từ sở hữu hoặc Đại từ phản thân thích hợp vào chỗ trống.</p>
+                    <div class="quiz-item" style="background: var(--bg-card); border-radius: 12px; padding: 24px; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color); line-height: 2.2;">
+                        <div style="font-size: 1.15rem; color: var(--text-main); font-weight: 500; text-align: justify; margin: 0; background: #fafafa; padding: 20px; border-radius: 8px; border-left: 4px solid var(--primary-color);">
+                            ${letterHtml}
+                        </div>
+                        <div style="margin-top: 28px; text-align: center;">
+                            <button onclick="window.checkPronounsLetter()" style="padding: 12px 32px; background: var(--primary-color); color: white; border: none; border-radius: 30px; font-weight: bold; font-size: 1.1rem; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.1)'">
+                                Kiểm tra Lá thư
+                            </button>
+                        </div>
+                        <div id="pro_letter_explanation" style="display: none; margin-top: 28px; padding: 20px; border-radius: 12px; background: #f8fafc; border: 1px solid var(--border-color);">
+                            <h3 style="color: var(--primary-color); font-size: 1.2rem; margin-bottom: 16px;">Giải thích chi tiết:</h3>
+                            <div id="pro_letter_exp_list" style="margin: 0; font-size: 1rem; line-height: 1.8; color: var(--text-main);">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -4785,57 +4771,72 @@ window.submitPronounsExtra2 = function() {
     window.showExerciseResult(score, pronounsPracticeExtra2Data.length, "KẾT QUẢ BÀI TẬP THÊM 2 (ĐẠI TỪ)");
 };
 
-window.checkPronounsExtra3 = function(idx) {
-    const q = pronounsPracticeExtra3Data[idx];
-    const rawVal = window.pronounsAnswersExtra3[idx] || "";
-    const val = rawVal.trim();
-    const expDiv = document.getElementById(`proexp_extra3_${idx}`);
-    if (!expDiv) return;
+window.checkPronounsLetter = function() {
+    const data = pronounsLetterData;
+    const expDiv = document.getElementById('pro_letter_explanation');
+    const expList = document.getElementById('pro_letter_exp_list');
+    if (!expDiv || !expList) return;
     
-    if (!val) {
-        expDiv.style.display = 'block';
-        expDiv.style.background = '#fffbeb';
-        expDiv.style.color = '#b45309';
-        expDiv.style.border = '1px solid #fde68a';
-        expDiv.innerHTML = "⚠️ Bạn chưa nhập câu trả lời!";
-        return;
-    }
-
-    const cleanUser = window.normalizeText(val);
-    const isCorrect = q.a.some(ans => window.normalizeText(ans) === cleanUser);
-    const formCheck = window.checkSentencePunctuation(rawVal, isCorrect);
-
-    expDiv.style.display = 'block';
-
-    if (formCheck.valid) {
-        expDiv.style.background = '#f0fdf4';
-        expDiv.style.color = '#166534';
-        expDiv.style.border = '1px solid #bbf7d0';
-        expDiv.innerHTML = "✅ <b>Chính xác!</b> Bạn dịch câu rất chuẩn xác.";
-    } else if (formCheck.isNear) {
-        expDiv.style.background = '#fffbeb';
-        expDiv.style.color = '#b45309';
-        expDiv.style.border = '1px solid #fde68a';
-        expDiv.innerHTML = formCheck.message;
-    } else {
-        expDiv.style.background = '#fef2f2';
-        expDiv.style.color = '#991b1b';
-        expDiv.style.border = '1px solid #fecaca';
-        expDiv.innerHTML = `❌ <b>Chưa chính xác.</b><br><br><b>💡 Gợi ý đáp án chuẩn:</b><br>- ${q.a.join('<br>- ')}`;
-    }
-};
-
-window.submitPronounsExtra3 = function() {
-    let score = 0;
-    pronounsPracticeExtra3Data.forEach((q, idx) => {
-        const rawVal = window.pronounsAnswersExtra3[idx] || "";
-        const val = rawVal.trim();
-        if (val && q.a.some(ans => window.normalizeText(ans) === window.normalizeText(val))) {
-            score++;
+    let html = '';
+    let correctCount = 0;
+    
+    data.answers.forEach((correctAnswer, idx) => {
+        const input = document.getElementById(`pro_letter_${idx}`);
+        if (!input) return;
+        
+        const val = input.value.trim();
+        let isCorrect = val.toLowerCase() === correctAnswer.toLowerCase();
+        // Cho phép 'he' hoặc 'she' ở câu số 6
+        if (idx === 5 && (val.toLowerCase() === 'she' || val.toLowerCase() === 'he')) {
+            isCorrect = true;
         }
-        window.checkPronounsExtra3(idx);
+        
+        if (isCorrect) {
+            input.style.borderColor = '#22c55e';
+            input.style.background = '#f0fdf4';
+            input.style.color = '#15803d';
+            correctCount++;
+            html += `<li style="margin-bottom: 8px;"><span style="color:#15803d; font-weight:bold;">Chỗ trống (${idx + 1}) [Đúng]:</span> Đáp án: <b>${correctAnswer}</b>. ${data.explanations[idx]}</li>`;
+        } else {
+            input.style.borderColor = '#ef4444';
+            input.style.background = '#fef2f2';
+            input.style.color = '#b91c1c';
+            html += `<li style="margin-bottom: 8px;"><span style="color:#b91c1c; font-weight:bold;">Chỗ trống (${idx + 1}) [Sai]:</span> Bạn điền "${val || 'trống'}", đáp án đúng là <b style="color:#15803d;">${correctAnswer}</b>. ${data.explanations[idx]}</li>`;
+        }
     });
-    window.showExerciseResult(score, pronounsPracticeExtra3Data.length, "KẾT QUẢ BÀI TẬP THÊM 3 (DỊCH CÂU ĐẠI TỪ)");
+    
+    const summaryHtml = `<div style="background: ${correctCount === data.answers.length ? '#f0fdf4' : '#fffbeb'}; border-left: 4px solid ${correctCount === data.answers.length ? '#22c55e' : '#f59e0b'}; padding: 12px; margin-bottom: 16px; border-radius: 4px; font-weight: bold; color: ${correctCount === data.answers.length ? '#166534' : '#b45309'}; font-size: 1.1rem;">
+        📊 Kết quả: Bạn làm đúng ${correctCount} / ${data.answers.length} câu.
+    </div>`;
+    
+    expList.innerHTML = summaryHtml + '<ol style="padding-left: 20px; margin: 0;">' + html + '</ol>';
+    expDiv.style.display = 'block';
+    
+    try {
+        const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        const playTone = (freq, duration, type) => {
+            const osc = audioCtx.createOscillator();
+            const gain = audioCtx.createGain();
+            osc.connect(gain);
+            gain.connect(audioCtx.destination);
+            osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
+            osc.type = type;
+            gain.gain.setValueAtTime(0.1, audioCtx.currentTime);
+            gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + duration);
+            osc.start();
+            osc.stop(audioCtx.currentTime + duration);
+        };
+        if (correctCount === data.answers.length) {
+            playTone(523.25, 0.15, 'sine'); // C5
+            setTimeout(() => playTone(659.25, 0.15, 'sine'), 150); // E5
+            setTimeout(() => playTone(783.99, 0.3, 'sine'), 300); // G5
+        } else if (correctCount > 0) {
+            playTone(523.25, 0.15, 'sine');
+            setTimeout(() => playTone(659.25, 0.2, 'sine'), 150);
+        } else {
+            playTone(220, 0.3, 'sawtooth'); // A3
+        }
+    } catch(e) {}
 };
 
 window.checkPronounsParagraph = function() {
