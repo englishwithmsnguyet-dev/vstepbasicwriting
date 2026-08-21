@@ -1,3 +1,25 @@
+
+window.checkSentencePunctuation = function(rawVal, isContentCorrect) {
+    if (!isContentCorrect) return { valid: false, isNear: false, message: '' };
+    const trimmed = (rawVal || '').trim();
+    if (!trimmed) return { valid: false, isNear: false, message: 'empty' };
+    
+    const firstChar = trimmed.charAt(0);
+    const isFirstCharLetter = /[a-zA-Z]/.test(firstChar);
+    const isCapitalized = isFirstCharLetter ? (firstChar === firstChar.toUpperCase()) : true;
+    const hasDot = trimmed.endsWith('.');
+    
+    if (isCapitalized && hasDot) {
+        return { valid: true, isNear: false, message: 'perfect' };
+    } else if (!isCapitalized && !hasDot) {
+        return { valid: false, isNear: true, message: '⚠️ <b>Gần đúng!</b> Bạn cần viết hoa chữ cái đầu câu và có dấu chấm ở cuối câu nhé!' };
+    } else if (!isCapitalized) {
+        return { valid: false, isNear: true, message: '⚠️ <b>Gần đúng!</b> Bạn cần viết hoa chữ cái đầu câu nhé!' };
+    } else {
+        return { valid: false, isNear: true, message: '⚠️ <b>Gần đúng!</b> Cuối câu bắt buộc phải có dấu chấm nhé!' };
+    }
+};
+
 window.normalizeText = function(text) {
     if (!text) return '';
     // Fix extra spaces before punctuation (e.g. 'word .' -> 'word.')
@@ -3703,16 +3725,16 @@ window.checkNounsTranslation = function(type, idx) {
         }
     }
     
-    const hasDot = userInput.trim().endsWith('.');
+    const formCheck = window.checkSentencePunctuation(userInput, isCorrect);
     
     expDiv.style.display = 'block';
     
-    if (isCorrect && hasDot) {
+    if (formCheck.valid) {
         expDiv.style.background = '#f0fdf4'; expDiv.style.color = '#166534'; expDiv.style.borderLeft = '4px solid #22c55e';
         expDiv.innerHTML = `<b>✅ CHÍNH XÁC!</b>` + (dataArr[idx].exp ? ` ${dataArr[idx].exp}` : '');
-    } else if (isCorrect && !hasDot) {
+    } else if (formCheck.isNear) {
         expDiv.style.background = '#fffbeb'; expDiv.style.color = '#b45309'; expDiv.style.borderLeft = '4px solid #f59e0b';
-        expDiv.innerHTML = `<b>⚠️ GẦN ĐÚNG!</b> Cuối câu bắt buộc phải có dấu chấm nhé!` + (dataArr[idx].exp ? `<br><div style="margin-top: 8px; font-size: 0.95rem; color: #b45309;">📝 <b>Giải thích:</b> ${dataArr[idx].exp}</div>` : '');
+        expDiv.innerHTML = formCheck.message + (dataArr[idx].exp ? `<br><div style="margin-top: 8px; font-size: 0.95rem; color: #b45309;">📝 <b>Giải thích:</b> ${dataArr[idx].exp}</div>` : '');
     } else {
         const smartFeedback = window.generateFeedback ? window.generateFeedback(cleanUser, validAnswers) : '';
         expDiv.style.background = '#fef2f2'; expDiv.style.color = '#991b1b'; expDiv.style.borderLeft = '4px solid #ef4444';
@@ -5046,7 +5068,8 @@ window.checkVerbsBook = function(bookId, idx) {
     const dataArray = bookId === 1 ? verbsPracticeBook1 : bookId === 2 ? verbsPracticeBook2 : bookId === 3 ? verbsPracticeBook3 : verbsPracticeBook4;
     const ansArray = bookId === 1 ? window.verbsAnswersBook1 : bookId === 2 ? window.verbsAnswersBook2 : bookId === 3 ? window.verbsAnswersBook3 : window.verbsAnswersBook4;
     const q = dataArray[idx];
-    const val = (ansArray[idx] || "").trim().toLowerCase();
+    const rawVal = ansArray[idx] || "";
+    const val = rawVal.trim();
     const expDiv = document.getElementById(`verbexp_book${bookId}_${idx}`);
     
     if (!val) {
@@ -5059,14 +5082,20 @@ window.checkVerbsBook = function(bookId, idx) {
     }
 
     const isCorrect = q.a.some(ans => window.normalizeText(ans) === window.normalizeText(val));
-    if (isCorrect) {
-        expDiv.style.display = 'block';
+    const formCheck = window.checkSentencePunctuation(rawVal, isCorrect);
+    
+    expDiv.style.display = 'block';
+    if (formCheck.valid) {
         expDiv.style.background = '#f0fdf4';
         expDiv.style.color = '#166534';
         expDiv.style.border = '1px solid #bbf7d0';
         expDiv.innerHTML = "✅ Chính xác!";
+    } else if (formCheck.isNear) {
+        expDiv.style.background = '#fffbeb';
+        expDiv.style.color = '#b45309';
+        expDiv.style.border = '1px solid #fde68a';
+        expDiv.innerHTML = formCheck.message;
     } else {
-        expDiv.style.display = 'block';
         expDiv.style.background = '#fef2f2';
         expDiv.style.color = '#991b1b';
         expDiv.style.border = '1px solid #fecaca';
@@ -5217,16 +5246,15 @@ window.checkVerbsExtra3 = function(idx) {
         }
     }
     
-    // Yêu cầu phải có dấu chấm ở cuối câu (giống bài danh từ)
-    const hasDot = userInput.trim().endsWith('.');
+    const formCheck = window.checkSentencePunctuation(userInput, isCorrect);
     
     expDiv.style.display = 'block';
-    if (isCorrect && hasDot) {
+    if (formCheck.valid) {
         expDiv.style.background = '#f0fdf4'; expDiv.style.color = '#166534'; expDiv.style.borderLeft = '4px solid #22c55e';
         expDiv.innerHTML = `<b>✅ CHÍNH XÁC!</b>`;
-    } else if (isCorrect && !hasDot) {
+    } else if (formCheck.isNear) {
         expDiv.style.background = '#fffbeb'; expDiv.style.color = '#b45309'; expDiv.style.borderLeft = '4px solid #f59e0b';
-        expDiv.innerHTML = `<b>⚠️ GẦN ĐÚNG!</b> Cuối câu bắt buộc phải có dấu chấm nhé!`;
+        expDiv.innerHTML = formCheck.message;
     } else {
         expDiv.style.background = '#fef2f2'; expDiv.style.color = '#991b1b'; expDiv.style.borderLeft = '4px solid #ef4444';
         expDiv.innerHTML = `<b>❌ CHƯA ĐÚNG.</b> Tham khảo: <b>${validAnswers[0]}</b>`;
@@ -6345,7 +6373,8 @@ window.checkAdjectivesBook2 = function(idx) {
     
     if (!inputEl || !expEl) return;
     
-    const val = (inputEl.value || '').trim();
+    const rawVal = inputEl.value || '';
+    const val = rawVal.trim();
     if (!val) {
         expEl.style.display = 'block';
         expEl.style.background = '#fef2f2';
@@ -6356,13 +6385,20 @@ window.checkAdjectivesBook2 = function(idx) {
     
     const correctAnswers = adjectivesPracticeBook2[idx].a;
     const isCorrect = correctAnswers.some(ans => window.normalizeText(val) === window.normalizeText(ans));
+    const formCheck = window.checkSentencePunctuation(rawVal, isCorrect);
     
     expEl.style.display = 'block';
-    if (isCorrect) {
+    if (formCheck.valid) {
         expEl.style.background = '#dcfce7';
         expEl.style.color = '#16a34a';
         expEl.innerHTML = '<b>Chính xác!</b>';
         inputEl.style.borderColor = '#16a34a';
+    } else if (formCheck.isNear) {
+        expEl.style.background = '#fffbeb';
+        expEl.style.color = '#b45309';
+        expEl.style.border = '1px solid #fde68a';
+        expEl.innerHTML = formCheck.message;
+        inputEl.style.borderColor = '#f59e0b';
     } else {
         expEl.style.background = '#fef2f2';
         expEl.style.color = '#ef4444';
@@ -6416,7 +6452,8 @@ window.checkAdjectivesExtra2 = function(idx) {
     
     if (!inputEl || !expEl) return;
     
-    const val = (inputEl.value || '').trim();
+    const rawVal = inputEl.value || '';
+    const val = rawVal.trim();
     if (!val) {
         expEl.style.display = 'block';
         expEl.style.background = '#fef2f2';
@@ -6427,13 +6464,20 @@ window.checkAdjectivesExtra2 = function(idx) {
     
     const correctAnswers = adjectivesPracticeExtra2[idx].a;
     const isCorrect = correctAnswers.some(ans => window.normalizeText(val) === window.normalizeText(ans));
+    const formCheck = window.checkSentencePunctuation(rawVal, isCorrect);
     
     expEl.style.display = 'block';
-    if (isCorrect) {
+    if (formCheck.valid) {
         expEl.style.background = '#dcfce7';
         expEl.style.color = '#16a34a';
         expEl.innerHTML = '<b>Chính xác!</b>';
         inputEl.style.borderColor = '#16a34a';
+    } else if (formCheck.isNear) {
+        expEl.style.background = '#fffbeb';
+        expEl.style.color = '#b45309';
+        expEl.style.border = '1px solid #fde68a';
+        expEl.innerHTML = formCheck.message;
+        inputEl.style.borderColor = '#f59e0b';
     } else {
         expEl.style.background = '#fef2f2';
         expEl.style.color = '#ef4444';
@@ -7024,7 +7068,8 @@ window.renderPrepositionsDetail = function(activeTab = 'theory') {
 // Checker functions
 window.checkPrepositions1 = function(idx) {
     const q = prepositionsPracticeBook1[idx];
-    const userAns = (window.prepositionsAnswers1[idx] || '').trim().toLowerCase().replace(/[.,!?;:]/g, '').replace(/\s+/g, ' ');
+    const rawVal = window.prepositionsAnswers1[idx] || '';
+    const userAns = rawVal.trim();
     const expDiv = document.getElementById('prepexp1_' + idx);
     
     if (!userAns) {
@@ -7035,13 +7080,16 @@ window.checkPrepositions1 = function(idx) {
     }
 
     let isCorrect = q.a.some(ans => window.normalizeText(ans) === window.normalizeText(userAns));
+    const formCheck = window.checkSentencePunctuation(rawVal, isCorrect);
     
-    if (isCorrect) {
-        expDiv.style.display = 'block';
+    expDiv.style.display = 'block';
+    if (formCheck.valid) {
         expDiv.style.background = '#dcfce7'; expDiv.style.color = '#166534'; expDiv.style.borderLeft = '4px solid #22c55e';
         expDiv.innerHTML = `<b>✅ Chính xác!</b><br>Đáp án: ${q.a[0]}`;
+    } else if (formCheck.isNear) {
+        expDiv.style.background = '#fffbeb'; expDiv.style.color = '#b45309'; expDiv.style.borderLeft = '4px solid #f59e0b';
+        expDiv.innerHTML = formCheck.message;
     } else {
-        expDiv.style.display = 'block';
         expDiv.style.background = '#fee2e2'; expDiv.style.color = '#991b1b'; expDiv.style.borderLeft = '4px solid #ef4444';
         expDiv.innerHTML = `<b>❌ Chưa đúng.</b><br>Đáp án tham khảo: <b>${q.a.join(' / ')}</b>`;
     }
@@ -7049,7 +7097,8 @@ window.checkPrepositions1 = function(idx) {
 
 window.checkPrepositions2 = function(idx) {
     const q = prepositionsPracticeBook2[idx];
-    const userAns = (window.prepositionsAnswers2[idx] || '').trim().toLowerCase().replace(/[.,!?;:]/g, '').replace(/\s+/g, ' ');
+    const rawVal = window.prepositionsAnswers2[idx] || '';
+    const userAns = rawVal.trim();
     const expDiv = document.getElementById('prepexp2_' + idx);
     
     if (!userAns) {
@@ -7060,13 +7109,16 @@ window.checkPrepositions2 = function(idx) {
     }
 
     let isCorrect = q.a.some(ans => window.normalizeText(ans) === window.normalizeText(userAns));
+    const formCheck = window.checkSentencePunctuation(rawVal, isCorrect);
     
-    if (isCorrect) {
-        expDiv.style.display = 'block';
+    expDiv.style.display = 'block';
+    if (formCheck.valid) {
         expDiv.style.background = '#dcfce7'; expDiv.style.color = '#166534'; expDiv.style.borderLeft = '4px solid #22c55e';
         expDiv.innerHTML = `<b>✅ Chính xác!</b><br>Đáp án: ${q.a[0]}`;
+    } else if (formCheck.isNear) {
+        expDiv.style.background = '#fffbeb'; expDiv.style.color = '#b45309'; expDiv.style.borderLeft = '4px solid #f59e0b';
+        expDiv.innerHTML = formCheck.message;
     } else {
-        expDiv.style.display = 'block';
         expDiv.style.background = '#fee2e2'; expDiv.style.color = '#991b1b'; expDiv.style.borderLeft = '4px solid #ef4444';
         expDiv.innerHTML = `<b>❌ Chưa đúng.</b><br>Đáp án tham khảo: <b>${q.a.join(' / ')}</b>`;
     }
@@ -7074,7 +7126,8 @@ window.checkPrepositions2 = function(idx) {
 
 window.checkPrepositionsExtra2 = function(idx) {
     const q = prepositionsPracticeExtra2[idx];
-    const userAns = (window.prepositionsAnswersExtra2[idx] || '').trim().toLowerCase().replace(/[.,!?;:]/g, '').replace(/\s+/g, ' ');
+    const rawVal = window.prepositionsAnswersExtra2[idx] || '';
+    const userAns = rawVal.trim();
     const expDiv = document.getElementById('prepexp_extra2_' + idx);
     
     if (!userAns) {
@@ -7085,13 +7138,16 @@ window.checkPrepositionsExtra2 = function(idx) {
     }
 
     let isCorrect = q.a.some(ans => window.normalizeText(ans) === window.normalizeText(userAns));
+    const formCheck = window.checkSentencePunctuation(rawVal, isCorrect);
     
-    if (isCorrect) {
-        expDiv.style.display = 'block';
+    expDiv.style.display = 'block';
+    if (formCheck.valid) {
         expDiv.style.background = '#dcfce7'; expDiv.style.color = '#166534'; expDiv.style.borderLeft = '4px solid #22c55e';
         expDiv.innerHTML = `<b>✅ Chính xác!</b><br>Đáp án: ${q.a[0]}`;
+    } else if (formCheck.isNear) {
+        expDiv.style.background = '#fffbeb'; expDiv.style.color = '#b45309'; expDiv.style.borderLeft = '4px solid #f59e0b';
+        expDiv.innerHTML = formCheck.message;
     } else {
-        expDiv.style.display = 'block';
         expDiv.style.background = '#fee2e2'; expDiv.style.color = '#991b1b'; expDiv.style.borderLeft = '4px solid #ef4444';
         expDiv.innerHTML = `<b>❌ Chưa đúng.</b><br>Đáp án tham khảo: <b>${q.a.join(' / ')}</b>`;
     }
@@ -7099,7 +7155,8 @@ window.checkPrepositionsExtra2 = function(idx) {
 
 window.checkPrepositionsExtra3 = function(idx) {
     const q = prepositionsPracticeExtra3[idx];
-    const userAns = (window.prepositionsAnswersExtra3[idx] || '').trim().toLowerCase().replace(/[.,!?;:]/g, '').replace(/\s+/g, ' ');
+    const rawVal = window.prepositionsAnswersExtra3[idx] || '';
+    const userAns = rawVal.trim();
     const expDiv = document.getElementById('prepexp_extra3_' + idx);
     
     if (!userAns) {
@@ -7110,13 +7167,16 @@ window.checkPrepositionsExtra3 = function(idx) {
     }
 
     let isCorrect = q.a.some(ans => window.normalizeText(ans) === window.normalizeText(userAns));
+    const formCheck = window.checkSentencePunctuation(rawVal, isCorrect);
     
-    if (isCorrect) {
-        expDiv.style.display = 'block';
+    expDiv.style.display = 'block';
+    if (formCheck.valid) {
         expDiv.style.background = '#dcfce7'; expDiv.style.color = '#166534'; expDiv.style.borderLeft = '4px solid #22c55e';
         expDiv.innerHTML = `<b>✅ Chính xác!</b><br>Đáp án: ${q.a[0]}`;
+    } else if (formCheck.isNear) {
+        expDiv.style.background = '#fffbeb'; expDiv.style.color = '#b45309'; expDiv.style.borderLeft = '4px solid #f59e0b';
+        expDiv.innerHTML = formCheck.message;
     } else {
-        expDiv.style.display = 'block';
         expDiv.style.background = '#fee2e2'; expDiv.style.color = '#991b1b'; expDiv.style.borderLeft = '4px solid #ef4444';
         expDiv.innerHTML = `<b>❌ Chưa đúng.</b><br>Đáp án tham khảo: <b>${q.a.join(' / ')}</b>`;
     }
@@ -7542,10 +7602,16 @@ window.checkAdverbsExtra2 = function(idx) {
         }
     }
 
-    if (isCorrect) {
+    const formCheck = window.checkSentencePunctuation(input.value, isCorrect);
+
+    if (formCheck.valid) {
         expDiv.innerHTML = `<span style="color: #16a34a;">✅ Tuyệt vời! Bạn dịch rất chuẩn.</span>`;
         expDiv.style.background = '#f0fdf4';
         expDiv.style.border = '1px solid #bbf7d0';
+    } else if (formCheck.isNear) {
+        expDiv.innerHTML = formCheck.message;
+        expDiv.style.background = '#fffbeb';
+        expDiv.style.border = '1px solid #fde68a';
     } else {
         expDiv.innerHTML = `
             <span style="color: #dc2626;">❌ Chưa chính xác. Tham khảo đáp án:</span>
@@ -8749,20 +8815,20 @@ window.checkConjunctionsBook = function(bookId, idx) {
 
         const cleanUser = window.normalizeText(val);
         const isCorrect = q.a.some(ans => window.normalizeText(ans) === cleanUser);
-        const hasDot = val.endsWith('.');
+        const formCheck = window.checkSentencePunctuation(val, isCorrect);
 
         expDiv.style.display = 'block';
 
-        if (isCorrect && hasDot) {
+        if (formCheck.valid) {
             expDiv.style.background = '#f0fdf4';
             expDiv.style.color = '#166534';
             expDiv.style.border = '1px solid #bbf7d0';
             expDiv.innerHTML = "✅ <b>Chính xác!</b> Bạn đã dùng từ nối rất chuẩn.";
-        } else if (isCorrect && !hasDot) {
+        } else if (formCheck.isNear) {
             expDiv.style.background = '#fffbeb';
             expDiv.style.color = '#b45309';
             expDiv.style.border = '1px solid #fde68a';
-            expDiv.innerHTML = "⚠️ <b>Gần đúng!</b> Cuối câu bắt buộc phải có dấu chấm nhé!";
+            expDiv.innerHTML = formCheck.message;
         } else {
             expDiv.style.background = '#fef2f2';
             expDiv.style.color = '#991b1b';
@@ -8922,7 +8988,8 @@ window.submitConjunctionsExtra1 = function() {
 
 window.checkConjunctionsExtra2 = function(idx) {
     const q = conjunctionsPracticeExtra2[idx];
-    const val = (window.conjunctionsAnswersExtra2[idx] || "").trim();
+    const rawVal = window.conjunctionsAnswersExtra2[idx] || "";
+    const val = rawVal.trim();
     const expDiv = document.getElementById(`conjexp_extra2_${idx}`);
     
     if (!val) {
@@ -8936,20 +9003,20 @@ window.checkConjunctionsExtra2 = function(idx) {
 
     const cleanUser = window.normalizeText(val);
     const isCorrect = q.a.some(ans => window.normalizeText(ans) === cleanUser);
-    const hasDot = val.endsWith('.');
+    const formCheck = window.checkSentencePunctuation(rawVal, isCorrect);
 
     expDiv.style.display = 'block';
 
-    if (isCorrect && hasDot) {
+    if (formCheck.valid) {
         expDiv.style.background = '#f0fdf4';
         expDiv.style.color = '#166534';
         expDiv.style.border = '1px solid #bbf7d0';
         expDiv.innerHTML = "✅ <b>Chính xác!</b> Bạn dịch câu rất chuẩn xác.";
-    } else if (isCorrect && !hasDot) {
+    } else if (formCheck.isNear) {
         expDiv.style.background = '#fffbeb';
         expDiv.style.color = '#b45309';
         expDiv.style.border = '1px solid #fde68a';
-        expDiv.innerHTML = "⚠️ <b>Gần đúng!</b> Cuối câu bắt buộc phải có dấu chấm nhé!";
+        expDiv.innerHTML = formCheck.message;
     } else {
         expDiv.style.background = '#fef2f2';
         expDiv.style.color = '#991b1b';

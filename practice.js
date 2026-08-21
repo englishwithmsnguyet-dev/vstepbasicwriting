@@ -2863,7 +2863,8 @@ window.checkSelfTransSingle = function(qIdx) {
     const curEx = selfPracticeData[currentSelfTopicId][currentSelfExerciseIdx];
     const q = curEx.questions[qIdx];
     const ansKey = `${currentSelfTopicId}_${currentSelfExerciseIdx}_${qIdx}`;
-    const val = (selfPracticeUserAnswers[ansKey] || "").trim();
+    const rawVal = selfPracticeUserAnswers[ansKey] || "";
+    const val = rawVal.trim();
     const expDiv = document.getElementById(`self_exp_${qIdx}`);
 
     if (!val) {
@@ -2877,20 +2878,20 @@ window.checkSelfTransSingle = function(qIdx) {
 
     const cleanUser = window.normalizeText(val);
     const isCorrect = q.a.some(ans => window.normalizeText(ans) === cleanUser);
-    const hasDot = val.endsWith('.');
+    const formCheck = window.checkSentencePunctuation ? window.checkSentencePunctuation(rawVal, isCorrect) : { valid: isCorrect && rawVal.trim().endsWith('.'), isNear: isCorrect && !rawVal.trim().endsWith('.'), message: '⚠️ <b>Gần đúng!</b> Cuối câu bắt buộc phải có dấu chấm nhé!' };
 
     expDiv.style.display = 'block';
 
-    if (isCorrect && hasDot) {
+    if (formCheck.valid) {
         expDiv.style.background = '#f0fdf4';
         expDiv.style.color = '#166534';
         expDiv.style.border = '1px solid #bbf7d0';
         expDiv.innerHTML = "✅ <b>Chính xác!</b> Bạn dịch câu rất chuẩn xác.";
-    } else if (isCorrect && !hasDot) {
+    } else if (formCheck.isNear) {
         expDiv.style.background = '#fffbeb';
         expDiv.style.color = '#b45309';
         expDiv.style.border = '1px solid #fde68a';
-        expDiv.innerHTML = "⚠️ <b>Gần đúng!</b> Cuối câu bắt buộc phải có dấu chấm nhé!";
+        expDiv.innerHTML = formCheck.message;
     } else {
         expDiv.style.background = '#fef2f2';
         expDiv.style.color = '#991b1b';
