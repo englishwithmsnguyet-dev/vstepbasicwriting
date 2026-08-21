@@ -4336,97 +4336,7 @@ const pronounsTheoryData = [
     }
 ];
 
-const pronounsPractice1Data = [
-    { 
-        q: "Peter loves sports. ___ plays football every weekend.", 
-        options: ["He", "His", "Him"], 
-        a: 0, 
-        exp: "Vị trí cần điền đứng trước động từ 'plays' -> cần Đại từ nhân xưng làm Chủ ngữ (He)." 
-    },
-    { 
-        q: "This book is not mine. Is it ___?", 
-        options: ["your", "yours", "you"], 
-        a: 1, 
-        exp: "Cuối câu không có danh từ -> cần dùng Đại từ sở hữu (yours = your book)." 
-    },
-    { 
-        q: "The cat licked ___ paws after eating.", 
-        options: ["it", "it's", "its"], 
-        a: 2, 
-        exp: "Trước danh từ 'paws' cần Tính từ sở hữu (its). Lưu ý 'it\'s' = it is." 
-    },
-    { 
-        q: "They built the house all by ___.", 
-        options: ["them", "theirs", "themselves"], 
-        a: 2, 
-        exp: "Cụm 'by oneself' nghĩa là tự mình làm. Ở đây chủ ngữ là They -> themselves." 
-    },
-    { 
-        q: "My parents are angry. I need to talk to ___.", 
-        options: ["they", "them", "their"], 
-        a: 1, 
-        exp: "Đứng sau giới từ 'to' và động từ 'talk' -> cần Đại từ nhân xưng làm Tân ngữ (them)." 
-    },
-    { 
-        q: "___ are the shoes I bought yesterday.", 
-        options: ["This", "That", "These"], 
-        a: 2, 
-        exp: "Động từ là 'are' (số nhiều) và 'shoes' (số nhiều) -> cần Đại từ chỉ định số nhiều (These / Those)." 
-    },
-    { 
-        q: "Sarah and I are going to the cinema. Do you want to come with ___?", 
-        options: ["us", "we", "me"], 
-        a: 0, 
-        exp: "'Sarah and I' = We. Tân ngữ của We là us." 
-    },
-    { 
-        q: "Everyone is responsible for ___ own actions.", 
-        options: ["his", "their", "there"], 
-        a: 1, 
-        exp: "Với các đại từ bất định chỉ người như everyone/everybody, ta thường dùng tính từ sở hữu 'their' thay thế." 
-    },
-    { 
-        q: "Look at ___ bird in the sky! It's so beautiful.", 
-        options: ["this", "that", "these"], 
-        a: 1, 
-        exp: "'in the sky' chỉ khoảng cách xa, 'bird' là số ít -> dùng that." 
-    },
-    { 
-        q: "We enjoyed ___ very much at the party.", 
-        options: ["ourselves", "us", "our"], 
-        a: 0, 
-        exp: "Cụm 'enjoy oneself' = có khoảng thời gian vui vẻ. Chủ ngữ We -> ourselves." 
-    }
-];
-
-const pronounsPracticeBook2Data = [
-    { 
-        q: "People are using too much plastic. ___ causes environmental problems. (sử dụng This/These)", 
-        a: ["This", "This problem", "This habit", "This action"],
-        exp: "Thay thế cho toàn bộ sự việc 'sử dụng quá nhiều nhựa' -> Dùng 'This' hoặc 'This + Danh từ khái quát'." 
-    },
-    { 
-        q: "Some students don't sleep enough. ___ leads to poor health.", 
-        a: ["This", "This problem", "This habit"],
-        exp: "Thay thế cho sự việc 'thiếu ngủ' -> Dùng 'This'." 
-    },
-    { 
-        q: "Smartphones and laptops are expensive. However, ___ devices are necessary for study.", 
-        a: ["these", "those"],
-        exp: "Smartphones and laptops là số nhiều -> dùng 'These' (hoặc 'Those')." 
-    },
-    { 
-        q: "I forgot to do my homework. ___ made the teacher angry.", 
-        a: ["This", "This mistake", "This action"],
-        exp: "Thay thế cho việc 'quên làm bài tập' (sự việc) -> dùng 'This'." 
-    },
-    { 
-        q: "Fresh air, trees, and clean water. ___ are things we need to protect.", 
-        a: ["These", "Those"],
-        exp: "Liệt kê nhiều thứ (fresh air, trees, clean water) -> dùng 'These' (số nhiều)." 
-    }
-];
-
+// Dữ liệu Bài tập trong tài liệu
 const pronounsParagraphData = {
     segments: [
         { text: "(1 - tôi) ", placeholder: "1. tôi" },
@@ -4468,12 +4378,156 @@ const pronounsParagraphData = {
     ]
 };
 
+// Dữ liệu Bài tập thêm 1: Trắc nghiệm (10 câu)
+const pronounsPracticeExtra1Data = [
+    { 
+        q: "Peter loves sports. ___ plays football every weekend.", 
+        options: ["He", "His", "Him", "Himself"], 
+        a: 0, 
+        exp: "Vị trí cần điền đứng trước động từ 'plays' -> cần Đại từ nhân xưng làm Chủ ngữ (He)." 
+    },
+    { 
+        q: "This book is not mine. Is it ___?", 
+        options: ["your", "yours", "you", "yourself"], 
+        a: 1, 
+        exp: "Cuối câu không có danh từ -> cần dùng Đại từ sở hữu (yours = your book)." 
+    },
+    { 
+        q: "The cat licked ___ paws after eating.", 
+        options: ["it", "it's", "its", "itself"], 
+        a: 2, 
+        exp: "Trước danh từ 'paws' cần Tính từ sở hữu (its). Lưu ý 'it\'s' = it is." 
+    },
+    { 
+        q: "They built the house all by ___.", 
+        options: ["them", "theirs", "themselves", "their"], 
+        a: 2, 
+        exp: "Cụm 'by oneself' nghĩa là tự mình làm. Ở đây chủ ngữ là They -> themselves." 
+    },
+    { 
+        q: "My parents are angry. I need to talk to ___.", 
+        options: ["they", "them", "their", "theirs"], 
+        a: 1, 
+        exp: "Đứng sau giới từ 'to' và động từ 'talk' -> cần Đại từ nhân xưng làm Tân ngữ (them)." 
+    },
+    { 
+        q: "___ are the shoes I bought yesterday.", 
+        options: ["This", "That", "These", "Those"], 
+        a: 2, 
+        exp: "Động từ là 'are' (số nhiều) và 'shoes' (số nhiều) -> cần Đại từ chỉ định số nhiều gần (These)." 
+    },
+    { 
+        q: "Sarah and I are going to the cinema. Do you want to come with ___?", 
+        options: ["us", "we", "me", "ourselves"], 
+        a: 0, 
+        exp: "'Sarah and I' = We. Tân ngữ đứng sau giới từ with là us." 
+    },
+    { 
+        q: "Everyone is responsible for ___ own actions.", 
+        options: ["his", "their", "there", "themselves"], 
+        a: 1, 
+        exp: "Với các đại từ bất định chỉ người như everyone/everybody, ta thường dùng tính từ sở hữu 'their' thay thế." 
+    },
+    { 
+        q: "Look at ___ bird in the sky! It's so beautiful.", 
+        options: ["this", "that", "these", "those"], 
+        a: 1, 
+        exp: "'in the sky' chỉ khoảng cách xa, 'bird' là số ít -> dùng that." 
+    },
+    { 
+        q: "We enjoyed ___ very much at the party.", 
+        options: ["ourselves", "us", "our", "ours"], 
+        a: 0, 
+        exp: "Cụm 'enjoy oneself' = có khoảng thời gian vui vẻ. Chủ ngữ We -> ourselves." 
+    }
+];
+
+// Dữ liệu Bài tập thêm 2: Dùng This/These để nối câu (5 câu)
+const pronounsPracticeExtra2Data = [
+    { 
+        q: "People are using too much plastic. ___ causes environmental problems. (sử dụng This/These)", 
+        a: ["This", "This problem", "This habit", "This action"],
+        exp: "Thay thế cho toàn bộ sự việc 'sử dụng quá nhiều nhựa' -> Dùng 'This' hoặc 'This + Danh từ khái quát'." 
+    },
+    { 
+        q: "Some students don't sleep enough. ___ leads to poor health.", 
+        a: ["This", "This problem", "This habit"],
+        exp: "Thay thế cho sự việc 'thiếu ngủ' -> Dùng 'This'." 
+    },
+    { 
+        q: "Smartphones and laptops are expensive. However, ___ devices are necessary for study.", 
+        a: ["these", "those"],
+        exp: "Smartphones and laptops là số nhiều -> dùng 'These' (hoặc 'Those')." 
+    },
+    { 
+        q: "I forgot to do my homework. ___ made the teacher angry.", 
+        a: ["This", "This mistake", "This action"],
+        exp: "Thay thế cho việc 'quên làm bài tập' (sự việc) -> dùng 'This'." 
+    },
+    { 
+        q: "Fresh air, trees, and clean water. ___ are things we need to protect.", 
+        a: ["These", "Those"],
+        exp: "Liệt kê nhiều thứ (fresh air, trees, clean water) -> dùng 'These' (số nhiều)." 
+    }
+];
+
+// Dữ liệu Bài tập thêm 3: Dịch câu áp dụng Đại từ & Phản thân (5 câu)
+const pronounsPracticeExtra3Data = [
+    {
+        q: "Mỗi người nên tự chịu trách nhiệm về hành động của mình.",
+        a: [
+            "Everyone should take responsibility for their own actions.",
+            "Each person should be responsible for their own actions."
+        ],
+        hint: "Mỗi người (Everyone / Each person), tự chịu trách nhiệm (take responsibility for their own actions)."
+    },
+    {
+        q: "Họ tự nấu bữa tối cho chính mình mỗi ngày.",
+        a: [
+            "They cook dinner for themselves every day."
+        ],
+        hint: "tự nấu bữa tối (cook dinner for themselves), mỗi ngày (every day)."
+    },
+    {
+        q: "Ý kiến của bạn rất hay, nhưng ý kiến của chúng tôi thực tế hơn.",
+        a: [
+            "Your idea is great, but ours is more practical.",
+            "Your opinion is very good, but ours is more practical."
+        ],
+        hint: "ý kiến của chúng tôi (ours), thực tế hơn (more practical)."
+    },
+    {
+        q: "Không có ai ở trong phòng họp vào lúc này.",
+        a: [
+            "There is no one in the meeting room right now.",
+            "Nobody is in the meeting room right now."
+        ],
+        hint: "Không có ai (There is no one / Nobody), phòng họp (meeting room)."
+    },
+    {
+        q: "Cô ấy tự hào về bản thân mình sau khi vượt qua kỳ thi.",
+        a: [
+            "She is proud of herself after passing the exam.",
+            "She was proud of herself after passing the exam."
+        ],
+        hint: "tự hào về bản thân (proud of herself), vượt qua kỳ thi (passing the exam)."
+    }
+];
 
 window.renderPronounsDetail = function(activeTab = 'theory') {
-    let tabsHtml = `
-        <div class="custom-tabs" style="display: flex; gap: 16px;">
-            <button class="tab-btn ${activeTab === 'theory' ? 'active' : ''}" onclick="renderPronounsDetail('theory')" style="padding: 12px 32px; font-size: 1.1rem; font-weight: bold; border-radius: 30px; border: none; cursor: pointer; background: ${activeTab === 'theory' ? 'var(--primary-color)' : 'var(--bg-card)'}; color: ${activeTab === 'theory' ? '#fff' : 'var(--text-main)'}; border: 2px solid ${activeTab === 'theory' ? 'transparent' : 'var(--border-color)'}; transition: all 0.3s;">📚 LÝ THUYẾT</button>
-            <button class="tab-btn ${activeTab === 'practice' ? 'active' : ''}" onclick="renderPronounsDetail('practice')" style="padding: 12px 32px; font-size: 1.1rem; font-weight: bold; border-radius: 30px; border: none; cursor: pointer; background: ${activeTab === 'practice' ? 'var(--primary-color)' : 'var(--bg-card)'}; color: ${activeTab === 'practice' ? '#fff' : 'var(--text-main)'}; border: 2px solid ${activeTab === 'practice' ? 'transparent' : 'var(--border-color)'}; transition: all 0.3s;">✏️ BÀI TẬP</button>
+    const contentWrapper = document.getElementById('content-wrapper');
+
+    // Init tracking arrays if not exists
+    if (!window.pronounsAnswersPara) window.pronounsAnswersPara = new Array(pronounsParagraphData.answers.length).fill('');
+    if (!window.pronounsAnswersExtra1) window.pronounsAnswersExtra1 = new Array(pronounsPracticeExtra1Data.length).fill(null);
+    if (!window.pronounsAnswersExtra2) window.pronounsAnswersExtra2 = new Array(pronounsPracticeExtra2Data.length).fill('');
+    if (!window.pronounsAnswersExtra3) window.pronounsAnswersExtra3 = new Array(pronounsPracticeExtra3Data.length).fill('');
+
+    const tabsHtml = `
+        <div class="tabs-container">
+            <button onclick="renderPronounsDetail('theory')" class="tab-pill ${activeTab === 'theory' ? 'active' : ''}">📚 LÝ THUYẾT</button>
+            <button onclick="renderPronounsDetail('practice_book')" class="tab-pill ${activeTab === 'practice_book' ? 'active' : ''}">📖 BÀI TẬP TRONG TÀI LIỆU</button>
+            <button onclick="renderPronounsDetail('practice_extra')" class="tab-pill ${activeTab === 'practice_extra' ? 'active' : ''}">🚀 BÀI TẬP THÊM</button>
         </div>
     `;
 
@@ -4489,104 +4543,128 @@ window.renderPronounsDetail = function(activeTab = 'theory') {
 
         contentHtml = `
             <div style="margin-top: 24px;">
-                <p style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 24px;">Đại từ là công cụ tuyệt vời giúp bài viết của bạn tránh lặp từ và chuyên nghiệp hơn.</p>
+                <p style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 24px;">Đại từ là công cụ tuyệt vời giúp bài viết của bạn tránh lặp từ và tăng tính mạch lạc (Cohesion).</p>
                 <div style="display: grid; grid-template-columns: 1fr; gap: 24px;">
                     ${theoryCards}
                 </div>
             </div>
         `;
-    } else {
-        // Initialize tracking arrays if not exists
-        if (!window.pronounsAnswers1) {
-            window.pronounsAnswers1 = new Array(pronounsPractice1Data.length).fill(null);
-            window.pronounsAnswers2 = new Array(pronounsPracticeBook2Data.length).fill('');
-            window.pronounsAnswersPara = new Array(16).fill('');
-        }
-
+    } else if (activeTab === 'practice_book') {
         let paraHtml = '';
         pronounsParagraphData.segments.forEach((seg, idx) => {
             paraHtml += seg.text;
             if (idx < pronounsParagraphData.answers.length) {
-                paraHtml += `<input type="text" id="pro_para_${idx}" class="para-input" placeholder="(${idx + 1})" value="${window.pronounsAnswersPara[idx] || ''}" oninput="window.pronounsAnswersPara[idx] = this.value; document.getElementById('pro_para_explanation').style.display='none';" style="width: 80px; padding: 4px 8px; border: 2px solid #cbd5e1; border-radius: 6px; font-size: 1.05rem; text-align: center; font-weight: 700; color: var(--primary-color); outline: none; margin: 0 4px; transition: all 0.2s; background: white;">`;
+                paraHtml += `<input type="text" id="pro_para_${idx}" class="para-input" placeholder="(${idx + 1})" value="${window.pronounsAnswersPara[idx] || ''}" oninput="window.pronounsAnswersPara[idx] = this.value; document.getElementById('pro_para_explanation').style.display='none'; window.saveProgress(true);" style="width: 80px; padding: 4px 8px; border: 2px solid #cbd5e1; border-radius: 6px; font-size: 1.05rem; text-align: center; font-weight: 700; color: var(--primary-color); outline: none; margin: 0 4px; transition: all 0.2s; background: white;">`;
             }
         });
-
-        const p1Html = pronounsPractice1Data.map((q, idx) => `
-            <div class="quiz-item" style="background: var(--bg-card); border-radius: 12px; padding: 20px; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color);">
-                <div style="display: flex; gap: 12px; align-items: flex-start; margin-bottom: 16px;">
-                    <div style="background: var(--primary-light); color: var(--primary-color); width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">${idx + 1}</div>
-                    <p style="font-size: 1.15rem; font-weight: 500; color: var(--text-main); margin-top: 4px;">${q.q}</p>
-                </div>
-                <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 16px; padding-left: 44px;">
-                    ${q.options.map((opt, oIdx) => `
-                        <label style="display: flex; align-items: center; gap: 8px; padding: 10px 16px; background: ${window.pronounsAnswers1[idx] === oIdx ? '#eff6ff' : '#f8fafc'}; border: 2px solid ${window.pronounsAnswers1[idx] === oIdx ? 'var(--primary-color)' : '#e2e8f0'}; border-radius: 8px; cursor: pointer; transition: all 0.2s;" onclick="window.selectPronouns1Option(this, ${idx}, ${oIdx})">
-                            <input type="radio" name="pro_q1_${idx}" value="${oIdx}" style="display:none;" ${window.pronounsAnswers1[idx] === oIdx ? 'checked' : ''}>
-                            <div class="radio-custom" style="width: 18px; height: 18px; border-radius: 50%; border: 2px solid #cbd5e1; background: ${window.pronounsAnswers1[idx] === oIdx ? 'var(--primary-color)' : 'transparent'};"></div>
-                            <span style="font-weight: 500;">${opt}</span>
-                        </label>
-                    `).join('')}
-                </div>
-                <div style="padding-left: 44px;">
-                    <button onclick="checkPronouns1(${idx})" style="padding: 8px 20px; background: white; color: var(--primary-color); border: 2px solid var(--primary-color); border-radius: 20px; font-weight: bold; cursor: pointer; transition: all 0.2s;">Kiểm tra</button>
-                    <div id="proexp1_${idx}" style="display: none; margin-top: 16px; padding: 12px 16px; border-radius: 8px; font-size: 1.05rem;"></div>
-                </div>
-            </div>
-        `).join('');
-
-        const p2Html = pronounsPracticeBook2Data.map((q, idx) => `
-            <div class="quiz-item" style="background: var(--bg-card); border-radius: 12px; padding: 20px; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color);">
-                <div style="display: flex; gap: 12px; align-items: flex-start; margin-bottom: 12px;">
-                    <div style="background: var(--primary-light); color: var(--primary-color); width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">${idx + 1}</div>
-                    <p style="font-size: 1.1rem; font-weight: 500; color: var(--text-main); margin-top: 4px; line-height: 1.6;">${q.q}</p>
-                </div>
-                <div style="display: flex; flex-direction: column; gap: 8px; padding-left: 44px;">
-                    <input type="text" id="pro_input2_${idx}" placeholder="Nhập từ chỉ định..." value="${window.pronounsAnswers2[idx] || ''}" style="padding: 10px 16px; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 1.05rem; outline: none; width: 100%; box-sizing: border-box;" oninput="window.pronounsAnswers2[${idx}] = this.value; document.getElementById('proexp2_${idx}').style.display='none';">
-                    <button onclick="checkPronouns2(${idx})" style="padding: 8px 16px; background: white; color: var(--primary-color); border: 2px solid var(--primary-color); border-radius: 20px; font-weight: bold; cursor: pointer; align-self: flex-start;">Kiểm tra</button>
-                </div>
-                <div id="proexp2_${idx}" style="display: none; margin-top: 12px; margin-left: 44px; padding: 10px 12px; border-radius: 8px; font-size: 1rem;"></div>
-            </div>
-        `).join('');
 
         contentHtml = `
             <div style="margin-top: 24px;">
                 <div style="margin-bottom: 40px;">
-                    <h2 style="color: var(--primary-color); font-size: 1.4rem; margin-bottom: 16px;">BÀI 1: CHỌN ĐẠI TỪ PHÙ HỢP</h2>
-                    <p style="color: var(--text-muted); margin-bottom: 24px;">Lựa chọn Đại từ đúng để điền vào chỗ trống trong các câu sau.</p>
-                    <div style="display: flex; flex-direction: column; gap: 24px;">
-                        ${p1Html}
-                    </div>
-                </div>
-                
-                <hr style="border-top: 2px solid var(--border-color); margin-bottom: 40px;">
-                
-                <div style="margin-bottom: 40px;">
-                    <h2 style="color: var(--primary-color); font-size: 1.4rem; margin-bottom: 16px;">BÀI 2: DÙNG THIS / THESE ĐỂ NỐI CÂU</h2>
-                    <p style="color: var(--text-muted); margin-bottom: 24px;">Sử dụng Đại từ chỉ định (This/These/That/Those) để thay thế và liên kết ý của câu trước đó. Kỹ năng này rất hữu ích trong Writing.</p>
-                    <div style="display: flex; flex-direction: column; gap: 24px;">
-                        ${p2Html}
-                    </div>
-                </div>
-
-                <hr style="border-top: 2px solid var(--border-color); margin-bottom: 40px;">
-
-                <div style="margin-bottom: 40px;">
-                    <h2 style="color: var(--primary-color); font-size: 1.4rem; margin-bottom: 16px;">BÀI 3: LUYỆN TẬP ĐIỀN ĐẠI TỪ TRONG ĐOẠN VĂN</h2>
+                    <h2 style="color: var(--primary-color); font-size: 1.4rem; margin-bottom: 16px;">BÀI TẬP ÁP DỤNG 1 (TRONG TÀI LIỆU): ĐIỀN ĐẠI TỪ VÀO ĐOẠN VĂN</h2>
                     <p style="color: var(--text-muted); margin-bottom: 24px;">Đọc đoạn văn kể về công việc thuyết trình nhóm dưới đây và điền Đại từ nhân xưng, Đại từ tân ngữ, Tính từ sở hữu thích hợp vào chỗ trống.</p>
                     <div class="quiz-item" style="background: var(--bg-card); border-radius: 12px; padding: 24px; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color); line-height: 2.2;">
                         <p style="font-size: 1.15rem; color: var(--text-main); font-weight: 500; text-align: justify; margin: 0;">
                             ${paraHtml}
                         </p>
                         <div style="margin-top: 28px; text-align: center;">
-                            <button onclick="window.checkPronounsParagraph()" style="padding: 10px 28px; background: var(--primary-color); color: white; border: none; border-radius: 24px; font-weight: bold; cursor: pointer; font-size: 1.05rem; box-shadow: 0 4px 12px rgba(99,102,241,0.2); transition: all 0.2s;">
-                                Kiểm tra đáp án
+                            <button onclick="window.checkPronounsParagraph()" style="padding: 12px 32px; background: var(--primary-color); color: white; border: none; border-radius: 30px; font-weight: bold; font-size: 1.1rem; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.1)'">
+                                Kiểm tra Đoạn văn
                             </button>
                         </div>
                         <div id="pro_para_explanation" style="display: none; margin-top: 28px; padding: 20px; border-radius: 12px; background: #f8fafc; border: 1px solid var(--border-color);">
                             <h3 style="color: var(--primary-color); font-size: 1.2rem; margin-bottom: 16px;">Giải thích chi tiết:</h3>
                             <div id="pro_para_exp_list" style="margin: 0; font-size: 1rem; line-height: 1.8; color: var(--text-main);">
-                                <!-- Result and explanations list -->
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        `;
+    } else if (activeTab === 'practice_extra') {
+        const extra1Html = pronounsPracticeExtra1Data.map((q, idx) => `
+            <div class="quiz-item" style="background: var(--bg-card); border-radius: 12px; padding: 20px; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color); margin-bottom: 16px;">
+                <div style="display: flex; gap: 12px; align-items: flex-start; margin-bottom: 14px;">
+                    <div style="background: #eff6ff; color: #2563eb; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">${idx + 1}</div>
+                    <p style="font-size: 1.15rem; font-weight: 500; color: var(--text-main); margin-top: 4px; margin-bottom: 0;">${q.q}</p>
+                </div>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding-left: 44px;">
+                    ${q.options.map((opt, oIdx) => `
+                        <button class="option-btn" id="pro_extra1_opt_${idx}_${oIdx}" onclick="window.selectPronounsExtra1(${idx}, ${oIdx})" style="padding: 12px 16px; border: 2px solid ${window.pronounsAnswersExtra1[idx] === oIdx ? 'var(--primary-color)' : '#e2e8f0'}; border-radius: 8px; background: ${window.pronounsAnswersExtra1[idx] === oIdx ? '#eff6ff' : 'white'}; text-align: left; font-size: 1.05rem; cursor: pointer; transition: all 0.2s; font-weight: 500; color: #334155;">
+                            <b>${String.fromCharCode(65 + oIdx)}.</b> ${opt}
+                        </button>
+                    `).join('')}
+                </div>
+                <div style="padding-left: 44px;">
+                    <div id="proexp_extra1_${idx}" style="display: none; margin-top: 14px; padding: 12px 16px; border-radius: 8px; font-size: 1.05rem;"></div>
+                </div>
+            </div>
+        `).join('');
+
+        const extra2Html = pronounsPracticeExtra2Data.map((q, idx) => `
+            <div class="quiz-item" style="background: var(--bg-card); border-radius: 12px; padding: 20px; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color); margin-bottom: 16px;">
+                <div style="display: flex; gap: 12px; align-items: flex-start; margin-bottom: 12px;">
+                    <div style="background: var(--primary-light); color: var(--primary-color); width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">${idx + 1}</div>
+                    <p style="font-size: 1.1rem; font-weight: 500; color: var(--text-main); margin-top: 4px; line-height: 1.6;">${q.q}</p>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 8px; padding-left: 44px;">
+                    <input type="text" id="pro_extra2_input_${idx}" placeholder="Nhập từ chỉ định..." value="${window.pronounsAnswersExtra2[idx] || ''}" style="padding: 10px 16px; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 1.05rem; outline: none; width: 100%; box-sizing: border-box;" oninput="window.pronounsAnswersExtra2[${idx}] = this.value; document.getElementById('proexp_extra2_${idx}').style.display='none'; window.saveProgress(true);">
+                    <button onclick="window.checkPronounsExtra2(${idx})" style="padding: 8px 16px; background: white; color: var(--primary-color); border: 2px solid var(--primary-color); border-radius: 20px; font-weight: bold; cursor: pointer; align-self: flex-start;">Kiểm tra</button>
+                </div>
+                <div id="proexp_extra2_${idx}" style="display: none; margin-top: 12px; margin-left: 44px; padding: 10px 12px; border-radius: 8px; font-size: 1rem;"></div>
+            </div>
+        `).join('');
+
+        const extra3Html = pronounsPracticeExtra3Data.map((q, idx) => `
+            <div class="quiz-item" style="background: var(--bg-card); border-radius: 12px; padding: 20px; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color); margin-bottom: 16px;">
+                <div style="display: flex; gap: 12px; align-items: flex-start; margin-bottom: 12px;">
+                    <div style="background: var(--primary-light); color: var(--primary-color); width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">${idx + 1}</div>
+                    <div style="flex-grow: 1;">
+                        <p style="font-size: 1.15rem; font-weight: 500; color: var(--text-main); margin-top: 4px; margin-bottom: 8px;">${q.q}</p>
+                        ${q.hint ? `<button onclick="const h = document.getElementById('pro_hint_3_${idx}'); h.style.display = h.style.display === 'none' ? 'block' : 'none';" style="background: none; border: none; color: #0284c7; font-size: 0.95rem; cursor: pointer; padding: 0; margin-bottom: 12px; display: flex; align-items: center; gap: 4px; font-weight: 500;"><span style="font-size: 1.1rem">💡</span> Xem gợi ý</button>
+                        <div id="pro_hint_3_${idx}" style="display: none; background: #f0f9ff; border-left: 4px solid #38bdf8; padding: 12px; border-radius: 4px; margin-bottom: 16px; font-size: 0.95rem; color: #0c4a6e; line-height: 1.6;">${q.hint}</div>` : ''}
+                    </div>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 8px; padding-left: 44px;">
+                    <input type="text" id="pro_extra3_input_${idx}" placeholder="Nhập bản dịch tiếng Anh..." style="padding: 10px 16px; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 1.05rem; outline: none; transition: border-color 0.2s; width: 100%; box-sizing: border-box;" onfocus="this.style.borderColor='var(--primary-color)'" onblur="this.style.borderColor='#e2e8f0'" oninput="window.pronounsAnswersExtra3[${idx}] = this.value; document.getElementById('proexp_extra3_${idx}').style.display='none'; window.saveProgress(true);" value="${window.pronounsAnswersExtra3[idx] || ''}">
+                    <button onclick="window.checkPronounsExtra3(${idx})" style="padding: 8px 16px; background: white; color: var(--primary-color); border: 2px solid var(--primary-color); border-radius: 20px; font-weight: bold; cursor: pointer; transition: all 0.2s; align-self: flex-start;" onmouseover="this.style.background='var(--primary-color)'; this.style.color='white'" onmouseout="this.style.background='white'; this.style.color='var(--primary-color)'">Kiểm tra</button>
+                </div>
+                <div style="padding-left: 44px;">
+                    <div id="proexp_extra3_${idx}" style="display: none; margin-top: 12px; padding: 10px 12px; border-radius: 8px; font-size: 1rem;"></div>
+                </div>
+            </div>
+        `).join('');
+
+        contentHtml = `
+            <div style="margin-top: 24px;">
+                <div style="margin-bottom: 40px;">
+                    <h2 style="color: var(--primary-color); font-size: 1.4rem; margin-bottom: 16px;">BÀI TẬP THÊM 1: TRẮC NGHIỆM ĐẠI TỪ & SỞ HỮU</h2>
+                    <p style="color: var(--text-muted); margin-bottom: 24px;">Lựa chọn đại từ hoặc tính từ sở hữu đúng ngữ pháp để hoàn thành câu.</p>
+                    <div>${extra1Html}</div>
+                    <div style="margin-top: 24px; text-align: center;">
+                        <button onclick="window.submitPronounsExtra1()" style="padding: 12px 32px; background: var(--primary-color); color: white; border: none; border-radius: 30px; font-weight: bold; font-size: 1.1rem; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.1)'">Kiểm tra Bài 1</button>
+                    </div>
+                </div>
+
+                <hr style="border-top: 2px solid var(--border-color); margin-bottom: 40px;">
+
+                <div style="margin-bottom: 40px;">
+                    <h2 style="color: var(--primary-color); font-size: 1.4rem; margin-bottom: 16px;">BÀI TẬP THÊM 2: DÙNG THIS / THESE ĐỂ NỐI CÂU</h2>
+                    <p style="color: var(--text-muted); margin-bottom: 24px;">Sử dụng Đại từ chỉ định (This/These/That/Those) để thay thế và liên kết ý của câu trước đó. Kỹ năng này rất hữu ích trong Writing.</p>
+                    <div>${extra2Html}</div>
+                    <div style="margin-top: 24px; text-align: center;">
+                        <button onclick="window.submitPronounsExtra2()" style="padding: 12px 32px; background: var(--primary-color); color: white; border: none; border-radius: 30px; font-weight: bold; font-size: 1.1rem; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.1)'">Kiểm tra Bài 2</button>
+                    </div>
+                </div>
+
+                <hr style="border-top: 2px solid var(--border-color); margin-bottom: 40px;">
+
+                <div style="margin-bottom: 40px;">
+                    <h2 style="color: var(--primary-color); font-size: 1.4rem; margin-bottom: 16px;">BÀI TẬP THÊM 3: DỊCH CÂU ÁP DỤNG ĐẠI TỪ & PHẢN THÂN</h2>
+                    <p style="color: var(--text-muted); margin-bottom: 24px;">Dịch các câu sau sang tiếng Anh, chú ý sử dụng đúng đại từ nhân xưng, đại từ sở hữu và đại từ phản thân.</p>
+                    <div>${extra3Html}</div>
+                    <div style="margin-top: 24px; text-align: center;">
+                        <button onclick="window.submitPronounsExtra3()" style="padding: 12px 32px; background: var(--primary-color); color: white; border: none; border-radius: 30px; font-weight: bold; font-size: 1.1rem; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.1)'">Kiểm tra Bài 3</button>
                     </div>
                 </div>
             </div>
@@ -4604,34 +4682,34 @@ window.renderPronounsDetail = function(activeTab = 'theory') {
         </div>
         ${contentHtml}
     `;
-}
 
-window.selectPronouns1Option = function(el, idx, oIdx) {
-    window.pronounsAnswers1[idx] = oIdx;
-    const exp = document.getElementById(`proexp1_${idx}`);
-    if (exp) exp.style.display = 'none';
-    const container = el.parentElement;
-    const labels = container.querySelectorAll('label');
-    labels.forEach((label, lIdx) => {
-        const radioCircle = label.querySelector('.radio-custom');
-        const radioInput = label.querySelector('input[type="radio"]');
-        if (lIdx === oIdx) {
-            label.style.background = '#eff6ff';
-            label.style.borderColor = 'var(--primary-color)';
-            if (radioCircle) radioCircle.style.background = 'var(--primary-color)';
-            if (radioInput) radioInput.checked = true;
-        } else {
-            label.style.background = '#f8fafc';
-            label.style.borderColor = '#e2e8f0';
-            if (radioCircle) radioCircle.style.background = 'transparent';
-            if (radioInput) radioInput.checked = false;
-        }
-    });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    setTimeout(window.restoreAnswers, 100);
 };
 
-window.checkPronouns1 = function(idx) {
-    const ans = window.pronounsAnswers1[idx];
-    const expDiv = document.getElementById(`proexp1_${idx}`);
+window.selectPronounsExtra1 = function(qIdx, optIdx) {
+    window.pronounsAnswersExtra1[qIdx] = optIdx;
+    window.saveProgress(true);
+    for (let i = 0; i < pronounsPracticeExtra1Data[qIdx].options.length; i++) {
+        const btn = document.getElementById(`pro_extra1_opt_${qIdx}_${i}`);
+        if (btn) {
+            if (i === optIdx) {
+                btn.style.border = '2px solid var(--primary-color)';
+                btn.style.background = '#eff6ff';
+            } else {
+                btn.style.border = '2px solid #e2e8f0';
+                btn.style.background = 'white';
+            }
+        }
+    }
+    const exp = document.getElementById(`proexp_extra1_${qIdx}`);
+    if (exp) exp.style.display = 'none';
+};
+
+window.checkPronounsExtra1 = function(idx) {
+    const ans = window.pronounsAnswersExtra1[idx];
+    const expDiv = document.getElementById(`proexp_extra1_${idx}`);
+    if (!expDiv) return;
     
     if (ans === null) {
         expDiv.style.display = 'block';
@@ -4640,21 +4718,31 @@ window.checkPronouns1 = function(idx) {
         return;
     }
     
-    const correctIdx = pronounsPractice1Data[idx].a;
+    const correctIdx = pronounsPracticeExtra1Data[idx].a;
     expDiv.style.display = 'block';
     
     if (ans === correctIdx) {
         expDiv.style.background = '#f0fdf4'; expDiv.style.color = '#166534'; expDiv.style.borderLeft = '4px solid #22c55e';
-        expDiv.innerHTML = `<b>✅ CHÍNH XÁC!</b> ${pronounsPractice1Data[idx].exp}`;
+        expDiv.innerHTML = `<b>✅ CHÍNH XÁC!</b> ${pronounsPracticeExtra1Data[idx].exp}`;
     } else {
         expDiv.style.background = '#fef2f2'; expDiv.style.color = '#991b1b'; expDiv.style.borderLeft = '4px solid #ef4444';
-        expDiv.innerHTML = `<b>❌ SAI RỒI!</b> Đáp án đúng là <b>${pronounsPractice1Data[idx].options[correctIdx]}</b>. ${pronounsPractice1Data[idx].exp}`;
+        expDiv.innerHTML = `<b>❌ SAI RỒI!</b> Đáp án đúng là <b>${pronounsPracticeExtra1Data[idx].options[correctIdx]}</b>. ${pronounsPracticeExtra1Data[idx].exp}`;
     }
-}
+};
 
-window.checkPronouns2 = function(idx) {
-    const userInput = window.pronounsAnswers2[idx];
-    const expDiv = document.getElementById(`proexp2_${idx}`);
+window.submitPronounsExtra1 = function() {
+    let score = 0;
+    pronounsPracticeExtra1Data.forEach((q, idx) => {
+        window.checkPronounsExtra1(idx);
+        if (window.pronounsAnswersExtra1[idx] === q.a) score++;
+    });
+    window.showExerciseResult(score, pronounsPracticeExtra1Data.length, "KẾT QUẢ BÀI TẬP THÊM 1 (ĐẠI TỪ)");
+};
+
+window.checkPronounsExtra2 = function(idx) {
+    const userInput = window.pronounsAnswersExtra2[idx];
+    const expDiv = document.getElementById(`proexp_extra2_${idx}`);
+    if (!expDiv) return;
     
     if (!userInput || userInput.trim() === '') {
         expDiv.style.display = 'block';
@@ -4664,7 +4752,7 @@ window.checkPronouns2 = function(idx) {
     }
     
     const cleanUser = userInput.trim().toLowerCase().replace(/[.,!?;:]/g, '').replace(/\s+/g, ' ');
-    const validAnswers = pronounsPracticeBook2Data[idx].a;
+    const validAnswers = pronounsPracticeExtra2Data[idx].a;
     let isCorrect = false;
     
     for (let ans of validAnswers) {
@@ -4677,12 +4765,78 @@ window.checkPronouns2 = function(idx) {
     expDiv.style.display = 'block';
     if (isCorrect) {
         expDiv.style.background = '#f0fdf4'; expDiv.style.color = '#166534'; expDiv.style.borderLeft = '4px solid #22c55e';
-        expDiv.innerHTML = `<b>✅ CHÍNH XÁC!</b> ${pronounsPracticeBook2Data[idx].exp}`;
+        expDiv.innerHTML = `<b>✅ CHÍNH XÁC!</b> ${pronounsPracticeExtra2Data[idx].exp}`;
     } else {
         expDiv.style.background = '#fef2f2'; expDiv.style.color = '#991b1b'; expDiv.style.borderLeft = '4px solid #ef4444';
-        expDiv.innerHTML = `<b>❌ CHƯA ĐÚNG.</b> Tham khảo: <b>${validAnswers[0]}</b>. ${pronounsPracticeBook2Data[idx].exp}`;
+        expDiv.innerHTML = `<b>❌ CHƯA ĐÚNG.</b> Tham khảo: <b>${validAnswers[0]}</b>. ${pronounsPracticeExtra2Data[idx].exp}`;
     }
-}
+};
+
+window.submitPronounsExtra2 = function() {
+    let score = 0;
+    pronounsPracticeExtra2Data.forEach((q, idx) => {
+        const userInput = window.pronounsAnswersExtra2[idx];
+        if (userInput) {
+            const cleanUser = userInput.trim().toLowerCase().replace(/[.,!?;:]/g, '').replace(/\s+/g, ' ');
+            if (q.a.some(ans => cleanUser === ans.toLowerCase())) score++;
+        }
+        window.checkPronounsExtra2(idx);
+    });
+    window.showExerciseResult(score, pronounsPracticeExtra2Data.length, "KẾT QUẢ BÀI TẬP THÊM 2 (ĐẠI TỪ)");
+};
+
+window.checkPronounsExtra3 = function(idx) {
+    const q = pronounsPracticeExtra3Data[idx];
+    const rawVal = window.pronounsAnswersExtra3[idx] || "";
+    const val = rawVal.trim();
+    const expDiv = document.getElementById(`proexp_extra3_${idx}`);
+    if (!expDiv) return;
+    
+    if (!val) {
+        expDiv.style.display = 'block';
+        expDiv.style.background = '#fffbeb';
+        expDiv.style.color = '#b45309';
+        expDiv.style.border = '1px solid #fde68a';
+        expDiv.innerHTML = "⚠️ Bạn chưa nhập câu trả lời!";
+        return;
+    }
+
+    const cleanUser = window.normalizeText(val);
+    const isCorrect = q.a.some(ans => window.normalizeText(ans) === cleanUser);
+    const formCheck = window.checkSentencePunctuation(rawVal, isCorrect);
+
+    expDiv.style.display = 'block';
+
+    if (formCheck.valid) {
+        expDiv.style.background = '#f0fdf4';
+        expDiv.style.color = '#166534';
+        expDiv.style.border = '1px solid #bbf7d0';
+        expDiv.innerHTML = "✅ <b>Chính xác!</b> Bạn dịch câu rất chuẩn xác.";
+    } else if (formCheck.isNear) {
+        expDiv.style.background = '#fffbeb';
+        expDiv.style.color = '#b45309';
+        expDiv.style.border = '1px solid #fde68a';
+        expDiv.innerHTML = formCheck.message;
+    } else {
+        expDiv.style.background = '#fef2f2';
+        expDiv.style.color = '#991b1b';
+        expDiv.style.border = '1px solid #fecaca';
+        expDiv.innerHTML = `❌ <b>Chưa chính xác.</b><br><br><b>💡 Gợi ý đáp án chuẩn:</b><br>- ${q.a.join('<br>- ')}`;
+    }
+};
+
+window.submitPronounsExtra3 = function() {
+    let score = 0;
+    pronounsPracticeExtra3Data.forEach((q, idx) => {
+        const rawVal = window.pronounsAnswersExtra3[idx] || "";
+        const val = rawVal.trim();
+        if (val && q.a.some(ans => window.normalizeText(ans) === window.normalizeText(val))) {
+            score++;
+        }
+        window.checkPronounsExtra3(idx);
+    });
+    window.showExerciseResult(score, pronounsPracticeExtra3Data.length, "KẾT QUẢ BÀI TẬP THÊM 3 (DỊCH CÂU ĐẠI TỪ)");
+};
 
 window.checkPronounsParagraph = function() {
     const data = pronounsParagraphData;
@@ -4745,7 +4899,7 @@ window.checkPronounsParagraph = function() {
             playTone(220, 0.3, 'sawtooth'); // A3
         }
     } catch(e) {}
-}
+};
 
 
 // ==================== VERBS LOGIC ====================
