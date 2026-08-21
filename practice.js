@@ -2697,12 +2697,42 @@ let currentSelfTopicId = 'components';
 let currentSelfExerciseIdx = 0;
 let selfPracticeUserAnswers = {}; // key: `${topicId}_${exIdx}_${qIdx}`
 
+window.getTopicStatus = function(topicId) {
+    if (typeof topicsData !== 'undefined') {
+        const t1 = topicsData.find(t => t.id === topicId);
+        if (t1) return t1.status;
+    }
+    if (typeof chapter2TopicsData !== 'undefined') {
+        const t2 = chapter2TopicsData.find(t => t.id === topicId);
+        if (t2) return t2.status;
+    }
+    return 'locked';
+};
+
 window.renderSelfPracticeView = function() {
-    let topicNavHtml = selfPracticeTopics.map(t => `
-        <button onclick="window.switchSelfTopic('${t.id}')" class="tab-pill ${currentSelfTopicId === t.id ? 'active' : ''}" style="white-space: nowrap; font-size: 1.15rem; font-weight: 700; padding: 12px 24px; display: flex; align-items: center; gap: 8px; border-radius: 9999px; letter-spacing: 0.2px;">
-            <span style="font-size: 1.25rem;">${t.icon}</span> <span>${t.title}</span>
+    // If current selected topic is locked, try to switch to first unlocked topic
+    let currentStatus = window.getTopicStatus ? window.getTopicStatus(currentSelfTopicId) : 'locked';
+    if (currentStatus === 'locked') {
+        const firstUnlocked = selfPracticeTopics.find(t => (window.getTopicStatus ? window.getTopicStatus(t.id) : 'locked') === 'unlocked');
+        if (firstUnlocked) {
+            currentSelfTopicId = firstUnlocked.id;
+            currentStatus = 'unlocked';
+        }
+    }
+
+    let topicNavHtml = selfPracticeTopics.map(t => {
+        const status = window.getTopicStatus ? window.getTopicStatus(t.id) : 'locked';
+        const isLocked = (status === 'locked');
+        const isActive = (currentSelfTopicId === t.id);
+        
+        return `
+        <button onclick="window.switchSelfTopic('${t.id}')" class="tab-pill ${isActive ? 'active' : ''}" style="white-space: nowrap; font-size: 1.15rem; font-weight: 700; padding: 12px 24px; display: flex; align-items: center; gap: 8px; border-radius: 9999px; letter-spacing: 0.2px; ${isLocked ? 'opacity: 0.7; border-style: dashed;' : ''}">
+            <span style="font-size: 1.25rem;">${t.icon}</span> 
+            <span>${t.title}</span>
+            ${isLocked ? '<span style="font-size: 0.95rem; margin-left: 4px;">🔒</span>' : ''}
         </button>
-    `).join('');
+        `;
+    }).join('');
 
     const curTopic = selfPracticeTopics.find(t => t.id === currentSelfTopicId) || selfPracticeTopics[0];
     const exercises = selfPracticeData[currentSelfTopicId] || [];
@@ -2800,25 +2830,78 @@ window.renderSelfPracticeView = function() {
             </div>
 
             <!-- KHU VỰC BÀI TẬP -->
-            <div style="background: white; border-radius: 16px; padding: 24px; box-shadow: var(--shadow-md); margin-bottom: 24px;">
-                <h3 style="color: #1e293b; font-size: 1.3rem; font-weight: 800; margin-bottom: 6px;">${curEx.title}</h3>
-                <p style="color: var(--text-muted); font-size: 1.05rem; margin-bottom: 20px;">${curEx.desc}</p>
-                
-                <div>
-                    ${questionsHtml}
-                </div>
-
-                <div style="text-align: center; margin-top: 24px;">
-                    <button onclick="window.submitCurrentSelfExercise()" style="padding: 12px 36px; background: var(--primary-color); color: white; border: none; border-radius: 30px; font-weight: bold; cursor: pointer; transition: all 0.2s; font-size: 1.1rem; box-shadow: 0 4px 12px rgba(87,70,227,0.3);">
-                        NỘP BÀI ${currentSelfExerciseIdx + 1}
+            ${currentStatus === 'locked' ? `
+                <div style="background: white; border-radius: 16px; padding: 48px 24px; box-shadow: var(--shadow-md); margin-bottom: 24px; text-align: center; border: 2px dashed #cbd5e1;">
+                    <div style="font-size: 4rem; margin-bottom: 16px;">🔒</div>
+                    <h3 style="color: #1e293b; font-size: 1.4rem; font-weight: 800; margin-bottom: 8px;">Chủ điểm này chưa được mở khóa</h3>
+                    <p style="color: var(--text-muted); font-size: 1.1rem; max-width: 500px; margin: 0 auto 24px auto;">Bạn cần mở khóa bài học lý thuyết hoặc nhập mã lớp tương ứng để làm bài tự luyện tập của chủ điểm này.</p>
+                    <button onclick="window.switchSelfTopic('${currentSelfTopicId}')" style="padding: 12px 32px; background: var(--primary-color); color: white; border: none; border-radius: 30px; font-weight: bold; cursor: pointer; font-size: 1.1rem; box-shadow: 0 4px 12px rgba(87,70,227,0.3);">
+                        🔑 Nhập Mã Lớp Để Mở Khóa
                     </button>
                 </div>
-            </div>
+            ` : `
+                <div style="background: white; border-radius: 16px; padding: 24px; box-shadow: var(--shadow-md); margin-bottom: 24px;">
+                    <h3 style="color: #1e293b; font-size: 1.3rem; font-weight: 800; margin-bottom: 6px;">${curEx ? curEx.title : ''}</h3>
+                    <p style="color: var(--text-muted); font-size: 1.05rem; margin-bottom: 20px;">${curEx ? curEx.desc : ''}</p>
+                    
+                    <div>
+                        ${questionsHtml}
+                    </div>
+
+                    <div style="text-align: center; margin-top: 24px;">
+                        <button onclick="window.submitCurrentSelfExercise()" style="padding: 12px 36px; background: var(--primary-color); color: white; border: none; border-radius: 30px; font-weight: bold; cursor: pointer; transition: all 0.2s; font-size: 1.1rem; box-shadow: 0 4px 12px rgba(87,70,227,0.3);">
+                            NỘP BÀI ${currentSelfExerciseIdx + 1}
+                        </button>
+                    </div>
+                </div>
+            `}
         </div>
     `;
 };
 
 window.switchSelfTopic = function(topicId) {
+    const status = window.getTopicStatus ? window.getTopicStatus(topicId) : 'locked';
+    if (status === 'locked') {
+        const pass = prompt('Chủ điểm này đang bị khóa. Vui lòng nhập mã lớp để mở khóa:');
+        if (pass === null) return; // User cancelled
+        
+        const allPasses = ['missnguyet2026', 'cb206', 'cb210', 'cb211', 'cb213', 'onb103', 'b212'];
+        const chap2Passes = ['missnguyet2026', 'cb206', 'cb210', 'cb211', 'cb213', 'onb103'];
+        const topicPasswords = {
+            'components': allPasses,
+            'structures': allPasses,
+            'nouns': [...chap2Passes, 'b212'],
+            'pronouns': [...chap2Passes, 'b212'],
+            'verbs': chap2Passes,
+            'adjectives': chap2Passes,
+            'adverbs': chap2Passes,
+            'prepositions': chap2Passes,
+            'conjunctions': chap2Passes
+        };
+        const enteredPass = pass.trim().toLowerCase();
+        const validPasses = topicPasswords[topicId] || chap2Passes;
+        const masterPasses = ['cb206', 'cb211', 'missnguyet2026'];
+        
+        if (enteredPass && (validPasses.includes(enteredPass) || masterPasses.includes(enteredPass))) {
+            if (typeof topicsData !== 'undefined') {
+                const t1 = topicsData.find(t => t.id === topicId);
+                if (t1) t1.status = 'unlocked';
+            }
+            if (typeof chapter2TopicsData !== 'undefined') {
+                const t2 = chapter2TopicsData.find(t => t.id === topicId);
+                if (t2) t2.status = 'unlocked';
+            }
+            if (typeof window.saveProgress === 'function') window.saveProgress(true);
+            alert('🎉 Mở khóa thành công!');
+            currentSelfTopicId = topicId;
+            currentSelfExerciseIdx = 0;
+            renderSelfPracticeView();
+        } else {
+            alert('❌ Mật khẩu không đúng!');
+        }
+        return;
+    }
+    
     currentSelfTopicId = topicId;
     currentSelfExerciseIdx = 0;
     renderSelfPracticeView();
