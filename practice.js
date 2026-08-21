@@ -2726,10 +2726,10 @@ window.renderSelfPracticeView = function() {
         const isActive = (currentSelfTopicId === t.id);
         
         return `
-        <button onclick="window.switchSelfTopic('${t.id}')" class="tab-pill ${isActive ? 'active' : ''}" style="white-space: nowrap; font-size: 1.15rem; font-weight: 700; padding: 12px 24px; display: flex; align-items: center; gap: 8px; border-radius: 9999px; letter-spacing: 0.2px; ${isLocked ? 'opacity: 0.7; border-style: dashed;' : ''}">
-            <span style="font-size: 1.25rem;">${t.icon}</span> 
-            <span>${t.title}</span>
-            ${isLocked ? '<span style="font-size: 0.95rem; margin-left: 4px;">🔒</span>' : ''}
+        <button onclick="window.switchSelfTopic('${t.id}')" class="tab-pill ${isActive ? 'active' : ''}" style="white-space: nowrap; font-size: 1.2rem; font-weight: 800; padding: 12px 28px; display: flex; align-items: center; gap: 10px; border-radius: 9999px; letter-spacing: 0.2px; ${isLocked ? 'opacity: 0.75; border-style: dashed;' : ''}">
+            <span style="font-size: 1.35rem;">${t.icon}</span> 
+            <span style="font-weight: 800;">${t.title}</span>
+            ${isLocked ? '<span style="font-size: 1.05rem; margin-left: 4px;">🔒</span>' : ''}
         </button>
         `;
     }).join('');
