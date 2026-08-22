@@ -6650,6 +6650,21 @@ window.renderAdjectivesDetail = function(activeTab = 'theory') {
 
                 <div style="margin-bottom: 40px;">
                     <h2 style="color: var(--primary-color); font-size: 1.4rem; margin-bottom: 16px;">Bài tập áp dụng 2: Chuyển các câu sau sang tiếng Anh.</h2>
+                    
+                    <!-- HỘP GỢI Ý TỪ VỰNG BÀI 2 -->
+                    <div style="background: linear-gradient(135deg, #eff6ff 0%, #f5f3ff 100%); border: 1.5px solid #dbeafe; border-radius: 12px; padding: 18px 20px; margin-bottom: 24px; box-shadow: 0 2px 8px rgba(139, 92, 246, 0.06);">
+                        <div style="display: flex; align-items: center; gap: 8px; font-weight: 800; color: var(--primary-color); font-size: 1.1rem; margin-bottom: 12px;">
+                            <span style="font-size: 1.25rem;">💡</span> GỢI Ý TỪ VỰNG & CẤU TRÚC:
+                        </div>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 10px; font-size: 1rem; color: #334155;">
+                            <div style="background: white; padding: 8px 14px; border-radius: 8px; border: 1px solid #e2e8f0;">• <b>friendly</b> (adj): <i>thân thiện</i> | <b>enthusiastic</b> (adj): <i>nhiệt tình</i> | <b>weak students</b>: <i>học sinh yếu</i></div>
+                            <div style="background: white; padding: 8px 14px; border-radius: 8px; border: 1px solid #e2e8f0;">• <b>the cost of learning</b>: <i>chi phí học</i> | <b>quite reasonable</b>: <i>khá hợp lý</i></div>
+                            <div style="background: white; padding: 8px 14px; border-radius: 8px; border: 1px solid #e2e8f0;">• <b>healthy eating</b>: <i>ăn uống lành mạnh</i> | <b>important</b> (adj): <i>quan trọng</i> | <b>keep fit / stay healthy</b>: <i>giữ gìn sức khỏe</i></div>
+                            <div style="background: white; padding: 8px 14px; border-radius: 8px; border: 1px solid #e2e8f0;">• <b>staying up late</b>: <i>việc thức khuya</i> | <b>harmful to / bad for</b>: <i>có hại cho</i> | <b>physical and mental health</b>: <i>sức khỏe thể chất và tinh thần</i></div>
+                            <div style="background: white; padding: 8px 14px; border-radius: 8px; border: 1px solid #e2e8f0;">• <b>beautiful landscapes / scenery</b>: <i>phong cảnh đẹp</i> | <b>rural areas / countryside</b>: <i>vùng nông thôn</i></div>
+                        </div>
+                    </div>
+
                     <div>${book2Html}</div>
                     <div style="margin-top: 24px; text-align: center;">
                         <button onclick="window.submitAdjectivesBook2()" style="padding: 12px 32px; background: var(--primary-color); color: white; border: none; border-radius: 30px; font-weight: bold; font-size: 1.1rem; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.1)'">Kiểm tra Bài 2</button>
