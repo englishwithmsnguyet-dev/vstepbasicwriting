@@ -5981,16 +5981,30 @@ const adjectivesTheoryData = [
     {
         title: "1. TÍNH TỪ LÀ GÌ?",
         content: `
-            <p style="font-size: 1.1rem; color: #475569; margin-bottom: 12px; line-height: 1.6;">
-                Tính từ là những từ chỉ tính chất, đặc điểm của người hay sự vật. Tính từ được dùng để miêu tả và bổ sung ý nghĩa cho danh từ/ đại từ.
-            </p>
-            <div style="background: var(--bg-hover); padding: 12px 16px; border-left: 4px solid var(--primary-color); border-radius: 4px;">
-                <p style="margin: 0; font-weight: 500; color: var(--text-main);">Ví dụ:</p>
-                <ul style="margin: 8px 0 0; padding-left: 20px; color: #475569; line-height: 1.6;">
-                    <li>a <b>beautiful</b> girl (một cô gái đẹp)</li>
-                    <li><b>long</b> trips (những chuyến đi dài)</li>
-                    <li><b>useful</b> information (thông tin hữu ích)</li>
-                </ul>
+            <div style="font-size: 1.15rem; color: #334155; line-height: 1.7; margin-bottom: 20px; background: #f8fafc; padding: 18px 20px; border-radius: 12px; border-left: 5px solid var(--primary-color); border-right: 1px solid #e2e8f0; border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0;">
+                <p style="margin: 0;">
+                    👉 <b>Tính từ (Adjectives)</b> là những từ chỉ <b>tính chất, đặc điểm</b> của người, sự vật hoặc hiện tượng. Tính từ đóng vai trò chính trong việc <b>miêu tả</b> và <b>bổ sung ý nghĩa</b> rõ nét cho danh từ hoặc đại từ.
+                </p>
+            </div>
+            
+            <div style="background: linear-gradient(135deg, #eff6ff 0%, #f5f3ff 100%); border: 1.5px solid #dbeafe; border-radius: 14px; padding: 20px 24px; box-shadow: 0 4px 12px rgba(139, 92, 246, 0.06);">
+                <div style="display: flex; align-items: center; gap: 8px; font-weight: 800; color: var(--primary-color); font-size: 1.15rem; margin-bottom: 14px;">
+                    <span style="font-size: 1.3rem;">💡</span> VÍ DỤ MINH HỌA:
+                </div>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px;">
+                    <div style="background: white; padding: 12px 18px; border-radius: 10px; border: 1.5px solid #e2e8f0; box-shadow: 0 2px 5px rgba(0,0,0,0.03); display: flex; flex-direction: column; gap: 4px;">
+                        <div style="font-size: 1.1rem; color: #1e293b;">• a <b style="color: var(--primary-color); font-size: 1.15rem; text-decoration: underline;">beautiful</b> girl</div>
+                        <div style="font-size: 0.95rem; color: #64748b; font-style: italic;">(một cô gái đẹp)</div>
+                    </div>
+                    <div style="background: white; padding: 12px 18px; border-radius: 10px; border: 1.5px solid #e2e8f0; box-shadow: 0 2px 5px rgba(0,0,0,0.03); display: flex; flex-direction: column; gap: 4px;">
+                        <div style="font-size: 1.1rem; color: #1e293b;">• <b style="color: var(--primary-color); font-size: 1.15rem; text-decoration: underline;">long</b> trips</div>
+                        <div style="font-size: 0.95rem; color: #64748b; font-style: italic;">(những chuyến đi dài)</div>
+                    </div>
+                    <div style="background: white; padding: 12px 18px; border-radius: 10px; border: 1.5px solid #e2e8f0; box-shadow: 0 2px 5px rgba(0,0,0,0.03); display: flex; flex-direction: column; gap: 4px;">
+                        <div style="font-size: 1.1rem; color: #1e293b;">• <b style="color: var(--primary-color); font-size: 1.15rem; text-decoration: underline;">useful</b> information</div>
+                        <div style="font-size: 0.95rem; color: #64748b; font-style: italic;">(thông tin hữu ích)</div>
+                    </div>
+                </div>
             </div>
         `
     },
