@@ -6652,49 +6652,49 @@ window.renderAdjectivesDetail = function(activeTab = 'theory') {
                     
                     <!-- HỘP GỢI Ý TỪ VỰNG -->
                     <div style="background: linear-gradient(135deg, #eff6ff 0%, #f5f3ff 100%); border: 1.5px solid #dbeafe; border-radius: 12px; padding: 18px 20px; margin-bottom: 24px; box-shadow: 0 2px 8px rgba(139, 92, 246, 0.06);">
-                        <div style="display: flex; align-items: center; gap: 8px; font-weight: 800; color: var(--primary-color); font-size: 1.1rem; margin-bottom: 12px;">
-                            <span style="font-size: 1.25rem;">💡</span> GỢI Ý TỪ VỰNG TÍNH TỪ (ADJECTIVES):
+                        <div style="display: flex; align-items: center; gap: 8px; font-weight: 800; color: var(--primary-color); font-size: 1.15rem; margin-bottom: 14px;">
+                            <span style="font-size: 1.3rem;">💡</span> GỢI Ý TỪ VỰNG TÍNH TỪ (ADJECTIVES):
                         </div>
-                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 10px; font-size: 1rem; color: #334155;">
-                            <div style="background: white; padding: 10px 16px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px;">
-                                <span>• <b>serious = severe</b> (adj):</span>
-                                <i style="color: #64748b; font-weight: 600; white-space: nowrap;">nghiêm trọng</i>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 12px; font-size: 1.05rem;">
+                            <div style="background: white; padding: 10px 16px; border-radius: 8px; border: 1.5px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.03);">
+                                <span>• <b style="color: var(--primary-color); font-size: 1.1rem; font-weight: 800;">serious = severe</b> <span style="color: #64748b; font-size: 0.95rem; font-weight: 600;">(adj)</span>:</span>
+                                <span style="color: #1e293b; font-weight: 700; font-style: italic; white-space: nowrap;">nghiêm trọng</span>
                             </div>
-                            <div style="background: white; padding: 10px 16px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px;">
-                                <span>• <b>useful = helpful</b> (adj):</span>
-                                <i style="color: #64748b; font-weight: 600; white-space: nowrap;">hữu ích</i>
+                            <div style="background: white; padding: 10px 16px; border-radius: 8px; border: 1.5px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.03);">
+                                <span>• <b style="color: var(--primary-color); font-size: 1.1rem; font-weight: 800;">useful = helpful</b> <span style="color: #64748b; font-size: 0.95rem; font-weight: 600;">(adj)</span>:</span>
+                                <span style="color: #1e293b; font-weight: 700; font-style: italic; white-space: nowrap;">hữu ích</span>
                             </div>
-                            <div style="background: white; padding: 10px 16px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px;">
-                                <span>• <b>good</b> (adj):</span>
-                                <i style="color: #64748b; font-weight: 600; white-space: nowrap;">tốt</i>
+                            <div style="background: white; padding: 10px 16px; border-radius: 8px; border: 1.5px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.03);">
+                                <span>• <b style="color: var(--primary-color); font-size: 1.1rem; font-weight: 800;">good</b> <span style="color: #64748b; font-size: 0.95rem; font-weight: 600;">(adj)</span>:</span>
+                                <span style="color: #1e293b; font-weight: 700; font-style: italic; white-space: nowrap;">tốt</span>
                             </div>
-                            <div style="background: white; padding: 10px 16px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px;">
-                                <span>• <b>quality</b> (adj):</span>
-                                <i style="color: #64748b; font-weight: 600; white-space: nowrap;">chất lượng</i>
+                            <div style="background: white; padding: 10px 16px; border-radius: 8px; border: 1.5px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.03);">
+                                <span>• <b style="color: var(--primary-color); font-size: 1.1rem; font-weight: 800;">quality</b> <span style="color: #64748b; font-size: 0.95rem; font-weight: 600;">(adj)</span>:</span>
+                                <span style="color: #1e293b; font-weight: 700; font-style: italic; white-space: nowrap;">chất lượng</span>
                             </div>
-                            <div style="background: white; padding: 10px 16px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px;">
-                                <span>• <b>effective = efficient</b> (adj):</span>
-                                <i style="color: #64748b; font-weight: 600; white-space: nowrap;">hiệu quả</i>
+                            <div style="background: white; padding: 10px 16px; border-radius: 8px; border: 1.5px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.03);">
+                                <span>• <b style="color: var(--primary-color); font-size: 1.1rem; font-weight: 800;">effective = efficient</b> <span style="color: #64748b; font-size: 0.95rem; font-weight: 600;">(adj)</span>:</span>
+                                <span style="color: #1e293b; font-weight: 700; font-style: italic; white-space: nowrap;">hiệu quả</span>
                             </div>
-                            <div style="background: white; padding: 10px 16px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px;">
-                                <span>• <b>reasonable = affordable</b> (adj):</span>
-                                <i style="color: #64748b; font-weight: 600; white-space: nowrap;">phải chăng</i>
+                            <div style="background: white; padding: 10px 16px; border-radius: 8px; border: 1.5px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.03);">
+                                <span>• <b style="color: var(--primary-color); font-size: 1.1rem; font-weight: 800;">reasonable = affordable</b> <span style="color: #64748b; font-size: 0.95rem; font-weight: 600;">(adj)</span>:</span>
+                                <span style="color: #1e293b; font-weight: 700; font-style: italic; white-space: nowrap;">phải chăng</span>
                             </div>
-                            <div style="background: white; padding: 10px 16px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px;">
-                                <span>• <b>negative</b> (adj):</span>
-                                <i style="color: #64748b; font-weight: 600; white-space: nowrap;">tiêu cực</i>
+                            <div style="background: white; padding: 10px 16px; border-radius: 8px; border: 1.5px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.03);">
+                                <span>• <b style="color: var(--primary-color); font-size: 1.1rem; font-weight: 800;">negative</b> <span style="color: #64748b; font-size: 0.95rem; font-weight: 600;">(adj)</span>:</span>
+                                <span style="color: #1e293b; font-weight: 700; font-style: italic; white-space: nowrap;">tiêu cực</span>
                             </div>
-                            <div style="background: white; padding: 10px 16px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px;">
-                                <span>• <b>famous = well-known</b> (adj):</span>
-                                <i style="color: #64748b; font-weight: 600; white-space: nowrap;">nổi tiếng</i>
+                            <div style="background: white; padding: 10px 16px; border-radius: 8px; border: 1.5px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.03);">
+                                <span>• <b style="color: var(--primary-color); font-size: 1.1rem; font-weight: 800;">famous = well-known</b> <span style="color: #64748b; font-size: 0.95rem; font-weight: 600;">(adj)</span>:</span>
+                                <span style="color: #1e293b; font-weight: 700; font-style: italic; white-space: nowrap;">nổi tiếng</span>
                             </div>
-                            <div style="background: white; padding: 10px 16px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px;">
-                                <span>• <b>important</b> (adj):</span>
-                                <i style="color: #64748b; font-weight: 600; white-space: nowrap;">quan trọng</i>
+                            <div style="background: white; padding: 10px 16px; border-radius: 8px; border: 1.5px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.03);">
+                                <span>• <b style="color: var(--primary-color); font-size: 1.1rem; font-weight: 800;">important</b> <span style="color: #64748b; font-size: 0.95rem; font-weight: 600;">(adj)</span>:</span>
+                                <span style="color: #1e293b; font-weight: 700; font-style: italic; white-space: nowrap;">quan trọng</span>
                             </div>
-                            <div style="background: white; padding: 10px 16px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px;">
-                                <span>• <b>cozy</b> (adj):</span>
-                                <i style="color: #64748b; font-weight: 600; white-space: nowrap;">ấm cúng</i>
+                            <div style="background: white; padding: 10px 16px; border-radius: 8px; border: 1.5px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.03);">
+                                <span>• <b style="color: var(--primary-color); font-size: 1.1rem; font-weight: 800;">cozy</b> <span style="color: #64748b; font-size: 0.95rem; font-weight: 600;">(adj)</span>:</span>
+                                <span style="color: #1e293b; font-weight: 700; font-style: italic; white-space: nowrap;">ấm cúng</span>
                             </div>
                         </div>
                     </div>
@@ -6710,15 +6710,15 @@ window.renderAdjectivesDetail = function(activeTab = 'theory') {
                     
                     <!-- HỘP GỢI Ý TỪ VỰNG BÀI 2 -->
                     <div style="background: linear-gradient(135deg, #eff6ff 0%, #f5f3ff 100%); border: 1.5px solid #dbeafe; border-radius: 12px; padding: 18px 20px; margin-bottom: 24px; box-shadow: 0 2px 8px rgba(139, 92, 246, 0.06);">
-                        <div style="display: flex; align-items: center; gap: 8px; font-weight: 800; color: var(--primary-color); font-size: 1.1rem; margin-bottom: 12px;">
-                            <span style="font-size: 1.25rem;">💡</span> GỢI Ý TỪ VỰNG & CẤU TRÚC:
+                        <div style="display: flex; align-items: center; gap: 8px; font-weight: 800; color: var(--primary-color); font-size: 1.15rem; margin-bottom: 14px;">
+                            <span style="font-size: 1.3rem;">💡</span> GỢI Ý TỪ VỰNG & CẤU TRÚC:
                         </div>
-                        <div style="display: flex; flex-direction: column; gap: 10px; font-size: 1rem; color: #334155;">
-                            <div style="background: white; padding: 10px 16px; border-radius: 8px; border: 1px solid #e2e8f0; line-height: 1.6;">• <b>friendly</b> (adj): <i>thân thiện</i> &nbsp;|&nbsp; <b>enthusiastic</b> (adj): <i>nhiệt tình</i> &nbsp;|&nbsp; <b>weak students</b>: <i>học sinh yếu</i></div>
-                            <div style="background: white; padding: 10px 16px; border-radius: 8px; border: 1px solid #e2e8f0; line-height: 1.6;">• <b>the cost of learning</b>: <i>chi phí học</i> &nbsp;|&nbsp; <b>quite reasonable</b>: <i>khá hợp lý</i></div>
-                            <div style="background: white; padding: 10px 16px; border-radius: 8px; border: 1px solid #e2e8f0; line-height: 1.6;">• <b>healthy eating</b>: <i>ăn uống lành mạnh</i> &nbsp;|&nbsp; <b>important</b> (adj): <i>quan trọng</i> &nbsp;|&nbsp; <b>keep fit / stay healthy</b>: <i>giữ gìn sức khỏe</i></div>
-                            <div style="background: white; padding: 10px 16px; border-radius: 8px; border: 1px solid #e2e8f0; line-height: 1.6;">• <b>staying up late</b>: <i>việc thức khuya</i> &nbsp;|&nbsp; <b>harmful to / bad for</b>: <i>có hại cho</i> &nbsp;|&nbsp; <b>physical and mental health</b>: <i>sức khỏe thể chất và tinh thần</i></div>
-                            <div style="background: white; padding: 10px 16px; border-radius: 8px; border: 1px solid #e2e8f0; line-height: 1.6;">• <b>beautiful landscapes / scenery</b>: <i>phong cảnh đẹp</i> &nbsp;|&nbsp; <b>rural areas / countryside</b>: <i>vùng nông thôn</i></div>
+                        <div style="display: flex; flex-direction: column; gap: 10px; font-size: 1.05rem;">
+                            <div style="background: white; padding: 12px 18px; border-radius: 8px; border: 1.5px solid #e2e8f0; line-height: 1.6; box-shadow: 0 1px 3px rgba(0,0,0,0.03);">• <b style="color: var(--primary-color); font-weight: 800;">friendly</b> <span style="color: #64748b; font-size: 0.95rem;">(adj)</span>: <i>thân thiện</i> &nbsp;|&nbsp; <b style="color: var(--primary-color); font-weight: 800;">enthusiastic</b> <span style="color: #64748b; font-size: 0.95rem;">(adj)</span>: <i>nhiệt tình</i> &nbsp;|&nbsp; <b style="color: #0f172a; font-weight: 800;">weak students</b>: <i>học sinh yếu</i></div>
+                            <div style="background: white; padding: 12px 18px; border-radius: 8px; border: 1.5px solid #e2e8f0; line-height: 1.6; box-shadow: 0 1px 3px rgba(0,0,0,0.03);">• <b style="color: #0f172a; font-weight: 800;">the cost of learning</b>: <i>chi phí học</i> &nbsp;|&nbsp; <b style="color: var(--primary-color); font-weight: 800;">quite reasonable</b>: <i>khá hợp lý</i></div>
+                            <div style="background: white; padding: 12px 18px; border-radius: 8px; border: 1.5px solid #e2e8f0; line-height: 1.6; box-shadow: 0 1px 3px rgba(0,0,0,0.03);">• <b style="color: #0f172a; font-weight: 800;">healthy eating</b>: <i>ăn uống lành mạnh</i> &nbsp;|&nbsp; <b style="color: var(--primary-color); font-weight: 800;">important</b> <span style="color: #64748b; font-size: 0.95rem;">(adj)</span>: <i>quan trọng</i> &nbsp;|&nbsp; <b style="color: #0f172a; font-weight: 800;">keep fit / stay healthy</b>: <i>giữ gìn sức khỏe</i></div>
+                            <div style="background: white; padding: 12px 18px; border-radius: 8px; border: 1.5px solid #e2e8f0; line-height: 1.6; box-shadow: 0 1px 3px rgba(0,0,0,0.03);">• <b style="color: #0f172a; font-weight: 800;">staying up late</b>: <i>việc thức khuya</i> &nbsp;|&nbsp; <b style="color: var(--primary-color); font-weight: 800;">harmful to / bad for</b>: <i>có hại cho</i> &nbsp;|&nbsp; <b style="color: #0f172a; font-weight: 800;">physical and mental health</b>: <i>sức khỏe thể chất và tinh thần</i></div>
+                            <div style="background: white; padding: 12px 18px; border-radius: 8px; border: 1.5px solid #e2e8f0; line-height: 1.6; box-shadow: 0 1px 3px rgba(0,0,0,0.03);">• <b style="color: var(--primary-color); font-weight: 800;">beautiful landscapes / scenery</b>: <i>phong cảnh đẹp</i> &nbsp;|&nbsp; <b style="color: #0f172a; font-weight: 800;">rural areas / countryside</b>: <i>vùng nông thôn</i></div>
                         </div>
                     </div>
 
