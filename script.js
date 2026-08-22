@@ -6015,36 +6015,60 @@ const adjectivesTheoryData = [
         title: "2. VỊ TRÍ CỦA TÍNH TỪ",
         content: `
             <div style="display: flex; flex-direction: column; gap: 20px;">
-                <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px;">
-                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
-                        <div style="width: 40px; height: 40px; background: #e0e7ff; color: #4f46e5; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2rem;">
+                <div style="background: #ffffff; border: 1.5px solid #e2e8f0; border-radius: 14px; padding: 22px 24px; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
+                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 14px;">
+                        <div style="width: 40px; height: 40px; background: #e0e7ff; color: #4f46e5; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.25rem;">
                             1
                         </div>
-                        <h3 style="margin: 0; color: #334155; font-size: 1.2rem;">Tính từ + Danh từ (Adj + Noun)</h3>
+                        <h3 style="margin: 0; color: #1e293b; font-size: 1.25rem; font-weight: 800;">
+                            <span style="background: #e0e7ff; color: #3730a3; padding: 2px 10px; border-radius: 6px;">Tính từ</span> + <span style="background: #fef08a; color: #854d0e; padding: 2px 10px; border-radius: 6px;">Danh từ</span> <span style="color: #64748b; font-size: 1rem; font-weight: 600;">(Adj + Noun)</span>
+                        </h3>
                     </div>
-                    <p style="color: #64748b; margin-bottom: 12px; font-size: 1.05rem;">Tính từ đứng <b>trước</b> danh từ để miêu tả danh từ đó.</p>
-                    <div style="display: flex; flex-wrap: wrap; gap: 8px;">
-                        <span style="background: white; border: 1px solid #cbd5e1; padding: 6px 12px; border-radius: 20px; color: #475569; font-weight: 500; font-size: 0.95rem; box-shadow: 0 1px 2px rgba(0,0,0,0.05);"><b>comfortable</b> rooms</span>
-                        <span style="background: white; border: 1px solid #cbd5e1; padding: 6px 12px; border-radius: 20px; color: #475569; font-weight: 500; font-size: 0.95rem; box-shadow: 0 1px 2px rgba(0,0,0,0.05);">a <b>friendly</b> friend</span>
-                        <span style="background: white; border: 1px solid #cbd5e1; padding: 6px 12px; border-radius: 20px; color: #475569; font-weight: 500; font-size: 0.95rem; box-shadow: 0 1px 2px rgba(0,0,0,0.05);"><b>private</b> information</span>
+                    <p style="color: #334155; margin-bottom: 14px; font-size: 1.1rem; line-height: 1.7;">
+                        👉 Tính từ đứng <span style="background: #fef08a; color: #854d0e; font-weight: 800; padding: 2px 8px; border-radius: 6px;">TRƯỚC</span> danh từ để <b>miêu tả</b> và <b>xác định đặc điểm</b> cho danh từ đó.
+                    </p>
+                    <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                        <span style="background: #f8fafc; border: 1.5px solid #cbd5e1; padding: 8px 14px; border-radius: 10px; color: #1e293b; font-size: 1.05rem; box-shadow: 0 1px 3px rgba(0,0,0,0.04);"><b style="color: var(--primary-color); text-decoration: underline;">comfortable</b> rooms (phòng tiện nghi)</span>
+                        <span style="background: #f8fafc; border: 1.5px solid #cbd5e1; padding: 8px 14px; border-radius: 10px; color: #1e293b; font-size: 1.05rem; box-shadow: 0 1px 3px rgba(0,0,0,0.04);">a <b style="color: var(--primary-color); text-decoration: underline;">friendly</b> friend (người bạn thân thiện)</span>
+                        <span style="background: #f8fafc; border: 1.5px solid #cbd5e1; padding: 8px 14px; border-radius: 10px; color: #1e293b; font-size: 1.05rem; box-shadow: 0 1px 3px rgba(0,0,0,0.04);"><b style="color: var(--primary-color); text-decoration: underline;">private</b> information (thông tin riêng tư)</span>
                     </div>
                 </div>
 
-                <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px;">
-                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
-                        <div style="width: 40px; height: 40px; background: #dcfce7; color: #16a34a; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2rem;">
+                <div style="background: #ffffff; border: 1.5px solid #e2e8f0; border-radius: 14px; padding: 22px 24px; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
+                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 14px;">
+                        <div style="width: 40px; height: 40px; background: #dcfce7; color: #16a34a; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.25rem;">
                             2
                         </div>
-                        <h3 style="margin: 0; color: #334155; font-size: 1.2rem;">Chủ ngữ + Động từ liên kết (Linking Verbs) + Tính từ</h3>
+                        <h3 style="margin: 0; color: #1e293b; font-size: 1.25rem; font-weight: 800;">
+                            Chủ ngữ + <span style="background: #dcfce7; color: #166534; padding: 2px 10px; border-radius: 6px;">Động từ liên kết (Linking Verbs)</span> + <span style="background: #e0e7ff; color: #3730a3; padding: 2px 10px; border-radius: 6px;">Tính từ</span>
+                        </h3>
                     </div>
-                    <p style="color: #64748b; margin-bottom: 12px; font-size: 1.05rem;">Tính từ đứng <b>sau</b> các động từ liên kết (phổ biến nhất là <i>To Be: am/is/are/was/were</i> và các từ như <i>seem, feel, look, become, sound, taste, smell...</i>) để miêu tả cho chủ ngữ.</p>
-                    <ul style="margin: 0; padding-left: 20px; color: #475569; line-height: 1.7; font-size: 1.05rem;">
-                        <li>These rooms are <b>comfortable</b>. (Những căn phòng này rất thoải mái.)</li>
-                        <li>My school is <b>spacious</b> and <b>beautiful</b>. (Trường học của tôi rất rộng rãi và đẹp.)</li>
-                        <li>My new friend is very <b>sociable</b> and <b>humorous</b>. (Bạn mới của tôi rất hòa đồng và hài hước.)</li>
-                        <li>She looks <b>tired</b> after work. (Cô ấy trông có vẻ mệt mỏi sau giờ làm.)</li>
-                        <li>This food tastes <b>delicious</b>. (Món ăn này có vị rất ngon.)</li>
-                    </ul>
+                    <p style="color: #334155; margin-bottom: 16px; font-size: 1.1rem; line-height: 1.8;">
+                        👉 Tính từ đứng <span style="background: #fef08a; color: #854d0e; font-weight: 800; padding: 2px 8px; border-radius: 6px;">SAU</span> các <b>động từ liên kết</b> (phổ biến nhất là <span style="background: #f3e8ff; color: var(--primary-color); font-weight: 800; padding: 2px 8px; border-radius: 6px;">To Be: am/is/are/was/were</span> và các động từ chỉ cảm giác, trạng thái như <i>seem, feel, look, become, sound, taste, smell...</i>) để miêu tả cho chủ ngữ.
+                    </p>
+                    
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 10px;">
+                        <div style="background: #f8fafc; padding: 10px 16px; border-radius: 8px; border: 1px solid #e2e8f0; font-size: 1.05rem;">
+                            • These rooms <b>are</b> <b style="color: var(--primary-color); text-decoration: underline;">comfortable</b>.<br>
+                            <span style="font-size: 0.95rem; color: #64748b; font-style: italic;">(Những căn phòng này rất thoải mái.)</span>
+                        </div>
+                        <div style="background: #f8fafc; padding: 10px 16px; border-radius: 8px; border: 1px solid #e2e8f0; font-size: 1.05rem;">
+                            • My school <b>is</b> <b style="color: var(--primary-color); text-decoration: underline;">spacious</b> and <b style="color: var(--primary-color); text-decoration: underline;">beautiful</b>.<br>
+                            <span style="font-size: 0.95rem; color: #64748b; font-style: italic;">(Trường học của tôi rất rộng rãi và đẹp.)</span>
+                        </div>
+                        <div style="background: #f8fafc; padding: 10px 16px; border-radius: 8px; border: 1px solid #e2e8f0; font-size: 1.05rem;">
+                            • My new friend <b>is</b> very <b style="color: var(--primary-color); text-decoration: underline;">sociable</b> and <b style="color: var(--primary-color); text-decoration: underline;">humorous</b>.<br>
+                            <span style="font-size: 0.95rem; color: #64748b; font-style: italic;">(Bạn mới của tôi rất hòa đồng và hài hước.)</span>
+                        </div>
+                        <div style="background: #f8fafc; padding: 10px 16px; border-radius: 8px; border: 1px solid #e2e8f0; font-size: 1.05rem;">
+                            • She <b>looks</b> <b style="color: var(--primary-color); text-decoration: underline;">tired</b> after work.<br>
+                            <span style="font-size: 0.95rem; color: #64748b; font-style: italic;">(Cô ấy trông có vẻ mệt mỏi sau giờ làm.)</span>
+                        </div>
+                        <div style="background: #f8fafc; padding: 10px 16px; border-radius: 8px; border: 1px solid #e2e8f0; font-size: 1.05rem;">
+                            • This food <b>tastes</b> <b style="color: var(--primary-color); text-decoration: underline;">delicious</b>.<br>
+                            <span style="font-size: 0.95rem; color: #64748b; font-style: italic;">(Món ăn này có vị rất ngon.)</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         `
