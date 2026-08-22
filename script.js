@@ -6032,13 +6032,15 @@ const adjectivesTheoryData = [
                         <div style="width: 40px; height: 40px; background: #dcfce7; color: #16a34a; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2rem;">
                             2
                         </div>
-                        <h3 style="margin: 0; color: #334155; font-size: 1.2rem;">Chủ ngữ + To Be + Tính từ</h3>
+                        <h3 style="margin: 0; color: #334155; font-size: 1.2rem;">Chủ ngữ + Động từ liên kết (Linking Verbs / To Be) + Tính từ</h3>
                     </div>
-                    <p style="color: #64748b; margin-bottom: 12px; font-size: 1.05rem;">Tính từ đứng <b>sau</b> động từ To Be để miêu tả chủ ngữ.</p>
+                    <p style="color: #64748b; margin-bottom: 12px; font-size: 1.05rem;">Tính từ đứng <b>sau</b> động từ To Be hoặc các động từ liên kết (<i>seem, feel, look, become, sound, taste, smell...</i>) để miêu tả chủ ngữ.</p>
                     <ul style="margin: 0; padding-left: 20px; color: #475569; line-height: 1.7; font-size: 1.05rem;">
-                        <li>These rooms are <b>comfortable</b>.</li>
-                        <li>My school is <b>spacious</b> and <b>beautiful</b>.</li>
-                        <li>My new friend is very <b>sociable</b> and <b>humorous</b>.</li>
+                        <li>These rooms are <b>comfortable</b>. (Những căn phòng này rất thoải mái.)</li>
+                        <li>My school is <b>spacious</b> and <b>beautiful</b>. (Trường học của tôi rất rộng rãi và đẹp.)</li>
+                        <li>My new friend is very <b>sociable</b> and <b>humorous</b>. (Bạn mới của tôi rất hòa đồng và hài hước.)</li>
+                        <li>She looks <b>tired</b> after work. (Cô ấy trông có vẻ mệt mỏi sau giờ làm.)</li>
+                        <li>This food tastes <b>delicious</b>. (Món ăn này có vị rất ngon.)</li>
                     </ul>
                 </div>
             </div>
