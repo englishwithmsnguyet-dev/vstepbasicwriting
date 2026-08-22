@@ -5981,9 +5981,12 @@ const adjectivesTheoryData = [
     {
         title: "1. TÍNH TỪ LÀ GÌ?",
         content: `
-            <div style="font-size: 1.15rem; color: #334155; line-height: 1.7; margin-bottom: 20px; background: #f8fafc; padding: 18px 20px; border-radius: 12px; border-left: 5px solid var(--primary-color); border-right: 1px solid #e2e8f0; border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0;">
+            <div style="font-size: 1.15rem; color: #1e293b; line-height: 1.85; margin-bottom: 20px; background: #ffffff; padding: 22px 24px; border-radius: 14px; border-left: 6px solid var(--primary-color); border-right: 1.5px solid #e2e8f0; border-top: 1.5px solid #e2e8f0; border-bottom: 1.5px solid #e2e8f0; box-shadow: 0 4px 12px rgba(0,0,0,0.04);">
                 <p style="margin: 0;">
-                    👉 <b>Tính từ (Adjectives)</b> là những từ chỉ <b>tính chất, đặc điểm</b> của người, sự vật hoặc hiện tượng. Tính từ đóng vai trò chính trong việc <b>miêu tả</b> và <b>bổ sung ý nghĩa</b> rõ nét cho danh từ hoặc đại từ.
+                    👉 <span style="background: var(--primary-light); color: var(--primary-color); font-weight: 800; padding: 3px 10px; border-radius: 6px; font-size: 1.15rem;">Tính từ (Adjectives)</span> là những từ dùng để chỉ <span style="background: #fef08a; color: #854d0e; font-weight: 800; padding: 2px 8px; border-radius: 6px;">tính chất, đặc điểm</span> của người, sự vật hoặc hiện tượng.
+                </p>
+                <p style="margin: 12px 0 0 0; padding-top: 12px; border-top: 1px dashed #cbd5e1;">
+                    🎯 <b style="color: #0f172a;">Chức năng cốt lõi:</b> Tính từ đóng vai trò chính trong việc <span style="background: #e0e7ff; color: #3730a3; font-weight: 800; padding: 2px 8px; border-radius: 6px;">miêu tả</span> và <span style="background: #dcfce7; color: #166534; font-weight: 800; padding: 2px 8px; border-radius: 6px;">bổ sung ý nghĩa</span> rõ nét cho <b style="color: var(--primary-color);">Danh từ</b> hoặc <b style="color: var(--primary-color);">Đại từ</b>.
                 </p>
             </div>
             
