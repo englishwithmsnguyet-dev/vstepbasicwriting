@@ -1850,7 +1850,7 @@ window.openTopic = function(topicId, status) {
             'structures': allPasses,
             'nouns': [...chap2Passes, 'b212'],
             'pronouns': [...chap2Passes, 'b212'],
-            'verbs': chap2Passes,
+            'verbs': [...chap2Passes, 'b212'],
             'adjectives': chap2Passes,
             'adverbs': chap2Passes,
             'prepositions': chap2Passes,
