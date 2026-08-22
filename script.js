@@ -6713,12 +6713,42 @@ window.renderAdjectivesDetail = function(activeTab = 'theory') {
                         <div style="display: flex; align-items: center; gap: 8px; font-weight: 800; color: var(--primary-color); font-size: 1.15rem; margin-bottom: 14px;">
                             <span style="font-size: 1.3rem;">💡</span> GỢI Ý TỪ VỰNG & CẤU TRÚC:
                         </div>
-                        <div style="display: flex; flex-direction: column; gap: 10px; font-size: 1.05rem;">
-                            <div style="background: white; padding: 12px 18px; border-radius: 8px; border: 1.5px solid #e2e8f0; line-height: 1.6; box-shadow: 0 1px 3px rgba(0,0,0,0.03);">• <b style="color: var(--primary-color); font-weight: 800;">friendly</b> <span style="color: #64748b; font-size: 0.95rem;">(adj)</span>: <i>thân thiện</i> &nbsp;|&nbsp; <b style="color: var(--primary-color); font-weight: 800;">enthusiastic</b> <span style="color: #64748b; font-size: 0.95rem;">(adj)</span>: <i>nhiệt tình</i> &nbsp;|&nbsp; <b style="color: #0f172a; font-weight: 800;">weak students</b>: <i>học sinh yếu</i></div>
-                            <div style="background: white; padding: 12px 18px; border-radius: 8px; border: 1.5px solid #e2e8f0; line-height: 1.6; box-shadow: 0 1px 3px rgba(0,0,0,0.03);">• <b style="color: #0f172a; font-weight: 800;">the cost of learning</b>: <i>chi phí học</i> &nbsp;|&nbsp; <b style="color: var(--primary-color); font-weight: 800;">quite reasonable</b>: <i>khá hợp lý</i></div>
-                            <div style="background: white; padding: 12px 18px; border-radius: 8px; border: 1.5px solid #e2e8f0; line-height: 1.6; box-shadow: 0 1px 3px rgba(0,0,0,0.03);">• <b style="color: #0f172a; font-weight: 800;">healthy eating</b>: <i>ăn uống lành mạnh</i> &nbsp;|&nbsp; <b style="color: var(--primary-color); font-weight: 800;">important</b> <span style="color: #64748b; font-size: 0.95rem;">(adj)</span>: <i>quan trọng</i> &nbsp;|&nbsp; <b style="color: #0f172a; font-weight: 800;">keep fit / stay healthy</b>: <i>giữ gìn sức khỏe</i></div>
-                            <div style="background: white; padding: 12px 18px; border-radius: 8px; border: 1.5px solid #e2e8f0; line-height: 1.6; box-shadow: 0 1px 3px rgba(0,0,0,0.03);">• <b style="color: #0f172a; font-weight: 800;">staying up late</b>: <i>việc thức khuya</i> &nbsp;|&nbsp; <b style="color: var(--primary-color); font-weight: 800;">harmful to / bad for</b>: <i>có hại cho</i> &nbsp;|&nbsp; <b style="color: #0f172a; font-weight: 800;">physical and mental health</b>: <i>sức khỏe thể chất và tinh thần</i></div>
-                            <div style="background: white; padding: 12px 18px; border-radius: 8px; border: 1.5px solid #e2e8f0; line-height: 1.6; box-shadow: 0 1px 3px rgba(0,0,0,0.03);">• <b style="color: var(--primary-color); font-weight: 800;">beautiful landscapes / scenery</b>: <i>phong cảnh đẹp</i> &nbsp;|&nbsp; <b style="color: #0f172a; font-weight: 800;">rural areas / countryside</b>: <i>vùng nông thôn</i></div>
+                        <div style="display: flex; flex-direction: column; gap: 12px; font-size: 1.05rem;">
+                            <div style="background: white; padding: 12px 18px; border-radius: 10px; border: 1.5px solid #e2e8f0; display: flex; flex-wrap: wrap; align-items: center; gap: 10px; box-shadow: 0 1px 3px rgba(0,0,0,0.03);">
+                                <span><b style="color: var(--primary-color); font-size: 1.1rem; font-weight: 800;">friendly</b> <span style="color: #64748b; font-size: 0.95rem; font-weight: 600;">(adj)</span>: <i style="color: #1e293b; font-weight: 600;">thân thiện</i></span>
+                                <span style="color: #cbd5e1;">|</span>
+                                <span><b style="color: var(--primary-color); font-size: 1.1rem; font-weight: 800;">enthusiastic</b> <span style="color: #64748b; font-size: 0.95rem; font-weight: 600;">(adj)</span>: <i style="color: #1e293b; font-weight: 600;">nhiệt tình</i></span>
+                                <span style="color: #cbd5e1;">|</span>
+                                <span><b style="color: #0f172a; font-size: 1.1rem; font-weight: 800;">weak students</b>: <i style="color: #1e293b; font-weight: 600;">học sinh yếu</i></span>
+                            </div>
+
+                            <div style="background: white; padding: 12px 18px; border-radius: 10px; border: 1.5px solid #e2e8f0; display: flex; flex-wrap: wrap; align-items: center; gap: 10px; box-shadow: 0 1px 3px rgba(0,0,0,0.03);">
+                                <span><b style="color: #0f172a; font-size: 1.1rem; font-weight: 800;">the cost of learning</b>: <i style="color: #1e293b; font-weight: 600;">chi phí học</i></span>
+                                <span style="color: #cbd5e1;">|</span>
+                                <span><b style="color: var(--primary-color); font-size: 1.1rem; font-weight: 800;">quite reasonable</b>: <i style="color: #1e293b; font-weight: 600;">khá hợp lý</i></span>
+                            </div>
+
+                            <div style="background: white; padding: 12px 18px; border-radius: 10px; border: 1.5px solid #e2e8f0; display: flex; flex-wrap: wrap; align-items: center; gap: 10px; box-shadow: 0 1px 3px rgba(0,0,0,0.03);">
+                                <span><b style="color: #0f172a; font-size: 1.1rem; font-weight: 800;">healthy eating</b>: <i style="color: #1e293b; font-weight: 600;">ăn uống lành mạnh</i></span>
+                                <span style="color: #cbd5e1;">|</span>
+                                <span><b style="color: var(--primary-color); font-size: 1.1rem; font-weight: 800;">important</b> <span style="color: #64748b; font-size: 0.95rem; font-weight: 600;">(adj)</span>: <i style="color: #1e293b; font-weight: 600;">quan trọng</i></span>
+                                <span style="color: #cbd5e1;">|</span>
+                                <span><b style="color: #0f172a; font-size: 1.1rem; font-weight: 800;">keep fit / stay healthy</b>: <i style="color: #1e293b; font-weight: 600;">giữ gìn sức khỏe</i></span>
+                            </div>
+
+                            <div style="background: white; padding: 12px 18px; border-radius: 10px; border: 1.5px solid #e2e8f0; display: flex; flex-wrap: wrap; align-items: center; gap: 10px; box-shadow: 0 1px 3px rgba(0,0,0,0.03);">
+                                <span><b style="color: #0f172a; font-size: 1.1rem; font-weight: 800;">staying up late</b>: <i style="color: #1e293b; font-weight: 600;">việc thức khuya</i></span>
+                                <span style="color: #cbd5e1;">|</span>
+                                <span><b style="color: var(--primary-color); font-size: 1.1rem; font-weight: 800;">harmful to / bad for</b>: <i style="color: #1e293b; font-weight: 600;">có hại cho</i></span>
+                                <span style="color: #cbd5e1;">|</span>
+                                <span><b style="color: #0f172a; font-size: 1.1rem; font-weight: 800;">physical and mental health</b>: <i style="color: #1e293b; font-weight: 600;">sức khỏe thể chất và tinh thần</i></span>
+                            </div>
+
+                            <div style="background: white; padding: 12px 18px; border-radius: 10px; border: 1.5px solid #e2e8f0; display: flex; flex-wrap: wrap; align-items: center; gap: 10px; box-shadow: 0 1px 3px rgba(0,0,0,0.03);">
+                                <span><b style="color: var(--primary-color); font-size: 1.1rem; font-weight: 800;">beautiful landscapes / scenery</b>: <i style="color: #1e293b; font-weight: 600;">phong cảnh đẹp</i></span>
+                                <span style="color: #cbd5e1;">|</span>
+                                <span><b style="color: #0f172a; font-size: 1.1rem; font-weight: 800;">rural areas / countryside</b>: <i style="color: #1e293b; font-weight: 600;">vùng nông thôn</i></span>
+                            </div>
                         </div>
                     </div>
 
