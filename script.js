@@ -4723,6 +4723,8 @@ window.checkPronounsLetter = function() {
             playTone(220, 0.3, 'sawtooth'); // A3
         }
     } catch(e) {}
+
+    window.showExerciseResult(correctCount, data.answers.length, "KẾT QUẢ BÀI TẬP THÊM 3 (ĐIỀN LÁ THƯ)");
 };
 
 window.checkPronounsParagraph = function() {
@@ -4786,6 +4788,8 @@ window.checkPronounsParagraph = function() {
             playTone(220, 0.3, 'sawtooth'); // A3
         }
     } catch(e) {}
+
+    window.showExerciseResult(correctCount, data.answers.length, "KẾT QUẢ BÀI TẬP ÁP DỤNG (TRONG TÀI LIỆU)");
 };
 
 
