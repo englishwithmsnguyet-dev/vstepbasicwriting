@@ -6677,7 +6677,7 @@ window.renderAdjectivesDetail = function(activeTab = 'theory') {
     } else if (activeTab === 'practice_book') {
         const book1Html = adjectivesPracticeBook1.map((q, idx) => `
             <div class="quiz-item" style="background: var(--bg-card); border-radius: 12px; padding: 20px; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color); margin-bottom: 16px;">
-                <p style="font-size: 1.15rem; color: var(--text-main); margin-top: 0; margin-bottom: 12px;">${q.q}</p>
+                <p style="font-size: 1.15rem; font-weight: 700; color: #1e293b; margin-top: 0; margin-bottom: 12px;">${q.q}</p>
                 <div style="display: flex; flex-direction: column; gap: 8px;">
                     <input type="text" id="adj_book1_${idx}" placeholder="Nhập cụm danh từ tiếng Anh..." style="padding: 10px 16px; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 1.05rem; outline: none; transition: border-color 0.2s; width: 100%; box-sizing: border-box;" onfocus="this.style.borderColor='var(--primary-color)'" onblur="this.style.borderColor='#e2e8f0'" oninput="window.adjectivesAnswersBook1[${idx}] = this.value; document.getElementById('adjexp_book1_${idx}').style.display='none'; window.saveProgress(true);" value="${window.adjectivesAnswersBook1[idx] || ''}">
                     <button onclick="window.checkAdjectivesBook1(${idx})" style="padding: 8px 16px; background: white; color: var(--primary-color); border: 2px solid var(--primary-color); border-radius: 20px; font-weight: bold; cursor: pointer; transition: all 0.2s; align-self: flex-start;" onmouseover="this.style.background='var(--primary-color)'; this.style.color='white'" onmouseout="this.style.background='white'; this.style.color='var(--primary-color)'">Kiểm tra</button>
@@ -6688,7 +6688,7 @@ window.renderAdjectivesDetail = function(activeTab = 'theory') {
 
         const book2Html = adjectivesPracticeBook2.map((q, idx) => `
             <div class="quiz-item" style="background: var(--bg-card); border-radius: 12px; padding: 20px; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color); margin-bottom: 16px;">
-                <p style="font-size: 1.15rem; color: var(--text-main); margin-top: 0; margin-bottom: 12px;">${q.q}</p>
+                <p style="font-size: 1.15rem; font-weight: 700; color: #1e293b; margin-top: 0; margin-bottom: 12px;">${q.q}</p>
                 <div style="display: flex; flex-direction: column; gap: 8px;">
                     <input type="text" id="adj_book2_${idx}" placeholder="Nhập bản dịch tiếng Anh..." style="padding: 10px 16px; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 1.05rem; outline: none; transition: border-color 0.2s; width: 100%; box-sizing: border-box;" onfocus="this.style.borderColor='var(--primary-color)'" onblur="this.style.borderColor='#e2e8f0'" oninput="window.adjectivesAnswersBook2[${idx}] = this.value; document.getElementById('adjexp_book2_${idx}').style.display='none'; window.saveProgress(true);" value="${window.adjectivesAnswersBook2[idx] || ''}">
                     <button onclick="window.checkAdjectivesBook2(${idx})" style="padding: 8px 16px; background: white; color: var(--primary-color); border: 2px solid var(--primary-color); border-radius: 20px; font-weight: bold; cursor: pointer; transition: all 0.2s; align-self: flex-start;" onmouseover="this.style.background='var(--primary-color)'; this.style.color='white'" onmouseout="this.style.background='white'; this.style.color='var(--primary-color)'">Kiểm tra</button>
@@ -6768,43 +6768,43 @@ window.renderAdjectivesDetail = function(activeTab = 'theory') {
                         <div style="display: flex; flex-direction: column; gap: 10px; font-size: 1rem;">
                             <div style="background: white; padding: 12px 16px; border-radius: 10px; border: 1px solid #e2e8f0; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
                                 <span style="background: var(--primary-light); color: var(--primary-color); font-weight: 800; padding: 3px 10px; border-radius: 6px; font-size: 0.9rem; flex-shrink: 0;">CÂU 1</span>
-                                <span style="color: #334155;">• <b>friendly</b> (adj): <i>thân thiện</i></span>
+                                <span style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">friendly</b> (adj): <i style="color: #1e293b; font-weight: 600;">thân thiện</i></span>
                                 <span style="color: #cbd5e1;">|</span>
-                                <span style="color: #334155;">• <b>enthusiastic</b> (adj): <i>nhiệt tình</i></span>
+                                <span style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">enthusiastic</b> (adj): <i style="color: #1e293b; font-weight: 600;">nhiệt tình</i></span>
                                 <span style="color: #cbd5e1;">|</span>
-                                <span style="color: #334155;">• <b>weak students</b>: <i>học sinh yếu</i></span>
+                                <span style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">weak students</b>: <i style="color: #1e293b; font-weight: 600;">học sinh yếu</i></span>
                             </div>
 
                             <div style="background: white; padding: 12px 16px; border-radius: 10px; border: 1px solid #e2e8f0; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
                                 <span style="background: var(--primary-light); color: var(--primary-color); font-weight: 800; padding: 3px 10px; border-radius: 6px; font-size: 0.9rem; flex-shrink: 0;">CÂU 2</span>
-                                <span style="color: #334155;">• <b>the cost of learning</b>: <i>chi phí học</i></span>
+                                <span style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">the cost of learning</b>: <i style="color: #1e293b; font-weight: 600;">chi phí học</i></span>
                                 <span style="color: #cbd5e1;">|</span>
-                                <span style="color: #334155;">• <b>quite reasonable</b> (adj): <i>khá hợp lý</i></span>
+                                <span style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">quite reasonable</b> (adj): <i style="color: #1e293b; font-weight: 600;">khá hợp lý</i></span>
                             </div>
 
                             <div style="background: white; padding: 12px 16px; border-radius: 10px; border: 1px solid #e2e8f0; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
                                 <span style="background: var(--primary-light); color: var(--primary-color); font-weight: 800; padding: 3px 10px; border-radius: 6px; font-size: 0.9rem; flex-shrink: 0;">CÂU 3</span>
-                                <span style="color: #334155;">• <b>healthy eating</b>: <i>ăn uống lành mạnh</i></span>
+                                <span style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">healthy eating</b>: <i style="color: #1e293b; font-weight: 600;">ăn uống lành mạnh</i></span>
                                 <span style="color: #cbd5e1;">|</span>
-                                <span style="color: #334155;">• <b>important</b> (adj): <i>quan trọng</i></span>
+                                <span style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">important</b> (adj): <i style="color: #1e293b; font-weight: 600;">quan trọng</i></span>
                                 <span style="color: #cbd5e1;">|</span>
-                                <span style="color: #334155;">• <b>keep fit / stay healthy</b>: <i>giữ gìn sức khỏe</i></span>
+                                <span style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">keep fit / stay healthy</b>: <i style="color: #1e293b; font-weight: 600;">giữ gìn sức khỏe</i></span>
                             </div>
 
                             <div style="background: white; padding: 12px 16px; border-radius: 10px; border: 1px solid #e2e8f0; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
                                 <span style="background: var(--primary-light); color: var(--primary-color); font-weight: 800; padding: 3px 10px; border-radius: 6px; font-size: 0.9rem; flex-shrink: 0;">CÂU 4</span>
-                                <span style="color: #334155;">• <b>staying up late</b>: <i>việc thức khuya</i></span>
+                                <span style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">staying up late</b>: <i style="color: #1e293b; font-weight: 600;">việc thức khuya</i></span>
                                 <span style="color: #cbd5e1;">|</span>
-                                <span style="color: #334155;">• <b>harmful to / bad for</b>: <i>có hại cho</i></span>
+                                <span style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">harmful to / bad for</b>: <i style="color: #1e293b; font-weight: 600;">có hại cho</i></span>
                                 <span style="color: #cbd5e1;">|</span>
-                                <span style="color: #334155;">• <b>physical and mental health</b>: <i>sức khỏe thể chất và tinh thần</i></span>
+                                <span style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">physical and mental health</b>: <i style="color: #1e293b; font-weight: 600;">sức khỏe thể chất và tinh thần</i></span>
                             </div>
 
                             <div style="background: white; padding: 12px 16px; border-radius: 10px; border: 1px solid #e2e8f0; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
                                 <span style="background: var(--primary-light); color: var(--primary-color); font-weight: 800; padding: 3px 10px; border-radius: 6px; font-size: 0.9rem; flex-shrink: 0;">CÂU 5</span>
-                                <span style="color: #334155;">• <b>beautiful landscapes / scenery</b>: <i>phong cảnh đẹp</i></span>
+                                <span style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">beautiful landscapes / scenery</b>: <i style="color: #1e293b; font-weight: 600;">phong cảnh đẹp</i></span>
                                 <span style="color: #cbd5e1;">|</span>
-                                <span style="color: #334155;">• <b>rural areas / countryside</b>: <i>vùng nông thôn</i></span>
+                                <span style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">rural areas / countryside</b>: <i style="color: #1e293b; font-weight: 600;">vùng nông thôn</i></span>
                             </div>
                         </div>
                     </div>
@@ -6833,7 +6833,7 @@ window.renderAdjectivesDetail = function(activeTab = 'theory') {
 
         const extra2Html = adjectivesPracticeExtra2.map((q, idx) => `
             <div class="quiz-item" style="background: var(--bg-card); border-radius: 12px; padding: 20px; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color); margin-bottom: 16px;">
-                <p style="font-size: 1.15rem; color: var(--text-main); margin-top: 0; margin-bottom: 12px;">${q.q}</p>
+                <p style="font-size: 1.15rem; font-weight: 700; color: #1e293b; margin-top: 0; margin-bottom: 12px;">${q.q}</p>
                 <div style="display: flex; flex-direction: column; gap: 8px;">
                     <input type="text" id="adj_extra2_${idx}" placeholder="Nhập bản dịch tiếng Anh..." style="padding: 10px 16px; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 1.05rem; outline: none; transition: border-color 0.2s; width: 100%; box-sizing: border-box;" onfocus="this.style.borderColor='var(--primary-color)'" onblur="this.style.borderColor='#e2e8f0'" oninput="window.adjectivesAnswersExtra2[${idx}] = this.value; document.getElementById('adjexp_extra2_${idx}').style.display='none'; window.saveProgress(true);" value="${window.adjectivesAnswersExtra2[idx] || ''}">
                     <button onclick="window.checkAdjectivesExtra2(${idx})" style="padding: 8px 16px; background: white; color: var(--primary-color); border: 2px solid var(--primary-color); border-radius: 20px; font-weight: bold; cursor: pointer; transition: all 0.2s; align-self: flex-start;" onmouseover="this.style.background='var(--primary-color)'; this.style.color='white'" onmouseout="this.style.background='white'; this.style.color='var(--primary-color)'">Kiểm tra</button>
@@ -6865,41 +6865,41 @@ window.renderAdjectivesDetail = function(activeTab = 'theory') {
                         <div style="display: flex; flex-direction: column; gap: 10px; font-size: 1rem;">
                             <div style="background: white; padding: 12px 16px; border-radius: 10px; border: 1px solid #e2e8f0; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
                                 <span style="background: var(--primary-light); color: var(--primary-color); font-weight: 800; padding: 3px 10px; border-radius: 6px; font-size: 0.9rem; flex-shrink: 0;">CÂU 1</span>
-                                <span style="color: #334155;">• <b>shirt</b> (n): <i>chiếc áo</i></span>
+                                <span style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">shirt</b> (n): <i style="color: #1e293b; font-weight: 600;">chiếc áo</i></span>
                                 <span style="color: #cbd5e1;">|</span>
-                                <span style="color: #334155;">• <b>too expensive for...</b> (adj): <i>quá đắt đối với...</i></span>
+                                <span style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">too expensive for...</b> (adj): <i style="color: #1e293b; font-weight: 600;">quá đắt đối với...</i></span>
                             </div>
 
                             <div style="background: white; padding: 12px 16px; border-radius: 10px; border: 1px solid #e2e8f0; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
                                 <span style="background: var(--primary-light); color: var(--primary-color); font-weight: 800; padding: 3px 10px; border-radius: 6px; font-size: 0.9rem; flex-shrink: 0;">CÂU 2</span>
-                                <span style="color: #334155;">• <b>charming / attractive</b> (adj): <i>quyến rũ, thu hút</i></span>
+                                <span style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">charming / attractive</b> (adj): <i style="color: #1e293b; font-weight: 600;">quyến rũ, thu hút</i></span>
                                 <span style="color: #cbd5e1;">|</span>
-                                <span style="color: #334155;">• <b>smile</b> (n): <i>nụ cười</i></span>
+                                <span style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">smile</b> (n): <i style="color: #1e293b; font-weight: 600;">nụ cười</i></span>
                             </div>
 
                             <div style="background: white; padding: 12px 16px; border-radius: 10px; border: 1px solid #e2e8f0; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
                                 <span style="background: var(--primary-light); color: var(--primary-color); font-weight: 800; padding: 3px 10px; border-radius: 6px; font-size: 0.9rem; flex-shrink: 0;">CÂU 3</span>
-                                <span style="color: #334155;">• <b>learning a new language</b>: <i>việc học ngôn ngữ mới</i></span>
+                                <span style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">learning a new language</b>: <i style="color: #1e293b; font-weight: 600;">việc học ngôn ngữ mới</i></span>
                                 <span style="color: #cbd5e1;">|</span>
-                                <span style="color: #334155;">• <b>interesting / exciting</b> (adj): <i>thú vị</i></span>
+                                <span style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">interesting / exciting</b> (adj): <i style="color: #1e293b; font-weight: 600;">thú vị</i></span>
                                 <span style="color: #cbd5e1;">|</span>
-                                <span style="color: #334155;">• <b>experience</b> (n): <i>trải nghiệm</i></span>
+                                <span style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">experience</b> (n): <i style="color: #1e293b; font-weight: 600;">trải nghiệm</i></span>
                             </div>
 
                             <div style="background: white; padding: 12px 16px; border-radius: 10px; border: 1px solid #e2e8f0; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
                                 <span style="background: var(--primary-light); color: var(--primary-color); font-weight: 800; padding: 3px 10px; border-radius: 6px; font-size: 0.9rem; flex-shrink: 0;">CÂU 4</span>
-                                <span style="color: #334155;">• <b>parents</b> (n): <i>bố mẹ</i></span>
+                                <span style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">parents</b> (n): <i style="color: #1e293b; font-weight: 600;">bố mẹ</i></span>
                                 <span style="color: #cbd5e1;">|</span>
-                                <span style="color: #334155;">• <b>proud of...</b> (adj): <i>tự hào về...</i></span>
+                                <span style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">proud of...</b> (adj): <i style="color: #1e293b; font-weight: 600;">tự hào về...</i></span>
                             </div>
 
                             <div style="background: white; padding: 12px 16px; border-radius: 10px; border: 1px solid #e2e8f0; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
                                 <span style="background: var(--primary-light); color: var(--primary-color); font-weight: 800; padding: 3px 10px; border-radius: 6px; font-size: 0.9rem; flex-shrink: 0;">CÂU 5</span>
-                                <span style="color: #334155;">• <b>room</b> (n): <i>căn phòng</i></span>
+                                <span style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">room</b> (n): <i style="color: #1e293b; font-weight: 600;">căn phòng</i></span>
                                 <span style="color: #cbd5e1;">|</span>
-                                <span style="color: #334155;">• <b>clean</b> (adj): <i>sạch sẽ</i></span>
+                                <span style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">clean</b> (adj): <i style="color: #1e293b; font-weight: 600;">sạch sẽ</i></span>
                                 <span style="color: #cbd5e1;">|</span>
-                                <span style="color: #334155;">• <b>tidy / neat</b> (adj): <i>ngăn nắp, gọn gàng</i></span>
+                                <span style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">tidy / neat</b> (adj): <i style="color: #1e293b; font-weight: 600;">ngăn nắp, gọn gàng</i></span>
                             </div>
                         </div>
                     </div>
