@@ -7105,56 +7105,47 @@ window.renderAdjectivesDetail = function(activeTab = 'theory') {
                     <h2 style="color: var(--primary-color); font-size: 1.4rem; margin-bottom: 16px;">BÀI TẬP THÊM 2 (DỊCH CÂU)</h2>
                     <p style="font-size: 1.05rem; color: #475569; margin-bottom: 24px;"><i>Sử dụng cấu trúc "Adj + Noun" hoặc "To Be + Adj" để dịch các câu sau sang tiếng Anh.</i></p>
                     
-                    <!-- HỘP GỢI Ý TỪ VỰNG BÀI THÊM 2 -->
+                    <!-- HỘP GỢI Ý TÍNH TỪ & TRẠNG TỪ (BÀI THÊM 2) -->
                     <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px; margin-bottom: 28px;">
                         <h3 style="margin-top: 0; margin-bottom: 18px; color: var(--primary-color); font-size: 1.15rem; font-weight: 800; display: flex; align-items: center; gap: 8px;">
-                            <span style="font-size: 1.3rem;">💡</span> GỢI Ý TỪ VỰNG & CẤU TRÚC THEO TỪNG CÂU:
+                            <span style="font-size: 1.3rem;">💡</span> GỢI Ý TÍNH TỪ & TRẠNG TỪ THEO TỪNG CÂU:
                         </h3>
                         <div style="display: flex; flex-direction: column; gap: 14px; font-size: 1rem;">
                             <div style="background: white; padding: 14px 18px; border-radius: 10px; border: 1px solid #e2e8f0; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
                                 <div style="display: inline-block; background: var(--primary-light); color: var(--primary-color); font-weight: 800; padding: 3px 10px; border-radius: 6px; font-size: 0.9rem; margin-bottom: 8px;">CÂU 1</div>
                                 <div style="display: flex; flex-direction: column; gap: 6px; padding-left: 4px;">
-                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">shirt</b> (n): <i style="color: #1e293b; font-weight: 600;">chiếc áo</i></div>
-                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">too expensive for...</b> (adj): <i style="color: #1e293b; font-weight: 600;">quá đắt đối với...</i></div>
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">recent</b> (adj) ➔ <b style="color: var(--primary-color); font-weight: 800;">recently / lately</b> (adv): <i style="color: #1e293b; font-weight: 600;">gần đây / dạo gần đây</i></div>
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">busy</b> (adj): <i style="color: #1e293b; font-weight: 600;">bận rộn (rất bận: very busy)</i></div>
                                 </div>
                             </div>
-
                             <div style="background: white; padding: 14px 18px; border-radius: 10px; border: 1px solid #e2e8f0; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
                                 <div style="display: inline-block; background: var(--primary-light); color: var(--primary-color); font-weight: 800; padding: 3px 10px; border-radius: 6px; font-size: 0.9rem; margin-bottom: 8px;">CÂU 2</div>
                                 <div style="display: flex; flex-direction: column; gap: 6px; padding-left: 4px;">
-                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">charming / attractive</b> (adj): <i style="color: #1e293b; font-weight: 600;">quyến rũ, thu hút</i></div>
-                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">smile</b> (n): <i style="color: #1e293b; font-weight: 600;">nụ cười</i></div>
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">always</b> (adv): <i style="color: #1e293b; font-weight: 600;">luôn luôn</i></div>
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">early</b> (adv): <i style="color: #1e293b; font-weight: 600;">sớm</i></div>
                                 </div>
                             </div>
-
                             <div style="background: white; padding: 14px 18px; border-radius: 10px; border: 1px solid #e2e8f0; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
                                 <div style="display: inline-block; background: var(--primary-light); color: var(--primary-color); font-weight: 800; padding: 3px 10px; border-radius: 6px; font-size: 0.9rem; margin-bottom: 8px;">CÂU 3</div>
                                 <div style="display: flex; flex-direction: column; gap: 6px; padding-left: 4px;">
-                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">learning a new language</b>: <i style="color: #1e293b; font-weight: 600;">việc học ngôn ngữ mới</i></div>
-                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">interesting / exciting</b> (adj): <i style="color: #1e293b; font-weight: 600;">thú vị</i></div>
-                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">experience</b> (n): <i style="color: #1e293b; font-weight: 600;">trải nghiệm</i></div>
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">complete / total</b> (adj) ➔ <b style="color: var(--primary-color); font-weight: 800;">completely / totally</b> (adv): <i style="color: #1e293b; font-weight: 600;">hoàn toàn</i></div>
                                 </div>
                             </div>
-
                             <div style="background: white; padding: 14px 18px; border-radius: 10px; border: 1px solid #e2e8f0; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
                                 <div style="display: inline-block; background: var(--primary-light); color: var(--primary-color); font-weight: 800; padding: 3px 10px; border-radius: 6px; font-size: 0.9rem; margin-bottom: 8px;">CÂU 4</div>
                                 <div style="display: flex; flex-direction: column; gap: 6px; padding-left: 4px;">
-                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">parents</b> (n): <i style="color: #1e293b; font-weight: 600;">bố mẹ</i></div>
-                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">proud of...</b> (adj): <i style="color: #1e293b; font-weight: 600;">tự hào về...</i></div>
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">fortunate / lucky</b> (adj) ➔ <b style="color: var(--primary-color); font-weight: 800;">Fortunately / Luckily</b> (adv): <i style="color: #1e293b; font-weight: 600;">thật may mắn</i></div>
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">hurt</b> (adj): <i style="color: #1e293b; font-weight: 600;">bị thương</i></div>
                                 </div>
                             </div>
-
                             <div style="background: white; padding: 14px 18px; border-radius: 10px; border: 1px solid #e2e8f0; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
                                 <div style="display: inline-block; background: var(--primary-light); color: var(--primary-color); font-weight: 800; padding: 3px 10px; border-radius: 6px; font-size: 0.9rem; margin-bottom: 8px;">CÂU 5</div>
                                 <div style="display: flex; flex-direction: column; gap: 6px; padding-left: 4px;">
-                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">room</b> (n): <i style="color: #1e293b; font-weight: 600;">căn phòng</i></div>
-                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">clean</b> (adj): <i style="color: #1e293b; font-weight: 600;">sạch sẽ</i></div>
-                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">tidy / neat</b> (adj): <i style="color: #1e293b; font-weight: 600;">ngăn nắp, gọn gàng</i></div>
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">easy</b> (adj) ➔ <b style="color: var(--primary-color); font-weight: 800;">easily</b> (adv): <i style="color: #1e293b; font-weight: 600;">dễ dàng / một cách dễ dàng</i></div>
                                 </div>
                             </div>
                         </div>
                     </div>
-
                     <div>${extra2Html}</div>
                     <div style="margin-top: 24px; text-align: center;">
                         <button onclick="window.submitAdjectivesExtra2()" style="padding: 12px 32px; background: var(--primary-color); color: white; border: none; border-radius: 30px; font-weight: bold; font-size: 1.1rem; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.1)'">NỘP BÀI & KIỂM TRA KẾT QUẢ</button>
@@ -8273,47 +8264,45 @@ window.renderAdverbsDetail = function(activeTab = 'theory') {
                     <h2 style="color: var(--primary-color); font-size: 1.4rem; margin-bottom: 16px;">BÀI TẬP ÁP DỤNG 1 (DỊCH CÂU)</h2>
                     <p style="font-size: 1.05rem; color: #475569; margin-bottom: 24px;"><i>Chuyển các câu sau đây sang tiếng Anh.</i></p>
 
-                    <!-- HỘP GỢI Ý TỪ VỰNG BÀI ÁP DỤNG 1 -->
+                    <!-- HỘP GỢI Ý TÍNH TỪ & TRẠNG TỪ (BÀI ÁP DỤNG 1) -->
                     <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px; margin-bottom: 28px;">
                         <h3 style="margin-top: 0; margin-bottom: 18px; color: var(--primary-color); font-size: 1.15rem; font-weight: 800; display: flex; align-items: center; gap: 8px;">
-                            <span style="font-size: 1.3rem;">💡</span> GỢI Ý TỪ VỰNG & CẤU TRÚC THEO TỪNG CÂU:
+                            <span style="font-size: 1.3rem;">💡</span> GỢI Ý TÍNH TỪ & TRẠNG TỪ THEO TỪNG CÂU:
                         </h3>
                         <div style="display: flex; flex-direction: column; gap: 14px; font-size: 1rem;">
                             <div style="background: white; padding: 14px 18px; border-radius: 10px; border: 1px solid #e2e8f0; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
                                 <div style="display: inline-block; background: var(--primary-light); color: var(--primary-color); font-weight: 800; padding: 3px 10px; border-radius: 6px; font-size: 0.9rem; margin-bottom: 8px;">CÂU 1</div>
                                 <div style="display: flex; flex-direction: column; gap: 6px; padding-left: 4px;">
                                     <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">often / usually</b> (adv): <i style="color: #1e293b; font-weight: 600;">thường</i></div>
-                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">relax my mind</b>: <i style="color: #1e293b; font-weight: 600;">thư giãn đầu óc</i></div>
-                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">after school</b>: <i style="color: #1e293b; font-weight: 600;">sau giờ học</i></div>
                                 </div>
                             </div>
                             <div style="background: white; padding: 14px 18px; border-radius: 10px; border: 1px solid #e2e8f0; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
                                 <div style="display: inline-block; background: var(--primary-light); color: var(--primary-color); font-weight: 800; padding: 3px 10px; border-radius: 6px; font-size: 0.9rem; margin-bottom: 8px;">CÂU 2</div>
                                 <div style="display: flex; flex-direction: column; gap: 6px; padding-left: 4px;">
-                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">get up / wake up very early</b>: <i style="color: #1e293b; font-weight: 600;">dậy rất sớm</i></div>
-                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">review for the exam</b>: <i style="color: #1e293b; font-weight: 600;">ôn bài thi</i></div>
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">early</b> (adv): <i style="color: #1e293b; font-weight: 600;">sớm (rất sớm: very early)</i></div>
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">yesterday</b> (adv): <i style="color: #1e293b; font-weight: 600;">hôm qua</i></div>
                                 </div>
                             </div>
                             <div style="background: white; padding: 14px 18px; border-radius: 10px; border: 1px solid #e2e8f0; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
                                 <div style="display: inline-block; background: var(--primary-light); color: var(--primary-color); font-weight: 800; padding: 3px 10px; border-radius: 6px; font-size: 0.9rem; margin-bottom: 8px;">CÂU 3</div>
                                 <div style="display: flex; flex-direction: column; gap: 6px; padding-left: 4px;">
                                     <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">always</b> (adv): <i style="color: #1e293b; font-weight: 600;">luôn luôn</i></div>
-                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">carefully</b> (adv): <i style="color: #1e293b; font-weight: 600;">một cách cẩn thận</i></div>
-                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">avoid mistakes</b>: <i style="color: #1e293b; font-weight: 600;">tránh sai sót</i></div>
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">careful</b> (adj) ➔ <b style="color: var(--primary-color); font-weight: 800;">carefully</b> (adv): <i style="color: #1e293b; font-weight: 600;">cẩn thận / một cách cẩn thận</i></div>
                                 </div>
                             </div>
                             <div style="background: white; padding: 14px 18px; border-radius: 10px; border: 1px solid #e2e8f0; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
                                 <div style="display: inline-block; background: var(--primary-light); color: var(--primary-color); font-weight: 800; padding: 3px 10px; border-radius: 6px; font-size: 0.9rem; margin-bottom: 8px;">CÂU 4</div>
                                 <div style="display: flex; flex-direction: column; gap: 6px; padding-left: 4px;">
-                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">read English newspapers</b>: <i style="color: #1e293b; font-weight: 600;">đọc báo tiếng Anh</i></div>
-                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">effectively</b> (adv): <i style="color: #1e293b; font-weight: 600;">một cách hiệu quả</i></div>
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">often / usually</b> (adv): <i style="color: #1e293b; font-weight: 600;">thường</i></div>
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">effective</b> (adj) ➔ <b style="color: var(--primary-color); font-weight: 800;">effectively</b> (adv): <i style="color: #1e293b; font-weight: 600;">hiệu quả / một cách hiệu quả</i></div>
                                 </div>
                             </div>
                             <div style="background: white; padding: 14px 18px; border-radius: 10px; border: 1px solid #e2e8f0; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
                                 <div style="display: inline-block; background: var(--primary-light); color: var(--primary-color); font-weight: 800; padding: 3px 10px; border-radius: 6px; font-size: 0.9rem; margin-bottom: 8px;">CÂU 5</div>
                                 <div style="display: flex; flex-direction: column; gap: 6px; padding-left: 4px;">
-                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">spend 30 minutes swimming</b>: <i style="color: #1e293b; font-weight: 600;">dành 30 phút bơi lội</i></div>
-                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">lose weight quickly</b>: <i style="color: #1e293b; font-weight: 600;">giảm cân nhanh chóng</i></div>
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">often / usually</b> (adv): <i style="color: #1e293b; font-weight: 600;">thường</i></div>
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">good</b> (adj): <i style="color: #1e293b; font-weight: 600;">hay / tốt</i></div>
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">quick</b> (adj) ➔ <b style="color: var(--primary-color); font-weight: 800;">quickly</b> (adv): <i style="color: #1e293b; font-weight: 600;">nhanh / một cách nhanh chóng</i></div>
                                 </div>
                             </div>
                         </div>
@@ -8334,45 +8323,48 @@ window.renderAdverbsDetail = function(activeTab = 'theory') {
                     <h2 style="color: var(--primary-color); font-size: 1.4rem; margin-bottom: 16px;">LUYỆN TẬP CHUNG - EXERCISE 1</h2>
                     <p style="font-size: 1.05rem; color: #475569; margin-bottom: 24px;"><i>Chuyển các câu sau đây sang tiếng Anh. Chú ý phân biệt cách dùng "tính từ" và "trạng từ".</i></p>
 
-                    <!-- HỘP GỢI Ý TỪ VỰNG EXERCISE 1 -->
+                    <!-- HỘP GỢI Ý TÍNH TỪ & TRẠNG TỪ (EXERCISE 1) -->
                     <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px; margin-bottom: 28px;">
                         <h3 style="margin-top: 0; margin-bottom: 18px; color: var(--primary-color); font-size: 1.15rem; font-weight: 800; display: flex; align-items: center; gap: 8px;">
-                            <span style="font-size: 1.3rem;">💡</span> GỢI Ý TỪ VỰNG & CẤU TRÚC THEO TỪNG CÂU:
+                            <span style="font-size: 1.3rem;">💡</span> GỢI Ý TÍNH TỪ & TRẠNG TỪ THEO TỪNG CÂU:
                         </h3>
                         <div style="display: flex; flex-direction: column; gap: 14px; font-size: 1rem;">
                             <div style="background: white; padding: 14px 18px; border-radius: 10px; border: 1px solid #e2e8f0; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
                                 <div style="display: inline-block; background: var(--primary-light); color: var(--primary-color); font-weight: 800; padding: 3px 10px; border-radius: 6px; font-size: 0.9rem; margin-bottom: 8px;">CÂU 1</div>
                                 <div style="display: flex; flex-direction: column; gap: 6px; padding-left: 4px;">
-                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">a hard-working person</b> (adj + n): <i style="color: #1e293b; font-weight: 600;">người chăm chỉ</i></div>
-                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">work very hard</b> (v + adv): <i style="color: #1e293b; font-weight: 600;">làm việc rất chăm chỉ</i></div>
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">hard-working</b> (adj): <i style="color: #1e293b; font-weight: 600;">chăm chỉ</i></div>
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">hard</b> (adv): <i style="color: #1e293b; font-weight: 600;">chăm chỉ (rất chăm chỉ: very hard)</i></div>
                                 </div>
                             </div>
                             <div style="background: white; padding: 14px 18px; border-radius: 10px; border: 1px solid #e2e8f0; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
                                 <div style="display: inline-block; background: var(--primary-light); color: var(--primary-color); font-weight: 800; padding: 3px 10px; border-radius: 6px; font-size: 0.9rem; margin-bottom: 8px;">CÂU 2</div>
                                 <div style="display: flex; flex-direction: column; gap: 6px; padding-left: 4px;">
-                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">reading books is boring</b> (adj): <i style="color: #1e293b; font-weight: 600;">đọc sách thì chán</i></div>
-                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">never feel bored</b> (adv + adj): <i style="color: #1e293b; font-weight: 600;">không bao giờ cảm thấy chán</i></div>
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">boring</b> (adj): <i style="color: #1e293b; font-weight: 600;">nhàm chán (chỉ bản chất sự việc)</i></div>
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">bored</b> (adj): <i style="color: #1e293b; font-weight: 600;">cảm thấy chán (chỉ cảm xúc con người)</i></div>
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">never</b> (adv): <i style="color: #1e293b; font-weight: 600;">không bao giờ</i></div>
                                 </div>
                             </div>
                             <div style="background: white; padding: 14px 18px; border-radius: 10px; border: 1px solid #e2e8f0; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
                                 <div style="display: inline-block; background: var(--primary-light); color: var(--primary-color); font-weight: 800; padding: 3px 10px; border-radius: 6px; font-size: 0.9rem; margin-bottom: 8px;">CÂU 3</div>
                                 <div style="display: flex; flex-direction: column; gap: 6px; padding-left: 4px;">
-                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">a careful person</b> (adj + n): <i style="color: #1e293b; font-weight: 600;">người cẩn thận</i></div>
-                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">drive carefully</b> (v + adv): <i style="color: #1e293b; font-weight: 600;">lái xe cẩn thận</i></div>
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">careful</b> (adj): <i style="color: #1e293b; font-weight: 600;">cẩn thận</i></div>
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">always</b> (adv): <i style="color: #1e293b; font-weight: 600;">luôn luôn</i></div>
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">carefully</b> (adv): <i style="color: #1e293b; font-weight: 600;">cẩn thận / một cách cẩn thận</i></div>
                                 </div>
                             </div>
                             <div style="background: white; padding: 14px 18px; border-radius: 10px; border: 1px solid #e2e8f0; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
                                 <div style="display: inline-block; background: var(--primary-light); color: var(--primary-color); font-weight: 800; padding: 3px 10px; border-radius: 6px; font-size: 0.9rem; margin-bottom: 8px;">CÂU 4</div>
                                 <div style="display: flex; flex-direction: column; gap: 6px; padding-left: 4px;">
-                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">a funny person</b> (adj + n): <i style="color: #1e293b; font-weight: 600;">người hài hước</i></div>
-                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">tell stories very funnily</b> (v + adv): <i style="color: #1e293b; font-weight: 600;">kể chuyện rất hài hước</i></div>
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">funny / humorous</b> (adj): <i style="color: #1e293b; font-weight: 600;">hài hước</i></div>
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">funnily</b> (adv): <i style="color: #1e293b; font-weight: 600;">hài hước / một cách hài hước</i></div>
                                 </div>
                             </div>
                             <div style="background: white; padding: 14px 18px; border-radius: 10px; border: 1px solid #e2e8f0; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
                                 <div style="display: inline-block; background: var(--primary-light); color: var(--primary-color); font-weight: 800; padding: 3px 10px; border-radius: 6px; font-size: 0.9rem; margin-bottom: 8px;">CÂU 5</div>
                                 <div style="display: flex; flex-direction: column; gap: 6px; padding-left: 4px;">
-                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">a patient person</b> (adj + n): <i style="color: #1e293b; font-weight: 600;">người kiên nhẫn</i></div>
-                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">treat students patiently</b> (v + adv): <i style="color: #1e293b; font-weight: 600;">đối xử với học sinh một cách kiên nhẫn</i></div>
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">patient</b> (adj): <i style="color: #1e293b; font-weight: 600;">kiên nhẫn</i></div>
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">always</b> (adv): <i style="color: #1e293b; font-weight: 600;">luôn luôn</i></div>
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">patiently</b> (adv): <i style="color: #1e293b; font-weight: 600;">kiên nhẫn / một cách kiên nhẫn</i></div>
                                 </div>
                             </div>
                         </div>
@@ -8387,79 +8379,77 @@ window.renderAdverbsDetail = function(activeTab = 'theory') {
                     <h2 style="color: var(--primary-color); font-size: 1.4rem; margin-bottom: 16px;">LUYỆN TẬP CHUNG - EXERCISE 2</h2>
                     <p style="font-size: 1.05rem; color: #475569; margin-bottom: 24px;"><i>Áp dụng các kiến thức đã học, chuyển các câu sau đây sang Tiếng Anh.</i></p>
 
-                    <!-- HỘP GỢI Ý TỪ VỰNG EXERCISE 2 -->
+                    <!-- HỘP GỢI Ý TÍNH TỪ & TRẠNG TỪ (EXERCISE 2) -->
                     <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px; margin-bottom: 28px;">
                         <h3 style="margin-top: 0; margin-bottom: 18px; color: var(--primary-color); font-size: 1.15rem; font-weight: 800; display: flex; align-items: center; gap: 8px;">
-                            <span style="font-size: 1.3rem;">💡</span> GỢI Ý TỪ VỰNG & CẤU TRÚC THEO TỪNG CÂU:
+                            <span style="font-size: 1.3rem;">💡</span> GỢI Ý TÍNH TỪ & TRẠNG TỪ THEO TỪNG CÂU:
                         </h3>
                         <div style="display: flex; flex-direction: column; gap: 14px; font-size: 1rem;">
                             <div style="background: white; padding: 14px 18px; border-radius: 10px; border: 1px solid #e2e8f0; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
                                 <div style="display: inline-block; background: var(--primary-light); color: var(--primary-color); font-weight: 800; padding: 3px 10px; border-radius: 6px; font-size: 0.9rem; margin-bottom: 8px;">CÂU 1</div>
                                 <div style="display: flex; flex-direction: column; gap: 6px; padding-left: 4px;">
-                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">in quiet places</b>: <i style="color: #1e293b; font-weight: 600;">ở những nơi yên tĩnh</i></div>
-                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">concentrate / focus better</b>: <i style="color: #1e293b; font-weight: 600;">tập trung tốt hơn</i></div>
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">quiet</b> (adj): <i style="color: #1e293b; font-weight: 600;">yên tĩnh</i></div>
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">well</b> (adv) ➔ <b style="color: var(--primary-color); font-weight: 800;">better</b> (adv): <i style="color: #1e293b; font-weight: 600;">tốt hơn</i></div>
                                 </div>
                             </div>
                             <div style="background: white; padding: 14px 18px; border-radius: 10px; border: 1px solid #e2e8f0; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
                                 <div style="display: inline-block; background: var(--primary-light); color: var(--primary-color); font-weight: 800; padding: 3px 10px; border-radius: 6px; font-size: 0.9rem; margin-bottom: 8px;">CÂU 2</div>
                                 <div style="display: flex; flex-direction: column; gap: 6px; padding-left: 4px;">
-                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">live in Can Tho city</b>: <i style="color: #1e293b; font-weight: 600;">sống ở TP Cần Thơ</i></div>
-                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">since 2020</b>: <i style="color: #1e293b; font-weight: 600;">từ năm 2020</i></div>
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">since 2020</b> (prep + time): <i style="color: #1e293b; font-weight: 600;">từ năm 2020</i></div>
                                 </div>
                             </div>
                             <div style="background: white; padding: 14px 18px; border-radius: 10px; border: 1px solid #e2e8f0; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
                                 <div style="display: inline-block; background: var(--primary-light); color: var(--primary-color); font-weight: 800; padding: 3px 10px; border-radius: 6px; font-size: 0.9rem; margin-bottom: 8px;">CÂU 3</div>
                                 <div style="display: flex; flex-direction: column; gap: 6px; padding-left: 4px;">
-                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">During Tet holiday</b>: <i style="color: #1e293b; font-weight: 600;">vào kỳ nghỉ Tết</i></div>
-                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">go to pagodas and visit relatives</b>: <i style="color: #1e293b; font-weight: 600;">đi chùa và thăm họ hàng</i></div>
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">often</b> (adv): <i style="color: #1e293b; font-weight: 600;">thường</i></div>
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">Vietnamese</b> (adj): <i style="color: #1e293b; font-weight: 600;">thuộc về Việt Nam</i></div>
                                 </div>
                             </div>
                             <div style="background: white; padding: 14px 18px; border-radius: 10px; border: 1px solid #e2e8f0; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
                                 <div style="display: inline-block; background: var(--primary-light); color: var(--primary-color); font-weight: 800; padding: 3px 10px; border-radius: 6px; font-size: 0.9rem; margin-bottom: 8px;">CÂU 4</div>
                                 <div style="display: flex; flex-direction: column; gap: 6px; padding-left: 4px;">
-                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">large and beautiful</b>: <i style="color: #1e293b; font-weight: 600;">rộng lớn và đẹp</i></div>
-                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">colorful flowers</b>: <i style="color: #1e293b; font-weight: 600;">hoa đầy màu sắc</i></div>
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">large / big</b> (adj): <i style="color: #1e293b; font-weight: 600;">rộng lớn / to lớn</i></div>
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">beautiful</b> (adj): <i style="color: #1e293b; font-weight: 600;">đẹp</i></div>
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">colorful</b> (adj): <i style="color: #1e293b; font-weight: 600;">đầy màu sắc</i></div>
                                 </div>
                             </div>
                             <div style="background: white; padding: 14px 18px; border-radius: 10px; border: 1px solid #e2e8f0; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
                                 <div style="display: inline-block; background: var(--primary-light); color: var(--primary-color); font-weight: 800; padding: 3px 10px; border-radius: 6px; font-size: 0.9rem; margin-bottom: 8px;">CÂU 5</div>
                                 <div style="display: flex; flex-direction: column; gap: 6px; padding-left: 4px;">
-                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">extremely / really like</b>: <i style="color: #1e293b; font-weight: 600;">cực kỳ thích</i></div>
-                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">taking a walk in my free time</b>: <i style="color: #1e293b; font-weight: 600;">đi dạo vào thời gian rảnh</i></div>
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">extreme</b> (adj) ➔ <b style="color: var(--primary-color); font-weight: 800;">extremely / really</b> (adv): <i style="color: #1e293b; font-weight: 600;">cực kỳ / rất</i></div>
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">free</b> (adj): <i style="color: #1e293b; font-weight: 600;">rảnh rỗi (free time)</i></div>
                                 </div>
                             </div>
                             <div style="background: white; padding: 14px 18px; border-radius: 10px; border: 1px solid #e2e8f0; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
                                 <div style="display: inline-block; background: var(--primary-light); color: var(--primary-color); font-weight: 800; padding: 3px 10px; border-radius: 6px; font-size: 0.9rem; margin-bottom: 8px;">CÂU 6</div>
                                 <div style="display: flex; flex-direction: column; gap: 6px; padding-left: 4px;">
-                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">learn / study English</b>: <i style="color: #1e293b; font-weight: 600;">học tiếng Anh</i></div>
-                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">for 10 years</b>: <i style="color: #1e293b; font-weight: 600;">trong 10 năm</i></div>
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">for 10 years</b> (prep + duration): <i style="color: #1e293b; font-weight: 600;">trong 10 năm</i></div>
                                 </div>
                             </div>
                             <div style="background: white; padding: 14px 18px; border-radius: 10px; border: 1px solid #e2e8f0; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
                                 <div style="display: inline-block; background: var(--primary-light); color: var(--primary-color); font-weight: 800; padding: 3px 10px; border-radius: 6px; font-size: 0.9rem; margin-bottom: 8px;">CÂU 7</div>
                                 <div style="display: flex; flex-direction: column; gap: 6px; padding-left: 4px;">
-                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">organize / hold a farewell party</b>: <i style="color: #1e293b; font-weight: 600;">tổ chức tiệc chia tay</i></div>
-                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">next week</b>: <i style="color: #1e293b; font-weight: 600;">tuần sau</i></div>
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">farewell</b> (adj/n): <i style="color: #1e293b; font-weight: 600;">chia tay (farewell party)</i></div>
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">next</b> (adj): <i style="color: #1e293b; font-weight: 600;">tới / sau (next week)</i></div>
                                 </div>
                             </div>
                             <div style="background: white; padding: 14px 18px; border-radius: 10px; border: 1px solid #e2e8f0; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
                                 <div style="display: inline-block; background: var(--primary-light); color: var(--primary-color); font-weight: 800; padding: 3px 10px; border-radius: 6px; font-size: 0.9rem; margin-bottom: 8px;">CÂU 8</div>
                                 <div style="display: flex; flex-direction: column; gap: 6px; padding-left: 4px;">
-                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">give useful feedback / comments</b>: <i style="color: #1e293b; font-weight: 600;">đưa ra nhận xét hữu ích</i></div>
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">always</b> (adv): <i style="color: #1e293b; font-weight: 600;">luôn luôn</i></div>
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">useful</b> (adj): <i style="color: #1e293b; font-weight: 600;">hữu ích</i></div>
                                 </div>
                             </div>
                             <div style="background: white; padding: 14px 18px; border-radius: 10px; border: 1px solid #e2e8f0; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
                                 <div style="display: inline-block; background: var(--primary-light); color: var(--primary-color); font-weight: 800; padding: 3px 10px; border-radius: 6px; font-size: 0.9rem; margin-bottom: 8px;">CÂU 9</div>
                                 <div style="display: flex; flex-direction: column; gap: 6px; padding-left: 4px;">
-                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">complete / finish all my homework</b>: <i style="color: #1e293b; font-weight: 600;">hoàn thành tất cả bài tập</i></div>
-                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">yesterday</b>: <i style="color: #1e293b; font-weight: 600;">hôm qua</i></div>
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">yesterday</b> (adv): <i style="color: #1e293b; font-weight: 600;">hôm qua</i></div>
                                 </div>
                             </div>
                             <div style="background: white; padding: 14px 18px; border-radius: 10px; border: 1px solid #e2e8f0; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
                                 <div style="display: inline-block; background: var(--primary-light); color: var(--primary-color); font-weight: 800; padding: 3px 10px; border-radius: 6px; font-size: 0.9rem; margin-bottom: 8px;">CÂU 10</div>
                                 <div style="display: flex; flex-direction: column; gap: 6px; padding-left: 4px;">
-                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">return / go back to my hometown</b>: <i style="color: #1e293b; font-weight: 600;">trở về quê</i></div>
-                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">on the weekend / on weekends</b>: <i style="color: #1e293b; font-weight: 600;">vào cuối tuần</i></div>
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">often / usually</b> (adv): <i style="color: #1e293b; font-weight: 600;">thường</i></div>
                                 </div>
                             </div>
                         </div>
@@ -8555,45 +8545,43 @@ window.renderAdverbsDetail = function(activeTab = 'theory') {
                     <h2 style="color: var(--primary-color); font-size: 1.4rem; margin-bottom: 16px;">BÀI TẬP THÊM 2 (DỊCH CÂU)</h2>
                     <p style="font-size: 1.05rem; color: #475569; margin-bottom: 24px;"><i>Vận dụng trạng từ để dịch các câu sau sang Tiếng Anh.</i></p>
 
-                    <!-- HỘP GỢI Ý TỪ VỰNG BÀI THÊM 2 -->
+                    <!-- HỘP GỢI Ý TÍNH TỪ & TRẠNG TỪ (BÀI THÊM 2) -->
                     <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px; margin-bottom: 28px;">
                         <h3 style="margin-top: 0; margin-bottom: 18px; color: var(--primary-color); font-size: 1.15rem; font-weight: 800; display: flex; align-items: center; gap: 8px;">
-                            <span style="font-size: 1.3rem;">💡</span> GỢI Ý TỪ VỰNG & CẤU TRÚC THEO TỪNG CÂU:
+                            <span style="font-size: 1.3rem;">💡</span> GỢI Ý TÍNH TỪ & TRẠNG TỪ THEO TỪNG CÂU:
                         </h3>
                         <div style="display: flex; flex-direction: column; gap: 14px; font-size: 1rem;">
                             <div style="background: white; padding: 14px 18px; border-radius: 10px; border: 1px solid #e2e8f0; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
                                 <div style="display: inline-block; background: var(--primary-light); color: var(--primary-color); font-weight: 800; padding: 3px 10px; border-radius: 6px; font-size: 0.9rem; margin-bottom: 8px;">CÂU 1</div>
                                 <div style="display: flex; flex-direction: column; gap: 6px; padding-left: 4px;">
-                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">Recently</b> (adv): <i style="color: #1e293b; font-weight: 600;">gần đây</i></div>
-                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">busy with work</b>: <i style="color: #1e293b; font-weight: 600;">bận rộn với công việc</i></div>
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">recent</b> (adj) ➔ <b style="color: var(--primary-color); font-weight: 800;">recently / lately</b> (adv): <i style="color: #1e293b; font-weight: 600;">gần đây / dạo gần đây</i></div>
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">busy</b> (adj): <i style="color: #1e293b; font-weight: 600;">bận rộn (rất bận: very busy)</i></div>
                                 </div>
                             </div>
                             <div style="background: white; padding: 14px 18px; border-radius: 10px; border: 1px solid #e2e8f0; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
                                 <div style="display: inline-block; background: var(--primary-light); color: var(--primary-color); font-weight: 800; padding: 3px 10px; border-radius: 6px; font-size: 0.9rem; margin-bottom: 8px;">CÂU 2</div>
                                 <div style="display: flex; flex-direction: column; gap: 6px; padding-left: 4px;">
                                     <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">always</b> (adv): <i style="color: #1e293b; font-weight: 600;">luôn luôn</i></div>
-                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">wake up / get up early</b>: <i style="color: #1e293b; font-weight: 600;">thức dậy sớm</i></div>
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">early</b> (adv): <i style="color: #1e293b; font-weight: 600;">sớm</i></div>
                                 </div>
                             </div>
                             <div style="background: white; padding: 14px 18px; border-radius: 10px; border: 1px solid #e2e8f0; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
                                 <div style="display: inline-block; background: var(--primary-light); color: var(--primary-color); font-weight: 800; padding: 3px 10px; border-radius: 6px; font-size: 0.9rem; margin-bottom: 8px;">CÂU 3</div>
                                 <div style="display: flex; flex-direction: column; gap: 6px; padding-left: 4px;">
-                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">completely / totally</b> (adv): <i style="color: #1e293b; font-weight: 600;">hoàn toàn</i></div>
-                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">agree with your plan</b>: <i style="color: #1e293b; font-weight: 600;">đồng ý với kế hoạch của bạn</i></div>
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">complete / total</b> (adj) ➔ <b style="color: var(--primary-color); font-weight: 800;">completely / totally</b> (adv): <i style="color: #1e293b; font-weight: 600;">hoàn toàn</i></div>
                                 </div>
                             </div>
                             <div style="background: white; padding: 14px 18px; border-radius: 10px; border: 1px solid #e2e8f0; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
                                 <div style="display: inline-block; background: var(--primary-light); color: var(--primary-color); font-weight: 800; padding: 3px 10px; border-radius: 6px; font-size: 0.9rem; margin-bottom: 8px;">CÂU 4</div>
                                 <div style="display: flex; flex-direction: column; gap: 6px; padding-left: 4px;">
-                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">Fortunately / Luckily</b> (adv): <i style="color: #1e293b; font-weight: 600;">thật may mắn</i></div>
-                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">nobody is hurt / get hurt</b>: <i style="color: #1e293b; font-weight: 600;">không ai bị thương</i></div>
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">fortunate / lucky</b> (adj) ➔ <b style="color: var(--primary-color); font-weight: 800;">Fortunately / Luckily</b> (adv): <i style="color: #1e293b; font-weight: 600;">thật may mắn</i></div>
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">hurt</b> (adj): <i style="color: #1e293b; font-weight: 600;">bị thương</i></div>
                                 </div>
                             </div>
                             <div style="background: white; padding: 14px 18px; border-radius: 10px; border: 1px solid #e2e8f0; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
                                 <div style="display: inline-block; background: var(--primary-light); color: var(--primary-color); font-weight: 800; padding: 3px 10px; border-radius: 6px; font-size: 0.9rem; margin-bottom: 8px;">CÂU 5</div>
                                 <div style="display: flex; flex-direction: column; gap: 6px; padding-left: 4px;">
-                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">finish / complete the test</b>: <i style="color: #1e293b; font-weight: 600;">hoàn thành bài kiểm tra</i></div>
-                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">easily</b> (adv): <i style="color: #1e293b; font-weight: 600;">một cách dễ dàng</i></div>
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">easy</b> (adj) ➔ <b style="color: var(--primary-color); font-weight: 800;">easily</b> (adv): <i style="color: #1e293b; font-weight: 600;">dễ dàng / một cách dễ dàng</i></div>
                                 </div>
                             </div>
                         </div>
