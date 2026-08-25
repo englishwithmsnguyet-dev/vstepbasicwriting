@@ -3621,7 +3621,7 @@ window.renderNounsDetail = function(activeTab = 'theory') {
                             <div class="quiz-item" style="background: var(--bg-card); border-radius: 12px; padding: 20px; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color);">
                                 <div style="display: flex; gap: 12px; align-items: flex-start; margin-bottom: 12px;">
                                     <div style="background: var(--primary-light); color: var(--primary-color); width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">${idx + 1}</div>
-                                    <p style="font-size: 1.15rem; font-weight: 500; color: var(--text-main); margin-top: 4px; margin-bottom: 0;">${q.q}</p>
+                                    <p style="font-size: 1.15rem; font-weight: 700; color: #1e293b; margin-top: 4px; margin-bottom: 0;">${q.q}</p>
                                 </div>
                                 <div style="display: flex; flex-direction: column; gap: 8px; padding-left: 44px;">
                                     <input type="text" id="noun_trans_book3_${idx}" placeholder="Nhập bản dịch tiếng Anh..." style="padding: 10px 16px; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 1.05rem; outline: none; transition: border-color 0.2s; width: 100%; box-sizing: border-box;" onfocus="this.style.borderColor='var(--primary-color)'" onblur="this.style.borderColor='#e2e8f0'" oninput="window.nounsAnswersBook3[${idx}] = this.value; document.getElementById('transexp_book3_${idx}').style.display='none'; window.saveProgress(true);" value="${window.nounsAnswersBook3[idx] || ''}">
@@ -3864,7 +3864,7 @@ window.renderNounsDetail = function(activeTab = 'theory') {
                             <div class="quiz-item" style="background: var(--bg-card); border-radius: 12px; padding: 20px; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color);">
                                 <div style="display: flex; gap: 12px; align-items: flex-start; margin-bottom: 12px;">
                                     <div style="background: var(--primary-light); color: var(--primary-color); width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">${idx + 1}</div>
-                                    <p style="font-size: 1.15rem; font-weight: 500; color: var(--text-main); margin-top: 4px; margin-bottom: 0;">${q.q}</p>
+                                    <p style="font-size: 1.15rem; font-weight: 700; color: #1e293b; margin-top: 4px; margin-bottom: 0;">${q.q}</p>
                                 </div>
                                 <div style="display: flex; flex-direction: column; gap: 8px; padding-left: 44px;">
                                     <input type="text" id="noun_trans_extra2_${idx}" placeholder="Nhập bản dịch tiếng Anh..." style="padding: 10px 16px; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 1.05rem; outline: none; transition: border-color 0.2s; width: 100%; box-sizing: border-box;" onfocus="this.style.borderColor='var(--primary-color)'" onblur="this.style.borderColor='#e2e8f0'" oninput="window.nounsAnswersExtra2[${idx}] = this.value; document.getElementById('transexp_extra2_${idx}').style.display='none'; window.saveProgress(true);" value="${window.nounsAnswersExtra2[idx] || ''}">
@@ -3887,10 +3887,10 @@ window.renderNounsDetail = function(activeTab = 'theory') {
                     <div style="display: grid; gap: 16px;">
                         ${nounsPracticeExtra3Data.map((q, idx) => `
                             <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px;">
-                                <div style="font-size: 1.15rem; color: #1e293b; margin-bottom: 12px; font-weight: 500;">
-                                    <span style="color: var(--primary-color); font-weight: bold; margin-right: 8px;">${idx + 1}.</span>
+                                <div style="font-size: 1.15rem; color: #1e293b; margin-bottom: 12px; font-weight: 700;">
+                                    <span style="color: var(--primary-color); font-weight: 800; margin-right: 8px;">${idx + 1}.</span>
                                     ${q.q}
-                                    ${q.hint ? `<div style="font-size: 1rem; color: #64748b; margin-top: 6px; font-weight: normal;">💡 <i>Gợi ý: ${q.hint}</i></div>` : ''}
+                                    ${q.hint ? `<div style="margin-top: 8px; background: #eff6ff; border: 1px solid #dbeafe; padding: 8px 12px; border-radius: 6px; font-size: 0.95rem; color: #1e40af; font-weight: normal;"><span style="font-weight: 700; color: var(--primary-color);">💡 Gợi ý:</span> <i>${q.hint}</i></div>` : ''}
                                 </div>
                                 <input type="text" 
                                     value="${window.nounsAnswersExtra3[idx] || ''}"
@@ -4724,7 +4724,7 @@ window.renderPronounsDetail = function(activeTab = 'theory') {
             <div class="quiz-item" style="background: var(--bg-card); border-radius: 12px; padding: 20px; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color); margin-bottom: 16px;">
                 <div style="display: flex; gap: 12px; align-items: flex-start; margin-bottom: 14px;">
                     <div style="background: #eff6ff; color: #2563eb; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">${idx + 1}</div>
-                    <p style="font-size: 1.15rem; font-weight: 500; color: var(--text-main); margin-top: 4px; margin-bottom: 0;">${q.q}</p>
+                    <p style="font-size: 1.15rem; font-weight: 700; color: #1e293b; margin-top: 4px; margin-bottom: 0;">${q.q}</p>
                 </div>
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding-left: 44px;">
                     ${q.options.map((opt, oIdx) => `
@@ -5104,9 +5104,9 @@ window.renderVerbsDetail = function(activeTab = 'theory') {
                 <div style="display: flex; gap: 12px; align-items: flex-start; margin-bottom: 12px;">
                     <div style="background: var(--primary-light); color: var(--primary-color); width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">${idx + 1}</div>
                     <div style="flex-grow: 1;">
-                        <p style="font-size: 1.15rem; font-weight: 500; color: var(--text-main); margin-top: 4px; margin-bottom: 8px;">${q.q}</p>
+                        <p style="font-size: 1.15rem; font-weight: 700; color: #1e293b; margin-top: 4px; margin-bottom: 8px;">${q.q}</p>
                         ${q.hint ? `<button onclick="const h = document.getElementById('verb_hint_book4_${idx}'); h.style.display = h.style.display === 'none' ? 'block' : 'none';" style="background: none; border: none; color: #0284c7; font-size: 0.95rem; cursor: pointer; padding: 0; margin-bottom: 12px; display: flex; align-items: center; gap: 4px; font-weight: 500;"><span style="font-size: 1.1rem">💡</span> Xem gợi ý</button>
-                        <div id="verb_hint_book4_${idx}" style="display: none; background: #f0f9ff; border-left: 4px solid #38bdf8; padding: 12px; border-radius: 4px; margin-bottom: 16px; font-size: 0.95rem; color: #0c4a6e; line-height: 1.6;">${q.hint}</div>` : ''}
+                        <div id="verb_hint_book4_${idx}" style="display: none; background: #eff6ff; border: 1px solid #bfdbfe; border-left: 4px solid var(--primary-color); padding: 12px 16px; border-radius: 8px; margin-bottom: 16px; font-size: 1rem; color: #1e3a8a; font-weight: 500; line-height: 1.6;">${q.hint}</div>` : ''}
                     </div>
                 </div>
                 <div style="display: flex; flex-direction: column; gap: 8px; padding-left: 44px;">
@@ -5125,9 +5125,9 @@ window.renderVerbsDetail = function(activeTab = 'theory') {
                 <div style="display: flex; gap: 12px; align-items: flex-start; margin-bottom: 12px;">
                     <div style="background: var(--primary-light); color: var(--primary-color); width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">${idx + 1}</div>
                     <div style="flex-grow: 1;">
-                        <p style="font-size: 1.15rem; font-weight: 500; color: var(--text-main); margin-top: 4px; margin-bottom: 8px;">${q.q}</p>
+                        <p style="font-size: 1.15rem; font-weight: 700; color: #1e293b; margin-top: 4px; margin-bottom: 8px;">${q.q}</p>
                         ${q.hint ? `<button onclick="const h = document.getElementById('verb_hint_1_${idx}'); h.style.display = h.style.display === 'none' ? 'block' : 'none';" style="background: none; border: none; color: #0284c7; font-size: 0.95rem; cursor: pointer; padding: 0; margin-bottom: 12px; display: flex; align-items: center; gap: 4px; font-weight: 500;"><span style="font-size: 1.1rem">💡</span> Xem gợi ý</button>
-                        <div id="verb_hint_1_${idx}" style="display: none; background: #f0f9ff; border-left: 4px solid #38bdf8; padding: 12px; border-radius: 4px; margin-bottom: 16px; font-size: 0.95rem; color: #0c4a6e; line-height: 1.6;">${q.hint}</div>` : ''}
+                        <div id="verb_hint_1_${idx}" style="display: none; background: #eff6ff; border: 1px solid #bfdbfe; border-left: 4px solid var(--primary-color); padding: 12px 16px; border-radius: 8px; margin-bottom: 16px; font-size: 1rem; color: #1e3a8a; font-weight: 500; line-height: 1.6;">${q.hint}</div>` : ''}
                     </div>
                 </div>
                 <div style="display: flex; flex-direction: column; gap: 8px; padding-left: 44px;">
@@ -5146,9 +5146,9 @@ window.renderVerbsDetail = function(activeTab = 'theory') {
                 <div style="display: flex; gap: 12px; align-items: flex-start; margin-bottom: 12px;">
                     <div style="background: var(--primary-light); color: var(--primary-color); width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">${idx + 1}</div>
                     <div style="flex-grow: 1;">
-                        <p style="font-size: 1.15rem; font-weight: 500; color: var(--text-main); margin-top: 4px; margin-bottom: 8px;">${q.q}</p>
+                        <p style="font-size: 1.15rem; font-weight: 700; color: #1e293b; margin-top: 4px; margin-bottom: 8px;">${q.q}</p>
                         ${q.hint ? `<button onclick="const h = document.getElementById('verb_hint_2_${idx}'); h.style.display = h.style.display === 'none' ? 'block' : 'none';" style="background: none; border: none; color: #0284c7; font-size: 0.95rem; cursor: pointer; padding: 0; margin-bottom: 12px; display: flex; align-items: center; gap: 4px; font-weight: 500;"><span style="font-size: 1.1rem">💡</span> Xem gợi ý</button>
-                        <div id="verb_hint_2_${idx}" style="display: none; background: #f0f9ff; border-left: 4px solid #38bdf8; padding: 12px; border-radius: 4px; margin-bottom: 16px; font-size: 0.95rem; color: #0c4a6e; line-height: 1.6;">${q.hint}</div>` : ''}
+                        <div id="verb_hint_2_${idx}" style="display: none; background: #eff6ff; border: 1px solid #bfdbfe; border-left: 4px solid var(--primary-color); padding: 12px 16px; border-radius: 8px; margin-bottom: 16px; font-size: 1rem; color: #1e3a8a; font-weight: 500; line-height: 1.6;">${q.hint}</div>` : ''}
                     </div>
                 </div>
                 <div style="display: flex; flex-direction: column; gap: 8px; padding-left: 44px;">
@@ -5167,9 +5167,9 @@ window.renderVerbsDetail = function(activeTab = 'theory') {
                 <div style="display: flex; gap: 12px; align-items: flex-start; margin-bottom: 12px;">
                     <div style="background: var(--primary-light); color: var(--primary-color); width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">${idx + 1}</div>
                     <div style="flex-grow: 1;">
-                        <p style="font-size: 1.15rem; font-weight: 500; color: var(--text-main); margin-top: 4px; margin-bottom: 8px;">${q.q}</p>
+                        <p style="font-size: 1.15rem; font-weight: 700; color: #1e293b; margin-top: 4px; margin-bottom: 8px;">${q.q}</p>
                         ${q.hint ? `<button onclick="const h = document.getElementById('verb_hint_3_${idx}'); h.style.display = h.style.display === 'none' ? 'block' : 'none';" style="background: none; border: none; color: #0284c7; font-size: 0.95rem; cursor: pointer; padding: 0; margin-bottom: 12px; display: flex; align-items: center; gap: 4px; font-weight: 500;"><span style="font-size: 1.1rem">💡</span> Xem gợi ý</button>
-                        <div id="verb_hint_3_${idx}" style="display: none; background: #f0f9ff; border-left: 4px solid #38bdf8; padding: 12px; border-radius: 4px; margin-bottom: 16px; font-size: 0.95rem; color: #0c4a6e; line-height: 1.6;">${q.hint}</div>` : ''}
+                        <div id="verb_hint_3_${idx}" style="display: none; background: #eff6ff; border: 1px solid #bfdbfe; border-left: 4px solid var(--primary-color); padding: 12px 16px; border-radius: 8px; margin-bottom: 16px; font-size: 1rem; color: #1e3a8a; font-weight: 500; line-height: 1.6;">${q.hint}</div>` : ''}
                     </div>
                 </div>
                 <div style="display: flex; flex-direction: column; gap: 8px; padding-left: 44px;">
@@ -5212,9 +5212,9 @@ window.renderVerbsDetail = function(activeTab = 'theory') {
                 <div style="display: flex; gap: 12px; align-items: flex-start; margin-bottom: 12px;">
                     <div style="background: var(--primary-light); color: var(--primary-color); width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">${idx + 1}</div>
                     <div style="flex-grow: 1;">
-                        <p style="font-size: 1.15rem; font-weight: 500; color: var(--text-main); margin-top: 4px; margin-bottom: 8px;">${q.q}</p>
+                        <p style="font-size: 1.15rem; font-weight: 700; color: #1e293b; margin-top: 4px; margin-bottom: 8px;">${q.q}</p>
                         ${q.hint ? `<button onclick="const h = document.getElementById('verb_hint_extra3_${idx}'); h.style.display = h.style.display === 'none' ? 'block' : 'none';" style="background: none; border: none; color: #0284c7; font-size: 0.95rem; cursor: pointer; padding: 0; margin-bottom: 12px; display: flex; align-items: center; gap: 4px; font-weight: 500;"><span style="font-size: 1.1rem">💡</span> Xem gợi ý</button>
-                        <div id="verb_hint_extra3_${idx}" style="display: none; background: #f0f9ff; border-left: 4px solid #38bdf8; padding: 12px; border-radius: 4px; margin-bottom: 16px; font-size: 0.95rem; color: #0c4a6e; line-height: 1.6;">${q.hint}</div>` : ''}
+                        <div id="verb_hint_extra3_${idx}" style="display: none; background: #eff6ff; border: 1px solid #bfdbfe; border-left: 4px solid var(--primary-color); padding: 12px 16px; border-radius: 8px; margin-bottom: 16px; font-size: 1rem; color: #1e3a8a; font-weight: 500; line-height: 1.6;">${q.hint}</div>` : ''}
                     </div>
                 </div>
                 <div style="display: flex; flex-direction: column; gap: 8px; padding-left: 44px;">
@@ -7481,7 +7481,7 @@ window.renderPrepositionsDetail = function(activeTab = 'theory') {
             <div class="quiz-item" style="background: var(--bg-card); border-radius: 12px; padding: 20px; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color);">
                 <div style="display: flex; gap: 12px; align-items: flex-start; margin-bottom: 12px;">
                     <div style="background: var(--primary-light); color: var(--primary-color); width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">${idx + 1}</div>
-                    <p style="font-size: 1.15rem; font-weight: 500; color: var(--text-main); margin-top: 4px; margin-bottom: 0;">${q.q}</p>
+                    <p style="font-size: 1.15rem; font-weight: 700; color: #1e293b; margin-top: 4px; margin-bottom: 0;">${q.q}</p>
                 </div>
                 <div style="display: flex; flex-direction: column; gap: 8px; padding-left: 44px;">
                     <input type="text" id="prep_book1_${idx}" placeholder="Nhập bản dịch tiếng Anh..." style="padding: 10px 16px; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 1.05rem; outline: none; transition: border-color 0.2s; width: 100%; box-sizing: border-box;" onfocus="this.style.borderColor='var(--primary-color)'" onblur="this.style.borderColor='#e2e8f0'" oninput="window.prepositionsAnswers1[${idx}] = this.value; document.getElementById('prepexp1_${idx}').style.display='none'; window.saveProgress(true);" value="${window.prepositionsAnswers1[idx] || ''}">
@@ -7497,7 +7497,7 @@ window.renderPrepositionsDetail = function(activeTab = 'theory') {
             <div class="quiz-item" style="background: var(--bg-card); border-radius: 12px; padding: 20px; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color);">
                 <div style="display: flex; gap: 12px; align-items: flex-start; margin-bottom: 12px;">
                     <div style="background: var(--primary-light); color: var(--primary-color); width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">${idx + 1}</div>
-                    <p style="font-size: 1.15rem; font-weight: 500; color: var(--text-main); margin-top: 4px; margin-bottom: 0;">${q.q}</p>
+                    <p style="font-size: 1.15rem; font-weight: 700; color: #1e293b; margin-top: 4px; margin-bottom: 0;">${q.q}</p>
                 </div>
                 <div style="display: flex; flex-direction: column; gap: 8px; padding-left: 44px;">
                     <input type="text" id="prep_book2_${idx}" placeholder="Nhập bản dịch tiếng Anh..." style="padding: 10px 16px; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 1.05rem; outline: none; transition: border-color 0.2s; width: 100%; box-sizing: border-box;" onfocus="this.style.borderColor='var(--primary-color)'" onblur="this.style.borderColor='#e2e8f0'" oninput="window.prepositionsAnswers2[${idx}] = this.value; document.getElementById('prepexp2_${idx}').style.display='none'; window.saveProgress(true);" value="${window.prepositionsAnswers2[idx] || ''}">
@@ -8904,9 +8904,9 @@ window.renderConjunctionsDetail = function(activeTab = 'theory') {
                 <div style="display: flex; gap: 12px; align-items: flex-start; margin-bottom: 12px;">
                     <div style="background: var(--primary-light); color: var(--primary-color); width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">${idx + 1}</div>
                     <div style="flex-grow: 1;">
-                        <p style="font-size: 1.15rem; font-weight: 500; color: var(--text-main); margin-top: 4px; margin-bottom: 8px;">${q.q}</p>
+                        <p style="font-size: 1.15rem; font-weight: 700; color: #1e293b; margin-top: 4px; margin-bottom: 8px;">${q.q}</p>
                         ${q.hint ? `<button onclick="const h = document.getElementById('conj_hint_book1_${idx}'); h.style.display = h.style.display === 'none' ? 'block' : 'none';" style="background: none; border: none; color: #0284c7; font-size: 0.95rem; cursor: pointer; padding: 0; margin-bottom: 12px; display: flex; align-items: center; gap: 4px; font-weight: 500;"><span style="font-size: 1.1rem">💡</span> Xem gợi ý</button>
-                        <div id="conj_hint_book1_${idx}" style="display: none; background: #f0f9ff; border-left: 4px solid #38bdf8; padding: 12px; border-radius: 4px; margin-bottom: 16px; font-size: 0.95rem; color: #0c4a6e; line-height: 1.6;">${q.hint}</div>` : ''}
+                        <div id="conj_hint_book1_${idx}" style="display: none; background: #eff6ff; border: 1px solid #bfdbfe; border-left: 4px solid var(--primary-color); padding: 12px 16px; border-radius: 8px; margin-bottom: 16px; font-size: 1rem; color: #1e3a8a; font-weight: 500; line-height: 1.6;">${q.hint}</div>` : ''}
                     </div>
                 </div>
                 <div style="display: flex; flex-direction: column; gap: 8px; padding-left: 44px;">
@@ -8934,7 +8934,7 @@ window.renderConjunctionsDetail = function(activeTab = 'theory') {
                                 <span style="font-size: 1.1rem">📖</span> Xem 5 đáp án tham khảo
                             </button>
                         </div>
-                        ${q.hint ? `<div id="conj_hint_book2_${idx}" style="display: none; background: #f0f9ff; border-left: 4px solid #38bdf8; padding: 12px; border-radius: 4px; margin-bottom: 14px; font-size: 0.95rem; color: #0c4a6e; line-height: 1.6;">${q.hint}</div>` : ''}
+                        ${q.hint ? `<div id="conj_hint_book2_${idx}" style="display: none; background: #eff6ff; border: 1px solid #bfdbfe; border-left: 4px solid var(--primary-color); padding: 12px 16px; border-radius: 8px; margin-bottom: 16px; font-size: 1rem; color: #1e3a8a; font-weight: 500; line-height: 1.6;">${q.hint}</div>` : ''}
                         <div id="conj_ref_book2_${idx}" style="display: none; background: #f0fdf4; border-left: 4px solid #22c55e; padding: 12px 16px; border-radius: 6px; margin-bottom: 14px; font-size: 0.98rem; color: #166534; line-height: 1.6;">
                             <b>📌 5 Đáp án tham khảo chuẩn:</b>
                             <ol style="margin: 6px 0 0 0; padding-left: 20px; display: grid; gap: 4px;">
@@ -8959,9 +8959,9 @@ window.renderConjunctionsDetail = function(activeTab = 'theory') {
                 <div style="display: flex; gap: 12px; align-items: flex-start; margin-bottom: 12px;">
                     <div style="background: #e0e7ff; color: #4338ca; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">${idx + 1}</div>
                     <div style="flex-grow: 1;">
-                        <p style="font-size: 1.15rem; font-weight: 500; color: var(--text-main); margin-top: 4px; margin-bottom: 8px;">${q.q}</p>
+                        <p style="font-size: 1.15rem; font-weight: 700; color: #1e293b; margin-top: 4px; margin-bottom: 8px;">${q.q}</p>
                         ${q.hint ? `<button onclick="const h = document.getElementById('conj_hint_book3_${idx}'); h.style.display = h.style.display === 'none' ? 'block' : 'none';" style="background: none; border: none; color: #0284c7; font-size: 0.95rem; cursor: pointer; padding: 0; margin-bottom: 12px; display: flex; align-items: center; gap: 4px; font-weight: 500;"><span style="font-size: 1.1rem">💡</span> Xem gợi ý</button>
-                        <div id="conj_hint_book3_${idx}" style="display: none; background: #f0f9ff; border-left: 4px solid #38bdf8; padding: 12px; border-radius: 4px; margin-bottom: 16px; font-size: 0.95rem; color: #0c4a6e; line-height: 1.6;">${q.hint}</div>` : ''}
+                        <div id="conj_hint_book3_${idx}" style="display: none; background: #eff6ff; border: 1px solid #bfdbfe; border-left: 4px solid var(--primary-color); padding: 12px 16px; border-radius: 8px; margin-bottom: 16px; font-size: 1rem; color: #1e3a8a; font-weight: 500; line-height: 1.6;">${q.hint}</div>` : ''}
                     </div>
                 </div>
                 <div style="display: flex; flex-direction: column; gap: 8px; padding-left: 44px;">
@@ -9021,7 +9021,7 @@ window.renderConjunctionsDetail = function(activeTab = 'theory') {
             <div class="quiz-item" style="background: var(--bg-card); border-radius: 12px; padding: 20px; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color);">
                 <div style="display: flex; gap: 12px; align-items: flex-start; margin-bottom: 16px;">
                     <div style="background: #eff6ff; color: #2563eb; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">${idx + 1}</div>
-                    <p style="font-size: 1.15rem; font-weight: 500; color: var(--text-main); margin-top: 4px; margin-bottom: 0;">${q.q}</p>
+                    <p style="font-size: 1.15rem; font-weight: 700; color: #1e293b; margin-top: 4px; margin-bottom: 0;">${q.q}</p>
                 </div>
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding-left: 44px;">
                     ${q.options.map((opt, optIdx) => `
@@ -9042,9 +9042,9 @@ window.renderConjunctionsDetail = function(activeTab = 'theory') {
                 <div style="display: flex; gap: 12px; align-items: flex-start; margin-bottom: 12px;">
                     <div style="background: #f0fdf4; color: #166534; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">${idx + 1}</div>
                     <div style="flex-grow: 1;">
-                        <p style="font-size: 1.15rem; font-weight: 500; color: var(--text-main); margin-top: 4px; margin-bottom: 8px;">${q.q}</p>
+                        <p style="font-size: 1.15rem; font-weight: 700; color: #1e293b; margin-top: 4px; margin-bottom: 8px;">${q.q}</p>
                         ${q.hint ? `<button onclick="const h = document.getElementById('conj_hint_extra2_${idx}'); h.style.display = h.style.display === 'none' ? 'block' : 'none';" style="background: none; border: none; color: #0284c7; font-size: 0.95rem; cursor: pointer; padding: 0; margin-bottom: 12px; display: flex; align-items: center; gap: 4px; font-weight: 500;"><span style="font-size: 1.1rem">💡</span> Xem gợi ý</button>
-                        <div id="conj_hint_extra2_${idx}" style="display: none; background: #f0f9ff; border-left: 4px solid #38bdf8; padding: 12px; border-radius: 4px; margin-bottom: 16px; font-size: 0.95rem; color: #0c4a6e; line-height: 1.6;">${q.hint}</div>` : ''}
+                        <div id="conj_hint_extra2_${idx}" style="display: none; background: #eff6ff; border: 1px solid #bfdbfe; border-left: 4px solid var(--primary-color); padding: 12px 16px; border-radius: 8px; margin-bottom: 16px; font-size: 1rem; color: #1e3a8a; font-weight: 500; line-height: 1.6;">${q.hint}</div>` : ''}
                     </div>
                 </div>
                 <div style="display: flex; flex-direction: column; gap: 8px; padding-left: 44px;">
