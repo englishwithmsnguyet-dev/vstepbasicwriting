@@ -3452,47 +3452,167 @@ window.renderNounsDetail = function(activeTab = 'theory') {
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
                             GỢI Ý TỪ VỰNG CỐT LÕI (TỪ ĐƠN)
                         </h3>
-                        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 16px 20px; font-size: 0.95rem; color: #334155; line-height: 1.6;">
-                            <div>• <b>positive</b> (adj): tích cực</div>
-                            <div>• <b>learning</b> (n): việc học</div>
-                            <div>• <b>environment</b> (n): môi trường</div>
-                            <div>• <b>benefit</b> (n): lợi ích</div>
-                            <div>• <b>online</b> (adj/adv): trực tuyến</div>
-                            <div>• <b>important</b> (adj): quan trọng</div>
-                            <div>• <b>soft skill</b> (n): kỹ năng mềm</div>
-                            <div>• <b>cause</b> (n): nguyên nhân</div>
-                            <div>• <b>pollution</b> (n): sự ô nhiễm</div>
-                            <div>• <b>air</b> (n): không khí</div>
-                            <div>• <b>final</b> (adj): cuối kỳ</div>
-                            <div>• <b>exam</b> (n): bài kiểm tra</div>
-                            <div>• <b>hot</b> (adj): nóng</div>
-                            <div>• <b>cup</b> (n): tách, ly</div>
-                            <div>• <b>coffee</b> (n): cà phê</div>
-                            <div>• <b>information</b> (n): thông tin</div>
-                            <div>• <b>student</b> (n): học sinh</div>
-                            <div>• <b>class</b> (n): lớp học</div>
-                            <div>• <b>essential</b> (adj): thiết yếu</div>
-                            <div>• <b>unstable</b> (adj): không ổn định</div>
-                            <div>• <b>connection</b> (n): sự kết nối</div>
-                            <div>• <b>modern</b> (adj): hiện đại</div>
-                            <div>• <b>technological</b> (adj): công nghệ</div>
-                            <div>• <b>device</b> (n): thiết bị</div>
-                            <div>• <b>graduation</b> (n): sự tốt nghiệp</div>
-                            <div>• <b>mental</b> (adj): tinh thần</div>
-                            <div>• <b>health</b> (n): sức khoẻ</div>
-                            <div>• <b>healthy</b> (adj): lành mạnh</div>
-                            <div>• <b>eating</b> (n): việc ăn uống</div>
-                            <div>• <b>habit</b> (n): thói quen</div>
-                            <div>• <b>lifestyle</b> (n): lối sống</div>
-                            <div>• <b>technical</b> (adj): kỹ thuật</div>
-                            <div>• <b>issue / problem</b> (n): vấn đề</div>
-                            <div>• <b>poor</b> (adj): kém</div>
-                            <div>• <b>sound</b> (n): âm thanh</div>
-                            <div>• <b>quality</b> (n): chất lượng</div>
-                            <div>• <b>better</b> (adj): tốt hơn</div>
-                            <div>• <b>short-term</b> (adj): ngắn hạn</div>
-                            <div>• <b>unpleasant</b> (adj): khó chịu</div>
-                            <div>• <b>smell</b> (n): mùi</div>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 10px; font-size: 0.95rem;">
+                            <div style="background: white; padding: 8px 14px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+        <span>• <b style="color: var(--primary-color); font-size: 1.05rem; font-weight: 800;">positive</b> <span style="color: #64748b; font-size: 0.9rem; font-weight: 600;">(adj)</span>:</span>
+        <span style="color: #1e293b; font-weight: 600; font-style: italic;">tích cực</span>
+    </div>
+                            <div style="background: white; padding: 8px 14px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+        <span>• <b style="color: var(--primary-color); font-size: 1.05rem; font-weight: 800;">learning</b> <span style="color: #64748b; font-size: 0.9rem; font-weight: 600;">(n)</span>:</span>
+        <span style="color: #1e293b; font-weight: 600; font-style: italic;">việc học</span>
+    </div>
+                            <div style="background: white; padding: 8px 14px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+        <span>• <b style="color: var(--primary-color); font-size: 1.05rem; font-weight: 800;">environment</b> <span style="color: #64748b; font-size: 0.9rem; font-weight: 600;">(n)</span>:</span>
+        <span style="color: #1e293b; font-weight: 600; font-style: italic;">môi trường</span>
+    </div>
+                            <div style="background: white; padding: 8px 14px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+        <span>• <b style="color: var(--primary-color); font-size: 1.05rem; font-weight: 800;">benefit</b> <span style="color: #64748b; font-size: 0.9rem; font-weight: 600;">(n)</span>:</span>
+        <span style="color: #1e293b; font-weight: 600; font-style: italic;">lợi ích</span>
+    </div>
+                            <div style="background: white; padding: 8px 14px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+        <span>• <b style="color: var(--primary-color); font-size: 1.05rem; font-weight: 800;">online</b> <span style="color: #64748b; font-size: 0.9rem; font-weight: 600;">(adj/adv)</span>:</span>
+        <span style="color: #1e293b; font-weight: 600; font-style: italic;">trực tuyến</span>
+    </div>
+                            <div style="background: white; padding: 8px 14px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+        <span>• <b style="color: var(--primary-color); font-size: 1.05rem; font-weight: 800;">important</b> <span style="color: #64748b; font-size: 0.9rem; font-weight: 600;">(adj)</span>:</span>
+        <span style="color: #1e293b; font-weight: 600; font-style: italic;">quan trọng</span>
+    </div>
+                            <div style="background: white; padding: 8px 14px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+        <span>• <b style="color: var(--primary-color); font-size: 1.05rem; font-weight: 800;">soft skill</b> <span style="color: #64748b; font-size: 0.9rem; font-weight: 600;">(n)</span>:</span>
+        <span style="color: #1e293b; font-weight: 600; font-style: italic;">kỹ năng mềm</span>
+    </div>
+                            <div style="background: white; padding: 8px 14px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+        <span>• <b style="color: var(--primary-color); font-size: 1.05rem; font-weight: 800;">cause</b> <span style="color: #64748b; font-size: 0.9rem; font-weight: 600;">(n)</span>:</span>
+        <span style="color: #1e293b; font-weight: 600; font-style: italic;">nguyên nhân</span>
+    </div>
+                            <div style="background: white; padding: 8px 14px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+        <span>• <b style="color: var(--primary-color); font-size: 1.05rem; font-weight: 800;">pollution</b> <span style="color: #64748b; font-size: 0.9rem; font-weight: 600;">(n)</span>:</span>
+        <span style="color: #1e293b; font-weight: 600; font-style: italic;">sự ô nhiễm</span>
+    </div>
+                            <div style="background: white; padding: 8px 14px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+        <span>• <b style="color: var(--primary-color); font-size: 1.05rem; font-weight: 800;">air</b> <span style="color: #64748b; font-size: 0.9rem; font-weight: 600;">(n)</span>:</span>
+        <span style="color: #1e293b; font-weight: 600; font-style: italic;">không khí</span>
+    </div>
+                            <div style="background: white; padding: 8px 14px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+        <span>• <b style="color: var(--primary-color); font-size: 1.05rem; font-weight: 800;">final</b> <span style="color: #64748b; font-size: 0.9rem; font-weight: 600;">(adj)</span>:</span>
+        <span style="color: #1e293b; font-weight: 600; font-style: italic;">cuối kỳ</span>
+    </div>
+                            <div style="background: white; padding: 8px 14px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+        <span>• <b style="color: var(--primary-color); font-size: 1.05rem; font-weight: 800;">exam</b> <span style="color: #64748b; font-size: 0.9rem; font-weight: 600;">(n)</span>:</span>
+        <span style="color: #1e293b; font-weight: 600; font-style: italic;">bài kiểm tra</span>
+    </div>
+                            <div style="background: white; padding: 8px 14px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+        <span>• <b style="color: var(--primary-color); font-size: 1.05rem; font-weight: 800;">hot</b> <span style="color: #64748b; font-size: 0.9rem; font-weight: 600;">(adj)</span>:</span>
+        <span style="color: #1e293b; font-weight: 600; font-style: italic;">nóng</span>
+    </div>
+                            <div style="background: white; padding: 8px 14px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+        <span>• <b style="color: var(--primary-color); font-size: 1.05rem; font-weight: 800;">cup</b> <span style="color: #64748b; font-size: 0.9rem; font-weight: 600;">(n)</span>:</span>
+        <span style="color: #1e293b; font-weight: 600; font-style: italic;">tách, ly</span>
+    </div>
+                            <div style="background: white; padding: 8px 14px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+        <span>• <b style="color: var(--primary-color); font-size: 1.05rem; font-weight: 800;">coffee</b> <span style="color: #64748b; font-size: 0.9rem; font-weight: 600;">(n)</span>:</span>
+        <span style="color: #1e293b; font-weight: 600; font-style: italic;">cà phê</span>
+    </div>
+                            <div style="background: white; padding: 8px 14px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+        <span>• <b style="color: var(--primary-color); font-size: 1.05rem; font-weight: 800;">information</b> <span style="color: #64748b; font-size: 0.9rem; font-weight: 600;">(n)</span>:</span>
+        <span style="color: #1e293b; font-weight: 600; font-style: italic;">thông tin</span>
+    </div>
+                            <div style="background: white; padding: 8px 14px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+        <span>• <b style="color: var(--primary-color); font-size: 1.05rem; font-weight: 800;">student</b> <span style="color: #64748b; font-size: 0.9rem; font-weight: 600;">(n)</span>:</span>
+        <span style="color: #1e293b; font-weight: 600; font-style: italic;">học sinh</span>
+    </div>
+                            <div style="background: white; padding: 8px 14px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+        <span>• <b style="color: var(--primary-color); font-size: 1.05rem; font-weight: 800;">class</b> <span style="color: #64748b; font-size: 0.9rem; font-weight: 600;">(n)</span>:</span>
+        <span style="color: #1e293b; font-weight: 600; font-style: italic;">lớp học</span>
+    </div>
+                            <div style="background: white; padding: 8px 14px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+        <span>• <b style="color: var(--primary-color); font-size: 1.05rem; font-weight: 800;">essential</b> <span style="color: #64748b; font-size: 0.9rem; font-weight: 600;">(adj)</span>:</span>
+        <span style="color: #1e293b; font-weight: 600; font-style: italic;">thiết yếu</span>
+    </div>
+                            <div style="background: white; padding: 8px 14px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+        <span>• <b style="color: var(--primary-color); font-size: 1.05rem; font-weight: 800;">unstable</b> <span style="color: #64748b; font-size: 0.9rem; font-weight: 600;">(adj)</span>:</span>
+        <span style="color: #1e293b; font-weight: 600; font-style: italic;">không ổn định</span>
+    </div>
+                            <div style="background: white; padding: 8px 14px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+        <span>• <b style="color: var(--primary-color); font-size: 1.05rem; font-weight: 800;">connection</b> <span style="color: #64748b; font-size: 0.9rem; font-weight: 600;">(n)</span>:</span>
+        <span style="color: #1e293b; font-weight: 600; font-style: italic;">sự kết nối</span>
+    </div>
+                            <div style="background: white; padding: 8px 14px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+        <span>• <b style="color: var(--primary-color); font-size: 1.05rem; font-weight: 800;">modern</b> <span style="color: #64748b; font-size: 0.9rem; font-weight: 600;">(adj)</span>:</span>
+        <span style="color: #1e293b; font-weight: 600; font-style: italic;">hiện đại</span>
+    </div>
+                            <div style="background: white; padding: 8px 14px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+        <span>• <b style="color: var(--primary-color); font-size: 1.05rem; font-weight: 800;">technological</b> <span style="color: #64748b; font-size: 0.9rem; font-weight: 600;">(adj)</span>:</span>
+        <span style="color: #1e293b; font-weight: 600; font-style: italic;">công nghệ</span>
+    </div>
+                            <div style="background: white; padding: 8px 14px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+        <span>• <b style="color: var(--primary-color); font-size: 1.05rem; font-weight: 800;">device</b> <span style="color: #64748b; font-size: 0.9rem; font-weight: 600;">(n)</span>:</span>
+        <span style="color: #1e293b; font-weight: 600; font-style: italic;">thiết bị</span>
+    </div>
+                            <div style="background: white; padding: 8px 14px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+        <span>• <b style="color: var(--primary-color); font-size: 1.05rem; font-weight: 800;">graduation</b> <span style="color: #64748b; font-size: 0.9rem; font-weight: 600;">(n)</span>:</span>
+        <span style="color: #1e293b; font-weight: 600; font-style: italic;">sự tốt nghiệp</span>
+    </div>
+                            <div style="background: white; padding: 8px 14px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+        <span>• <b style="color: var(--primary-color); font-size: 1.05rem; font-weight: 800;">mental</b> <span style="color: #64748b; font-size: 0.9rem; font-weight: 600;">(adj)</span>:</span>
+        <span style="color: #1e293b; font-weight: 600; font-style: italic;">tinh thần</span>
+    </div>
+                            <div style="background: white; padding: 8px 14px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+        <span>• <b style="color: var(--primary-color); font-size: 1.05rem; font-weight: 800;">health</b> <span style="color: #64748b; font-size: 0.9rem; font-weight: 600;">(n)</span>:</span>
+        <span style="color: #1e293b; font-weight: 600; font-style: italic;">sức khoẻ</span>
+    </div>
+                            <div style="background: white; padding: 8px 14px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+        <span>• <b style="color: var(--primary-color); font-size: 1.05rem; font-weight: 800;">healthy</b> <span style="color: #64748b; font-size: 0.9rem; font-weight: 600;">(adj)</span>:</span>
+        <span style="color: #1e293b; font-weight: 600; font-style: italic;">lành mạnh</span>
+    </div>
+                            <div style="background: white; padding: 8px 14px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+        <span>• <b style="color: var(--primary-color); font-size: 1.05rem; font-weight: 800;">eating</b> <span style="color: #64748b; font-size: 0.9rem; font-weight: 600;">(n)</span>:</span>
+        <span style="color: #1e293b; font-weight: 600; font-style: italic;">việc ăn uống</span>
+    </div>
+                            <div style="background: white; padding: 8px 14px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+        <span>• <b style="color: var(--primary-color); font-size: 1.05rem; font-weight: 800;">habit</b> <span style="color: #64748b; font-size: 0.9rem; font-weight: 600;">(n)</span>:</span>
+        <span style="color: #1e293b; font-weight: 600; font-style: italic;">thói quen</span>
+    </div>
+                            <div style="background: white; padding: 8px 14px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+        <span>• <b style="color: var(--primary-color); font-size: 1.05rem; font-weight: 800;">lifestyle</b> <span style="color: #64748b; font-size: 0.9rem; font-weight: 600;">(n)</span>:</span>
+        <span style="color: #1e293b; font-weight: 600; font-style: italic;">lối sống</span>
+    </div>
+                            <div style="background: white; padding: 8px 14px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+        <span>• <b style="color: var(--primary-color); font-size: 1.05rem; font-weight: 800;">technical</b> <span style="color: #64748b; font-size: 0.9rem; font-weight: 600;">(adj)</span>:</span>
+        <span style="color: #1e293b; font-weight: 600; font-style: italic;">kỹ thuật</span>
+    </div>
+                            <div style="background: white; padding: 8px 14px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+        <span>• <b style="color: var(--primary-color); font-size: 1.05rem; font-weight: 800;">issue / problem</b> <span style="color: #64748b; font-size: 0.9rem; font-weight: 600;">(n)</span>:</span>
+        <span style="color: #1e293b; font-weight: 600; font-style: italic;">vấn đề</span>
+    </div>
+                            <div style="background: white; padding: 8px 14px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+        <span>• <b style="color: var(--primary-color); font-size: 1.05rem; font-weight: 800;">poor</b> <span style="color: #64748b; font-size: 0.9rem; font-weight: 600;">(adj)</span>:</span>
+        <span style="color: #1e293b; font-weight: 600; font-style: italic;">kém</span>
+    </div>
+                            <div style="background: white; padding: 8px 14px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+        <span>• <b style="color: var(--primary-color); font-size: 1.05rem; font-weight: 800;">sound</b> <span style="color: #64748b; font-size: 0.9rem; font-weight: 600;">(n)</span>:</span>
+        <span style="color: #1e293b; font-weight: 600; font-style: italic;">âm thanh</span>
+    </div>
+                            <div style="background: white; padding: 8px 14px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+        <span>• <b style="color: var(--primary-color); font-size: 1.05rem; font-weight: 800;">quality</b> <span style="color: #64748b; font-size: 0.9rem; font-weight: 600;">(n)</span>:</span>
+        <span style="color: #1e293b; font-weight: 600; font-style: italic;">chất lượng</span>
+    </div>
+                            <div style="background: white; padding: 8px 14px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+        <span>• <b style="color: var(--primary-color); font-size: 1.05rem; font-weight: 800;">better</b> <span style="color: #64748b; font-size: 0.9rem; font-weight: 600;">(adj)</span>:</span>
+        <span style="color: #1e293b; font-weight: 600; font-style: italic;">tốt hơn</span>
+    </div>
+                            <div style="background: white; padding: 8px 14px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+        <span>• <b style="color: var(--primary-color); font-size: 1.05rem; font-weight: 800;">short-term</b> <span style="color: #64748b; font-size: 0.9rem; font-weight: 600;">(adj)</span>:</span>
+        <span style="color: #1e293b; font-weight: 600; font-style: italic;">ngắn hạn</span>
+    </div>
+                            <div style="background: white; padding: 8px 14px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+        <span>• <b style="color: var(--primary-color); font-size: 1.05rem; font-weight: 800;">unpleasant</b> <span style="color: #64748b; font-size: 0.9rem; font-weight: 600;">(adj)</span>:</span>
+        <span style="color: #1e293b; font-weight: 600; font-style: italic;">khó chịu</span>
+    </div>
+                            <div style="background: white; padding: 8px 14px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+        <span>• <b style="color: var(--primary-color); font-size: 1.05rem; font-weight: 800;">smell</b> <span style="color: #64748b; font-size: 0.9rem; font-weight: 600;">(n)</span>:</span>
+        <span style="color: #1e293b; font-weight: 600; font-style: italic;">mùi</span>
+    </div>
                         </div>
                     </div>
 
@@ -3567,49 +3687,175 @@ window.renderNounsDetail = function(activeTab = 'theory') {
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
                             GỢI Ý TỪ VỰNG CỐT LÕI
                         </h3>
-                        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px 24px; font-size: 0.95rem; color: #334155; line-height: 1.6;">
-                            <div>• <b>course</b> (n): khóa học</div>
-                            <div>• <b>online</b> (adj): trực tuyến</div>
-                            <div>• <b>free</b> (adj): miễn phí</div>
-                            <div>• <b>opportunity</b> (n): cơ hội</div>
-                            <div>• <b>career</b> (n): nghề nghiệp</div>
-                            <div>• <b>plan</b> (n): kế hoạch</div>
-                            <div>• <b>clear</b> (adj): rõ ràng</div>
-                            <div>• <b>activity</b> (n): hoạt động</div>
-                            <div>• <b>extracurricular</b> (adj): ngoại khóa</div>
-                            <div>• <b>beneficial</b> (adj): bổ ích</div>
-                            <div>• <b>decision</b> (n): quyết định</div>
-                            <div>• <b>important</b> (adj): quan trọng</div>
-                            <div>• <b>method</b> (n): phương pháp</div>
-                            <div>• <b>teaching</b> (n): việc giảng dạy</div>
-                            <div>• <b>modern</b> (adj): hiện đại</div>
-                            <div>• <b>system</b> (n): hệ thống</div>
-                            <div>• <b>public</b> (adj): công cộng</div>
-                            <div>• <b>transportation</b> (n): giao thông công cộng</div>
-                            <div>• <b>renewable</b> (adj): tái tạo</div>
-                            <div>• <b>energy</b> (n): năng lượng</div>
-                            <div>• <b>source</b> (n): nguồn</div>
-                            <div>• <b>problem</b> (n): vấn đề</div>
-                            <div>• <b>social</b> (adj): xã hội</div>
-                            <div>• <b>serious</b> (adj): nghiêm trọng</div>
-                            <div>• <b>service</b> (n): dịch vụ</div>
-                            <div>• <b>healthcare</b> (n): chăm sóc sức khỏe</div>
-                            <div>• <b>program</b> (n): chương trình</div>
-                            <div>• <b>exchange</b> (n): trao đổi</div>
-                            <div>• <b>student</b> (n): sinh viên</div>
-                            <div>• <b>member</b> (n): thành viên</div>
-                            <div>• <b>club</b> (n): câu lạc bộ</div>
-                            <div>• <b>benefit</b> (n): lợi ích</div>
-                            <div>• <b>exercise</b> (n): việc tập thể dục</div>
-                            <div>• <b>habit</b> (n): thói quen</div>
-                            <div>• <b>goal</b> (n): mục tiêu</div>
-                            <div>• <b>long-term</b> (adj): dài hạn</div>
-                            <div>• <b>team-building</b> (adj): xây dựng đội nhóm</div>
-                            <div>• <b>quality</b> (n): chất lượng</div>
-                            <div>• <b>higher education</b> (n): giáo dục đại học</div>
-                            <div>• <b>valuable</b> (adj): quý giá</div>
-                            <div>• <b>solution</b> (n): giải pháp</div>
-                            <div>• <b>climate change</b> (n): biến đổi khí hậu</div>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 10px; font-size: 0.95rem;">
+                            <div style="background: white; padding: 8px 14px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+        <span>• <b style="color: var(--primary-color); font-size: 1.05rem; font-weight: 800;">course</b> <span style="color: #64748b; font-size: 0.9rem; font-weight: 600;">(n)</span>:</span>
+        <span style="color: #1e293b; font-weight: 600; font-style: italic;">khóa học</span>
+    </div>
+                            <div style="background: white; padding: 8px 14px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+        <span>• <b style="color: var(--primary-color); font-size: 1.05rem; font-weight: 800;">online</b> <span style="color: #64748b; font-size: 0.9rem; font-weight: 600;">(adj)</span>:</span>
+        <span style="color: #1e293b; font-weight: 600; font-style: italic;">trực tuyến</span>
+    </div>
+                            <div style="background: white; padding: 8px 14px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+        <span>• <b style="color: var(--primary-color); font-size: 1.05rem; font-weight: 800;">free</b> <span style="color: #64748b; font-size: 0.9rem; font-weight: 600;">(adj)</span>:</span>
+        <span style="color: #1e293b; font-weight: 600; font-style: italic;">miễn phí</span>
+    </div>
+                            <div style="background: white; padding: 8px 14px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+        <span>• <b style="color: var(--primary-color); font-size: 1.05rem; font-weight: 800;">opportunity</b> <span style="color: #64748b; font-size: 0.9rem; font-weight: 600;">(n)</span>:</span>
+        <span style="color: #1e293b; font-weight: 600; font-style: italic;">cơ hội</span>
+    </div>
+                            <div style="background: white; padding: 8px 14px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+        <span>• <b style="color: var(--primary-color); font-size: 1.05rem; font-weight: 800;">career</b> <span style="color: #64748b; font-size: 0.9rem; font-weight: 600;">(n)</span>:</span>
+        <span style="color: #1e293b; font-weight: 600; font-style: italic;">nghề nghiệp</span>
+    </div>
+                            <div style="background: white; padding: 8px 14px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+        <span>• <b style="color: var(--primary-color); font-size: 1.05rem; font-weight: 800;">plan</b> <span style="color: #64748b; font-size: 0.9rem; font-weight: 600;">(n)</span>:</span>
+        <span style="color: #1e293b; font-weight: 600; font-style: italic;">kế hoạch</span>
+    </div>
+                            <div style="background: white; padding: 8px 14px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+        <span>• <b style="color: var(--primary-color); font-size: 1.05rem; font-weight: 800;">clear</b> <span style="color: #64748b; font-size: 0.9rem; font-weight: 600;">(adj)</span>:</span>
+        <span style="color: #1e293b; font-weight: 600; font-style: italic;">rõ ràng</span>
+    </div>
+                            <div style="background: white; padding: 8px 14px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+        <span>• <b style="color: var(--primary-color); font-size: 1.05rem; font-weight: 800;">activity</b> <span style="color: #64748b; font-size: 0.9rem; font-weight: 600;">(n)</span>:</span>
+        <span style="color: #1e293b; font-weight: 600; font-style: italic;">hoạt động</span>
+    </div>
+                            <div style="background: white; padding: 8px 14px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+        <span>• <b style="color: var(--primary-color); font-size: 1.05rem; font-weight: 800;">extracurricular</b> <span style="color: #64748b; font-size: 0.9rem; font-weight: 600;">(adj)</span>:</span>
+        <span style="color: #1e293b; font-weight: 600; font-style: italic;">ngoại khóa</span>
+    </div>
+                            <div style="background: white; padding: 8px 14px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+        <span>• <b style="color: var(--primary-color); font-size: 1.05rem; font-weight: 800;">beneficial</b> <span style="color: #64748b; font-size: 0.9rem; font-weight: 600;">(adj)</span>:</span>
+        <span style="color: #1e293b; font-weight: 600; font-style: italic;">bổ ích</span>
+    </div>
+                            <div style="background: white; padding: 8px 14px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+        <span>• <b style="color: var(--primary-color); font-size: 1.05rem; font-weight: 800;">decision</b> <span style="color: #64748b; font-size: 0.9rem; font-weight: 600;">(n)</span>:</span>
+        <span style="color: #1e293b; font-weight: 600; font-style: italic;">quyết định</span>
+    </div>
+                            <div style="background: white; padding: 8px 14px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+        <span>• <b style="color: var(--primary-color); font-size: 1.05rem; font-weight: 800;">important</b> <span style="color: #64748b; font-size: 0.9rem; font-weight: 600;">(adj)</span>:</span>
+        <span style="color: #1e293b; font-weight: 600; font-style: italic;">quan trọng</span>
+    </div>
+                            <div style="background: white; padding: 8px 14px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+        <span>• <b style="color: var(--primary-color); font-size: 1.05rem; font-weight: 800;">method</b> <span style="color: #64748b; font-size: 0.9rem; font-weight: 600;">(n)</span>:</span>
+        <span style="color: #1e293b; font-weight: 600; font-style: italic;">phương pháp</span>
+    </div>
+                            <div style="background: white; padding: 8px 14px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+        <span>• <b style="color: var(--primary-color); font-size: 1.05rem; font-weight: 800;">teaching</b> <span style="color: #64748b; font-size: 0.9rem; font-weight: 600;">(n)</span>:</span>
+        <span style="color: #1e293b; font-weight: 600; font-style: italic;">việc giảng dạy</span>
+    </div>
+                            <div style="background: white; padding: 8px 14px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+        <span>• <b style="color: var(--primary-color); font-size: 1.05rem; font-weight: 800;">modern</b> <span style="color: #64748b; font-size: 0.9rem; font-weight: 600;">(adj)</span>:</span>
+        <span style="color: #1e293b; font-weight: 600; font-style: italic;">hiện đại</span>
+    </div>
+                            <div style="background: white; padding: 8px 14px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+        <span>• <b style="color: var(--primary-color); font-size: 1.05rem; font-weight: 800;">system</b> <span style="color: #64748b; font-size: 0.9rem; font-weight: 600;">(n)</span>:</span>
+        <span style="color: #1e293b; font-weight: 600; font-style: italic;">hệ thống</span>
+    </div>
+                            <div style="background: white; padding: 8px 14px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+        <span>• <b style="color: var(--primary-color); font-size: 1.05rem; font-weight: 800;">public</b> <span style="color: #64748b; font-size: 0.9rem; font-weight: 600;">(adj)</span>:</span>
+        <span style="color: #1e293b; font-weight: 600; font-style: italic;">công cộng</span>
+    </div>
+                            <div style="background: white; padding: 8px 14px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+        <span>• <b style="color: var(--primary-color); font-size: 1.05rem; font-weight: 800;">transportation</b> <span style="color: #64748b; font-size: 0.9rem; font-weight: 600;">(n)</span>:</span>
+        <span style="color: #1e293b; font-weight: 600; font-style: italic;">giao thông công cộng</span>
+    </div>
+                            <div style="background: white; padding: 8px 14px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+        <span>• <b style="color: var(--primary-color); font-size: 1.05rem; font-weight: 800;">renewable</b> <span style="color: #64748b; font-size: 0.9rem; font-weight: 600;">(adj)</span>:</span>
+        <span style="color: #1e293b; font-weight: 600; font-style: italic;">tái tạo</span>
+    </div>
+                            <div style="background: white; padding: 8px 14px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+        <span>• <b style="color: var(--primary-color); font-size: 1.05rem; font-weight: 800;">energy</b> <span style="color: #64748b; font-size: 0.9rem; font-weight: 600;">(n)</span>:</span>
+        <span style="color: #1e293b; font-weight: 600; font-style: italic;">năng lượng</span>
+    </div>
+                            <div style="background: white; padding: 8px 14px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+        <span>• <b style="color: var(--primary-color); font-size: 1.05rem; font-weight: 800;">source</b> <span style="color: #64748b; font-size: 0.9rem; font-weight: 600;">(n)</span>:</span>
+        <span style="color: #1e293b; font-weight: 600; font-style: italic;">nguồn</span>
+    </div>
+                            <div style="background: white; padding: 8px 14px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+        <span>• <b style="color: var(--primary-color); font-size: 1.05rem; font-weight: 800;">problem</b> <span style="color: #64748b; font-size: 0.9rem; font-weight: 600;">(n)</span>:</span>
+        <span style="color: #1e293b; font-weight: 600; font-style: italic;">vấn đề</span>
+    </div>
+                            <div style="background: white; padding: 8px 14px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+        <span>• <b style="color: var(--primary-color); font-size: 1.05rem; font-weight: 800;">social</b> <span style="color: #64748b; font-size: 0.9rem; font-weight: 600;">(adj)</span>:</span>
+        <span style="color: #1e293b; font-weight: 600; font-style: italic;">xã hội</span>
+    </div>
+                            <div style="background: white; padding: 8px 14px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+        <span>• <b style="color: var(--primary-color); font-size: 1.05rem; font-weight: 800;">serious</b> <span style="color: #64748b; font-size: 0.9rem; font-weight: 600;">(adj)</span>:</span>
+        <span style="color: #1e293b; font-weight: 600; font-style: italic;">nghiêm trọng</span>
+    </div>
+                            <div style="background: white; padding: 8px 14px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+        <span>• <b style="color: var(--primary-color); font-size: 1.05rem; font-weight: 800;">service</b> <span style="color: #64748b; font-size: 0.9rem; font-weight: 600;">(n)</span>:</span>
+        <span style="color: #1e293b; font-weight: 600; font-style: italic;">dịch vụ</span>
+    </div>
+                            <div style="background: white; padding: 8px 14px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+        <span>• <b style="color: var(--primary-color); font-size: 1.05rem; font-weight: 800;">healthcare</b> <span style="color: #64748b; font-size: 0.9rem; font-weight: 600;">(n)</span>:</span>
+        <span style="color: #1e293b; font-weight: 600; font-style: italic;">chăm sóc sức khỏe</span>
+    </div>
+                            <div style="background: white; padding: 8px 14px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+        <span>• <b style="color: var(--primary-color); font-size: 1.05rem; font-weight: 800;">program</b> <span style="color: #64748b; font-size: 0.9rem; font-weight: 600;">(n)</span>:</span>
+        <span style="color: #1e293b; font-weight: 600; font-style: italic;">chương trình</span>
+    </div>
+                            <div style="background: white; padding: 8px 14px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+        <span>• <b style="color: var(--primary-color); font-size: 1.05rem; font-weight: 800;">exchange</b> <span style="color: #64748b; font-size: 0.9rem; font-weight: 600;">(n)</span>:</span>
+        <span style="color: #1e293b; font-weight: 600; font-style: italic;">trao đổi</span>
+    </div>
+                            <div style="background: white; padding: 8px 14px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+        <span>• <b style="color: var(--primary-color); font-size: 1.05rem; font-weight: 800;">student</b> <span style="color: #64748b; font-size: 0.9rem; font-weight: 600;">(n)</span>:</span>
+        <span style="color: #1e293b; font-weight: 600; font-style: italic;">sinh viên</span>
+    </div>
+                            <div style="background: white; padding: 8px 14px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+        <span>• <b style="color: var(--primary-color); font-size: 1.05rem; font-weight: 800;">member</b> <span style="color: #64748b; font-size: 0.9rem; font-weight: 600;">(n)</span>:</span>
+        <span style="color: #1e293b; font-weight: 600; font-style: italic;">thành viên</span>
+    </div>
+                            <div style="background: white; padding: 8px 14px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+        <span>• <b style="color: var(--primary-color); font-size: 1.05rem; font-weight: 800;">club</b> <span style="color: #64748b; font-size: 0.9rem; font-weight: 600;">(n)</span>:</span>
+        <span style="color: #1e293b; font-weight: 600; font-style: italic;">câu lạc bộ</span>
+    </div>
+                            <div style="background: white; padding: 8px 14px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+        <span>• <b style="color: var(--primary-color); font-size: 1.05rem; font-weight: 800;">benefit</b> <span style="color: #64748b; font-size: 0.9rem; font-weight: 600;">(n)</span>:</span>
+        <span style="color: #1e293b; font-weight: 600; font-style: italic;">lợi ích</span>
+    </div>
+                            <div style="background: white; padding: 8px 14px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+        <span>• <b style="color: var(--primary-color); font-size: 1.05rem; font-weight: 800;">exercise</b> <span style="color: #64748b; font-size: 0.9rem; font-weight: 600;">(n)</span>:</span>
+        <span style="color: #1e293b; font-weight: 600; font-style: italic;">việc tập thể dục</span>
+    </div>
+                            <div style="background: white; padding: 8px 14px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+        <span>• <b style="color: var(--primary-color); font-size: 1.05rem; font-weight: 800;">habit</b> <span style="color: #64748b; font-size: 0.9rem; font-weight: 600;">(n)</span>:</span>
+        <span style="color: #1e293b; font-weight: 600; font-style: italic;">thói quen</span>
+    </div>
+                            <div style="background: white; padding: 8px 14px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+        <span>• <b style="color: var(--primary-color); font-size: 1.05rem; font-weight: 800;">goal</b> <span style="color: #64748b; font-size: 0.9rem; font-weight: 600;">(n)</span>:</span>
+        <span style="color: #1e293b; font-weight: 600; font-style: italic;">mục tiêu</span>
+    </div>
+                            <div style="background: white; padding: 8px 14px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+        <span>• <b style="color: var(--primary-color); font-size: 1.05rem; font-weight: 800;">long-term</b> <span style="color: #64748b; font-size: 0.9rem; font-weight: 600;">(adj)</span>:</span>
+        <span style="color: #1e293b; font-weight: 600; font-style: italic;">dài hạn</span>
+    </div>
+                            <div style="background: white; padding: 8px 14px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+        <span>• <b style="color: var(--primary-color); font-size: 1.05rem; font-weight: 800;">team-building</b> <span style="color: #64748b; font-size: 0.9rem; font-weight: 600;">(adj)</span>:</span>
+        <span style="color: #1e293b; font-weight: 600; font-style: italic;">xây dựng đội nhóm</span>
+    </div>
+                            <div style="background: white; padding: 8px 14px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+        <span>• <b style="color: var(--primary-color); font-size: 1.05rem; font-weight: 800;">quality</b> <span style="color: #64748b; font-size: 0.9rem; font-weight: 600;">(n)</span>:</span>
+        <span style="color: #1e293b; font-weight: 600; font-style: italic;">chất lượng</span>
+    </div>
+                            <div style="background: white; padding: 8px 14px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+        <span>• <b style="color: var(--primary-color); font-size: 1.05rem; font-weight: 800;">higher education</b> <span style="color: #64748b; font-size: 0.9rem; font-weight: 600;">(n)</span>:</span>
+        <span style="color: #1e293b; font-weight: 600; font-style: italic;">giáo dục đại học</span>
+    </div>
+                            <div style="background: white; padding: 8px 14px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+        <span>• <b style="color: var(--primary-color); font-size: 1.05rem; font-weight: 800;">valuable</b> <span style="color: #64748b; font-size: 0.9rem; font-weight: 600;">(adj)</span>:</span>
+        <span style="color: #1e293b; font-weight: 600; font-style: italic;">quý giá</span>
+    </div>
+                            <div style="background: white; padding: 8px 14px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+        <span>• <b style="color: var(--primary-color); font-size: 1.05rem; font-weight: 800;">solution</b> <span style="color: #64748b; font-size: 0.9rem; font-weight: 600;">(n)</span>:</span>
+        <span style="color: #1e293b; font-weight: 600; font-style: italic;">giải pháp</span>
+    </div>
+                            <div style="background: white; padding: 8px 14px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+        <span>• <b style="color: var(--primary-color); font-size: 1.05rem; font-weight: 800;">climate change</b> <span style="color: #64748b; font-size: 0.9rem; font-weight: 600;">(n)</span>:</span>
+        <span style="color: #1e293b; font-weight: 600; font-style: italic;">biến đổi khí hậu</span>
+    </div>
                         </div>
                     </div>
 
@@ -4246,22 +4492,22 @@ const pronounsTheoryData = [
 // Dữ liệu Bài tập trong tài liệu
 const pronounsParagraphData = {
     segments: [
-        { text: "(1 - tôi) ", placeholder: "1. tôi" },
-        { text: " am working on a group presentation with my friends. (2 - của chúng tôi) ", placeholder: "2. của chúng tôi" },
-        { text: " group includes Khoa, Mai, and me. Last week, our teacher gave (3 - chúng tôi) ", placeholder: "3. chúng tôi" },
-        { text: " the topic \"air pollution in big cities.\" Khoa is very responsible. (4 - anh ấy) ", placeholder: "4. anh ấy" },
-        { text: " found many useful statistics and shared them with us. We really appreciate (5 - của anh ấy) ", placeholder: "5. của anh ấy" },
-        { text: " hard work and dedication. Mai also did a great job. (6 - cô ấy) ", placeholder: "6. cô ấy" },
-        { text: " designed a colorful poster for the presentation. Everyone liked (7 - của cô ấy) ", placeholder: "7. của cô ấy" },
-        { text: " idea because it was creative and eye-catching. (8 - chúng tôi) ", placeholder: "8. chúng tôi" },
-        { text: " practiced together every afternoon after class. Sometimes, our teacher stayed to give (9 - chúng tôi) ", placeholder: "9. chúng tôi" },
-        { text: " feedback. She said, \"(10 - các em) ", placeholder: "10. các em" },
-        { text: " are making good progress, but don't forget to check your sources.\" I replied, \"Yes, thank you for helping (11 - chúng em) ", placeholder: "11. chúng em" },
-        { text: " improve.\" During the process, I also used a learning app. (12 - nó) ", placeholder: "12. nó" },
-        { text: " sends daily tips and reminds me to review. I like (13 - của nó) ", placeholder: "13. của nó" },
-        { text: " design because it's simple and user-friendly. Tomorrow is our presentation day. (14 - chúng tôi) ", placeholder: "14. chúng tôi" },
-        { text: " hope everything will go well. Khoa is a bit nervous, but I told (15 - anh ấy) ", placeholder: "15. anh ấy" },
-        { text: " to just do his best. Our teacher believes in (16 - chúng tôi) ", placeholder: "16. chúng tôi" },
+        { text: "<span style='color: #b45309; font-weight: 700; background: #fef3c7; padding: 2px 8px; border-radius: 6px; font-size: 0.95rem; border: 1px solid #fde68a; margin-right: 4px;'>(1 - tôi)</span> ", placeholder: "1. tôi" },
+        { text: " am working on a group presentation with my friends. <span style='color: #b45309; font-weight: 700; background: #fef3c7; padding: 2px 8px; border-radius: 6px; font-size: 0.95rem; border: 1px solid #fde68a; margin-right: 4px;'>(2 - của chúng tôi)</span> ", placeholder: "2. của chúng tôi" },
+        { text: " group includes Khoa, Mai, and me. Last week, our teacher gave <span style='color: #b45309; font-weight: 700; background: #fef3c7; padding: 2px 8px; border-radius: 6px; font-size: 0.95rem; border: 1px solid #fde68a; margin-right: 4px;'>(3 - chúng tôi)</span> ", placeholder: "3. chúng tôi" },
+        { text: " the topic \"air pollution in big cities.\" Khoa is very responsible. <span style='color: #b45309; font-weight: 700; background: #fef3c7; padding: 2px 8px; border-radius: 6px; font-size: 0.95rem; border: 1px solid #fde68a; margin-right: 4px;'>(4 - anh ấy)</span> ", placeholder: "4. anh ấy" },
+        { text: " found many useful statistics and shared them with us. We really appreciate <span style='color: #b45309; font-weight: 700; background: #fef3c7; padding: 2px 8px; border-radius: 6px; font-size: 0.95rem; border: 1px solid #fde68a; margin-right: 4px;'>(5 - của anh ấy)</span> ", placeholder: "5. của anh ấy" },
+        { text: " hard work and dedication. Mai also did a great job. <span style='color: #b45309; font-weight: 700; background: #fef3c7; padding: 2px 8px; border-radius: 6px; font-size: 0.95rem; border: 1px solid #fde68a; margin-right: 4px;'>(6 - cô ấy)</span> ", placeholder: "6. cô ấy" },
+        { text: " designed a colorful poster for the presentation. Everyone liked <span style='color: #b45309; font-weight: 700; background: #fef3c7; padding: 2px 8px; border-radius: 6px; font-size: 0.95rem; border: 1px solid #fde68a; margin-right: 4px;'>(7 - của cô ấy)</span> ", placeholder: "7. của cô ấy" },
+        { text: " idea because it was creative and eye-catching. <span style='color: #b45309; font-weight: 700; background: #fef3c7; padding: 2px 8px; border-radius: 6px; font-size: 0.95rem; border: 1px solid #fde68a; margin-right: 4px;'>(8 - chúng tôi)</span> ", placeholder: "8. chúng tôi" },
+        { text: " practiced together every afternoon after class. Sometimes, our teacher stayed to give <span style='color: #b45309; font-weight: 700; background: #fef3c7; padding: 2px 8px; border-radius: 6px; font-size: 0.95rem; border: 1px solid #fde68a; margin-right: 4px;'>(9 - chúng tôi)</span> ", placeholder: "9. chúng tôi" },
+        { text: " feedback. She said, \"<span style='color: #b45309; font-weight: 700; background: #fef3c7; padding: 2px 8px; border-radius: 6px; font-size: 0.95rem; border: 1px solid #fde68a; margin-right: 4px;'>(10 - các em)</span> ", placeholder: "10. các em" },
+        { text: " are making good progress, but don't forget to check your sources.\" I replied, \"Yes, thank you for helping <span style='color: #b45309; font-weight: 700; background: #fef3c7; padding: 2px 8px; border-radius: 6px; font-size: 0.95rem; border: 1px solid #fde68a; margin-right: 4px;'>(11 - chúng em)</span> ", placeholder: "11. chúng em" },
+        { text: " improve.\" During the process, I also used a learning app. <span style='color: #b45309; font-weight: 700; background: #fef3c7; padding: 2px 8px; border-radius: 6px; font-size: 0.95rem; border: 1px solid #fde68a; margin-right: 4px;'>(12 - nó)</span> ", placeholder: "12. nó" },
+        { text: " sends daily tips and reminds me to review. I like <span style='color: #b45309; font-weight: 700; background: #fef3c7; padding: 2px 8px; border-radius: 6px; font-size: 0.95rem; border: 1px solid #fde68a; margin-right: 4px;'>(13 - của nó)</span> ", placeholder: "13. của nó" },
+        { text: " design because it's simple and user-friendly. Tomorrow is our presentation day. <span style='color: #b45309; font-weight: 700; background: #fef3c7; padding: 2px 8px; border-radius: 6px; font-size: 0.95rem; border: 1px solid #fde68a; margin-right: 4px;'>(14 - chúng tôi)</span> ", placeholder: "14. chúng tôi" },
+        { text: " hope everything will go well. Khoa is a bit nervous, but I told <span style='color: #b45309; font-weight: 700; background: #fef3c7; padding: 2px 8px; border-radius: 6px; font-size: 0.95rem; border: 1px solid #fde68a; margin-right: 4px;'>(15 - anh ấy)</span> ", placeholder: "15. anh ấy" },
+        { text: " to just do his best. Our teacher believes in <span style='color: #b45309; font-weight: 700; background: #fef3c7; padding: 2px 8px; border-radius: 6px; font-size: 0.95rem; border: 1px solid #fde68a; margin-right: 4px;'>(16 - chúng tôi)</span> ", placeholder: "16. chúng tôi" },
         { text: ", and that gives us confidence." }
     ],
     answers: ["I", "Our", "us", "He", "his", "She", "her", "We", "us", "You", "us", "It", "its", "We", "him", "us"],
