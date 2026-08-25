@@ -2866,20 +2866,21 @@ window.switchSelfTopic = function(topicId) {
         if (pass === null) return; // User cancelled
         
         const allPasses = ['missnguyet2026', 'cb206', 'cb210', 'cb211', 'cb213', 'onb103', 'b212'];
-        const chap2Passes = ['missnguyet2026', 'cb206', 'cb210', 'cb211', 'cb213', 'onb103'];
+        const fullPasses = ['missnguyet2026', 'cb206', 'cb210', 'cb211', 'onb103'];
+        const upToAdjPasses = [...fullPasses, 'cb213'];
         const topicPasswords = {
             'components': allPasses,
             'structures': allPasses,
-            'nouns': [...chap2Passes, 'b212'],
-            'pronouns': [...chap2Passes, 'b212'],
-            'verbs': [...chap2Passes, 'b212'],
-            'adjectives': chap2Passes,
-            'adverbs': chap2Passes,
-            'prepositions': chap2Passes,
-            'conjunctions': chap2Passes
+            'nouns': [...upToAdjPasses, 'b212'],
+            'pronouns': [...upToAdjPasses, 'b212'],
+            'verbs': [...upToAdjPasses, 'b212'],
+            'adjectives': upToAdjPasses,
+            'adverbs': fullPasses,
+            'prepositions': fullPasses,
+            'conjunctions': fullPasses
         };
         const enteredPass = pass.trim().toLowerCase();
-        const validPasses = topicPasswords[topicId] || chap2Passes;
+        const validPasses = topicPasswords[topicId] || fullPasses;
         const masterPasses = ['cb206', 'cb211', 'missnguyet2026'];
         
         if (enteredPass && (validPasses.includes(enteredPass) || masterPasses.includes(enteredPass))) {
