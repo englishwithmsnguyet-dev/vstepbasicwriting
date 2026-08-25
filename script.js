@@ -6516,13 +6516,36 @@ window.checkAdjectivesBook2 = function(idx) {
 };
 
 window.submitAdjectivesBook1 = function() {
-    adjectivesPracticeBook1.forEach((_, i) => window.checkAdjectivesBook1(i));
+    let score = 0;
+    adjectivesPracticeBook1.forEach((q, i) => {
+        window.checkAdjectivesBook1(i);
+        const val = (window.adjectivesAnswersBook1[i] || '').trim();
+        if (val && q.a.some(ans => window.normalizeText(val) === window.normalizeText(ans))) {
+            score++;
+        }
+    });
+    window.showExerciseResult(score, adjectivesPracticeBook1.length, "KẾT QUẢ BÀI 1 (TÍNH TỪ TRONG TÀI LIỆU)");
 };
+
 window.submitAdjectivesBook2 = function() {
-    adjectivesPracticeBook2.forEach((_, i) => window.checkAdjectivesBook2(i));
+    let score = 0;
+    adjectivesPracticeBook2.forEach((q, i) => {
+        window.checkAdjectivesBook2(i);
+        const rawVal = window.adjectivesAnswersBook2[i] || '';
+        const val = rawVal.trim();
+        if (val) {
+            const isCorrect = q.a.some(ans => window.normalizeText(val) === window.normalizeText(ans));
+            const formCheck = window.checkSentencePunctuation(rawVal, isCorrect);
+            if (formCheck.valid) {
+                score++;
+            }
+        }
+    });
+    window.showExerciseResult(score, adjectivesPracticeBook2.length, "KẾT QUẢ BÀI 2 (TÍNH TỪ TRONG TÀI LIỆU)");
 };
 
 window.submitAdjectivesExtra1 = function() {
+    let score = 0;
     adjectivesPracticeExtra1.forEach((q, idx) => {
         const val = window.adjectivesAnswersExtra1[idx];
         const expEl = document.getElementById(`adjexp_extra1_${idx}`);
@@ -6539,6 +6562,7 @@ window.submitAdjectivesExtra1 = function() {
         }
         
         if (val === q.ans) {
+            score++;
             expEl.style.background = '#dcfce7';
             expEl.style.color = '#16a34a';
             expEl.innerHTML = '<b>Chính xác!</b>';
@@ -6550,6 +6574,7 @@ window.submitAdjectivesExtra1 = function() {
             selectEl.style.borderColor = '#ef4444';
         }
     });
+    window.showExerciseResult(score, adjectivesPracticeExtra1.length, "KẾT QUẢ BÀI TẬP THÊM 1 (TÍNH TỪ)");
 };
 
 window.checkAdjectivesExtra2 = function(idx) {
@@ -6595,7 +6620,20 @@ window.checkAdjectivesExtra2 = function(idx) {
 };
 
 window.submitAdjectivesExtra2 = function() {
-    adjectivesPracticeExtra2.forEach((_, i) => window.checkAdjectivesExtra2(i));
+    let score = 0;
+    adjectivesPracticeExtra2.forEach((q, i) => {
+        window.checkAdjectivesExtra2(i);
+        const rawVal = window.adjectivesAnswersExtra2[i] || '';
+        const val = rawVal.trim();
+        if (val) {
+            const isCorrect = q.a.some(ans => window.normalizeText(val) === window.normalizeText(ans));
+            const formCheck = window.checkSentencePunctuation(rawVal, isCorrect);
+            if (formCheck.valid) {
+                score++;
+            }
+        }
+    });
+    window.showExerciseResult(score, adjectivesPracticeExtra2.length, "KẾT QUẢ BÀI TẬP THÊM 2 (TÍNH TỪ)");
 };
 
 window.renderAdjectivesDetail = function(activeTab = 'theory') {
@@ -7563,188 +7601,40 @@ window.checkAdverbsBook1 = function(idx) {
 };
 
 window.submitAdverbsBook1 = function() {
-    adverbsPracticeBook1.forEach((_, i) => window.checkAdverbsBook1(i));
-};
-
-window.checkAdverbsBook2 = function(idx, optIdx, optionStr) {
-    window.adverbsAnswersBook2[idx] = optionStr;
-    window.saveProgress();
-
-    const currentData = adverbsPracticeBook2[idx];
-    const isCorrect = optionStr === currentData.a;
-
-    const btns = document.querySelectorAll(`.adv2-btn-${idx}`);
-    btns.forEach(btn => {
-        btn.classList.remove('selected');
-        btn.style.background = 'white';
-        btn.style.color = 'var(--text-main)';
-        btn.style.borderColor = 'var(--border-color)';
+    let score = 0;
+    adverbsPracticeBook1.forEach((q, i) => {
+        window.checkAdverbsBook1(i);
+        const val = (window.adverbsAnswersBook1[i] || '').trim();
+        if (val && q.a.some(ans => window.normalizeText(val) === window.normalizeText(ans))) {
+            score++;
+        }
     });
-
-    const selectedBtn = document.getElementById(`adv2_btn_${idx}_${optIdx}`);
-    if (selectedBtn) {
-        selectedBtn.classList.add('selected');
-        if (isCorrect) {
-            selectedBtn.style.background = '#16a34a';
-            selectedBtn.style.color = 'white';
-            selectedBtn.style.borderColor = '#16a34a';
-        } else {
-            selectedBtn.style.background = '#ef4444';
-            selectedBtn.style.color = 'white';
-            selectedBtn.style.borderColor = '#ef4444';
-        }
-    }
-
-    const expEl = document.getElementById(`advexp_book2_${idx}`);
-    if (expEl) {
-        expEl.style.display = 'block';
-        if (isCorrect) {
-            expEl.style.background = '#dcfce7';
-            expEl.style.color = '#16a34a';
-            expEl.innerHTML = '<b>Chính xác!</b>';
-        } else {
-            expEl.style.background = '#fef2f2';
-            expEl.style.color = '#ef4444';
-            expEl.innerHTML = `<b>Chưa chính xác!</b><br>Đáp án đúng: <b>${currentData.a}</b>`;
-        }
-    }
-};
-
-window.checkAdverbsBook3 = function(idx) {
-    const inputId = `adv_book3_${idx}`;
-    const expId = `advexp_book3_${idx}`;
-    const inputEl = document.getElementById(inputId);
-    const expEl = document.getElementById(expId);
-    
-    if (!inputEl || !expEl) return;
-    
-    const val = (inputEl.value || '').trim();
-    if (!val) {
-        expEl.style.display = 'block';
-        expEl.style.background = '#fef2f2';
-        expEl.style.color = '#ef4444';
-        expEl.innerHTML = 'Vui lòng nhập câu trả lời!';
-        return;
-    }
-    
-    const correctAnswers = adverbsPracticeBook3[idx].a;
-    const isCorrect = correctAnswers.some(ans => window.normalizeText(val) === window.normalizeText(ans));
-    
-    expEl.style.display = 'block';
-    if (isCorrect) {
-        expEl.style.background = '#dcfce7';
-        expEl.style.color = '#16a34a';
-        expEl.innerHTML = '<b>Chính xác!</b>';
-        inputEl.style.borderColor = '#16a34a';
-    } else {
-        expEl.style.background = '#fef2f2';
-        expEl.style.color = '#ef4444';
-        expEl.innerHTML = `<b>Chưa chính xác!</b><br>Đáp án gợi ý: <b>${correctAnswers[0]}</b>`;
-        inputEl.style.borderColor = '#ef4444';
-    }
-    
-    window.adverbsAnswersBook3[idx] = val;
-    window.saveProgress();
+    window.showExerciseResult(score, adverbsPracticeBook1.length, "KẾT QUẢ BÀI 1 (TRẠNG TỪ TRONG TÀI LIỆU)");
 };
 
 window.submitAdverbsBook3 = function() {
-    adverbsPracticeBook3.forEach((_, i) => window.checkAdverbsBook3(i));
-};
-
-window.checkAdverbsBook4 = function(idx) {
-    const inputId = `adv_book4_${idx}`;
-    const expId = `advexp_book4_${idx}`;
-    const inputEl = document.getElementById(inputId);
-    const expEl = document.getElementById(expId);
-    
-    if (!inputEl || !expEl) return;
-    
-    const val = (inputEl.value || '').trim();
-    if (!val) {
-        expEl.style.display = 'block';
-        expEl.style.background = '#fef2f2';
-        expEl.style.color = '#ef4444';
-        expEl.innerHTML = 'Vui lòng nhập câu trả lời!';
-        return;
-    }
-    
-    const correctAnswers = adverbsPracticeBook4[idx].a;
-    const isCorrect = correctAnswers.some(ans => window.normalizeText(val) === window.normalizeText(ans));
-    
-    expEl.style.display = 'block';
-    if (isCorrect) {
-        expEl.style.background = '#dcfce7';
-        expEl.style.color = '#16a34a';
-        expEl.innerHTML = '<b>Chính xác!</b>';
-        inputEl.style.borderColor = '#16a34a';
-    } else {
-        expEl.style.background = '#fef2f2';
-        expEl.style.color = '#ef4444';
-        expEl.innerHTML = `<b>Chưa chính xác!</b><br>Đáp án gợi ý: <b>${correctAnswers[0]}</b>`;
-        inputEl.style.borderColor = '#ef4444';
-    }
-    
-    window.adverbsAnswersBook4[idx] = val;
-    window.saveProgress();
+    let score = 0;
+    adverbsPracticeBook3.forEach((q, i) => {
+        window.checkAdverbsBook3(i);
+        const val = (window.adverbsAnswersBook3[i] || '').trim();
+        if (val && q.a.some(ans => window.normalizeText(val) === window.normalizeText(ans))) {
+            score++;
+        }
+    });
+    window.showExerciseResult(score, adverbsPracticeBook3.length, "KẾT QUẢ EXERCISE 1 (TRẠNG TỪ)");
 };
 
 window.submitAdverbsBook4 = function() {
-    adverbsPracticeBook4.forEach((_, i) => window.checkAdverbsBook4(i));
-};
-
-
-
-const adverbsPracticeExtra3 = [
-    {
-        q: "Mary dances very <u style='color:inherit;'>beautiful</u>, so she won the <u style='color:inherit;'>first</u> prize <u style='color:inherit;'>in</u> the <u style='color:inherit;'>competition</u>.",
-        options: ["beautiful", "first", "in", "competition"],
-        a: "beautiful",
-        exp: "<b>beautiful</b> sai vì 'dances' là động từ thường nên phải dùng trạng từ <b>beautifully</b>."
-    },
-    {
-        q: "The <u style='color:inherit;'>new</u> employee works very <u style='color:inherit;'>hardly</u> <u style='color:inherit;'>to impress</u> his <u style='color:inherit;'>manager</u>.",
-        options: ["new", "hardly", "to impress", "manager"],
-        a: "hardly",
-        exp: "<b>hardly</b> sai vì nó mang nghĩa 'hầu như không'. Phải dùng trạng từ <b>hard</b> (chăm chỉ)."
-    },
-    {
-        q: "He plays the <u style='color:inherit;'>guitar</u> very <u style='color:inherit;'>good</u>, <u style='color:inherit;'>which</u> makes everyone <u style='color:inherit;'>admire</u> him.",
-        options: ["guitar", "good", "which", "admire"],
-        a: "good",
-        exp: "<b>good</b> sai vì nó là tính từ. Trạng từ của good là <b>well</b>."
-    },
-    {
-        q: "The dog <u style='color:inherit;'>barked</u> <u style='color:inherit;'>loud</u> when <u style='color:inherit;'>it</u> saw a <u style='color:inherit;'>stranger</u>.",
-        options: ["barked", "loud", "it", "stranger"],
-        a: "loud",
-        exp: "<b>loud</b> sai vì 'barked' là động từ thường. Phải dùng trạng từ <b>loudly</b>."
-    },
-    {
-        q: "She <u style='color:inherit;'>is</u> a <u style='color:inherit;'>carefully</u> driver <u style='color:inherit;'>who</u> never causes <u style='color:inherit;'>accidents</u>.",
-        options: ["is", "carefully", "who", "accidents"],
-        a: "carefully",
-        exp: "<b>carefully</b> sai vì 'driver' là danh từ, cần tính từ đứng trước để bổ nghĩa. Sửa thành <b>careful</b>."
-    }
-];
-
-window.checkAdverbsExtra1 = function(qIdx, optIdx, selectedOpt) {
-    window.adverbsAnswersExtra1[qIdx] = selectedOpt;
-    const buttons = document.querySelectorAll('.adv-extra1-btn-' + qIdx);
-    buttons.forEach(btn => {
-        btn.classList.remove('selected');
-        btn.style.background = 'white';
-        btn.style.color = 'var(--text-main)';
-        btn.style.borderColor = 'var(--border-color)';
+    let score = 0;
+    adverbsPracticeBook4.forEach((q, i) => {
+        window.checkAdverbsBook4(i);
+        const val = (window.adverbsAnswersBook4[i] || '').trim();
+        if (val && q.a.some(ans => window.normalizeText(val) === window.normalizeText(ans))) {
+            score++;
+        }
     });
-    
-    const selectedBtn = document.getElementById(`adv_extra1_btn_${qIdx}_${optIdx}`);
-    if (selectedBtn) {
-        selectedBtn.classList.add('selected');
-        selectedBtn.style.background = 'var(--primary-color)';
-        selectedBtn.style.color = 'white';
-        selectedBtn.style.borderColor = 'var(--primary-color)';
-    }
-}
+    window.showExerciseResult(score, adverbsPracticeBook4.length, "KẾT QUẢ EXERCISE 2 (TRẠNG TỪ)");
+};
 
 window.submitAdverbsExtra1 = function() {
     let score = 0;
@@ -7773,60 +7663,8 @@ window.submitAdverbsExtra1 = function() {
         expDiv.style.display = 'block';
     });
     window.saveProgress();
-    
-    if (score === adverbsPracticeExtra1.length) {
-        window.showCelebration('Xuất sắc! Bạn đã nắm vững cách dùng tính/trạng từ! 🎉');
-    }
-}
-
-window.checkAdverbsExtra2 = function(idx) {
-    const input = document.getElementById('adv_extra2_' + idx);
-    const expDiv = document.getElementById('advexp_extra2_' + idx);
-    if (!input || !expDiv) return;
-
-    const userAnswer = window.normalizeText(input.value);
-    window.adverbsAnswersExtra2[idx] = input.value;
-    window.saveProgress();
-
-    if (!userAnswer) {
-        expDiv.innerHTML = `<span style="color: #ea580c;">⚠️ Bạn chưa nhập câu trả lời.</span>`;
-        expDiv.style.display = 'block';
-        expDiv.style.background = '#fff7ed';
-        expDiv.style.border = '1px solid #fdba74';
-        return;
-    }
-
-    const correctAnswers = adverbsPracticeExtra2[idx].a;
-    let isCorrect = false;
-    for (let ans of correctAnswers) {
-        if (userAnswer === window.normalizeText(ans)) {
-            isCorrect = true;
-            break;
-        }
-    }
-
-    const formCheck = window.checkSentencePunctuation(input.value, isCorrect);
-
-    if (formCheck.valid) {
-        expDiv.innerHTML = `<span style="color: #16a34a;">✅ Tuyệt vời! Bạn dịch rất chuẩn.</span>`;
-        expDiv.style.background = '#f0fdf4';
-        expDiv.style.border = '1px solid #bbf7d0';
-    } else if (formCheck.isNear) {
-        expDiv.innerHTML = formCheck.message;
-        expDiv.style.background = '#fffbeb';
-        expDiv.style.border = '1px solid #fde68a';
-    } else {
-        expDiv.innerHTML = `
-            <span style="color: #dc2626;">❌ Chưa chính xác. Tham khảo đáp án:</span>
-            <ul style="color: #991b1b; margin-top: 8px; padding-left: 20px;">
-                ${correctAnswers.map(a => `<li>${a}</li>`).join('')}
-            </ul>
-        `;
-        expDiv.style.background = '#fef2f2';
-        expDiv.style.border = '1px solid #fecaca';
-    }
-    expDiv.style.display = 'block';
-}
+    window.showExerciseResult(score, adverbsPracticeExtra1.length, "KẾT QUẢ BÀI TẬP THÊM 1 (TRẠNG TỪ)");
+};
 
 window.submitAdverbsExtra2 = function() {
     let score = 0;
@@ -7846,31 +7684,8 @@ window.submitAdverbsExtra2 = function() {
             expDiv.style.border = '1px solid #fdba74';
         }
     });
-    
-    if (score === adverbsPracticeExtra2.length) {
-        window.showCelebration('Quá đỉnh! Kỹ năng dịch của bạn rất tốt! 🚀');
-    }
-}
-
-
-window.checkAdverbsExtra3 = function(qIdx, optIdx, selectedOpt) {
-    window.adverbsAnswersExtra3[qIdx] = selectedOpt;
-    const buttons = document.querySelectorAll('.adv-extra3-btn-' + qIdx);
-    buttons.forEach(btn => {
-        btn.classList.remove('selected');
-        btn.style.background = 'white';
-        btn.style.color = 'var(--text-main)';
-        btn.style.borderColor = 'var(--border-color)';
-    });
-    
-    const selectedBtn = document.getElementById(`adv_extra3_btn_${qIdx}_${optIdx}`);
-    if (selectedBtn) {
-        selectedBtn.classList.add('selected');
-        selectedBtn.style.background = 'var(--primary-color)';
-        selectedBtn.style.color = 'white';
-        selectedBtn.style.borderColor = 'var(--primary-color)';
-    }
-}
+    window.showExerciseResult(score, adverbsPracticeExtra2.length, "KẾT QUẢ BÀI TẬP THÊM 2 (TRẠNG TỪ)");
+};
 
 window.submitAdverbsExtra3 = function() {
     let score = 0;
@@ -7899,11 +7714,8 @@ window.submitAdverbsExtra3 = function() {
         expDiv.style.display = 'block';
     });
     window.saveProgress();
-    
-    if (score === adverbsPracticeExtra3.length) {
-        window.showCelebration('Kỹ năng phát hiện lỗi sai của bạn cực kỳ sắc bén! 🕵️‍♀️');
-    }
-}
+    window.showExerciseResult(score, adverbsPracticeExtra3.length, "KẾT QUẢ BÀI TẬP THÊM 3 (TRẠNG TỪ)");
+};
 
 window.renderAdverbsDetail = function(activeTab = 'theory') {
     const contentWrapper = document.getElementById('content-wrapper');
