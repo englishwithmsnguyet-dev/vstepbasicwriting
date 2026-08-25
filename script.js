@@ -779,11 +779,7 @@ function renderView(viewId) {
                         </li>
                     </ul>
                 </div>
-            
-            <div style="text-align: center; margin-top: 24px; margin-bottom: 40px;">
-                <button onclick="window.submitNouns3()" style="padding: 12px 32px; background: var(--primary-color); color: white; border: none; border-radius: 20px; font-weight: bold; cursor: pointer; transition: all 0.2s; font-size: 1.1rem; box-shadow: 0 4px 12px rgba(87,70,227,0.3);">NỘP BÀI 3</button>
             </div>
-</div>
         `;
         contentWrapper.innerHTML = html;
     }
@@ -2124,11 +2120,7 @@ window.renderStructuresDetail = function(tab = 'theory') {
         </div>
         <div style="margin-top: 36px;">
             ${contentHtml}
-        
-            <div style="text-align: center; margin-top: 24px; margin-bottom: 40px;">
-                <button onclick="window.submitNouns3()" style="padding: 12px 32px; background: var(--primary-color); color: white; border: none; border-radius: 20px; font-weight: bold; cursor: pointer; transition: all 0.2s; font-size: 1.1rem; box-shadow: 0 4px 12px rgba(87,70,227,0.3);">NỘP BÀI 3</button>
-            </div>
-</div>
+        </div>
     `;
 
     contentWrapper.innerHTML = html;
@@ -2281,11 +2273,7 @@ window.renderSingleStructure = function(idx) {
     });
 
     html += `
-        
-            <div style="text-align: center; margin-top: 24px; margin-bottom: 40px;">
-                <button onclick="window.submitNouns3()" style="padding: 12px 32px; background: var(--primary-color); color: white; border: none; border-radius: 20px; font-weight: bold; cursor: pointer; transition: all 0.2s; font-size: 1.1rem; box-shadow: 0 4px 12px rgba(87,70,227,0.3);">NỘP BÀI 3</button>
-            </div>
-</div>
+        </div>
     `;
 
     contentWrapper.innerHTML = html;
