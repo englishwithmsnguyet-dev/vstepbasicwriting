@@ -1683,27 +1683,27 @@ const verbsTheoryData = [
 
 
 const verbsPracticeBook1 = [
-    { q: "Tôi thường học bài vào buổi tối để chuẩn bị cho bài kiểm tra.", a: ["I usually study in the evening to prepare for the test.", "I usually study in the evening to prepare for the exam.", "I usually study in the evening to prepare for my test.", "I usually study in the evening to prepare for my exam.", "I often study in the evening to prepare for the test.", "I often study in the evening to prepare for the exam.", "I often study in the evening to prepare for my test.", "I often study in the evening to prepare for my exam."], hint: "<b>Thì:</b> Hiện tại đơn (Dấu hiệu: thường - usually / often).<br><b>Từ vựng:</b> học bài (study), chuẩn bị cho (prepare for), bài kiểm tra (test/exam)." },
-    { q: "Gia đình tôi đã sống ở thành phố này được hơn 10 năm.", a: ["My family has lived in this city for more than 10 years.", "My family have lived in this city for more than 10 years.", "My family has lived in this city for over 10 years."], hint: "<b>Thì:</b> Hiện tại hoàn thành (Dấu hiệu: được hơn 10 năm - for more than 10 years).<br><b>Từ vựng:</b> gia đình (family), sống (live), thành phố (city)." },
-    { q: "Tuần trước, tôi tham gia một khóa học kỹ năng mềm rất bổ ích.", a: ["Last week, I joined a very useful soft skills course.", "Last week, I attended a very useful soft skills course.", "Last week I joined a very useful soft skills course.", "Last week I attended a very useful soft skills course.", "Last week, I took a very useful soft skills course.", "Last week I took a very useful soft skills course."], hint: "<b>Thì:</b> Quá khứ đơn (Dấu hiệu: tuần trước - last week).<br><b>Từ vựng:</b> tham gia (join/attend/take), khóa học (course), kỹ năng mềm (soft skills), bổ ích (useful)." },
-    { q: "Bạn tôi sẽ thi tiếng Anh vào tháng sau, vì vậy cậu ấy học rất chăm chỉ mỗi ngày.", a: ["My friend will take an English exam next month, so he studies very hard every day.", "My friend will take an English test next month, so he studies very hard every day.", "My friend will take an English exam next month so he studies very hard every day.", "My friend will take an English test next month so he studies very hard every day."], hint: "<b>Thì:</b> Tương lai đơn (vế trước - vào tháng sau) và Hiện tại đơn (vế sau - mỗi ngày).<br><b>Từ vựng:</b> thi (take an exam/test), chăm chỉ (hard)." },
-    { q: "Nhiều học sinh không ngủ đủ giấc vì họ phải làm bài tập về nhà mỗi ngày.", a: ["Many students do not get enough sleep because they have to do homework every day.", "Many students do not get enough sleep because they have to do their homework every day.", "Many students do not have enough sleep because they need to do homework every day.", "Many students do not have enough sleep because they need to do their homework every day.", "Many students do not have enough sleep because they have to do homework every day.", "Many students do not get enough sleep because they need to do homework every day."], hint: "<b>Thì:</b> Hiện tại đơn.<br><b>Từ vựng:</b> học sinh (student), ngủ đủ giấc (get/have enough sleep), phải làm (have to / need to do), bài tập về nhà (homework)." }
+    { q: "Tôi thường học bài vào buổi tối để chuẩn bị cho bài kiểm tra.", a: ["I usually study in the evening to prepare for the test.", "I usually study in the evening to prepare for the exam.", "I usually study in the evening to prepare for my test.", "I usually study in the evening to prepare for my exam.", "I often study in the evening to prepare for the test.", "I often study in the evening to prepare for the exam.", "I often study in the evening to prepare for my test.", "I often study in the evening to prepare for my exam."], hint: "<div style='margin-bottom: 6px; line-height: 1.6;'>• <b>Thì:</b> Hiện tại đơn (Dấu hiệu: thường - usually / often).</div><div style='margin-bottom: 6px; line-height: 1.6;'>• <b>Từ vựng:</b> học bài (study), chuẩn bị cho (prepare for), bài kiểm tra (test/exam).</div>" },
+    { q: "Gia đình tôi đã sống ở thành phố này được hơn 10 năm.", a: ["My family has lived in this city for more than 10 years.", "My family have lived in this city for more than 10 years.", "My family has lived in this city for over 10 years."], hint: "<div style='margin-bottom: 6px; line-height: 1.6;'>• <b>Thì:</b> Hiện tại hoàn thành (Dấu hiệu: được hơn 10 năm - for more than 10 years).</div><div style='margin-bottom: 6px; line-height: 1.6;'>• <b>Từ vựng:</b> gia đình (family), sống (live), thành phố (city).</div>" },
+    { q: "Tuần trước, tôi tham gia một khóa học kỹ năng mềm rất bổ ích.", a: ["Last week, I joined a very useful soft skills course.", "Last week, I attended a very useful soft skills course.", "Last week I joined a very useful soft skills course.", "Last week I attended a very useful soft skills course.", "Last week, I took a very useful soft skills course.", "Last week I took a very useful soft skills course."], hint: "<div style='margin-bottom: 6px; line-height: 1.6;'>• <b>Thì:</b> Quá khứ đơn (Dấu hiệu: tuần trước - last week).</div><div style='margin-bottom: 6px; line-height: 1.6;'>• <b>Từ vựng:</b> tham gia (join/attend/take), khóa học (course), kỹ năng mềm (soft skills), bổ ích (useful).</div>" },
+    { q: "Bạn tôi sẽ thi tiếng Anh vào tháng sau, vì vậy cậu ấy học rất chăm chỉ mỗi ngày.", a: ["My friend will take an English exam next month, so he studies very hard every day.", "My friend will take an English test next month, so he studies very hard every day.", "My friend will take an English exam next month so he studies very hard every day.", "My friend will take an English test next month so he studies very hard every day."], hint: "<div style='margin-bottom: 6px; line-height: 1.6;'>• <b>Thì:</b> Tương lai đơn (vế trước - vào tháng sau) và Hiện tại đơn (vế sau - mỗi ngày).</div><div style='margin-bottom: 6px; line-height: 1.6;'>• <b>Từ vựng:</b> thi (take an exam/test), chăm chỉ (hard).</div>" },
+    { q: "Nhiều học sinh không ngủ đủ giấc vì họ phải làm bài tập về nhà mỗi ngày.", a: ["Many students do not get enough sleep because they have to do homework every day.", "Many students do not get enough sleep because they have to do their homework every day.", "Many students do not have enough sleep because they need to do homework every day.", "Many students do not have enough sleep because they need to do their homework every day.", "Many students do not have enough sleep because they have to do homework every day.", "Many students do not get enough sleep because they need to do homework every day."], hint: "<div style='margin-bottom: 6px; line-height: 1.6;'>• <b>Thì:</b> Hiện tại đơn.</div><div style='margin-bottom: 6px; line-height: 1.6;'>• <b>Từ vựng:</b> học sinh (student), ngủ đủ giấc (get/have enough sleep), phải làm (have to / need to do), bài tập về nhà (homework).</div>" }
 ];
 
 const verbsPracticeBook2 = [
-    { q: "Viết luận là phần quan trọng trong bài thi viết VSTEP.", a: ["Writing an essay is an important part of the VSTEP writing exam.", "Essay writing is an important part of the VSTEP writing exam.", "Writing an essay is an important part in the VSTEP writing exam.", "Writing an essay is an important part of the VSTEP writing test.", "Writing essays is an important part of the VSTEP writing exam.", "Writing essays is an important part in the VSTEP writing exam.", "Writing essays is an important part of the VSTEP writing test."], hint: "<b>Thì:</b> Hiện tại đơn (Động từ To-be).<br><b>Từ vựng:</b> viết luận (writing an essay / essay writing / writing essays), quan trọng (important), phần (part)." },
-    { q: "Trung tâm Anh ngữ River là nơi mà tôi đã học khoá học VSTEP vào năm ngoái.", a: ["River English Center is the place where I took a VSTEP course last year.", "River English Center is where I took a VSTEP course last year.", "The River English Center is the place where I took a VSTEP course last year."], hint: "<b>Thì:</b> Hiện tại đơn (vế trước) và Quá khứ đơn (vế sau - vào năm ngoái).<br><b>Từ vựng:</b> nơi (place/where), khóa học (course), học/tham gia (take)." },
-    { q: "Tôi nghĩ viết một lá thư không quá khó.", a: ["I think writing a letter is not too difficult.", "I think that writing a letter is not too difficult.", "I think writing a letter is not very difficult.", "I think writing letters is not too difficult.", "I think that writing letters is not too difficult.", "I think writing letters is not very difficult."], hint: "<b>Thì:</b> Hiện tại đơn (Cả 2 vế).<br><b>Từ vựng:</b> nghĩ (think), lá thư (a letter / letters), khó (difficult/hard)." },
-    { q: "Chúng tôi đã là bạn thân kể từ cấp 3.", a: ["We have been close friends since high school.", "We have been best friends since high school."], hint: "<b>Thì:</b> Hiện tại hoàn thành (Động từ To-be) (Dấu hiệu: kể từ - since).<br><b>Từ vựng:</b> bạn thân (close friends / best friends), cấp 3 (high school)." },
-    { q: "Tôi sẽ thành công trong kỳ thi VSTEP.", a: ["I will be successful in the VSTEP exam.", "I will be successful in the VSTEP test."], hint: "<b>Thì:</b> Tương lai đơn (Động từ To-be).<br><b>Từ vựng:</b> thành công (successful)." }
+    { q: "Viết luận là phần quan trọng trong bài thi viết VSTEP.", a: ["Writing an essay is an important part of the VSTEP writing exam.", "Essay writing is an important part of the VSTEP writing exam.", "Writing an essay is an important part in the VSTEP writing exam.", "Writing an essay is an important part of the VSTEP writing test.", "Writing essays is an important part of the VSTEP writing exam.", "Writing essays is an important part in the VSTEP writing exam.", "Writing essays is an important part of the VSTEP writing test."], hint: "<div style='margin-bottom: 6px; line-height: 1.6;'>• <b>Thì:</b> Hiện tại đơn (Động từ To-be).</div><div style='margin-bottom: 6px; line-height: 1.6;'>• <b>Từ vựng:</b> viết luận (writing an essay / essay writing / writing essays), quan trọng (important), phần (part).</div>" },
+    { q: "Trung tâm Anh ngữ River là nơi mà tôi đã học khoá học VSTEP vào năm ngoái.", a: ["River English Center is the place where I took a VSTEP course last year.", "River English Center is where I took a VSTEP course last year.", "The River English Center is the place where I took a VSTEP course last year."], hint: "<div style='margin-bottom: 6px; line-height: 1.6;'>• <b>Thì:</b> Hiện tại đơn (vế trước) và Quá khứ đơn (vế sau - vào năm ngoái).</div><div style='margin-bottom: 6px; line-height: 1.6;'>• <b>Từ vựng:</b> nơi (place/where), khóa học (course), học/tham gia (take).</div>" },
+    { q: "Tôi nghĩ viết một lá thư không quá khó.", a: ["I think writing a letter is not too difficult.", "I think that writing a letter is not too difficult.", "I think writing a letter is not very difficult.", "I think writing letters is not too difficult.", "I think that writing letters is not too difficult.", "I think writing letters is not very difficult."], hint: "<div style='margin-bottom: 6px; line-height: 1.6;'>• <b>Thì:</b> Hiện tại đơn (Cả 2 vế).</div><div style='margin-bottom: 6px; line-height: 1.6;'>• <b>Từ vựng:</b> nghĩ (think), lá thư (a letter / letters), khó (difficult/hard).</div>" },
+    { q: "Chúng tôi đã là bạn thân kể từ cấp 3.", a: ["We have been close friends since high school.", "We have been best friends since high school."], hint: "<div style='margin-bottom: 6px; line-height: 1.6;'>• <b>Thì:</b> Hiện tại hoàn thành (Động từ To-be) (Dấu hiệu: kể từ - since).</div><div style='margin-bottom: 6px; line-height: 1.6;'>• <b>Từ vựng:</b> bạn thân (close friends / best friends), cấp 3 (high school).</div>" },
+    { q: "Tôi sẽ thành công trong kỳ thi VSTEP.", a: ["I will be successful in the VSTEP exam.", "I will be successful in the VSTEP test."], hint: "<div style='margin-bottom: 6px; line-height: 1.6;'>• <b>Thì:</b> Tương lai đơn (Động từ To-be).</div><div style='margin-bottom: 6px; line-height: 1.6;'>• <b>Từ vựng:</b> thành công (successful).</div>" }
 ];
 
 const verbsPracticeBook3 = [
-    { q: "Việc đọc sách có thể giúp tôi mở rộng kiến thức của mình.", a: ["Reading books can help me broaden my knowledge.", "Reading books can help me expand my knowledge.", "Reading books can help me widen my knowledge.", "Reading can help me broaden my knowledge.", "Reading can help me expand my knowledge.", "Reading can help me widen my knowledge."], hint: "<b>Động từ khiếm khuyết:</b> có thể (can / could).<br><b>Từ vựng:</b> việc đọc sách (reading books / reading), giúp (help), mở rộng (broaden / expand / widen), kiến thức (knowledge)." },
-    { q: "Bạn nên học từ vựng Tiếng Anh mỗi ngày để cải thiện kỹ năng đọc của bạn.", a: ["You should learn English vocabulary every day to improve your reading skills.", "You should study English vocabulary every day to improve your reading skills.", "You should learn English vocabulary every day to improve your reading skill.", "You should study English vocabulary every day to improve your reading skill."], hint: "<b>Động từ khiếm khuyết:</b> nên (should).<br><b>Từ vựng:</b> từ vựng (vocabulary), cải thiện (improve), kỹ năng đọc (reading skills)." },
-    { q: "Tôi sẽ nộp bài luận của mình vào ngày mai.", a: ["I will submit my essay tomorrow.", "I will hand in my essay tomorrow."], hint: "<b>Động từ khiếm khuyết:</b> sẽ (will).<br><b>Từ vựng:</b> nộp (submit / hand in), bài luận (essay)." },
-    { q: "Chúng ta không nên sao chép ý tưởng trên mạng.", a: ["We should not copy ideas from the Internet.", "We should not copy ideas on the Internet."], hint: "<b>Động từ khiếm khuyết:</b> không nên (should not).<br><b>Từ vựng:</b> sao chép (copy), ý tưởng (ideas), trên mạng (from the Internet / on the Internet)." },
-    { q: "Bạn có thể luyện viết mỗi ngày nếu bạn muốn giỏi kỹ năng viết.", a: ["You can practice writing every day if you want to be good at writing skills.", "You can practice writing every day if you want to be good at writing.", "You can practice writing every day if you want to be good at writing skill."], hint: "<b>Động từ khiếm khuyết:</b> có thể (can).<br><b>Từ vựng:</b> luyện tập (practice), giỏi (good at), kỹ năng viết (writing skills)." }
+    { q: "Việc đọc sách có thể giúp tôi mở rộng kiến thức của mình.", a: ["Reading books can help me broaden my knowledge.", "Reading books can help me expand my knowledge.", "Reading books can help me widen my knowledge.", "Reading can help me broaden my knowledge.", "Reading can help me expand my knowledge.", "Reading can help me widen my knowledge."], hint: "<div style='margin-bottom: 6px; line-height: 1.6;'>• <b>Động từ khiếm khuyết:</b> có thể (can / could).</div><div style='margin-bottom: 6px; line-height: 1.6;'>• <b>Từ vựng:</b> việc đọc sách (reading books / reading), giúp (help), mở rộng (broaden / expand / widen), kiến thức (knowledge).</div>" },
+    { q: "Bạn nên học từ vựng Tiếng Anh mỗi ngày để cải thiện kỹ năng đọc của bạn.", a: ["You should learn English vocabulary every day to improve your reading skills.", "You should study English vocabulary every day to improve your reading skills.", "You should learn English vocabulary every day to improve your reading skill.", "You should study English vocabulary every day to improve your reading skill."], hint: "<div style='margin-bottom: 6px; line-height: 1.6;'>• <b>Động từ khiếm khuyết:</b> nên (should).</div><div style='margin-bottom: 6px; line-height: 1.6;'>• <b>Từ vựng:</b> từ vựng (vocabulary), cải thiện (improve), kỹ năng đọc (reading skills).</div>" },
+    { q: "Tôi sẽ nộp bài luận của mình vào ngày mai.", a: ["I will submit my essay tomorrow.", "I will hand in my essay tomorrow."], hint: "<div style='margin-bottom: 6px; line-height: 1.6;'>• <b>Động từ khiếm khuyết:</b> sẽ (will).</div><div style='margin-bottom: 6px; line-height: 1.6;'>• <b>Từ vựng:</b> nộp (submit / hand in), bài luận (essay).</div>" },
+    { q: "Chúng ta không nên sao chép ý tưởng trên mạng.", a: ["We should not copy ideas from the Internet.", "We should not copy ideas on the Internet."], hint: "<div style='margin-bottom: 6px; line-height: 1.6;'>• <b>Động từ khiếm khuyết:</b> không nên (should not).</div><div style='margin-bottom: 6px; line-height: 1.6;'>• <b>Từ vựng:</b> sao chép (copy), ý tưởng (ideas), trên mạng (from the Internet / on the Internet).</div>" },
+    { q: "Bạn có thể luyện viết mỗi ngày nếu bạn muốn giỏi kỹ năng viết.", a: ["You can practice writing every day if you want to be good at writing skills.", "You can practice writing every day if you want to be good at writing.", "You can practice writing every day if you want to be good at writing skill."], hint: "<div style='margin-bottom: 6px; line-height: 1.6;'>• <b>Động từ khiếm khuyết:</b> có thể (can).</div><div style='margin-bottom: 6px; line-height: 1.6;'>• <b>Từ vựng:</b> luyện tập (practice), giỏi (good at), kỹ năng viết (writing skills).</div>" }
 ];
 
 
@@ -1725,7 +1725,7 @@ const verbsPracticeBook4 = [
     { q: "Những bài luận này rất hữu ích cho kỳ thi viết VSTEP.", a: ["These essays are very useful for the VSTEP writing test.", "These essays are very useful for the VSTEP writing exam.", "These essays are very helpful for the VSTEP writing test.", "These essays are very helpful for the VSTEP writing exam."], hint: "<b>Từ vựng:</b> những bài luận này (these essays), hữu ích (useful / helpful), kỳ thi viết VSTEP (VSTEP writing test / VSTEP writing exam)." },
     { q: "Tôi hi vọng bạn sẽ đạt điểm cao trong kỳ thi này.", a: ["I hope you will get a high score in this exam.", "I hope you will get a high score in this test.", "I hope you will achieve a high score in this exam.", "I hope you will achieve a high score in this test."], hint: "<b>Từ vựng:</b> hi vọng (hope), đạt điểm cao (get a high score / achieve a high score), trong kỳ thi này (in this exam / in this test)." },
     { q: "Chúng tôi đã cố gắng hết sức để hoàn thành bài thuyết trình đúng hạn.", a: ["We tried our best to finish the presentation on time.", "We tried our best to complete the presentation on time.", "We have tried our best to finish the presentation on time.", "We have tried our best to complete the presentation on time."], hint: "<b>Từ vựng:</b> cố gắng hết sức (try our best), hoàn thành (finish / complete), bài thuyết trình (presentation), đúng hạn (on time)." },
-    { q: "Chúng tôi vừa mới hoàn thành bản kế hoạch cho dự án của nhóm.", a: ["We have just finished the plan for our group's project.", "We have just completed the plan for our group's project.", "We have just finished the plan for our group project.", "We have just completed the plan for our group project."], hint: "<b>Thì:</b> Hiện tại hoàn thành (Dấu hiệu: vừa mới - just).<br><b>Từ vựng:</b> hoàn thành (finish / complete), bản kế hoạch (the plan), dự án của nhóm (our group's project)." },
+    { q: "Chúng tôi vừa mới hoàn thành bản kế hoạch cho dự án của nhóm.", a: ["We have just finished the plan for our group's project.", "We have just completed the plan for our group's project.", "We have just finished the plan for our group project.", "We have just completed the plan for our group project."], hint: "<div style='margin-bottom: 6px; line-height: 1.6;'>• <b>Thì:</b> Hiện tại hoàn thành (Dấu hiệu: vừa mới - just).</div><div style='margin-bottom: 6px; line-height: 1.6;'>• <b>Từ vựng:</b> hoàn thành (finish / complete), bản kế hoạch (the plan), dự án của nhóm (our group's project).</div>" },
     { q: "Tôi thường luyện nói tiếng Anh với bạn cùng lớp sau giờ học.", a: ["I usually practice speaking English with my classmates after school.", "I usually practice speaking English with my classmates after class.", "I often practice speaking English with my classmates after school.", "I often practice speaking English with my classmates after class."], hint: "<b>Từ vựng:</b> thường (usually / often), luyện nói (practice speaking), bạn cùng lớp (classmates), sau giờ học (after school / after class)." },
     { q: "Tôi không thể tham gia buổi học vì tôi bị ốm hôm qua.", a: ["I could not join the class because I was sick yesterday.", "I couldn't join the class because I was sick yesterday.", "I could not attend the class because I was sick yesterday.", "I couldn't attend the class because I was sick yesterday."], hint: "<b>Từ vựng:</b> không thể (could not / couldn't), tham gia buổi học (join the class / attend the class), vì (because), bị ốm (sick / ill), hôm qua (yesterday)." },
     { q: "Tôi thích đọc sách tiếng Anh và viết nhật ký bằng tiếng Anh trong thời gian rảnh.", a: ["I like reading English books and writing diaries in English in my free time.", "I like reading English books and writing a diary in English in my free time.", "I enjoy reading English books and writing diaries in English in my free time.", "I enjoy reading English books and writing a diary in English in my free time.", "I like to read English books and write diaries in English in my free time.", "I like to read English books and write a diary in English in my free time."], hint: "<b>Từ vựng:</b> thích (like / enjoy), đọc sách (reading English books / to read English books), viết nhật ký (writing diaries / to write diaries), bằng tiếng Anh (in English), trong thời gian rảnh (in my free time)." },
@@ -8523,7 +8523,7 @@ const conjunctionsPracticeBook1 = [
             "Because I want to save money, I often use public transport.",
             "Because I want to save money, I usually use public transport."
         ],
-        hint: "<b>Liên từ:</b> bởi vì (because)<br><b>Từ vựng:</b> phương tiện công cộng (public transportation / public transport), tiết kiệm tiền (save money)."
+        hint: "<div style='margin-bottom: 6px; line-height: 1.6;'>• <b>Liên từ:</b> bởi vì (because)</div><div style='margin-bottom: 6px; line-height: 1.6;'>• <b>Từ vựng:</b> phương tiện công cộng (public transportation / public transport), tiết kiệm tiền (save money).</div>"
     },
     {
         q: "Khi bạn đến Cần Thơ, bạn có thể ghé thăm Bến Ninh Kiều, Chợ nổi Cái Răng và Làng du lịch Mỹ Khánh.",
@@ -8535,7 +8535,7 @@ const conjunctionsPracticeBook1 = [
             "You can visit Ninh Kieu Quay, Cai Rang Floating Market, and My Khanh Tourist Village when you come to Can Tho.",
             "You can visit Ninh Kieu Wharf, Cai Rang Floating Market, and My Khanh Tourist Village when you come to Can Tho."
         ],
-        hint: "<b>Liên từ:</b> khi (when), và (and)<br><b>Từ vựng:</b> Bến Ninh Kiều (Ninh Kieu Quay / Ninh Kieu Wharf), Chợ nổi Cái Răng (Cai Rang Floating Market), Làng du lịch Mỹ Khánh (My Khanh Tourist Village)."
+        hint: "<div style='margin-bottom: 6px; line-height: 1.6;'>• <b>Liên từ:</b> khi (when), và (and)</div><div style='margin-bottom: 6px; line-height: 1.6;'>• <b>Từ vựng:</b> Bến Ninh Kiều (Ninh Kieu Quay / Ninh Kieu Wharf), Chợ nổi Cái Răng (Cai Rang Floating Market), Làng du lịch Mỹ Khánh (My Khanh Tourist Village).</div>"
     },
     {
         q: "Việc xem phim có thể giúp chúng ta giải toả căng thẳng, nhưng xem phim quá nhiều có ảnh hưởng tiêu cực lên mắt của chúng ta.",
@@ -8548,7 +8548,7 @@ const conjunctionsPracticeBook1 = [
             "Watching films can help us relieve stress, but watching too much has a negative impact on our eyes.",
             "Watching movies can help us reduce stress, but watching too many movies has negative effects on our eyes."
         ],
-        hint: "<b>Liên từ:</b> nhưng (but)<br><b>Từ vựng:</b> giải tỏa căng thẳng (reduce stress / relieve stress), có ảnh hưởng tiêu cực lên (has negative effects on / has a negative impact on), mắt (our eyes)."
+        hint: "<div style='margin-bottom: 6px; line-height: 1.6;'>• <b>Liên từ:</b> nhưng (but)</div><div style='margin-bottom: 6px; line-height: 1.6;'>• <b>Từ vựng:</b> giải tỏa căng thẳng (reduce stress / relieve stress), có ảnh hưởng tiêu cực lên (has negative effects on / has a negative impact on), mắt (our eyes).</div>"
     },
     {
         q: "Mặc dù việc học tiếng Anh rất khó, nhưng tôi vẫn luôn cố gắng hết sức mình.",
@@ -8562,7 +8562,7 @@ const conjunctionsPracticeBook1 = [
             "Even though learning English is very difficult, I always try my best.",
             "Even though studying English is very difficult, I always try my best."
         ],
-        hint: "<b>Liên từ:</b> mặc dù (although / even though) - <i>Lưu ý: trong tiếng Anh khi dùng Although thì KHÔNG dùng but!</i><br><b>Từ vựng:</b> việc học tiếng Anh (learning/studying English), rất khó (very difficult/hard), cố gắng hết sức (try my best)."
+        hint: "<div style='margin-bottom: 6px; line-height: 1.6;'>• <b>Liên từ:</b> mặc dù (although / even though) - <i>Lưu ý: trong tiếng Anh khi dùng Although thì KHÔNG dùng but!</i></div><div style='margin-bottom: 6px; line-height: 1.6;'>• <b>Từ vựng:</b> việc học tiếng Anh (learning/studying English), rất khó (very difficult/hard), cố gắng hết sức (try my best).</div>"
     },
     {
         q: "Thư viện thì rất gần nhà tôi, vì vậy tôi có thể đi bộ đến đó.",
@@ -8572,7 +8572,7 @@ const conjunctionsPracticeBook1 = [
             "The library is close to my house, so I can walk there.",
             "The library is near my house, so I can walk there."
         ],
-        hint: "<b>Liên từ:</b> vì vậy (so - nhớ có dấu phẩy phía trước)<br><b>Từ vựng:</b> gần nhà tôi (very close to / very near my house), đi bộ đến đó (walk there)."
+        hint: "<div style='margin-bottom: 6px; line-height: 1.6;'>• <b>Liên từ:</b> vì vậy (so - nhớ có dấu phẩy phía trước)</div><div style='margin-bottom: 6px; line-height: 1.6;'>• <b>Từ vựng:</b> gần nhà tôi (very close to / very near my house), đi bộ đến đó (walk there).</div>"
     }
 ];
 
@@ -8700,7 +8700,7 @@ const conjunctionsPracticeBook3 = [
             "I like walking in my free time to improve my health. In addition, I also read books to clear my mind.",
             "I enjoy walking in my free time to improve my health. In addition, I also read books to clear my mind."
         ],
-        hint: "<b>Từ liên kết (Thêm ý):</b> In addition, / Moreover, / Furthermore,<br><b>Từ vựng:</b> đi tản bộ (going for a walk / walking), cải thiện sức khỏe (improve my health), thư giãn đầu óc (clear my mind / relax my mind)."
+        hint: "<div style='margin-bottom: 6px; line-height: 1.6;'>• <b>Từ liên kết (Thêm ý):</b> In addition, / Moreover, / Furthermore,</div><div style='margin-bottom: 6px; line-height: 1.6;'>• <b>Từ vựng:</b> đi tản bộ (going for a walk / walking), cải thiện sức khỏe (improve my health), thư giãn đầu óc (clear my mind / relax my mind).</div>"
     },
     {
         q: "Việc du học có thể mang lại nhiều lợi ích. Học sinh có thể mở rộng kiến thức và có nhiều trải nghiệm mới.",
@@ -8712,7 +8712,7 @@ const conjunctionsPracticeBook3 = [
             "Studying abroad can bring many benefits. For instance, students can broaden their knowledge and gain many new experiences.",
             "Studying abroad can bring a lot of benefits. For instance, students can widen their knowledge and gain many new experiences."
         ],
-        hint: "<b>Từ liên kết (Ví dụ):</b> For example, / For instance,<br><b>Từ vựng:</b> du học (studying abroad), mang lại nhiều lợi ích (bring many benefits), mở rộng kiến thức (widen/broaden their knowledge), có trải nghiệm mới (gain/have new experiences)."
+        hint: "<div style='margin-bottom: 6px; line-height: 1.6;'>• <b>Từ liên kết (Ví dụ):</b> For example, / For instance,</div><div style='margin-bottom: 6px; line-height: 1.6;'>• <b>Từ vựng:</b> du học (studying abroad), mang lại nhiều lợi ích (bring many benefits), mở rộng kiến thức (widen/broaden their knowledge), có trải nghiệm mới (gain/have new experiences).</div>"
     },
     {
         q: "Ô nhiễm môi trường là một vấn đề nghiêm trọng. Chúng ta cần có giải pháp phù hợp để giải quyết vấn đề này.",
@@ -8723,7 +8723,7 @@ const conjunctionsPracticeBook3 = [
             "Environmental pollution is a serious problem. Therefore, we need suitable solutions to solve this issue.",
             "Environmental pollution is a serious problem. Consequently, we need to have suitable solutions to solve this issue."
         ],
-        hint: "<b>Từ liên kết (Kết quả):</b> Therefore, / As a result, / Consequently,<br><b>Từ vựng:</b> ô nhiễm môi trường (environmental pollution), vấn đề nghiêm trọng (serious problem/issue), giải pháp phù hợp (suitable solutions), giải quyết (solve/address)."
+        hint: "<div style='margin-bottom: 6px; line-height: 1.6;'>• <b>Từ liên kết (Kết quả):</b> Therefore, / As a result, / Consequently,</div><div style='margin-bottom: 6px; line-height: 1.6;'>• <b>Từ vựng:</b> ô nhiễm môi trường (environmental pollution), vấn đề nghiêm trọng (serious problem/issue), giải pháp phù hợp (suitable solutions), giải quyết (solve/address).</div>"
     },
     {
         q: "Việc sử dụng phương tiện cá nhân thì rất tiện lợi. Phương tiện cá nhân có thể gây ô nhiễm môi trường.",
@@ -8734,7 +8734,7 @@ const conjunctionsPracticeBook3 = [
             "Using private transport is very convenient. However, it can cause environmental pollution.",
             "Using private transportation is very convenient. Nevertheless, private vehicles can cause environmental pollution."
         ],
-        hint: "<b>Từ liên kết (Tương phản):</b> However, / Nevertheless, / On the other hand,<br><b>Từ vựng:</b> phương tiện cá nhân (private transportation / private vehicles), tiện lợi (convenient), gây ô nhiễm (cause environmental pollution)."
+        hint: "<div style='margin-bottom: 6px; line-height: 1.6;'>• <b>Từ liên kết (Tương phản):</b> However, / Nevertheless, / On the other hand,</div><div style='margin-bottom: 6px; line-height: 1.6;'>• <b>Từ vựng:</b> phương tiện cá nhân (private transportation / private vehicles), tiện lợi (convenient), gây ô nhiễm (cause environmental pollution).</div>"
     },
     {
         q: "Chơi thể thao là một cách hiệu quả để giảm cân và giữ dáng. Nó có thể giúp chúng ta kết bạn mới.",
@@ -8745,7 +8745,7 @@ const conjunctionsPracticeBook3 = [
             "Playing sports is an effective way to lose weight and keep fit. Furthermore, it can help us make new friends.",
             "Playing sports is an effective way to lose weight and stay in shape. In addition, it can help us make new friends."
         ],
-        hint: "<b>Từ liên kết (Thêm ý):</b> Moreover, / In addition, / Furthermore,<br><b>Từ vựng:</b> cách hiệu quả (an effective way), giảm cân (lose weight), giữ dáng (keep fit / stay in shape), kết bạn mới (make new friends)."
+        hint: "<div style='margin-bottom: 6px; line-height: 1.6;'>• <b>Từ liên kết (Thêm ý):</b> Moreover, / In addition, / Furthermore,</div><div style='margin-bottom: 6px; line-height: 1.6;'>• <b>Từ vựng:</b> cách hiệu quả (an effective way), giảm cân (lose weight), giữ dáng (keep fit / stay in shape), kết bạn mới (make new friends).</div>"
     },
     {
         q: "Việc sử dụng các thiết bị điện tử quá nhiều có một vài tác hại. Trẻ em sử dụng điện thoại quá nhiều có thể bị những vấn đề về mắt.",
@@ -8756,7 +8756,7 @@ const conjunctionsPracticeBook3 = [
             "Using electronic devices too much can have some negative effects. For example, children who use phones excessively can experience eye problems.",
             "Using electronic devices too much can have several harmful effects. For instance, children who use phones excessively can experience eye problems."
         ],
-        hint: "<b>Từ liên kết (Ví dụ):</b> For instance, / For example,<br><b>Từ vựng:</b> thiết bị điện tử (electronic devices), tác hại (negative effects / harmful effects), quá mức (excessively / too much), vấn đề về mắt (eye problems)."
+        hint: "<div style='margin-bottom: 6px; line-height: 1.6;'>• <b>Từ liên kết (Ví dụ):</b> For instance, / For example,</div><div style='margin-bottom: 6px; line-height: 1.6;'>• <b>Từ vựng:</b> thiết bị điện tử (electronic devices), tác hại (negative effects / harmful effects), quá mức (excessively / too much), vấn đề về mắt (eye problems).</div>"
     }
 ];
 
@@ -8824,7 +8824,7 @@ const conjunctionsPracticeExtra2 = [
             "Online learning is very flexible. However, it requires students to be highly self-disciplined.",
             "Studying online is flexible. However, it requires students to have high self-discipline."
         ],
-        hint: "<b>Từ liên kết:</b> Tuy nhiên (However, - đứng đầu câu thứ 2)<br><b>Từ vựng:</b> linh hoạt (flexible), đòi hỏi (require), tính tự giác cao (high self-discipline)."
+        hint: "<div style='margin-bottom: 6px; line-height: 1.6;'>• <b>Từ liên kết:</b> Tuy nhiên (However, - đứng đầu câu thứ 2)</div><div style='margin-bottom: 6px; line-height: 1.6;'>• <b>Từ vựng:</b> linh hoạt (flexible), đòi hỏi (require), tính tự giác cao (high self-discipline).</div>"
     },
     {
         q: "Không những anh ấy thông minh mà anh ấy còn rất chăm chỉ.",
@@ -8834,7 +8834,7 @@ const conjunctionsPracticeExtra2 = [
             "He is not only intelligent but also very diligent.",
             "He is not only smart but also very diligent."
         ],
-        hint: "<b>Liên từ tương quan:</b> not only ... but also ...<br><b>Từ vựng:</b> thông minh (intelligent / smart), chăm chỉ (hard-working / diligent)."
+        hint: "<div style='margin-bottom: 6px; line-height: 1.6;'>• <b>Liên từ tương quan:</b> not only ... but also ...</div><div style='margin-bottom: 6px; line-height: 1.6;'>• <b>Từ vựng:</b> thông minh (intelligent / smart), chăm chỉ (hard-working / diligent).</div>"
     },
     {
         q: "Chúng ta nên trồng nhiều cây xanh để bảo vệ môi trường sống.",
@@ -8845,7 +8845,7 @@ const conjunctionsPracticeExtra2 = [
             "We should plant more green trees in order to protect the living environment.",
             "We should plant more trees to protect our living environment."
         ],
-        hint: "<b>Liên từ chỉ mục đích:</b> để (so that + mệnh đề / in order to + Vo / so as to + Vo)<br><b>Từ vựng:</b> trồng nhiều cây xanh (plant more trees), bảo vệ môi trường sống (protect our living environment)."
+        hint: "<div style='margin-bottom: 6px; line-height: 1.6;'>• <b>Liên từ chỉ mục đích:</b> để (so that + mệnh đề / in order to + Vo / so as to + Vo)</div><div style='margin-bottom: 6px; line-height: 1.6;'>• <b>Từ vựng:</b> trồng nhiều cây xanh (plant more trees), bảo vệ môi trường sống (protect our living environment).</div>"
     },
     {
         q: "Nhiều người trẻ thích sống ở thành phố lớn vì có nhiều cơ hội việc làm hơn.",
@@ -8856,7 +8856,7 @@ const conjunctionsPracticeExtra2 = [
             "Many young people like living in big cities since there are more job opportunities.",
             "Many young people like living in big cities as there are more job opportunities."
         ],
-        hint: "<b>Liên từ chỉ nguyên nhân:</b> bởi vì (because / since / as)<br><b>Từ vựng:</b> người trẻ (young people), thành phố lớn (big cities), cơ hội việc làm (job opportunities)."
+        hint: "<div style='margin-bottom: 6px; line-height: 1.6;'>• <b>Liên từ chỉ nguyên nhân:</b> bởi vì (because / since / as)</div><div style='margin-bottom: 6px; line-height: 1.6;'>• <b>Từ vựng:</b> người trẻ (young people), thành phố lớn (big cities), cơ hội việc làm (job opportunities).</div>"
     },
     {
         q: "Tóm lại, việc duy trì lối sống lành mạnh là vô cùng quan trọng đối với mọi người.",
@@ -8867,7 +8867,7 @@ const conjunctionsPracticeExtra2 = [
             "Overall, maintaining a healthy lifestyle is extremely important for everyone.",
             "In summary, maintaining a healthy lifestyle is extremely important for everyone."
         ],
-        hint: "<b>Từ liên kết kết luận:</b> Tóm lại (In conclusion, / To sum up,)<br><b>Từ vựng:</b> duy trì lối sống lành mạnh (maintaining a healthy lifestyle), vô cùng quan trọng (extremely important / crucial), đối với mọi người (for everyone)."
+        hint: "<div style='margin-bottom: 6px; line-height: 1.6;'>• <b>Từ liên kết kết luận:</b> Tóm lại (In conclusion, / To sum up,)</div><div style='margin-bottom: 6px; line-height: 1.6;'>• <b>Từ vựng:</b> duy trì lối sống lành mạnh (maintaining a healthy lifestyle), vô cùng quan trọng (extremely important / crucial), đối với mọi người (for everyone).</div>"
     }
 ];
 
