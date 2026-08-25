@@ -3658,8 +3658,12 @@ window.renderNounsDetail = function(activeTab = 'theory') {
         <span style="color: #1e293b; font-weight: 600; font-style: italic; white-space: nowrap; text-align: right;">quan trọng</span>
     </div>
                             <div style="background: white; padding: 8px 14px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
-        <span style="white-space: nowrap;">• <b style="color: var(--primary-color); font-size: 1.05rem; font-weight: 800;">soft skill</b> <span style="color: #64748b; font-size: 0.9rem; font-weight: 600;">(n)</span>:</span>
-        <span style="color: #1e293b; font-weight: 600; font-style: italic; white-space: nowrap; text-align: right;">kỹ năng mềm</span>
+        <span style="white-space: nowrap;">• <b style="color: var(--primary-color); font-size: 1.05rem; font-weight: 800;">soft</b> <span style="color: #64748b; font-size: 0.9rem; font-weight: 600;">(adj)</span>:</span>
+        <span style="color: #1e293b; font-weight: 600; font-style: italic; white-space: nowrap; text-align: right;">mềm</span>
+    </div>
+                            <div style="background: white; padding: 8px 14px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+        <span style="white-space: nowrap;">• <b style="color: var(--primary-color); font-size: 1.05rem; font-weight: 800;">skill</b> <span style="color: #64748b; font-size: 0.9rem; font-weight: 600;">(n)</span>:</span>
+        <span style="color: #1e293b; font-weight: 600; font-style: italic; white-space: nowrap; text-align: right;">kỹ năng</span>
     </div>
                             <div style="background: white; padding: 8px 14px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
         <span style="white-space: nowrap;">• <b style="color: var(--primary-color); font-size: 1.05rem; font-weight: 800;">cause</b> <span style="color: #64748b; font-size: 0.9rem; font-weight: 600;">(n)</span>:</span>
@@ -3969,8 +3973,12 @@ window.renderNounsDetail = function(activeTab = 'theory') {
         <span style="color: #1e293b; font-weight: 600; font-style: italic; white-space: nowrap; text-align: right;">dịch vụ</span>
     </div>
                             <div style="background: white; padding: 8px 14px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
-        <span style="white-space: nowrap;">• <b style="color: var(--primary-color); font-size: 1.05rem; font-weight: 800;">healthcare</b> <span style="color: #64748b; font-size: 0.9rem; font-weight: 600;">(n)</span>:</span>
-        <span style="color: #1e293b; font-weight: 600; font-style: italic; white-space: nowrap; text-align: right;">chăm sóc sức khỏe</span>
+        <span style="white-space: nowrap;">• <b style="color: var(--primary-color); font-size: 1.05rem; font-weight: 800;">health / healthcare</b> <span style="color: #64748b; font-size: 0.9rem; font-weight: 600;">(n)</span>:</span>
+        <span style="color: #1e293b; font-weight: 600; font-style: italic; white-space: nowrap; text-align: right;">sức khỏe / y tế</span>
+    </div>
+                            <div style="background: white; padding: 8px 14px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+        <span style="white-space: nowrap;">• <b style="color: var(--primary-color); font-size: 1.05rem; font-weight: 800;">care</b> <span style="color: #64748b; font-size: 0.9rem; font-weight: 600;">(n)</span>:</span>
+        <span style="color: #1e293b; font-weight: 600; font-style: italic; white-space: nowrap; text-align: right;">sự chăm sóc</span>
     </div>
                             <div style="background: white; padding: 8px 14px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
         <span style="white-space: nowrap;">• <b style="color: var(--primary-color); font-size: 1.05rem; font-weight: 800;">program</b> <span style="color: #64748b; font-size: 0.9rem; font-weight: 600;">(n)</span>:</span>
@@ -4021,8 +4029,12 @@ window.renderNounsDetail = function(activeTab = 'theory') {
         <span style="color: #1e293b; font-weight: 600; font-style: italic; white-space: nowrap; text-align: right;">chất lượng</span>
     </div>
                             <div style="background: white; padding: 8px 14px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
-        <span style="white-space: nowrap;">• <b style="color: var(--primary-color); font-size: 1.05rem; font-weight: 800;">higher education</b> <span style="color: #64748b; font-size: 0.9rem; font-weight: 600;">(n)</span>:</span>
-        <span style="color: #1e293b; font-weight: 600; font-style: italic; white-space: nowrap; text-align: right;">giáo dục đại học</span>
+        <span style="white-space: nowrap;">• <b style="color: var(--primary-color); font-size: 1.05rem; font-weight: 800;">higher</b> <span style="color: #64748b; font-size: 0.9rem; font-weight: 600;">(adj)</span>:</span>
+        <span style="color: #1e293b; font-weight: 600; font-style: italic; white-space: nowrap; text-align: right;">cao hơn / đại học</span>
+    </div>
+                            <div style="background: white; padding: 8px 14px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+        <span style="white-space: nowrap;">• <b style="color: var(--primary-color); font-size: 1.05rem; font-weight: 800;">education</b> <span style="color: #64748b; font-size: 0.9rem; font-weight: 600;">(n)</span>:</span>
+        <span style="color: #1e293b; font-weight: 600; font-style: italic; white-space: nowrap; text-align: right;">giáo dục</span>
     </div>
                             <div style="background: white; padding: 8px 14px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
         <span style="white-space: nowrap;">• <b style="color: var(--primary-color); font-size: 1.05rem; font-weight: 800;">valuable</b> <span style="color: #64748b; font-size: 0.9rem; font-weight: 600;">(adj)</span>:</span>
@@ -4033,8 +4045,12 @@ window.renderNounsDetail = function(activeTab = 'theory') {
         <span style="color: #1e293b; font-weight: 600; font-style: italic; white-space: nowrap; text-align: right;">giải pháp</span>
     </div>
                             <div style="background: white; padding: 8px 14px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
-        <span style="white-space: nowrap;">• <b style="color: var(--primary-color); font-size: 1.05rem; font-weight: 800;">climate change</b> <span style="color: #64748b; font-size: 0.9rem; font-weight: 600;">(n)</span>:</span>
-        <span style="color: #1e293b; font-weight: 600; font-style: italic; white-space: nowrap; text-align: right;">biến đổi khí hậu</span>
+        <span style="white-space: nowrap;">• <b style="color: var(--primary-color); font-size: 1.05rem; font-weight: 800;">climate</b> <span style="color: #64748b; font-size: 0.9rem; font-weight: 600;">(n)</span>:</span>
+        <span style="color: #1e293b; font-weight: 600; font-style: italic; white-space: nowrap; text-align: right;">khí hậu</span>
+    </div>
+                            <div style="background: white; padding: 8px 14px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; gap: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+        <span style="white-space: nowrap;">• <b style="color: var(--primary-color); font-size: 1.05rem; font-weight: 800;">change</b> <span style="color: #64748b; font-size: 0.9rem; font-weight: 600;">(n)</span>:</span>
+        <span style="color: #1e293b; font-weight: 600; font-style: italic; white-space: nowrap; text-align: right;">sự thay đổi / biến đổi</span>
     </div>
                         </div>
                     </div>
