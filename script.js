@@ -7861,6 +7861,142 @@ const adverbsPracticeExtra2 = [
         a: ["They finished the test easily.", "They completed the test easily.", "They finished the exam easily.", "They completed the exam easily."]
     }
 ];
+const adverbsPracticeExtra3 = [
+    {
+        q: "The students performed <u>good</u> in the final exam because they prepared thoroughly.",
+        options: ["performed", "good", "exam", "thoroughly"],
+        a: "good",
+        exp: "Bổ nghĩa cho động từ 'performed' phải dùng trạng từ 'well' thay vì tính từ 'good'."
+    },
+    {
+        q: "She speaks English very <u>fluent</u> and communicates with foreigners easily.",
+        options: ["speaks", "fluent", "communicates", "easily"],
+        a: "fluent",
+        exp: "Bổ nghĩa cho động từ 'speaks' phải dùng trạng từ 'fluently'."
+    },
+    {
+        q: "The new policy was <u>quick</u> implemented by the management team.",
+        options: ["policy", "quick", "implemented", "management"],
+        a: "quick",
+        exp: "Bổ nghĩa cho động từ bị động 'implemented' phải dùng trạng từ 'quickly'."
+    },
+    {
+        q: "He was <u>extreme</u> tired after running the marathon.",
+        options: ["extreme", "tired", "running", "marathon"],
+        a: "extreme",
+        exp: "Bổ nghĩa cho tính từ 'tired' phải dùng trạng từ 'extremely'."
+    },
+    {
+        q: "The train arrived <u>lately</u> due to heavy snow in the region.",
+        options: ["arrived", "lately", "heavy", "region"],
+        a: "lately",
+        exp: "'late' vừa là tính từ vừa là trạng từ chỉ trễ giờ; 'lately' có nghĩa là dạo gần đây. Phải sửa 'lately' thành 'late'."
+    }
+];
+
+window.checkAdverbsExtra1 = function(idx, optIdx, ans) {
+    window.adverbsAnswersExtra1[idx] = ans;
+    const q = adverbsPracticeExtra1[idx];
+    const expDiv = document.getElementById('advexp_extra1_' + idx);
+    if (!expDiv) return;
+    
+    document.querySelectorAll(`.adv-extra1-btn-${idx}`).forEach(btn => {
+        btn.classList.remove('selected');
+        btn.style.background = 'white';
+        btn.style.color = 'var(--text-main)';
+        btn.style.borderColor = 'var(--border-color)';
+    });
+    
+    const selectedBtn = document.getElementById(`adv_extra1_btn_${idx}_${optIdx}`);
+    if (selectedBtn) {
+        selectedBtn.classList.add('selected');
+        selectedBtn.style.background = 'var(--primary-color)';
+        selectedBtn.style.color = 'white';
+        selectedBtn.style.borderColor = 'var(--primary-color)';
+    }
+
+    if (ans === q.a) {
+        expDiv.innerHTML = `<span style="color: #16a34a;">✅ Chính xác! Đáp án: <b>${q.a}</b></span>`;
+        expDiv.style.display = 'block';
+        expDiv.style.background = '#f0fdf4';
+        expDiv.style.border = '1px solid #bbf7d0';
+    } else {
+        expDiv.innerHTML = `<span style="color: #dc2626;">❌ Sai rồi. Đáp án đúng là: <b>${q.a}</b></span>`;
+        expDiv.style.display = 'block';
+        expDiv.style.background = '#fef2f2';
+        expDiv.style.border = '1px solid #fecaca';
+    }
+    window.saveProgress();
+};
+
+window.checkAdverbsExtra2 = function(idx) {
+    const input = document.getElementById('adv_extra2_' + idx);
+    const expDiv = document.getElementById('advexp_extra2_' + idx);
+    if (!input || !expDiv) return;
+    
+    const val = input.value.trim();
+    if (!val) {
+        expDiv.innerHTML = `<span style="color: #ea580c;">⚠️ Vui lòng nhập câu trả lời!</span>`;
+        expDiv.style.display = 'block';
+        expDiv.style.background = '#fff7ed';
+        expDiv.style.border = '1px solid #fdba74';
+        return;
+    }
+    
+    window.adverbsAnswersExtra2[idx] = val;
+    const q = adverbsPracticeExtra2[idx];
+    const isCorrect = q.a.some(ans => window.normalizeText(val) === window.normalizeText(ans));
+    
+    if (isCorrect) {
+        expDiv.innerHTML = `<span style="color: #16a34a;">✅ Tuyệt vời! Câu dịch hoàn toàn chính xác.</span>`;
+        expDiv.style.display = 'block';
+        expDiv.style.background = '#f0fdf4';
+        expDiv.style.border = '1px solid #bbf7d0';
+        input.style.borderColor = '#16a34a';
+    } else {
+        expDiv.innerHTML = `<span style="color: #dc2626;">❌ Chưa chính xác.</span><br><div style="margin-top: 6px;"><b>💡 Đáp án gợi ý:</b><br>- ${q.a.join('<br>- ')}</div>`;
+        expDiv.style.display = 'block';
+        expDiv.style.background = '#fef2f2';
+        expDiv.style.border = '1px solid #fecaca';
+        input.style.borderColor = '#ef4444';
+    }
+    window.saveProgress();
+};
+
+window.checkAdverbsExtra3 = function(idx, optIdx, ans) {
+    window.adverbsAnswersExtra3[idx] = ans;
+    const q = adverbsPracticeExtra3[idx];
+    const expDiv = document.getElementById('advexp_extra3_' + idx);
+    if (!expDiv) return;
+    
+    document.querySelectorAll(`.adv-extra3-btn-${idx}`).forEach(btn => {
+        btn.classList.remove('selected');
+        btn.style.background = 'white';
+        btn.style.color = 'var(--text-main)';
+        btn.style.borderColor = 'var(--border-color)';
+    });
+    
+    const selectedBtn = document.getElementById(`adv_extra3_btn_${idx}_${optIdx}`);
+    if (selectedBtn) {
+        selectedBtn.classList.add('selected');
+        selectedBtn.style.background = 'var(--primary-color)';
+        selectedBtn.style.color = 'white';
+        selectedBtn.style.borderColor = 'var(--primary-color)';
+    }
+
+    if (ans === q.a) {
+        expDiv.innerHTML = `<span style="color: #16a34a;">✅ Chính xác! ${q.exp}</span>`;
+        expDiv.style.display = 'block';
+        expDiv.style.background = '#f0fdf4';
+        expDiv.style.border = '1px solid #bbf7d0';
+    } else {
+        expDiv.innerHTML = `<span style="color: #dc2626;">❌ Sai rồi. Đáp án đúng là <b>${q.a}</b>. ${q.exp}</span>`;
+        expDiv.style.display = 'block';
+        expDiv.style.background = '#fef2f2';
+        expDiv.style.border = '1px solid #fecaca';
+    }
+    window.saveProgress();
+};
 
 window.checkAdverbsBook1 = function(idx) {
     const inputId = `adv_book1_${idx}`;
