@@ -1842,6 +1842,7 @@ const verbsPracticeParaData = {
 
 window.openTopic = function(topicId, status) {
     if (status === 'locked') {
+        const pass = prompt('Vui lòng nhập mật khẩu để mở khóa chủ điểm này:');
         const allPasses = ['missnguyet2026', 'cb206', 'cb210', 'cb211', 'cb213', 'onb103', 'b212'];
         const fullPasses = ['missnguyet2026', 'cb206', 'cb210', 'cb211', 'onb103'];
         const upToAdjPasses = [...fullPasses, 'cb213'];
@@ -1868,6 +1869,8 @@ window.openTopic = function(topicId, status) {
             
             const topic2 = typeof chapter2TopicsData !== 'undefined' ? chapter2TopicsData.find(t => t.id === topicId) : null;
             if (topic2) topic2.status = 'unlocked';
+            
+            if (typeof window.saveProgress === 'function') window.saveProgress(true);
             
             alert('Mở khóa thành công!');
             
