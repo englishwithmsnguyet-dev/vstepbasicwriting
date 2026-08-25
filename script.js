@@ -8290,7 +8290,7 @@ window.renderAdverbsDetail = function(activeTab = 'theory') {
                             <div style="background: white; padding: 14px 18px; border-radius: 10px; border: 1px solid #e2e8f0; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
                                 <div style="display: inline-block; background: var(--primary-light); color: var(--primary-color); font-weight: 800; padding: 3px 10px; border-radius: 6px; font-size: 0.9rem; margin-bottom: 8px;">CÂU 2</div>
                                 <div style="display: flex; flex-direction: column; gap: 6px; padding-left: 4px;">
-                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">got up / woke up very early</b>: <i style="color: #1e293b; font-weight: 600;">đã dậy rất sớm</i></div>
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">get up / wake up very early</b>: <i style="color: #1e293b; font-weight: 600;">dậy rất sớm</i></div>
                                     <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">review for the exam</b>: <i style="color: #1e293b; font-weight: 600;">ôn bài thi</i></div>
                                 </div>
                             </div>
@@ -8344,7 +8344,7 @@ window.renderAdverbsDetail = function(activeTab = 'theory') {
                                 <div style="display: inline-block; background: var(--primary-light); color: var(--primary-color); font-weight: 800; padding: 3px 10px; border-radius: 6px; font-size: 0.9rem; margin-bottom: 8px;">CÂU 1</div>
                                 <div style="display: flex; flex-direction: column; gap: 6px; padding-left: 4px;">
                                     <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">a hard-working person</b> (adj + n): <i style="color: #1e293b; font-weight: 600;">người chăm chỉ</i></div>
-                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">works very hard</b> (v + adv): <i style="color: #1e293b; font-weight: 600;">làm việc rất chăm chỉ</i></div>
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">work very hard</b> (v + adv): <i style="color: #1e293b; font-weight: 600;">làm việc rất chăm chỉ</i></div>
                                 </div>
                             </div>
                             <div style="background: white; padding: 14px 18px; border-radius: 10px; border: 1px solid #e2e8f0; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
@@ -8358,21 +8358,21 @@ window.renderAdverbsDetail = function(activeTab = 'theory') {
                                 <div style="display: inline-block; background: var(--primary-light); color: var(--primary-color); font-weight: 800; padding: 3px 10px; border-radius: 6px; font-size: 0.9rem; margin-bottom: 8px;">CÂU 3</div>
                                 <div style="display: flex; flex-direction: column; gap: 6px; padding-left: 4px;">
                                     <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">a careful person</b> (adj + n): <i style="color: #1e293b; font-weight: 600;">người cẩn thận</i></div>
-                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">drives carefully</b> (v + adv): <i style="color: #1e293b; font-weight: 600;">lái xe cẩn thận</i></div>
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">drive carefully</b> (v + adv): <i style="color: #1e293b; font-weight: 600;">lái xe cẩn thận</i></div>
                                 </div>
                             </div>
                             <div style="background: white; padding: 14px 18px; border-radius: 10px; border: 1px solid #e2e8f0; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
                                 <div style="display: inline-block; background: var(--primary-light); color: var(--primary-color); font-weight: 800; padding: 3px 10px; border-radius: 6px; font-size: 0.9rem; margin-bottom: 8px;">CÂU 4</div>
                                 <div style="display: flex; flex-direction: column; gap: 6px; padding-left: 4px;">
                                     <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">a funny person</b> (adj + n): <i style="color: #1e293b; font-weight: 600;">người hài hước</i></div>
-                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">tells stories very funnily</b> (v + adv): <i style="color: #1e293b; font-weight: 600;">kể chuyện rất hài hước</i></div>
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">tell stories very funnily</b> (v + adv): <i style="color: #1e293b; font-weight: 600;">kể chuyện rất hài hước</i></div>
                                 </div>
                             </div>
                             <div style="background: white; padding: 14px 18px; border-radius: 10px; border: 1px solid #e2e8f0; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
                                 <div style="display: inline-block; background: var(--primary-light); color: var(--primary-color); font-weight: 800; padding: 3px 10px; border-radius: 6px; font-size: 0.9rem; margin-bottom: 8px;">CÂU 5</div>
                                 <div style="display: flex; flex-direction: column; gap: 6px; padding-left: 4px;">
                                     <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">a patient person</b> (adj + n): <i style="color: #1e293b; font-weight: 600;">người kiên nhẫn</i></div>
-                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">treat students patiently</b> (v + adv): <i style="color: #1e293b; font-weight: 600;">đối xử với học sinh kiên nhẫn</i></div>
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">treat students patiently</b> (v + adv): <i style="color: #1e293b; font-weight: 600;">đối xử với học sinh một cách kiên nhẫn</i></div>
                                 </div>
                             </div>
                         </div>
@@ -8403,7 +8403,7 @@ window.renderAdverbsDetail = function(activeTab = 'theory') {
                             <div style="background: white; padding: 14px 18px; border-radius: 10px; border: 1px solid #e2e8f0; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
                                 <div style="display: inline-block; background: var(--primary-light); color: var(--primary-color); font-weight: 800; padding: 3px 10px; border-radius: 6px; font-size: 0.9rem; margin-bottom: 8px;">CÂU 2</div>
                                 <div style="display: flex; flex-direction: column; gap: 6px; padding-left: 4px;">
-                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">have lived in Can Tho city</b>: <i style="color: #1e293b; font-weight: 600;">đã sống ở TP Cần Thơ</i></div>
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">live in Can Tho city</b>: <i style="color: #1e293b; font-weight: 600;">sống ở TP Cần Thơ</i></div>
                                     <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">since 2020</b>: <i style="color: #1e293b; font-weight: 600;">từ năm 2020</i></div>
                                 </div>
                             </div>
@@ -8431,7 +8431,7 @@ window.renderAdverbsDetail = function(activeTab = 'theory') {
                             <div style="background: white; padding: 14px 18px; border-radius: 10px; border: 1px solid #e2e8f0; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
                                 <div style="display: inline-block; background: var(--primary-light); color: var(--primary-color); font-weight: 800; padding: 3px 10px; border-radius: 6px; font-size: 0.9rem; margin-bottom: 8px;">CÂU 6</div>
                                 <div style="display: flex; flex-direction: column; gap: 6px; padding-left: 4px;">
-                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">have learned / studied English</b>: <i style="color: #1e293b; font-weight: 600;">đã học tiếng Anh</i></div>
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">learn / study English</b>: <i style="color: #1e293b; font-weight: 600;">học tiếng Anh</i></div>
                                     <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">for 10 years</b>: <i style="color: #1e293b; font-weight: 600;">trong 10 năm</i></div>
                                 </div>
                             </div>
@@ -8445,13 +8445,13 @@ window.renderAdverbsDetail = function(activeTab = 'theory') {
                             <div style="background: white; padding: 14px 18px; border-radius: 10px; border: 1px solid #e2e8f0; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
                                 <div style="display: inline-block; background: var(--primary-light); color: var(--primary-color); font-weight: 800; padding: 3px 10px; border-radius: 6px; font-size: 0.9rem; margin-bottom: 8px;">CÂU 8</div>
                                 <div style="display: flex; flex-direction: column; gap: 6px; padding-left: 4px;">
-                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">always gives useful feedback / comments</b>: <i style="color: #1e293b; font-weight: 600;">luôn đưa ra nhận xét hữu ích</i></div>
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">give useful feedback / comments</b>: <i style="color: #1e293b; font-weight: 600;">đưa ra nhận xét hữu ích</i></div>
                                 </div>
                             </div>
                             <div style="background: white; padding: 14px 18px; border-radius: 10px; border: 1px solid #e2e8f0; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
                                 <div style="display: inline-block; background: var(--primary-light); color: var(--primary-color); font-weight: 800; padding: 3px 10px; border-radius: 6px; font-size: 0.9rem; margin-bottom: 8px;">CÂU 9</div>
                                 <div style="display: flex; flex-direction: column; gap: 6px; padding-left: 4px;">
-                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">completed / finished all my homework</b>: <i style="color: #1e293b; font-weight: 600;">hoàn thành tất cả bài tập</i></div>
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">complete / finish all my homework</b>: <i style="color: #1e293b; font-weight: 600;">hoàn thành tất cả bài tập</i></div>
                                     <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">yesterday</b>: <i style="color: #1e293b; font-weight: 600;">hôm qua</i></div>
                                 </div>
                             </div>
@@ -8572,7 +8572,7 @@ window.renderAdverbsDetail = function(activeTab = 'theory') {
                                 <div style="display: inline-block; background: var(--primary-light); color: var(--primary-color); font-weight: 800; padding: 3px 10px; border-radius: 6px; font-size: 0.9rem; margin-bottom: 8px;">CÂU 2</div>
                                 <div style="display: flex; flex-direction: column; gap: 6px; padding-left: 4px;">
                                     <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">always</b> (adv): <i style="color: #1e293b; font-weight: 600;">luôn luôn</i></div>
-                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">wakes up / gets up early</b>: <i style="color: #1e293b; font-weight: 600;">thức dậy sớm</i></div>
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">wake up / get up early</b>: <i style="color: #1e293b; font-weight: 600;">thức dậy sớm</i></div>
                                 </div>
                             </div>
                             <div style="background: white; padding: 14px 18px; border-radius: 10px; border: 1px solid #e2e8f0; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
@@ -8586,13 +8586,13 @@ window.renderAdverbsDetail = function(activeTab = 'theory') {
                                 <div style="display: inline-block; background: var(--primary-light); color: var(--primary-color); font-weight: 800; padding: 3px 10px; border-radius: 6px; font-size: 0.9rem; margin-bottom: 8px;">CÂU 4</div>
                                 <div style="display: flex; flex-direction: column; gap: 6px; padding-left: 4px;">
                                     <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">Fortunately / Luckily</b> (adv): <i style="color: #1e293b; font-weight: 600;">thật may mắn</i></div>
-                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">nobody was hurt</b>: <i style="color: #1e293b; font-weight: 600;">không ai bị thương</i></div>
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">nobody is hurt / get hurt</b>: <i style="color: #1e293b; font-weight: 600;">không ai bị thương</i></div>
                                 </div>
                             </div>
                             <div style="background: white; padding: 14px 18px; border-radius: 10px; border: 1px solid #e2e8f0; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
                                 <div style="display: inline-block; background: var(--primary-light); color: var(--primary-color); font-weight: 800; padding: 3px 10px; border-radius: 6px; font-size: 0.9rem; margin-bottom: 8px;">CÂU 5</div>
                                 <div style="display: flex; flex-direction: column; gap: 6px; padding-left: 4px;">
-                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">finished / completed the test</b>: <i style="color: #1e293b; font-weight: 600;">hoàn thành bài kiểm tra</i></div>
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">finish / complete the test</b>: <i style="color: #1e293b; font-weight: 600;">hoàn thành bài kiểm tra</i></div>
                                     <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">easily</b> (adv): <i style="color: #1e293b; font-weight: 600;">một cách dễ dàng</i></div>
                                 </div>
                             </div>
