@@ -6856,6 +6856,54 @@ window.renderAdjectivesDetail = function(activeTab = 'theory') {
                 <div style="margin-bottom: 40px;">
                     <h2 style="color: var(--primary-color); font-size: 1.4rem; margin-bottom: 16px;">BÀI TẬP THÊM 2 (DỊCH CÂU)</h2>
                     <p style="font-size: 1.05rem; color: #475569; margin-bottom: 24px;"><i>Sử dụng cấu trúc "Adj + Noun" hoặc "To Be + Adj" để dịch các câu sau sang tiếng Anh.</i></p>
+                    
+                    <!-- HỘP GỢI Ý TỪ VỰNG BÀI THÊM 2 -->
+                    <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px; margin-bottom: 28px;">
+                        <h3 style="margin-top: 0; margin-bottom: 18px; color: var(--primary-color); font-size: 1.15rem; font-weight: 800; display: flex; align-items: center; gap: 8px;">
+                            <span style="font-size: 1.3rem;">💡</span> GỢI Ý TỪ VỰNG & CẤU TRÚC THEO TỪNG CÂU:
+                        </h3>
+                        <div style="display: flex; flex-direction: column; gap: 10px; font-size: 1rem;">
+                            <div style="background: white; padding: 12px 16px; border-radius: 10px; border: 1px solid #e2e8f0; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+                                <span style="background: var(--primary-light); color: var(--primary-color); font-weight: 800; padding: 3px 10px; border-radius: 6px; font-size: 0.9rem; flex-shrink: 0;">CÂU 1</span>
+                                <span style="color: #334155;">• <b>shirt</b> (n): <i>chiếc áo</i></span>
+                                <span style="color: #cbd5e1;">|</span>
+                                <span style="color: #334155;">• <b>too expensive for...</b> (adj): <i>quá đắt đối với...</i></span>
+                            </div>
+
+                            <div style="background: white; padding: 12px 16px; border-radius: 10px; border: 1px solid #e2e8f0; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+                                <span style="background: var(--primary-light); color: var(--primary-color); font-weight: 800; padding: 3px 10px; border-radius: 6px; font-size: 0.9rem; flex-shrink: 0;">CÂU 2</span>
+                                <span style="color: #334155;">• <b>charming / attractive</b> (adj): <i>quyến rũ, thu hút</i></span>
+                                <span style="color: #cbd5e1;">|</span>
+                                <span style="color: #334155;">• <b>smile</b> (n): <i>nụ cười</i></span>
+                            </div>
+
+                            <div style="background: white; padding: 12px 16px; border-radius: 10px; border: 1px solid #e2e8f0; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+                                <span style="background: var(--primary-light); color: var(--primary-color); font-weight: 800; padding: 3px 10px; border-radius: 6px; font-size: 0.9rem; flex-shrink: 0;">CÂU 3</span>
+                                <span style="color: #334155;">• <b>learning a new language</b>: <i>việc học ngôn ngữ mới</i></span>
+                                <span style="color: #cbd5e1;">|</span>
+                                <span style="color: #334155;">• <b>interesting / exciting</b> (adj): <i>thú vị</i></span>
+                                <span style="color: #cbd5e1;">|</span>
+                                <span style="color: #334155;">• <b>experience</b> (n): <i>trải nghiệm</i></span>
+                            </div>
+
+                            <div style="background: white; padding: 12px 16px; border-radius: 10px; border: 1px solid #e2e8f0; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+                                <span style="background: var(--primary-light); color: var(--primary-color); font-weight: 800; padding: 3px 10px; border-radius: 6px; font-size: 0.9rem; flex-shrink: 0;">CÂU 4</span>
+                                <span style="color: #334155;">• <b>parents</b> (n): <i>bố mẹ</i></span>
+                                <span style="color: #cbd5e1;">|</span>
+                                <span style="color: #334155;">• <b>proud of...</b> (adj): <i>tự hào về...</i></span>
+                            </div>
+
+                            <div style="background: white; padding: 12px 16px; border-radius: 10px; border: 1px solid #e2e8f0; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+                                <span style="background: var(--primary-light); color: var(--primary-color); font-weight: 800; padding: 3px 10px; border-radius: 6px; font-size: 0.9rem; flex-shrink: 0;">CÂU 5</span>
+                                <span style="color: #334155;">• <b>room</b> (n): <i>căn phòng</i></span>
+                                <span style="color: #cbd5e1;">|</span>
+                                <span style="color: #334155;">• <b>clean</b> (adj): <i>sạch sẽ</i></span>
+                                <span style="color: #cbd5e1;">|</span>
+                                <span style="color: #334155;">• <b>tidy / neat</b> (adj): <i>ngăn nắp, gọn gàng</i></span>
+                            </div>
+                        </div>
+                    </div>
+
                     <div>${extra2Html}</div>
                     <div style="margin-top: 24px; text-align: center;">
                         <button onclick="window.submitAdjectivesExtra2()" style="padding: 12px 32px; background: var(--primary-color); color: white; border: none; border-radius: 30px; font-weight: bold; font-size: 1.1rem; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.1)'">NỘP BÀI & KIỂM TRA KẾT QUẢ</button>
