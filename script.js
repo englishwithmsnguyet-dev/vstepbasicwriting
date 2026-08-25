@@ -1856,15 +1856,14 @@ window.openTopic = function(topicId, status) {
     if (status === 'locked') {
         const pass = prompt('Vui lòng nhập mật khẩu để mở khóa chủ điểm này:');
         const allPasses = ['missnguyet2026', 'cb206', 'cb210', 'cb211', 'cb213', 'onb103', 'b212'];
-        const fullPasses = ['missnguyet2026', 'cb206', 'cb210', 'cb211', 'onb103'];
-        const upToAdjPasses = [...fullPasses, 'cb213'];
+        const fullPasses = ['missnguyet2026', 'cb206', 'cb210', 'cb211', 'onb103', 'cb213'];
         const topicPasswords = {
             'components': allPasses,
             'structures': allPasses,
-            'nouns': [...upToAdjPasses, 'b212'],
-            'pronouns': [...upToAdjPasses, 'b212'],
-            'verbs': [...upToAdjPasses, 'b212'],
-            'adjectives': upToAdjPasses,
+            'nouns': [...fullPasses, 'b212'],
+            'pronouns': [...fullPasses, 'b212'],
+            'verbs': [...fullPasses, 'b212'],
+            'adjectives': fullPasses,
             'adverbs': fullPasses,
             'prepositions': fullPasses,
             'conjunctions': fullPasses
@@ -1881,6 +1880,21 @@ window.openTopic = function(topicId, status) {
             
             const topic2 = typeof chapter2TopicsData !== 'undefined' ? chapter2TopicsData.find(t => t.id === topicId) : null;
             if (topic2) topic2.status = 'unlocked';
+            
+            topicsData.forEach(t => {
+                const passes = topicPasswords[t.id] || fullPasses;
+                if (passes.includes(enteredPass) || masterPasses.includes(enteredPass)) {
+                    t.status = 'unlocked';
+                }
+            });
+            if (typeof chapter2TopicsData !== 'undefined') {
+                chapter2TopicsData.forEach(t => {
+                    const passes = topicPasswords[t.id] || fullPasses;
+                    if (passes.includes(enteredPass) || masterPasses.includes(enteredPass)) {
+                        t.status = 'unlocked';
+                    }
+                });
+            }
             
             if (typeof window.saveProgress === 'function') window.saveProgress(true);
             
@@ -2022,7 +2036,7 @@ window.renderComponentsDetail = function(activeTab = 'theory') {
                 ${practiceHtml}
             </div>
             <div id="practice-submit-container" style="text-align: center; margin-top: 32px;">
-                <button class="btn-primary" onclick="submitAllAnswers()" style="font-size: 1.2rem; padding: 16px 48px; border-radius: 30px;">NỘP BÀI 📝</button>
+                <button class="btn-primary" onclick="submitAllAnswers()" style="font-size: 1.2rem; padding: 16px 48px; border-radius: 30px;">NỘP BÀI & KIỂM TRA KẾT QUẢ</button>
                 <div id="global-feedback" style="margin-top: 16px; font-size: 1.1rem; color: var(--danger); font-weight: bold;"></div>
             </div>
 
@@ -2101,7 +2115,7 @@ window.renderStructuresDetail = function(tab = 'theory') {
                 ${practiceHtml}
             </div>
             <div id="structure-practice-submit-container" style="text-align: center; margin-top: 32px;">
-                <button class="btn-primary" onclick="submitStructurePractice()" style="font-size: 1.2rem; padding: 16px 48px; border-radius: 30px;">NỘP BÀI 📝</button>
+                <button class="btn-primary" onclick="submitStructurePractice()" style="font-size: 1.2rem; padding: 16px 48px; border-radius: 30px;">NỘP BÀI & KIỂM TRA KẾT QUẢ</button>
                 <div id="structure-global-feedback" style="margin-top: 16px; font-size: 1.1rem; color: var(--danger); font-weight: bold;"></div>
             </div>
             <div id="structure-practice-result-container" style="display: none; margin-top: 40px; margin-bottom: 40px; animation: slideUp 0.5s ease;"></div>
@@ -3418,7 +3432,7 @@ window.renderNounsDetail = function(activeTab = 'theory') {
                     </div>
                     
                     <div style="margin-top: 24px; text-align: center;">
-                        <button onclick="checkNounsDragDrop()" style="padding: 12px 32px; background: var(--primary-color); color: white; border: none; border-radius: 30px; font-weight: bold; font-size: 1.1rem; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.1)'">Kiểm tra Bài 1</button>
+                        <button onclick="checkNounsDragDrop()" style="padding: 12px 32px; background: var(--primary-color); color: white; border: none; border-radius: 30px; font-weight: bold; font-size: 1.1rem; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.1)'">NỘP BÀI & KIỂM TRA KẾT QUẢ</button>
                     </div>
                 </div>
 
@@ -3426,7 +3440,7 @@ window.renderNounsDetail = function(activeTab = 'theory') {
                     <h2 style="color: var(--primary-color); font-size: 1.4rem; margin-bottom: 16px;">BÀI TẬP ÁP DỤNG 2: XÁC ĐỊNH & SỬA LỖI</h2>
                     ${errorCorrectionList}
                     <div style="margin-top: 24px; text-align: center;">
-                        <button onclick="window.submitNouns2()" style="padding: 12px 32px; background: var(--primary-color); color: white; border: none; border-radius: 30px; font-weight: bold; font-size: 1.1rem; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.1)'">Kiểm tra Bài 2</button>
+                        <button onclick="window.submitNouns2()" style="padding: 12px 32px; background: var(--primary-color); color: white; border: none; border-radius: 30px; font-weight: bold; font-size: 1.1rem; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.1)'">NỘP BÀI & KIỂM TRA KẾT QUẢ</button>
                     </div>
                 </div>
                 
@@ -3500,7 +3514,7 @@ window.renderNounsDetail = function(activeTab = 'theory') {
                         `).join('')}
                     </div>
                     <div style="margin-top: 24px; text-align: center;">
-                        <button onclick="window.submitNounsBook3()" style="padding: 12px 32px; background: var(--primary-color); color: white; border: none; border-radius: 30px; font-weight: bold; font-size: 1.1rem; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.1)'">Kiểm tra Bài 3</button>
+                        <button onclick="window.submitNounsBook3()" style="padding: 12px 32px; background: var(--primary-color); color: white; border: none; border-radius: 30px; font-weight: bold; font-size: 1.1rem; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.1)'">NỘP BÀI & KIỂM TRA KẾT QUẢ</button>
                     </div>
                 </div>
             </div>
@@ -3541,7 +3555,7 @@ window.renderNounsDetail = function(activeTab = 'theory') {
                     </div>
                     
                     <div style="margin-top: 24px; text-align: center;">
-                        <button onclick="window.submitNounsExtra1()" style="padding: 12px 32px; background: var(--primary-color); color: white; border: none; border-radius: 30px; font-weight: bold; font-size: 1.1rem; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.1)'">Kiểm tra Bài 1</button>
+                        <button onclick="window.submitNounsExtra1()" style="padding: 12px 32px; background: var(--primary-color); color: white; border: none; border-radius: 30px; font-weight: bold; font-size: 1.1rem; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.1)'">NỘP BÀI & KIỂM TRA KẾT QUẢ</button>
                     </div>
                 </div>
 
@@ -3617,7 +3631,7 @@ window.renderNounsDetail = function(activeTab = 'theory') {
                         `).join('')}
                     </div>
                     <div style="margin-top: 24px; text-align: center;">
-                        <button onclick="window.submitNounsExtra2()" style="padding: 12px 32px; background: var(--primary-color); color: white; border: none; border-radius: 30px; font-weight: bold; font-size: 1.1rem; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.1)'">Kiểm tra Bài 2</button>
+                        <button onclick="window.submitNounsExtra2()" style="padding: 12px 32px; background: var(--primary-color); color: white; border: none; border-radius: 30px; font-weight: bold; font-size: 1.1rem; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.1)'">NỘP BÀI & KIỂM TRA KẾT QUẢ</button>
                     </div>
                 </div>
 
@@ -3647,7 +3661,7 @@ window.renderNounsDetail = function(activeTab = 'theory') {
                         `).join('')}
                     </div>
                     <div style="margin-top: 24px; text-align: center;">
-                        <button onclick="window.submitNounsExtra3()" style="padding: 12px 32px; background: var(--primary-color); color: white; border: none; border-radius: 30px; font-weight: bold; font-size: 1.1rem; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.1)'">Kiểm tra Bài 3</button>
+                        <button onclick="window.submitNounsExtra3()" style="padding: 12px 32px; background: var(--primary-color); color: white; border: none; border-radius: 30px; font-weight: bold; font-size: 1.1rem; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.1)'">NỘP BÀI & KIỂM TRA KẾT QUẢ</button>
                     </div>
                 </div>
             </div>
@@ -4448,9 +4462,7 @@ window.renderPronounsDetail = function(activeTab = 'theory') {
                             ${paraHtml}
                         </p>
                         <div style="margin-top: 28px; text-align: center;">
-                            <button onclick="window.checkPronounsParagraph()" style="padding: 12px 32px; background: var(--primary-color); color: white; border: none; border-radius: 30px; font-weight: bold; font-size: 1.1rem; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.1)'">
-                                Kiểm tra Đoạn văn
-                            </button>
+                            <button onclick="window.checkPronounsParagraph()" style="padding: 12px 32px; background: var(--primary-color); color: white; border: none; border-radius: 30px; font-weight: bold; font-size: 1.1rem; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.1)'">NỘP BÀI & KIỂM TRA KẾT QUẢ</button>
                         </div>
                         <div id="pro_para_explanation" style="display: none; margin-top: 28px; padding: 20px; border-radius: 12px; background: #f8fafc; border: 1px solid var(--border-color);">
                             <h3 style="color: var(--primary-color); font-size: 1.2rem; margin-bottom: 16px;">Giải thích chi tiết:</h3>
@@ -4510,7 +4522,7 @@ window.renderPronounsDetail = function(activeTab = 'theory') {
                     <p style="color: var(--text-muted); margin-bottom: 24px;">Lựa chọn đại từ hoặc tính từ sở hữu đúng ngữ pháp để hoàn thành câu.</p>
                     <div>${extra1Html}</div>
                     <div style="margin-top: 24px; text-align: center;">
-                        <button onclick="window.submitPronounsExtra1()" style="padding: 12px 32px; background: var(--primary-color); color: white; border: none; border-radius: 30px; font-weight: bold; font-size: 1.1rem; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.1)'">Kiểm tra Bài 1</button>
+                        <button onclick="window.submitPronounsExtra1()" style="padding: 12px 32px; background: var(--primary-color); color: white; border: none; border-radius: 30px; font-weight: bold; font-size: 1.1rem; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.1)'">NỘP BÀI & KIỂM TRA KẾT QUẢ</button>
                     </div>
                 </div>
 
@@ -4521,7 +4533,7 @@ window.renderPronounsDetail = function(activeTab = 'theory') {
                     <p style="color: var(--text-muted); margin-bottom: 24px;">Sử dụng Đại từ chỉ định (This/These/That/Those) để thay thế và liên kết ý của câu trước đó. Kỹ năng này rất hữu ích trong Writing.</p>
                     <div>${extra2Html}</div>
                     <div style="margin-top: 24px; text-align: center;">
-                        <button onclick="window.submitPronounsExtra2()" style="padding: 12px 32px; background: var(--primary-color); color: white; border: none; border-radius: 30px; font-weight: bold; font-size: 1.1rem; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.1)'">Kiểm tra Bài 2</button>
+                        <button onclick="window.submitPronounsExtra2()" style="padding: 12px 32px; background: var(--primary-color); color: white; border: none; border-radius: 30px; font-weight: bold; font-size: 1.1rem; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.1)'">NỘP BÀI & KIỂM TRA KẾT QUẢ</button>
                     </div>
                 </div>
 
@@ -4535,9 +4547,7 @@ window.renderPronounsDetail = function(activeTab = 'theory') {
                             ${letterHtml}
                         </div>
                         <div style="margin-top: 28px; text-align: center;">
-                            <button onclick="window.checkPronounsLetter()" style="padding: 12px 32px; background: var(--primary-color); color: white; border: none; border-radius: 30px; font-weight: bold; font-size: 1.1rem; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.1)'">
-                                Kiểm tra Lá thư
-                            </button>
+                            <button onclick="window.checkPronounsLetter()" style="padding: 12px 32px; background: var(--primary-color); color: white; border: none; border-radius: 30px; font-weight: bold; font-size: 1.1rem; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.1)'">NỘP BÀI & KIỂM TRA KẾT QUẢ</button>
                         </div>
                         <div id="pro_letter_explanation" style="display: none; margin-top: 28px; padding: 20px; border-radius: 12px; background: #f8fafc; border: 1px solid var(--border-color);">
                             <h3 style="color: var(--primary-color); font-size: 1.2rem; margin-bottom: 16px;">Giải thích chi tiết:</h3>
@@ -5008,7 +5018,7 @@ window.renderVerbsDetail = function(activeTab = 'theory') {
                             ${pBook1Html}
                         </div>
                         <div style="text-align: center; margin-top: 24px;">
-                            <button onclick="window.submitVerbsBook1()" style="padding: 12px 32px; background: var(--primary-color); color: white; border: none; border-radius: 20px; font-weight: bold; cursor: pointer; transition: all 0.2s; font-size: 1.1rem; box-shadow: 0 4px 12px rgba(87,70,227,0.3);">NỘP BÀI 1</button>
+                            <button onclick="window.submitVerbsBook1()" style="padding: 12px 32px; background: var(--primary-color); color: white; border: none; border-radius: 20px; font-weight: bold; cursor: pointer; transition: all 0.2s; font-size: 1.1rem; box-shadow: 0 4px 12px rgba(87,70,227,0.3);">NỘP BÀI & KIỂM TRA KẾT QUẢ</button>
                         </div>
                     </div>
 
@@ -5020,7 +5030,7 @@ window.renderVerbsDetail = function(activeTab = 'theory') {
                             ${pBook2Html}
                         </div>
                         <div style="text-align: center; margin-top: 24px;">
-                            <button onclick="window.submitVerbsBook2()" style="padding: 12px 32px; background: #f59e0b; color: white; border: none; border-radius: 20px; font-weight: bold; cursor: pointer; transition: all 0.2s; font-size: 1.1rem; box-shadow: 0 4px 12px rgba(245,158,11,0.3);">NỘP BÀI 2</button>
+                            <button onclick="window.submitVerbsBook2()" style="padding: 12px 32px; background: #f59e0b; color: white; border: none; border-radius: 20px; font-weight: bold; cursor: pointer; transition: all 0.2s; font-size: 1.1rem; box-shadow: 0 4px 12px rgba(245,158,11,0.3);">NỘP BÀI & KIỂM TRA KẾT QUẢ</button>
                         </div>
                     </div>
 
@@ -5032,7 +5042,7 @@ window.renderVerbsDetail = function(activeTab = 'theory') {
                             ${pBook3Html}
                         </div>
                         <div style="text-align: center; margin-top: 24px;">
-                            <button onclick="window.submitVerbsBook3()" style="padding: 12px 32px; background: #10b981; color: white; border: none; border-radius: 20px; font-weight: bold; cursor: pointer; transition: all 0.2s; font-size: 1.1rem; box-shadow: 0 4px 12px rgba(16,185,129,0.3);">NỘP BÀI 3</button>
+                            <button onclick="window.submitVerbsBook3()" style="padding: 12px 32px; background: #10b981; color: white; border: none; border-radius: 20px; font-weight: bold; cursor: pointer; transition: all 0.2s; font-size: 1.1rem; box-shadow: 0 4px 12px rgba(16,185,129,0.3);">NỘP BÀI & KIỂM TRA KẾT QUẢ</button>
                         </div>
                     </div>
 
@@ -5044,7 +5054,7 @@ window.renderVerbsDetail = function(activeTab = 'theory') {
                             ${pBook4Html}
                         </div>
                         <div style="text-align: center; margin-top: 24px;">
-                            <button onclick="window.submitVerbsBook4()" style="padding: 12px 32px; background: #8b5cf6; color: white; border: none; border-radius: 20px; font-weight: bold; cursor: pointer; transition: all 0.2s; font-size: 1.1rem; box-shadow: 0 4px 12px rgba(139,92,246,0.3);">NỘP BÀI 4</button>
+                            <button onclick="window.submitVerbsBook4()" style="padding: 12px 32px; background: #8b5cf6; color: white; border: none; border-radius: 20px; font-weight: bold; cursor: pointer; transition: all 0.2s; font-size: 1.1rem; box-shadow: 0 4px 12px rgba(139,92,246,0.3);">NỘP BÀI & KIỂM TRA KẾT QUẢ</button>
                         </div>
                     </div>
                 </div>
@@ -5062,7 +5072,7 @@ window.renderVerbsDetail = function(activeTab = 'theory') {
                             ${p1Html}
                         </div>
                         <div style="text-align: center; margin-top: 24px;">
-                            <button onclick="window.submitVerbs4()" style="padding: 12px 32px; background: #6366f1; color: white; border: none; border-radius: 20px; font-weight: bold; cursor: pointer; transition: all 0.2s; font-size: 1.1rem; box-shadow: 0 4px 12px rgba(99,102,241,0.3);">NỘP BÀI 1</button>
+                            <button onclick="window.submitVerbs4()" style="padding: 12px 32px; background: #6366f1; color: white; border: none; border-radius: 20px; font-weight: bold; cursor: pointer; transition: all 0.2s; font-size: 1.1rem; box-shadow: 0 4px 12px rgba(99,102,241,0.3);">NỘP BÀI & KIỂM TRA KẾT QUẢ</button>
                         </div>
                     </div>
 
@@ -5074,7 +5084,7 @@ window.renderVerbsDetail = function(activeTab = 'theory') {
                             ${p2Html}
                         </div>
                         <div style="text-align: center; margin-top: 24px;">
-                            <button onclick="window.submitVerbs5()" style="padding: 12px 32px; background: #ec4899; color: white; border: none; border-radius: 20px; font-weight: bold; cursor: pointer; transition: all 0.2s; font-size: 1.1rem; box-shadow: 0 4px 12px rgba(236,72,153,0.3);">NỘP BÀI 2</button>
+                            <button onclick="window.submitVerbs5()" style="padding: 12px 32px; background: #ec4899; color: white; border: none; border-radius: 20px; font-weight: bold; cursor: pointer; transition: all 0.2s; font-size: 1.1rem; box-shadow: 0 4px 12px rgba(236,72,153,0.3);">NỘP BÀI & KIỂM TRA KẾT QUẢ</button>
                         </div>
                     </div>
 
@@ -5090,7 +5100,7 @@ window.renderVerbsDetail = function(activeTab = 'theory') {
                             ${pExtra3Html}
                         </div>
                         <div style="text-align: center; margin-top: 24px;">
-                            <button onclick="window.submitVerbsExtra3()" style="padding: 12px 32px; background: #14b8a6; color: white; border: none; border-radius: 20px; font-weight: bold; cursor: pointer; transition: all 0.2s; font-size: 1.1rem; box-shadow: 0 4px 12px rgba(20,184,166,0.3);">NỘP BÀI 3</button>
+                            <button onclick="window.submitVerbsExtra3()" style="padding: 12px 32px; background: #14b8a6; color: white; border: none; border-radius: 20px; font-weight: bold; cursor: pointer; transition: all 0.2s; font-size: 1.1rem; box-shadow: 0 4px 12px rgba(20,184,166,0.3);">NỘP BÀI & KIỂM TRA KẾT QUẢ</button>
                         </div>
                     </div>
 
@@ -5104,7 +5114,7 @@ window.renderVerbsDetail = function(activeTab = 'theory') {
                         <div id="verb_para_explanation" style="display: none; margin-top: 20px; background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 12px; padding: 20px;">
                         </div>
                         <div style="text-align: center; margin-top: 24px;">
-                            <button onclick="window.submitVerbs6()" style="padding: 12px 32px; background: #8b5cf6; color: white; border: none; border-radius: 20px; font-weight: bold; cursor: pointer; transition: all 0.2s; font-size: 1.1rem; box-shadow: 0 4px 12px rgba(139,92,246,0.3);">NỘP BÀI 4</button>
+                            <button onclick="window.submitVerbs6()" style="padding: 12px 32px; background: #8b5cf6; color: white; border: none; border-radius: 20px; font-weight: bold; cursor: pointer; transition: all 0.2s; font-size: 1.1rem; box-shadow: 0 4px 12px rgba(139,92,246,0.3);">NỘP BÀI & KIỂM TRA KẾT QUẢ</button>
                         </div>
                     </div>
                 </div>
@@ -6630,9 +6640,6 @@ window.renderAdjectivesDetail = function(activeTab = 'theory') {
     
     window.currentTopic = 'adjectives';
     window.currentTab = activeTab;
-    if (!window.adverbsAnswersExtra1) window.adverbsAnswersExtra1 = new Array(adverbsPracticeExtra1.length).fill('');
-    if (!window.adverbsAnswersExtra2) window.adverbsAnswersExtra2 = new Array(adverbsPracticeExtra2.length).fill('');
-    if (!window.adverbsAnswersExtra3) window.adverbsAnswersExtra3 = new Array(adverbsPracticeExtra3.length).fill('');
 
     if (!window.adjectivesAnswersBook1) window.adjectivesAnswersBook1 = new Array(adjectivesPracticeBook1.length).fill('');
     if (!window.adjectivesAnswersBook2) window.adjectivesAnswersBook2 = new Array(adjectivesPracticeBook2.length).fill('');
@@ -6746,7 +6753,7 @@ window.renderAdjectivesDetail = function(activeTab = 'theory') {
 
                     <div>${book1Html}</div>
                     <div style="margin-top: 24px; text-align: center;">
-                        <button onclick="window.submitAdjectivesBook1()" style="padding: 12px 32px; background: var(--primary-color); color: white; border: none; border-radius: 30px; font-weight: bold; font-size: 1.1rem; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.1)'">Kiểm tra Bài 1</button>
+                        <button onclick="window.submitAdjectivesBook1()" style="padding: 12px 32px; background: var(--primary-color); color: white; border: none; border-radius: 30px; font-weight: bold; font-size: 1.1rem; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.1)'">NỘP BÀI & KIỂM TRA KẾT QUẢ</button>
                     </div>
                 </div>
 
@@ -6799,7 +6806,7 @@ window.renderAdjectivesDetail = function(activeTab = 'theory') {
 
                     <div>${book2Html}</div>
                     <div style="margin-top: 24px; text-align: center;">
-                        <button onclick="window.submitAdjectivesBook2()" style="padding: 12px 32px; background: var(--primary-color); color: white; border: none; border-radius: 30px; font-weight: bold; font-size: 1.1rem; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.1)'">Kiểm tra Bài 2</button>
+                        <button onclick="window.submitAdjectivesBook2()" style="padding: 12px 32px; background: var(--primary-color); color: white; border: none; border-radius: 30px; font-weight: bold; font-size: 1.1rem; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.1)'">NỘP BÀI & KIỂM TRA KẾT QUẢ</button>
                     </div>
                 </div>
             </div>
@@ -6837,7 +6844,7 @@ window.renderAdjectivesDetail = function(activeTab = 'theory') {
                     <p style="font-size: 1.05rem; color: #475569; margin-bottom: 24px;"><i>Chọn từ loại thích hợp điền vào chỗ trống (Luyện phân biệt Tính từ).</i></p>
                     <div>${extra1Html}</div>
                     <div style="margin-top: 24px; text-align: center;">
-                        <button onclick="window.submitAdjectivesExtra1()" style="padding: 12px 32px; background: var(--primary-color); color: white; border: none; border-radius: 30px; font-weight: bold; font-size: 1.1rem; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.1)'">Kiểm tra Bài 1</button>
+                        <button onclick="window.submitAdjectivesExtra1()" style="padding: 12px 32px; background: var(--primary-color); color: white; border: none; border-radius: 30px; font-weight: bold; font-size: 1.1rem; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.1)'">NỘP BÀI & KIỂM TRA KẾT QUẢ</button>
                     </div>
                 </div>
 
@@ -6846,7 +6853,7 @@ window.renderAdjectivesDetail = function(activeTab = 'theory') {
                     <p style="font-size: 1.05rem; color: #475569; margin-bottom: 24px;"><i>Sử dụng cấu trúc "Adj + Noun" hoặc "To Be + Adj" để dịch các câu sau sang tiếng Anh.</i></p>
                     <div>${extra2Html}</div>
                     <div style="margin-top: 24px; text-align: center;">
-                        <button onclick="window.submitAdjectivesExtra2()" style="padding: 12px 32px; background: var(--primary-color); color: white; border: none; border-radius: 30px; font-weight: bold; font-size: 1.1rem; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.1)'">Kiểm tra Bài 2</button>
+                        <button onclick="window.submitAdjectivesExtra2()" style="padding: 12px 32px; background: var(--primary-color); color: white; border: none; border-radius: 30px; font-weight: bold; font-size: 1.1rem; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.1)'">NỘP BÀI & KIỂM TRA KẾT QUẢ</button>
                     </div>
                 </div>
             </div>
@@ -7210,7 +7217,7 @@ window.renderPrepositionsDetail = function(activeTab = 'theory') {
                     <p style="font-size: 1.05rem; color: #475569; margin-bottom: 24px;"><i>Chuyển các "cụm chỉ thời gian" sau thành tiếng Anh.</i></p>
                     <div style="display: grid; gap: 16px;">${pBook1Html}</div>
                     <div style="margin-top: 24px; text-align: center;">
-                        <button onclick="window.submitPrepositions1()" style="padding: 12px 32px; background: var(--primary-color); color: white; border: none; border-radius: 30px; font-weight: bold; font-size: 1.1rem; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.1)'">Kiểm tra Bài 1</button>
+                        <button onclick="window.submitPrepositions1()" style="padding: 12px 32px; background: var(--primary-color); color: white; border: none; border-radius: 30px; font-weight: bold; font-size: 1.1rem; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.1)'">NỘP BÀI & KIỂM TRA KẾT QUẢ</button>
                     </div>
                 </div>
 
@@ -7219,7 +7226,7 @@ window.renderPrepositionsDetail = function(activeTab = 'theory') {
                     <p style="font-size: 1.05rem; color: #475569; margin-bottom: 24px;"><i>Chuyển các "cụm chỉ nơi chốn" sau thành tiếng Anh.</i></p>
                     <div style="display: grid; gap: 16px;">${pBook2Html}</div>
                     <div style="margin-top: 24px; text-align: center;">
-                        <button onclick="window.submitPrepositions2()" style="padding: 12px 32px; background: var(--primary-color); color: white; border: none; border-radius: 30px; font-weight: bold; font-size: 1.1rem; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.1)'">Kiểm tra Bài 2</button>
+                        <button onclick="window.submitPrepositions2()" style="padding: 12px 32px; background: var(--primary-color); color: white; border: none; border-radius: 30px; font-weight: bold; font-size: 1.1rem; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.1)'">NỘP BÀI & KIỂM TRA KẾT QUẢ</button>
                     </div>
                 </div>
             </div>
@@ -7268,7 +7275,7 @@ window.renderPrepositionsDetail = function(activeTab = 'theory') {
                     <p style="font-size: 1.05rem; color: #475569; margin-bottom: 24px;"><i>Chọn từ trong ngoặc để điền vào chỗ trống sao cho phù hợp.</i></p>
                     <div>${extra1Html}</div>
                     <div style="margin-top: 24px; text-align: center;">
-                        <button onclick="window.submitPrepositionsExtra1()" style="padding: 12px 32px; background: var(--primary-color); color: white; border: none; border-radius: 30px; font-weight: bold; font-size: 1.1rem; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.1)'">Kiểm tra Bài 1</button>
+                        <button onclick="window.submitPrepositionsExtra1()" style="padding: 12px 32px; background: var(--primary-color); color: white; border: none; border-radius: 30px; font-weight: bold; font-size: 1.1rem; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.1)'">NỘP BÀI & KIỂM TRA KẾT QUẢ</button>
                     </div>
                 </div>
 
@@ -7277,7 +7284,7 @@ window.renderPrepositionsDetail = function(activeTab = 'theory') {
                     <p style="font-size: 1.05rem; color: #475569; margin-bottom: 24px;"><i>Chuyển các câu sau đây sang tiếng Anh. Chú ý phân biệt cách dùng "tính từ" và "trạng từ".</i></p>
                     <div>${extra2Html}</div>
                     <div style="margin-top: 24px; text-align: center;">
-                        <button onclick="window.submitPrepositionsExtra2()" style="padding: 12px 32px; background: var(--primary-color); color: white; border: none; border-radius: 30px; font-weight: bold; font-size: 1.1rem; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.1)'">Kiểm tra Bài 2</button>
+                        <button onclick="window.submitPrepositionsExtra2()" style="padding: 12px 32px; background: var(--primary-color); color: white; border: none; border-radius: 30px; font-weight: bold; font-size: 1.1rem; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.1)'">NỘP BÀI & KIỂM TRA KẾT QUẢ</button>
                     </div>
                 </div>
 
@@ -7827,7 +7834,7 @@ window.renderAdverbsDetail = function(activeTab = 'theory') {
                     <p style="font-size: 1.05rem; color: #475569; margin-bottom: 24px;"><i>Chuyển các câu sau đây sang tiếng Anh.</i></p>
                     <div>${book1Html}</div>
                     <div style="margin-top: 24px; text-align: center;">
-                        <button onclick="window.submitAdverbsBook1()" style="padding: 12px 32px; background: var(--primary-color); color: white; border: none; border-radius: 30px; font-weight: bold; font-size: 1.1rem; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.1)'">Kiểm tra Bài 1</button>
+                        <button onclick="window.submitAdverbsBook1()" style="padding: 12px 32px; background: var(--primary-color); color: white; border: none; border-radius: 30px; font-weight: bold; font-size: 1.1rem; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.1)'">NỘP BÀI & KIỂM TRA KẾT QUẢ</button>
                     </div>
                 </div>
 
@@ -7842,7 +7849,7 @@ window.renderAdverbsDetail = function(activeTab = 'theory') {
                     <p style="font-size: 1.05rem; color: #475569; margin-bottom: 24px;"><i>Chuyển các câu sau đây sang tiếng Anh. Chú ý phân biệt cách dùng "tính từ" và "trạng từ".</i></p>
                     <div>${book3Html}</div>
                     <div style="margin-top: 24px; text-align: center;">
-                        <button onclick="window.submitAdverbsBook3()" style="padding: 12px 32px; background: var(--primary-color); color: white; border: none; border-radius: 30px; font-weight: bold; font-size: 1.1rem; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.1)'">Kiểm tra Exercise 1</button>
+                        <button onclick="window.submitAdverbsBook3()" style="padding: 12px 32px; background: var(--primary-color); color: white; border: none; border-radius: 30px; font-weight: bold; font-size: 1.1rem; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.1)'">NỘP BÀI & KIỂM TRA KẾT QUẢ</button>
                     </div>
                 </div>
 
@@ -7851,7 +7858,7 @@ window.renderAdverbsDetail = function(activeTab = 'theory') {
                     <p style="font-size: 1.05rem; color: #475569; margin-bottom: 24px;"><i>Áp dụng các kiến thức đã học, chuyển các câu sau đây sang Tiếng Anh.</i></p>
                     <div>${book4Html}</div>
                     <div style="margin-top: 24px; text-align: center;">
-                        <button onclick="window.submitAdverbsBook4()" style="padding: 12px 32px; background: var(--primary-color); color: white; border: none; border-radius: 30px; font-weight: bold; font-size: 1.1rem; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.1)'">Kiểm tra Exercise 2</button>
+                        <button onclick="window.submitAdverbsBook4()" style="padding: 12px 32px; background: var(--primary-color); color: white; border: none; border-radius: 30px; font-weight: bold; font-size: 1.1rem; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.1)'">NỘP BÀI & KIỂM TRA KẾT QUẢ</button>
                     </div>
                 </div>
             </div>
@@ -7932,7 +7939,7 @@ window.renderAdverbsDetail = function(activeTab = 'theory') {
                     <p style="font-size: 1.05rem; color: #475569; margin-bottom: 24px;"><i>Chọn đáp án đúng (Chú ý phân biệt tính từ và trạng từ).</i></p>
                     <div>${extra1Html}</div>
                     <div style="margin-top: 24px; text-align: center;">
-                        <button onclick="window.submitAdverbsExtra1()" style="padding: 12px 32px; background: var(--primary-color); color: white; border: none; border-radius: 30px; font-weight: bold; font-size: 1.1rem; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.1)'">Kiểm tra Bài 1</button>
+                        <button onclick="window.submitAdverbsExtra1()" style="padding: 12px 32px; background: var(--primary-color); color: white; border: none; border-radius: 30px; font-weight: bold; font-size: 1.1rem; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.1)'">NỘP BÀI & KIỂM TRA KẾT QUẢ</button>
                     </div>
                 </div>
 
@@ -7941,7 +7948,7 @@ window.renderAdverbsDetail = function(activeTab = 'theory') {
                     <p style="font-size: 1.05rem; color: #475569; margin-bottom: 24px;"><i>Vận dụng trạng từ để dịch các câu sau sang Tiếng Anh.</i></p>
                     <div>${extra2Html}</div>
                     <div style="margin-top: 24px; text-align: center;">
-                        <button onclick="window.submitAdverbsExtra2()" style="padding: 12px 32px; background: var(--primary-color); color: white; border: none; border-radius: 30px; font-weight: bold; font-size: 1.1rem; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.1)'">Kiểm tra Bài 2</button>
+                        <button onclick="window.submitAdverbsExtra2()" style="padding: 12px 32px; background: var(--primary-color); color: white; border: none; border-radius: 30px; font-weight: bold; font-size: 1.1rem; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.1)'">NỘP BÀI & KIỂM TRA KẾT QUẢ</button>
                     </div>
                 </div>
 
@@ -7950,7 +7957,7 @@ window.renderAdverbsDetail = function(activeTab = 'theory') {
                     <p style="font-size: 1.05rem; color: #475569; margin-bottom: 24px;"><i>Chọn từ bị sai ngữ pháp trong các câu sau.</i></p>
                     <div>${extra3Html}</div>
                     <div style="margin-top: 24px; text-align: center;">
-                        <button onclick="window.submitAdverbsExtra3()" style="padding: 12px 32px; background: var(--primary-color); color: white; border: none; border-radius: 30px; font-weight: bold; font-size: 1.1rem; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.1)'">Kiểm tra Bài 3</button>
+                        <button onclick="window.submitAdverbsExtra3()" style="padding: 12px 32px; background: var(--primary-color); color: white; border: none; border-radius: 30px; font-weight: bold; font-size: 1.1rem; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.1)'">NỘP BÀI & KIỂM TRA KẾT QUẢ</button>
                     </div>
                 </div>
             </div>
@@ -8680,7 +8687,7 @@ window.renderConjunctionsDetail = function(activeTab = 'theory') {
                         ${pBook1Html}
                     </div>
                     <div style="text-align: center; margin-top: 24px;">
-                        <button onclick="window.submitConjunctionsBook1()" style="padding: 12px 32px; background: var(--primary-color); color: white; border: none; border-radius: 20px; font-weight: bold; cursor: pointer; transition: all 0.2s; font-size: 1.1rem; box-shadow: 0 4px 12px rgba(87,70,227,0.3);">NỘP BÀI 1</button>
+                        <button onclick="window.submitConjunctionsBook1()" style="padding: 12px 32px; background: var(--primary-color); color: white; border: none; border-radius: 20px; font-weight: bold; cursor: pointer; transition: all 0.2s; font-size: 1.1rem; box-shadow: 0 4px 12px rgba(87,70,227,0.3);">NỘP BÀI & KIỂM TRA KẾT QUẢ</button>
                     </div>
                 </div>
 
@@ -8692,7 +8699,7 @@ window.renderConjunctionsDetail = function(activeTab = 'theory') {
                         ${pBook2Html}
                     </div>
                     <div style="text-align: center; margin-top: 24px;">
-                        <button onclick="window.submitConjunctionsBook2()" style="padding: 12px 32px; background: #db2777; color: white; border: none; border-radius: 20px; font-weight: bold; cursor: pointer; transition: all 0.2s; font-size: 1.1rem; box-shadow: 0 4px 12px rgba(219,39,119,0.3);">NỘP BÀI 2</button>
+                        <button onclick="window.submitConjunctionsBook2()" style="padding: 12px 32px; background: #db2777; color: white; border: none; border-radius: 20px; font-weight: bold; cursor: pointer; transition: all 0.2s; font-size: 1.1rem; box-shadow: 0 4px 12px rgba(219,39,119,0.3);">NỘP BÀI & KIỂM TRA KẾT QUẢ</button>
                     </div>
                 </div>
 
@@ -8704,7 +8711,7 @@ window.renderConjunctionsDetail = function(activeTab = 'theory') {
                         ${pBook3Html}
                     </div>
                     <div style="text-align: center; margin-top: 24px;">
-                        <button onclick="window.submitConjunctionsBook3()" style="padding: 12px 32px; background: #4f46e5; color: white; border: none; border-radius: 20px; font-weight: bold; cursor: pointer; transition: all 0.2s; font-size: 1.1rem; box-shadow: 0 4px 12px rgba(79,70,229,0.3);">NỘP BÀI 3</button>
+                        <button onclick="window.submitConjunctionsBook3()" style="padding: 12px 32px; background: #4f46e5; color: white; border: none; border-radius: 20px; font-weight: bold; cursor: pointer; transition: all 0.2s; font-size: 1.1rem; box-shadow: 0 4px 12px rgba(79,70,229,0.3);">NỘP BÀI & KIỂM TRA KẾT QUẢ</button>
                     </div>
                 </div>
             </div>
@@ -8763,7 +8770,7 @@ window.renderConjunctionsDetail = function(activeTab = 'theory') {
                         ${pExtra1Html}
                     </div>
                     <div style="text-align: center; margin-top: 24px;">
-                        <button onclick="window.submitConjunctionsExtra1()" style="padding: 12px 32px; background: #2563eb; color: white; border: none; border-radius: 20px; font-weight: bold; cursor: pointer; transition: all 0.2s; font-size: 1.1rem; box-shadow: 0 4px 12px rgba(37,99,235,0.3);">NỘP BÀI 1</button>
+                        <button onclick="window.submitConjunctionsExtra1()" style="padding: 12px 32px; background: #2563eb; color: white; border: none; border-radius: 20px; font-weight: bold; cursor: pointer; transition: all 0.2s; font-size: 1.1rem; box-shadow: 0 4px 12px rgba(37,99,235,0.3);">NỘP BÀI & KIỂM TRA KẾT QUẢ</button>
                     </div>
                 </div>
 
@@ -8775,7 +8782,7 @@ window.renderConjunctionsDetail = function(activeTab = 'theory') {
                         ${pExtra2Html}
                     </div>
                     <div style="text-align: center; margin-top: 24px;">
-                        <button onclick="window.submitConjunctionsExtra2()" style="padding: 12px 32px; background: #166534; color: white; border: none; border-radius: 20px; font-weight: bold; cursor: pointer; transition: all 0.2s; font-size: 1.1rem; box-shadow: 0 4px 12px rgba(22,101,52,0.3);">NỘP BÀI 2</button>
+                        <button onclick="window.submitConjunctionsExtra2()" style="padding: 12px 32px; background: #166534; color: white; border: none; border-radius: 20px; font-weight: bold; cursor: pointer; transition: all 0.2s; font-size: 1.1rem; box-shadow: 0 4px 12px rgba(22,101,52,0.3);">NỘP BÀI & KIỂM TRA KẾT QUẢ</button>
                     </div>
                 </div>
             </div>

@@ -2866,15 +2866,14 @@ window.switchSelfTopic = function(topicId) {
         if (pass === null) return; // User cancelled
         
         const allPasses = ['missnguyet2026', 'cb206', 'cb210', 'cb211', 'cb213', 'onb103', 'b212'];
-        const fullPasses = ['missnguyet2026', 'cb206', 'cb210', 'cb211', 'onb103'];
-        const upToAdjPasses = [...fullPasses, 'cb213'];
+        const fullPasses = ['missnguyet2026', 'cb206', 'cb210', 'cb211', 'onb103', 'cb213'];
         const topicPasswords = {
             'components': allPasses,
             'structures': allPasses,
-            'nouns': [...upToAdjPasses, 'b212'],
-            'pronouns': [...upToAdjPasses, 'b212'],
-            'verbs': [...upToAdjPasses, 'b212'],
-            'adjectives': upToAdjPasses,
+            'nouns': [...fullPasses, 'b212'],
+            'pronouns': [...fullPasses, 'b212'],
+            'verbs': [...fullPasses, 'b212'],
+            'adjectives': fullPasses,
             'adverbs': fullPasses,
             'prepositions': fullPasses,
             'conjunctions': fullPasses
@@ -2885,12 +2884,20 @@ window.switchSelfTopic = function(topicId) {
         
         if (enteredPass && (validPasses.includes(enteredPass) || masterPasses.includes(enteredPass))) {
             if (typeof topicsData !== 'undefined') {
-                const t1 = topicsData.find(t => t.id === topicId);
-                if (t1) t1.status = 'unlocked';
+                topicsData.forEach(t => {
+                    const passes = topicPasswords[t.id] || fullPasses;
+                    if (passes.includes(enteredPass) || masterPasses.includes(enteredPass)) {
+                        t.status = 'unlocked';
+                    }
+                });
             }
             if (typeof chapter2TopicsData !== 'undefined') {
-                const t2 = chapter2TopicsData.find(t => t.id === topicId);
-                if (t2) t2.status = 'unlocked';
+                chapter2TopicsData.forEach(t => {
+                    const passes = topicPasswords[t.id] || fullPasses;
+                    if (passes.includes(enteredPass) || masterPasses.includes(enteredPass)) {
+                        t.status = 'unlocked';
+                    }
+                });
             }
             if (typeof window.saveProgress === 'function') window.saveProgress(true);
             alert('🎉 Mở khóa thành công!');
