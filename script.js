@@ -707,8 +707,21 @@ const chapter2TopicsData = [
 const sidebarNav = document.getElementById('sidebar-nav');
 const contentWrapper = document.getElementById('content-wrapper');
 
-let currentQuizIndex = 0;
-let quizScore = 0;
+window.toggleMobileSidebar = function(show) {
+    const sidebar = document.getElementById('sidebar');
+    const backdrop = document.getElementById('sidebar-backdrop');
+    if (!sidebar || !backdrop) return;
+    
+    if (show) {
+        sidebar.classList.add('mobile-open');
+        backdrop.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    } else {
+        sidebar.classList.remove('mobile-open');
+        backdrop.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+};
 
 function renderNav() {
     sidebarNav.innerHTML = navItems.map(item => `
@@ -724,6 +737,9 @@ function renderNav() {
             const target = e.currentTarget;
             target.classList.add('active');
             renderView(target.getAttribute('data-target'));
+            if (window.innerWidth <= 768) {
+                window.toggleMobileSidebar(false);
+            }
         });
     });
 }

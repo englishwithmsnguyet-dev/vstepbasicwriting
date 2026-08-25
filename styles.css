@@ -1434,3 +1434,189 @@ body {
     background-color: #7c3aed;
 }
 
+/* ==========================================================================
+   MOBILE RESPONSIVE ENHANCEMENTS (Applies ONLY to screens <= 768px)
+   Laptops and Desktops remain 100% untouched!
+   ========================================================================== */
+
+/* Hidden on desktop */
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+}
+
+.mobile-close-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #64748b;
+    cursor: pointer;
+    padding: 4px 8px;
+    line-height: 1;
+}
+
+.sidebar-backdrop {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(2px);
+    z-index: 998;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.sidebar-backdrop.active {
+    display: block;
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    /* Mobile Menu Buttons */
+    .mobile-menu-btn {
+        display: inline-flex;
+    }
+    
+    .mobile-close-btn {
+        display: block;
+    }
+
+    /* Layout adjustments */
+    .dashboard-layout {
+        position: relative;
+        overflow-x: hidden;
+    }
+
+    /* Sidebar transforms into a Slide-in Drawer */
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 290px;
+        max-width: 85vw;
+        box-shadow: 4px 0 24px rgba(0,0,0,0.25);
+        z-index: 999;
+        transform: translateX(-100%);
+        transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .sidebar.mobile-open {
+        transform: translateX(0);
+    }
+
+    .sidebar-header {
+        justify-content: space-between;
+        padding: 16px 20px;
+    }
+
+    /* Header adjustments */
+    .top-header {
+        padding: 16px;
+        gap: 12px;
+    }
+
+    .header-logo {
+        font-size: 1.2rem;
+    }
+
+    .header-logo svg {
+        width: 28px;
+        height: 28px;
+    }
+
+    .header-actions {
+        width: 100%;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .header-actions button {
+        font-size: 0.85rem !important;
+        padding: 6px 12px !important;
+    }
+
+    #student-info-display {
+        width: 100%;
+        text-align: center;
+        margin-right: 0 !important;
+        margin-bottom: 4px;
+    }
+
+    /* Content Wrapper */
+    .content-wrapper {
+        padding: 16px 14px;
+    }
+
+    .page-title {
+        font-size: 1.4rem;
+    }
+
+    .page-subtitle {
+        font-size: 0.95rem;
+        margin-bottom: 20px;
+    }
+
+    /* Grids & Cards */
+    .card-grid {
+        grid-template-columns: 1fr !important;
+        gap: 16px;
+    }
+
+    .pro-card .card-header {
+        padding: 14px 16px;
+    }
+
+    .pro-card .card-body {
+        padding: 16px 14px;
+    }
+
+    .module-header {
+        padding: 18px 16px 12px;
+    }
+
+    .module-title {
+        font-size: 1.05rem;
+    }
+
+    /* Pill Tabs in Practice & Self Practice */
+    .tabs-container {
+        gap: 8px;
+        margin-bottom: 20px;
+    }
+
+    .tab-pill {
+        padding: 8px 16px !important;
+        font-size: 1rem !important;
+    }
+
+    /* Quiz Options */
+    .options-grid {
+        grid-template-columns: 1fr !important;
+        gap: 10px;
+    }
+
+    .quiz-item {
+        padding: 14px 12px !important;
+    }
+
+    /* Tables & Preformatted Boxes */
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
+
+
