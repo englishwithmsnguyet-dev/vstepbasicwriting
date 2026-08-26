@@ -6273,7 +6273,7 @@ const adverbsPracticeBook2 = [
     {
         q: "The manager agreed to the proposal __________, surprising everyone in the meeting.",
         options: ["reluctantly", "eventually", "slowly"],
-        a: "reluctantly"
+        a: "eventually"
     },
     {
         q: "My friend goes to the library __________ to prepare for the writing test.",
@@ -8132,7 +8132,7 @@ window.checkAdverbsExtra1 = function(idx, optIdx, ans) {
         expDiv.style.background = '#fef2f2';
         expDiv.style.border = '1px solid #fecaca';
     }
-    window.saveProgress();
+    window.saveProgress(true);
 };
 
 window.checkAdverbsExtra2 = function(idx) {
@@ -8166,7 +8166,7 @@ window.checkAdverbsExtra2 = function(idx) {
         expDiv.style.border = '1px solid #fecaca';
         input.style.borderColor = '#ef4444';
     }
-    window.saveProgress();
+    window.saveProgress(true);
 };
 
 window.checkAdverbsExtra3 = function(idx, optIdx, ans) {
@@ -8201,7 +8201,86 @@ window.checkAdverbsExtra3 = function(idx, optIdx, ans) {
         expDiv.style.background = '#fef2f2';
         expDiv.style.border = '1px solid #fecaca';
     }
-    window.saveProgress();
+    window.saveProgress(true);
+};
+
+window.checkAdverbsBook2 = function(idx, optIdx, ans) {
+    window.adverbsAnswersBook2[idx] = ans;
+    const q = adverbsPracticeBook2[idx];
+    const expDiv = document.getElementById('advexp_book2_' + idx);
+    if (!expDiv) return;
+    
+    document.querySelectorAll(`.adv2-btn-${idx}`).forEach(btn => {
+        btn.classList.remove('selected');
+        btn.style.background = 'white';
+        btn.style.color = 'var(--text-main)';
+        btn.style.borderColor = 'var(--border-color)';
+    });
+    
+    const selectedBtn = document.getElementById(`adv2_btn_${idx}_${optIdx}`);
+    if (selectedBtn) {
+        selectedBtn.classList.add('selected');
+        selectedBtn.style.background = 'var(--primary-color)';
+        selectedBtn.style.color = 'white';
+        selectedBtn.style.borderColor = 'var(--primary-color)';
+    }
+
+    if (ans === q.a) {
+        expDiv.innerHTML = `<span style="color: #16a34a;">✅ Chính xác! Đáp án: <b>${q.a}</b></span>`;
+        expDiv.style.display = 'block';
+        expDiv.style.background = '#f0fdf4';
+        expDiv.style.border = '1px solid #bbf7d0';
+    } else {
+        expDiv.innerHTML = `<span style="color: #dc2626;">❌ Sai rồi. Đáp án đúng là: <b>${q.a}</b></span>`;
+        expDiv.style.display = 'block';
+        expDiv.style.background = '#fef2f2';
+        expDiv.style.border = '1px solid #fecaca';
+    }
+    window.saveProgress(true);
+};
+
+window.submitAdverbsBook2 = function() {
+    let score = 0;
+    let completed = true;
+    adverbsPracticeBook2.forEach((q, idx) => {
+        const expDiv = document.getElementById('advexp_book2_' + idx);
+        const userAnswer = window.adverbsAnswersBook2[idx];
+        
+        if (!userAnswer) {
+            completed = false;
+            if (expDiv) {
+                expDiv.innerHTML = `<span style="color: #ea580c;">⚠️ Bạn chưa chọn đáp án cho câu này.</span>`;
+                expDiv.style.display = 'block';
+                expDiv.style.background = '#fff7ed';
+                expDiv.style.border = '1px solid #fdba74';
+            }
+        } else {
+            if (userAnswer === q.a) {
+                score++;
+                if (expDiv) {
+                    expDiv.innerHTML = `<span style="color: #16a34a;">✅ Chính xác! Đáp án: <b>${q.a}</b></span>`;
+                    expDiv.style.display = 'block';
+                    expDiv.style.background = '#f0fdf4';
+                    expDiv.style.border = '1px solid #bbf7d0';
+                }
+            } else {
+                if (expDiv) {
+                    expDiv.innerHTML = `<span style="color: #dc2626;">❌ Sai rồi. Đáp án đúng là: <b>${q.a}</b></span>`;
+                    expDiv.style.display = 'block';
+                    expDiv.style.background = '#fef2f2';
+                    expDiv.style.border = '1px solid #fecaca';
+                }
+            }
+        }
+    });
+
+    if (!completed) {
+        alert("Vui lòng chọn đáp án cho tất cả các câu trước khi nộp bài!");
+        return;
+    }
+
+    window.saveProgress(true);
+    window.showExerciseResult(score, adverbsPracticeBook2.length, "KẾT QUẢ BÀI TẬP ÁP DỤNG 2 (CHỌN TRẠNG TỪ)");
 };
 
 window.checkAdverbsBook1 = function(idx) {
@@ -8238,7 +8317,7 @@ window.checkAdverbsBook1 = function(idx) {
     }
     
     window.adverbsAnswersBook1[idx] = val;
-    window.saveProgress();
+    window.saveProgress(true);
 };
 
 window.submitAdverbsBook1 = function() {
@@ -8532,6 +8611,9 @@ window.renderAdverbsDetail = function(activeTab = 'theory') {
                     <h2 style="color: var(--primary-color); font-size: 1.4rem; margin-bottom: 16px;">BÀI TẬP ÁP DỤNG 2 (CHỌN TRẠNG TỪ)</h2>
                     <p style="font-size: 1.05rem; color: #475569; margin-bottom: 24px;"><i>Chọn một trạng từ phù hợp trong ngoặc để hoàn thành mỗi câu sau.</i></p>
                     <div>${book2Html}</div>
+                    <div style="margin-top: 24px; text-align: center;">
+                        <button onclick="window.submitAdverbsBook2()" style="padding: 12px 32px; background: var(--primary-color); color: white; border: none; border-radius: 30px; font-weight: bold; font-size: 1.1rem; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.1)'">NỘP BÀI & KIỂM TRA KẾT QUẢ</button>
+                    </div>
                 </div>
 
                 <div style="margin-bottom: 40px;">
