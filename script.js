@@ -2240,7 +2240,7 @@ window.renderStructuresDetail = function(tab = 'theory') {
                 <div class="practice-header" style="font-weight: bold; color: var(--primary-color); margin-bottom: 12px; font-size: 1.2rem;">📝 CÂU ${idx + 1}</div>
                 <div style="font-size: 1.5rem; font-weight: bold; margin-bottom: 20px; color: var(--text-main);">"${q.text}"</div>
                 <div style="display: flex; gap: 16px; align-items: center;">
-                    <select id="sq-select-${idx}" style="padding: 12px 16px; border-radius: 8px; border: 2px solid var(--border-color); font-size: 1.1rem; flex: 1; background: var(--bg-card); color: var(--text-main); cursor: pointer; outline: none; transition: border-color 0.2s;" onfocus="this.style.borderColor='var(--primary-color)'" onblur="this.style.borderColor='var(--border-color)'">
+                    <select id="sq-select-${idx}" style="padding: 12px 16px; border-radius: 8px; border: 2px solid var(--border-color); font-size: 1.1rem; flex: 1; background: var(--bg-card); color: var(--text-main); cursor: pointer; outline: none; transition: border-color 0.2s;" onfocus="this.style.borderColor='var(--primary-color)'" onblur="this.style.borderColor='var(--border-color)'" oninput="window.adverbsAnswersBook1[${idx}] = this.value; window.saveProgress(true);">
                         <option value="">-- Chọn cấu trúc chính xác --</option>
                         ${optionsHtml}
                     </select>
@@ -7828,15 +7828,11 @@ window.checkPrepositions1 = function(idx) {
     }
 
     let isCorrect = q.a.some(ans => window.normalizeText(ans) === window.normalizeText(userAns));
-    const formCheck = window.checkSentencePunctuation(rawVal, isCorrect);
     
     expDiv.style.display = 'block';
-    if (formCheck.valid) {
+    if (isCorrect) {
         expDiv.style.background = '#dcfce7'; expDiv.style.color = '#166534'; expDiv.style.borderLeft = '4px solid #22c55e';
         expDiv.innerHTML = `<b>✅ Chính xác!</b><br>Đáp án: ${q.a[0]}`;
-    } else if (formCheck.isNear) {
-        expDiv.style.background = '#fffbeb'; expDiv.style.color = '#b45309'; expDiv.style.borderLeft = '4px solid #f59e0b';
-        expDiv.innerHTML = formCheck.message;
     } else {
         expDiv.style.background = '#fee2e2'; expDiv.style.color = '#991b1b'; expDiv.style.borderLeft = '4px solid #ef4444';
         expDiv.innerHTML = `<b>❌ Chưa đúng.</b><br>Đáp án tham khảo: <b>${q.a.join(' / ')}</b>`;
@@ -7857,15 +7853,11 @@ window.checkPrepositions2 = function(idx) {
     }
 
     let isCorrect = q.a.some(ans => window.normalizeText(ans) === window.normalizeText(userAns));
-    const formCheck = window.checkSentencePunctuation(rawVal, isCorrect);
     
     expDiv.style.display = 'block';
-    if (formCheck.valid) {
+    if (isCorrect) {
         expDiv.style.background = '#dcfce7'; expDiv.style.color = '#166534'; expDiv.style.borderLeft = '4px solid #22c55e';
         expDiv.innerHTML = `<b>✅ Chính xác!</b><br>Đáp án: ${q.a[0]}`;
-    } else if (formCheck.isNear) {
-        expDiv.style.background = '#fffbeb'; expDiv.style.color = '#b45309'; expDiv.style.borderLeft = '4px solid #f59e0b';
-        expDiv.innerHTML = formCheck.message;
     } else {
         expDiv.style.background = '#fee2e2'; expDiv.style.color = '#991b1b'; expDiv.style.borderLeft = '4px solid #ef4444';
         expDiv.innerHTML = `<b>❌ Chưa đúng.</b><br>Đáp án tham khảo: <b>${q.a.join(' / ')}</b>`;
@@ -7992,10 +7984,13 @@ window.submitPrepositionsExtra1 = function() {
 window.submitPrepositionsExtra2 = function() {
     let correct = 0, completed = true;
     prepositionsPracticeExtra2.forEach((q, idx) => {
-        const userAns = (window.prepositionsAnswersExtra2[idx] || '').trim().toLowerCase().replace(/[.,!?;:]/g, '').replace(/\s+/g, ' ');
+        const rawVal = window.prepositionsAnswersExtra2[idx] || '';
+        const userAns = rawVal.trim();
         if (!userAns) completed = false;
         else {
-            if (q.a.some(ans => window.normalizeText(ans) === window.normalizeText(userAns))) correct++;
+            const isCorrect = q.a.some(ans => window.normalizeText(ans) === window.normalizeText(userAns));
+            const formCheck = window.checkSentencePunctuation(rawVal, isCorrect);
+            if (formCheck.valid) correct++;
             window.checkPrepositionsExtra2(idx);
         }
     });
@@ -8006,10 +8001,13 @@ window.submitPrepositionsExtra2 = function() {
 window.submitPrepositionsExtra3 = function() {
     let correct = 0, completed = true;
     prepositionsPracticeExtra3.forEach((q, idx) => {
-        const userAns = (window.prepositionsAnswersExtra3[idx] || '').trim().toLowerCase().replace(/[.,!?;:]/g, '').replace(/\s+/g, ' ');
+        const rawVal = window.prepositionsAnswersExtra3[idx] || '';
+        const userAns = rawVal.trim();
         if (!userAns) completed = false;
         else {
-            if (q.a.some(ans => window.normalizeText(ans) === window.normalizeText(userAns))) correct++;
+            const isCorrect = q.a.some(ans => window.normalizeText(ans) === window.normalizeText(userAns));
+            const formCheck = window.checkSentencePunctuation(rawVal, isCorrect);
+            if (formCheck.valid) correct++;
             window.checkPrepositionsExtra3(idx);
         }
     });
@@ -8311,22 +8309,22 @@ window.submitAdverbsExtra1 = function() {
 
 window.submitAdverbsExtra2 = function() {
     let score = 0;
+    let completed = true;
     adverbsPracticeExtra2.forEach((q, idx) => {
-        const input = document.getElementById('adv_extra2_' + idx);
-        if (input && input.value.trim() !== '') {
-            window.checkAdverbsExtra2(idx);
-            const expDiv = document.getElementById('advexp_extra2_' + idx);
-            if (expDiv.innerHTML.includes('Tuyệt vời')) {
+        const val = (window.adverbsAnswersExtra2[idx] || '').trim();
+        if (!val) {
+            completed = false;
+        } else {
+            if (q.a.some(ans => window.normalizeText(val) === window.normalizeText(ans))) {
                 score++;
             }
-        } else {
-            const expDiv = document.getElementById('advexp_extra2_' + idx);
-            expDiv.innerHTML = `<span style="color: #ea580c;">⚠️ Bạn chưa làm câu này.</span>`;
-            expDiv.style.display = 'block';
-            expDiv.style.background = '#fff7ed';
-            expDiv.style.border = '1px solid #fdba74';
         }
+        window.checkAdverbsExtra2(idx);
     });
+    if (!completed) {
+        alert("Vui lòng điền hết tất cả các câu trước khi nộp bài!");
+        return;
+    }
     window.showExerciseResult(score, adverbsPracticeExtra2.length, "KẾT QUẢ BÀI TẬP THÊM 2 (TRẠNG TỪ)");
 };
 
@@ -8408,7 +8406,7 @@ window.renderAdverbsDetail = function(activeTab = 'theory') {
                            placeholder="Nhập bản dịch tiếng Anh..." 
                            style="width: 100%; padding: 12px 16px; font-size: 1.1rem; border: 2px solid var(--border-color); border-radius: 8px; outline: none; transition: border-color 0.2s;"
                            onfocus="this.style.borderColor='var(--primary-color)'"
-                           onblur="this.style.borderColor='var(--border-color)'"
+                           onblur="this.style.borderColor='var(--border-color)'" oninput="window.adverbsAnswersBook1[${idx}] = this.value; window.saveProgress(true);"
                            onkeypress="if(event.key === 'Enter') window.checkAdverbsBook1(${idx})">
                     <button onclick="window.checkAdverbsBook1(${idx})" style="padding: 8px 16px; background: white; color: var(--primary-color); border: 2px solid var(--primary-color); border-radius: 20px; font-weight: bold; cursor: pointer; transition: all 0.2s; align-self: flex-start;" onmouseover="this.style.background='var(--primary-color)'; this.style.color='white'" onmouseout="this.style.background='white'; this.style.color='var(--primary-color)'">Kiểm tra</button>
                     <div id="advexp_book1_${idx}" style="display: none; padding: 12px; border-radius: 8px; font-size: 1.05rem; margin-top: 8px;"></div>
@@ -8450,7 +8448,7 @@ window.renderAdverbsDetail = function(activeTab = 'theory') {
                            placeholder="Nhập bản dịch tiếng Anh..." 
                            style="width: 100%; padding: 12px 16px; font-size: 1.1rem; border: 2px solid var(--border-color); border-radius: 8px; outline: none; transition: border-color 0.2s;"
                            onfocus="this.style.borderColor='var(--primary-color)'"
-                           onblur="this.style.borderColor='var(--border-color)'"
+                           onblur="this.style.borderColor='var(--border-color)'" oninput="window.adverbsAnswersBook3[${idx}] = this.value; window.saveProgress(true);"
                            onkeypress="if(event.key === 'Enter') window.checkAdverbsBook3(${idx})">
                     <button onclick="window.checkAdverbsBook3(${idx})" style="padding: 8px 16px; background: white; color: var(--primary-color); border: 2px solid var(--primary-color); border-radius: 20px; font-weight: bold; cursor: pointer; transition: all 0.2s; align-self: flex-start;" onmouseover="this.style.background='var(--primary-color)'; this.style.color='white'" onmouseout="this.style.background='white'; this.style.color='var(--primary-color)'">Kiểm tra</button>
                     <div id="advexp_book3_${idx}" style="display: none; padding: 12px; border-radius: 8px; font-size: 1.05rem; margin-top: 8px;"></div>
@@ -8467,7 +8465,7 @@ window.renderAdverbsDetail = function(activeTab = 'theory') {
                            placeholder="Nhập bản dịch tiếng Anh..." 
                            style="width: 100%; padding: 12px 16px; font-size: 1.1rem; border: 2px solid var(--border-color); border-radius: 8px; outline: none; transition: border-color 0.2s;"
                            onfocus="this.style.borderColor='var(--primary-color)'"
-                           onblur="this.style.borderColor='var(--border-color)'"
+                           onblur="this.style.borderColor='var(--border-color)'" oninput="window.adverbsAnswersBook4[${idx}] = this.value; window.saveProgress(true);"
                            onkeypress="if(event.key === 'Enter') window.checkAdverbsBook4(${idx})">
                     <button onclick="window.checkAdverbsBook4(${idx})" style="padding: 8px 16px; background: white; color: var(--primary-color); border: 2px solid var(--primary-color); border-radius: 20px; font-weight: bold; cursor: pointer; transition: all 0.2s; align-self: flex-start;" onmouseover="this.style.background='var(--primary-color)'; this.style.color='white'" onmouseout="this.style.background='white'; this.style.color='var(--primary-color)'">Kiểm tra</button>
                     <div id="advexp_book4_${idx}" style="display: none; padding: 12px; border-radius: 8px; font-size: 1.05rem; margin-top: 8px;"></div>
@@ -8713,7 +8711,7 @@ window.renderAdverbsDetail = function(activeTab = 'theory') {
                            placeholder="Nhập bản dịch tiếng Anh..." 
                            style="width: 100%; padding: 12px 16px; font-size: 1.1rem; border: 2px solid var(--border-color); border-radius: 8px; outline: none; transition: border-color 0.2s;"
                            onfocus="this.style.borderColor='var(--primary-color)'"
-                           onblur="this.style.borderColor='var(--border-color)'"
+                           onblur="this.style.borderColor='var(--border-color)'" oninput="window.adverbsAnswersExtra2[${idx}] = this.value; window.saveProgress(true);"
                            onkeypress="if(event.key === 'Enter') window.checkAdverbsExtra2(${idx})">
                     <button onclick="window.checkAdverbsExtra2(${idx})" style="padding: 8px 16px; background: white; color: var(--primary-color); border: 2px solid var(--primary-color); border-radius: 20px; font-weight: bold; cursor: pointer; transition: all 0.2s; align-self: flex-start;" onmouseover="this.style.background='var(--primary-color)'; this.style.color='white'" onmouseout="this.style.background='white'; this.style.color='var(--primary-color)'">Kiểm tra</button>
                     <div id="advexp_extra2_${idx}" style="display: none; padding: 12px; border-radius: 8px; font-size: 1.05rem; margin-top: 8px;"></div>
