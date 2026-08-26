@@ -4257,20 +4257,32 @@ window.checkNounsTranslation = function(type, idx) {
         }
     }
     
-    const formCheck = window.checkSentencePunctuation(userInput, isCorrect);
-    
     expDiv.style.display = 'block';
     
-    if (formCheck.valid) {
-        expDiv.style.background = '#f0fdf4'; expDiv.style.color = '#166534'; expDiv.style.borderLeft = '4px solid #22c55e';
-        expDiv.innerHTML = `<b>✅ CHÍNH XÁC!</b>` + (dataArr[idx].exp ? ` ${dataArr[idx].exp}` : '');
-    } else if (formCheck.isNear) {
-        expDiv.style.background = '#fffbeb'; expDiv.style.color = '#b45309'; expDiv.style.borderLeft = '4px solid #f59e0b';
-        expDiv.innerHTML = formCheck.message + (dataArr[idx].exp ? `<br><div style="margin-top: 8px; font-size: 0.95rem; color: #b45309;">📝 <b>Giải thích:</b> ${dataArr[idx].exp}</div>` : '');
+    // Nếu là bài dịch câu hoàn chỉnh (extra3) thì mới kiểm tra viết hoa và dấu chấm câu
+    if (type === 'extra3') {
+        const formCheck = window.checkSentencePunctuation(userInput, isCorrect);
+        if (formCheck.valid) {
+            expDiv.style.background = '#f0fdf4'; expDiv.style.color = '#166534'; expDiv.style.borderLeft = '4px solid #22c55e';
+            expDiv.innerHTML = `<b>✅ CHÍNH XÁC!</b>` + (dataArr[idx].exp ? ` ${dataArr[idx].exp}` : '');
+        } else if (formCheck.isNear) {
+            expDiv.style.background = '#fffbeb'; expDiv.style.color = '#b45309'; expDiv.style.borderLeft = '4px solid #f59e0b';
+            expDiv.innerHTML = formCheck.message + (dataArr[idx].exp ? `<br><div style="margin-top: 8px; font-size: 0.95rem; color: #b45309;">📝 <b>Giải thích:</b> ${dataArr[idx].exp}</div>` : '');
+        } else {
+            const smartFeedback = window.generateFeedback ? window.generateFeedback(cleanUser, validAnswers) : '';
+            expDiv.style.background = '#fef2f2'; expDiv.style.color = '#991b1b'; expDiv.style.borderLeft = '4px solid #ef4444';
+            expDiv.innerHTML = `<b>❌ CHƯA CHÍNH XÁC.</b> ${smartFeedback} <br><div style="margin-top: 8px; font-size: 0.95rem; color: #b91c1c;">💡 <b>Gợi ý đáp án:</b> ${validAnswers[0]}</div>` + (dataArr[idx].exp ? `<div style="margin-top: 8px; font-size: 0.95rem; color: #b91c1c;">📝 <b>Giải thích:</b> ${dataArr[idx].exp}</div>` : '');
+        }
     } else {
-        const smartFeedback = window.generateFeedback ? window.generateFeedback(cleanUser, validAnswers) : '';
-        expDiv.style.background = '#fef2f2'; expDiv.style.color = '#991b1b'; expDiv.style.borderLeft = '4px solid #ef4444';
-        expDiv.innerHTML = `<b>❌ CHƯA CHÍNH XÁC.</b> ${smartFeedback} <br><div style="margin-top: 8px; font-size: 0.95rem; color: #b91c1c;">💡 <b>Gợi ý đáp án:</b> ${validAnswers[0]}</div>` + (dataArr[idx].exp ? `<div style="margin-top: 8px; font-size: 0.95rem; color: #b91c1c;">📝 <b>Giải thích:</b> ${dataArr[idx].exp}</div>` : '');
+        // Dịch cụm danh từ (book3, extra2): chỉ cần đúng từ và đúng ngữ pháp cụm
+        if (isCorrect) {
+            expDiv.style.background = '#f0fdf4'; expDiv.style.color = '#166534'; expDiv.style.borderLeft = '4px solid #22c55e';
+            expDiv.innerHTML = `<b>✅ CHÍNH XÁC!</b>` + (dataArr[idx].exp ? ` ${dataArr[idx].exp}` : '');
+        } else {
+            const smartFeedback = window.generateFeedback ? window.generateFeedback(cleanUser, validAnswers) : '';
+            expDiv.style.background = '#fef2f2'; expDiv.style.color = '#991b1b'; expDiv.style.borderLeft = '4px solid #ef4444';
+            expDiv.innerHTML = `<b>❌ CHƯA CHÍNH XÁC.</b> ${smartFeedback} <br><div style="margin-top: 8px; font-size: 0.95rem; color: #b91c1c;">💡 <b>Gợi ý đáp án:</b> ${validAnswers[0]}</div>` + (dataArr[idx].exp ? `<div style="margin-top: 8px; font-size: 0.95rem; color: #b91c1c;">📝 <b>Giải thích:</b> ${dataArr[idx].exp}</div>` : '');
+        }
     }
 }
 
