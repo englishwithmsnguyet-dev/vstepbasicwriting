@@ -5959,14 +5959,18 @@ const adverbsTheoryData = [
                 <div style="display: flex; flex-direction: column; gap: 12px;">
                     <div style="background: white; padding: 12px 16px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; flex-direction: column; gap: 4px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
                         <span style="font-weight: 600; color: #334155;">1. Bổ nghĩa cho động từ thường:</span>
-                        <span style="color: #475569;">Jenny plays basketball <span style="color: var(--primary-color); font-weight: 600; background: #e0e7ff; padding: 2px 6px; border-radius: 4px;">very well</span>. <i style="color: #64748b; font-size: 0.95em;">(Cô ấy chơi bóng rổ như thế nào? &rarr; Rất giỏi)</i></span>
+                        <span style="color: #475569;">Jenny plays basketball <span style="color: var(--primary-color); font-weight: 600; background: #e0e7ff; padding: 2px 6px; border-radius: 4px;">well</span>. <i style="color: #64748b; font-size: 0.95em;">(Cô ấy chơi bóng rổ như thế nào? &rarr; Giỏi)</i></span>
                     </div>
                     <div style="background: white; padding: 12px 16px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; flex-direction: column; gap: 4px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
                         <span style="font-weight: 600; color: #334155;">2. Bổ nghĩa cho tính từ:</span>
                         <span style="color: #475569;">She is <span style="color: var(--primary-color); font-weight: 600; background: #e0e7ff; padding: 2px 6px; border-radius: 4px;">extremely</span> intelligent. <i style="color: #64748b; font-size: 0.95em;">(Thông minh đến mức nào? &rarr; Cực kỳ)</i></span>
                     </div>
                     <div style="background: white; padding: 12px 16px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; flex-direction: column; gap: 4px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
-                        <span style="font-weight: 600; color: #334155;">3. Bổ nghĩa cho cả câu:</span>
+                        <span style="font-weight: 600; color: #334155;">3. Bổ nghĩa cho một trạng từ khác (nhằm mục đích nhấn mạnh):</span>
+                        <span style="color: #475569;">Jenny plays basketball <span style="color: var(--primary-color); font-weight: 600; background: #e0e7ff; padding: 2px 6px; border-radius: 4px;">very</span> well. <i style="color: #64748b; font-size: 0.95em;">(Giỏi đến mức nào? &rarr; 'Very' bổ nghĩa và nhấn mạnh cho trạng từ 'well')</i></span>
+                    </div>
+                    <div style="background: white; padding: 12px 16px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; flex-direction: column; gap: 4px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+                        <span style="font-weight: 600; color: #334155;">4. Bổ nghĩa cho cả câu:</span>
                         <span style="color: #475569;"><span style="color: var(--primary-color); font-weight: 600; background: #e0e7ff; padding: 2px 6px; border-radius: 4px;">Recently</span>, I have taken part in an English course. <i style="color: #64748b; font-size: 0.95em;">(Vào lúc nào? &rarr; Gần đây)</i></span>
                     </div>
                 </div>
