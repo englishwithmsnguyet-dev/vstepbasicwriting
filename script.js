@@ -8482,7 +8482,10 @@ window.renderAdverbsDetail = function(activeTab = 'theory') {
     } else if (activeTab === 'practice_book') {
         const book1Html = adverbsPracticeBook1.map((q, idx) => `
             <div class="quiz-item" style="background: white; border-radius: 12px; padding: 20px; margin-bottom: 16px; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color);">
-                <p style="font-size: 1.15rem; font-weight: 700; color: #1e293b; margin-bottom: 16px;"><b>${idx + 1}.</b> ${q.q}</p>
+                <div style="display: flex; gap: 12px; align-items: flex-start; margin-bottom: 16px;">
+                    <div style="background: var(--primary-light); color: var(--primary-color); width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.1rem; flex-shrink: 0;">${idx + 1}</div>
+                    <p style="font-size: 1.15rem; font-weight: 700; color: #1e293b; margin-top: 4px; margin-bottom: 0;">${q.q}</p>
+                </div>
                 <div style="display: flex; flex-direction: column; gap: 12px;">
                     <input type="text" id="adv_book1_${idx}" 
                            value="${(window.adverbsAnswersBook1[idx] || '').replace(/"/g, '&quot;')}"
@@ -8513,7 +8516,10 @@ window.renderAdverbsDetail = function(activeTab = 'theory') {
             
             return `
             <div class="quiz-item" style="background: white; border-radius: 12px; padding: 20px; margin-bottom: 16px; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color);">
-                <p style="font-size: 1.15rem; font-weight: 700; color: #1e293b; margin-bottom: 16px;"><b>${idx + 1}.</b> ${q.q}</p>
+                <div style="display: flex; gap: 12px; align-items: flex-start; margin-bottom: 16px;">
+                    <div style="background: var(--primary-light); color: var(--primary-color); width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.1rem; flex-shrink: 0;">${idx + 1}</div>
+                    <p style="font-size: 1.15rem; font-weight: 700; color: #1e293b; margin-top: 4px; margin-bottom: 0;">${q.q}</p>
+                </div>
                 <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 12px;">
                     ${optionsHtml}
                 </div>
@@ -8524,7 +8530,10 @@ window.renderAdverbsDetail = function(activeTab = 'theory') {
 
         const book3Html = adverbsPracticeBook3.map((q, idx) => `
             <div class="quiz-item" style="background: white; border-radius: 12px; padding: 20px; margin-bottom: 16px; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color);">
-                <p style="font-size: 1.15rem; font-weight: 700; color: #1e293b; margin-bottom: 16px;"><b>${idx + 1}.</b> ${q.q}</p>
+                <div style="display: flex; gap: 12px; align-items: flex-start; margin-bottom: 16px;">
+                    <div style="background: var(--primary-light); color: var(--primary-color); width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.1rem; flex-shrink: 0;">${idx + 1}</div>
+                    <p style="font-size: 1.15rem; font-weight: 700; color: #1e293b; margin-top: 4px; margin-bottom: 0;">${q.q}</p>
+                </div>
                 <div style="display: flex; flex-direction: column; gap: 12px;">
                     <input type="text" id="adv_book3_${idx}" 
                            value="${(window.adverbsAnswersBook3[idx] || '').replace(/"/g, '&quot;')}"
@@ -8541,7 +8550,10 @@ window.renderAdverbsDetail = function(activeTab = 'theory') {
 
         const book4Html = adverbsPracticeBook4.map((q, idx) => `
             <div class="quiz-item" style="background: white; border-radius: 12px; padding: 20px; margin-bottom: 16px; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color);">
-                <p style="font-size: 1.15rem; font-weight: 700; color: #1e293b; margin-bottom: 16px;"><b>${idx + 1}.</b> ${q.q}</p>
+                <div style="display: flex; gap: 12px; align-items: flex-start; margin-bottom: 16px;">
+                    <div style="background: var(--primary-light); color: var(--primary-color); width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.1rem; flex-shrink: 0;">${idx + 1}</div>
+                    <p style="font-size: 1.15rem; font-weight: 700; color: #1e293b; margin-top: 4px; margin-bottom: 0;">${q.q}</p>
+                </div>
                 <div style="display: flex; flex-direction: column; gap: 12px;">
                     <input type="text" id="adv_book4_${idx}" 
                            value="${(window.adverbsAnswersBook4[idx] || '').replace(/"/g, '&quot;')}"
@@ -8779,7 +8791,10 @@ window.renderAdverbsDetail = function(activeTab = 'theory') {
             
             return `
             <div class="quiz-item" style="background: white; border-radius: 12px; padding: 20px; margin-bottom: 16px; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color);">
-                <p style="font-size: 1.15rem; font-weight: 700; color: #1e293b; margin-bottom: 16px;"><b>${idx + 1}.</b> ${q.q}</p>
+                <div style="display: flex; gap: 12px; align-items: flex-start; margin-bottom: 16px;">
+                    <div style="background: var(--primary-light); color: var(--primary-color); width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.1rem; flex-shrink: 0;">${idx + 1}</div>
+                    <p style="font-size: 1.15rem; font-weight: 700; color: #1e293b; margin-top: 4px; margin-bottom: 0;">${q.q}</p>
+                </div>
                 <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 12px;">
                     ${optionsHtml}
                 </div>
@@ -8790,7 +8805,10 @@ window.renderAdverbsDetail = function(activeTab = 'theory') {
 
         const extra2Html = adverbsPracticeExtra2.map((q, idx) => `
             <div class="quiz-item" style="background: white; border-radius: 12px; padding: 20px; margin-bottom: 16px; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color);">
-                <p style="font-size: 1.15rem; font-weight: 700; color: #1e293b; margin-bottom: 16px;"><b>${idx + 1}.</b> ${q.q}</p>
+                <div style="display: flex; gap: 12px; align-items: flex-start; margin-bottom: 16px;">
+                    <div style="background: var(--primary-light); color: var(--primary-color); width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.1rem; flex-shrink: 0;">${idx + 1}</div>
+                    <p style="font-size: 1.15rem; font-weight: 700; color: #1e293b; margin-top: 4px; margin-bottom: 0;">${q.q}</p>
+                </div>
                 <div style="display: flex; flex-direction: column; gap: 12px;">
                     <input type="text" id="adv_extra2_${idx}" 
                            value="${(window.adverbsAnswersExtra2[idx] || '').replace(/"/g, '&quot;')}"
@@ -8822,7 +8840,10 @@ window.renderAdverbsDetail = function(activeTab = 'theory') {
             
             return `
             <div class="quiz-item" style="background: white; border-radius: 12px; padding: 20px; margin-bottom: 16px; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color);">
-                <p style="font-size: 1.15rem; color: var(--text-main); margin-bottom: 16px; line-height: 1.6;"><b>${idx + 1}.</b> ${q.q}</p>
+                <div style="display: flex; gap: 12px; align-items: flex-start; margin-bottom: 16px;">
+                    <div style="background: var(--primary-light); color: var(--primary-color); width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.1rem; flex-shrink: 0;">${idx + 1}</div>
+                    <p style="font-size: 1.15rem; font-weight: 700; color: var(--text-main); margin-top: 4px; margin-bottom: 0; line-height: 1.6;">${q.q}</p>
+                </div>
                 <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 12px;">
                     ${optionsHtml}
                 </div>
