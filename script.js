@@ -6862,45 +6862,45 @@ const adjectivesTheoryData = [
 ];
 
 const adjectivesPracticeBook1 = [
-    { q: "1. một vấn đề nghiêm trọng", a: ["a serious problem", "a severe problem"] },
-    { q: "2. các bài học hữu ích", a: ["useful lessons", "helpful lessons"] },
-    { q: "3. kết quả học tập tốt", a: ["good academic results", "good study results"] },
-    { q: "4. môt hệ thống giáo dục chất lượng", a: ["a quality education system", "a high-quality education system"] },
-    { q: "5. những giải pháp hiệu quả", a: ["effective solutions", "efficient solutions"] },
-    { q: "6. giá cả phải chăng", a: ["affordable prices", "reasonable prices"] },
-    { q: "7. một tác động tiêu cực", a: ["a negative impact", "a negative effect"] },
-    { q: "8. các địa điểm du lịch nổi tiếng", a: ["famous tourist attractions", "popular tourist destinations", "famous tourist destinations"] },
-    { q: "9. một kỳ thi quan trọng", a: ["an important exam", "an important examination"] },
-    { q: "10. một bầu không khí ấm cúng", a: ["a cozy atmosphere", "a warm atmosphere"] }
+    { q: "một vấn đề nghiêm trọng", a: ["a serious problem", "a severe problem"] },
+    { q: "các bài học hữu ích", a: ["useful lessons", "helpful lessons"] },
+    { q: "kết quả học tập tốt", a: ["good academic results", "good study results"] },
+    { q: "môt hệ thống giáo dục chất lượng", a: ["a quality education system", "a high-quality education system"] },
+    { q: "những giải pháp hiệu quả", a: ["effective solutions", "efficient solutions"] },
+    { q: "giá cả phải chăng", a: ["affordable prices", "reasonable prices"] },
+    { q: "một tác động tiêu cực", a: ["a negative impact", "a negative effect"] },
+    { q: "các địa điểm du lịch nổi tiếng", a: ["famous tourist attractions", "popular tourist destinations", "famous tourist destinations"] },
+    { q: "một kỳ thi quan trọng", a: ["an important exam", "an important examination"] },
+    { q: "một bầu không khí ấm cúng", a: ["a cozy atmosphere", "a warm atmosphere"] }
 ];
 
 const adjectivesPracticeBook2 = [
-    { q: "1. Thầy cô ở đó rất thân thiện và nhiệt tình, và họ luôn giúp đỡ học sinh yếu.", a: ["Teachers there are very friendly and enthusiastic, and they always help weak students.", "The teachers there are very friendly and enthusiastic, and they always help weak students."] },
-    { q: "2. Chi phí học tiếng Anh tại trung tâm này khá hợp lý.", a: ["The cost of learning English at this center is quite reasonable.", "The cost to learn English at this center is quite reasonable.", "The English tuition fee at this center is quite reasonable."] },
-    { q: "3. Ăn uống lành mạnh rất quan trọng để giữ gìn sức khỏe.", a: ["Healthy eating is very important to keep fit.", "Eating healthily is very important to stay healthy.", "Healthy eating is very important to maintain good health.", "A healthy diet is very important to keep fit."] },
-    { q: "4. Việc thức khuya có hại cho sức khỏe thể chất và tinh thần.", a: ["Staying up late is harmful to physical and mental health.", "Staying up late is bad for physical and mental health."] },
-    { q: "5. Bạn có thể thấy nhiều phong cảnh đẹp ở các vùng nông thôn Việt Nam.", a: ["You can see many beautiful landscapes in the rural areas of Vietnam.", "You can see a lot of beautiful scenery in the Vietnamese countryside.", "You can see many beautiful landscapes in rural areas of Vietnam."] }
+    { q: "Thầy cô ở đó rất thân thiện và nhiệt tình, và họ luôn giúp đỡ học sinh yếu.", a: ["Teachers there are very friendly and enthusiastic, and they always help weak students.", "The teachers there are very friendly and enthusiastic, and they always help weak students."] },
+    { q: "Chi phí học tiếng Anh tại trung tâm này khá hợp lý.", a: ["The cost of learning English at this center is quite reasonable.", "The cost to learn English at this center is quite reasonable.", "The English tuition fee at this center is quite reasonable."] },
+    { q: "Ăn uống lành mạnh rất quan trọng để giữ gìn sức khỏe.", a: ["Healthy eating is very important to keep fit.", "Eating healthily is very important to stay healthy.", "Healthy eating is very important to maintain good health.", "A healthy diet is very important to keep fit."] },
+    { q: "Việc thức khuya có hại cho sức khỏe thể chất và tinh thần.", a: ["Staying up late is harmful to physical and mental health.", "Staying up late is bad for physical and mental health."] },
+    { q: "Bạn có thể thấy nhiều phong cảnh đẹp ở các vùng nông thôn Việt Nam.", a: ["You can see many beautiful landscapes in the rural areas of Vietnam.", "You can see a lot of beautiful scenery in the Vietnamese countryside.", "You can see many beautiful landscapes in rural areas of Vietnam."] }
 ];
 
 const adjectivesPracticeExtra1 = [
-    { before: "1. She bought a ", after: " dress for the party.", options: ["beautiful", "beautifully", "beauty"], ans: "beautiful" },
-    { before: "2. The test was extremely ", after: ", so many students failed.", options: ["difficult", "difficulty", "difficultly"], ans: "difficult" },
-    { before: "3. They are looking for a ", after: " apartment in the city center.", options: ["spacious", "space", "spaciously"], ans: "spacious" },
-    { before: "4. My grandmother is a very ", after: " woman.", options: ["careful", "carefully", "care"], ans: "careful" },
-    { before: "5. The weather today is so ", after: "!", options: ["lovely", "love", "lovingly"], ans: "lovely" },
-    { before: "6. He gave a ", after: " presentation yesterday.", options: ["successful", "success", "successfully"], ans: "successful" },
-    { before: "7. Eating vegetables is ", after: " for your health.", options: ["good", "well", "goodness"], ans: "good" },
-    { before: "8. This is an ", after: " book about history.", options: ["interesting", "interestingly", "interest"], ans: "interesting" },
-    { before: "9. We had a ", after: " meal at the new restaurant.", options: ["delicious", "deliciously", "deliciousness"], ans: "delicious" },
-    { before: "10. The children felt very ", after: " when they heard the news.", options: ["happy", "happily", "happiness"], ans: "happy" }
+    { before: "She bought a ", after: " dress for the party.", options: ["beautiful", "beautifully", "beauty"], ans: "beautiful" },
+    { before: "The test was extremely ", after: ", so many students failed.", options: ["difficult", "difficulty", "difficultly"], ans: "difficult" },
+    { before: "They are looking for a ", after: " apartment in the city center.", options: ["spacious", "space", "spaciously"], ans: "spacious" },
+    { before: "My grandmother is a very ", after: " woman.", options: ["careful", "carefully", "care"], ans: "careful" },
+    { before: "The weather today is so ", after: "!", options: ["lovely", "love", "lovingly"], ans: "lovely" },
+    { before: "He gave a ", after: " presentation yesterday.", options: ["successful", "success", "successfully"], ans: "successful" },
+    { before: "Eating vegetables is ", after: " for your health.", options: ["good", "well", "goodness"], ans: "good" },
+    { before: "This is an ", after: " book about history.", options: ["interesting", "interestingly", "interest"], ans: "interesting" },
+    { before: "We had a ", after: " meal at the new restaurant.", options: ["delicious", "deliciously", "deliciousness"], ans: "delicious" },
+    { before: "The children felt very ", after: " when they heard the news.", options: ["happy", "happily", "happiness"], ans: "happy" }
 ];
 
 const adjectivesPracticeExtra2 = [
-    { q: "1. Chiếc áo này quá đắt đối với tôi.", a: ["This shirt is too expensive for me.", "This T-shirt is too expensive for me."] },
-    { q: "2. Cô ấy có một nụ cười quyến rũ.", a: ["She has a charming smile.", "She has an attractive smile."] },
-    { q: "3. Học ngôn ngữ mới là một trải nghiệm thú vị.", a: ["Learning a new language is an interesting experience.", "Learning new languages is an exciting experience."] },
-    { q: "4. Bố mẹ tôi rất tự hào về tôi.", a: ["My parents are very proud of me.", "My parents are proud of me."] },
-    { q: "5. Căn phòng này rất sạch sẽ và ngăn nắp.", a: ["This room is very clean and tidy.", "This room is clean and neat."] }
+    { q: "Chiếc áo này quá đắt đối với tôi.", a: ["This shirt is too expensive for me.", "This T-shirt is too expensive for me."] },
+    { q: "Cô ấy có một nụ cười quyến rũ.", a: ["She has a charming smile.", "She has an attractive smile."] },
+    { q: "Học ngôn ngữ mới là một trải nghiệm thú vị.", a: ["Learning a new language is an interesting experience.", "Learning new languages is an exciting experience."] },
+    { q: "Bố mẹ tôi rất tự hào về tôi.", a: ["My parents are very proud of me.", "My parents are proud of me."] },
+    { q: "Căn phòng này rất sạch sẽ và ngăn nắp.", a: ["This room is very clean and tidy.", "This room is clean and neat."] }
 ];
 
 // Logic functions for Adjectives
@@ -7604,58 +7604,58 @@ const prepositionsTheoryData = [
     }
 ];
 const prepositionsPracticeBook1 = [
-    { q: "1. trong suốt kỳ nghỉ hè", a: ["during the summer holiday", "during the summer vacation", "during summer holiday", "during summer vacation"] },
-    { q: "2. vào cuối tuần", a: ["on the weekend", "at the weekend", "on weekends", "at weekends"] },
-    { q: "3. vào sáng thứ Hai tuần tới", a: ["on Monday morning next week", "next Monday morning", "on the morning of next Monday"] },
-    { q: "4. vào buổi chiều", a: ["in the afternoon", "in the afternoons"] },
-    { q: "5. vào dịp Tết Nguyên Đán", a: ["on Lunar New Year", "on Tet holiday", "at Tet", "on Tet"] },
-    { q: "6. vào ngày 15 tháng 8 Âm Lịch", a: ["on the 15th of August on the Lunar calendar", "on August 15th on the Lunar calendar", "on the 15th of August (lunar)", "on August 15th (lunar)"] },
-    { q: "7. trước kỳ thi VSTEP", a: ["before the VSTEP exam", "prior to the VSTEP exam"] },
-    { q: "8. trong vòng hai năm", a: ["for two years", "within two years", "in two years"] },
-    { q: "9. kể từ năm ngoái", a: ["since last year"] },
-    { q: "10. sau giờ làm việc", a: ["after working hours", "after work"] }
+    { q: "trong suốt kỳ nghỉ hè", a: ["during the summer holiday", "during the summer vacation", "during summer holiday", "during summer vacation"] },
+    { q: "vào cuối tuần", a: ["on the weekend", "at the weekend", "on weekends", "at weekends"] },
+    { q: "vào sáng thứ Hai tuần tới", a: ["on Monday morning next week", "next Monday morning", "on the morning of next Monday"] },
+    { q: "vào buổi chiều", a: ["in the afternoon", "in the afternoons"] },
+    { q: "vào dịp Tết Nguyên Đán", a: ["on Lunar New Year", "on Tet holiday", "at Tet", "on Tet"] },
+    { q: "vào ngày 15 tháng 8 Âm Lịch", a: ["on the 15th of August on the Lunar calendar", "on August 15th on the Lunar calendar", "on the 15th of August (lunar)", "on August 15th (lunar)"] },
+    { q: "trước kỳ thi VSTEP", a: ["before the VSTEP exam", "prior to the VSTEP exam"] },
+    { q: "trong vòng hai năm", a: ["for two years", "within two years", "in two years"] },
+    { q: "kể từ năm ngoái", a: ["since last year"] },
+    { q: "sau giờ làm việc", a: ["after working hours", "after work"] }
 ];
 
 const prepositionsPracticeBook2 = [
-    { q: "1. tại một nhà sách gần trường đại học", a: ["at a bookstore near the university", "at a bookshop near the university", "at a bookstore near the college"] },
-    { q: "2. trên Facebook", a: ["on Facebook"] },
-    { q: "3. trên một con đường đông đúc", a: ["on a busy street", "on a crowded street"] },
-    { q: "4. trong nhà tôi", a: ["in my house", "in my home", "at my house"] },
-    { q: "5. ở đất nước của tôi", a: ["in my country"] },
-    { q: "6. tại một siêu thị lớn trong trung tâm thành phố", a: ["at a big supermarket in the city center", "at a large supermarket in the city center", "at a big supermarket in the centre of the city"] },
-    { q: "7. tại thành phố Cần Thơ", a: ["in Can Tho city", "in Can Tho"] },
-    { q: "8. gần thư viện trường", a: ["near the school library", "near the university library", "close to the school library"] },
-    { q: "9. trên màn hình điện thoại", a: ["on the phone screen", "on the smartphone screen", "on my phone screen"] },
-    { q: "10. trong khuôn viên trường", a: ["on campus", "on the school campus", "on the university campus"] }
+    { q: "tại một nhà sách gần trường đại học", a: ["at a bookstore near the university", "at a bookshop near the university", "at a bookstore near the college"] },
+    { q: "trên Facebook", a: ["on Facebook"] },
+    { q: "trên một con đường đông đúc", a: ["on a busy street", "on a crowded street"] },
+    { q: "trong nhà tôi", a: ["in my house", "in my home", "at my house"] },
+    { q: "ở đất nước của tôi", a: ["in my country"] },
+    { q: "tại một siêu thị lớn trong trung tâm thành phố", a: ["at a big supermarket in the city center", "at a large supermarket in the city center", "at a big supermarket in the centre of the city"] },
+    { q: "tại thành phố Cần Thơ", a: ["in Can Tho city", "in Can Tho"] },
+    { q: "gần thư viện trường", a: ["near the school library", "near the university library", "close to the school library"] },
+    { q: "trên màn hình điện thoại", a: ["on the phone screen", "on the smartphone screen", "on my phone screen"] },
+    { q: "trong khuôn viên trường", a: ["on campus", "on the school campus", "on the university campus"] }
 ];
 
 const prepositionsPracticeExtra1 = [
-    { before: "1. We are going to have a meeting ", after: " Friday morning.", options: ["in", "on", "at"], ans: "on" },
-    { before: "2. My father usually reads the newspaper ", after: " the evening.", options: ["in", "on", "at"], ans: "in" },
-    { before: "3. She is really good ", after: " playing the piano.", options: ["in", "at", "for"], ans: "at" },
-    { before: "4. I have been learning English ", after: " five years.", options: ["for", "since", "during"], ans: "for" },
-    { before: "5. He apologized to his boss ", after: " being late.", options: ["to", "for", "with"], ans: "for" },
-    { before: "6. The train will arrive ", after: " exactly 9:00 AM.", options: ["in", "on", "at"], ans: "at" },
-    { before: "7. Are you interested ", after: " reading science fiction books?", options: ["in", "on", "about"], ans: "in" },
-    { before: "8. They often go skiing ", after: " winter.", options: ["in", "on", "at"], ans: "in" },
-    { before: "9. We had a lot of fun ", after: " the summer holiday.", options: ["while", "during", "for"], ans: "during" },
-    { before: "10. The children are afraid ", after: " the dark.", options: ["of", "from", "with"], ans: "of" }
+    { before: "We are going to have a meeting ", after: " Friday morning.", options: ["in", "on", "at"], ans: "on" },
+    { before: "My father usually reads the newspaper ", after: " the evening.", options: ["in", "on", "at"], ans: "in" },
+    { before: "She is really good ", after: " playing the piano.", options: ["in", "at", "for"], ans: "at" },
+    { before: "I have been learning English ", after: " five years.", options: ["for", "since", "during"], ans: "for" },
+    { before: "He apologized to his boss ", after: " being late.", options: ["to", "for", "with"], ans: "for" },
+    { before: "The train will arrive ", after: " exactly 9:00 AM.", options: ["in", "on", "at"], ans: "at" },
+    { before: "Are you interested ", after: " reading science fiction books?", options: ["in", "on", "about"], ans: "in" },
+    { before: "They often go skiing ", after: " winter.", options: ["in", "on", "at"], ans: "in" },
+    { before: "We had a lot of fun ", after: " the summer holiday.", options: ["while", "during", "for"], ans: "during" },
+    { before: "The children are afraid ", after: " the dark.", options: ["of", "from", "with"], ans: "of" }
 ];
 
 const prepositionsPracticeExtra2 = [
-    { q: "1. Tôi thường thức dậy lúc 6 giờ sáng vào các ngày trong tuần.", a: ["I usually wake up at 6 a.m. on weekdays.", "I usually get up at 6 a.m. on weekdays.", "I often wake up at 6 a.m. on weekdays."] },
-    { q: "2. Chị gái tôi có hứng thú với việc học nhiếp ảnh.", a: ["My sister is very interested in learning photography.", "My sister is interested in learning photography."] },
-    { q: "3. Chúng tôi đã làm việc tại công ty này từ năm 2018.", a: ["We have worked at this company since 2018.", "We have been working at this company since 2018.", "We have worked in this company since 2018."] },
-    { q: "4. Thành phố này nổi tiếng với những bãi biển đẹp.", a: ["This city is famous for its beautiful beaches.", "This city is famous for beautiful beaches."] },
-    { q: "5. Tôi không thể tập trung vào bài tập về nhà vì tiếng ồn.", a: ["I cannot focus on my homework because of the noise.", "I cannot concentrate on my homework because of the noise."] }
+    { q: "Tôi thường thức dậy lúc 6 giờ sáng vào các ngày trong tuần.", a: ["I usually wake up at 6 a.m. on weekdays.", "I usually get up at 6 a.m. on weekdays.", "I often wake up at 6 a.m. on weekdays."] },
+    { q: "Chị gái tôi có hứng thú với việc học nhiếp ảnh.", a: ["My sister is very interested in learning photography.", "My sister is interested in learning photography."] },
+    { q: "Chúng tôi đã làm việc tại công ty này từ năm 2018.", a: ["We have worked at this company since 2018.", "We have been working at this company since 2018.", "We have worked in this company since 2018."] },
+    { q: "Thành phố này nổi tiếng với những bãi biển đẹp.", a: ["This city is famous for its beautiful beaches.", "This city is famous for beautiful beaches."] },
+    { q: "Tôi không thể tập trung vào bài tập về nhà vì tiếng ồn.", a: ["I cannot focus on my homework because of the noise.", "I cannot concentrate on my homework because of the noise."] }
 ];
 
 const prepositionsPracticeExtra3 = [
-    { q: "1. Bố mẹ tôi đang chờ tôi ở nhà ga xe lửa.", a: ["My parents are waiting for me at the train station.", "My parents are waiting for me at the railway station."] },
-    { q: "2. Bạn nên chịu trách nhiệm cho hành động của mình.", a: ["You should be responsible for your actions.", "You should take responsibility for your actions."] },
-    { q: "3. Cô ấy sinh ra ở Hà Nội vào tháng 10 năm 1999.", a: ["She was born in Hanoi in October 1999.", "She was born in Hanoi in October, 1999."] },
-    { q: "4. Mọi người phụ thuộc rất nhiều vào công nghệ ngày nay.", a: ["People depend heavily on technology today.", "People depend a lot on technology nowadays.", "Everyone depends a lot on technology today."] },
-    { q: "5. Đừng quên nộp báo cáo trước thứ Sáu tuần này.", a: ["Do not forget to submit the report before this Friday."] }
+    { q: "Bố mẹ tôi đang chờ tôi ở nhà ga xe lửa.", a: ["My parents are waiting for me at the train station.", "My parents are waiting for me at the railway station."] },
+    { q: "Bạn nên chịu trách nhiệm cho hành động của mình.", a: ["You should be responsible for your actions.", "You should take responsibility for your actions."] },
+    { q: "Cô ấy sinh ra ở Hà Nội vào tháng 10 năm 1999.", a: ["She was born in Hanoi in October 1999.", "She was born in Hanoi in October, 1999."] },
+    { q: "Mọi người phụ thuộc rất nhiều vào công nghệ ngày nay.", a: ["People depend heavily on technology today.", "People depend a lot on technology nowadays.", "Everyone depends a lot on technology today."] },
+    { q: "Đừng quên nộp báo cáo trước thứ Sáu tuần này.", a: ["Do not forget to submit the report before this Friday."] }
 ];
 
 window.renderPrepositionsDetail = function(activeTab = 'theory') {
