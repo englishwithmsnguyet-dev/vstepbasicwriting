@@ -6874,10 +6874,10 @@ const adjectivesPracticeBook1 = [
 
 const adjectivesPracticeBook2 = [
     { q: "Thầy cô ở đó rất thân thiện và nhiệt tình, và họ luôn giúp đỡ học sinh yếu.", a: ["Teachers there are very friendly and enthusiastic, and they always help weak students.", "The teachers there are very friendly and enthusiastic, and they always help weak students."] },
-    { q: "Chi phí học tiếng Anh tại trung tâm này khá hợp lý.", a: ["The cost of learning English at this center is quite reasonable.", "The cost to learn English at this center is quite reasonable.", "The English tuition fee at this center is quite reasonable."] },
-    { q: "Ăn uống lành mạnh rất quan trọng để giữ gìn sức khỏe.", a: ["Healthy eating is very important to keep fit.", "Eating healthily is very important to stay healthy.", "Healthy eating is very important to maintain good health.", "A healthy diet is very important to keep fit."] },
+    { q: "Chi phí học tiếng Anh tại trung tâm này khá hợp lý.", a: ["The cost of learning English at this center is quite reasonable.", "The cost of learning English at this center is quite affordable.", "The cost to learn English at this center is quite reasonable.", "The cost to learn English at this center is quite affordable.", "The English tuition fee at this center is quite reasonable.", "The English tuition fee at this center is quite affordable."] },
+    { q: "Ăn uống lành mạnh rất quan trọng để giữ gìn sức khỏe.", a: ["Healthy eating is very important to keep fit.", "Healthy eating is very important to stay healthy.", "Healthy eating is very important to maintain good health.", "Eating healthy is very important to keep fit.", "Eating healthy is very important to stay healthy.", "Eating healthy is very important to maintain good health.", "Eating healthily is very important to stay healthy.", "Eating healthily is very important to keep fit.", "Eating healthily is very important to maintain good health.", "A healthy diet is very important to keep fit."] },
     { q: "Việc thức khuya có hại cho sức khỏe thể chất và tinh thần.", a: ["Staying up late is harmful to physical and mental health.", "Staying up late is bad for physical and mental health."] },
-    { q: "Bạn có thể thấy nhiều phong cảnh đẹp ở các vùng nông thôn Việt Nam.", a: ["You can see many beautiful landscapes in the rural areas of Vietnam.", "You can see a lot of beautiful scenery in the Vietnamese countryside.", "You can see many beautiful landscapes in rural areas of Vietnam."] }
+    { q: "Bạn có thể thấy nhiều phong cảnh đẹp ở các vùng nông thôn Việt Nam.", a: ["You can see many beautiful landscapes in the rural areas of Vietnam.", "You can see many beautiful landscapes in rural areas of Vietnam.", "You can see a lot of beautiful scenery in the Vietnamese countryside.", "You can see a lot of beautiful scenery in the countryside of Vietnam.", "You can see many beautiful landscapes in the countryside of Vietnam."] }
 ];
 
 const adjectivesPracticeExtra1 = [
@@ -7242,7 +7242,7 @@ window.renderAdjectivesDetail = function(activeTab = 'theory') {
                                 <div style="display: flex; flex-direction: column; gap: 6px; padding-left: 4px;">
                                     <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">friendly</b> (adj): <i style="color: #1e293b; font-weight: 600;">thân thiện</i></div>
                                     <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">enthusiastic</b> (adj): <i style="color: #1e293b; font-weight: 600;">nhiệt tình</i></div>
-                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">weak students</b>: <i style="color: #1e293b; font-weight: 600;">học sinh yếu</i></div>
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">weak</b> (adj): <i style="color: #1e293b; font-weight: 600;">yếu (học sinh yếu: weak students)</i></div>
                                 </div>
                             </div>
 
@@ -7250,16 +7250,17 @@ window.renderAdjectivesDetail = function(activeTab = 'theory') {
                                 <div style="display: inline-block; background: var(--primary-light); color: var(--primary-color); font-weight: 800; padding: 3px 10px; border-radius: 6px; font-size: 0.9rem; margin-bottom: 8px;">CÂU 2</div>
                                 <div style="display: flex; flex-direction: column; gap: 6px; padding-left: 4px;">
                                     <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">the cost of learning</b>: <i style="color: #1e293b; font-weight: 600;">chi phí học</i></div>
-                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">quite reasonable</b> (adj): <i style="color: #1e293b; font-weight: 600;">khá hợp lý</i></div>
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">quite</b> (adv): <i style="color: #1e293b; font-weight: 600;">khá / tương đối</i></div>
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">reasonable = affordable</b> (adj): <i style="color: #1e293b; font-weight: 600;">hợp lý / phải chăng</i></div>
                                 </div>
                             </div>
 
                             <div style="background: white; padding: 14px 18px; border-radius: 10px; border: 1px solid #e2e8f0; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
                                 <div style="display: inline-block; background: var(--primary-light); color: var(--primary-color); font-weight: 800; padding: 3px 10px; border-radius: 6px; font-size: 0.9rem; margin-bottom: 8px;">CÂU 3</div>
                                 <div style="display: flex; flex-direction: column; gap: 6px; padding-left: 4px;">
-                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">healthy eating</b>: <i style="color: #1e293b; font-weight: 600;">ăn uống lành mạnh</i></div>
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">healthy eating = eating healthy</b>: <i style="color: #1e293b; font-weight: 600;">ăn uống lành mạnh</i></div>
                                     <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">important</b> (adj): <i style="color: #1e293b; font-weight: 600;">quan trọng</i></div>
-                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">keep fit / stay healthy</b>: <i style="color: #1e293b; font-weight: 600;">giữ gìn sức khỏe</i></div>
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">maintain good health = stay healthy = keep fit</b>: <i style="color: #1e293b; font-weight: 600;">giữ gìn / duy trì sức khỏe</i></div>
                                 </div>
                             </div>
 
@@ -7275,8 +7276,10 @@ window.renderAdjectivesDetail = function(activeTab = 'theory') {
                             <div style="background: white; padding: 14px 18px; border-radius: 10px; border: 1px solid #e2e8f0; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
                                 <div style="display: inline-block; background: var(--primary-light); color: var(--primary-color); font-weight: 800; padding: 3px 10px; border-radius: 6px; font-size: 0.9rem; margin-bottom: 8px;">CÂU 5</div>
                                 <div style="display: flex; flex-direction: column; gap: 6px; padding-left: 4px;">
-                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">beautiful landscapes / scenery</b>: <i style="color: #1e293b; font-weight: 600;">phong cảnh đẹp</i></div>
-                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">rural areas / countryside</b>: <i style="color: #1e293b; font-weight: 600;">vùng nông thôn</i></div>
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">beautiful</b> (adj): <i style="color: #1e293b; font-weight: 600;">đẹp</i></div>
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">landscapes</b> (n - đếm được) / <b style="color: var(--primary-color); font-weight: 800;">scenery</b> (n - không đếm được): <i style="color: #1e293b; font-weight: 600;">phong cảnh</i></div>
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">rural areas</b>: <i style="color: #1e293b; font-weight: 600;">các vùng nông thôn</i></div>
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">in the countryside</b>: <i style="color: #1e293b; font-weight: 600;">ở miền quê / nông thôn</i></div>
                                 </div>
                             </div>
                         </div>
