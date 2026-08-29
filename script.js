@@ -6236,7 +6236,7 @@ const adverbsTheoryData = [
 const adverbsPracticeBook1 = [
     {
         q: "Tôi thường chơi thể thao sau giờ học để thư giãn đầu óc.",
-        a: ["I often play sports after school to relax my mind.", "I usually play sports after school to relax my mind."]
+        a: ["I often play sports after school to relax my mind.", "I usually play sports after school to relax my mind.", "I often play sports after class to relax my mind.", "I usually play sports after class to relax my mind."]
     },
     {
         q: "Hôm qua tôi đã dậy rất sớm để ôn bài thi.",
@@ -6248,11 +6248,11 @@ const adverbsPracticeBook1 = [
     },
     {
         q: "Tôi thường đọc báo tiếng Anh vì nó giúp tôi học từ vựng một cách hiệu quả.",
-        a: ["I often read English newspapers because it helps me learn vocabulary effectively.", "I usually read English newspapers because it helps me learn vocabulary effectively."]
+        a: ["I often read English newspapers because it helps me learn vocabulary effectively.", "I usually read English newspapers because it helps me learn vocabulary effectively.", "I often read English newspapers because it helps me learn vocabulary efficiently.", "I usually read English newspapers because it helps me learn vocabulary efficiently."]
     },
     {
         q: "Tôi thường dành 30 phút bơi lội mỗi ngày vì nó là một cách hay để giảm cân một cách nhanh chóng.",
-        a: ["I often spend 30 minutes swimming every day because it is a good way to lose weight quickly.", "I usually spend 30 minutes swimming every day because it is a good way to lose weight quickly."]
+        a: ["I often spend 30 minutes swimming every day because it is a good way to lose weight quickly.", "I usually spend 30 minutes swimming every day because it is a good way to lose weight quickly.", "I often spend 30 minutes swimming daily because it is a good way to lose weight quickly.", "I usually spend 30 minutes swimming daily because it is a good way to lose weight quickly."]
     }
 ];
 
@@ -8762,12 +8762,14 @@ window.renderAdverbsDetail = function(activeTab = 'theory') {
                                 <div style="display: inline-block; background: var(--primary-light); color: var(--primary-color); font-weight: 800; padding: 3px 10px; border-radius: 6px; font-size: 0.9rem; margin-bottom: 8px;">CÂU 1</div>
                                 <div style="display: flex; flex-direction: column; gap: 6px; padding-left: 4px;">
                                     <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">often / usually</b> (adv): <i style="color: #1e293b; font-weight: 600;">thường</i></div>
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">after school / after class</b>: <i style="color: #1e293b; font-weight: 600;">sau giờ học</i></div>
                                 </div>
                             </div>
                             <div style="background: white; padding: 14px 18px; border-radius: 10px; border: 1px solid #e2e8f0; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
                                 <div style="display: inline-block; background: var(--primary-light); color: var(--primary-color); font-weight: 800; padding: 3px 10px; border-radius: 6px; font-size: 0.9rem; margin-bottom: 8px;">CÂU 2</div>
                                 <div style="display: flex; flex-direction: column; gap: 6px; padding-left: 4px;">
-                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">early</b> (adv): <i style="color: #1e293b; font-weight: 600;">sớm (rất sớm: very early)</i></div>
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">very</b> (adv): <i style="color: #1e293b; font-weight: 600;">rất</i></div>
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">early</b> (adv): <i style="color: #1e293b; font-weight: 600;">sớm</i></div>
                                     <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">yesterday</b> (adv): <i style="color: #1e293b; font-weight: 600;">hôm qua</i></div>
                                 </div>
                             </div>
@@ -8782,14 +8784,14 @@ window.renderAdverbsDetail = function(activeTab = 'theory') {
                                 <div style="display: inline-block; background: var(--primary-light); color: var(--primary-color); font-weight: 800; padding: 3px 10px; border-radius: 6px; font-size: 0.9rem; margin-bottom: 8px;">CÂU 4</div>
                                 <div style="display: flex; flex-direction: column; gap: 6px; padding-left: 4px;">
                                     <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">often / usually</b> (adv): <i style="color: #1e293b; font-weight: 600;">thường</i></div>
-                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">effective</b> (adj) ➔ <b style="color: var(--primary-color); font-weight: 800;">effectively</b> (adv): <i style="color: #1e293b; font-weight: 600;">hiệu quả / một cách hiệu quả</i></div>
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">effective / efficient</b> (adj) ➔ <b style="color: var(--primary-color); font-weight: 800;">effectively / efficiently</b> (adv): <i style="color: #1e293b; font-weight: 600;">hiệu quả / một cách hiệu quả</i></div>
                                 </div>
                             </div>
                             <div style="background: white; padding: 14px 18px; border-radius: 10px; border: 1px solid #e2e8f0; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
                                 <div style="display: inline-block; background: var(--primary-light); color: var(--primary-color); font-weight: 800; padding: 3px 10px; border-radius: 6px; font-size: 0.9rem; margin-bottom: 8px;">CÂU 5</div>
                                 <div style="display: flex; flex-direction: column; gap: 6px; padding-left: 4px;">
                                     <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">often / usually</b> (adv): <i style="color: #1e293b; font-weight: 600;">thường</i></div>
-                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">good</b> (adj): <i style="color: #1e293b; font-weight: 600;">hay / tốt</i></div>
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">every day / daily</b> (adv): <i style="color: #1e293b; font-weight: 600;">mỗi ngày / hàng ngày</i></div>
                                     <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">quick</b> (adj) ➔ <b style="color: var(--primary-color); font-weight: 800;">quickly</b> (adv): <i style="color: #1e293b; font-weight: 600;">nhanh / một cách nhanh chóng</i></div>
                                 </div>
                             </div>
