@@ -7731,6 +7731,34 @@ window.renderPrepositionsDetail = function(activeTab = 'theory') {
                 <div style="margin-bottom: 40px;">
                     <h2 style="color: var(--primary-color); font-size: 1.4rem; margin-bottom: 16px;">BÀI TẬP ÁP DỤNG 1 (GIỚI TỪ CHỈ THỜI GIAN)</h2>
                     <p style="font-size: 1.05rem; color: #475569; margin-bottom: 24px;"><i>Chuyển các "cụm chỉ thời gian" sau thành tiếng Anh.</i></p>
+                    <!-- HỘP GỢI Ý TỪ VỰNG & CẤU TRÚC (BÀI ÁP DỤNG 1) -->
+                    <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px; margin-bottom: 28px;">
+                        <h3 style="margin-top: 0; margin-bottom: 18px; color: var(--primary-color); font-size: 1.15rem; font-weight: 800; display: flex; align-items: center; gap: 8px;">
+                            <span style="font-size: 1.3rem;">💡</span> GỢI Ý TỪ VỰNG & GIỚI TỪ THỜI GIAN:
+                        </h3>
+                        <div style="display: flex; flex-direction: column; gap: 14px; font-size: 1rem;">
+                            <div style="background: white; padding: 14px 18px; border-radius: 10px; border: 1px solid #e2e8f0; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+                                <div style="display: inline-block; background: var(--primary-light); color: var(--primary-color); font-weight: 800; padding: 3px 10px; border-radius: 6px; font-size: 0.9rem; margin-bottom: 8px;">CÂU 1 - 5</div>
+                                <div style="display: flex; flex-direction: column; gap: 6px; padding-left: 4px;">
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">during the summer holiday / vacation</b>: <i style="color: #1e293b; font-weight: 600;">trong suốt kỳ nghỉ hè</i></div>
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">on the weekend / on weekends</b>: <i style="color: #1e293b; font-weight: 600;">vào cuối tuần</i></div>
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">on Monday morning next week / next Monday morning</b>: <i style="color: #1e293b; font-weight: 600;">vào sáng thứ Hai tuần tới</i></div>
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">in the afternoon</b>: <i style="color: #1e293b; font-weight: 600;">vào buổi chiều</i></div>
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">on Tet holiday / on Lunar New Year</b>: <i style="color: #1e293b; font-weight: 600;">vào dịp Tết Nguyên Đán</i></div>
+                                </div>
+                            </div>
+                            <div style="background: white; padding: 14px 18px; border-radius: 10px; border: 1px solid #e2e8f0; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+                                <div style="display: inline-block; background: var(--primary-light); color: var(--primary-color); font-weight: 800; padding: 3px 10px; border-radius: 6px; font-size: 0.9rem; margin-bottom: 8px;">CÂU 6 - 10</div>
+                                <div style="display: flex; flex-direction: column; gap: 6px; padding-left: 4px;">
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">on the 15th of August on the Lunar calendar / (lunar)</b>: <i style="color: #1e293b; font-weight: 600;">vào ngày 15 tháng 8 Âm Lịch</i></div>
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">before / prior to the VSTEP exam</b>: <i style="color: #1e293b; font-weight: 600;">trước kỳ thi VSTEP</i></div>
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">for two years / within two years</b>: <i style="color: #1e293b; font-weight: 600;">trong vòng hai năm</i></div>
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">since last year</b>: <i style="color: #1e293b; font-weight: 600;">kể từ năm ngoái</i></div>
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">after work / after working hours</b>: <i style="color: #1e293b; font-weight: 600;">sau giờ làm việc</i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div style="display: grid; gap: 16px;">${pBook1Html}</div>
                     <div style="margin-top: 24px; text-align: center;">
                         <button onclick="window.submitPrepositions1()" style="padding: 12px 32px; background: var(--primary-color); color: white; border: none; border-radius: 30px; font-weight: bold; font-size: 1.1rem; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.1)'">NỘP BÀI & KIỂM TRA KẾT QUẢ</button>
@@ -7740,6 +7768,34 @@ window.renderPrepositionsDetail = function(activeTab = 'theory') {
                 <div style="margin-bottom: 40px;">
                     <h2 style="color: var(--primary-color); font-size: 1.4rem; margin-bottom: 16px;">BÀI TẬP ÁP DỤNG 2 (GIỚI TỪ CHỈ NƠI CHỐN)</h2>
                     <p style="font-size: 1.05rem; color: #475569; margin-bottom: 24px;"><i>Chuyển các "cụm chỉ nơi chốn" sau thành tiếng Anh.</i></p>
+                    <!-- HỘP GỢI Ý TỪ VỰNG & CẤU TRÚC (BÀI ÁP DỤNG 2) -->
+                    <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px; margin-bottom: 28px;">
+                        <h3 style="margin-top: 0; margin-bottom: 18px; color: var(--primary-color); font-size: 1.15rem; font-weight: 800; display: flex; align-items: center; gap: 8px;">
+                            <span style="font-size: 1.3rem;">💡</span> GỢI Ý TỪ VỰNG & GIỚI TỪ NƠI CHỐN:
+                        </h3>
+                        <div style="display: flex; flex-direction: column; gap: 14px; font-size: 1rem;">
+                            <div style="background: white; padding: 14px 18px; border-radius: 10px; border: 1px solid #e2e8f0; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+                                <div style="display: inline-block; background: var(--primary-light); color: var(--primary-color); font-weight: 800; padding: 3px 10px; border-radius: 6px; font-size: 0.9rem; margin-bottom: 8px;">CÂU 1 - 5</div>
+                                <div style="display: flex; flex-direction: column; gap: 6px; padding-left: 4px;">
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">at a bookstore / bookshop near the university</b>: <i style="color: #1e293b; font-weight: 600;">tại một nhà sách gần trường đại học</i></div>
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">on Facebook</b>: <i style="color: #1e293b; font-weight: 600;">trên Facebook</i></div>
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">on a busy / crowded street</b>: <i style="color: #1e293b; font-weight: 600;">trên một con đường đông đúc</i></div>
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">in my house / in my home / at my house</b>: <i style="color: #1e293b; font-weight: 600;">trong nhà tôi</i></div>
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">in my country</b>: <i style="color: #1e293b; font-weight: 600;">ở đất nước của tôi</i></div>
+                                </div>
+                            </div>
+                            <div style="background: white; padding: 14px 18px; border-radius: 10px; border: 1px solid #e2e8f0; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+                                <div style="display: inline-block; background: var(--primary-light); color: var(--primary-color); font-weight: 800; padding: 3px 10px; border-radius: 6px; font-size: 0.9rem; margin-bottom: 8px;">CÂU 6 - 10</div>
+                                <div style="display: flex; flex-direction: column; gap: 6px; padding-left: 4px;">
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">at a big / large supermarket in the city center</b>: <i style="color: #1e293b; font-weight: 600;">tại một siêu thị lớn trong trung tâm thành phố</i></div>
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">in Can Tho city / in Can Tho</b>: <i style="color: #1e293b; font-weight: 600;">tại thành phố Cần Thơ</i></div>
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">near / close to the school library</b>: <i style="color: #1e293b; font-weight: 600;">gần thư viện trường</i></div>
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">on the phone / smartphone screen</b>: <i style="color: #1e293b; font-weight: 600;">trên màn hình điện thoại</i></div>
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">on campus / on the school campus</b>: <i style="color: #1e293b; font-weight: 600;">trong khuôn viên trường</i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div style="display: grid; gap: 16px;">${pBook2Html}</div>
                     <div style="margin-top: 24px; text-align: center;">
                         <button onclick="window.submitPrepositions2()" style="padding: 12px 32px; background: var(--primary-color); color: white; border: none; border-radius: 30px; font-weight: bold; font-size: 1.1rem; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.1)'">NỘP BÀI & KIỂM TRA KẾT QUẢ</button>
@@ -7764,7 +7820,10 @@ window.renderPrepositionsDetail = function(activeTab = 'theory') {
 
         const extra2Html = prepositionsPracticeExtra2.map((q, idx) => `
             <div class="quiz-item" style="background: var(--bg-card); border-radius: 12px; padding: 20px; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color); margin-bottom: 16px;">
-                <p style="font-size: 1.15rem; color: var(--text-main); margin-top: 0; margin-bottom: 12px;">${q.q}</p>
+                <div style="display: flex; gap: 12px; align-items: flex-start; margin-bottom: 16px;">
+                    <div style="background: var(--primary-light); color: var(--primary-color); width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.1rem; flex-shrink: 0;">${idx + 1}</div>
+                    <p style="font-size: 1.15rem; font-weight: 700; color: #1e293b; margin-top: 4px; margin-bottom: 0;">${q.q}</p>
+                </div>
                 <div style="display: flex; flex-direction: column; gap: 8px;">
                     <input type="text" id="prep_extra2_${idx}" placeholder="Nhập bản dịch tiếng Anh..." style="padding: 10px 16px; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 1.05rem; outline: none; transition: border-color 0.2s; width: 100%; box-sizing: border-box;" onfocus="this.style.borderColor='var(--primary-color)'" onblur="this.style.borderColor='#e2e8f0'" oninput="window.prepositionsAnswersExtra2[${idx}] = this.value; document.getElementById('prepexp_extra2_${idx}').style.display='none'; window.saveProgress(true);" value="${window.prepositionsAnswersExtra2[idx] || ''}">
                     <button onclick="window.checkPrepositionsExtra2(${idx})" style="padding: 8px 16px; background: white; color: var(--primary-color); border: 2px solid var(--primary-color); border-radius: 20px; font-weight: bold; cursor: pointer; transition: all 0.2s; align-self: flex-start;" onmouseover="this.style.background='var(--primary-color)'; this.style.color='white'" onmouseout="this.style.background='white'; this.style.color='var(--primary-color)'">Kiểm tra</button>
@@ -7775,7 +7834,10 @@ window.renderPrepositionsDetail = function(activeTab = 'theory') {
 
         const extra3Html = prepositionsPracticeExtra3.map((q, idx) => `
             <div class="quiz-item" style="background: var(--bg-card); border-radius: 12px; padding: 20px; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color); margin-bottom: 16px;">
-                <p style="font-size: 1.15rem; color: var(--text-main); margin-top: 0; margin-bottom: 12px;">${q.q}</p>
+                <div style="display: flex; gap: 12px; align-items: flex-start; margin-bottom: 16px;">
+                    <div style="background: var(--primary-light); color: var(--primary-color); width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.1rem; flex-shrink: 0;">${idx + 1}</div>
+                    <p style="font-size: 1.15rem; font-weight: 700; color: #1e293b; margin-top: 4px; margin-bottom: 0;">${q.q}</p>
+                </div>
                 <div style="display: flex; flex-direction: column; gap: 8px;">
                     <input type="text" id="prep_extra3_${idx}" placeholder="Nhập bản dịch tiếng Anh..." style="padding: 10px 16px; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 1.05rem; outline: none; transition: border-color 0.2s; width: 100%; box-sizing: border-box;" onfocus="this.style.borderColor='var(--primary-color)'" onblur="this.style.borderColor='#e2e8f0'" oninput="window.prepositionsAnswersExtra3[${idx}] = this.value; document.getElementById('prepexp_extra3_${idx}').style.display='none'; window.saveProgress(true);" value="${window.prepositionsAnswersExtra3[idx] || ''}">
                     <button onclick="window.checkPrepositionsExtra3(${idx})" style="padding: 8px 16px; background: white; color: var(--primary-color); border: 2px solid var(--primary-color); border-radius: 20px; font-weight: bold; cursor: pointer; transition: all 0.2s; align-self: flex-start;" onmouseover="this.style.background='var(--primary-color)'; this.style.color='white'" onmouseout="this.style.background='white'; this.style.color='var(--primary-color)'">Kiểm tra</button>
@@ -7796,11 +7858,115 @@ window.renderPrepositionsDetail = function(activeTab = 'theory') {
                 </div>
 
                 <div style="margin-bottom: 40px;">
-                    <h2 style="color: var(--primary-color); font-size: 1.4rem; margin-bottom: 16px;">BÀI TẬP THÊM 2 (DỊCH CÂU)</h2>
-                    <p style="font-size: 1.05rem; color: #475569; margin-bottom: 24px;"><i>Chuyển các câu sau đây sang tiếng Anh. Chú ý phân biệt cách dùng "tính từ" và "trạng từ".</i></p>
+                    <h2 style="color: var(--primary-color); font-size: 1.4rem; margin-bottom: 16px;">BÀI TẬP THÊM 2 (LUYỆN TẬP CHUNG 1)</h2>
+                    <p style="font-size: 1.05rem; color: #475569; margin-bottom: 24px;"><i>Dịch các câu sau sang tiếng Anh, chú ý sử dụng đúng giới từ và thì của động từ.</i></p>
+                    <!-- HỘP GỢI Ý TỪ VỰNG & CẤU TRÚC (BÀI THÊM 2) -->
+                    <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px; margin-bottom: 28px;">
+                        <h3 style="margin-top: 0; margin-bottom: 18px; color: var(--primary-color); font-size: 1.15rem; font-weight: 800; display: flex; align-items: center; gap: 8px;">
+                            <span style="font-size: 1.3rem;">💡</span> GỢI Ý TỪ VỰNG & CẤU TRÚC THEO TỪNG CÂU:
+                        </h3>
+                        <div style="display: flex; flex-direction: column; gap: 14px; font-size: 1rem;">
+                            <div style="background: white; padding: 14px 18px; border-radius: 10px; border: 1px solid #e2e8f0; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+                                <div style="display: inline-block; background: var(--primary-light); color: var(--primary-color); font-weight: 800; padding: 3px 10px; border-radius: 6px; font-size: 0.9rem; margin-bottom: 8px;">CÂU 1</div>
+                                <div style="display: flex; flex-direction: column; gap: 6px; padding-left: 4px;">
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">wake up / get up</b>: <i style="color: #1e293b; font-weight: 600;">thức dậy</i></div>
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">at 6 a.m.</b>: <i style="color: #1e293b; font-weight: 600;">lúc 6 giờ sáng</i></div>
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">on weekdays</b>: <i style="color: #1e293b; font-weight: 600;">vào các ngày trong tuần</i></div>
+                                </div>
+                            </div>
+
+                            <div style="background: white; padding: 14px 18px; border-radius: 10px; border: 1px solid #e2e8f0; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+                                <div style="display: inline-block; background: var(--primary-light); color: var(--primary-color); font-weight: 800; padding: 3px 10px; border-radius: 6px; font-size: 0.9rem; margin-bottom: 8px;">CÂU 2</div>
+                                <div style="display: flex; flex-direction: column; gap: 6px; padding-left: 4px;">
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">be interested in + V-ing</b>: <i style="color: #1e293b; font-weight: 600;">có hứng thú với / thích thú</i></div>
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">learning photography</b>: <i style="color: #1e293b; font-weight: 600;">việc học nhiếp ảnh</i></div>
+                                </div>
+                            </div>
+
+                            <div style="background: white; padding: 14px 18px; border-radius: 10px; border: 1px solid #e2e8f0; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+                                <div style="display: inline-block; background: var(--primary-light); color: var(--primary-color); font-weight: 800; padding: 3px 10px; border-radius: 6px; font-size: 0.9rem; margin-bottom: 8px;">CÂU 3</div>
+                                <div style="display: flex; flex-direction: column; gap: 6px; padding-left: 4px;">
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">work at / in this company</b>: <i style="color: #1e293b; font-weight: 600;">làm việc tại công ty này</i></div>
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">since 2018</b>: <i style="color: #1e293b; font-weight: 600;">từ năm 2018 (dùng thì Hiện tại hoàn thành: have worked / have been working)</i></div>
+                                </div>
+                            </div>
+
+                            <div style="background: white; padding: 14px 18px; border-radius: 10px; border: 1px solid #e2e8f0; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+                                <div style="display: inline-block; background: var(--primary-light); color: var(--primary-color); font-weight: 800; padding: 3px 10px; border-radius: 6px; font-size: 0.9rem; margin-bottom: 8px;">CÂU 4</div>
+                                <div style="display: flex; flex-direction: column; gap: 6px; padding-left: 4px;">
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">be famous for</b>: <i style="color: #1e293b; font-weight: 600;">nổi tiếng với / vì cái gì</i></div>
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">beautiful beaches</b>: <i style="color: #1e293b; font-weight: 600;">những bãi biển đẹp</i></div>
+                                </div>
+                            </div>
+
+                            <div style="background: white; padding: 14px 18px; border-radius: 10px; border: 1px solid #e2e8f0; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+                                <div style="display: inline-block; background: var(--primary-light); color: var(--primary-color); font-weight: 800; padding: 3px 10px; border-radius: 6px; font-size: 0.9rem; margin-bottom: 8px;">CÂU 5</div>
+                                <div style="display: flex; flex-direction: column; gap: 6px; padding-left: 4px;">
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">focus on / concentrate on</b>: <i style="color: #1e293b; font-weight: 600;">tập trung vào</i></div>
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">because of the noise</b>: <i style="color: #1e293b; font-weight: 600;">vì tiếng ồn</i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div>${extra2Html}</div>
                     <div style="margin-top: 24px; text-align: center;">
                         <button onclick="window.submitPrepositionsExtra2()" style="padding: 12px 32px; background: var(--primary-color); color: white; border: none; border-radius: 30px; font-weight: bold; font-size: 1.1rem; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.1)'">NỘP BÀI & KIỂM TRA KẾT QUẢ</button>
+                    </div>
+                </div>
+
+                <div style="margin-bottom: 40px;">
+                    <h2 style="color: var(--primary-color); font-size: 1.4rem; margin-bottom: 16px;">BÀI TẬP THÊM 3 (LUYỆN TẬP CHUNG 2)</h2>
+                    <p style="font-size: 1.05rem; color: #475569; margin-bottom: 24px;"><i>Dịch các câu sau sang tiếng Anh, chú ý các cụm động từ/tính từ đi kèm giới từ.</i></p>
+                    <!-- HỘP GỢI Ý TỪ VỰNG & CẤU TRÚC (BÀI THÊM 3) -->
+                    <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px; margin-bottom: 28px;">
+                        <h3 style="margin-top: 0; margin-bottom: 18px; color: var(--primary-color); font-size: 1.15rem; font-weight: 800; display: flex; align-items: center; gap: 8px;">
+                            <span style="font-size: 1.3rem;">💡</span> GỢI Ý TỪ VỰNG & CẤU TRÚC THEO TỪNG CÂU:
+                        </h3>
+                        <div style="display: flex; flex-direction: column; gap: 14px; font-size: 1rem;">
+                            <div style="background: white; padding: 14px 18px; border-radius: 10px; border: 1px solid #e2e8f0; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+                                <div style="display: inline-block; background: var(--primary-light); color: var(--primary-color); font-weight: 800; padding: 3px 10px; border-radius: 6px; font-size: 0.9rem; margin-bottom: 8px;">CÂU 1</div>
+                                <div style="display: flex; flex-direction: column; gap: 6px; padding-left: 4px;">
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">wait for sb at...</b>: <i style="color: #1e293b; font-weight: 600;">đang chờ ai ở đâu (are waiting for me)</i></div>
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">at the train station / railway station</b>: <i style="color: #1e293b; font-weight: 600;">ở nhà ga xe lửa</i></div>
+                                </div>
+                            </div>
+
+                            <div style="background: white; padding: 14px 18px; border-radius: 10px; border: 1px solid #e2e8f0; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+                                <div style="display: inline-block; background: var(--primary-light); color: var(--primary-color); font-weight: 800; padding: 3px 10px; border-radius: 6px; font-size: 0.9rem; margin-bottom: 8px;">CÂU 2</div>
+                                <div style="display: flex; flex-direction: column; gap: 6px; padding-left: 4px;">
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">should be responsible for / take responsibility for</b>: <i style="color: #1e293b; font-weight: 600;">nên chịu trách nhiệm cho</i></div>
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">your actions</b>: <i style="color: #1e293b; font-weight: 600;">hành động của mình</i></div>
+                                </div>
+                            </div>
+
+                            <div style="background: white; padding: 14px 18px; border-radius: 10px; border: 1px solid #e2e8f0; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+                                <div style="display: inline-block; background: var(--primary-light); color: var(--primary-color); font-weight: 800; padding: 3px 10px; border-radius: 6px; font-size: 0.9rem; margin-bottom: 8px;">CÂU 3</div>
+                                <div style="display: flex; flex-direction: column; gap: 6px; padding-left: 4px;">
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">was born in + địa điểm</b>: <i style="color: #1e293b; font-weight: 600;">sinh ra ở (in Hanoi)</i></div>
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">in + tháng + năm</b>: <i style="color: #1e293b; font-weight: 600;">vào tháng ... năm ... (in October 1999)</i></div>
+                                </div>
+                            </div>
+
+                            <div style="background: white; padding: 14px 18px; border-radius: 10px; border: 1px solid #e2e8f0; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+                                <div style="display: inline-block; background: var(--primary-light); color: var(--primary-color); font-weight: 800; padding: 3px 10px; border-radius: 6px; font-size: 0.9rem; margin-bottom: 8px;">CÂU 4</div>
+                                <div style="display: flex; flex-direction: column; gap: 6px; padding-left: 4px;">
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">depend heavily / a lot on</b>: <i style="color: #1e293b; font-weight: 600;">phụ thuộc rất nhiều vào</i></div>
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">technology today / nowadays</b>: <i style="color: #1e293b; font-weight: 600;">công nghệ ngày nay</i></div>
+                                </div>
+                            </div>
+
+                            <div style="background: white; padding: 14px 18px; border-radius: 10px; border: 1px solid #e2e8f0; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+                                <div style="display: inline-block; background: var(--primary-light); color: var(--primary-color); font-weight: 800; padding: 3px 10px; border-radius: 6px; font-size: 0.9rem; margin-bottom: 8px;">CÂU 5</div>
+                                <div style="display: flex; flex-direction: column; gap: 6px; padding-left: 4px;">
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">Do not forget to submit the report</b>: <i style="color: #1e293b; font-weight: 600;">Đừng quên nộp báo cáo</i></div>
+                                    <div style="color: #334155;">• <b style="color: var(--primary-color); font-weight: 800;">before this Friday</b>: <i style="color: #1e293b; font-weight: 600;">trước thứ Sáu tuần này</i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>${extra3Html}</div>
+                    <div style="margin-top: 24px; text-align: center;">
+                        <button onclick="window.submitPrepositionsExtra3()" style="padding: 12px 32px; background: var(--primary-color); color: white; border: none; border-radius: 30px; font-weight: bold; font-size: 1.1rem; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.1)'">NỘP BÀI & KIỂM TRA KẾT QUẢ</button>
                     </div>
                 </div>
 
