@@ -3554,9 +3554,7 @@ window.renderNounsDetail = function(activeTab = 'theory') {
             return `
             <div class="quiz-item" style="background: var(--bg-card); border-radius: 12px; padding: 24px; margin-bottom: 16px; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color);">
                 <div style="display: flex; gap: 16px; align-items: flex-start;">
-                    <div style="background: var(--primary-light); color: var(--primary-color); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0; font-size: 1.2rem;">
-                        ${idx + 1}
-                    </div>
+                    <div style="background: var(--primary-light); color: var(--primary-color); width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.1rem; flex-shrink: 0;">${idx + 1}</div>
                     <div style="flex: 1;">
                         <p style="font-size: 1.15rem; font-weight: 500; margin-bottom: 16px; color: var(--text-main);">${q.question}</p>
                         
@@ -3804,7 +3802,7 @@ window.renderNounsDetail = function(activeTab = 'theory') {
                         ${nounsPracticeBook3Data.map((q, idx) => `
                             <div class="quiz-item" style="background: var(--bg-card); border-radius: 12px; padding: 20px; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color);">
                                 <div style="display: flex; gap: 12px; align-items: flex-start; margin-bottom: 12px;">
-                                    <div style="background: var(--primary-light); color: var(--primary-color); width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">${idx + 1}</div>
+                                    <div style="background: var(--primary-light); color: var(--primary-color); width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.1rem; flex-shrink: 0;">${idx + 1}</div>
                                     <p style="font-size: 1.15rem; font-weight: 700; color: #1e293b; margin-top: 4px; margin-bottom: 0;">${q.q}</p>
                                 </div>
                                 <div style="display: flex; flex-direction: column; gap: 8px; padding-left: 44px;">
@@ -4059,7 +4057,7 @@ window.renderNounsDetail = function(activeTab = 'theory') {
                         ${nounsPracticeExtra2Data.map((q, idx) => `
                             <div class="quiz-item" style="background: var(--bg-card); border-radius: 12px; padding: 20px; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color);">
                                 <div style="display: flex; gap: 12px; align-items: flex-start; margin-bottom: 12px;">
-                                    <div style="background: var(--primary-light); color: var(--primary-color); width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">${idx + 1}</div>
+                                    <div style="background: var(--primary-light); color: var(--primary-color); width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.1rem; flex-shrink: 0;">${idx + 1}</div>
                                     <p style="font-size: 1.15rem; font-weight: 700; color: #1e293b; margin-top: 4px; margin-bottom: 0;">${q.q}</p>
                                 </div>
                                 <div style="display: flex; flex-direction: column; gap: 8px; padding-left: 44px;">
@@ -4082,10 +4080,10 @@ window.renderNounsDetail = function(activeTab = 'theory') {
                     <p style="font-size: 1.1rem; margin-bottom: 24px; color: var(--text-muted);">Dịch các câu sau sang tiếng Anh. Chú ý sử dụng đúng cụm danh từ.</p>
                     <div style="display: grid; gap: 16px;">
                         ${nounsPracticeExtra3Data.map((q, idx) => `
-                            <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px;">
-                                <div style="font-size: 1.15rem; color: #1e293b; margin-bottom: 12px; font-weight: 700;">
-                                    <span style="color: var(--primary-color); font-weight: 800; margin-right: 8px;">${idx + 1}.</span>
-                                    ${q.q}
+                            <div class="quiz-item" style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 12px; padding: 20px; box-shadow: var(--shadow-sm);">
+                                <div style="display: flex; gap: 12px; align-items: flex-start; margin-bottom: 16px;">
+                                    <div style="background: var(--primary-light); color: var(--primary-color); width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.1rem; flex-shrink: 0;">${idx + 1}</div>
+                                    <p style="font-size: 1.15rem; font-weight: 700; color: #1e293b; margin-top: 4px; margin-bottom: 0;">${q.q}</p>
                                 </div>
                                 ${q.hint ? `
                                     <div style="margin-bottom: 12px;">
@@ -4940,7 +4938,7 @@ window.renderPronounsDetail = function(activeTab = 'theory') {
         const extra1Html = pronounsPracticeExtra1Data.map((q, idx) => `
             <div class="quiz-item" style="background: var(--bg-card); border-radius: 12px; padding: 20px; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color); margin-bottom: 16px;">
                 <div style="display: flex; gap: 12px; align-items: flex-start; margin-bottom: 14px;">
-                    <div style="background: #eff6ff; color: #2563eb; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">${idx + 1}</div>
+                    <div style="background: var(--primary-light); color: var(--primary-color); width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.1rem; flex-shrink: 0;">${idx + 1}</div>
                     <p style="font-size: 1.15rem; font-weight: 700; color: #1e293b; margin-top: 4px; margin-bottom: 0;">${q.q}</p>
                 </div>
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding-left: 44px;">
@@ -4959,7 +4957,7 @@ window.renderPronounsDetail = function(activeTab = 'theory') {
         const extra2Html = pronounsPracticeExtra2Data.map((q, idx) => `
             <div class="quiz-item" style="background: var(--bg-card); border-radius: 12px; padding: 20px; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color); margin-bottom: 16px;">
                 <div style="display: flex; gap: 12px; align-items: flex-start; margin-bottom: 12px;">
-                    <div style="background: var(--primary-light); color: var(--primary-color); width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">${idx + 1}</div>
+                    <div style="background: var(--primary-light); color: var(--primary-color); width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.1rem; flex-shrink: 0;">${idx + 1}</div>
                     <p style="font-size: 1.1rem; font-weight: 500; color: var(--text-main); margin-top: 4px; line-height: 1.6;">${q.q}</p>
                 </div>
                 <div style="display: flex; flex-direction: column; gap: 8px; padding-left: 44px;">
@@ -5319,7 +5317,7 @@ window.renderVerbsDetail = function(activeTab = 'theory') {
         const pBook4Html = verbsPracticeBook4.map((q, idx) => `
             <div class="quiz-item" style="background: var(--bg-card); border-radius: 12px; padding: 20px; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color);">
                 <div style="display: flex; gap: 12px; align-items: flex-start; margin-bottom: 12px;">
-                    <div style="background: var(--primary-light); color: var(--primary-color); width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">${idx + 1}</div>
+                    <div style="background: var(--primary-light); color: var(--primary-color); width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.1rem; flex-shrink: 0;">${idx + 1}</div>
                     <div style="flex-grow: 1;">
                         <p style="font-size: 1.15rem; font-weight: 700; color: #1e293b; margin-top: 4px; margin-bottom: 8px;">${q.q}</p>
                         ${q.hint ? `<button onclick="const h = document.getElementById('verb_hint_book4_${idx}'); h.style.display = h.style.display === 'none' ? 'block' : 'none';" style="background: none; border: none; color: #0284c7; font-size: 0.95rem; cursor: pointer; padding: 0; margin-bottom: 12px; display: flex; align-items: center; gap: 4px; font-weight: 500;"><span style="font-size: 1.1rem">💡</span> Xem gợi ý</button>
@@ -5340,7 +5338,7 @@ window.renderVerbsDetail = function(activeTab = 'theory') {
         const pBook1Html = verbsPracticeBook1.map((q, idx) => `
             <div class="quiz-item" style="background: var(--bg-card); border-radius: 12px; padding: 20px; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color);">
                 <div style="display: flex; gap: 12px; align-items: flex-start; margin-bottom: 12px;">
-                    <div style="background: var(--primary-light); color: var(--primary-color); width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">${idx + 1}</div>
+                    <div style="background: var(--primary-light); color: var(--primary-color); width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.1rem; flex-shrink: 0;">${idx + 1}</div>
                     <div style="flex-grow: 1;">
                         <p style="font-size: 1.15rem; font-weight: 700; color: #1e293b; margin-top: 4px; margin-bottom: 8px;">${q.q}</p>
                         ${q.hint ? `<button onclick="const h = document.getElementById('verb_hint_1_${idx}'); h.style.display = h.style.display === 'none' ? 'block' : 'none';" style="background: none; border: none; color: #0284c7; font-size: 0.95rem; cursor: pointer; padding: 0; margin-bottom: 12px; display: flex; align-items: center; gap: 4px; font-weight: 500;"><span style="font-size: 1.1rem">💡</span> Xem gợi ý</button>
@@ -5361,7 +5359,7 @@ window.renderVerbsDetail = function(activeTab = 'theory') {
         const pBook2Html = verbsPracticeBook2.map((q, idx) => `
             <div class="quiz-item" style="background: var(--bg-card); border-radius: 12px; padding: 20px; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color);">
                 <div style="display: flex; gap: 12px; align-items: flex-start; margin-bottom: 12px;">
-                    <div style="background: var(--primary-light); color: var(--primary-color); width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">${idx + 1}</div>
+                    <div style="background: var(--primary-light); color: var(--primary-color); width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.1rem; flex-shrink: 0;">${idx + 1}</div>
                     <div style="flex-grow: 1;">
                         <p style="font-size: 1.15rem; font-weight: 700; color: #1e293b; margin-top: 4px; margin-bottom: 8px;">${q.q}</p>
                         ${q.hint ? `<button onclick="const h = document.getElementById('verb_hint_2_${idx}'); h.style.display = h.style.display === 'none' ? 'block' : 'none';" style="background: none; border: none; color: #0284c7; font-size: 0.95rem; cursor: pointer; padding: 0; margin-bottom: 12px; display: flex; align-items: center; gap: 4px; font-weight: 500;"><span style="font-size: 1.1rem">💡</span> Xem gợi ý</button>
@@ -5382,7 +5380,7 @@ window.renderVerbsDetail = function(activeTab = 'theory') {
         const pBook3Html = verbsPracticeBook3.map((q, idx) => `
             <div class="quiz-item" style="background: var(--bg-card); border-radius: 12px; padding: 20px; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color);">
                 <div style="display: flex; gap: 12px; align-items: flex-start; margin-bottom: 12px;">
-                    <div style="background: var(--primary-light); color: var(--primary-color); width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">${idx + 1}</div>
+                    <div style="background: var(--primary-light); color: var(--primary-color); width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.1rem; flex-shrink: 0;">${idx + 1}</div>
                     <div style="flex-grow: 1;">
                         <p style="font-size: 1.15rem; font-weight: 700; color: #1e293b; margin-top: 4px; margin-bottom: 8px;">${q.q}</p>
                         ${q.hint ? `<button onclick="const h = document.getElementById('verb_hint_3_${idx}'); h.style.display = h.style.display === 'none' ? 'block' : 'none';" style="background: none; border: none; color: #0284c7; font-size: 0.95rem; cursor: pointer; padding: 0; margin-bottom: 12px; display: flex; align-items: center; gap: 4px; font-weight: 500;"><span style="font-size: 1.1rem">💡</span> Xem gợi ý</button>
@@ -5403,7 +5401,7 @@ window.renderVerbsDetail = function(activeTab = 'theory') {
         const p1Html = verbsPractice1Data.map((q, idx) => `
             <div class="quiz-item" style="background: var(--bg-card); border-radius: 12px; padding: 20px; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color);">
                 <div style="display: flex; gap: 12px; align-items: flex-start; margin-bottom: 16px;">
-                    <div style="background: var(--primary-light); color: var(--primary-color); width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">${idx + 1}</div>
+                    <div style="background: var(--primary-light); color: var(--primary-color); width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.1rem; flex-shrink: 0;">${idx + 1}</div>
                     <p style="font-size: 1.15rem; font-weight: 500; color: var(--text-main); margin-top: 4px;">${q.q}</p>
                 </div>
                 <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 16px; padding-left: 44px;">
@@ -5427,7 +5425,7 @@ window.renderVerbsDetail = function(activeTab = 'theory') {
         const pExtra3Html = verbsPracticeExtra3Data.map((q, idx) => `
             <div class="quiz-item" style="background: var(--bg-card); border-radius: 12px; padding: 20px; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color);">
                 <div style="display: flex; gap: 12px; align-items: flex-start; margin-bottom: 12px;">
-                    <div style="background: var(--primary-light); color: var(--primary-color); width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">${idx + 1}</div>
+                    <div style="background: var(--primary-light); color: var(--primary-color); width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.1rem; flex-shrink: 0;">${idx + 1}</div>
                     <div style="flex-grow: 1;">
                         <p style="font-size: 1.15rem; font-weight: 700; color: #1e293b; margin-top: 4px; margin-bottom: 8px;">${q.q}</p>
                         ${q.hint ? `<button onclick="const h = document.getElementById('verb_hint_extra3_${idx}'); h.style.display = h.style.display === 'none' ? 'block' : 'none';" style="background: none; border: none; color: #0284c7; font-size: 0.95rem; cursor: pointer; padding: 0; margin-bottom: 12px; display: flex; align-items: center; gap: 4px; font-weight: 500;"><span style="font-size: 1.1rem">💡</span> Xem gợi ý</button>
@@ -5447,7 +5445,7 @@ window.renderVerbsDetail = function(activeTab = 'theory') {
         const p2Html = verbsPractice2Data.map((q, idx) => `
             <div class="quiz-item" style="background: var(--bg-card); border-radius: 12px; padding: 20px; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color);">
                 <div style="display: flex; gap: 12px; align-items: flex-start; margin-bottom: 16px;">
-                    <div style="background: var(--primary-light); color: var(--primary-color); width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">${idx + 1}</div>
+                    <div style="background: var(--primary-light); color: var(--primary-color); width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.1rem; flex-shrink: 0;">${idx + 1}</div>
                     <div style="flex-grow: 1;">
                         <p style="font-size: 1.15rem; font-weight: 500; color: var(--text-main); margin-bottom: 12px; margin-top: 4px;">${q.q}</p>
                         <input type="text" id="verb_input2_${idx}" placeholder="Sửa phần bôi đậm thành..." value="${window.verbsAnswers2[idx] || ''}" style="width: 100%; max-width: 400px; padding: 12px 16px; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 1.1rem; outline: none; transition: border-color 0.2s;" onfocus="this.style.borderColor='var(--primary-color)'" onblur="this.style.borderColor='#e2e8f0'" oninput="window.verbsAnswers2[${idx}] = this.value; document.getElementById('verbexp2_${idx}').style.display='none'; window.saveProgress(true);">
@@ -7144,8 +7142,11 @@ window.renderAdjectivesDetail = function(activeTab = 'theory') {
     } else if (activeTab === 'practice_book') {
         const book1Html = adjectivesPracticeBook1.map((q, idx) => `
             <div class="quiz-item" style="background: var(--bg-card); border-radius: 12px; padding: 20px; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color); margin-bottom: 16px;">
-                <p style="font-size: 1.15rem; font-weight: 700; color: #1e293b; margin-top: 0; margin-bottom: 12px;">${q.q}</p>
-                <div style="display: flex; flex-direction: column; gap: 8px;">
+                <div style="display: flex; gap: 12px; align-items: flex-start; margin-bottom: 16px;">
+                    <div style="background: var(--primary-light); color: var(--primary-color); width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.1rem; flex-shrink: 0;">${idx + 1}</div>
+                    <p style="font-size: 1.15rem; font-weight: 700; color: #1e293b; margin-top: 4px; margin-bottom: 0;">${q.q}</p>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 8px; padding-left: 44px;">
                     <input type="text" id="adj_book1_${idx}" placeholder="Nhập cụm danh từ tiếng Anh..." style="padding: 10px 16px; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 1.05rem; outline: none; transition: border-color 0.2s; width: 100%; box-sizing: border-box;" onfocus="this.style.borderColor='var(--primary-color)'" onblur="this.style.borderColor='#e2e8f0'" oninput="window.adjectivesAnswersBook1[${idx}] = this.value; document.getElementById('adjexp_book1_${idx}').style.display='none'; window.saveProgress(true);" value="${window.adjectivesAnswersBook1[idx] || ''}">
                     <button onclick="window.checkAdjectivesBook1(${idx})" style="padding: 8px 16px; background: white; color: var(--primary-color); border: 2px solid var(--primary-color); border-radius: 20px; font-weight: bold; cursor: pointer; transition: all 0.2s; align-self: flex-start;" onmouseover="this.style.background='var(--primary-color)'; this.style.color='white'" onmouseout="this.style.background='white'; this.style.color='var(--primary-color)'">Kiểm tra</button>
                 </div>
@@ -7155,8 +7156,11 @@ window.renderAdjectivesDetail = function(activeTab = 'theory') {
 
         const book2Html = adjectivesPracticeBook2.map((q, idx) => `
             <div class="quiz-item" style="background: var(--bg-card); border-radius: 12px; padding: 20px; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color); margin-bottom: 16px;">
-                <p style="font-size: 1.15rem; font-weight: 700; color: #1e293b; margin-top: 0; margin-bottom: 12px;">${q.q}</p>
-                <div style="display: flex; flex-direction: column; gap: 8px;">
+                <div style="display: flex; gap: 12px; align-items: flex-start; margin-bottom: 16px;">
+                    <div style="background: var(--primary-light); color: var(--primary-color); width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.1rem; flex-shrink: 0;">${idx + 1}</div>
+                    <p style="font-size: 1.15rem; font-weight: 700; color: #1e293b; margin-top: 4px; margin-bottom: 0;">${q.q}</p>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 8px; padding-left: 44px;">
                     <input type="text" id="adj_book2_${idx}" placeholder="Nhập bản dịch tiếng Anh..." style="padding: 10px 16px; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 1.05rem; outline: none; transition: border-color 0.2s; width: 100%; box-sizing: border-box;" onfocus="this.style.borderColor='var(--primary-color)'" onblur="this.style.borderColor='#e2e8f0'" oninput="window.adjectivesAnswersBook2[${idx}] = this.value; document.getElementById('adjexp_book2_${idx}').style.display='none'; window.saveProgress(true);" value="${window.adjectivesAnswersBook2[idx] || ''}">
                     <button onclick="window.checkAdjectivesBook2(${idx})" style="padding: 8px 16px; background: white; color: var(--primary-color); border: 2px solid var(--primary-color); border-radius: 20px; font-weight: bold; cursor: pointer; transition: all 0.2s; align-self: flex-start;" onmouseover="this.style.background='var(--primary-color)'; this.style.color='white'" onmouseout="this.style.background='white'; this.style.color='var(--primary-color)'">Kiểm tra</button>
                 </div>
@@ -7288,7 +7292,8 @@ window.renderAdjectivesDetail = function(activeTab = 'theory') {
     } else if (activeTab === 'practice_extra') {
         const extra1Html = adjectivesPracticeExtra1.map((q, idx) => `
             <div class="quiz-item" style="background: var(--bg-card); border-radius: 12px; padding: 20px; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color); margin-bottom: 16px;">
-                <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+                <div style="display: flex; gap: 12px; align-items: center; flex-wrap: wrap;">
+                    <div style="background: var(--primary-light); color: var(--primary-color); width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.1rem; flex-shrink: 0;">${idx + 1}</div>
                     <span style="font-size: 1.15rem; font-weight: 500; color: var(--text-main);">${q.before}</span>
                     <select id="adj_extra1_${idx}" style="padding: 6px 12px; font-size: 1.1rem; border: 2px solid #cbd5e1; border-radius: 8px; outline: none; cursor: pointer;" onchange="window.adjectivesAnswersExtra1[${idx}] = this.value; this.style.borderColor='#cbd5e1'; window.saveProgress(true);">
                         <option value="">-- Chọn --</option>
@@ -7302,8 +7307,11 @@ window.renderAdjectivesDetail = function(activeTab = 'theory') {
 
         const extra2Html = adjectivesPracticeExtra2.map((q, idx) => `
             <div class="quiz-item" style="background: var(--bg-card); border-radius: 12px; padding: 20px; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color); margin-bottom: 16px;">
-                <p style="font-size: 1.15rem; font-weight: 700; color: #1e293b; margin-top: 0; margin-bottom: 12px;">${q.q}</p>
-                <div style="display: flex; flex-direction: column; gap: 8px;">
+                <div style="display: flex; gap: 12px; align-items: flex-start; margin-bottom: 16px;">
+                    <div style="background: var(--primary-light); color: var(--primary-color); width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.1rem; flex-shrink: 0;">${idx + 1}</div>
+                    <p style="font-size: 1.15rem; font-weight: 700; color: #1e293b; margin-top: 4px; margin-bottom: 0;">${q.q}</p>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 8px; padding-left: 44px;">
                     <input type="text" id="adj_extra2_${idx}" placeholder="Nhập bản dịch tiếng Anh..." style="padding: 10px 16px; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 1.05rem; outline: none; transition: border-color 0.2s; width: 100%; box-sizing: border-box;" onfocus="this.style.borderColor='var(--primary-color)'" onblur="this.style.borderColor='#e2e8f0'" oninput="window.adjectivesAnswersExtra2[${idx}] = this.value; document.getElementById('adjexp_extra2_${idx}').style.display='none'; window.saveProgress(true);" value="${window.adjectivesAnswersExtra2[idx] || ''}">
                     <button onclick="window.checkAdjectivesExtra2(${idx})" style="padding: 8px 16px; background: white; color: var(--primary-color); border: 2px solid var(--primary-color); border-radius: 20px; font-weight: bold; cursor: pointer; transition: all 0.2s; align-self: flex-start;" onmouseover="this.style.background='var(--primary-color)'; this.style.color='white'" onmouseout="this.style.background='white'; this.style.color='var(--primary-color)'">Kiểm tra</button>
                 </div>
@@ -7697,7 +7705,7 @@ window.renderPrepositionsDetail = function(activeTab = 'theory') {
         const pBook1Html = prepositionsPracticeBook1.map((q, idx) => `
             <div class="quiz-item" style="background: var(--bg-card); border-radius: 12px; padding: 20px; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color);">
                 <div style="display: flex; gap: 12px; align-items: flex-start; margin-bottom: 12px;">
-                    <div style="background: var(--primary-light); color: var(--primary-color); width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">${idx + 1}</div>
+                    <div style="background: var(--primary-light); color: var(--primary-color); width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.1rem; flex-shrink: 0;">${idx + 1}</div>
                     <p style="font-size: 1.15rem; font-weight: 700; color: #1e293b; margin-top: 4px; margin-bottom: 0;">${q.q}</p>
                 </div>
                 <div style="display: flex; flex-direction: column; gap: 8px; padding-left: 44px;">
@@ -7713,7 +7721,7 @@ window.renderPrepositionsDetail = function(activeTab = 'theory') {
         const pBook2Html = prepositionsPracticeBook2.map((q, idx) => `
             <div class="quiz-item" style="background: var(--bg-card); border-radius: 12px; padding: 20px; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color);">
                 <div style="display: flex; gap: 12px; align-items: flex-start; margin-bottom: 12px;">
-                    <div style="background: var(--primary-light); color: var(--primary-color); width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">${idx + 1}</div>
+                    <div style="background: var(--primary-light); color: var(--primary-color); width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.1rem; flex-shrink: 0;">${idx + 1}</div>
                     <p style="font-size: 1.15rem; font-weight: 700; color: #1e293b; margin-top: 4px; margin-bottom: 0;">${q.q}</p>
                 </div>
                 <div style="display: flex; flex-direction: column; gap: 8px; padding-left: 44px;">
@@ -7806,7 +7814,8 @@ window.renderPrepositionsDetail = function(activeTab = 'theory') {
     } else if (activeTab === 'practice_extra') {
         const extra1Html = prepositionsPracticeExtra1.map((q, idx) => `
             <div class="quiz-item" style="background: var(--bg-card); border-radius: 12px; padding: 20px; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color); margin-bottom: 16px;">
-                <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+                <div style="display: flex; gap: 12px; align-items: center; flex-wrap: wrap;">
+                    <div style="background: var(--primary-light); color: var(--primary-color); width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.1rem; flex-shrink: 0;">${idx + 1}</div>
                     <span style="font-size: 1.15rem; font-weight: 500; color: var(--text-main);">${q.before}</span>
                     <select id="prep_extra1_${idx}" style="padding: 6px 12px; font-size: 1.1rem; border: 2px solid #cbd5e1; border-radius: 8px; outline: none; cursor: pointer;" onchange="window.prepositionsAnswersExtra1[${idx}] = this.value; this.style.borderColor='#cbd5e1'; window.saveProgress(true);">
                         <option value="">-- Chọn --</option>
@@ -9731,7 +9740,7 @@ window.renderConjunctionsDetail = function(activeTab = 'theory') {
         const pBook1Html = conjunctionsPracticeBook1.map((q, idx) => `
             <div class="quiz-item" style="background: var(--bg-card); border-radius: 12px; padding: 20px; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color);">
                 <div style="display: flex; gap: 12px; align-items: flex-start; margin-bottom: 12px;">
-                    <div style="background: var(--primary-light); color: var(--primary-color); width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">${idx + 1}</div>
+                    <div style="background: var(--primary-light); color: var(--primary-color); width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.1rem; flex-shrink: 0;">${idx + 1}</div>
                     <div style="flex-grow: 1;">
                         <p style="font-size: 1.15rem; font-weight: 700; color: #1e293b; margin-top: 4px; margin-bottom: 8px;">${q.q}</p>
                         ${q.hint ? `<button onclick="const h = document.getElementById('conj_hint_book1_${idx}'); h.style.display = h.style.display === 'none' ? 'block' : 'none';" style="background: none; border: none; color: #0284c7; font-size: 0.95rem; cursor: pointer; padding: 0; margin-bottom: 12px; display: flex; align-items: center; gap: 4px; font-weight: 500;"><span style="font-size: 1.1rem">💡</span> Xem gợi ý</button>
@@ -9752,7 +9761,7 @@ window.renderConjunctionsDetail = function(activeTab = 'theory') {
         const pBook2Html = conjunctionsPracticeBook2.map((q, idx) => `
             <div class="quiz-item" style="background: var(--bg-card); border-radius: 12px; padding: 20px; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color);">
                 <div style="display: flex; gap: 12px; align-items: flex-start; margin-bottom: 12px;">
-                    <div style="background: #fdf2f8; color: #db2777; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">${idx + 1}</div>
+                    <div style="background: var(--primary-light); color: var(--primary-color); width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.1rem; flex-shrink: 0;">${idx + 1}</div>
                     <div style="flex-grow: 1;">
                         <p style="font-size: 1.15rem; font-weight: 600; color: #1e293b; margin-top: 4px; margin-bottom: 10px;">
                             ${q.prompt} <span style="color: #db2777; font-weight: bold;">_____</span>
@@ -9786,7 +9795,7 @@ window.renderConjunctionsDetail = function(activeTab = 'theory') {
         const pBook3Html = conjunctionsPracticeBook3.map((q, idx) => `
             <div class="quiz-item" style="background: var(--bg-card); border-radius: 12px; padding: 20px; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color);">
                 <div style="display: flex; gap: 12px; align-items: flex-start; margin-bottom: 12px;">
-                    <div style="background: #e0e7ff; color: #4338ca; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">${idx + 1}</div>
+                    <div style="background: var(--primary-light); color: var(--primary-color); width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.1rem; flex-shrink: 0;">${idx + 1}</div>
                     <div style="flex-grow: 1;">
                         <p style="font-size: 1.15rem; font-weight: 700; color: #1e293b; margin-top: 4px; margin-bottom: 8px;">${q.q}</p>
                         ${q.hint ? `<button onclick="const h = document.getElementById('conj_hint_book3_${idx}'); h.style.display = h.style.display === 'none' ? 'block' : 'none';" style="background: none; border: none; color: #0284c7; font-size: 0.95rem; cursor: pointer; padding: 0; margin-bottom: 12px; display: flex; align-items: center; gap: 4px; font-weight: 500;"><span style="font-size: 1.1rem">💡</span> Xem gợi ý</button>
@@ -9849,7 +9858,7 @@ window.renderConjunctionsDetail = function(activeTab = 'theory') {
         const pExtra1Html = conjunctionsPracticeExtra1.map((q, idx) => `
             <div class="quiz-item" style="background: var(--bg-card); border-radius: 12px; padding: 20px; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color);">
                 <div style="display: flex; gap: 12px; align-items: flex-start; margin-bottom: 16px;">
-                    <div style="background: #eff6ff; color: #2563eb; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">${idx + 1}</div>
+                    <div style="background: var(--primary-light); color: var(--primary-color); width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.1rem; flex-shrink: 0;">${idx + 1}</div>
                     <p style="font-size: 1.15rem; font-weight: 700; color: #1e293b; margin-top: 4px; margin-bottom: 0;">${q.q}</p>
                 </div>
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding-left: 44px;">
@@ -9869,7 +9878,7 @@ window.renderConjunctionsDetail = function(activeTab = 'theory') {
         const pExtra2Html = conjunctionsPracticeExtra2.map((q, idx) => `
             <div class="quiz-item" style="background: var(--bg-card); border-radius: 12px; padding: 20px; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color);">
                 <div style="display: flex; gap: 12px; align-items: flex-start; margin-bottom: 12px;">
-                    <div style="background: #f0fdf4; color: #166534; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">${idx + 1}</div>
+                    <div style="background: var(--primary-light); color: var(--primary-color); width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.1rem; flex-shrink: 0;">${idx + 1}</div>
                     <div style="flex-grow: 1;">
                         <p style="font-size: 1.15rem; font-weight: 700; color: #1e293b; margin-top: 4px; margin-bottom: 8px;">${q.q}</p>
                         ${q.hint ? `<button onclick="const h = document.getElementById('conj_hint_extra2_${idx}'); h.style.display = h.style.display === 'none' ? 'block' : 'none';" style="background: none; border: none; color: #0284c7; font-size: 0.95rem; cursor: pointer; padding: 0; margin-bottom: 12px; display: flex; align-items: center; gap: 4px; font-weight: 500;"><span style="font-size: 1.1rem">💡</span> Xem gợi ý</button>
