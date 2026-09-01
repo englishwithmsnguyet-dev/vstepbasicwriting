@@ -8502,39 +8502,145 @@ window.checkAdverbsBook1 = function(idx) {
     window.saveProgress(true);
 };
 
+window.checkAdverbsBook3 = function(idx) {
+    const inputId = `adv_book3_${idx}`;
+    const expId = `advexp_book3_${idx}`;
+    const inputEl = document.getElementById(inputId);
+    const expEl = document.getElementById(expId);
+    
+    if (!inputEl || !expEl) return;
+    
+    const rawVal = inputEl.value || '';
+    const val = rawVal.trim();
+    if (!val) {
+        expEl.style.display = 'block';
+        expEl.style.background = '#fef2f2';
+        expEl.style.color = '#ef4444';
+        expEl.innerHTML = 'Vui lòng nhập câu trả lời!';
+        return;
+    }
+    
+    const q = adverbsPracticeBook3[idx];
+    const isCorrect = q.a.some(ans => window.normalizeText(val) === window.normalizeText(ans));
+    const formCheck = window.checkSentencePunctuation(rawVal, isCorrect);
+    
+    expEl.style.display = 'block';
+    if (formCheck.valid) {
+        expEl.style.background = '#dcfce7';
+        expEl.style.color = '#16a34a';
+        expEl.innerHTML = '<b>✅ Chính xác!</b>';
+        inputEl.style.borderColor = '#16a34a';
+    } else if (formCheck.isNear) {
+        expEl.style.background = '#fffbeb';
+        expEl.style.color = '#b45309';
+        expEl.innerHTML = formCheck.message;
+        inputEl.style.borderColor = '#f59e0b';
+    } else {
+        expEl.style.background = '#fef2f2';
+        expEl.style.color = '#ef4444';
+        expEl.innerHTML = `<b>❌ Chưa chính xác!</b><br>Đáp án gợi ý: <b>${q.a[0]}</b>`;
+        inputEl.style.borderColor = '#ef4444';
+    }
+    
+    window.adverbsAnswersBook3[idx] = val;
+    window.saveProgress(true);
+};
+
+window.checkAdverbsBook4 = function(idx) {
+    const inputId = `adv_book4_${idx}`;
+    const expId = `advexp_book4_${idx}`;
+    const inputEl = document.getElementById(inputId);
+    const expEl = document.getElementById(expId);
+    
+    if (!inputEl || !expEl) return;
+    
+    const rawVal = inputEl.value || '';
+    const val = rawVal.trim();
+    if (!val) {
+        expEl.style.display = 'block';
+        expEl.style.background = '#fef2f2';
+        expEl.style.color = '#ef4444';
+        expEl.innerHTML = 'Vui lòng nhập câu trả lời!';
+        return;
+    }
+    
+    const q = adverbsPracticeBook4[idx];
+    const isCorrect = q.a.some(ans => window.normalizeText(val) === window.normalizeText(ans));
+    const formCheck = window.checkSentencePunctuation(rawVal, isCorrect);
+    
+    expEl.style.display = 'block';
+    if (formCheck.valid) {
+        expEl.style.background = '#dcfce7';
+        expEl.style.color = '#16a34a';
+        expEl.innerHTML = '<b>✅ Chính xác!</b>';
+        inputEl.style.borderColor = '#16a34a';
+    } else if (formCheck.isNear) {
+        expEl.style.background = '#fffbeb';
+        expEl.style.color = '#b45309';
+        expEl.innerHTML = formCheck.message;
+        inputEl.style.borderColor = '#f59e0b';
+    } else {
+        expEl.style.background = '#fef2f2';
+        expEl.style.color = '#ef4444';
+        expEl.innerHTML = `<b>❌ Chưa chính xác!</b><br>Đáp án gợi ý: <b>${q.a[0]}</b>`;
+        inputEl.style.borderColor = '#ef4444';
+    }
+    
+    window.adverbsAnswersBook4[idx] = val;
+    window.saveProgress(true);
+};
+
 window.submitAdverbsBook1 = function() {
     let score = 0;
+    let completed = true;
     adverbsPracticeBook1.forEach((q, i) => {
-        window.checkAdverbsBook1(i);
         const val = (window.adverbsAnswersBook1[i] || '').trim();
+        if (!val) completed = false;
+        window.checkAdverbsBook1(i);
         if (val && q.a.some(ans => window.normalizeText(val) === window.normalizeText(ans))) {
             score++;
         }
     });
+    if (!completed) {
+        alert("Vui lòng trả lời hết các câu hỏi trước khi nộp bài!");
+        return;
+    }
     window.showExerciseResult(score, adverbsPracticeBook1.length, "KẾT QUẢ BÀI 1 (TRẠNG TỪ TRONG TÀI LIỆU)");
 };
 
 window.submitAdverbsBook3 = function() {
     let score = 0;
+    let completed = true;
     adverbsPracticeBook3.forEach((q, i) => {
-        window.checkAdverbsBook3(i);
         const val = (window.adverbsAnswersBook3[i] || '').trim();
+        if (!val) completed = false;
+        window.checkAdverbsBook3(i);
         if (val && q.a.some(ans => window.normalizeText(val) === window.normalizeText(ans))) {
             score++;
         }
     });
+    if (!completed) {
+        alert("Vui lòng trả lời hết các câu hỏi trước khi nộp bài!");
+        return;
+    }
     window.showExerciseResult(score, adverbsPracticeBook3.length, "KẾT QUẢ EXERCISE 1 (TRẠNG TỪ)");
 };
 
 window.submitAdverbsBook4 = function() {
     let score = 0;
+    let completed = true;
     adverbsPracticeBook4.forEach((q, i) => {
-        window.checkAdverbsBook4(i);
         const val = (window.adverbsAnswersBook4[i] || '').trim();
+        if (!val) completed = false;
+        window.checkAdverbsBook4(i);
         if (val && q.a.some(ans => window.normalizeText(val) === window.normalizeText(ans))) {
             score++;
         }
     });
+    if (!completed) {
+        alert("Vui lòng trả lời hết các câu hỏi trước khi nộp bài!");
+        return;
+    }
     window.showExerciseResult(score, adverbsPracticeBook4.length, "KẾT QUẢ EXERCISE 2 (TRẠNG TỪ)");
 };
 
