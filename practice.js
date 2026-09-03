@@ -2875,7 +2875,7 @@ window.switchSelfTopic = function(topicId) {
             'verbs': [...fullPasses, 'onb103', 'cb213', 'b212'],
             'adjectives': [...fullPasses, 'onb103', 'cb213', 'b212'],
             'adverbs': [...fullPasses, 'onb103', 'cb213', 'b212'],
-            'prepositions': fullPasses,
+            'prepositions': [...fullPasses, 'cb213'],
             'conjunctions': fullPasses
         };
         const enteredPass = pass.trim().toLowerCase();
