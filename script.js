@@ -2004,7 +2004,7 @@ window.openTopic = function(topicId, status) {
             'pronouns': [...fullPasses, 'onb103', 'cb213', 'b212'],
             'verbs': [...fullPasses, 'onb103', 'cb213', 'b212'],
             'adjectives': [...fullPasses, 'onb103', 'cb213', 'b212'],
-            'adverbs': [...fullPasses, 'onb103', 'b212'],
+            'adverbs': [...fullPasses, 'onb103', 'cb213', 'b212'],
             'prepositions': fullPasses,
             'conjunctions': fullPasses
         };
