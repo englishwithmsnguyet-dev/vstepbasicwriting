@@ -9303,13 +9303,18 @@ const conjunctionsTheoryData = [
                 <div style="background: #fffbeb; border: 1px solid #fef08a; padding: 14px 16px; border-radius: 8px; font-size: 1rem; color: #854d0e;">
                     <b>⚡ Quy tắc dấu phẩy với FANBOYS:</b>
                     <ul style="margin: 8px 0 0 0; padding-left: 20px; display: grid; gap: 10px;">
-                        <li><b>Khi nối 2 mệnh đề độc lập:</b> (S + V <b style="color: #dc2626;">,</b> FANBOYS + S + V) ➔ <b>BẮT BUỘC có dấu phẩy trước FANBOYS</b>.<br><i>(VD: I was hungry<b style="color: #dc2626;">,</b> so I made a sandwich.)</i></li>
-                        <li><b>Đối với "and" và "or", có 2 trường hợp:</b>
+                        <li><b>1. Khi nối 2 mệnh đề độc lập (S₁ + V₁ <b style="color: #dc2626;">,</b> FANBOYS + S₂ + V₂):</b><br>
+                        ➔ <b>BẮT BUỘC có dấu phẩy</b> trước bất kỳ từ nào trong FANBOYS (kể cả <i>and</i> hay <i>or</i>).<br>
+                        <span style="color: #475569; font-style: italic;">• VD 1: I stayed at home<b style="color: #dc2626;">,</b> <b>and</b> my brother went out.</span><br>
+                        <span style="color: #475569; font-style: italic;">• VD 2: You must study hard<b style="color: #dc2626;">,</b> <b>or</b> you will fail the exam.</span><br>
+                        <span style="color: #475569; font-style: italic;">• VD 3: I was hungry<b style="color: #dc2626;">,</b> <b>so</b> I made a sandwich.</span></li>
+                        
+                        <li><b>2. Khi liệt kê các từ hoặc cụm từ (Danh từ, Tính từ, Động từ...):</b>
                             <div style="margin-top: 6px; display: grid; gap: 6px; padding-left: 8px;">
-                                <div>• <b>Trường hợp 1 (Nối 2 thành phần):</b> ➔ <b>KHÔNG dùng dấu phẩy</b> trước <i>and / or</i>.<br>
-                                <span style="color: #475569; font-style: italic;">VD: You can choose tea <b>or</b> coffee. / She likes apples <b>and</b> oranges.</span></div>
-                                <div>• <b>Trường hợp 2 (Liệt kê từ 3 thành phần trở lên):</b> ➔ <b>ĐẶT DẤU PHẨY</b> ngăn cách từng thành phần, và đặt dấu phẩy trước <i>and / or</i> (dấu phẩy Oxford).<br>
-                                <span style="color: #475569; font-style: italic;">VD: You can choose tea<b style="color: #dc2626;">,</b> coffee<b style="color: #dc2626;">,</b> <b>or</b> juice. / We bought apples<b style="color: #dc2626;">,</b> bananas<b style="color: #dc2626;">,</b> <b>and</b> oranges.</span></div>
+                                <div>• <b>Trường hợp 1 (Chỉ có 2 từ / 2 cụm từ):</b> ➔ <b>KHÔNG dùng dấu phẩy</b> trước <i>and / or</i>.<br>
+                                <span style="color: #475569; font-style: italic;">VD: You can choose tea <b>or</b> coffee. / She is kind <b>and</b> friendly.</span></div>
+                                <div>• <b>Trường hợp 2 (Liệt kê từ 3 từ / cụm từ trở lên):</b> ➔ <b>DÙNG DẤU PHẨY</b> ngăn cách từng mục, và đặt dấu phẩy trước <i>and / or</i> (dấu phẩy Oxford).<br>
+                                <span style="color: #475569; font-style: italic;">VD: You can choose tea<b style="color: #dc2626;">,</b> coffee<b style="color: #dc2626;">,</b> <b>or</b> juice. / She likes apples<b style="color: #dc2626;">,</b> bananas<b style="color: #dc2626;">,</b> <b>and</b> oranges.</span></div>
                             </div>
                         </li>
                     </ul>
