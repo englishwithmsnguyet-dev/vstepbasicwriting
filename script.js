@@ -9300,11 +9300,12 @@ const conjunctionsTheoryData = [
                     <div style="text-align: center;"><b style="color: #2563eb; font-size: 1.15rem;">S</b> - So <span style="font-size: 0.9rem; color: #64748b;">(vì vậy)</span></div>
                 </div>
 
-                <div style="background: #fffbeb; border: 1px solid #fef08a; padding: 12px 16px; border-radius: 8px; font-size: 1rem; color: #854d0e;">
+                <div style="background: #fffbeb; border: 1px solid #fef08a; padding: 14px 16px; border-radius: 8px; font-size: 1rem; color: #854d0e;">
                     <b>⚡ Quy tắc dấu phẩy với FANBOYS:</b>
-                    <ul style="margin: 6px 0 0 0; padding-left: 20px; display: grid; gap: 4px;">
-                        <li>Khi nối 2 <b>mệnh đề độc lập</b> (S + V , FANBOYS + S + V) ➔ <b>BẮT BUỘC có dấu phẩy trước FANBOYS</b>.<br><i>(VD: I was hungry<b style="color: #dc2626;">,</b> so I made a sandwich.)</i></li>
-                        <li>Khi liệt kê từ 3 thành phần trở lên ➔ đặt dấu phẩy trước <i>and / or</i>: <i>"You can choose tea, coffee, or juice."</i></li>
+                    <ul style="margin: 8px 0 0 0; padding-left: 20px; display: grid; gap: 8px;">
+                        <li><b>Khi nối 2 mệnh đề độc lập</b> (S + V <b style="color: #dc2626;">,</b> FANBOYS + S + V) ➔ <b>BẮT BUỘC có dấu phẩy trước FANBOYS</b>.<br><i>(VD: I was hungry<b style="color: #dc2626;">,</b> so I made a sandwich.)</i></li>
+                        <li><b>Khi nối 2 từ / 2 cụm từ (2 thành phần):</b> ➔ <b>KHÔNG DÙNG DẤU PHẨY</b> trước <i>and / or</i>.<br><i>(VD: You can choose tea <b>or</b> coffee. / She likes apples <b>and</b> oranges.)</i></li>
+                        <li><b>Khi liệt kê từ 3 thành phần trở lên:</b> ➔ <b>ĐẶT DẤU PHẨY NGĂN CÁCH TỪNG THÀNH PHẦN</b> và có thể đặt dấu phẩy trước <i>and / or (Oxford comma)</i>.<br><i>(VD: You can choose tea<b style="color: #dc2626;">,</b> coffee<b style="color: #dc2626;">,</b> <b>or</b> juice. / We bought apples<b style="color: #dc2626;">,</b> bananas<b style="color: #dc2626;">,</b> <b>and</b> oranges.)</i></li>
                     </ul>
                 </div>
             </div>
