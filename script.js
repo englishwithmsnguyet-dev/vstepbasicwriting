@@ -1995,24 +1995,24 @@ const verbsPracticeParaData = {
 window.openTopic = function(topicId, status) {
     if (status === 'locked') {
         const pass = prompt('Vui lòng nhập mật khẩu để mở khóa chủ điểm này:');
-        const allPasses = ['missnguyet2026', 'cb206', 'cb210', 'cb211', 'cb213', 'onb103', 'b212'];
-        const fullPasses = ['missnguyet2026', 'cb206', 'cb210', 'cb211'];
+        const allPasses = ['missnguyet2026', 'cb206', 'cb210', 'cb211', 'cb213', 'onb103', 'b212', 'cb212'];
+        const fullPasses = ['missnguyet2026', 'cb206', 'cb210', 'cb211', 'cb212', 'onb103', 'b212'];
         const topicPasswords = {
             'components': allPasses,
             'structures': allPasses,
-            'nouns': [...fullPasses, 'onb103', 'cb213', 'b212'],
-            'pronouns': [...fullPasses, 'onb103', 'cb213', 'b212'],
-            'verbs': [...fullPasses, 'onb103', 'cb213', 'b212'],
-            'adjectives': [...fullPasses, 'onb103', 'cb213', 'b212'],
-            'adverbs': [...fullPasses, 'onb103', 'cb213', 'b212'],
-            'prepositions': [...fullPasses, 'cb213', 'onb103'],
-            'conjunctions': [...fullPasses, 'onb103']
+            'nouns': [...fullPasses, 'cb213'],
+            'pronouns': [...fullPasses, 'cb213'],
+            'verbs': [...fullPasses, 'cb213'],
+            'adjectives': [...fullPasses, 'cb213'],
+            'adverbs': [...fullPasses, 'cb213'],
+            'prepositions': [...fullPasses, 'cb213'],
+            'conjunctions': fullPasses
         };
         const enteredPass = pass ? pass.trim().toLowerCase() : '';
         const validPasses = topicPasswords[topicId] || fullPasses;
         
         // Mật khẩu đặc biệt mở khóa tất cả các chủ điểm
-        const masterPasses = ['cb206', 'cb211', 'cb210', 'missnguyet2026'];
+        const masterPasses = ['cb206', 'cb211', 'cb210', 'missnguyet2026', 'cb212', 'onb103', 'b212'];
         
         if (enteredPass && (validPasses.includes(enteredPass) || masterPasses.includes(enteredPass))) {
             const topic1 = topicsData.find(t => t.id === topicId);
