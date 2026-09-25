@@ -6,164 +6,161 @@
 const finalReviewTests = [
     {
         id: "test1",
-        title: "BÀI TẬP 1 (CÁC CÂU DÙNG TRONG VIẾT THƯ - PHẦN 1)",
-        subTitle: "Mở đầu thư, hỏi thăm, cảm ơn, mời hẹn & chia sẻ thông tin",
-        desc: "Luyện tập dịch 10 câu quen thuộc, tự nhiên và thực tế khi viết thư gửi bạn bè hoặc đồng nghiệp (Writing Task 1).",
+        title: "BÀI TẬP 1 (CÁC CÂU DÙNG TRONG VIẾT THƯ & DIỄN ĐẠT Ý)",
+        subTitle: "Thông tin, thói quen, kế hoạch & miêu tả thực tế",
+        desc: "Luyện tập dịch 10 câu nòng cốt, rõ ràng, chuẩn ngữ pháp, tránh các lỗi dịch từng từ (word-by-word) thường gặp.",
         questions: [
             {
-                q: "Tôi viết thư này để mời bạn đến dự tiệc sinh nhật của tôi vào Chủ nhật này.",
+                q: "Tôi thường dành hai tiếng mỗi ngày để học tiếng Anh.",
                 a: [
-                    "I am writing this letter to invite you to my birthday party this Sunday.",
-                    "I am writing this letter to invite you to my birthday party this Sunday",
-                    "I am writing this email to invite you to my birthday party this Sunday.",
-                    "I am writing this email to invite you to my birthday party this Sunday",
-                    "I am writing to invite you to my birthday party this Sunday.",
-                    "I am writing to invite you to my birthday party this Sunday"
+                    "I usually spend two hours every day studying English.",
+                    "I usually spend two hours every day studying English",
+                    "I usually spend 2 hours every day studying English.",
+                    "I often spend two hours every day studying English.",
+                    "I usually spend two hours a day studying English."
                 ],
                 hints: [
-                    { en: "invite you to...", vn: "mời bạn đến..." },
-                    { en: "birthday party", vn: "bữa tiệc sinh nhật" },
-                    { en: "this Sunday", vn: "Chủ nhật này (thời gian đứng cuối câu)" }
+                    { en: "usually / often", vn: "thường (trạng từ tần suất đứng trước động từ)" },
+                    { en: "spend time + V-ing", vn: "dành thời gian làm gì" },
+                    { en: "every day", vn: "mỗi ngày (đứng cuối câu)" }
                 ],
-                exp: "• <b>Mở đầu thư:</b> <i>I am writing this letter to + V</i>.<br>• <b>Giới từ:</b> invite sb to somewhere."
+                exp: "• <b>Cấu trúc:</b> <i>spend + thời gian + V-ing</i>.<br>• <b>Vị trí trạng từ chỉ tần suất:</b> đứng trước động từ thường (I usually spend)."
             },
             {
-                q: "Cảm ơn bạn rất nhiều vì đã giúp tôi trong kỳ thi vừa qua.",
+                q: "Thành phố này có rất nhiều địa điểm thú vị để tham quan.",
                 a: [
-                    "Thank you very much for helping me in the last exam.",
-                    "Thank you very much for helping me in the last exam",
-                    "Thank you so much for helping me in the last exam.",
-                    "Thank you very much for helping me with the last exam.",
-                    "Thanks a lot for helping me in the last exam.",
-                    "Thank you very much for your help in the last exam."
+                    "This city has a lot of interesting places to visit.",
+                    "This city has a lot of interesting places to visit",
+                    "This city has many interesting places to visit.",
+                    "There are many interesting places to visit in this city.",
+                    "There are a lot of interesting places to visit in this city."
                 ],
                 hints: [
-                    { en: "Thank you very much for + V-ing", vn: "Cảm ơn bạn rất nhiều vì đã làm gì" },
-                    { en: "the last exam", vn: "kỳ thi vừa qua" }
+                    { en: "interesting places", vn: "địa điểm thú vị (tính từ đứng trước danh từ)" },
+                    { en: "to visit", vn: "để tham quan (to-V)" }
                 ],
-                exp: "• <b>Cấu trúc cảm ơn:</b> <i>Thank you for + V-ing / Noun</i>.<br>• <b>Đại từ tân ngữ:</b> helping me."
+                exp: "• <b>Trật tự từ:</b> Tính từ đứng trước danh từ (interesting places).<br>• <b>Động từ chỉ mục đích:</b> to visit."
             },
             {
-                q: "Tôi rất vui khi nhận được thư và nghe tin tức từ bạn.",
+                q: "Tôi muốn giới thiệu một cuốn sách hay cho bạn.",
                 a: [
-                    "I was very happy to receive your letter and hear your news.",
-                    "I was very happy to receive your letter and hear your news",
-                    "I am very happy to receive your letter and hear your news.",
-                    "I was very glad to receive your letter and hear your news.",
-                    "I am very glad to get your letter and hear from you."
+                    "I want to recommend a good book to you.",
+                    "I want to recommend a good book to you",
+                    "I want to introduce a good book to you.",
+                    "I would like to recommend a good book to you.",
+                    "I want to suggest a good book to you."
                 ],
                 hints: [
-                    { en: "happy to receive", vn: "rất vui khi nhận được" },
-                    { en: "hear your news", vn: "nghe tin tức từ bạn" }
+                    { en: "recommend / introduce ... to you", vn: "giới thiệu... cho bạn" },
+                    { en: "a good book", vn: "một cuốn sách hay" }
                 ],
-                exp: "• <b>Tính từ cảm xúc:</b> <i>happy to-V</i>.<br>• <b>Liên từ đẳng lập:</b> and (nối 2 động từ: receive ... and hear ...)."
+                exp: "• <b>Cấu trúc:</b> want to + V nguyên mẫu.<br>• <b>Giới từ:</b> recommend sth to sb."
             },
             {
-                q: "Mặc dù bận rộn với công việc, tôi vẫn luôn nhớ đến bạn.",
+                q: "Bạn có thể cho tôi mượn cuốn từ điển tiếng Anh của bạn không?",
                 a: [
-                    "Although I am busy with work, I always remember you.",
-                    "Although I am busy with work, I always remember you",
-                    "Although I am busy with work, I always think of you.",
-                    "Even though I am busy with work, I always think of you.",
-                    "Though I am busy with work, I always think about you."
+                    "Can you lend me your English dictionary?",
+                    "Could you lend me your English dictionary?",
+                    "Can you please lend me your English dictionary?",
+                    "Could you please lend me your English dictionary?"
                 ],
                 hints: [
-                    { en: "Although", vn: "Mặc dù (từ nối đứng đầu câu có dấu phẩy)" },
-                    { en: "busy with work", vn: "bận rộn với công việc" },
-                    { en: "always", vn: "luôn luôn (trạng từ tần suất đứng trước động từ thường)" }
+                    { en: "lend me", vn: "cho tôi mượn (động từ 2 tân ngữ: lend + sb + sth)" },
+                    { en: "English dictionary", vn: "từ điển tiếng Anh" }
                 ],
-                exp: "• <b>Liên từ chỉ sự nhượng bộ:</b> Although.<br>• <b>Vị trí trạng từ chỉ tần suất:</b> I always think of you."
+                exp: "• <b>Động từ 2 tân ngữ:</b> lend + me (tân ngữ 1) + your English dictionary (tân ngữ 2).<br>• <b>Câu hỏi yêu cầu:</b> Can/Could you + V...?"
             },
             {
-                q: "Bạn có muốn đi xem phim với tôi vào cuối tuần này không?",
+                q: "Tôi đã học tiếng Anh được ba năm tại trường đại học.",
                 a: [
-                    "Do you want to go to the cinema with me this weekend?",
-                    "Do you want to go to the movies with me this weekend?",
-                    "Would you like to go to the cinema with me this weekend?",
-                    "Would you like to go to the movies with me this weekend?",
-                    "Can you go to the cinema with me this weekend?"
+                    "I have studied English for three years at university.",
+                    "I have studied English for three years at university",
+                    "I have studied English for 3 years at university.",
+                    "I have learned English for three years at university.",
+                    "I have been studying English for three years at university."
                 ],
                 hints: [
-                    { en: "go to the cinema / movies", vn: "đi xem phim" },
-                    { en: "this weekend", vn: "cuối tuần này" }
+                    { en: "have studied / learned", vn: "đã học (Hiện tại hoàn thành)" },
+                    { en: "for three years", vn: "được ba năm (for + khoảng thời gian)" },
+                    { en: "at university", vn: "tại trường đại học" }
                 ],
-                exp: "• <b>Câu hỏi lời mời:</b> Do you want to + V...? / Would you like to + V...? (kết thúc bằng dấu hỏi '?')."
+                exp: "• <b>Thì Hiện tại hoàn thành:</b> have + V3/ed.<br>• <b>Giới từ:</b> for + khoảng thời gian (for three years), at university."
             },
             {
-                q: "Tôi xin lỗi vì đã không thể đến tham dự bữa tiệc của bạn.",
+                q: "Thời tiết ở đây rất mát mẻ và dễ chịu vào mùa hè.",
                 a: [
-                    "I am sorry that I could not come to your party.",
-                    "I am sorry that I could not attend your party.",
-                    "I am sorry for not coming to your party.",
-                    "I am sorry for not being able to come to your party.",
-                    "I am very sorry that I could not come to your party."
+                    "The weather here is very cool and pleasant in the summer.",
+                    "The weather here is very cool and pleasant in the summer",
+                    "The weather here is very cool and comfortable in the summer.",
+                    "The weather here is very cool and pleasant in summer."
                 ],
                 hints: [
-                    { en: "sorry that...", vn: "xin lỗi rằng..." },
-                    { en: "could not come to", vn: "đã không thể đến..." },
-                    { en: "attend / come to your party", vn: "tham dự bữa tiệc của bạn" }
+                    { en: "cool and pleasant", vn: "mát mẻ và dễ chịu (tính từ)" },
+                    { en: "in the summer", vn: "vào mùa hè (giới từ chỉ mùa: in)" }
                 ],
-                exp: "• <b>Cấu trúc xin lỗi:</b> <i>I am sorry that + mệnh đề quá khứ</i>.<br>• <b>Động từ khuyết thiếu quá khứ:</b> could not come."
+                exp: "• <b>Liên từ đẳng lập:</b> cool and pleasant.<br>• <b>Giới từ chỉ mùa:</b> in the summer."
             },
             {
-                q: "Tôi đã chuyển đến ngôi nhà mới được ba tháng rồi.",
+                q: "Tôi cảm thấy rất hào hứng về chuyến đi sắp tới của chúng tôi.",
                 a: [
-                    "I have moved to a new house for three months.",
-                    "I have moved to a new house for three months",
-                    "I have moved to my new house for 3 months.",
-                    "I have lived in a new house for three months.",
-                    "I have been in my new house for three months."
+                    "I feel very excited about our upcoming trip.",
+                    "I feel very excited about our upcoming trip",
+                    "I am very excited about our upcoming trip.",
+                    "I feel really excited about our upcoming trip.",
+                    "I feel very excited about our next trip."
                 ],
                 hints: [
-                    { en: "have moved to", vn: "đã chuyển đến (Hiện tại hoàn thành)" },
-                    { en: "for three months", vn: "được 3 tháng (giới từ chỉ khoảng thời gian: for)" }
+                    { en: "feel excited about", vn: "cảm thấy hào hứng về... (tính từ đuôi -ed chỉ cảm xúc con người)" },
+                    { en: "upcoming trip", vn: "chuyến đi sắp tới" }
                 ],
-                exp: "• <b>Thì Hiện tại hoàn thành:</b> have moved.<br>• <b>Giới từ chỉ khoảng thời gian:</b> for three months."
+                exp: "• <b>Động từ nối + Tính từ:</b> feel + excited about (dùng đuôi -ed cho cảm xúc người).<br>• <b>Tính từ sở hữu:</b> our upcoming trip."
             },
             {
-                q: "Nếu bạn có thời gian rảnh, hãy đến thăm nhà tôi nhé.",
+                q: "Bảo tàng mở cửa từ 8 giờ sáng đến 5 giờ chiều mỗi ngày.",
                 a: [
-                    "If you have free time, please come to visit my house.",
-                    "If you have free time, please come to visit my house",
-                    "If you have free time, please visit my home.",
-                    "If you have some free time, please come to visit my house.",
-                    "If you have free time, come to visit my house, please."
+                    "The museum opens from 8 a.m. to 5 p.m. every day.",
+                    "The museum opens from 8 a.m. to 5 p.m. every day",
+                    "The museum is open from 8 a.m. to 5 p.m. every day.",
+                    "The museum opens from 8 AM to 5 PM every day.",
+                    "The museum opens from 8:00 AM to 5:00 PM every day."
                 ],
                 hints: [
-                    { en: "free time", vn: "thời gian rảnh" },
-                    { en: "please come to visit", vn: "hãy đến thăm (câu mệnh lệnh lịch sự)" }
+                    { en: "opens", vn: "mở cửa (Hiện tại đơn số ít chỉ lịch trình)" },
+                    { en: "from ... to ...", vn: "từ... đến..." },
+                    { en: "every day", vn: "mỗi ngày" }
                 ],
-                exp: "• <b>Câu điều kiện loại 1:</b> Mệnh đề If đứng trước có dấu phẩy.<br>• <b>Câu mệnh lệnh:</b> please + V nguyên mẫu."
+                exp: "• <b>Thì Hiện tại đơn:</b> The museum (số ít) chia động từ opens có 's'.<br>• <b>Cặp giới từ chỉ thời gian:</b> from ... to ..."
             },
             {
-                q: "Tôi hy vọng bạn và gia đình đều khỏe mạnh.",
+                q: "Mặc dù trời mưa to, chúng tôi vẫn quyết định đi cắm trại.",
                 a: [
-                    "I hope you and your family are all well.",
-                    "I hope you and your family are all well",
-                    "I hope you and your family are in good health.",
-                    "I hope that you and your family are well.",
-                    "I hope you and your family are doing well."
+                    "Although it rained heavily, we still decided to go camping.",
+                    "Although it rained heavily, we still decided to go camping",
+                    "Even though it rained heavily, we still decided to go camping.",
+                    "Although it was raining heavily, we still decided to go camping.",
+                    "Though it rained heavily, we still decided to go camping."
                 ],
                 hints: [
-                    { en: "I hope (that)...", vn: "Tôi hy vọng..." },
-                    { en: "are all well / in good health", vn: "đều khỏe mạnh" }
+                    { en: "Although", vn: "Mặc dù (mệnh đề đứng đầu câu có dấu phẩy)" },
+                    { en: "rained heavily", vn: "mưa to (heavily là trạng từ bổ nghĩa cho rained)" },
+                    { en: "decided to go camping", vn: "quyết định đi cắm trại" }
                 ],
-                exp: "• <b>Cụm từ hỏi thăm sức khỏe:</b> I hope you and your family are all well.<br>• <b>Chủ ngữ số nhiều:</b> you and your family."
+                exp: "• <b>Liên từ chỉ sự nhượng bộ:</b> Although.<br>• <b>Trạng từ:</b> heavily.<br>• <b>Cấu trúc:</b> decide to-V."
             },
             {
-                q: "Hãy viết thư lại cho tôi sớm để kể về công việc mới của bạn nhé.",
+                q: "Chuyến đi này sẽ mang lại cho bạn nhiều trải nghiệm tuyệt vời.",
                 a: [
-                    "Please write back to me soon to tell me about your new job.",
-                    "Please write back to me soon to tell me about your new job",
-                    "Write back to me soon to tell me about your new job, please.",
-                    "Please reply to me soon to tell me about your new job."
+                    "This trip will bring you many wonderful experiences.",
+                    "This trip will bring you many wonderful experiences",
+                    "This trip will bring you many great experiences.",
+                    "This journey will bring you many wonderful experiences.",
+                    "This trip will give you many wonderful experiences."
                 ],
                 hints: [
-                    { en: "write back to me soon", vn: "viết thư lại cho tôi sớm" },
-                    { en: "to tell me about...", vn: "để kể cho tôi nghe về... (chỉ mục đích)" },
-                    { en: "new job", vn: "công việc mới" }
+                    { en: "will bring you", vn: "sẽ mang lại cho bạn (động từ 2 tân ngữ)" },
+                    { en: "wonderful experiences", vn: "những trải nghiệm tuyệt vời" }
                 ],
-                exp: "• <b>Mệnh đề chỉ mục đích:</b> to-V (to tell me about).<br>• <b>Cụm động từ kết thư:</b> write back to sb soon."
+                exp: "• <b>Thì Tương lai đơn:</b> will bring.<br>• <b>Động từ 2 tân ngữ:</b> bring + you (tân ngữ 1) + many wonderful experiences (tân ngữ 2)."
             }
         ]
     },
@@ -309,19 +306,20 @@ const finalReviewTests = [
                 exp: "• <b>Mệnh đề danh từ:</b> I believe that + S + V.<br>• <b>Trạng từ chỉ cách thức:</b> easily (thêm -ly từ tính từ easy)."
             },
             {
-                q: "Tôi rất mong được gặp lại bạn vào tháng tới.",
+                q: "Tập thể dục buổi sáng giúp tôi cảm thấy tràn đầy năng lượng cả ngày.",
                 a: [
-                    "I look forward to seeing you next month.",
-                    "I am looking forward to seeing you next month.",
-                    "I hope to see you again next month.",
-                    "I look forward to meeting you next month.",
-                    "I look forward to seeing you next month"
+                    "Exercising in the morning helps me feel energetic all day.",
+                    "Exercising in the morning helps me feel energetic all day",
+                    "Exercising in the morning helps me feel full of energy all day.",
+                    "Morning exercise helps me feel energetic all day.",
+                    "Doing exercise in the morning helps me feel energetic all day."
                 ],
                 hints: [
-                    { en: "look forward to + V-ing", vn: "rất mong đợi điều gì (kết thư)" },
-                    { en: "next month", vn: "vào tháng tới" }
+                    { en: "Exercising in the morning", vn: "Tập thể dục buổi sáng (chủ ngữ Danh động từ)" },
+                    { en: "feel energetic", vn: "cảm thấy tràn đầy năng lượng" },
+                    { en: "all day", vn: "cả ngày" }
                 ],
-                exp: "• <b>Cụm động từ kết thư chuẩn nhất:</b> <i>look forward to + V-ing</i>.<br>• <b>Trạng từ thời gian:</b> next month."
+                exp: "• <b>Chủ ngữ Danh động từ:</b> Exercising (chia động từ số ít: helps).<br>• <b>Cấu trúc:</b> help + O + V (feel).<br>• <b>Tính từ:</b> energetic."
             }
         ]
     },
