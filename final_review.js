@@ -57,34 +57,38 @@ const finalReviewTests = [
                 exp: "• <b>Cấu trúc:</b> want to + V nguyên mẫu.<br>• <b>Giới từ:</b> recommend sth to sb."
             },
             {
-                q: "Bạn có thể cho tôi mượn cuốn từ điển tiếng Anh của bạn không?",
+                q: "Ngủ đủ giấc giúp học sinh tập trung tốt hơn trong lớp học.",
                 a: [
-                    "Can you lend me your English dictionary?",
-                    "Could you lend me your English dictionary?",
-                    "Can you please lend me your English dictionary?",
-                    "Could you please lend me your English dictionary?"
+                    "Getting enough sleep helps students concentrate better in class.",
+                    "Getting enough sleep helps students concentrate better in class",
+                    "Getting enough sleep helps students focus better in class.",
+                    "Getting enough sleep helps students focus better in class",
+                    "Sleeping enough helps students concentrate better in class.",
+                    "Getting enough sleep helps students concentrate better during class."
                 ],
                 hints: [
-                    { en: "lend me", vn: "cho tôi mượn (động từ 2 tân ngữ: lend + sb + sth)" },
-                    { en: "English dictionary", vn: "từ điển tiếng Anh" }
+                    { en: "Getting enough sleep", vn: "Ngủ đủ giấc (chủ ngữ Danh động từ chia động từ số ít)" },
+                    { en: "concentrate / focus better", vn: "tập trung tốt hơn (trạng từ so sánh hơn)" },
+                    { en: "in class", vn: "trong lớp học" }
                 ],
-                exp: "• <b>Động từ 2 tân ngữ:</b> lend + me (tân ngữ 1) + your English dictionary (tân ngữ 2).<br>• <b>Câu hỏi yêu cầu:</b> Can/Could you + V...?"
+                exp: "• <b>Chủ ngữ Danh động từ:</b> Getting enough sleep (chia động từ số ít: helps).<br>• <b>Cấu trúc:</b> help + O + V nguyên mẫu (concentrate / focus).<br>• <b>Trạng từ so sánh hơn:</b> better."
             },
             {
-                q: "Tôi đã học tiếng Anh được ba năm tại trường đại học.",
+                q: "Học ngoại ngữ giúp con người dễ dàng tìm được một công việc tốt.",
                 a: [
-                    "I have studied English for three years at university.",
-                    "I have studied English for three years at university",
-                    "I have studied English for 3 years at university.",
-                    "I have learned English for three years at university.",
-                    "I have been studying English for three years at university."
+                    "Learning a foreign language helps people easily find a good job.",
+                    "Learning a foreign language helps people easily find a good job",
+                    "Learning a foreign language helps people find a good job easily.",
+                    "Learning a foreign language helps people find a good job easily",
+                    "Studying a foreign language helps people easily find a good job.",
+                    "Learning foreign languages helps people easily find a good job."
                 ],
                 hints: [
-                    { en: "have studied / learned", vn: "đã học (Hiện tại hoàn thành)" },
-                    { en: "for three years", vn: "được ba năm (for + khoảng thời gian)" },
-                    { en: "at university", vn: "tại trường đại học" }
+                    { en: "Learning a foreign language", vn: "Học ngoại ngữ (chủ ngữ Danh động từ)" },
+                    { en: "easily find", vn: "dễ dàng tìm được (trạng từ đứng trước động từ)" },
+                    { en: "a good job", vn: "một công việc tốt" }
                 ],
-                exp: "• <b>Thì Hiện tại hoàn thành:</b> have + V3/ed.<br>• <b>Giới từ:</b> for + khoảng thời gian (for three years), at university."
+                exp: "• <b>Chủ ngữ Danh động từ:</b> Learning a foreign language (chia động từ số ít: helps).<br>• <b>Cấu trúc:</b> help + O + V (find).<br>• <b>Trạng từ:</b> easily."
             },
             {
                 q: "Thời tiết ở đây rất mát mẻ và dễ chịu vào mùa hè.",
