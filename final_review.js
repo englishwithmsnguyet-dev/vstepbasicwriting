@@ -2,7 +2,7 @@
 // ==================== HỆ THỐNG TỔNG ÔN TẬP (FINAL REVIEW) ====================
 // =========================================================================
 
-// Dữ liệu 4 bài tập dịch câu VỪA PHẢI, THỰC TẾ, C CƠ BẢN DÀNH CHO VIẾT THƯ & VIẾT LUẬN B1 VSTEP
+// Dữ liệu 4 bài tập dịch câu VỪA PHẢI, THỰC TẾ, CƠ BẢN DÀNH CHO VIẾT THƯ & VIẾT LUẬN B1 VSTEP
 const finalReviewTests = [
     {
         id: "test1",
@@ -11,94 +11,107 @@ const finalReviewTests = [
         desc: "Luyện tập dịch 10 câu ngắn gọn, vừa sức, áp dụng 7 chủ điểm ngữ pháp vào bài thi Viết Thư B1 (Writing Task 1).",
         questions: [
             {
-                q: "Tôi viết lá thư này để kể cho bạn nghe về kỳ nghỉ hè của tôi.",
+                q: "Tôi viết thư này để mời bạn đến bữa tiệc sinh nhật của tôi.",
                 a: [
-                    "I am writing this letter to tell you about my summer vacation.",
-                    "I am writing this letter to tell you about my summer holiday.",
-                    "I am writing this email to tell you about my summer vacation.",
-                    "I am writing this email to tell you about my summer holiday."
+                    "I am writing this letter to invite you to my birthday party.",
+                    "I am writing this letter to invite you to my birthday party",
+                    "I am writing this email to invite you to my birthday party.",
+                    "I am writing this email to invite you to my birthday party",
+                    "I am writing to invite you to my birthday party.",
+                    "I am writing to invite you to my birthday party"
                 ],
                 hints: [
-                    { en: "tell you about", vn: "kể cho bạn nghe về..." },
-                    { en: "summer vacation / holiday", vn: "kỳ nghỉ hè" }
+                    { en: "invite you to...", vn: "mời bạn đến..." },
+                    { en: "birthday party", vn: "bữa tiệc sinh nhật" }
                 ],
-                exp: "• <b>Cấu trúc mở đầu thư quen thuộc:</b> <i>I am writing this letter to + V nguyên mẫu</i>.<br>• <b>Giới từ:</b> tell sb about sth."
+                exp: "• <b>Cấu trúc mở đầu thư:</b> <i>I am writing this letter to + V nguyên mẫu</i>.<br>• <b>Giới từ:</b> invite sb to somewhere."
             },
             {
-                q: "Cảm ơn bạn rất nhiều vì món quà sinh nhật tuyệt vời của bạn.",
+                q: "Cảm ơn bạn rất nhiều vì món quà sinh nhật.",
                 a: [
-                    "Thank you very much for your wonderful birthday gift.",
-                    "Thank you so much for your wonderful birthday present.",
-                    "Thank you very much for your great birthday gift.",
-                    "Thanks a lot for your wonderful birthday present."
+                    "Thank you very much for the birthday gift.",
+                    "Thank you very much for the birthday gift",
+                    "Thank you so much for the birthday gift.",
+                    "Thank you very much for the birthday present.",
+                    "Thank you so much for the birthday present.",
+                    "Thank you for the birthday gift.",
+                    "Thank you very much for your birthday gift.",
+                    "Thanks a lot for the birthday gift."
                 ],
                 hints: [
-                    { en: "Thank you for...", vn: "Cảm ơn bạn vì..." },
+                    { en: "Thank you very much for...", vn: "Cảm ơn bạn rất nhiều vì..." },
                     { en: "birthday gift / present", vn: "món quà sinh nhật" }
                 ],
-                exp: "• <b>Cấu trúc cảm ơn:</b> <i>Thank you for + Cụm danh từ / V-ing</i>.<br>• <b>Tính từ đứng trước danh từ:</b> wonderful birthday gift."
+                exp: "• <b>Cấu trúc cảm ơn:</b> <i>Thank you very much for + Danh từ / V-ing</i>.<br>• <b>Cụm danh từ:</b> the birthday gift."
             },
             {
-                q: "Tôi rất vui khi biết rằng bạn đã vượt qua kỳ thi tiếng Anh.",
+                q: "Tôi rất vui khi nhận được thư của bạn.",
                 a: [
-                    "I am very glad to know that you passed the English exam.",
-                    "I am very happy to know that you passed the English test.",
-                    "I was very happy to hear that you passed the English exam.",
-                    "I am glad to hear that you passed the English test."
+                    "I am very happy to receive your letter.",
+                    "I am very happy to receive your letter",
+                    "I am very glad to receive your letter.",
+                    "I am very happy to get your letter.",
+                    "I was very happy to receive your letter.",
+                    "I am glad to receive your email.",
+                    "I am very happy to receive your email."
                 ],
                 hints: [
-                    { en: "glad / happy to know that", vn: "rất vui khi biết rằng..." },
-                    { en: "pass the exam / test", vn: "vượt qua kỳ thi (thì Quá khứ đơn: passed)" }
+                    { en: "happy / glad to receive", vn: "rất vui khi nhận được" },
+                    { en: "your letter / email", vn: "thư của bạn" }
                 ],
-                exp: "• <b>Tính từ chỉ cảm xúc:</b> <i>glad / happy to-V</i>.<br>• <b>Mệnh đề quá khứ đơn:</b> you passed the English exam."
+                exp: "• <b>Cấu trúc tính từ chỉ cảm xúc:</b> <i>S + be + happy/glad + to-V</i>.<br>• <b>Động từ:</b> receive (nhận)."
             },
             {
-                q: "Mặc dù tôi rất bận, tôi vẫn dành thời gian để viết thư cho bạn.",
+                q: "Mặc dù tôi rất bận, tôi vẫn muốn viết thư cho bạn.",
                 a: [
-                    "Although I am very busy, I still spend time writing to you.",
-                    "Although I am very busy, I still make time to write to you.",
-                    "Though I am very busy, I still take time to write to you.",
-                    "Even though I am very busy, I still spend time writing to you."
+                    "Although I am very busy, I still want to write to you.",
+                    "Although I am very busy, I still want to write to you",
+                    "Though I am very busy, I still want to write to you.",
+                    "Even though I am very busy, I still want to write to you.",
+                    "Although I am busy, I still want to write to you."
                 ],
                 hints: [
                     { en: "Although / Even though", vn: "Mặc dù (từ nối đứng đầu câu có dấu phẩy)" },
-                    { en: "spend time + V-ing", vn: "dành thời gian làm gì" }
+                    { en: "want to write to you", vn: "muốn viết thư cho bạn" }
                 ],
-                exp: "• <b>Từ nối nhượng bộ:</b> Although đứng đầu câu có dấu phẩy ngăn cách.<br>• <b>Cấu trúc:</b> spend time + V-ing."
+                exp: "• <b>Từ nối nhượng bộ:</b> Although đứng đầu câu có dấu phẩy.<br>• <b>Động từ + to-V:</b> want to write to sb."
             },
             {
                 q: "Bạn có thể đi xem phim với tôi vào tối thứ Bảy tuần này không?",
                 a: [
                     "Can you go to the cinema with me this Saturday evening?",
                     "Can you go to the movies with me this Saturday night?",
+                    "Can you go to the cinema with me this Saturday night?",
                     "Could you go to the cinema with me this Saturday evening?",
                     "Would you like to go to the cinema with me this Saturday evening?"
                 ],
                 hints: [
                     { en: "go to the cinema / movies", vn: "đi xem phim" },
-                    { en: "this Saturday evening", vn: "tối thứ Bảy tuần này" }
+                    { en: "this Saturday evening / night", vn: "tối thứ Bảy tuần này" }
                 ],
-                exp: "• <b>Câu hỏi lời mời:</b> Can you + V...? / Would you like to + V...? (kết thúc bằng dấu chấm hỏi '?')."
+                exp: "• <b>Câu hỏi lời mời:</b> Can you + V...? / Would you like to + V...? (kết thúc bằng dấu hỏi '?')."
             },
             {
-                q: "Tôi xin lỗi vì đã không trả lời thư của bạn sớm hơn.",
+                q: "Tôi xin lỗi vì đã trả lời thư muộn.",
                 a: [
-                    "I am sorry for not replying to your letter sooner.",
-                    "I am sorry for not replying to your letter earlier.",
-                    "I am sorry for not answering your email sooner.",
-                    "I am very sorry that I did not reply to your letter earlier."
+                    "I am sorry for replying late.",
+                    "I am sorry for replying late",
+                    "I am sorry for my late reply.",
+                    "I am sorry for answering late.",
+                    "I am sorry for replying to your letter late.",
+                    "I am very sorry for replying late."
                 ],
                 hints: [
-                    { en: "sorry for not + V-ing", vn: "xin lỗi vì đã không..." },
-                    { en: "reply to your letter / email", vn: "trả lời thư của bạn" },
-                    { en: "sooner / earlier", vn: "sớm hơn (trạng từ so sánh hơn)" }
+                    { en: "sorry for + V-ing", vn: "xin lỗi vì đã làm gì" },
+                    { en: "replying late / late reply", vn: "trả lời muộn" }
                 ],
-                exp: "• <b>Cấu trúc xin lỗi:</b> <i>sorry for + V-ing</i>.<br>• <b>Giới từ:</b> reply to."
+                exp: "• <b>Cấu trúc xin lỗi:</b> <i>I am sorry for + V-ing / Danh từ</i>.<br>• <b>Trạng từ:</b> late."
             },
             {
                 q: "Tôi đã sống ở Hà Nội được hai năm và tôi rất yêu thành phố này.",
                 a: [
                     "I have lived in Hanoi for two years, and I love this city very much.",
+                    "I have lived in Hanoi for two years, and I love this city very much",
                     "I have lived in Ha Noi for two years, and I really love this city.",
                     "I have been living in Hanoi for two years, and I love this city very much.",
                     "I have lived in Hanoi for 2 years, and I love this city very much."
@@ -107,48 +120,51 @@ const finalReviewTests = [
                     { en: "for two years", vn: "được hai năm (dấu hiệu HTHT)" },
                     { en: "and", vn: "và (nối 2 mệnh đề có dấu phẩy trước and)" }
                 ],
-                exp: "• <b>Thì Hiện tại hoàn thành:</b> have lived kết hợp giới từ <i>for</i>.<br>• <b>Từ nối FANBOYS:</b> and (có dấu phẩy khi nối 2 mệnh đề độc lập)."
+                exp: "• <b>Thì Hiện tại hoàn thành:</b> have lived kết hợp giới từ <i>for</i>.<br>• <b>Từ nối:</b> and (có dấu phẩy khi nối 2 mệnh đề độc lập)."
             },
             {
-                q: "Theo tôi, bạn nên mua một chiếc máy tính xách tay mới cho việc học của bạn.",
+                q: "Theo tôi, bạn nên mua một chiếc máy tính xách tay mới.",
                 a: [
-                    "In my opinion, you should buy a new laptop for your study.",
-                    "In my opinion, you should buy a new laptop for your studies.",
-                    "In my view, you should buy a new laptop for your learning.",
-                    "I think you should buy a new laptop for your study."
+                    "In my opinion, you should buy a new laptop.",
+                    "In my opinion, you should buy a new laptop",
+                    "In my view, you should buy a new laptop.",
+                    "I think you should buy a new laptop."
                 ],
                 hints: [
                     { en: "In my opinion,", vn: "Theo tôi, (có dấu phẩy)" },
                     { en: "should buy", vn: "nên mua (động từ tình thái + V nguyên mẫu)" },
                     { en: "laptop", vn: "máy tính xách tay" }
                 ],
-                exp: "• <b>Cụm từ đưa ra lời khuyên:</b> In my opinion, you should + V."
+                exp: "• <b>Cụm từ đưa lời khuyên:</b> In my opinion, you should + V.<br>• <b>Tính từ trước danh từ:</b> a new laptop."
             },
             {
                 q: "Nếu bạn có thời gian rảnh vào ngày mai, hãy gọi cho tôi nhé.",
                 a: [
                     "If you have free time tomorrow, please call me.",
+                    "If you have free time tomorrow, please call me",
                     "If you have free time tomorrow, give me a call.",
                     "If you have some free time tomorrow, please call me."
                 ],
                 hints: [
-                    { en: "free time", vn: "thời gian rảnh (danh từ không đếm được)" },
+                    { en: "free time", vn: "thời gian rảnh" },
                     { en: "please call me", vn: "hãy gọi cho tôi nhé" }
                 ],
                 exp: "• <b>Câu điều kiện loại 1:</b> Mệnh đề If đứng trước có dấu phẩy ngăn cách.<br>• <b>Câu mệnh lệnh:</b> please + V nguyên mẫu."
             },
             {
-                q: "Tôi rất mong sớm nhận được thư của bạn.",
+                q: "Tôi hy vọng sẽ gặp lại bạn sớm.",
                 a: [
-                    "I look forward to hearing from you soon.",
-                    "I am looking forward to hearing from you soon.",
-                    "I look forward to receiving your letter soon."
+                    "I hope to see you soon.",
+                    "I hope to see you soon",
+                    "I hope to meet you soon.",
+                    "I hope that I will see you soon.",
+                    "I hope we will meet soon."
                 ],
                 hints: [
-                    { en: "look forward to + V-ing", vn: "rất mong đợi điều gì (câu kết thư kinh điển)" },
-                    { en: "hear from you", vn: "nhận được tin/thư từ bạn" }
+                    { en: "hope to see you", vn: "hy vọng gặp lại bạn (hope + to-V)" },
+                    { en: "soon", vn: "sớm (trạng từ đứng cuối câu)" }
                 ],
-                exp: "• <b>Cụm động từ kết thư chuẩn nhất:</b> <i>look forward to + V-ing</i>."
+                exp: "• <b>Cấu trúc kết thư thân mật:</b> <i>I hope to + V</i>.<br>• <b>Trạng từ:</b> soon."
             }
         ]
     },
@@ -159,139 +175,148 @@ const finalReviewTests = [
         desc: "Luyện tập dịch 10 câu quen thuộc dùng để viết phần thân bài và kết thư trong Task 1.",
         questions: [
             {
-                q: "Bạn có thể chỉ cho tôi cách đi đến bến xe buýt gần nhất được không?",
+                q: "Bạn có thể chỉ cho tôi đường đến trạm xe buýt gần nhất được không?",
                 a: [
                     "Can you show me the way to the nearest bus station?",
                     "Could you show me the way to the nearest bus stop?",
-                    "Can you tell me how to get to the nearest bus station?",
-                    "Could you please show me the way to the nearest bus stop?"
+                    "Can you show me the way to the nearest bus stop?",
+                    "Can you tell me the way to the nearest bus stop?"
                 ],
                 hints: [
                     { en: "show me the way to", vn: "chỉ cho tôi đường đến..." },
-                    { en: "the nearest bus station / stop", vn: "trạm xe buýt gần nhất (so sánh nhất)" }
+                    { en: "nearest bus stop / station", vn: "trạm xe buýt gần nhất" }
                 ],
-                exp: "• <b>Câu hỏi yêu cầu thông tin:</b> Can/Could you + V...?<br>• <b>Tính từ so sánh nhất:</b> the nearest."
+                exp: "• <b>Câu hỏi yêu cầu thông tin:</b> Can/Could you show me...?<br>• <b>So sánh nhất:</b> the nearest."
             },
             {
-                q: "Chúng ta có thể gặp nhau tại quán cà phê đối diện trường học vào lúc 3 giờ chiều.",
+                q: "Chúng ta có thể gặp nhau tại quán cà phê vào lúc 3 giờ chiều.",
                 a: [
-                    "We can meet at the coffee shop opposite the school at 3 p.m.",
-                    "We can meet at the cafe opposite the school at 3 p.m.",
-                    "We can meet at a coffee shop opposite the school at 3 o'clock.",
-                    "We can meet at the coffee shop opposite the school at 3 PM."
+                    "We can meet at the coffee shop at 3 p.m.",
+                    "We can meet at the coffee shop at 3 p.m",
+                    "We can meet at the cafe at 3 p.m.",
+                    "We can meet at a coffee shop at 3 p.m.",
+                    "We can meet at the coffee shop at 3 PM."
                 ],
                 hints: [
-                    { en: "opposite the school", vn: "đối diện trường học (giới từ nơi chốn)" },
+                    { en: "coffee shop / cafe", vn: "quán cà phê" },
                     { en: "at 3 p.m.", vn: "vào lúc 3 giờ chiều (giới từ chỉ giờ: at)" }
                 ],
-                exp: "• <b>Giới từ nơi chốn & thời gian:</b> at the coffee shop, opposite the school, at 3 p.m."
+                exp: "• <b>Giới từ chỉ nơi chốn & thời gian:</b> at the coffee shop, at 3 p.m."
             },
             {
-                q: "Thành thật mà nói, tôi không thích đi du lịch vào những ngày cuối tuần đông đúc.",
+                q: "Thành thật mà nói, tôi không thích đi du lịch vào cuối tuần.",
                 a: [
-                    "To be honest, I do not like traveling on crowded weekends.",
-                    "Honestly, I don't like traveling on crowded weekends.",
-                    "To be honest, I don't like travelling on crowded weekends.",
-                    "To be honest, I do not like traveling at crowded weekends."
+                    "To be honest, I do not like traveling at weekends.",
+                    "To be honest, I do not like traveling on weekends.",
+                    "To be honest, I do not like traveling on weekends",
+                    "Honestly, I do not like traveling on weekends.",
+                    "To be honest, I do not like travelling on weekends."
                 ],
                 hints: [
-                    { en: "To be honest / Honestly", vn: "Thành thật mà nói (có dấu phẩy)" },
-                    { en: "crowded weekends", vn: "những ngày cuối tuần đông đúc" }
+                    { en: "To be honest, / Honestly,", vn: "Thành thật mà nói, (có dấu phẩy)" },
+                    { en: "traveling on weekends", vn: "đi du lịch vào cuối tuần" }
                 ],
-                exp: "• <b>Từ liên kết:</b> To be honest,.<br>• <b>Động từ sở thích:</b> like + V-ing."
+                exp: "• <b>Cụm từ liên kết:</b> To be honest,.<br>• <b>Động từ sở thích:</b> like + V-ing."
             },
             {
-                q: "Tôi khuyên bạn nên mang theo một chiếc áo khoác ấm vì trời có thể rất lạnh.",
+                q: "Tôi khuyên bạn nên mang theo một chiếc áo khoác ấm.",
                 a: [
-                    "I advise you to bring a warm jacket because it can be very cold.",
-                    "I recommend that you bring a warm jacket because it can be very cold.",
-                    "I advise you to take a warm coat because it can be very cold."
+                    "I advise you to bring a warm jacket.",
+                    "I advise you to bring a warm jacket",
+                    "I advise you to take a warm coat.",
+                    "I advise you to bring a warm coat.",
+                    "I suggest that you bring a warm jacket."
                 ],
                 hints: [
                     { en: "advise you to + V", vn: "khuyên bạn nên làm gì" },
-                    { en: "a warm jacket / coat", vn: "áo khoác ấm" },
-                    { en: "because", vn: "vì / bởi vì (không có dấu phẩy trước because)" }
+                    { en: "a warm jacket / coat", vn: "áo khoác ấm" }
                 ],
-                exp: "• <b>Cấu trúc:</b> advise sb to-V.<br>• <b>Từ nối:</b> because."
+                exp: "• <b>Cấu trúc:</b> advise sb to-V.<br>• <b>Tính từ trước danh từ:</b> a warm jacket."
             },
             {
-                q: "Chuyến đi này sẽ giúp chúng ta thư giãn sau những ngày làm việc vất vả.",
+                q: "Chuyến đi này sẽ rất thú vị và bổ ích.",
                 a: [
-                    "This trip will help us relax after hard-working days.",
-                    "This trip will help us relax after days of hard work.",
-                    "This trip will help us to relax after busy working days."
+                    "This trip will be very interesting and useful.",
+                    "This trip will be very interesting and useful",
+                    "This journey will be very interesting and useful.",
+                    "This trip is going to be very interesting and useful."
                 ],
                 hints: [
-                    { en: "help us relax", vn: "giúp chúng tôi thư giãn (help + O + V nguyên mẫu)" },
-                    { en: "hard-working days", vn: "những ngày làm việc chăm chỉ / vất vả" }
+                    { en: "trip", vn: "chuyến đi" },
+                    { en: "interesting and useful", vn: "thú vị và bổ ích (tính từ)" }
                 ],
-                exp: "• <b>Đại từ tân ngữ:</b> us.<br>• <b>Thì Tương lai đơn:</b> will help."
+                exp: "• <b>Thì Tương lai đơn:</b> will be + Adj.<br>• <b>Liên từ đẳng lập:</b> interesting and useful."
             },
             {
-                q: "Tôi đã mua vé máy bay ngày hôm qua, vì vậy bạn không cần phải lo lắng về điều đó.",
+                q: "Tôi đã mua vé ngày hôm qua, vì vậy bạn không cần phải lo lắng.",
                 a: [
-                    "I bought the flight ticket yesterday, so you do not need to worry about it.",
-                    "I bought the plane ticket yesterday, so you don't need to worry about that.",
-                    "I bought flight tickets yesterday, so you don't have to worry about it."
+                    "I bought the ticket yesterday, so you do not need to worry.",
+                    "I bought the ticket yesterday, so you do not need to worry",
+                    "I bought the tickets yesterday, so you do not need to worry.",
+                    "I bought the ticket yesterday, so you do not have to worry."
                 ],
                 hints: [
                     { en: "bought (quá khứ của buy)", vn: "đã mua" },
-                    { en: "so", vn: "vì vậy (từ nối 2 mệnh đề có dấu phẩy)" },
-                    { en: "worry about", vn: "lo lắng về..." }
+                    { en: "so", vn: "vì vậy (từ nối có dấu phẩy)" },
+                    { en: "do not need to worry", vn: "không cần phải lo lắng" }
                 ],
-                exp: "• <b>Thì Quá khứ đơn:</b> bought.<br>• <b>Động từ + Giới từ:</b> worry about."
+                exp: "• <b>Thì Quá khứ đơn:</b> bought.<br>• <b>Từ nối kết quả:</b> so."
             },
             {
-                q: "Bạn có thể gửi cho tôi một vài bức ảnh về bữa tiệc được không?",
+                q: "Bạn có thể gửi cho tôi một vài bức ảnh được không?",
                 a: [
-                    "Can you send me some photos of the party?",
-                    "Could you send me some pictures of the party?",
-                    "Can you send me some photos from the party?"
+                    "Can you send me some photos?",
+                    "Could you send me some photos?",
+                    "Can you send me some pictures?",
+                    "Could you send me some pictures?"
                 ],
                 hints: [
-                    { en: "send me some photos", vn: "gửi cho tôi vài bức ảnh (cấu trúc S + V + O1 + O2)" },
-                    { en: "of the party", vn: "về bữa tiệc" }
+                    { en: "send me some photos", vn: "gửi cho tôi vài bức ảnh" }
                 ],
-                exp: "• <b>Cấu trúc 2 tân ngữ:</b> send + me (O1) + some photos (O2)."
+                exp: "• <b>Động từ 2 tân ngữ:</b> send + me (O1) + some photos (O2)."
             },
             {
-                q: "Nếu bạn không thể đến đúng giờ, xin vui lòng nhắn tin cho tôi trước.",
+                q: "Nếu bạn không thể đến đúng giờ, hãy nhắn tin cho tôi nhé.",
                 a: [
-                    "If you cannot come on time, please text me in advance.",
-                    "If you can't arrive on time, please message me in advance.",
-                    "If you cannot arrive on time, please text me beforehand."
+                    "If you cannot come on time, please text me.",
+                    "If you cannot come on time, please text me",
+                    "If you can not come on time, please message me.",
+                    "If you cannot arrive on time, please text me."
                 ],
                 hints: [
                     { en: "on time", vn: "đúng giờ" },
-                    { en: "in advance", vn: "trước / báo trước" }
+                    { en: "please text me", vn: "hãy nhắn tin cho tôi" }
                 ],
-                exp: "• <b>Thành ngữ giới từ:</b> on time (đúng giờ).<br>• <b>Cụm trạng ngữ:</b> in advance."
+                exp: "• <b>Giới từ:</b> on time (đúng giờ).<br>• <b>Câu điều kiện loại 1 kết hợp câu mệnh lệnh:</b> please + V."
             },
             {
-                q: "Tôi hy vọng chúng ta sẽ có một khoảng thời gian tuyệt vời cùng nhau vào tuần tới.",
+                q: "Tôi hy vọng chúng ta sẽ có một khoảng thời gian tuyệt vời cùng nhau.",
                 a: [
-                    "I hope we will have a great time together next week.",
-                    "I hope that we will have a wonderful time together next week.",
-                    "I hope we will have a good time together next week."
+                    "I hope we will have a great time together.",
+                    "I hope we will have a great time together",
+                    "I hope that we will have a wonderful time together.",
+                    "I hope we will have a good time together."
                 ],
                 hints: [
                     { en: "have a great time", vn: "có khoảng thời gian tuyệt vời" },
-                    { en: "together", vn: "cùng nhau (trạng từ)" }
+                    { en: "together", vn: "cùng nhau" }
                 ],
-                exp: "• <b>Cấu trúc:</b> I hope (that) + S + will V.<br>• <b>Trạng từ chỉ thời gian:</b> next week (đứng cuối câu)."
+                exp: "• <b>Cấu trúc:</b> I hope + S + will V.<br>• <b>Trạng từ:</b> together."
             },
             {
-                q: "Hãy giữ liên lạc nhé, và nhớ gửi lời chào của tôi đến gia đình bạn.",
+                q: "Hãy giữ liên lạc nhé.",
                 a: [
-                    "Please keep in touch, and remember to say hello to your family.",
-                    "Keep in touch, and remember to send my regards to your family.",
-                    "Please keep in touch, and remember to give my best wishes to your family."
+                    "Please keep in touch.",
+                    "Please keep in touch",
+                    "Keep in touch.",
+                    "Keep in touch",
+                    "Let's keep in touch.",
+                    "Let's keep in touch"
                 ],
                 hints: [
-                    { en: "keep in touch", vn: "giữ liên lạc" },
-                    { en: "say hello to / send my regards to", vn: "gửi lời chào đến..." }
+                    { en: "keep in touch", vn: "giữ liên lạc" }
                 ],
-                exp: "• <b>Cụm động từ kết thư:</b> keep in touch.<br>• <b>Động từ:</b> remember to-V (nhớ phải làm gì)."
+                exp: "• <b>Cụm động từ kết thư phổ biến:</b> keep in touch."
             }
         ]
     },
@@ -302,145 +327,156 @@ const finalReviewTests = [
         desc: "Luyện tập dịch 10 câu nòng cốt, cơ bản và vừa sức để viết Mở bài và Thân bài trong Writing Task 2.",
         questions: [
             {
-                q: "Ngày nay, ngày càng có nhiều người thích mua sắm trên internet hơn.",
+                q: "Nhiều người thích mua sắm trực tuyến vì nó rất tiện lợi.",
                 a: [
-                    "Nowadays, more and more people prefer shopping on the internet.",
-                    "Nowadays, more and more people like shopping online.",
-                    "Today, more and more people prefer online shopping.",
-                    "Nowadays, an increasing number of people prefer shopping online."
+                    "Many people like shopping online because it is very convenient.",
+                    "Many people like shopping online because it is very convenient",
+                    "Many people prefer shopping online because it is very convenient.",
+                    "Many people like online shopping because it is very convenient."
                 ],
                 hints: [
-                    { en: "Nowadays / Today", vn: "Ngày nay (trạng từ mở đầu câu có dấu phẩy)" },
-                    { en: "more and more people", vn: "ngày càng nhiều người" },
-                    { en: "prefer + V-ing", vn: "thích làm gì hơn" }
+                    { en: "shopping online", vn: "mua sắm trực tuyến" },
+                    { en: "convenient (adj)", vn: "tiện lợi" },
+                    { en: "because", vn: "vì / bởi vì" }
                 ],
-                exp: "• <b>Trạng từ mở bài:</b> Nowadays,.<br>• <b>Lượng từ so sánh kép:</b> more and more people."
+                exp: "• <b>Động từ sở thích:</b> like + V-ing.<br>• <b>Từ nối nguyên nhân:</b> because (không có dấu phẩy phía trước)."
             },
             {
-                q: "Theo ý kiến của tôi, đọc sách mang lại rất nhiều lợi ích cho sinh viên.",
+                q: "Theo ý kiến của tôi, đọc sách mang lại rất nhiều lợi ích cho học sinh.",
                 a: [
                     "In my opinion, reading books brings a lot of benefits to students.",
+                    "In my opinion, reading books brings a lot of benefits to students",
                     "In my view, reading books brings many benefits to students.",
-                    "In my opinion, reading books provides a lot of benefits for students."
+                    "In my opinion, reading books brings many benefits for students."
                 ],
                 hints: [
-                    { en: "In my opinion,", vn: "Theo ý kiến của tôi" },
-                    { en: "reading books", vn: "việc đọc sách (chủ ngữ V-ing chia động từ số ít)" },
-                    { en: "benefits", vn: "lợi ích (danh từ số nhiều)" }
+                    { en: "In my opinion,", vn: "Theo ý kiến của tôi, (có dấu phẩy)" },
+                    { en: "reading books", vn: "việc đọc sách (chủ ngữ V-ing chia số ít: brings)" },
+                    { en: "benefits", vn: "lợi ích" }
                 ],
-                exp: "• <b>Chủ ngữ Danh động từ:</b> reading books (động từ chia số ít: brings).<br>• <b>Cụm từ:</b> bring benefits to sb."
+                exp: "• <b>Cụm từ nêu quan điểm:</b> In my opinion,.<br>• <b>Chủ ngữ Danh động từ:</b> reading books chia động từ số ít."
             },
             {
-                q: "Thứ nhất, việc tập thể dục mỗi ngày giúp con người giảm bớt căng thẳng.",
+                q: "Thứ nhất, tập thể dục mỗi ngày giúp con người giảm bớt căng thẳng.",
                 a: [
+                    "Firstly, exercising every day helps people reduce stress.",
+                    "Firstly, exercising every day helps people reduce stress",
                     "Firstly, doing exercise every day helps people reduce stress.",
-                    "First of all, exercising every day helps people reduce stress.",
-                    "Firstly, taking regular exercise helps people reduce stress."
+                    "First of all, exercising every day helps people reduce stress."
                 ],
                 hints: [
-                    { en: "Firstly, / First of all,", vn: "Thứ nhất, (từ nối trình bày ý 1)" },
-                    { en: "doing exercise / exercising", vn: "tập thể dục" },
+                    { en: "Firstly, / First of all,", vn: "Thứ nhất, (từ nối liệt kê luận điểm 1)" },
+                    { en: "exercising / doing exercise", vn: "tập thể dục" },
                     { en: "reduce stress", vn: "giảm bớt căng thẳng" }
                 ],
-                exp: "• <b>Từ liên kết:</b> Firstly, (có dấu phẩy).<br>• <b>Cấu trúc:</b> help sb (to) V: helps people reduce stress."
+                exp: "• <b>Từ liên kết:</b> Firstly,.<br>• <b>Cấu trúc:</b> help + O + V: helps people reduce stress."
             },
             {
-                q: "Hơn nữa, thức ăn nhanh thường chứa nhiều dầu mỡ và không tốt cho sức khỏe.",
+                q: "Hơn nữa, thức ăn nhanh không tốt cho sức khỏe của chúng ta.",
                 a: [
-                    "Furthermore, fast food usually contains a lot of fat and is not good for health.",
-                    "Moreover, fast food often contains a lot of oil and is not good for health.",
-                    "In addition, fast food usually contains a lot of fat and is bad for health."
+                    "Furthermore, fast food is not good for our health.",
+                    "Furthermore, fast food is not good for our health",
+                    "Moreover, fast food is not good for our health.",
+                    "In addition, fast food is not good for our health.",
+                    "Furthermore, fast food is bad for our health."
                 ],
                 hints: [
-                    { en: "Furthermore, / Moreover,", vn: "Hơn nữa, (từ nối thêm ý)" },
-                    { en: "fast food", vn: "thức ăn nhanh (danh từ không đếm được, chia động từ số ít)" },
+                    { en: "Furthermore, / Moreover,", vn: "Hơn nữa, (từ nối bổ sung ý)" },
+                    { en: "fast food", vn: "thức ăn nhanh (danh từ không đếm được)" },
                     { en: "good for health", vn: "tốt cho sức khỏe" }
                 ],
-                exp: "• <b>Từ nối:</b> Furthermore,.<br>• <b>Danh từ không đếm được:</b> fast food (động từ contains có 's').<br>• <b>Tính từ + Giới từ:</b> good for."
+                exp: "• <b>Từ nối:</b> Furthermore,.<br>• <b>Tính từ + Giới từ:</b> good for."
             },
             {
-                q: "Ví dụ, nhiều trẻ em dành quá nhiều thời gian chơi trò chơi điện tử mỗi ngày.",
+                q: "Ví dụ, nhiều trẻ em dành quá nhiều thời gian xem tivi mỗi ngày.",
                 a: [
-                    "For example, many children spend too much time playing video games every day.",
-                    "For instance, many kids spend too much time playing video games every day.",
-                    "For example, many children spend too much time on video games daily."
+                    "For example, many children spend too much time watching TV every day.",
+                    "For example, many children spend too much time watching TV every day",
+                    "For instance, many children spend too much time watching TV every day.",
+                    "For example, many kids spend too much time watching TV every day."
                 ],
                 hints: [
-                    { en: "For example, / For instance,", vn: "Ví dụ, (từ nối đưa ví dụ có dấu phẩy)" },
+                    { en: "For example, / For instance,", vn: "Ví dụ, (từ nối đưa dẫn chứng có dấu phẩy)" },
                     { en: "spend time + V-ing", vn: "dành thời gian làm gì" },
-                    { en: "video games", vn: "trò chơi điện tử" }
+                    { en: "too much time", vn: "quá nhiều thời gian (much dùng cho danh từ không đếm được)" }
                 ],
-                exp: "• <b>Từ nối:</b> For example,.<br>• <b>Cấu trúc:</b> spend time playing.<br>• <b>Danh từ số nhiều:</b> children."
+                exp: "• <b>Lượng từ:</b> too much time.<br>• <b>Cấu trúc:</b> spend time + V-ing."
             },
             {
-                q: "Do đó, các bậc phụ huynh nên kiểm soát việc sử dụng điện thoại của con mình.",
+                q: "Do đó, các bậc phụ huynh nên kiểm soát thời gian sử dụng điện thoại của con mình.",
                 a: [
-                    "Therefore, parents should control their children's phone use.",
-                    "As a result, parents should control the use of phones by their children.",
-                    "Therefore, parents should control the phone usage of their kids."
+                    "Therefore, parents should control their children's phone time.",
+                    "Therefore, parents should control their children's phone time",
+                    "Therefore, parents should control the phone time of their children.",
+                    "As a result, parents should control their children's phone time."
                 ],
                 hints: [
                     { en: "Therefore, / As a result,", vn: "Do đó, (từ nối chỉ kết quả có dấu phẩy)" },
-                    { en: "control (v)", vn: "kiểm soát" },
-                    { en: "their children's phone use", vn: "việc dùng điện thoại của con họ (sở hữu cách)" }
+                    { en: "should control", vn: "nên kiểm soát" },
+                    { en: "their children's phone time", vn: "thời gian dùng điện thoại của con họ (sở hữu cách)" }
                 ],
-                exp: "• <b>Từ liên kết:</b> Therefore,.<br>• <b>Động từ tình thái:</b> should control."
+                exp: "• <b>Từ nối:</b> Therefore,.<br>• <b>Động từ khiếm khuyết:</b> should + V nguyên mẫu.<br>• <b>Sở hữu cách:</b> children's."
             },
             {
-                q: "Mặc dù ô tô rất thuận tiện, chúng gây ra nhiều ô nhiễm không khí trong thành phố.",
+                q: "Mặc dù ô tô rất thuận tiện, chúng gây ra ô nhiễm không khí.",
                 a: [
-                    "Although cars are very convenient, they cause a lot of air pollution in the city.",
-                    "Although cars are very convenient, they cause much air pollution in the city.",
-                    "Even though cars are very convenient, they cause a lot of air pollution in cities."
+                    "Although cars are very convenient, they cause air pollution.",
+                    "Although cars are very convenient, they cause air pollution",
+                    "Even though cars are very convenient, they cause air pollution.",
+                    "Though cars are very convenient, they cause air pollution."
                 ],
                 hints: [
-                    { en: "Although", vn: "Mặc dù (có dấu phẩy ngăn 2 mệnh đề)" },
+                    { en: "Although", vn: "Mặc dù (mệnh đề đứng đầu có dấu phẩy)" },
                     { en: "convenient (adj)", vn: "thuận tiện" },
-                    { en: "air pollution", vn: "ô nhiễm không khí (không đếm được)" }
+                    { en: "air pollution", vn: "ô nhiễm không khí" }
                 ],
-                exp: "• <b>Từ nối:</b> Although đứng đầu câu có dấu phẩy.<br>• <b>Danh từ không đếm được:</b> air pollution."
+                exp: "• <b>Liên từ phụ thuộc:</b> Although.<br>• <b>Đại từ:</b> they thay thế cho danh từ số nhiều cars."
             },
             {
-                q: "Đi xe đạp không những bảo vệ môi trường mà còn tiết kiệm tiền.",
+                q: "Đi xe đạp không những tốt cho sức khỏe mà còn tiết kiệm tiền.",
                 a: [
-                    "Riding a bicycle not only protects the environment but also saves money.",
-                    "Cycling not only protects the environment but also saves money.",
-                    "Riding bikes not only protects the environment but also saves money."
+                    "Cycling is not only good for health but also saves money.",
+                    "Cycling is not only good for health but also saves money",
+                    "Riding a bicycle is not only good for health but also saves money.",
+                    "Riding a bike is not only good for health but also saves money."
                 ],
                 hints: [
-                    { en: "not only ... but also ...", vn: "không những... mà còn... (liên từ tương quan)" },
-                    { en: "protect the environment", vn: "bảo vệ môi trường" },
+                    { en: "Cycling / Riding a bike", vn: "Đi xe đạp" },
+                    { en: "not only ... but also ...", vn: "không những... mà còn..." },
                     { en: "save money", vn: "tiết kiệm tiền" }
                 ],
-                exp: "• <b>Chủ ngữ Danh động từ:</b> Riding a bicycle.<br>• <b>Liên từ tương quan:</b> not only ... but also ... (động từ chia số ít: protects, saves)."
+                exp: "• <b>Liên từ tương quan:</b> not only ... but also ...<br>• <b>Chủ ngữ Danh động từ:</b> Cycling chia động từ số ít."
             },
             {
-                q: "Nếu học sinh học tập chăm chỉ, họ sẽ đạt được điểm cao trong kỳ thi.",
+                q: "Nếu học sinh học tập chăm chỉ, họ sẽ đạt điểm cao trong kỳ thi.",
                 a: [
                     "If students study hard, they will get high scores in the exam.",
-                    "If students study hard, they will achieve high marks in the exam.",
-                    "If students work hard, they will get good grades in the test."
+                    "If students study hard, they will get high scores in the exam",
+                    "If students study hard, they will get high marks in the exam.",
+                    "If students work hard, they will get high scores in the exam.",
+                    "If students study hard, they will get good grades in the exam."
                 ],
                 hints: [
                     { en: "study hard", vn: "học tập chăm chỉ (hard là trạng từ)" },
                     { en: "high scores / marks", vn: "điểm cao" }
                 ],
-                exp: "• <b>Câu điều kiện loại 1:</b> If + Hiện tại đơn, Tương lai đơn.<br>• <b>Trạng từ:</b> hard."
+                exp: "• <b>Câu điều kiện loại 1:</b> If + Hiện tại đơn, Tương lai đơn.<br>• <b>Trạng từ chỉ cách thức:</b> hard."
             },
             {
-                q: "Tóm lại, học tiếng Anh là một kỹ năng vô cùng quan trọng đối với giới trẻ.",
+                q: "Tóm lại, học tiếng Anh rất quan trọng cho tương lai.",
                 a: [
-                    "In conclusion, learning English is an extremely important skill for young people.",
-                    "In short, learning English is an extremely important skill for young people.",
-                    "To sum up, learning English is an very important skill for the youth.",
-                    "In summary, learning English is a very important skill for young people."
+                    "In conclusion, learning English is very important for the future.",
+                    "In conclusion, learning English is very important for the future",
+                    "To sum up, learning English is very important for the future.",
+                    "In short, learning English is very important for the future.",
+                    "In summary, learning English is very important for the future."
                 ],
                 hints: [
-                    { en: "In conclusion, / To sum up,", vn: "Tóm lại, (từ nối kết bài luận)" },
+                    { en: "In conclusion, / To sum up,", vn: "Tóm lại, (từ nối kết bài luận có dấu phẩy)" },
                     { en: "learning English", vn: "việc học tiếng Anh (chủ ngữ V-ing)" },
-                    { en: "important skill", vn: "kỹ năng quan trọng (mạo từ: an extremely important skill)" }
+                    { en: "important for the future", vn: "quan trọng cho tương lai" }
                 ],
-                exp: "• <b>Từ liên kết kết bài:</b> In conclusion,.<br>• <b>Trạng từ chỉ mức độ:</b> extremely."
+                exp: "• <b>Từ nối kết bài:</b> In conclusion,.<br>• <b>Tính từ + Giới từ:</b> important for."
             }
         ]
     },
@@ -451,144 +487,154 @@ const finalReviewTests = [
         desc: "Luyện tập dịch 10 câu giải pháp và lập luận đơn giản, dễ nhớ, ghi trọn điểm cấu trúc câu B1/B2.",
         questions: [
             {
-                q: "Để giải quyết vấn đề này, chính phủ nên xây dựng thêm nhiều công viên công cộng.",
+                q: "Để giải quyết vấn đề này, chính phủ nên xây dựng thêm công viên.",
                 a: [
-                    "To solve this problem, the government should build more public parks.",
-                    "To solve this issue, the government should build more public parks.",
-                    "In order to solve this problem, the government should build more public parks."
+                    "To solve this problem, the government should build more parks.",
+                    "To solve this problem, the government should build more parks",
+                    "To solve this issue, the government should build more parks.",
+                    "In order to solve this problem, the government should build more parks."
                 ],
                 hints: [
-                    { en: "To solve this problem,", vn: "Để giải quyết vấn đề này, (mục đích đứng đầu câu)" },
+                    { en: "To solve this problem,", vn: "Để giải quyết vấn đề này, (mục đích đứng đầu câu có dấu phẩy)" },
                     { en: "the government", vn: "chính phủ" },
-                    { en: "public parks", vn: "công viên công cộng" }
+                    { en: "build more parks", vn: "xây thêm nhiều công viên" }
                 ],
-                exp: "• <b>Mệnh đề chỉ mục đích:</b> To solve this problem, (có dấu phẩy).<br>• <b>Động từ tình thái:</b> should build."
+                exp: "• <b>Mệnh đề chỉ mục đích:</b> To-V đứng đầu câu.<br>• <b>Động từ tình thái:</b> should build."
             },
             {
-                q: "Một mặt, sống ở thành phố lớn rất thuận tiện cho công việc và học tập.",
+                q: "Một mặt, sống ở thành phố rất thuận tiện.",
                 a: [
-                    "On the one hand, living in a big city is very convenient for work and study.",
-                    "On the one hand, living in big cities is very convenient for work and studying.",
-                    "On the one hand, living in a large city is very convenient for jobs and education."
+                    "On the one hand, living in the city is very convenient.",
+                    "On the one hand, living in the city is very convenient",
+                    "On the one hand, living in a city is very convenient.",
+                    "On the one hand, living in cities is very convenient.",
+                    "On the one hand, life in the city is very convenient."
                 ],
                 hints: [
-                    { en: "On the one hand,", vn: "Một mặt, (từ nối so sánh 2 mặt của vấn đề)" },
-                    { en: "living in a big city", vn: "sống ở thành phố lớn (chủ ngữ V-ing)" },
-                    { en: "convenient for", vn: "thuận tiện cho việc gì" }
+                    { en: "On the one hand,", vn: "Một mặt, (từ nối mở đầu ý 1 có dấu phẩy)" },
+                    { en: "living in the city", vn: "sống ở thành phố (chủ ngữ V-ing)" },
+                    { en: "convenient (adj)", vn: "thuận tiện" }
                 ],
-                exp: "• <b>Từ liên kết:</b> On the one hand,.<br>• <b>Tính từ + Giới từ:</b> convenient for."
+                exp: "• <b>Cụm liên kết:</b> On the one hand,.<br>• <b>Chủ ngữ Danh động từ:</b> living in the city."
             },
             {
-                q: "Mặt khác, chi phí sinh hoạt ở đây đắt hơn nhiều so với ở nông thôn.",
+                q: "Mặt khác, cuộc sống ở thành phố rất đắt đỏ.",
                 a: [
-                    "On the other hand, the cost of living here is much more expensive than in the countryside.",
-                    "On the other hand, the cost of living here is much higher than in rural areas.",
-                    "On the other hand, living costs here are much more expensive than in the countryside."
+                    "On the other hand, life in the city is very expensive.",
+                    "On the other hand, life in the city is very expensive",
+                    "On the other hand, living in the city is very expensive.",
+                    "On the other hand, city life is very expensive.",
+                    "On the other hand, the cost of living in the city is very expensive."
                 ],
                 hints: [
-                    { en: "On the other hand,", vn: "Mặt khác, (có dấu phẩy)" },
-                    { en: "the cost of living", vn: "chi phí sinh hoạt" },
-                    { en: "much more expensive than", vn: "đắt hơn nhiều so với (so sánh hơn)" },
-                    { en: "in the countryside", vn: "ở nông thôn" }
+                    { en: "On the other hand,", vn: "Mặt khác, (từ nối mở đầu ý đối lập có dấu phẩy)" },
+                    { en: "life in the city", vn: "cuộc sống ở thành phố" },
+                    { en: "expensive (adj)", vn: "đắt đỏ" }
                 ],
-                exp: "• <b>Từ liên kết:</b> On the other hand,.<br>• <b>So sánh hơn với tính từ dài:</b> much more expensive than."
+                exp: "• <b>Cụm liên kết đối lập:</b> On the other hand,.<br>• <b>Tính từ mô tả:</b> expensive."
             },
             {
-                q: "Chúng ta cần bảo vệ các loài động vật hoang dã vì chúng đang gặp nguy hiểm.",
+                q: "Chúng ta cần bảo vệ động vật hoang dã vì chúng đang gặp nguy hiểm.",
                 a: [
                     "We need to protect wild animals because they are in danger.",
-                    "We have to protect wild animals because they are in danger.",
-                    "We should protect wild animals because they are endangered."
+                    "We need to protect wild animals because they are in danger",
+                    "We should protect wild animals because they are in danger.",
+                    "We must protect wild animals because they are in danger."
                 ],
                 hints: [
                     { en: "wild animals", vn: "động vật hoang dã" },
-                    { en: "in danger / endangered", vn: "gặp nguy hiểm / có nguy cơ tuyệt chủng" }
+                    { en: "in danger", vn: "gặp nguy hiểm" }
                 ],
                 exp: "• <b>Cấu trúc:</b> need to-V.<br>• <b>Cụm giới từ:</b> in danger."
             },
             {
-                q: "Trường học nên dạy cho học sinh cách tự bảo vệ bản thân khi dùng mạng xã hội.",
+                q: "Trường học nên dạy học sinh cách bảo vệ môi trường.",
                 a: [
-                    "Schools should teach students how to protect themselves when using social media.",
-                    "Schools should teach students how to protect themselves while using social networks.",
-                    "Schools ought to teach students how to protect themselves when using social media."
+                    "Schools should teach students how to protect the environment.",
+                    "Schools should teach students how to protect the environment",
+                    "Schools should teach pupils how to protect the environment.",
+                    "Schools ought to teach students how to protect the environment."
                 ],
                 hints: [
                     { en: "teach students how to + V", vn: "dạy học sinh cách làm gì" },
-                    { en: "protect themselves", vn: "tự bảo vệ bản thân họ (đại từ phản thân: themselves)" },
-                    { en: "social media", vn: "mạng xã hội" }
+                    { en: "protect the environment", vn: "bảo vệ môi trường" }
                 ],
-                exp: "• <b>Đại từ phản thân:</b> themselves (thay cho students).<br>• <b>Cấu trúc từ để hỏi:</b> how to + V."
+                exp: "• <b>Cấu trúc:</b> teach sb how to-V.<br>• <b>Danh từ xác định:</b> the environment."
             },
             {
-                q: "Sử dụng túi vải thay vì túi nilon là một thói quen tốt để bảo vệ thiên nhiên.",
+                q: "Sử dụng túi vải thay vì túi nilon là một thói quen tốt.",
                 a: [
-                    "Using cloth bags instead of plastic bags is a good habit to protect nature.",
-                    "Using fabric bags instead of plastic bags is a good habit to protect nature.",
-                    "Using reusable bags instead of plastic bags is a good habit to protect the environment."
+                    "Using cloth bags instead of plastic bags is a good habit.",
+                    "Using cloth bags instead of plastic bags is a good habit",
+                    "Using canvas bags instead of plastic bags is a good habit.",
+                    "Using reusable bags instead of plastic bags is a good habit."
                 ],
                 hints: [
+                    { en: "Using cloth bags", vn: "Sử dụng túi vải (chủ ngữ V-ing)" },
                     { en: "instead of + N", vn: "thay vì..." },
                     { en: "plastic bags", vn: "túi nilon / túi nhựa" },
-                    { en: "protect nature", vn: "bảo vệ thiên nhiên" }
+                    { en: "a good habit", vn: "một thói quen tốt" }
                 ],
                 exp: "• <b>Chủ ngữ Danh động từ:</b> Using cloth bags.<br>• <b>Giới từ:</b> instead of."
             },
             {
-                q: "Hầu hết các chuyên gia đều đồng ý rằng làm việc nhóm mang lại hiệu quả cao hơn.",
+                q: "Hầu hết mọi người đều đồng ý rằng tiếng Anh rất hữu ích.",
                 a: [
-                    "Most experts agree that teamwork brings higher efficiency.",
-                    "Most experts agree that working in teams is more effective.",
-                    "Most of the experts agree that working in groups brings higher efficiency."
+                    "Most people agree that English is very useful.",
+                    "Most people agree that English is very useful",
+                    "Most people agree that learning English is very useful."
                 ],
                 hints: [
-                    { en: "Most experts agree that", vn: "Hầu hết các chuyên gia đều đồng ý rằng..." },
-                    { en: "teamwork", vn: "làm việc nhóm (danh từ số ít)" },
-                    { en: "higher efficiency / more effective", vn: "hiệu quả cao hơn" }
+                    { en: "Most people agree that", vn: "Hầu hết mọi người đều đồng ý rằng..." },
+                    { en: "useful (adj)", vn: "hữu ích" }
                 ],
-                exp: "• <b>Lượng từ:</b> Most experts (động từ agree nguyên mẫu).<br>• <b>Mệnh đề danh từ:</b> that + S + V."
+                exp: "• <b>Lượng từ:</b> Most people + V nguyên mẫu.<br>• <b>Mệnh đề danh từ với that:</b> that English is very useful."
             },
             {
-                q: "Tuy nhiên, nhiều người vẫn chưa nhận thức được tầm quan trọng của việc tiết kiệm nước.",
+                q: "Tuy nhiên, nhiều người vẫn lãng phí nước mỗi ngày.",
                 a: [
-                    "However, many people are not yet aware of the importance of saving water.",
-                    "However, many people are still not aware of the importance of saving water.",
-                    "Nevertheless, many people are not aware of the importance of saving water yet."
+                    "However, many people still waste water every day.",
+                    "However, many people still waste water every day",
+                    "However, a lot of people still waste water every day.",
+                    "However, many people still waste water daily."
                 ],
                 hints: [
                     { en: "However,", vn: "Tuy nhiên, (từ nối đứng đầu câu có dấu phẩy)" },
-                    { en: "aware of", vn: "nhận thức về (tính từ + giới từ)" },
-                    { en: "the importance of + V-ing", vn: "tầm quan trọng của..." }
+                    { en: "waste water", vn: "lãng phí nước (water là danh từ không đếm được)" },
+                    { en: "every day", vn: "mỗi ngày (trạng từ chỉ tần suất đứng cuối câu)" }
                 ],
-                exp: "• <b>Từ liên kết:</b> However,.<br>• <b>Tính từ + Giới từ:</b> aware of."
+                exp: "• <b>Từ liên kết:</b> However,.<br>• <b>Trạng từ đứng giữa chủ ngữ và động từ:</b> still waste."
             },
             {
-                q: "Mỗi người chúng ta đều có thể đóng góp vào việc bảo vệ môi trường bằng những hành động nhỏ.",
+                q: "Mỗi người chúng ta đều có thể bảo vệ môi trường bằng những hành động nhỏ.",
                 a: [
-                    "Each of us can contribute to protecting the environment with small actions.",
-                    "Every one of us can contribute to protecting the environment with small actions.",
-                    "Each of us can contribute to environmental protection through small actions."
+                    "Each of us can protect the environment with small actions.",
+                    "Each of us can protect the environment with small actions",
+                    "Every one of us can protect the environment with small actions.",
+                    "Each of us can protect the environment through small actions."
                 ],
                 hints: [
                     { en: "Each of us", vn: "Mỗi người chúng ta" },
-                    { en: "contribute to + V-ing", vn: "đóng góp vào việc gì" },
-                    { en: "small actions", vn: "những hành động nhỏ" }
+                    { en: "protect the environment", vn: "bảo vệ môi trường" },
+                    { en: "with small actions", vn: "bằng những hành động nhỏ" }
                 ],
-                exp: "• <b>Cụm động từ + Giới từ:</b> contribute to + V-ing/Noun.<br>• <b>Giới từ:</b> with small actions."
+                exp: "• <b>Đại từ:</b> Each of us.<br>• <b>Giới từ chỉ phương tiện / cách thức:</b> with small actions."
             },
             {
-                q: "Tóm lại, cả cá nhân và xã hội cần phải chung tay để tạo nên một tương lai tốt đẹp hơn.",
+                q: "Tóm lại, chúng ta nên chung tay để xây dựng một tương lai tốt đẹp hơn.",
                 a: [
-                    "In conclusion, both individuals and society need to join hands to create a better future.",
-                    "To sum up, both individuals and society must join hands to create a better future.",
-                    "In summary, both individuals and society need to work together to create a better future."
+                    "In conclusion, we should join hands to build a better future.",
+                    "In conclusion, we should join hands to build a better future",
+                    "To sum up, we should join hands to build a better future.",
+                    "In summary, we should work together to build a better future.",
+                    "In short, we should join hands to create a better future."
                 ],
                 hints: [
-                    { en: "In conclusion, / To sum up,", vn: "Tóm lại, (kết bài luận)" },
-                    { en: "both ... and ...", vn: "cả... và... (liên từ tương quan)" },
-                    { en: "join hands to + V", vn: "chung tay để làm gì" }
+                    { en: "In conclusion, / To sum up,", vn: "Tóm lại, (từ nối kết bài luận)" },
+                    { en: "join hands to + V", vn: "chung tay để làm gì" },
+                    { en: "a better future", vn: "một tương lai tốt đẹp hơn" }
                 ],
-                exp: "• <b>Từ nối kết bài:</b> In conclusion,.<br>• <b>Liên từ tương quan:</b> both ... and ..."
+                exp: "• <b>Từ nối kết bài:</b> In conclusion,.<br>• <b>Thành ngữ:</b> join hands to-V.<br>• <b>So sánh hơn của good:</b> better."
             }
         ]
     }
