@@ -2,7 +2,7 @@
 // ==================== HỆ THỐNG TỔNG ÔN TẬP (FINAL REVIEW) ====================
 // =========================================================================
 
-// Dữ liệu 4 bài tập dịch câu VỪA PHẢI, THỰC TẾ, CƠ BẢN DÀNH CHO VIẾT THƯ & VIẾT LUẬN B1 VSTEP
+// Dữ liệu 4 bài tập dịch câu VỪA PHẢI, THỰC TẾ, CƠ BẢN DÀNH CHO B1 VSTEP
 const finalReviewTests = [
     {
         id: "test1",
@@ -1124,7 +1124,7 @@ window.renderFinalReviewView = function() {
             <!-- HEADER TỔNG ÔN TẬP -->
             <div style="margin-bottom: 24px;">
                 <h1 class="page-title" style="text-align: left; margin-bottom: 8px; display: flex; align-items: center; gap: 10px;">
-                    <span>🎓</span> TỔNG ÔN TẬP (VIẾT THƯ & VIẾT LUẬN)
+                    <span>🎓</span> TỔNG ÔN TẬP
                 </h1>
                 <p style="color: var(--text-muted); font-size: 1.1rem; margin: 0;">4 bài tập dịch câu thiết thực, vừa sức, áp dụng toàn diện 7 chủ điểm ngữ pháp vào kỳ thi VSTEP Writing.</p>
             </div>
