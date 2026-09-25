@@ -6,7 +6,7 @@
 const finalReviewTests = [
     {
         id: "test1",
-        title: "BÀI TẬP 1 (CÁC CÂU DÙNG TRONG VIẾT THƯ & DIỄN ĐẠT Ý)",
+        title: "BÀI TẬP 1",
         subTitle: "Thông tin, thói quen, kế hoạch & miêu tả thực tế",
         desc: "Luyện tập dịch 10 câu nòng cốt, rõ ràng, chuẩn ngữ pháp, tránh các lỗi dịch từng từ (word-by-word) thường gặp.",
         questions: [
@@ -170,7 +170,7 @@ const finalReviewTests = [
     },
     {
         id: "test2",
-        title: "BÀI TẬP 2 (CÁC CÂU DÙNG TRONG VIẾT THƯ - PHẦN 2)",
+        title: "BÀI TẬP 2",
         subTitle: "Đưa ra lời khuyên, đề xuất kế hoạch, chỉ dẫn & chào tạm biệt",
         desc: "Luyện tập dịch 10 câu quen thuộc dùng để viết phần thân bài và kết thư trong Task 1.",
         questions: [
@@ -329,7 +329,7 @@ const finalReviewTests = [
     },
     {
         id: "test3",
-        title: "BÀI TẬP 3 (CÁC CÂU DÙNG TRONG VIẾT LUẬN - PHẦN 1)",
+        title: "BÀI TẬP 3",
         subTitle: "Giới trẻ, Giáo dục, Thói quen & Sức khỏe",
         desc: "Luyện tập dịch 10 câu nòng cốt, tự nhiên, thường xuyên xuất hiện trong các bài luận Writing Task 2.",
         questions: [
@@ -488,7 +488,7 @@ const finalReviewTests = [
     },
     {
         id: "test4",
-        title: "BÀI TẬP 4 (CÁC CÂU DÙNG TRONG VIẾT LUẬN - PHẦN 2)",
+        title: "BÀI TẬP 4",
         subTitle: "Công nghệ, Môi trường, Lối sống & Xã hội",
         desc: "Luyện tập dịch 10 câu giải pháp, phân tích hai mặt và kết luận có tính ứng dụng cao nhất.",
         questions: [
