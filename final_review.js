@@ -1067,10 +1067,6 @@ window.renderFinalReviewView = function() {
                             <button id="review-hint-btn-${curTest.id}-${idx}" onclick="window.toggleReviewHints('${curTest.id}', ${idx})" style="padding: 6px 14px; background: #f1f5f9; color: #475569; border: 1px solid #cbd5e1; border-radius: 20px; font-weight: 700; font-size: 0.9rem; cursor: pointer; transition: all 0.2s;" onmouseover="this.style.background='#e2e8f0'" onmouseout="this.style.background='#f1f5f9'">
                                 💡 Xem từ vựng gợi ý
                             </button>
-
-                            <button onclick="window.checkSingleReviewSentence('${curTest.id}', ${idx})" style="padding: 6px 16px; background: white; color: var(--primary-color); border: 1.5px solid var(--primary-color); border-radius: 20px; font-weight: 700; font-size: 0.9rem; cursor: pointer; transition: all 0.2s;" onmouseover="this.style.background='var(--primary-color)'; this.style.color='white'" onmouseout="this.style.background='white'; this.style.color='var(--primary-color)'">
-                                🔍 Kiểm tra câu này
-                            </button>
                         </div>
 
                         <!-- KHUNG TỪ VỰNG GỢI Ý (BẬT/TẮT KHI BẤM NÚT) -->
