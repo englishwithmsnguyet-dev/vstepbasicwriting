@@ -946,6 +946,11 @@ function showComprehensiveScorecard(test, perfectCount, totalScore, detailReport
         </div>
     `).join('');
 
+    const timeSpentSec = Math.max(0, 1200 - (reviewTimeLeft[test.id] !== undefined ? reviewTimeLeft[test.id] : 0));
+    const spentMin = Math.floor(timeSpentSec / 60);
+    const spentSec = timeSpentSec % 60;
+    const spentTimeFormatted = `${spentMin} phút ${spentSec < 10 ? '0' + spentSec : spentSec} giây`;
+
     modal.innerHTML = `
         <div id="capture-scorecard-card" style="background: white; border-radius: 20px; width: 100%; max-width: 650px; max-height: 90vh; overflow-y: auto; padding: 32px; box-shadow: 0 20px 40px rgba(0,0,0,0.3); border-top: 8px solid ${gradeBadgeColor};">
             
@@ -959,11 +964,11 @@ function showComprehensiveScorecard(test, perfectCount, totalScore, detailReport
             </div>
 
             <!-- THÔNG TIN HỌC VIÊN -->
-            <div style="background: #f8fafc; border-radius: 12px; padding: 14px 20px; margin-bottom: 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; font-size: 1rem;">
+            <div style="background: #f8fafc; border-radius: 12px; padding: 14px 20px; margin-bottom: 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; font-size: 1rem;">
                 <div>👤 <b>Học viên:</b> <span style="color: var(--primary-color); font-weight: 800;">${studentName}</span></div>
                 <div>🏫 <b>Lớp:</b> <span style="color: var(--primary-color); font-weight: 800;">${studentClass}</span></div>
-                <div>⏱️ <b>Thời gian nộp:</b> <span style="color: #475569;">${dateStr}</span></div>
-                <div>🎯 <b>Thời lượng làm bài:</b> <span style="color: #475569;">${Math.floor((1200 - reviewTimeLeft[test.id]) / 60)} phút</span></div>
+                <div>📅 <b>Thời điểm nộp:</b> <span style="color: #475569;">${dateStr}</span></div>
+                <div>⏱️ <b>Thời gian làm bài:</b> <span style="color: #1e1b4b; background: #e0e7ff; padding: 3px 10px; border-radius: 8px; font-weight: 900; font-family: monospace;">${spentTimeFormatted}</span></div>
             </div>
 
             <!-- ĐIỂM SỐ CHÍNH -->
