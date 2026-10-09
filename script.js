@@ -382,7 +382,7 @@ const componentsData = [
     },
     {
         id: 'adverb',
-        name: 'Trạng Ngữ (Adverb)',
+        name: 'Trạng Ngữ (Adverbial)',
         icon: '⏱️',
         faqs: [
             { q: "❓ Trạng ngữ là gì?", a: "Trạng ngữ là thành phần <span class=\"highlight-blue\">bổ sung thông tin</span> về cách thức, thời gian, nơi chốn, lý do, mức độ, tần suất." },
