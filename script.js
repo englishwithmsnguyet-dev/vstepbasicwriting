@@ -2004,7 +2004,7 @@ window.openTopic = function(topicId, status) {
         const allPasses = ['missnguyet2026', 'cb206', 'cb210', 'cb211', 'cb213', 'onb103', 'b212', 'cb212'];
         const fullPasses = ['missnguyet2026', 'cb206', 'cb210', 'cb211', 'cb212', 'onb103', 'b212'];
         const topicPasswords = {
-            'components': allPasses,
+            'components': [...allPasses, 'cb219'],
             'structures': allPasses,
             'nouns': [...fullPasses, 'cb213'],
             'pronouns': [...fullPasses, 'cb213'],
