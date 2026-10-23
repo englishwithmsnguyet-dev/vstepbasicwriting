@@ -17,618 +17,628 @@ const selfPracticeTopics = [
 const selfPracticeData = {
     "components": [
         {
-            "title": "Bài 1: Xác định Chủ ngữ (Subject)",
-            "type": "mcq",
-            "desc": "Chọn đáp án xác định đúng Chủ ngữ trong câu dưới đây.",
-            "questions": [
-                {
-                    "q": "<b>Taking regular exercise</b> helps improve both physical and mental health.",
-                    "options": [
-                        "Taking regular exercise",
-                        "helps",
-                        "improve",
-                        "mental health"
-                    ],
-                    "a": 0,
-                    "exp": "Cụm danh động từ 'Taking regular exercise' đóng vai trò là Chủ ngữ (S)."
-                },
-                {
-                    "q": "<b>Online courses provided by the university</b> are very convenient.",
-                    "options": [
-                        "the university",
-                        "Online courses",
-                        "convenient",
-                        "Online courses provided by the university"
-                    ],
-                    "a": 3,
-                    "exp": "Cụm danh từ hoàn chỉnh kèm mệnh đề rút gọn 'Online courses provided by the university' là Chủ ngữ."
-                },
-                {
-                    "q": "In the morning, <b>my parents</b> usually drink hot tea together.",
-                    "options": [
-                        "In the morning",
-                        "my parents",
-                        "drink",
-                        "hot tea"
-                    ],
-                    "a": 1,
-                    "exp": "'my parents' là Chủ ngữ thực hiện hành động, 'In the morning' là Trạng ngữ (A)."
-                },
-                {
-                    "q": "<b>To learn a foreign language effectively</b> requires consistent practice.",
-                    "options": [
-                        "To learn a foreign language effectively",
-                        "requires",
-                        "consistent practice",
-                        "effectively"
-                    ],
-                    "a": 0,
-                    "exp": "Cụm động từ nguyên mẫu 'To learn a foreign language effectively' đóng vai trò là Chủ ngữ."
-                },
-                {
-                    "q": "<b>The development of modern technology</b> has changed the world significantly.",
-                    "options": [
-                        "The development",
-                        "The development of modern technology",
-                        "modern technology",
-                        "the world"
-                    ],
-                    "a": 1,
-                    "exp": "Cụm danh từ 'The development of modern technology' là Chủ ngữ của câu."
-                }
-            ]
+                "title": "Bài 1: Xác định Chủ ngữ (Subject)",
+                "type": "mcq",
+                "desc": "Chọn đáp án xác định đúng Chủ ngữ (Subject - S) trong mỗi câu dưới đây.",
+                "questions": [
+                        {
+                                "q": "Xác định Chủ ngữ (Subject) trong câu sau: \"Taking regular exercise helps improve both physical and mental health.\"",
+                                "options": [
+                                        "helps improve",
+                                        "Taking regular exercise",
+                                        "both physical and mental health",
+                                        "regular exercise helps"
+                                ],
+                                "a": 1,
+                                "exp": "Cụm danh động từ (Gerund phrase) \"Taking regular exercise\" đứng đầu câu làm Chủ ngữ (S), điều khiển động từ số ít \"helps\"."
+                        },
+                        {
+                                "q": "Xác định Chủ ngữ (Subject) trong câu sau: \"Online courses provided by international universities are becoming increasingly popular.\"",
+                                "options": [
+                                        "Online courses provided by international universities",
+                                        "international universities",
+                                        "are becoming",
+                                        "increasingly popular"
+                                ],
+                                "a": 0,
+                                "exp": "Chủ ngữ là cụm danh từ hoàn chỉnh kèm mệnh đề quan hệ rút gọn bị động: \"Online courses provided by international universities\"."
+                        },
+                        {
+                                "q": "Xác định Chủ ngữ (Subject) trong câu sau: \"In recent years, renewable energy has played a vital role in protecting the environment.\"",
+                                "options": [
+                                        "In recent years",
+                                        "has played",
+                                        "renewable energy",
+                                        "the environment"
+                                ],
+                                "a": 2,
+                                "exp": "\"renewable energy\" (năng lượng tái tạo) là cụm danh từ làm Chủ ngữ. \"In recent years\" đứng đầu câu nhưng là Trạng ngữ chỉ thời gian (A)."
+                        },
+                        {
+                                "q": "Xác định Chủ ngữ (Subject) trong câu sau: \"To master English communication skills requires continuous effort and practical application.\"",
+                                "options": [
+                                        "English communication skills",
+                                        "continuous effort",
+                                        "requires",
+                                        "To master English communication skills"
+                                ],
+                                "a": 3,
+                                "exp": "Cụm động từ nguyên mẫu có 'to' (To-infinitive phrase) \"To master English communication skills\" đóng vai trò là Chủ ngữ (S) của câu."
+                        },
+                        {
+                                "q": "Xác định Chủ ngữ (Subject) trong câu sau: \"The rapid development of modern artificial intelligence has transformed global industries.\"",
+                                "options": [
+                                        "The rapid development of modern artificial intelligence",
+                                        "modern artificial intelligence",
+                                        "has transformed",
+                                        "global industries"
+                                ],
+                                "a": 0,
+                                "exp": "Cụm danh từ đầy đủ \"The rapid development of modern artificial intelligence\" (với danh từ trung tâm là \"development\") là Chủ ngữ của câu."
+                        }
+                ]
         },
         {
-            "title": "Bài 2: Xác định Tân ngữ (Object)",
-            "type": "mcq",
-            "desc": "Chọn đáp án xác định đúng Tân ngữ (O) chịu tác động trực tiếp của hành động.",
-            "questions": [
-                {
-                    "q": "Students must submit <b>their final reports</b> before Friday.",
-                    "options": [
-                        "Students",
-                        "must submit",
-                        "their final reports",
-                        "before Friday"
-                    ],
-                    "a": 2,
-                    "exp": "'their final reports' là Tân ngữ trực tiếp nhận tác động từ hành động 'submit'."
-                },
-                {
-                    "q": "Technology has changed <b>our daily communication</b> dramatically.",
-                    "options": [
-                        "Technology",
-                        "our daily communication",
-                        "has changed",
-                        "dramatically"
-                    ],
-                    "a": 1,
-                    "exp": "'our daily communication' là Tân ngữ của động từ 'changed'."
-                },
-                {
-                    "q": "The committee will evaluate <b>all the submitted proposals</b> next week.",
-                    "options": [
-                        "The committee",
-                        "will evaluate",
-                        "all the submitted proposals",
-                        "next week"
-                    ],
-                    "a": 2,
-                    "exp": "'all the submitted proposals' là Tân ngữ trực tiếp của 'evaluate'."
-                },
-                {
-                    "q": "Children should avoid <b>fast food and sugary drinks</b>.",
-                    "options": [
-                        "Children",
-                        "should avoid",
-                        "fast food and sugary drinks",
-                        "sugary drinks"
-                    ],
-                    "a": 2,
-                    "exp": "'fast food and sugary drinks' là cụm Tân ngữ chịu tác động từ 'avoid'."
-                },
-                {
-                    "q": "My brother built <b>a modern wooden house</b> for his family.",
-                    "options": [
-                        "My brother",
-                        "built",
-                        "a modern wooden house",
-                        "his family"
-                    ],
-                    "a": 2,
-                    "exp": "'a modern wooden house' là Tân ngữ trực tiếp của 'built'."
-                }
-            ]
+                "title": "Bài 2: Xác định Tân ngữ (Object)",
+                "type": "mcq",
+                "desc": "Chọn đáp án xác định đúng Tân ngữ (Object - O) chịu sự tác động của hành động trong câu.",
+                "questions": [
+                        {
+                                "q": "Xác định Tân ngữ trực tiếp trong câu sau: \"All university students must submit their research papers before the official deadline.\"",
+                                "options": [
+                                        "All university students",
+                                        "their research papers",
+                                        "must submit",
+                                        "before the official deadline"
+                                ],
+                                "a": 1,
+                                "exp": "\"their research papers\" là Cụm danh từ đứng sau ngoại động từ \"submit\", tiếp nhận trực tiếp hành động nộp bài."
+                        },
+                        {
+                                "q": "Xác định Tân ngữ trong câu sau: \"Modern smartphones have significantly changed our daily communication habits.\"",
+                                "options": [
+                                        "Modern smartphones",
+                                        "significantly changed",
+                                        "daily habits",
+                                        "our daily communication habits"
+                                ],
+                                "a": 3,
+                                "exp": "\"our daily communication habits\" là cụm danh từ làm Tân ngữ trực tiếp cho động từ \"have changed\". \"Significantly\" là trạng từ chỉ mức độ."
+                        },
+                        {
+                                "q": "Xác định Tân ngữ trong câu sau: \"The evaluation committee will thoroughly review all submitted project proposals next week.\"",
+                                "options": [
+                                        "all submitted project proposals",
+                                        "The evaluation committee",
+                                        "will thoroughly review",
+                                        "next week"
+                                ],
+                                "a": 0,
+                                "exp": "\"all submitted project proposals\" là cụm Tân ngữ trực tiếp nhận tác động từ hành động \"review\". \"Next week\" là Trạng ngữ chỉ thời gian."
+                        },
+                        {
+                                "q": "Xác định Tân ngữ trong câu sau: \"Young consumers should avoid excessive fast food and sugary beverages.\"",
+                                "options": [
+                                        "Young consumers",
+                                        "should avoid",
+                                        "excessive fast food and sugary beverages",
+                                        "sugary beverages"
+                                ],
+                                "a": 2,
+                                "exp": "Cụm danh từ ghép \"excessive fast food and sugary beverages\" làm Tân ngữ trực tiếp cho động từ \"avoid\"."
+                        },
+                        {
+                                "q": "Xác định Tân ngữ trực tiếp trong câu sau: \"The local government constructed a modern community sports center last year.\"",
+                                "options": [
+                                        "The local government",
+                                        "a modern community sports center",
+                                        "constructed",
+                                        "last year"
+                                ],
+                                "a": 1,
+                                "exp": "\"a modern community sports center\" là Tân ngữ trực tiếp của ngoại động từ \"constructed\". \"Last year\" là Trạng ngữ thời gian."
+                        }
+                ]
         },
         {
-            "title": "Bài 3: Phân biệt Tân ngữ (O) và Bổ ngữ (C)",
-            "type": "mcq",
-            "desc": "Xác định thành phần in đậm là Tân ngữ (O) hay Bổ ngữ (C).",
-            "questions": [
-                {
-                    "q": "She became <b>a famous doctor</b> after years of study.",
-                    "options": [
-                        "Tân ngữ (Object)",
-                        "Bổ ngữ (Complement)"
-                    ],
-                    "a": 1,
-                    "exp": "Đứng sau động từ liên kết 'became' mô tả trạng thái chủ ngữ nên là Bổ ngữ (C)."
-                },
-                {
-                    "q": "She bought <b>a famous book</b> yesterday.",
-                    "options": [
-                        "Tân ngữ (Object)",
-                        "Bổ ngữ (Complement)"
-                    ],
-                    "a": 0,
-                    "exp": "Đứng sau ngoại động từ 'bought' nhận tác động trực tiếp nên là Tân ngữ (O)."
-                },
-                {
-                    "q": "The weather turned <b>extremely cold</b> last night.",
-                    "options": [
-                        "Tân ngữ (Object)",
-                        "Bổ ngữ (Complement)"
-                    ],
-                    "a": 1,
-                    "exp": "'turned' là động từ liên kết, 'extremely cold' là Bổ ngữ mô tả thời tiết."
-                },
-                {
-                    "q": "The company hired <b>an experienced manager</b>.",
-                    "options": [
-                        "Tân ngữ (Object)",
-                        "Bổ ngữ (Complement)"
-                    ],
-                    "a": 0,
-                    "exp": "'an experienced manager' là Tân ngữ nhận tác động từ 'hired'."
-                },
-                {
-                    "q": "The food in this restaurant tastes <b>delicious</b>.",
-                    "options": [
-                        "Tân ngữ (Object)",
-                        "Bổ ngữ (Complement)"
-                    ],
-                    "a": 1,
-                    "exp": "'delicious' là Bổ ngữ đứng sau động từ cảm giác 'tastes'."
-                }
-            ]
+                "title": "Bài 3: Phân biệt Tân ngữ (O) và Bổ ngữ (C)",
+                "type": "mcq",
+                "desc": "Xác định thành phần in đậm trong câu đóng vai trò là Tân ngữ (Object) hay Bổ ngữ (Complement).",
+                "questions": [
+                        {
+                                "q": "Thành phần in đậm trong câu sau đóng vai trò là gì? \"After graduating with honors, Lan became <b>a dedicated English teacher</b>.\"",
+                                "options": [
+                                        "Tân ngữ trực tiếp (Direct Object)",
+                                        "Bổ ngữ cho chủ ngữ (Subject Complement)",
+                                        "Trạng ngữ chỉ cách thức (Adverbial)",
+                                        "Tân ngữ gián tiếp (Indirect Object)"
+                                ],
+                                "a": 1,
+                                "exp": "\"a dedicated English teacher\" đứng sau động từ liên kết (linking verb) \"became\" nhằm mô tả đặc điểm/nghề nghiệp của chủ ngữ Lan, nên là Bổ ngữ (C)."
+                        },
+                        {
+                                "q": "Thành phần in đậm trong câu sau đóng vai trò là gì? \"The company decided to purchase <b>a sophisticated management software</b>.\"",
+                                "options": [
+                                        "Bổ ngữ cho chủ ngữ (Subject Complement)",
+                                        "Trạng ngữ chỉ mục đích (Adverbial)",
+                                        "Tân ngữ trực tiếp (Direct Object)",
+                                        "Bổ ngữ cho tân ngữ (Object Complement)"
+                                ],
+                                "a": 2,
+                                "exp": "\"a sophisticated management software\" chịu tác động trực tiếp từ ngoại động từ \"purchase\" (mua cái gì), không mô tả chủ ngữ, nên là Tân ngữ (O)."
+                        },
+                        {
+                                "q": "Thành phần in đậm trong câu sau đóng vai trò là gì? \"During the winter storm, the weather turned <b>unusually severe and freezing</b>.\"",
+                                "options": [
+                                        "Bổ ngữ cho chủ ngữ (Subject Complement)",
+                                        "Tân ngữ trực tiếp (Direct Object)",
+                                        "Trạng ngữ chỉ thời gian (Adverbial)",
+                                        "Tân ngữ gián tiếp (Indirect Object)"
+                                ],
+                                "a": 0,
+                                "exp": "\"turned\" ở đây là động từ liên kết (linking verb mang nghĩa \"trở nên\"), và tính từ \"unusually severe and freezing\" là Bổ ngữ (C) bổ nghĩa cho chủ ngữ \"the weather\"."
+                        },
+                        {
+                                "q": "Thành phần in đậm trong câu sau đóng vai trò là gì? \"The board of directors appointed Mr. David <b>the new chief executive officer</b>.\"",
+                                "options": [
+                                        "Tân ngữ gián tiếp (Indirect Object)",
+                                        "Trạng ngữ nơi chốn (Adverbial)",
+                                        "Bổ ngữ cho chủ ngữ (Subject Complement)",
+                                        "Bổ ngữ cho tân ngữ (Object Complement)"
+                                ],
+                                "a": 3,
+                                "exp": "\"the new chief executive officer\" bổ nghĩa cho tân ngữ \"Mr. David\" (chỉ rõ chức vụ mới của tân ngữ), do đó đây là Bổ ngữ cho tân ngữ (Object Complement - C trong cấu trúc S+V+O+C)."
+                        },
+                        {
+                                "q": "Thành phần in đậm trong câu sau đóng vai trò là gì? \"The freshly baked traditional bread in that bakery always smells <b>incredibly delicious</b>.\"",
+                                "options": [
+                                        "Tân ngữ trực tiếp (Direct Object)",
+                                        "Bổ ngữ cho chủ ngữ (Subject Complement)",
+                                        "Trạng từ chỉ cách thức (Adverbial)",
+                                        "Bổ ngữ cho tân ngữ (Object Complement)"
+                                ],
+                                "a": 1,
+                                "exp": "\"smells\" là động từ chỉ tri giác/giác quan (linking verb), theo sau là cụm tính từ \"incredibly delicious\" đóng vai trò là Bổ ngữ (C) cho chủ ngữ bánh mì."
+                        }
+                ]
         },
         {
-            "title": "Bài 4: Nhận diện Trạng ngữ (Adverbial)",
-            "type": "mcq",
-            "desc": "Chọn thành phần đóng vai trò Trạng ngữ (A) chỉ thời gian, nơi chốn hoặc cách thức.",
-            "questions": [
-                {
-                    "q": "We will meet the manager <b>at the main office tomorrow</b>.",
-                    "options": [
-                        "the manager",
-                        "will meet",
-                        "at the main office tomorrow",
-                        "We"
-                    ],
-                    "a": 2,
-                    "exp": "'at the main office tomorrow' là Cụm trạng ngữ chỉ nơi chốn và thời gian."
-                },
-                {
-                    "q": "The students listened to the lecture <b>attentively</b>.",
-                    "options": [
-                        "The students",
-                        "listened to",
-                        "attentively",
-                        "the lecture"
-                    ],
-                    "a": 2,
-                    "exp": "'attentively' là Trạng từ chỉ cách thức (Adverbial)."
-                },
-                {
-                    "q": "<b>Due to the heavy rain</b>, the football match was postponed.",
-                    "options": [
-                        "Due to the heavy rain",
-                        "the football match",
-                        "was postponed",
-                        "the rain"
-                    ],
-                    "a": 0,
-                    "exp": "'Due to the heavy rain' là Trạng ngữ chỉ nguyên nhân."
-                },
-                {
-                    "q": "She usually visits her grandparents <b>on Sunday afternoons</b>.",
-                    "options": [
-                        "She",
-                        "visits",
-                        "her grandparents",
-                        "on Sunday afternoons"
-                    ],
-                    "a": 3,
-                    "exp": "'on Sunday afternoons' là Trạng ngữ chỉ thời gian."
-                },
-                {
-                    "q": "They worked <b>extremely hard</b> to complete the project on time.",
-                    "options": [
-                        "They",
-                        "worked",
-                        "extremely hard",
-                        "the project"
-                    ],
-                    "a": 2,
-                    "exp": "'extremely hard' là Trạng từ chỉ cách thức/mức độ."
-                }
-            ]
+                "title": "Bài 4: Nhận diện Trạng ngữ (Adverbial)",
+                "type": "mcq",
+                "desc": "Chọn thành phần đóng vai trò Trạng ngữ (Adverbial - A) chỉ thời gian, nơi chốn, nguyên nhân hoặc cách thức.",
+                "questions": [
+                        {
+                                "q": "Xác định Trạng ngữ trong câu sau: \"Our sales team will meet the European clients at the head office tomorrow.\"",
+                                "options": [
+                                        "Our sales team",
+                                        "the European clients",
+                                        "will meet",
+                                        "at the head office tomorrow"
+                                ],
+                                "a": 3,
+                                "exp": "\"at the head office tomorrow\" là cụm Trạng ngữ kép chỉ nơi chốn (at the head office) và thời gian (tomorrow)."
+                        },
+                        {
+                                "q": "Xác định Trạng ngữ chỉ cách thức trong câu sau: \"The university students listened to the keynote speaker's presentation attentively.\"",
+                                "options": [
+                                        "attentively",
+                                        "The university students",
+                                        "listened to",
+                                        "the keynote speaker's presentation"
+                                ],
+                                "a": 0,
+                                "exp": "Trạng từ \"attentively\" (chăm chú) bổ nghĩa cho động từ \"listened to\", đóng vai trò Trạng ngữ chỉ cách thức (Adverbial of manner)."
+                        },
+                        {
+                                "q": "Xác định Trạng ngữ chỉ nguyên nhân trong câu sau: \"Due to unprecedented heavy floods, several international flights were temporarily suspended.\"",
+                                "options": [
+                                        "several international flights",
+                                        "Due to unprecedented heavy floods",
+                                        "were temporarily suspended",
+                                        "heavy floods were suspended"
+                                ],
+                                "a": 1,
+                                "exp": "\"Due to unprecedented heavy floods\" (Do lũ lụt nghiêm trọng chưa từng có) là cụm Trạng ngữ chỉ nguyên nhân đứng ở đầu câu."
+                        },
+                        {
+                                "q": "Xác định Trạng ngữ chỉ thời gian trong câu sau: \"Most office employees participate in professional training workshops on Friday afternoons.\"",
+                                "options": [
+                                        "Most office employees",
+                                        "professional training workshops",
+                                        "on Friday afternoons",
+                                        "participate in"
+                                ],
+                                "a": 2,
+                                "exp": "\"on Friday afternoons\" (vào các chiều thứ Sáu) là cụm giới từ đóng vai trò Trạng ngữ chỉ thời gian (Adverbial of time)."
+                        },
+                        {
+                                "q": "Xác định Trạng ngữ trong câu sau: \"The engineering team worked diligently around the clock to finish the infrastructure project.\"",
+                                "options": [
+                                        "The engineering team",
+                                        "the infrastructure project",
+                                        "diligently around the clock",
+                                        "finish the project"
+                                ],
+                                "a": 2,
+                                "exp": "\"diligently around the clock\" (một cách siêng năng suốt ngày đêm) là thành phần Trạng ngữ chỉ cách thức và thời gian của câu."
+                        }
+                ]
         },
         {
-            "title": "Bài 5: Phân tích đầy đủ cấu trúc câu S-V-O-C-A",
-            "type": "mcq",
-            "desc": "Xác định mô hình cấu trúc chuẩn của câu.",
-            "questions": [
-                {
-                    "q": "The committee appointed him chairman yesterday.",
-                    "options": [
-                        "S - V - O - A",
-                        "S - V - O - C - A",
-                        "S - V - C - A",
-                        "S - V - O - O"
-                    ],
-                    "a": 1,
-                    "exp": "The committee (S) + appointed (V) + him (O) + chairman (C) + yesterday (A)."
-                },
-                {
-                    "q": "My father gave me a new laptop on my birthday.",
-                    "options": [
-                        "S - V - O - O - A",
-                        "S - V - O - C - A",
-                        "S - V - O - A",
-                        "S - V - C - A"
-                    ],
-                    "a": 0,
-                    "exp": "My father (S) + gave (V) + me (O gián tiếp) + a new laptop (O trực tiếp) + on my birthday (A)."
-                },
-                {
-                    "q": "The little girl is sleeping peacefully in her bedroom.",
-                    "options": [
-                        "S - V - A - A",
-                        "S - V - O - A",
-                        "S - V - C - A",
-                        "S - V - O - C"
-                    ],
-                    "a": 0,
-                    "exp": "The little girl (S) + is sleeping (V) + peacefully (A) + in her bedroom (A)."
-                },
-                {
-                    "q": "The delicious meal made everyone happy.",
-                    "options": [
-                        "S - V - O - C",
-                        "S - V - O - O",
-                        "S - V - O - A",
-                        "S - V - C - A"
-                    ],
-                    "a": 0,
-                    "exp": "The delicious meal (S) + made (V) + everyone (O) + happy (C)."
-                },
-                {
-                    "q": "She became a successful businesswoman after five years.",
-                    "options": [
-                        "S - V - C - A",
-                        "S - V - O - A",
-                        "S - V - O - C",
-                        "S - V - A - A"
-                    ],
-                    "a": 0,
-                    "exp": "She (S) + became (V liên kết) + a successful businesswoman (C) + after five years (A)."
-                }
-            ]
+                "title": "Bài 5: Phân tích đầy đủ cấu trúc câu S-V-O-C-A",
+                "type": "mcq",
+                "desc": "Phân tích và xác định mô hình cấu trúc ngữ pháp đầy đủ (S, V, O, C, A) của câu.",
+                "questions": [
+                        {
+                                "q": "Phân tích cấu trúc của câu sau: \"The municipal council appointed Mr. Harrison committee chairman yesterday.\"",
+                                "options": [
+                                        "S - V - O - A",
+                                        "S - V - O - C - A",
+                                        "S - V - O - O - A",
+                                        "S - V - C - A"
+                                ],
+                                "a": 1,
+                                "exp": "The municipal council (S) + appointed (V) + Mr. Harrison (O) + committee chairman (C - bổ ngữ cho tân ngữ) + yesterday (A - trạng ngữ)."
+                        },
+                        {
+                                "q": "Phân tích cấu trúc của câu sau: \"The university awarded high-achieving graduates special scholarships at the graduation ceremony.\"",
+                                "options": [
+                                        "S - V - O - O - A",
+                                        "S - V - O - C - A",
+                                        "S - V - O - A - A",
+                                        "S - V - C - O - A"
+                                ],
+                                "a": 0,
+                                "exp": "The university (S) + awarded (V) + high-achieving graduates (O gián tiếp - người nhận) + special scholarships (O trực tiếp - vật được trao) + at the graduation ceremony (A)."
+                        },
+                        {
+                                "q": "Phân tích cấu trúc của câu sau: \"The tired passengers were sleeping peacefully in the waiting lounge.\"",
+                                "options": [
+                                        "S - V - O - A",
+                                        "S - V - C - A",
+                                        "S - V - A - A",
+                                        "S - V - O - C"
+                                ],
+                                "a": 2,
+                                "exp": "The tired passengers (S) + were sleeping (V - nội động từ) + peacefully (A - trạng ngữ cách thức) + in the waiting lounge (A - trạng ngữ nơi chốn)."
+                        },
+                        {
+                                "q": "Phân tích cấu trúc của câu sau: \"The unexpected promotion made the young architect extremely confident.\"",
+                                "options": [
+                                        "S - V - O - O",
+                                        "S - V - O - A",
+                                        "S - V - C - A",
+                                        "S - V - O - C"
+                                ],
+                                "a": 3,
+                                "exp": "The unexpected promotion (S) + made (V) + the young architect (O) + extremely confident (C - bổ ngữ tính từ mô tả tân ngữ architect)."
+                        },
+                        {
+                                "q": "Phân tích cấu trúc của câu sau: \"Ms. Helena became an inspiring creative director after years of dedication.\"",
+                                "options": [
+                                        "S - V - C - A",
+                                        "S - V - O - A",
+                                        "S - V - O - C",
+                                        "S - V - A - A"
+                                ],
+                                "a": 0,
+                                "exp": "Ms. Helena (S) + became (V - linking verb) + an inspiring creative director (C - bổ ngữ cho chủ ngữ Helena) + after years of dedication (A - trạng ngữ thời gian)."
+                        }
+                ]
         }
-    ],
+],
     "structures": [
         {
-            "title": "Bài 1: Xác định cấu trúc câu S + V + O",
-            "type": "mcq",
-            "desc": "Xác định các câu và thành phần thuộc cấu trúc Dạng 1: S + V + O (Ngoại động từ + Tân ngữ).",
-            "questions": [
-                {
-                    "q": "Câu nào dưới đây có cấu trúc <b>S + V + O</b>?",
-                    "options": [
-                        "She loves English music.",
-                        "The sun shines.",
-                        "They are students.",
-                        "He sleeps early."
-                    ],
-                    "a": 0,
-                    "exp": "She (S) + loves (V) + English music (O)."
-                },
-                {
-                    "q": "Trong câu 'They eat pizza', 'pizza' đóng vai trò là:",
-                    "options": [
-                        "Tân ngữ (O)",
-                        "Bổ ngữ (C)",
-                        "Chủ ngữ (S)",
-                        "Trạng ngữ (A)"
-                    ],
-                    "a": 0,
-                    "exp": "'pizza' là tân ngữ chịu tác động từ hành động 'eat'."
-                },
-                {
-                    "q": "Câu 'My friends visit me' thuộc cấu trúc nào?",
-                    "options": [
-                        "S + V + O",
-                        "S + V",
-                        "S + V + C",
-                        "S + V + O + C"
-                    ],
-                    "a": 0,
-                    "exp": "My friends (S) + visit (V) + me (O)."
-                },
-                {
-                    "q": "Câu nào dưới đây <b>KHÔNG</b> phải là cấu trúc S + V + O?",
-                    "options": [
-                        "The baby cries.",
-                        "He drinks coffee.",
-                        "The cat chased a mouse.",
-                        "We bought a new car."
-                    ],
-                    "a": 0,
-                    "exp": "'The baby cries' là cấu trúc S + V (không có tân ngữ)."
-                },
-                {
-                    "q": "Xác định mô hình của câu 'The government protects the environment':",
-                    "options": [
-                        "S + V + O",
-                        "S + V + C",
-                        "S + V + A",
-                        "S + V + O + O"
-                    ],
-                    "a": 0,
-                    "exp": "The government (S) + protects (V) + the environment (O)."
-                }
-            ]
+                "title": "Bài 1: Xác định cấu trúc câu S + V + O",
+                "type": "mcq",
+                "desc": "Nhận diện câu và thành phần thuộc cấu trúc Dạng 1: S + V + O (Chủ ngữ + Ngoại động từ + Tân ngữ trực tiếp).",
+                "questions": [
+                        {
+                                "q": "Câu nào dưới đây thuộc cấu trúc S + V + O?",
+                                "options": [
+                                        "The morning sun rose slowly over the horizon.",
+                                        "International volunteers planted thousands of trees in the forest.",
+                                        "The old building looks very mysterious at night.",
+                                        "The children were sleeping soundly in their bedrooms."
+                                ],
+                                "a": 1,
+                                "exp": "International volunteers (S) + planted (V) + thousands of trees (O) + in the forest (A). Các câu khác: A và D là S+V+A, C là S+V+C."
+                        },
+                        {
+                                "q": "Trong câu \"Modern technology enhances educational opportunities worldwide.\", thành phần \"educational opportunities\" đóng vai trò là:",
+                                "options": [
+                                        "Chủ ngữ (Subject)",
+                                        "Bổ ngữ cho chủ ngữ (Subject Complement)",
+                                        "Tân ngữ trực tiếp (Direct Object)",
+                                        "Trạng ngữ chỉ nơi chốn (Adverbial)"
+                                ],
+                                "a": 2,
+                                "exp": "\"educational opportunities\" là Tân ngữ trực tiếp chịu tác động từ ngoại động từ \"enhances\". Cấu trúc: S + V + O + A."
+                        },
+                        {
+                                "q": "Xác định mô hình cấu trúc của câu sau: \"Leading scientists have published breakthrough findings on climate change.\"",
+                                "options": [
+                                        "S + V + O",
+                                        "S + V + C",
+                                        "S + V",
+                                        "S + V + O + C"
+                                ],
+                                "a": 0,
+                                "exp": "Leading scientists (S) + have published (V) + breakthrough findings on climate change (O - cụm tân ngữ hoàn chỉnh)."
+                        },
+                        {
+                                "q": "Câu nào dưới đây KHÔNG thuộc cấu trúc S + V + O?",
+                                "options": [
+                                        "The company developed an innovative mobile application.",
+                                        "Experienced farmers harvested golden wheat fields.",
+                                        "Many rare migratory birds arrived during the winter season.",
+                                        "The environmental organization organized clean-up campaigns."
+                                ],
+                                "a": 2,
+                                "exp": "Câu C có \"arrived\" là nội động từ (không có tân ngữ), cấu trúc là S + V + A (\"during the winter season\" là trạng ngữ). Các câu A, B, D đều có Tân ngữ trực tiếp."
+                        },
+                        {
+                                "q": "Xác định cấu trúc của câu: \"Local authorities strictly protect endangered wildlife reserves.\"",
+                                "options": [
+                                        "S + V + C",
+                                        "S + V + O + C",
+                                        "S + V + O",
+                                        "S + V + A"
+                                ],
+                                "a": 2,
+                                "exp": "Local authorities (S) + strictly protect (V - kèm trạng từ strictly) + endangered wildlife reserves (O). Đây là cấu trúc chuẩn S + V + O."
+                        }
+                ]
         },
         {
-            "title": "Bài 2: Xác định cấu trúc câu S + V + C",
-            "type": "mcq",
-            "desc": "Nhận diện cấu trúc Dạng 2: S + V + C với Động từ liên kết (Linking verbs: is/am/are/look/feel/seem/taste...).",
-            "questions": [
-                {
-                    "q": "Câu nào dưới đây có cấu trúc <b>S + V + C</b>?",
-                    "options": [
-                        "She is a doctor.",
-                        "She bought a new dress.",
-                        "They painted the wall.",
-                        "We visited our teacher."
-                    ],
-                    "a": 0,
-                    "exp": "She (S) + is (V liên kết) + a doctor (C)."
-                },
-                {
-                    "q": "Trong câu 'The weather became cold', 'cold' là:",
-                    "options": [
-                        "Bổ ngữ cho chủ ngữ (Subject Complement)",
-                        "Tân ngữ trực tiếp",
-                        "Trạng ngữ chỉ thời gian",
-                        "Tân ngữ gián tiếp"
-                    ],
-                    "a": 0,
-                    "exp": "'cold' là Bổ ngữ đứng sau linking verb 'became'."
-                },
-                {
-                    "q": "Câu 'He seems tired' thuộc cấu trúc nào?",
-                    "options": [
-                        "S + V + C",
-                        "S + V + O",
-                        "S + V",
-                        "S + V + O + C"
-                    ],
-                    "a": 0,
-                    "exp": "He (S) + seems (V liên kết) + tired (C)."
-                },
-                {
-                    "q": "Câu nào dưới đây sử dụng <b>Động từ liên kết (Linking verb)</b>?",
-                    "options": [
-                        "The music sounds great.",
-                        "She listened to the music.",
-                        "He played the music.",
-                        "They wrote the music."
-                    ],
-                    "a": 0,
-                    "exp": "'sounds' mang nghĩa 'nghe có vẻ' (Linking verb)."
-                },
-                {
-                    "q": "Xác định cấu trúc của câu 'This food tastes delicious':",
-                    "options": [
-                        "S + V + C",
-                        "S + V + O",
-                        "S + V",
-                        "S + V + O + O"
-                    ],
-                    "a": 0,
-                    "exp": "This food (S) + tastes (V liên kết) + delicious (C)."
-                }
-            ]
+                "title": "Bài 2: Xác định cấu trúc câu S + V + C",
+                "type": "mcq",
+                "desc": "Nhận diện cấu trúc Dạng 2: S + V + C với Động từ liên kết (Linking verbs: be, become, remain, seem, look, feel, taste, sound...).",
+                "questions": [
+                        {
+                                "q": "Câu nào dưới đây thuộc cấu trúc S + V + C (Chủ ngữ + Động từ liên kết + Bổ ngữ)?",
+                                "options": [
+                                        "The team completed the quarterly report on time.",
+                                        "Frequent physical exercise keeps your body healthy.",
+                                        "The sudden weather change remained completely unpredictable.",
+                                        "The manager sent an important email to all employees."
+                                ],
+                                "a": 2,
+                                "exp": "The sudden weather change (S) + remained (V - linking verb) + completely unpredictable (C - bổ ngữ tính từ)."
+                        },
+                        {
+                                "q": "Trong câu \"The freshly brewed herbal tea smells delightfully fragrant.\", cụm từ \"delightfully fragrant\" đóng vai trò là:",
+                                "options": [
+                                        "Tân ngữ trực tiếp (Direct Object)",
+                                        "Bổ ngữ cho chủ ngữ (Subject Complement)",
+                                        "Trạng ngữ chỉ thể cách (Adverbial)",
+                                        "Tân ngữ gián tiếp (Indirect Object)"
+                                ],
+                                "a": 1,
+                                "exp": "\"smells\" là động từ tri giác (linking verb), theo sau là cụm tính từ \"delightfully fragrant\" làm Bổ ngữ cho chủ ngữ (Subject Complement)."
+                        },
+                        {
+                                "q": "Xác định cấu trúc của câu sau: \"Online collaborative platforms have become essential tools for remote workers.\"",
+                                "options": [
+                                        "S + V + C",
+                                        "S + V + O",
+                                        "S + V + O + C",
+                                        "S + V + A"
+                                ],
+                                "a": 0,
+                                "exp": "Online collaborative platforms (S) + have become (V - linking verb) + essential tools for remote workers (C - cụm danh từ làm bổ ngữ cho S)."
+                        },
+                        {
+                                "q": "Câu nào dưới đây sử dụng Động từ liên kết (Linking verb) nối với Bổ ngữ?",
+                                "options": [
+                                        "The professor explained the complicated concept clearly.",
+                                        "The international conference proved extremely productive.",
+                                        "The students took thorough notes during the seminar.",
+                                        "The organization published an annual financial review."
+                                ],
+                                "a": 1,
+                                "exp": "\"proved\" trong câu này là linking verb mang nghĩa \"tỏ ra / chứng minh là\", theo sau là cụm tính từ \"extremely productive\" (Bổ ngữ). Các câu khác dùng ngoại động từ kèm tân ngữ."
+                        },
+                        {
+                                "q": "Xác định cấu trúc của câu: \"The candidate's extensive portfolio seemed very impressive to the interviewers.\"",
+                                "options": [
+                                        "S + V + O",
+                                        "S + V + O + C",
+                                        "S + V + O + A",
+                                        "S + V + C + A"
+                                ],
+                                "a": 3,
+                                "exp": "The candidate's extensive portfolio (S) + seemed (V liên kết) + very impressive (C - bổ ngữ tính từ) + to the interviewers (A - trạng ngữ)."
+                        }
+                ]
         },
         {
-            "title": "Bài 3: Xác định cấu trúc câu S + V",
-            "type": "mcq",
-            "desc": "Xác định cấu trúc Dạng 3: S + V (Chủ ngữ + Nội động từ, không có tân ngữ).",
-            "questions": [
-                {
-                    "q": "Câu nào dưới đây có cấu trúc <b>S + V</b>?",
-                    "options": [
-                        "The sun shines.",
-                        "She loves music.",
-                        "They bought a new car.",
-                        "He is a doctor."
-                    ],
-                    "a": 0,
-                    "exp": "The sun (S) + shines (V) là cấu trúc S + V."
-                },
-                {
-                    "q": "Câu 'Birds fly' thuộc cấu trúc nào?",
-                    "options": [
-                        "S + V",
-                        "S + V + O",
-                        "S + V + C",
-                        "S + V + O + C"
-                    ],
-                    "a": 0,
-                    "exp": "Birds (S) + fly (V nội động từ)."
-                },
-                {
-                    "q": "Câu nào dưới đây sử dụng <b>Nội động từ</b>?",
-                    "options": [
-                        "The baby is sleeping.",
-                        "She ate an apple.",
-                        "We visited our teacher.",
-                        "He wrote a letter."
-                    ],
-                    "a": 0,
-                    "exp": "'is sleeping' là nội động từ diễn tả hành động tự thân."
-                },
-                {
-                    "q": "Câu 'They laughed' thuộc cấu trúc nào?",
-                    "options": [
-                        "S + V",
-                        "S + V + O",
-                        "S + V + C",
-                        "S + V + O + O"
-                    ],
-                    "a": 0,
-                    "exp": "They (S) + laughed (V)."
-                },
-                {
-                    "q": "Trong câu 'It is raining', động từ 'is raining' là:",
-                    "options": [
-                        "Nội động từ trong cấu trúc S + V",
-                        "Ngoại động từ trong cấu trúc S + V + O",
-                        "Động từ liên kết",
-                        "Bổ ngữ"
-                    ],
-                    "a": 0,
-                    "exp": "'is raining' là nội động từ."
-                }
-            ]
+                "title": "Bài 3: Xác định cấu trúc câu S + V (Nội động từ)",
+                "type": "mcq",
+                "desc": "Xác định cấu trúc Dạng 3: S + V (Chủ ngữ + Nội động từ - Intransitive Verb, hành động tự thân không cần tân ngữ).",
+                "questions": [
+                        {
+                                "q": "Câu nào dưới đây sử dụng Nội động từ (Intransitive Verb) và thuộc cấu trúc cơ bản S + V?",
+                                "options": [
+                                        "Severe natural disasters frequently happen in coastal regions.",
+                                        "The university provides modern facilities for students.",
+                                        "The director approved the annual project budget.",
+                                        "They painted the laboratory walls bright white."
+                                ],
+                                "a": 0,
+                                "exp": "Severe natural disasters (S) + frequently happen (V - nội động từ không nhận tân ngữ) + in coastal regions (A - trạng ngữ nơi chốn)."
+                        },
+                        {
+                                "q": "Xác định cấu trúc của câu: \"Global sea levels are steadily rising.\"",
+                                "options": [
+                                        "S + V + O",
+                                        "S + V",
+                                        "S + V + C",
+                                        "S + V + O + C"
+                                ],
+                                "a": 1,
+                                "exp": "Global sea levels (S) + are steadily rising (V - nội động từ \"rise\" kèm trạng từ \"steadily\"). Câu không có tân ngữ, thuộc cấu trúc S + V."
+                        },
+                        {
+                                "q": "Câu nào dưới đây chứa Nội động từ (không cần Tân ngữ theo sau để tạo thành câu hoàn chỉnh)?",
+                                "options": [
+                                        "The research team discovered a new chemical element.",
+                                        "Experienced doctors examined the patients carefully.",
+                                        "The exhausted marathon runners rested near the finish line.",
+                                        "The publishing house launched a bestselling novel."
+                                ],
+                                "a": 2,
+                                "exp": "\"rested\" (nghỉ ngơi) là nội động từ diễn tả hành động tự thân, theo sau là cụm trạng ngữ nơi chốn \"near the finish line\"."
+                        },
+                        {
+                                "q": "Xác định cấu trúc của câu: \"The historic old clock suddenly stopped.\"",
+                                "options": [
+                                        "S + V + C",
+                                        "S + V + O",
+                                        "S + V",
+                                        "S + V + A"
+                                ],
+                                "a": 2,
+                                "exp": "The historic old clock (S) + suddenly stopped (V - nội động từ dừng lại). Không có tân ngữ hay bổ ngữ, mô hình cốt lõi là S + V."
+                        },
+                        {
+                                "q": "Trong câu \"Heavy autumn rain was falling through the night.\", động từ \"was falling\" là:",
+                                "options": [
+                                        "Ngoại động từ nhận tân ngữ trực tiếp",
+                                        "Động từ liên kết nối chủ ngữ với bổ ngữ",
+                                        "Trợ động từ không mang nghĩa",
+                                        "Nội động từ trong cấu trúc S + V (kèm Trạng ngữ)"
+                                ],
+                                "a": 3,
+                                "exp": "\"fall\" (rơi) là nội động từ diễn tả hành động tự thân không nhận tân ngữ, đi kèm cụm trạng ngữ thời gian \"through the night\" (S + V + A)."
+                        }
+                ]
         },
         {
-            "title": "Bài 4: Xác định cấu trúc câu S + V + O + Adv",
-            "type": "mcq",
-            "desc": "Nhận diện cấu trúc Dạng 4: S + V + O + Adv (Tân ngữ kèm Trạng ngữ bổ sung bối cảnh).",
-            "questions": [
-                {
-                    "q": "Câu nào dưới đây có cấu trúc <b>S + V + O + Adv</b>?",
-                    "options": [
-                        "She sings a song beautifully.",
-                        "She is very beautiful.",
-                        "She gave me a gift.",
-                        "The sun shines brightly."
-                    ],
-                    "a": 0,
-                    "exp": "She (S) + sings (V) + a song (O) + beautifully (Adv)."
-                },
-                {
-                    "q": "Trong câu 'They played football in the yard', 'in the yard' là:",
-                    "options": [
-                        "Trạng ngữ chỉ nơi chốn (Adv)",
-                        "Tân ngữ trực tiếp",
-                        "Bổ ngữ",
-                        "Chủ ngữ"
-                    ],
-                    "a": 0,
-                    "exp": "'in the yard' là cụm trạng ngữ chỉ nơi chốn."
-                },
-                {
-                    "q": "Câu 'I met my friends at the park' thuộc cấu trúc nào?",
-                    "options": [
-                        "S + V + O + Adv",
-                        "S + V + O + C",
-                        "S + V + C + Adv",
-                        "S + V + O + O"
-                    ],
-                    "a": 0,
-                    "exp": "I (S) + met (V) + my friends (O) + at the park (Adv)."
-                },
-                {
-                    "q": "Câu 'My mom cooked dinner yesterday' có thành phần 'yesterday' là:",
-                    "options": [
-                        "Trạng ngữ chỉ thời gian (Adv)",
-                        "Tân ngữ",
-                        "Bổ ngữ",
-                        "Động từ"
-                    ],
-                    "a": 0,
-                    "exp": "'yesterday' là trạng ngữ chỉ thời gian đứng cuối câu."
-                },
-                {
-                    "q": "Xác định cấu trúc câu 'The students read books quietly':",
-                    "options": [
-                        "S + V + O + Adv",
-                        "S + V + O + C",
-                        "S + V + O + O",
-                        "S + V + C"
-                    ],
-                    "a": 0,
-                    "exp": "The students (S) + read (V) + books (O) + quietly (Adv)."
-                }
-            ]
+                "title": "Bài 4: Xác định cấu trúc câu S + V + O + Adv",
+                "type": "mcq",
+                "desc": "Nhận diện cấu trúc Dạng 4: S + V + O + Adv (Tân ngữ kết hợp với Trạng ngữ chỉ cách thức, thời gian, nơi chốn).",
+                "questions": [
+                        {
+                                "q": "Câu nào dưới đây có cấu trúc chuẩn S + V + O + Adv (Trạng ngữ)?",
+                                "options": [
+                                        "The experienced pilot landed the commercial airplane smoothly.",
+                                        "The ambitious candidate became a respected member of parliament.",
+                                        "The new smartphone seems remarkably durable.",
+                                        "The president awarded the courageous firefighter a gold medal."
+                                ],
+                                "a": 0,
+                                "exp": "The experienced pilot (S) + landed (V) + the commercial airplane (O) + smoothly (Adv - trạng ngữ cách thức)."
+                        },
+                        {
+                                "q": "Trong câu \"Environmental activists gathered plastic waste on the public beach yesterday.\", thành phần \"on the public beach yesterday\" là:",
+                                "options": [
+                                        "Bổ ngữ cho tân ngữ (Object Complement)",
+                                        "Tân ngữ gián tiếp (Indirect Object)",
+                                        "Trạng ngữ chỉ nơi chốn và thời gian (Adverbial)",
+                                        "Bổ ngữ cho chủ ngữ (Subject Complement)"
+                                ],
+                                "a": 2,
+                                "exp": "\"on the public beach\" (nơi chốn) và \"yesterday\" (thời gian) là các cụm Trạng ngữ (Adv/A) bổ sung bối cảnh cho hành động gom rác."
+                        },
+                        {
+                                "q": "Xác định cấu trúc ngữ pháp của câu: \"The diligent students solved the complex mathematics problem with ease.\"",
+                                "options": [
+                                        "S + V + O + C",
+                                        "S + V + O + Adv",
+                                        "S + V + O + O",
+                                        "S + V + C + Adv"
+                                ],
+                                "a": 1,
+                                "exp": "The diligent students (S) + solved (V) + the complex mathematics problem (O) + with ease (Adv - trạng ngữ chỉ cách thức = easily)."
+                        },
+                        {
+                                "q": "Trong câu \"The company launched its flagship product in major cities last month.\", cấu trúc của câu là:",
+                                "options": [
+                                        "S + V + C + Adv",
+                                        "S + V + O + C",
+                                        "S + V + O + O",
+                                        "S + V + O + Adv"
+                                ],
+                                "a": 3,
+                                "exp": "The company (S) + launched (V) + its flagship product (O) + in major cities last month (Adv - cụm trạng ngữ nơi chốn & thời gian)."
+                        },
+                        {
+                                "q": "Câu nào dưới đây KHÔNG thuộc cấu trúc S + V + O + Adv?",
+                                "options": [
+                                        "The strict editor revised the entire manuscript meticulously.",
+                                        "The chef prepared a wonderful dinner for the guests.",
+                                        "The sudden heavy thunderstorm made the outdoor wedding chaotic.",
+                                        "The technician repaired the broken air conditioner in the morning."
+                                ],
+                                "a": 2,
+                                "exp": "Câu C thuộc cấu trúc S + V + O + C: The sudden heavy thunderstorm (S) + made (V) + the outdoor wedding (O) + chaotic (C - bổ ngữ tính từ). Các câu A, B, D đều là S + V + O + Adv."
+                        }
+                ]
         },
         {
-            "title": "Bài 5: Xác định cấu trúc câu S + V + O + C & S + V + O1 + O2",
-            "type": "mcq",
-            "desc": "Phân biệt Dạng 5 (S + V + O + C) và Dạng 6 (S + V + O1 + O2).",
-            "questions": [
-                {
-                    "q": "Câu nào dưới đây có cấu trúc <b>S + V + O + C</b>?",
-                    "options": [
-                        "The news made me sad.",
-                        "He told me a story.",
-                        "She gave me a gift.",
-                        "I sent him an email."
-                    ],
-                    "a": 0,
-                    "exp": "The news (S) + made (V) + me (O) + sad (C)."
-                },
-                {
-                    "q": "Câu nào dưới đây có cấu trúc <b>S + V + O1 + O2</b> (2 Tân ngữ)?",
-                    "options": [
-                        "She gave me a gift.",
-                        "She painted her room blue.",
-                        "I found the movie boring.",
-                        "They named the baby John."
-                    ],
-                    "a": 0,
-                    "exp": "She (S) + gave (V) + me (O1 gián tiếp) + a gift (O2 trực tiếp)."
-                },
-                {
-                    "q": "Trong câu 'I found the movie boring', 'boring' là:",
-                    "options": [
-                        "Bổ ngữ cho tân ngữ (C)",
-                        "Tân ngữ trực tiếp",
-                        "Trạng ngữ",
-                        "Tân ngữ gián tiếp"
-                    ],
-                    "a": 0,
-                    "exp": "'boring' là bổ ngữ mô tả tính chất của 'the movie'."
-                },
-                {
-                    "q": "Câu 'He told me a story' thuộc cấu trúc nào?",
-                    "options": [
-                        "S + V + O1 + O2",
-                        "S + V + O + C",
-                        "S + V + O + Adv",
-                        "S + V + C"
-                    ],
-                    "a": 0,
-                    "exp": "He (S) + told (V) + me (O1) + a story (O2)."
-                },
-                {
-                    "q": "Xác định cấu trúc của câu 'The long trip made us exhausted':",
-                    "options": [
-                        "S + V + O + C",
-                        "S + V + O1 + O2",
-                        "S + V + O + Adv",
-                        "S + V + C"
-                    ],
-                    "a": 0,
-                    "exp": "The long trip (S) + made (V) + us (O) + exhausted (C)."
-                }
-            ]
+                "title": "Bài 5: Phân biệt cấu trúc S + V + O + C và S + V + O1 + O2",
+                "type": "mcq",
+                "desc": "Phân biệt Dạng 5: S + V + O + C (Bổ ngữ cho tân ngữ) và Dạng 6: S + V + O1 + O2 (Động từ trao tặng kèm 2 tân ngữ: Gián tiếp & Trực tiếp).",
+                "questions": [
+                        {
+                                "q": "Câu nào dưới đây có cấu trúc S + V + O + C (Bổ ngữ cho tân ngữ)?",
+                                "options": [
+                                        "The generous sponsor offered the university a substantial grant.",
+                                        "The research findings proved the original hypothesis completely false.",
+                                        "The international airline sent all affected passengers apology letters.",
+                                        "The manager handed the newly hired employee the office key."
+                                ],
+                                "a": 1,
+                                "exp": "The research findings (S) + proved (V) + the original hypothesis (O) + completely false (C - bổ ngữ tính từ mô tả tính chất của tân ngữ hypothesis). Các câu A, C, D đều có 2 tân ngữ (S + V + O1 + O2)."
+                        },
+                        {
+                                "q": "Câu nào dưới đây có cấu trúc S + V + O1 + O2 (2 Tân ngữ: Tân ngữ gián tiếp chỉ người + Tân ngữ trực tiếp chỉ vật)?",
+                                "options": [
+                                        "The demanding clients considered the project proposal unacceptable.",
+                                        "The modern renovation made the old apartment remarkably spacious.",
+                                        "The senior supervisor assigned the talented intern a challenging task.",
+                                        "The company board elected Ms. Watson the executive chairwoman."
+                                ],
+                                "a": 2,
+                                "exp": "The senior supervisor (S) + assigned (V) + the talented intern (O1 gián tiếp) + a challenging task (O2 trực tiếp). Các câu A, B, D đều là S + V + O + C."
+                        },
+                        {
+                                "q": "Trong câu \"The committee declared the annual charity campaign a resounding success.\", cụm từ \"a resounding success\" đóng vai trò là:",
+                                "options": [
+                                        "Tân ngữ gián tiếp (Indirect Object)",
+                                        "Bổ ngữ cho tân ngữ (Object Complement)",
+                                        "Trạng ngữ chỉ cách thức (Adverbial)",
+                                        "Bổ ngữ cho chủ ngữ (Subject Complement)"
+                                ],
+                                "a": 1,
+                                "exp": "\"a resounding success\" (thành công vang dội) là cụm danh từ làm Bổ ngữ cho tân ngữ \"the annual charity campaign\" sau động từ \"declared\"."
+                        },
+                        {
+                                "q": "Xác định cấu trúc của câu sau: \"The foreign professor gave the outstanding student helpful advice on writing essays.\"",
+                                "options": [
+                                        "S + V + O1 + O2",
+                                        "S + V + O + C",
+                                        "S + V + O + Adv",
+                                        "S + V + C + Adv"
+                                ],
+                                "a": 0,
+                                "exp": "The foreign professor (S) + gave (V) + the outstanding student (O1 gián tiếp) + helpful advice on writing essays (O2 trực tiếp)."
+                        },
+                        {
+                                "q": "Xác định cấu trúc của câu sau: \"Long-term stress and poor sleep can make individuals irritable and anxious.\"",
+                                "options": [
+                                        "S + V + O1 + O2",
+                                        "S + V + O + Adv",
+                                        "S + V + C + Adv",
+                                        "S + V + O + C"
+                                ],
+                                "a": 3,
+                                "exp": "Long-term stress and poor sleep (S) + can make (V) + individuals (O) + irritable and anxious (C - cặp tính từ làm bổ ngữ cho tân ngữ individuals)."
+                        }
+                ]
         }
-    ],
+],
     "nouns": [
         {
             "title": "Bài 1: Nhận biết Danh từ qua Hậu tố (Suffixes)",
