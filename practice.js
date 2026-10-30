@@ -2880,7 +2880,7 @@ window.switchSelfTopic = function(topicId) {
         const topicPasswords = {
             'components': [...allPasses, 'cb219'],
             'structures': allPasses,
-            'nouns': [...fullPasses, 'cb213'],
+            'nouns': [...fullPasses, 'cb213', 'cb219'],
             'pronouns': [...fullPasses, 'cb213'],
             'verbs': [...fullPasses, 'cb213'],
             'adjectives': [...fullPasses, 'cb213'],
