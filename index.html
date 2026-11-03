@@ -5,22 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BASIC WRITING</title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="styles.css?v=13">
 </head>
 <body>
 
     <div id="login-modal" class="login-overlay" style="display: none;">
-        <div class="modal-content login-modal">
-            <h2 style="color: var(--primary-color); margin-bottom: 24px; font-size: 1.8rem; text-align: center;">NHẬP THÔNG TIN<br>ĐỂ BẮT ĐẦU HỌC 🚀</h2>
-            <div class="form-group">
-                <label for="student-name">Họ và Tên</label>
-                <input type="text" id="student-name" placeholder="Ví dụ: Nguyễn Văn A">
+        <div class="login-card-custom">
+            <!-- Miss Nguyet Avatar Brand Ring -->
+            <div class="login-teacher-avatar-wrap">
+                <div class="login-teacher-halo">
+                    <img src="miss_nguyet.jpg" alt="Miss Nguyet" class="login-teacher-avatar">
+                </div>
+                <span class="login-teacher-badge">
+                    <i class="fa-solid fa-certificate"></i> LEAD INSTRUCTOR
+                </span>
             </div>
-            <div class="form-group" style="margin-bottom: 32px;">
-                <label for="student-class">Lớp</label>
-                <input type="text" id="student-class" placeholder="Ví dụ: 10A1">
+
+            <div class="login-brand-tag">
+                <i class="fa-solid fa-graduation-cap"></i> Welcome to Miss Nguyet's Class!
             </div>
-            <button class="btn-primary" style="width: 100%; font-size: 1.2rem; padding: 14px; border-radius: 12px; border: none;" onclick="saveStudentInfo()">BẮT ĐẦU HỌC</button>
+            <div class="login-course-title">BASIC WRITING &amp; SENTENCE STRUCTURES</div>
+            <h2 class="login-title-custom">NHẬP THÔNG TIN<br/>ĐỂ BẮT ĐẦU HỌC 🚀</h2>
+            
+            <div class="login-form">
+                <div class="input-group-custom">
+                    <label for="student-name">
+                        <i class="fa-solid fa-user-pen" style="color: #6366f1;"></i> HỌ VÀ TÊN HỌC VIÊN:
+                    </label>
+                    <input type="text" id="student-name" placeholder="Nhập họ và tên học viên..." autocomplete="off" onkeydown="if(event.key==='Enter') document.getElementById('student-class').focus()">
+                </div>
+
+                <div class="input-group-custom">
+                    <label for="student-class">
+                        <i class="fa-solid fa-chalkboard-user" style="color: #06b6d4;"></i> MÃ LỚP HỌC:
+                    </label>
+                    <input type="text" id="student-class" placeholder="Nhập mã lớp học... (Ví dụ: ONB104)" autocomplete="off" onkeydown="if(event.key==='Enter') saveStudentInfo()">
+                </div>
+
+                <button class="btn-login-custom" onclick="saveStudentInfo()">
+                    <span>BẮT ĐẦU HỌC</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+                <div class="login-footer-signature">
+                    <a href="https://www.facebook.com/nguyetpham28" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-facebook" style="color: #1877f2;"></i>
+                        <span>ENGLISH WITH MISS NGUYET</span>
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
 
