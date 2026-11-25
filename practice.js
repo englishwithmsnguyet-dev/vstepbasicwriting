@@ -2708,6 +2708,22 @@ let currentSelfExerciseIdx = 0;
 let selfPracticeUserAnswers = {}; // key: `${topicId}_${exIdx}_${qIdx}`
 
 window.getTopicStatus = function(topicId) {
+    const sName = (localStorage.getItem('studentName') || document.getElementById('student-name')?.value || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[đĐ]/g, 'd').trim();
+    const sClass = (localStorage.getItem('studentClass') || document.getElementById('student-class')?.value || '').toLowerCase().replace(/^(lop|lớp)\s*/i, '').replace(/\s+/g, '').trim();
+
+    if (typeof window.isGiaTueUser === 'function' && window.isGiaTueUser(sName, sClass)) {
+        return 'unlocked';
+    }
+    const masterPasses = ['cb206', 'cb211', 'cb210', 'missnguyet2026', 'cb212', 'onb103', 'b212', 'b2', 'giatue', 'gia tue'];
+    if (masterPasses.includes(sClass)) {
+        return 'unlocked';
+    }
+    if (sClass === 'cb220') {
+        return (topicId === 'components' || topicId === 'nouns') ? 'unlocked' : 'locked';
+    }
+    if (sClass === 'cb219') {
+        return (topicId === 'components' || topicId === 'nouns' || topicId === 'verbs') ? 'unlocked' : 'locked';
+    }
     if (typeof topicsData !== 'undefined') {
         const t1 = topicsData.find(t => t.id === topicId);
         if (t1) return t1.status;
@@ -2720,6 +2736,9 @@ window.getTopicStatus = function(topicId) {
 };
 
 window.renderSelfPracticeView = function() {
+    if (typeof window.applyClassPermissions === 'function') {
+        window.applyClassPermissions();
+    }
     // If current selected topic is locked, try to switch to first unlocked topic
     let currentStatus = window.getTopicStatus ? window.getTopicStatus(currentSelfTopicId) : 'locked';
     if (currentStatus === 'locked') {
@@ -2840,6 +2859,23 @@ window.renderSelfPracticeView = function() {
             </div>
 
             <!-- KHU VỰC BÀI TẬP -->
+            ${(currentSelfTopicId === 'verbs' && currentSelfExerciseIdx === 2 && currentStatus !== 'locked') ? `
+                <div style="background: #f0fdf4; border: 1.5px solid #86efac; border-radius: 14px; padding: 14px 18px; margin-bottom: 20px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;">
+                    <div style="display: flex; align-items: center; gap: 8px; color: #166534; font-weight: 700; font-size: 1.05rem;">
+                        <span style="font-size: 1.3rem;">📖</span>
+                        <span>Tra cứu nhanh: 14 Động từ khiếm khuyết (B1 Level)</span>
+                    </div>
+                    <button type="button" onclick="const box = document.getElementById('self-quick-modal-ref'); box.style.display = box.style.display === 'none' ? 'block' : 'none'; this.innerHTML = box.style.display === 'none' ? '💡 Xem bảng tra cứu' : '🔼 Thu gọn bảng tra cứu';" style="background: white; border: 1.5px solid #16a34a; color: #16a34a; padding: 6px 16px; border-radius: 20px; font-weight: 700; cursor: pointer; font-size: 0.92rem; transition: all 0.2s; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+                        💡 Xem bảng tra cứu
+                    </button>
+                    <div id="self-quick-modal-ref" style="display: none; width: 100%; margin-top: 14px; text-align: center; background: white; padding: 14px; border-radius: 10px; border: 1px solid #cbd5e1;">
+                        <a href="modal_verbs_b1.jpg" target="_blank" title="Nhấp để xem ảnh lớn">
+                            <img src="modal_verbs_b1.jpg?v=20261125" alt="Bảng Động từ khiếm khuyết" style="max-width: 100%; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+                        </a>
+                        <div style="margin-top: 8px; font-size: 0.9rem; color: #64748b; font-style: italic;">🔍 Nhấp vào ảnh để xem kích thước lớn</div>
+                    </div>
+                </div>
+            ` : ''}
             ${currentStatus === 'locked' ? `
                 <div style="background: white; border-radius: 16px; padding: 48px 24px; box-shadow: var(--shadow-md); margin-bottom: 24px; text-align: center; border: 2px dashed #cbd5e1;">
                     <div style="font-size: 4rem; margin-bottom: 16px;">🔒</div>
@@ -2870,27 +2906,30 @@ window.renderSelfPracticeView = function() {
 };
 
 window.switchSelfTopic = function(topicId) {
+    if (typeof window.applyClassPermissions === 'function') {
+        window.applyClassPermissions();
+    }
     const status = window.getTopicStatus ? window.getTopicStatus(topicId) : 'locked';
     if (status === 'locked') {
         const pass = prompt('Chủ điểm này đang bị khóa. Vui lòng nhập mã lớp để mở khóa:');
         if (pass === null) return; // User cancelled
         
-        const allPasses = ['missnguyet2026', 'cb206', 'cb210', 'cb211', 'cb213', 'onb103', 'b212', 'cb212'];
-        const fullPasses = ['missnguyet2026', 'cb206', 'cb210', 'cb211', 'cb212', 'onb103', 'b212'];
+        const allPasses = ['missnguyet2026', 'cb206', 'cb210', 'cb211', 'cb213', 'onb103', 'b212', 'cb212', 'b2', 'giatue', 'gia tue'];
+        const fullPasses = ['missnguyet2026', 'cb206', 'cb210', 'cb211', 'cb212', 'onb103', 'b212', 'b2', 'giatue', 'gia tue'];
         const topicPasswords = {
             'components': [...allPasses, 'cb219', 'cb220'],
             'structures': allPasses,
-            'nouns': [...fullPasses, 'cb213', 'cb219'],
+            'nouns': [...fullPasses, 'cb213', 'cb219', 'cb220'],
             'pronouns': [...fullPasses, 'cb213'],
-            'verbs': [...fullPasses, 'cb213'],
+            'verbs': [...fullPasses, 'cb213', 'cb219'],
             'adjectives': [...fullPasses, 'cb213'],
             'adverbs': [...fullPasses, 'cb213'],
             'prepositions': [...fullPasses, 'cb213'],
             'conjunctions': fullPasses
         };
-        const enteredPass = pass.trim().toLowerCase();
+        const enteredPass = pass.trim().toLowerCase().replace(/^(lop|lớp)\s*/i, '').replace(/\s+/g, '');
         const validPasses = topicPasswords[topicId] || fullPasses;
-        const masterPasses = ['cb206', 'cb211', 'cb210', 'missnguyet2026', 'cb212', 'onb103', 'b212'];
+        const masterPasses = ['cb206', 'cb211', 'cb210', 'missnguyet2026', 'cb212', 'onb103', 'b212', 'b2', 'giatue', 'gia tue'];
         
         if (enteredPass && (validPasses.includes(enteredPass) || masterPasses.includes(enteredPass))) {
             if (typeof topicsData !== 'undefined') {
@@ -2915,7 +2954,13 @@ window.switchSelfTopic = function(topicId) {
             currentSelfExerciseIdx = 0;
             renderSelfPracticeView();
         } else {
-            alert('❌ Mật khẩu không đúng!');
+            if (enteredPass === 'cb220') {
+                alert('❌ Lớp CB220 chỉ được mở khóa đến Thành phần câu và Danh từ. Bài tập này chưa được mở!');
+            } else if (enteredPass === 'cb219') {
+                alert('❌ Lớp CB219 chỉ được mở khóa đến Thành phần câu, Danh từ và Động từ. Bài tập này chưa được mở!');
+            } else {
+                alert('❌ Mật khẩu không đúng!');
+            }
         }
         return;
     }

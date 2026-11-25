@@ -705,6 +705,52 @@ const chapter2TopicsData = [
     }
 ];
 
+// Helper: Check if student is Gia Tuệ or class B2
+window.isGiaTueUser = function(nameCheck, classCheck) {
+    const sName = (nameCheck || localStorage.getItem('studentName') || document.getElementById('student-name')?.value || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[đĐ]/g, 'd').trim();
+    const sClass = (classCheck || localStorage.getItem('studentClass') || document.getElementById('student-class')?.value || '').toLowerCase().replace(/^(lop|lớp)\s*/i, '').replace(/\s+/g, '').trim();
+    return sName.includes('gia tue') || sClass === 'b2';
+};
+
+// Helper: Apply class-based access permissions
+window.applyClassPermissions = function(classCheck, nameCheck) {
+    const sName = (nameCheck || localStorage.getItem('studentName') || document.getElementById('student-name')?.value || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[đĐ]/g, 'd').trim();
+    const sClass = (classCheck || localStorage.getItem('studentClass') || document.getElementById('student-class')?.value || '').toLowerCase().replace(/^(lop|lớp)\s*/i, '').replace(/\s+/g, '').trim();
+
+    const masterPasses = ['cb206', 'cb211', 'cb210', 'missnguyet2026', 'cb212', 'onb103', 'b212', 'b2', 'giatue', 'gia tue'];
+
+    if (window.isGiaTueUser(sName, sClass) || masterPasses.includes(sClass)) {
+        // Full access
+        if (typeof topicsData !== 'undefined') topicsData.forEach(t => t.status = 'unlocked');
+        if (typeof chapter2TopicsData !== 'undefined') chapter2TopicsData.forEach(t => t.status = 'unlocked');
+    } else if (sClass === 'cb219') {
+        // CB219: Mở 'components' (Các thành phần câu), 'nouns' (Danh từ) và 'verbs' (Động từ)
+        if (typeof topicsData !== 'undefined') {
+            topicsData.forEach(t => t.status = (t.id === 'components') ? 'unlocked' : 'locked');
+        }
+        if (typeof chapter2TopicsData !== 'undefined') {
+            chapter2TopicsData.forEach(t => t.status = (t.id === 'nouns' || t.id === 'verbs') ? 'unlocked' : 'locked');
+        }
+    } else if (sClass === 'cb220') {
+        // CB220: Mở 'components' (Các thành phần câu) và 'nouns' (Danh từ)
+        if (typeof topicsData !== 'undefined') {
+            topicsData.forEach(t => t.status = (t.id === 'components') ? 'unlocked' : 'locked');
+        }
+        if (typeof chapter2TopicsData !== 'undefined') {
+            chapter2TopicsData.forEach(t => t.status = (t.id === 'nouns') ? 'unlocked' : 'locked');
+        }
+    }
+};
+
+window.unlockAllTopicsForGiaTue = function() {
+    window.applyClassPermissions('b2', 'giatue');
+};
+
+// Auto-apply immediately if class is already saved
+if (typeof window.applyClassPermissions === 'function') {
+    window.applyClassPermissions();
+}
+
 const sidebarNav = document.getElementById('sidebar-nav');
 const contentWrapper = document.getElementById('content-wrapper');
 
@@ -806,6 +852,9 @@ function renderView(viewId) {
 
 
 function renderChapter2TopicsGrid() {
+    if (typeof window.applyClassPermissions === 'function') {
+        window.applyClassPermissions();
+    }
     const styling = [
         { bg: 'linear-gradient(135deg, rgba(87,70,227,0.08) 0%, rgba(87,70,227,0.01) 100%)', border: '#5746e3', icon: '✨', shadow: 'rgba(87,70,227,0.2)' },
         { bg: 'linear-gradient(135deg, rgba(239,68,68,0.08) 0%, rgba(239,68,68,0.01) 100%)', border: '#ef4444', icon: '🚀', shadow: 'rgba(239,68,68,0.2)' },
@@ -840,6 +889,9 @@ function renderChapter2TopicsGrid() {
 }
 
 function renderTopicsGrid() {
+    if (typeof window.applyClassPermissions === 'function') {
+        window.applyClassPermissions();
+    }
     const styling = [
         { bg: 'linear-gradient(135deg, rgba(87,70,227,0.08) 0%, rgba(87,70,227,0.01) 100%)', border: '#5746e3', icon: '✨', shadow: 'rgba(87,70,227,0.2)' },
         { bg: 'linear-gradient(135deg, rgba(239,68,68,0.08) 0%, rgba(239,68,68,0.01) 100%)', border: '#ef4444', icon: '🚀', shadow: 'rgba(239,68,68,0.2)' },
@@ -1483,6 +1535,219 @@ const verbsTheoryData = [
                 </div>
             </div>
 
+            <!-- BẢNG TỔNG HỢP CÁC ĐỘNG TỪ KHIẾM KHUYẾT THÔNG DỤNG (B1 LEVEL) -->
+            <div style="background: white; border-radius: 18px; border: 2px solid #bae6fd; box-shadow: 0 4px 20px rgba(2, 132, 199, 0.08); overflow: hidden; margin-bottom: 28px;">
+                <!-- Header Banner -->
+                <div style="background: linear-gradient(135deg, #0369a1 0%, #0284c7 100%); padding: 14px 18px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; color: white;">
+                    <div style="display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 1.12rem; letter-spacing: 0.2px;">
+                        <span style="font-size: 1.35rem;">📖</span>
+                        <span>CÁC ĐỘNG TỪ KHIẾM KHUYẾT (MODAL VERBS) THÔNG DỤNG – B1 LEVEL</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 8px;">
+                        <button type="button" onclick="window.toggleModalInfographicView('table')" id="btn-modal-view-table" style="background: white; color: #0284c7; border: none; padding: 6px 14px; border-radius: 20px; font-weight: 700; font-size: 0.88rem; cursor: pointer; transition: all 0.2s; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                            📋 Bảng tương tác
+                        </button>
+                        <button type="button" onclick="window.toggleModalInfographicView('image')" id="btn-modal-view-image" style="background: rgba(255,255,255,0.22); color: white; border: 1px solid rgba(255,255,255,0.45); padding: 6px 14px; border-radius: 20px; font-weight: 700; font-size: 0.88rem; cursor: pointer; transition: all 0.2s;">
+                            🖼️ Ảnh Infographic
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Bảng tương tác HTML -->
+                <div id="modal-table-container" style="overflow-x: auto; padding: 14px; -webkit-overflow-scrolling: touch;">
+                    <table style="width: 100%; border-collapse: separate; border-spacing: 0 8px; font-size: 1.02rem; min-width: 660px;">
+                        <thead>
+                            <tr style="text-align: center;">
+                                <th style="background: #e0e7ff; color: #3730a3; padding: 12px 10px; border-radius: 10px 0 0 10px; width: 55px; font-weight: 800; font-size: 0.95rem;">STT</th>
+                                <th style="background: #fce7f3; color: #831843; padding: 12px 14px; width: 170px; font-weight: 800; font-size: 0.95rem;">Động từ / Cấu trúc</th>
+                                <th style="background: #fef3c7; color: #92400e; padding: 12px 16px; text-align: left; width: 250px; font-weight: 800; font-size: 0.95rem;">Nghĩa tiếng Việt</th>
+                                <th style="background: #e0f2fe; color: #075985; padding: 12px 18px; text-align: left; border-radius: 0 10px 10px 0; font-weight: 800; font-size: 0.95rem;">Ví dụ đơn giản</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- 1. can -->
+                            <tr style="background: #f8fafc; transition: background 0.15s;" onmouseover="this.style.background='#f1f5f9'" onmouseout="this.style.background='#f8fafc'">
+                                <td style="text-align: center; padding: 10px; border-radius: 10px 0 0 10px; font-weight: 800; color: #475569;">1</td>
+                                <td style="text-align: center; padding: 10px;"><span style="background: #cbe2fe; color: #1e3a8a; padding: 6px 18px; border-radius: 9999px; font-weight: 800; display: inline-block; min-width: 110px; border: 1px solid #93c5fd; box-shadow: 0 1px 2px rgba(0,0,0,0.04);">can</span></td>
+                                <td style="padding: 10px 16px; color: #334155; font-weight: 500;">có thể, có khả năng</td>
+                                <td style="padding: 10px 18px; border-radius: 0 10px 10px 0;">
+                                    <div style="display: flex; align-items: center; justify-content: space-between; gap: 8px;">
+                                        <span style="color: #1e293b;">I <b style="color: #1d4ed8; font-weight: 800;">can</b> swim.</span>
+                                        <span style="font-size: 1.45rem;">🏊</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <!-- 2. could -->
+                            <tr style="background: #ffffff; transition: background 0.15s;" onmouseover="this.style.background='#f1f5f9'" onmouseout="this.style.background='#ffffff'">
+                                <td style="text-align: center; padding: 10px; border-radius: 10px 0 0 10px; font-weight: 800; color: #475569;">2</td>
+                                <td style="text-align: center; padding: 10px;"><span style="background: #cbe2fe; color: #1e3a8a; padding: 6px 18px; border-radius: 9999px; font-weight: 800; display: inline-block; min-width: 110px; border: 1px solid #93c5fd; box-shadow: 0 1px 2px rgba(0,0,0,0.04);">could</span></td>
+                                <td style="padding: 10px 16px; color: #334155; font-weight: 500;">có thể (quá khứ, lịch sự)</td>
+                                <td style="padding: 10px 18px; border-radius: 0 10px 10px 0;">
+                                    <div style="display: flex; align-items: center; justify-content: space-between; gap: 8px;">
+                                        <span style="color: #1e293b;">I <b style="color: #1d4ed8; font-weight: 800;">could</b> swim when I was 10.</span>
+                                        <span style="font-size: 1.45rem;">🏊‍♂️</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <!-- 3. may -->
+                            <tr style="background: #f8fafc; transition: background 0.15s;" onmouseover="this.style.background='#f1f5f9'" onmouseout="this.style.background='#f8fafc'">
+                                <td style="text-align: center; padding: 10px; border-radius: 10px 0 0 10px; font-weight: 800; color: #475569;">3</td>
+                                <td style="text-align: center; padding: 10px;"><span style="background: #c5f1d8; color: #065f46; padding: 6px 18px; border-radius: 9999px; font-weight: 800; display: inline-block; min-width: 110px; border: 1px solid #86efac; box-shadow: 0 1px 2px rgba(0,0,0,0.04);">may</span></td>
+                                <td style="padding: 10px 16px; color: #334155; font-weight: 500;">có thể, có lẽ; được phép</td>
+                                <td style="padding: 10px 18px; border-radius: 0 10px 10px 0;">
+                                    <div style="display: flex; align-items: center; justify-content: space-between; gap: 8px;">
+                                        <span style="color: #1e293b;">It <b style="color: #1d4ed8; font-weight: 800;">may</b> rain tomorrow.</span>
+                                        <span style="font-size: 1.45rem;">🌧️</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <!-- 4. might -->
+                            <tr style="background: #ffffff; transition: background 0.15s;" onmouseover="this.style.background='#f1f5f9'" onmouseout="this.style.background='#ffffff'">
+                                <td style="text-align: center; padding: 10px; border-radius: 10px 0 0 10px; font-weight: 800; color: #475569;">4</td>
+                                <td style="text-align: center; padding: 10px;"><span style="background: #c5f1d8; color: #065f46; padding: 6px 18px; border-radius: 9999px; font-weight: 800; display: inline-block; min-width: 110px; border: 1px solid #86efac; box-shadow: 0 1px 2px rgba(0,0,0,0.04);">might</span></td>
+                                <td style="padding: 10px 16px; color: #334155; font-weight: 500;">có thể, có lẽ <span style="color: #64748b; font-size: 0.92rem;">(khả năng thấp hơn)</span></td>
+                                <td style="padding: 10px 18px; border-radius: 0 10px 10px 0;">
+                                    <div style="display: flex; align-items: center; justify-content: space-between; gap: 8px;">
+                                        <span style="color: #1e293b;">She <b style="color: #1d4ed8; font-weight: 800;">might</b> be at home.</span>
+                                        <span style="font-size: 1.45rem;">🏡</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <!-- 5. must -->
+                            <tr style="background: #f8fafc; transition: background 0.15s;" onmouseover="this.style.background='#f1f5f9'" onmouseout="this.style.background='#f8fafc'">
+                                <td style="text-align: center; padding: 10px; border-radius: 10px 0 0 10px; font-weight: 800; color: #475569;">5</td>
+                                <td style="text-align: center; padding: 10px;"><span style="background: #feeaa7; color: #78350f; padding: 6px 18px; border-radius: 9999px; font-weight: 800; display: inline-block; min-width: 110px; border: 1px solid #fde047; box-shadow: 0 1px 2px rgba(0,0,0,0.04);">must</span></td>
+                                <td style="padding: 10px 16px; color: #334155; font-weight: 500;">phải, bắt buộc</td>
+                                <td style="padding: 10px 18px; border-radius: 0 10px 10px 0;">
+                                    <div style="display: flex; align-items: center; justify-content: space-between; gap: 8px;">
+                                        <span style="color: #1e293b;">You <b style="color: #1d4ed8; font-weight: 800;">must</b> wear a helmet.</span>
+                                        <span style="font-size: 1.45rem;">🪖</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <!-- 6. should -->
+                            <tr style="background: #ffffff; transition: background 0.15s;" onmouseover="this.style.background='#f1f5f9'" onmouseout="this.style.background='#ffffff'">
+                                <td style="text-align: center; padding: 10px; border-radius: 10px 0 0 10px; font-weight: 800; color: #475569;">6</td>
+                                <td style="text-align: center; padding: 10px;"><span style="background: #feeaa7; color: #78350f; padding: 6px 18px; border-radius: 9999px; font-weight: 800; display: inline-block; min-width: 110px; border: 1px solid #fde047; box-shadow: 0 1px 2px rgba(0,0,0,0.04);">should</span></td>
+                                <td style="padding: 10px 16px; color: #334155; font-weight: 500;">nên</td>
+                                <td style="padding: 10px 18px; border-radius: 0 10px 10px 0;">
+                                    <div style="display: flex; align-items: center; justify-content: space-between; gap: 8px;">
+                                        <span style="color: #1e293b;">You <b style="color: #1d4ed8; font-weight: 800;">should</b> study harder.</span>
+                                        <span style="font-size: 1.45rem;">📚</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <!-- 7. will -->
+                            <tr style="background: #f8fafc; transition: background 0.15s;" onmouseover="this.style.background='#f1f5f9'" onmouseout="this.style.background='#f8fafc'">
+                                <td style="text-align: center; padding: 10px; border-radius: 10px 0 0 10px; font-weight: 800; color: #475569;">7</td>
+                                <td style="text-align: center; padding: 10px;"><span style="background: #fbcfe8; color: #831843; padding: 6px 18px; border-radius: 9999px; font-weight: 800; display: inline-block; min-width: 110px; border: 1px solid #f9a8d4; box-shadow: 0 1px 2px rgba(0,0,0,0.04);">will</span></td>
+                                <td style="padding: 10px 16px; color: #334155; font-weight: 500;">sẽ</td>
+                                <td style="padding: 10px 18px; border-radius: 0 10px 10px 0;">
+                                    <div style="display: flex; align-items: center; justify-content: space-between; gap: 8px;">
+                                        <span style="color: #1e293b;">I <b style="color: #1d4ed8; font-weight: 800;">will</b> call you later.</span>
+                                        <span style="font-size: 1.45rem;">📱</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <!-- 8. would -->
+                            <tr style="background: #ffffff; transition: background 0.15s;" onmouseover="this.style.background='#f1f5f9'" onmouseout="this.style.background='#ffffff'">
+                                <td style="text-align: center; padding: 10px; border-radius: 10px 0 0 10px; font-weight: 800; color: #475569;">8</td>
+                                <td style="text-align: center; padding: 10px;"><span style="background: #fbcfe8; color: #831843; padding: 6px 18px; border-radius: 9999px; font-weight: 800; display: inline-block; min-width: 110px; border: 1px solid #f9a8d4; box-shadow: 0 1px 2px rgba(0,0,0,0.04);">would</span></td>
+                                <td style="padding: 10px 16px; color: #334155; font-weight: 500;">sẽ; muốn <span style="color: #64748b; font-size: 0.92rem;">(trong lời mời lịch sự)</span></td>
+                                <td style="padding: 10px 18px; border-radius: 0 10px 10px 0;">
+                                    <div style="display: flex; align-items: center; justify-content: space-between; gap: 8px;">
+                                        <span style="color: #1e293b;"><b style="color: #1d4ed8; font-weight: 800;">Would</b> you like some tea?</span>
+                                        <span style="font-size: 1.45rem;">☕</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <!-- 9. shall -->
+                            <tr style="background: #f8fafc; transition: background 0.15s;" onmouseover="this.style.background='#f1f5f9'" onmouseout="this.style.background='#f8fafc'">
+                                <td style="text-align: center; padding: 10px; border-radius: 10px 0 0 10px; font-weight: 800; color: #475569;">9</td>
+                                <td style="text-align: center; padding: 10px;"><span style="background: #fbcfe8; color: #831843; padding: 6px 18px; border-radius: 9999px; font-weight: 800; display: inline-block; min-width: 110px; border: 1px solid #f9a8d4; box-shadow: 0 1px 2px rgba(0,0,0,0.04);">shall</span></td>
+                                <td style="padding: 10px 16px; color: #334155; font-weight: 500;">sẽ; dùng để đề nghị hoặc hỏi ý kiến</td>
+                                <td style="padding: 10px 18px; border-radius: 0 10px 10px 0;">
+                                    <div style="display: flex; align-items: center; justify-content: space-between; gap: 8px;">
+                                        <span style="color: #1e293b;"><b style="color: #1d4ed8; font-weight: 800;">Shall</b> we go now?</span>
+                                        <span style="font-size: 1.45rem;">🧭</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <!-- 10. ought to -->
+                            <tr style="background: #ffffff; transition: background 0.15s;" onmouseover="this.style.background='#f1f5f9'" onmouseout="this.style.background='#ffffff'">
+                                <td style="text-align: center; padding: 10px; border-radius: 10px 0 0 10px; font-weight: 800; color: #475569;">10</td>
+                                <td style="text-align: center; padding: 10px;"><span style="background: #edd8fc; color: #581c87; padding: 6px 18px; border-radius: 9999px; font-weight: 800; display: inline-block; min-width: 110px; border: 1px solid #d8b4fe; box-shadow: 0 1px 2px rgba(0,0,0,0.04);">ought to</span></td>
+                                <td style="padding: 10px 16px; color: #334155; font-weight: 500;">nên</td>
+                                <td style="padding: 10px 18px; border-radius: 0 10px 10px 0;">
+                                    <div style="display: flex; align-items: center; justify-content: space-between; gap: 8px;">
+                                        <span style="color: #1e293b;">You <b style="color: #1d4ed8; font-weight: 800;">ought to</b> be more careful.</span>
+                                        <span style="font-size: 1.45rem;">⚠️</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <!-- 11. have to -->
+                            <tr style="background: #f8fafc; transition: background 0.15s;" onmouseover="this.style.background='#f1f5f9'" onmouseout="this.style.background='#f8fafc'">
+                                <td style="text-align: center; padding: 10px; border-radius: 10px 0 0 10px; font-weight: 800; color: #475569;">11</td>
+                                <td style="text-align: center; padding: 10px;"><span style="background: #edd8fc; color: #581c87; padding: 6px 18px; border-radius: 9999px; font-weight: 800; display: inline-block; min-width: 110px; border: 1px solid #d8b4fe; box-shadow: 0 1px 2px rgba(0,0,0,0.04);">have to</span></td>
+                                <td style="padding: 10px 16px; color: #334155; font-weight: 500;">phải, cần phải</td>
+                                <td style="padding: 10px 18px; border-radius: 0 10px 10px 0;">
+                                    <div style="display: flex; align-items: center; justify-content: space-between; gap: 8px;">
+                                        <span style="color: #1e293b;">I <b style="color: #1d4ed8; font-weight: 800;">have to</b> finish my homework.</span>
+                                        <span style="font-size: 1.45rem;">📝</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <!-- 12. had better -->
+                            <tr style="background: #ffffff; transition: background 0.15s;" onmouseover="this.style.background='#f1f5f9'" onmouseout="this.style.background='#ffffff'">
+                                <td style="text-align: center; padding: 10px; border-radius: 10px 0 0 10px; font-weight: 800; color: #475569;">12</td>
+                                <td style="text-align: center; padding: 10px;"><span style="background: #edd8fc; color: #581c87; padding: 6px 18px; border-radius: 9999px; font-weight: 800; display: inline-block; min-width: 110px; border: 1px solid #d8b4fe; box-shadow: 0 1px 2px rgba(0,0,0,0.04);">had better</span></td>
+                                <td style="padding: 10px 16px; color: #334155; font-weight: 500;">tốt hơn nên, nên <span style="color: #64748b; font-size: 0.92rem;">(lời khuyên mạnh)</span></td>
+                                <td style="padding: 10px 18px; border-radius: 0 10px 10px 0;">
+                                    <div style="display: flex; align-items: center; justify-content: space-between; gap: 8px;">
+                                        <span style="color: #1e293b;">You <b style="color: #1d4ed8; font-weight: 800;">had better</b> leave early.</span>
+                                        <span style="font-size: 1.45rem;">⏰</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <!-- 13. need to -->
+                            <tr style="background: #f8fafc; transition: background 0.15s;" onmouseover="this.style.background='#f1f5f9'" onmouseout="this.style.background='#f8fafc'">
+                                <td style="text-align: center; padding: 10px; border-radius: 10px 0 0 10px; font-weight: 800; color: #475569;">13</td>
+                                <td style="text-align: center; padding: 10px;"><span style="background: #edd8fc; color: #581c87; padding: 6px 18px; border-radius: 9999px; font-weight: 800; display: inline-block; min-width: 110px; border: 1px solid #d8b4fe; box-shadow: 0 1px 2px rgba(0,0,0,0.04);">need to</span></td>
+                                <td style="padding: 10px 16px; color: #334155; font-weight: 500;">cần phải</td>
+                                <td style="padding: 10px 18px; border-radius: 0 10px 10px 0;">
+                                    <div style="display: flex; align-items: center; justify-content: space-between; gap: 8px;">
+                                        <span style="color: #1e293b;">You <b style="color: #1d4ed8; font-weight: 800;">need to</b> drink more water.</span>
+                                        <span style="font-size: 1.45rem;">🧴</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <!-- 14. be able to -->
+                            <tr style="background: #ffffff; transition: background 0.15s;" onmouseover="this.style.background='#f1f5f9'" onmouseout="this.style.background='#ffffff'">
+                                <td style="text-align: center; padding: 10px; border-radius: 10px 0 0 10px; font-weight: 800; color: #475569;">14</td>
+                                <td style="text-align: center; padding: 10px;"><span style="background: #edd8fc; color: #581c87; padding: 6px 18px; border-radius: 9999px; font-weight: 800; display: inline-block; min-width: 110px; border: 1px solid #d8b4fe; box-shadow: 0 1px 2px rgba(0,0,0,0.04);">be able to</span></td>
+                                <td style="padding: 10px 16px; color: #334155; font-weight: 500;">có thể, có khả năng</td>
+                                <td style="padding: 10px 18px; border-radius: 0 10px 10px 0;">
+                                    <div style="display: flex; align-items: center; justify-content: space-between; gap: 8px;">
+                                        <span style="color: #1e293b;">I <b style="color: #1d4ed8; font-weight: 800;">am able to</b> solve this problem.</span>
+                                        <span style="font-size: 1.45rem;">💡</span>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Khung hiển thị Ảnh Infographic gốc -->
+                <div id="modal-image-container" style="display: none; padding: 20px; text-align: center; background: #f8fafc;">
+                    <a href="modal_verbs_b1.jpg" target="_blank" title="Nhấp để mở ảnh cỡ lớn">
+                        <img src="modal_verbs_b1.jpg?v=20261125" alt="Các động từ khiếm khuyết Modal Verbs thông dụng B1 Level" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 6px 18px rgba(0,0,0,0.08); border: 1px solid #cbd5e1; cursor: zoom-in;">
+                    </a>
+                    <div style="margin-top: 12px; font-size: 0.95rem; color: #64748b; font-style: italic;">
+                        🔍 Nhấp vào hình ảnh để xem toàn màn hình (kích thước gốc) hoặc lưu về máy để ôn tập.
+                    </div>
+                </div>
+            </div>
+
             <!-- BẢNG PHÂN LOẠI CHI TIẾT -->
             <div style="margin-bottom: 24px;">
                 <h4 style="color: #0f172a; font-size: 1.2rem; font-weight: 800; margin-bottom: 16px; display: flex; align-items: center; gap: 8px;">
@@ -1565,83 +1830,433 @@ const verbsTheoryData = [
                 </div>
             </div>
 
-            <!-- 5 QUY TẮC SỬ DỤNG TRONG VSTEP -->
-            <div style="background: #fffbeb; border: 2px dashed #f59e0b; border-radius: 12px; padding: 22px; margin-bottom: 24px;">
-                <div style="color: #b45309; font-weight: 800; font-size: 1.25rem; margin-bottom: 16px; display: flex; align-items: center; gap: 8px;">
-                    <span style="font-size: 1.4rem;">⚡</span> 5 QUY TẮC SỬ DỤNG BẮT BUỘC NHỚ KHI VIẾT CÂU
+            <!-- 5 QUY TẮC SỬ DỤNG TRONG VSTEP (INFOGRAPHIC STYLE) -->
+            <div style="margin-bottom: 28px;">
+                <div style="background: linear-gradient(135deg, #1e3a8a, #0284c7); color: white; padding: 14px 20px; border-radius: 16px; font-weight: 800; font-size: 1.2rem; margin-bottom: 20px; display: flex; align-items: center; justify-content: center; gap: 10px; box-shadow: 0 4px 14px rgba(2, 132, 199, 0.25); text-align: center;">
+                    <span style="font-size: 1.4rem;">⚡</span>
+                    <span>5 QUY TẮC VÀNG SỬ DỤNG ĐỘNG TỪ KHIẾM KHUYẾT (B1 LEVEL)</span>
                 </div>
-                
-                <div style="display: grid; gap: 16px; color: #92400e; font-size: 1.05rem; line-height: 1.6;">
-                    
-                    <!-- QUY TẮC 1 -->
-                    <div style="background: white; border-radius: 10px; padding: 14px 16px; border-left: 5px solid #f59e0b; box-shadow: 0 1px 3px rgba(0,0,0,0.03);">
-                        <b style="color: #b45309; font-size: 1.1rem;">1. Không chia theo thì (Không biến đổi theo thời gian):</b>
-                        <div style="margin-top: 6px; color: #334155;">
-                            Phần lớn ĐTKK (<i>should, must, ought to, had better...</i>) <b>không có dạng quá khứ hay tương lai</b>, luôn giữ nguyên hình thức.
+
+                <div class="mv-rules-wrapper">
+
+                    <!-- ==================== QUY TẮC 1 ==================== -->
+                    <div class="mv-rule-card" style="border-color: #93c5fd; background: linear-gradient(180deg, #ffffff 0%, #f0f9ff 100%);">
+                        <!-- Header -->
+                        <div style="display: flex; align-items: center; justify-content: center; gap: 14px; background: #dbeafe; border-radius: 999px; padding: 10px 22px; margin-bottom: 16px; flex-wrap: wrap;">
+                            <div style="background: #f97316; color: white; width: 44px; height: 44px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: 900; font-size: 1.45rem; border: 3px solid white; box-shadow: 0 3px 8px rgba(249, 115, 22, 0.35); flex-shrink: 0;">1</div>
+                            <div style="font-weight: 900; font-size: 1.3rem; color: #0f172a; text-align: center; border-bottom: 4px solid #fbbf24; padding-bottom: 2px;">
+                                Không chia theo thì như động từ thường.
+                            </div>
                         </div>
-                        <div style="margin-top: 8px; background: #fefce8; padding: 10px; border-radius: 6px; border: 1px solid #fef08a; font-size: 0.98rem;">
-                            <b style="color: #854d0e;">📌 Các trường hợp ngoại lệ khi lùi thì / diễn tả quá khứ:</b>
-                            <ul style="margin: 4px 0 0 0; padding-left: 20px; display: grid; gap: 4px; color: #713f12;">
-                                <li><b>can ➔ could:</b> Diễn tả khả năng trong quá khứ hoặc câu điều kiện/yêu cầu lịch sự. <br><i style="color: #64748b;">(VD: In the past, people <b>could not</b> communicate instantly.)</i></li>
-                                <li><b>have to ➔ had to:</b> Diễn tả sự bắt buộc trong quá khứ. <br><i style="color: #64748b;">(VD: Yesterday, I <b>had to</b> finish my report before 5 PM.)</i></li>
-                                <li><b>will ➔ would:</b> Diễn tả ý định trong quá khứ, câu gián tiếp hoặc câu điều kiện loại 2. <br><i style="color: #64748b;">(VD: She said she <b>would</b> help me.)</i></li>
-                                <li><b>may ➔ might:</b> Diễn tả khả năng trong quá khứ hoặc trong câu gián tiếp.</li>
-                            </ul>
+
+                        <!-- Definition Banner -->
+                        <div style="background: #fffbeb; border: 1.5px solid #fde68a; border-radius: 16px; padding: 14px 18px; margin-bottom: 18px; display: flex; align-items: flex-start; gap: 12px;">
+                            <span style="background: #0ea5e9; color: white; width: 28px; height: 28px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: 900; flex-shrink: 0; margin-top: 2px;">✓</span>
+                            <div style="font-size: 1.05rem; line-height: 1.6; color: #1e293b; font-weight: 600;">
+                                Các động từ khiếm khuyết như <b style="color: #ea580c; font-weight: 800;">can, could, should, must, will, may, might</b> không thay đổi hình thức như động từ thông thường.
+                            </div>
+                        </div>
+
+                        <!-- 2-Column Content -->
+                        <div class="mv-grid-45-55">
+                            <!-- Left: Transformations -->
+                            <div class="mv-sub-box" style="border: 2px solid #93c5fd;">
+                                <div class="mv-float-badge" style="background: #f97316; color: white;">
+                                    📌 Một số trường hợp cần nhớ:
+                                </div>
+                                <div style="display: grid; gap: 10px;">
+                                    <div class="mv-arrow-row">
+                                        <div class="mv-pill-cell" style="background: #dbeafe; color: #0f172a;">can</div>
+                                        <span style="color: #f97316; font-weight: 900; font-size: 1.25rem;">➔</span>
+                                        <div class="mv-pill-cell" style="background: #ffedd5; color: #c2410c;">could</div>
+                                    </div>
+                                    <div class="mv-arrow-row">
+                                        <div class="mv-pill-cell" style="background: #dbeafe; color: #0f172a;">have to</div>
+                                        <span style="color: #f97316; font-weight: 900; font-size: 1.25rem;">➔</span>
+                                        <div class="mv-pill-cell" style="background: #ffedd5; color: #c2410c;">had to</div>
+                                    </div>
+                                    <div class="mv-arrow-row">
+                                        <div class="mv-pill-cell" style="background: #dbeafe; color: #0f172a;">will</div>
+                                        <span style="color: #f97316; font-weight: 900; font-size: 1.25rem;">➔</span>
+                                        <div class="mv-pill-cell" style="background: #ffedd5; color: #c2410c;">would</div>
+                                    </div>
+                                    <div class="mv-arrow-row">
+                                        <div class="mv-pill-cell" style="background: #dbeafe; color: #0f172a;">may</div>
+                                        <span style="color: #f97316; font-weight: 900; font-size: 1.25rem;">➔</span>
+                                        <div class="mv-pill-cell" style="background: #ffedd5; color: #c2410c;">might</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Right: Examples -->
+                            <div class="mv-sub-box" style="border: 2px solid #93c5fd; display: flex; flex-direction: column; justify-content: space-between;">
+                                <div>
+                                    <div class="mv-float-badge" style="background: #0284c7; color: white;">
+                                        ✨ Ví dụ:
+                                    </div>
+                                    <div style="display: grid; gap: 14px; margin-top: 4px;">
+                                        <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; font-size: 1.06rem;">
+                                            <div style="display: flex; align-items: flex-start; gap: 8px;">
+                                                <span style="color: #0284c7; font-size: 1.2rem; line-height: 1.4;">•</span>
+                                                <span style="color: #0f172a; font-weight: 600;">In the past, people <span class="mv-hl-yellow">could not</span> communicate instantly.</span>
+                                            </div>
+                                            <span style="font-size: 1.8rem; flex-shrink: 0;">💻</span>
+                                        </div>
+                                        <div style="border-top: 2px dashed #cbd5e1;"></div>
+                                        <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; font-size: 1.06rem;">
+                                            <div style="display: flex; align-items: flex-start; gap: 8px;">
+                                                <span style="color: #0284c7; font-size: 1.2rem; line-height: 1.4;">•</span>
+                                                <span style="color: #0f172a; font-weight: 600;">Yesterday, I <span class="mv-hl-yellow">had to</span> finish my homework.</span>
+                                            </div>
+                                            <span style="font-size: 1.8rem; flex-shrink: 0;">📅</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div style="margin-top: 12px; font-size: 0.9rem; color: #64748b; text-align: right; font-style: italic;">
+                                    ⏰ Lùi thì sang quá khứ với could / had to
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- QUY TẮC 2 -->
-                    <div style="background: white; border-radius: 10px; padding: 14px 16px; border-left: 5px solid #f59e0b; box-shadow: 0 1px 3px rgba(0,0,0,0.03);">
-                        <b style="color: #b45309; font-size: 1.1rem;">2. Không chia theo chủ từ (Không phụ thuộc vào ngôi/số lượng):</b>
-                        <div style="margin-top: 6px; color: #334155;">
-                            Dù chủ ngữ là số ít (<i>He, She, It, Danh từ số ít, Danh từ không đếm được</i>) hay số nhiều (<i>They, We, Danh từ số nhiều</i>), ĐTKK vẫn <b>giữ nguyên và tuyệt đối không thêm s/es</b>.
+                    <!-- ==================== QUY TẮC 2 ==================== -->
+                    <div class="mv-rule-card" style="border-color: #86efac; background: linear-gradient(180deg, #ffffff 0%, #f0fdf4 100%);">
+                        <!-- Header -->
+                        <div style="text-align: center; margin-bottom: 16px;">
+                            <div style="display: inline-flex; align-items: center; gap: 10px; background: linear-gradient(135deg, #15803d, #16a34a); color: white; padding: 10px 28px; border-radius: 999px; font-weight: 900; font-size: 1.25rem; box-shadow: 0 4px 12px rgba(22, 163, 74, 0.28); flex-wrap: wrap; justify-content: center;">
+                                <span>QUY TẮC 2:</span>
+                                <span style="color: #bef264;">KHÔNG CHIA THEO CHỦ TỪ</span>
+                            </div>
                         </div>
-                        <div style="margin-top: 6px; font-size: 0.98rem;">
-                            <span style="color: #16a34a; font-weight: bold;">✅ Đúng:</span> He <b>can</b> swim. / She <b>must</b> go. / Water <b>can</b> boil at 100°C.<br>
-                            <span style="color: #dc2626; font-weight: bold;">❌ Sai:</span> He <del>cans</del> swim. / She <del>musts</del> go.
+
+                        <!-- Definition Banner -->
+                        <div style="background: #f0fdf4; border: 2px solid #86efac; border-radius: 16px; padding: 14px 18px; margin-bottom: 18px; display: flex; align-items: flex-start; gap: 12px;">
+                            <span style="background: #16a34a; color: white; width: 28px; height: 28px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: 900; flex-shrink: 0; margin-top: 2px;">✓</span>
+                            <div style="font-size: 1.05rem; line-height: 1.65; color: #1e293b; font-weight: 600;">
+                                Động từ khiếm khuyết <i style="color: #334155;">(can, could, should, must, will, may, might, ...)</i> không thay đổi hình thức dù chủ ngữ là số ít hay số nhiều. Tuyệt đối không thêm <span class="mv-hl-red">s/es</span>.
+                            </div>
                         </div>
-                        <div style="margin-top: 8px; background: #fefce8; padding: 8px 12px; border-radius: 6px; border: 1px solid #fef08a; font-size: 0.98rem;">
-                            <b style="color: #854d0e;">📌 Ngoại lệ duy nhất:</b> <b>have to ➔ has to</b> khi chủ từ là ngôi thứ 3 số ít (<i>He, She, It, danh từ số ít</i>) ở Hiện tại đơn.<br>
-                            <i style="color: #64748b;">(VD: She <b>has to</b> wake up early every day. | We <b>have to</b> wake up early.)</i>
+
+                        <!-- 2-Column Content -->
+                        <div class="mv-grid-2">
+                            <!-- Left: Examples -->
+                            <div class="mv-sub-box" style="border: 2px solid #93c5fd;">
+                                <div class="mv-float-badge" style="background: #0284c7; color: white;">
+                                    ✨ Ví dụ:
+                                </div>
+                                <div style="display: grid; gap: 10px;">
+                                    <div style="background: #eff6ff; border-radius: 12px; padding: 10px 14px; display: flex; align-items: center; gap: 10px; font-weight: 600;">
+                                        <span style="font-size: 1.5rem;">🏊</span>
+                                        <span style="color: #16a34a; font-size: 1.15rem;">✅</span>
+                                        <span>He <span class="mv-hl-green">can</span> swim.</span>
+                                    </div>
+                                    <div style="background: #eff6ff; border-radius: 12px; padding: 10px 14px; display: flex; align-items: center; gap: 10px; font-weight: 600;">
+                                        <span style="font-size: 1.5rem;">👩‍🎓</span>
+                                        <span style="color: #16a34a; font-size: 1.15rem;">✅</span>
+                                        <span>She <span class="mv-hl-green">must</span> study harder.</span>
+                                    </div>
+                                    <div style="background: #eff6ff; border-radius: 12px; padding: 10px 14px; display: flex; align-items: center; gap: 10px; font-weight: 600;">
+                                        <span style="font-size: 1.5rem;">🏃</span>
+                                        <span style="color: #16a34a; font-size: 1.15rem;">✅</span>
+                                        <span>They <span class="mv-hl-green">should</span> exercise regularly.</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Right: Exception -->
+                            <div class="mv-sub-box" style="border: 2px solid #4ade80;">
+                                <div class="mv-float-badge" style="background: #16a34a; color: white;">
+                                    ⭐ Ngoại lệ duy nhất:
+                                </div>
+                                <div style="background: #fef08a; border-radius: 12px; padding: 10px 14px; text-align: center; font-weight: 900; font-size: 1.2rem; color: #0f172a; margin-bottom: 12px; letter-spacing: 0.5px;">
+                                    HAVE TO <span style="color: #15803d;">➔</span> <span style="color: #dc2626;">HAS TO</span>
+                                </div>
+                                <div style="display: grid; gap: 10px;">
+                                    <div style="background: #f0fdf4; border-radius: 12px; padding: 10px 14px; display: flex; align-items: center; gap: 10px; font-weight: 600;">
+                                        <span style="font-size: 1.5rem;">⏰</span>
+                                        <span style="color: #16a34a; font-size: 1.15rem;">✅</span>
+                                        <span>She <span class="mv-hl-red">has to</span> get up early.</span>
+                                    </div>
+                                    <div style="background: #f0fdf4; border-radius: 12px; padding: 10px 14px; display: flex; align-items: center; gap: 10px; font-weight: 600;">
+                                        <span style="font-size: 1.5rem;">👫</span>
+                                        <span style="color: #16a34a; font-size: 1.15rem;">✅</span>
+                                        <span>We <span class="mv-hl-red">have to</span> get up early.</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- QUY TẮC 3 -->
-                    <div style="background: white; border-radius: 10px; padding: 14px 16px; border-left: 5px solid #f59e0b; box-shadow: 0 1px 3px rgba(0,0,0,0.03);">
-                        <b style="color: #b45309; font-size: 1.1rem;">3. Sau Động từ khiếm khuyết LUÔN LUÔN là Động từ nguyên mẫu (Vo):</b>
-                        <div style="margin-top: 6px; color: #334155;">
-                            Động từ chính đi ngay sau ĐTKK luôn ở dạng nguyên mẫu không "to" (<b>Vo</b>). Tuyệt đối <b>không chia thì, không thêm s/es/ed/ing</b>, và <b>không có "to"</b> ở giữa.
+                    <!-- ==================== QUY TẮC 3 ==================== -->
+                    <div class="mv-rule-card" style="border-color: #86efac; background: linear-gradient(180deg, #ffffff 0%, #f7fee7 100%);">
+                        <!-- Header -->
+                        <div style="text-align: center; margin-bottom: 14px;">
+                            <div style="display: inline-block; background: linear-gradient(135deg, #15803d, #16a34a); color: white; padding: 8px 28px; border-radius: 999px; font-weight: 900; font-size: 1.2rem; margin-bottom: 10px; box-shadow: 0 3px 10px rgba(22, 163, 74, 0.25);">
+                                QUY TẮC 3
+                            </div>
+                            <div style="background: #dcfce7; border-radius: 16px; padding: 12px 18px; font-weight: 800; font-size: 1.15rem; color: #0f172a; line-height: 1.5;">
+                                Sau động từ khiếm khuyết (modal verb) là động từ nguyên mẫu
+                                <span style="background: #fef08a; color: #dc2626; padding: 2px 10px; border-radius: 8px; display: inline-block;">không TO (Vo)</span>.
+                            </div>
                         </div>
-                        <div style="margin-top: 6px; font-size: 0.98rem;">
-                            <span style="color: #16a34a; font-weight: bold;">✅ Đúng:</span> You should <b>study</b> hard.<br>
-                            <span style="color: #dc2626; font-weight: bold;">❌ Sai:</span> You should <del>studies</del> / <del>to study</del> / <del>studying</del> hard.<br>
-                            <i style="color: #64748b; font-size: 0.93rem;">* Lưu ý: Chỉ các từ vốn dĩ đã có sẵn "to" như <b>have to, ought to</b> mới có "to".</i>
+
+                        <!-- 2-Column Content -->
+                        <div class="mv-grid-60-40">
+                            <!-- Left: Formula + Right/Wrong -->
+                            <div style="display: grid; gap: 12px;">
+                                <!-- Formula Box -->
+                                <div style="background: #ffffff; border: 2px solid #f9a8d4; border-radius: 16px; padding: 14px 16px;">
+                                    <div class="mv-float-badge" style="background: #fef08a; color: #0f172a; margin-bottom: 10px;">
+                                        📋 Công thức:
+                                    </div>
+                                    <div style="display: flex; align-items: center; justify-content: center; gap: 10px; flex-wrap: wrap; font-weight: 900; font-size: 1.15rem;">
+                                        <span style="background: #e0f2fe; border: 2px solid #7dd3fc; color: #0c4a6e; padding: 8px 18px; border-radius: 12px;">S</span>
+                                        <span style="color: #0f172a; font-size: 1.3rem;">+</span>
+                                        <span style="background: #ede9fe; border: 2px solid #c4b5fd; color: #4c1d95; padding: 8px 18px; border-radius: 12px;">Modal Verb</span>
+                                        <span style="color: #0f172a; font-size: 1.3rem;">+</span>
+                                        <span style="background: #fef08a; border: 2px solid #facc15; color: #dc2626; padding: 8px 18px; border-radius: 12px;">Vo</span>
+                                    </div>
+                                </div>
+
+                                <!-- Right / Wrong Bars -->
+                                <div style="background: #f0fdf4; border: 2px solid #86efac; border-radius: 14px; padding: 10px 14px; display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+                                    <span style="background: #16a34a; color: white; padding: 4px 14px; border-radius: 999px; font-weight: 800; font-size: 0.92rem; min-width: 82px; text-align: center;">✅ Đúng:</span>
+                                    <span style="font-size: 1.08rem; font-weight: 700; color: #0f172a;">You should <span style="background: #fef08a; color: #15803d; border-bottom: 3px solid #16a34a; padding: 0 6px; border-radius: 4px; font-weight: 900;">study</span> hard.</span>
+                                </div>
+                                <div style="background: #fff1f2; border: 2px solid #fecdd3; border-radius: 14px; padding: 10px 14px; display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+                                    <span style="background: #ef4444; color: white; padding: 4px 14px; border-radius: 999px; font-weight: 800; font-size: 0.92rem; min-width: 82px; text-align: center;">❌ Sai:</span>
+                                    <span style="font-size: 1.08rem; font-weight: 700; color: #0f172a;">You should <span style="color: #dc2626; text-decoration: underline wavy #dc2626; font-weight: 900;">studies</span> hard.</span>
+                                </div>
+                                <div style="background: #fff1f2; border: 2px solid #fecdd3; border-radius: 14px; padding: 10px 14px; display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+                                    <span style="background: #ef4444; color: white; padding: 4px 14px; border-radius: 999px; font-weight: 800; font-size: 0.92rem; min-width: 82px; text-align: center;">❌ Sai:</span>
+                                    <span style="font-size: 1.08rem; font-weight: 700; color: #0f172a;">You should <span style="color: #dc2626; text-decoration: underline wavy #dc2626; font-weight: 900;">to study</span> hard.</span>
+                                </div>
+                            </div>
+
+                            <!-- Right: Special Note Box -->
+                            <div class="mv-sub-box" style="border: 2px solid #4ade80; display: flex; flex-direction: column; justify-content: center;">
+                                <div style="text-align: center; margin-bottom: 10px;">
+                                    <span class="mv-float-badge" style="background: #fef08a; border: 2px solid #eab308; color: #b91c1c; margin-bottom: 6px;">
+                                        📢 Lưu ý:
+                                    </span>
+                                    <div style="font-weight: 800; color: #0f172a; font-size: 1rem;">
+                                        Một số cấu trúc có sẵn "to":
+                                    </div>
+                                </div>
+                                <div style="display: grid; gap: 9px;">
+                                    <div style="background: #f0fdf4; border-radius: 12px; padding: 9px 14px; font-weight: 800; font-size: 1.05rem; display: flex; align-items: center; gap: 8px;">
+                                        <span>✅</span> <span><b style="color: #dc2626;">ought to</b> + Vo</span>
+                                    </div>
+                                    <div style="background: #f0fdf4; border-radius: 12px; padding: 9px 14px; font-weight: 800; font-size: 1.05rem; display: flex; align-items: center; gap: 8px;">
+                                        <span>✅</span> <span><b style="color: #dc2626;">have to</b> + Vo</span>
+                                    </div>
+                                    <div style="background: #f0fdf4; border-radius: 12px; padding: 9px 14px; font-weight: 800; font-size: 1.05rem; display: flex; align-items: center; gap: 8px;">
+                                        <span>✅</span> <span><b style="color: #dc2626;">need to / be able to</b> + Vo</span>
+                                    </div>
+                                    <div style="background: #fefce8; border: 1px dashed #eab308; border-radius: 12px; padding: 8px 14px; font-weight: 700; font-size: 0.96rem; display: flex; align-items: center; gap: 8px;">
+                                        <span>💡</span> <span><b style="color: #b45309;">had better</b> + Vo <i style="font-weight: 500; color: #64748b;">(không có "to")</i></span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- QUY TẮC 4 -->
-                    <div style="background: white; border-radius: 10px; padding: 14px 16px; border-left: 5px solid #f59e0b; box-shadow: 0 1px 3px rgba(0,0,0,0.03);">
-                        <b style="color: #b45309; font-size: 1.1rem;">4. Quy tắc thêm "NOT" khi phủ định:</b>
-                        <div style="margin-top: 6px; color: #334155;">
-                            <b>• Với các ĐTKK thông thường:</b> Thêm trực tiếp <b>"not"</b> vào ngay sau ĐTKK.<br>
-                            <span style="display: inline-block; margin-top: 4px; font-family: monospace; font-size: 1rem; color: #2563eb; background: #eff6ff; padding: 4px 10px; border-radius: 6px;">
-                                cannot (viết liền) &nbsp;|&nbsp; should not (shouldn't) &nbsp;|&nbsp; must not (mustn't) &nbsp;|&nbsp; will not (won't) &nbsp;|&nbsp; could not (couldn't)
-                            </span>
+                    <!-- ==================== QUY TẮC 4 ==================== -->
+                    <div class="mv-rule-card" style="border-color: #fda4af; background: linear-gradient(180deg, #ffffff 0%, #fff1f2 100%);">
+                        <!-- Header -->
+                        <div style="display: flex; align-items: center; justify-content: center; gap: 14px; background: #e0f2fe; border-radius: 999px; padding: 10px 22px; margin-bottom: 14px; flex-wrap: wrap;">
+                            <div style="background: #ef4444; color: white; width: 42px; height: 42px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: 900; font-size: 1.4rem; border: 3px solid white; box-shadow: 0 3px 8px rgba(239, 68, 68, 0.35); flex-shrink: 0;">4</div>
+                            <div style="font-weight: 900; font-size: 1.28rem; color: #0f172a; text-align: center;">
+                                Thêm NOT để tạo câu phủ định
+                            </div>
                         </div>
-                        <div style="margin-top: 10px; background: #fff1f2; padding: 10px 12px; border-radius: 6px; border: 1px solid #fecdd3; font-size: 0.98rem;">
-                            <b style="color: #be123c;">📌 Ngoại lệ với have to:</b> Vì là bán khiếm khuyết, bắt buộc phải <b>mượn trợ động từ do/does/did</b> để phủ định:<br>
-                            • Hiện tại: <b style="color: #e11d48;">don't have to / doesn't have to + Vo</b> <i>(Ý nghĩa: KHÔNG CẦN PHẢI làm, khác với must not = CẤM)</i><br>
-                            • Quá khứ: <b style="color: #e11d48;">didn't have to + Vo</b><br>
-                            • Tương lai: <b style="color: #e11d48;">won't have to + Vo</b>
+
+                        <!-- Rule Bar -->
+                        <div style="background: #ffe4e6; border: 1.5px solid #fecdd3; border-radius: 16px; padding: 12px 18px; margin-bottom: 18px; text-align: center; font-size: 1.05rem; font-weight: 700; color: #1e293b;">
+                            📌 <b style="color: #dc2626;">Quy tắc:</b> Với các động từ khiếm khuyết thông thường, thêm <b style="color: #dc2626;">"NOT"</b> <span class="mv-hl-yellow">ngay sau</span> động từ khiếm khuyết.
+                        </div>
+
+                        <!-- Middle 2-Column: Common Negatives & Exception HAVE TO -->
+                        <div class="mv-grid-45-55" style="margin-bottom: 16px;">
+                            <!-- Left: Common Negative Forms -->
+                            <div class="mv-sub-box" style="border: 2px solid #93c5fd;">
+                                <div class="mv-float-badge" style="background: #bae6fd; color: #0c4a6e;">
+                                    Các dạng phủ định thường dùng
+                                </div>
+                                <div style="display: grid; gap: 8px; font-size: 1.05rem;">
+                                    <div style="background: #f8fafc; padding: 7px 12px; border-radius: 10px; display: flex; align-items: center; gap: 8px;">
+                                        <span style="color: #f43f5e;">●</span>
+                                        <span><b style="color: #dc2626;">should not</b> <span style="color: #334155;">(shouldn't)</span></span>
+                                    </div>
+                                    <div style="background: #f8fafc; padding: 7px 12px; border-radius: 10px; display: flex; align-items: center; gap: 8px;">
+                                        <span style="color: #f43f5e;">●</span>
+                                        <span><b style="color: #dc2626;">must not</b> <span style="color: #334155;">(mustn't)</span></span>
+                                    </div>
+                                    <div style="background: #f8fafc; padding: 7px 12px; border-radius: 10px; display: flex; align-items: center; gap: 8px;">
+                                        <span style="color: #f43f5e;">●</span>
+                                        <span><b style="color: #dc2626;">cannot</b> <span style="color: #334155;">(can't)</span> <i style="font-size: 0.88rem; color: #64748b;">— viết liền</i></span>
+                                    </div>
+                                    <div style="background: #f8fafc; padding: 7px 12px; border-radius: 10px; display: flex; align-items: center; gap: 8px;">
+                                        <span style="color: #f43f5e;">●</span>
+                                        <span><b style="color: #dc2626;">will not</b> <span style="color: #334155;">(won't)</span></span>
+                                    </div>
+                                    <div style="background: #f8fafc; padding: 7px 12px; border-radius: 10px; display: flex; align-items: center; gap: 8px;">
+                                        <span style="color: #f43f5e;">●</span>
+                                        <span><b style="color: #dc2626;">could not</b> <span style="color: #334155;">(couldn't)</span></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Right: Exception HAVE TO -->
+                            <div class="mv-sub-box" style="border: 2px solid #fcd34d;">
+                                <div class="mv-float-badge" style="background: #fef08a; color: #92400e;">
+                                    ⭐ Ngoại lệ: <span style="color: #0f172a; font-weight: 900;">HAVE TO</span>
+                                </div>
+                                <div style="font-size: 0.98rem; color: #334155; font-weight: 600; margin-bottom: 12px;">
+                                    Vì là bán khiếm khuyết, phải <b>mượn trợ động từ</b> để phủ định:
+                                </div>
+                                <div style="display: grid; gap: 10px;">
+                                    <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+                                        <span style="background: #fce7f3; color: #9d174d; font-weight: 800; padding: 6px 12px; border-radius: 10px; min-width: 96px; text-align: center; font-size: 0.94rem;">Hiện tại</span>
+                                        <span style="flex: 1; background: #ffffff; border: 1.5px solid #93c5fd; border-radius: 10px; padding: 6px 12px; font-weight: 800; font-size: 0.98rem; color: #0f172a;"><b style="color: #dc2626;">don't / doesn't have to</b> + Vo</span>
+                                    </div>
+                                    <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+                                        <span style="background: #fce7f3; color: #9d174d; font-weight: 800; padding: 6px 12px; border-radius: 10px; min-width: 96px; text-align: center; font-size: 0.94rem;">Quá khứ</span>
+                                        <span style="flex: 1; background: #ffffff; border: 1.5px solid #93c5fd; border-radius: 10px; padding: 6px 12px; font-weight: 800; font-size: 0.98rem; color: #0f172a;"><b style="color: #dc2626;">didn't have to</b> + Vo</span>
+                                    </div>
+                                    <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+                                        <span style="background: #fce7f3; color: #9d174d; font-weight: 800; padding: 6px 12px; border-radius: 10px; min-width: 96px; text-align: center; font-size: 0.94rem;">Tương lai</span>
+                                        <span style="flex: 1; background: #ffffff; border: 1.5px solid #93c5fd; border-radius: 10px; padding: 6px 12px; font-weight: 800; font-size: 0.98rem; color: #0f172a;"><b style="color: #dc2626;">won't have to</b> + Vo</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Bottom 2-Column: Examples & Important Distinction -->
+                        <div class="mv-grid-40-60">
+                            <!-- Left: Examples -->
+                            <div class="mv-sub-box" style="border: 2px solid #c7d2fe;">
+                                <div class="mv-float-badge" style="background: #e0e7ff; color: #3730a3;">
+                                    📋 Ví dụ:
+                                </div>
+                                <div style="display: grid; gap: 9px; font-size: 1rem; font-weight: 600;">
+                                    <div>✅ You <b style="color: #dc2626;">should not</b> be late.</div>
+                                    <div>✅ You <b style="color: #dc2626;">shouldn't</b> be late.</div>
+                                    <div>✅ We <b style="color: #dc2626;">don't have to</b> wear a uniform.</div>
+                                </div>
+                            </div>
+
+                            <!-- Right: Important Distinction -->
+                            <div class="mv-sub-box" style="border: 2px solid #93c5fd; padding-top: 14px;">
+                                <div style="text-align: center;">
+                                    <span class="mv-float-badge" style="background: #bae6fd; color: #0c4a6e;">
+                                        ⚖️ Phân biệt ý nghĩa quan trọng
+                                    </span>
+                                </div>
+                                <div class="mv-compare-mini">
+                                    <div style="background: #fff1f2; border: 1.5px solid #fda4af; border-radius: 12px; padding: 10px 12px;">
+                                        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
+                                            <span style="font-size: 1.4rem;">🚫</span>
+                                            <div style="font-size: 0.95rem; line-height: 1.35;">
+                                                <b style="color: #dc2626;">mustn't =</b><br>không được phép, <b>bị cấm</b>.
+                                            </div>
+                                        </div>
+                                        <div style="background: white; border-radius: 8px; padding: 7px 9px; font-size: 0.9rem; color: #334155;">
+                                            You <b style="color: #dc2626;">mustn't</b> smoke here.<br>
+                                            <i style="color: #64748b;">(Bạn không được hút thuốc ở đây.)</i>
+                                        </div>
+                                    </div>
+                                    <div style="background: #f0fdf4; border: 1.5px solid #86efac; border-radius: 12px; padding: 10px 12px;">
+                                        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
+                                            <span style="font-size: 1.4rem;">✅</span>
+                                            <div style="font-size: 0.95rem; line-height: 1.35;">
+                                                <b style="color: #dc2626;">don't have to =</b><br><b>không cần thiết</b> phải làm.
+                                            </div>
+                                        </div>
+                                        <div style="background: white; border-radius: 8px; padding: 7px 9px; font-size: 0.9rem; color: #334155;">
+                                            You <b style="color: #dc2626;">don't have to</b> come early.<br>
+                                            <i style="color: #64748b;">(Bạn không cần phải đến sớm.)</i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- QUY TẮC 5 -->
-                    <div style="background: white; border-radius: 10px; padding: 14px 16px; border-left: 5px solid #f59e0b; box-shadow: 0 1px 3px rgba(0,0,0,0.03);">
-                        <b style="color: #b45309; font-size: 1.1rem;">5. Không bao giờ dùng 2 Động từ khiếm khuyết đứng liền nhau:</b>
-                        <div style="margin-top: 6px; font-size: 0.98rem;">
-                            <span style="color: #dc2626; font-weight: bold;">❌ Sai:</span> We <del>will can</del> finish the project soon. / You <del>should must</del> try.<br>
-                            <span style="color: #16a34a; font-weight: bold;">✅ Đúng (dùng cụm tương đương):</span> We <b>will be able to</b> finish the project soon. / You <b>should have to</b> try.
+                    <!-- ==================== QUY TẮC 5 ==================== -->
+                    <div class="mv-rule-card" style="border-color: #c4b5fd; background: linear-gradient(180deg, #ffffff 0%, #faf5ff 100%);">
+                        <!-- Header -->
+                        <div style="display: flex; align-items: center; justify-content: center; gap: 14px; background: linear-gradient(135deg, #6d28d9, #7c3aed); border-radius: 999px; padding: 10px 24px; margin-bottom: 14px; border: 2px dashed rgba(255,255,255,0.45); flex-wrap: wrap;">
+                            <div style="background: #fef9c3; color: #1e1b4b; width: 42px; height: 42px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: 900; font-size: 1.4rem; flex-shrink: 0;">5</div>
+                            <div style="font-weight: 900; font-size: 1.22rem; color: white; text-align: center;">
+                                Không dùng hai modal verbs <span style="color: #fde047;">thông thường</span> liền nhau
+                            </div>
+                        </div>
+
+                        <!-- Warning Banner -->
+                        <div style="background: #fff1f2; border: 2px solid #fecdd3; border-radius: 16px; padding: 12px 18px; margin-bottom: 18px; display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap;">
+                            <div style="display: flex; align-items: center; gap: 10px; font-size: 1.04rem; font-weight: 700; color: #1e293b;">
+                                <span style="font-size: 1.5rem;">⚠️</span>
+                                <span><b style="color: #dc2626;">Không đặt hai</b> động từ khiếm khuyết thông thường (modal verbs) cạnh nhau trong cùng một câu.</span>
+                            </div>
+                            <span style="font-size: 1.5rem;">⛓️‍💥</span>
+                        </div>
+
+                        <!-- Middle 2-Column: Sai -> Đúng Table & Examples -->
+                        <div class="mv-grid-55-45" style="margin-bottom: 16px;">
+                            <!-- Left: Sai -> Đúng -->
+                            <div style="background: white; border: 2px solid #c4b5fd; border-radius: 16px; overflow: hidden;">
+                                <div style="display: grid; grid-template-columns: 1fr 1fr; text-align: center; font-weight: 900; color: white; font-size: 1.05rem;">
+                                    <div style="background: #9333ea; padding: 10px;">❌ Sai</div>
+                                    <div style="background: #f97316; padding: 10px;">✅ Đúng</div>
+                                </div>
+                                <div style="padding: 12px; display: grid; gap: 10px;">
+                                    <div class="mv-arrow-row">
+                                        <div class="mv-pill-cell" style="background: #ffe4e6; color: #1e293b; text-decoration: line-through; text-decoration-color: #ef4444;">will can</div>
+                                        <span style="color: #7c3aed; font-weight: 900; font-size: 1.2rem;">➔</span>
+                                        <div class="mv-pill-cell" style="background: #fef9c3; color: #581c87;">will be able to</div>
+                                    </div>
+                                    <div class="mv-arrow-row">
+                                        <div class="mv-pill-cell" style="background: #ffe4e6; color: #1e293b; text-decoration: line-through; text-decoration-color: #ef4444;">will must</div>
+                                        <span style="color: #7c3aed; font-weight: 900; font-size: 1.2rem;">➔</span>
+                                        <div class="mv-pill-cell" style="background: #fef9c3; color: #581c87;">will have to</div>
+                                    </div>
+                                    <div class="mv-arrow-row">
+                                        <div class="mv-pill-cell" style="background: #ffe4e6; color: #1e293b; text-decoration: line-through; text-decoration-color: #ef4444;">should can</div>
+                                        <span style="color: #7c3aed; font-weight: 900; font-size: 1.2rem;">➔</span>
+                                        <div class="mv-pill-cell" style="background: #fef9c3; color: #581c87;">should be able to</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Right: Examples -->
+                            <div class="mv-sub-box" style="border: 2px solid #c4b5fd;">
+                                <div class="mv-float-badge" style="background: #7c3aed; color: white;">
+                                    ✨ Ví dụ:
+                                </div>
+                                <div style="display: grid; gap: 11px; font-size: 1.02rem; font-weight: 600;">
+                                    <div style="display: flex; align-items: flex-start; gap: 8px;">
+                                        <span style="color: #7c3aed;">✔</span>
+                                        <span>We <span class="mv-hl-yellow">will be able to</span> finish the project.</span>
+                                    </div>
+                                    <div style="display: flex; align-items: flex-start; gap: 8px;">
+                                        <span style="color: #7c3aed;">✔</span>
+                                        <span>Students <span class="mv-hl-yellow">will have to</span> follow the rules.</span>
+                                    </div>
+                                    <div style="display: flex; align-items: flex-start; gap: 8px;">
+                                        <span style="color: #7c3aed;">✔</span>
+                                        <span>You <span class="mv-hl-yellow">should be able to</span> do this exercise.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Bottom Note Bar -->
+                        <div style="background: #f5f3ff; border: 2px dashed #a78bfa; border-radius: 14px; padding: 11px 16px; display: flex; align-items: center; justify-content: center; gap: 10px; flex-wrap: wrap; font-size: 1.02rem; font-weight: 700; color: #1e1b4b;">
+                            <span style="font-size: 1.3rem;">📢</span>
+                            <span style="background: #7c3aed; color: white; padding: 3px 12px; border-radius: 999px; font-size: 0.92rem;">Lưu ý:</span>
+                            <span><span class="mv-hl-yellow" style="color: #581c87;">have to</span> là cấu trúc bán khiếm khuyết <i style="font-weight: 500; color: #4c1d95;">(nên có thể kết hợp sau will / should)</i>.</span>
+                            <span style="font-size: 1.2rem;">🔗</span>
                         </div>
                     </div>
 
@@ -1999,26 +2614,38 @@ const verbsPracticeParaData = {
 };
 
 window.openTopic = function(topicId, status) {
+    if (typeof window.applyClassPermissions === 'function') {
+        window.applyClassPermissions();
+    }
+    // Re-check status from current topic data
+    if (typeof topicsData !== 'undefined') {
+        const t1 = topicsData.find(t => t.id === topicId);
+        if (t1) status = t1.status;
+    }
+    if (typeof chapter2TopicsData !== 'undefined') {
+        const t2 = chapter2TopicsData.find(t => t.id === topicId);
+        if (t2) status = t2.status;
+    }
     if (status === 'locked') {
         const pass = prompt('Vui lòng nhập mật khẩu để mở khóa chủ điểm này:');
-        const allPasses = ['missnguyet2026', 'cb206', 'cb210', 'cb211', 'cb213', 'onb103', 'b212', 'cb212'];
-        const fullPasses = ['missnguyet2026', 'cb206', 'cb210', 'cb211', 'cb212', 'onb103', 'b212'];
+        const allPasses = ['missnguyet2026', 'cb206', 'cb210', 'cb211', 'cb213', 'onb103', 'b212', 'cb212', 'b2', 'giatue', 'gia tue'];
+        const fullPasses = ['missnguyet2026', 'cb206', 'cb210', 'cb211', 'cb212', 'onb103', 'b212', 'b2', 'giatue', 'gia tue'];
         const topicPasswords = {
             'components': [...allPasses, 'cb219', 'cb220'],
             'structures': allPasses,
-            'nouns': [...fullPasses, 'cb213', 'cb219'],
+            'nouns': [...fullPasses, 'cb213', 'cb219', 'cb220'],
             'pronouns': [...fullPasses, 'cb213'],
-            'verbs': [...fullPasses, 'cb213'],
+            'verbs': [...fullPasses, 'cb213', 'cb219'],
             'adjectives': [...fullPasses, 'cb213'],
             'adverbs': [...fullPasses, 'cb213'],
             'prepositions': [...fullPasses, 'cb213'],
             'conjunctions': fullPasses
         };
-        const enteredPass = pass ? pass.trim().toLowerCase() : '';
+        const enteredPass = pass ? pass.trim().toLowerCase().replace(/^(lop|lớp)\s*/i, '').replace(/\s+/g, '') : '';
         const validPasses = topicPasswords[topicId] || fullPasses;
         
         // Mật khẩu đặc biệt mở khóa tất cả các chủ điểm
-        const masterPasses = ['cb206', 'cb211', 'cb210', 'missnguyet2026', 'cb212', 'onb103', 'b212'];
+        const masterPasses = ['cb206', 'cb211', 'cb210', 'missnguyet2026', 'cb212', 'onb103', 'b212', 'b2', 'giatue', 'gia tue'];
         
         if (enteredPass && (validPasses.includes(enteredPass) || masterPasses.includes(enteredPass))) {
             const topic1 = topicsData.find(t => t.id === topicId);
@@ -2044,7 +2671,7 @@ window.openTopic = function(topicId, status) {
             
             if (typeof window.saveProgress === 'function') window.saveProgress(true);
             
-            alert('Mở khóa thành công!');
+            alert('🎉 Mở khóa thành công!');
             
             if (topic1) renderTopicsGrid(); // re-render chapter 1 grid
             if (topic2 && typeof renderChapter2TopicsGrid === 'function') renderChapter2TopicsGrid(); // re-render chapter 2 grid
@@ -2061,7 +2688,13 @@ window.openTopic = function(topicId, status) {
             else if (topicId === 'conjunctions' && typeof renderConjunctionsDetail === 'function') renderConjunctionsDetail();
             else alert('Chủ điểm này đang được cập nhật nội dung. Bạn vui lòng quay lại sau nhé!');
         } else if (pass !== null) {
-            alert('Mật khẩu không đúng!');
+            if (enteredPass === 'cb220') {
+                alert('❌ Lớp CB220 chỉ được mở khóa đến Thành phần câu và Danh từ. Chủ điểm này chưa được mở!');
+            } else if (enteredPass === 'cb219') {
+                alert('❌ Lớp CB219 chỉ được mở khóa đến Thành phần câu, Danh từ và Động từ. Chủ điểm này chưa được mở!');
+            } else {
+                alert('Mật khẩu không đúng!');
+            }
         }
         return;
     }
@@ -2613,16 +3246,36 @@ window.saveStudentInfo = function() {
     localStorage.setItem('studentName', name);
     localStorage.setItem('studentClass', className);
     document.getElementById('login-modal').style.display = 'none';
+
+    // Cập nhật thông tin học viên trên thanh tiêu đề
+    const infoEl = document.getElementById('student-info-display');
+    if (infoEl) infoEl.textContent = `🎓 Học viên: ${name} (${className})`;
+
+    // Phân quyền theo lớp (CB220: mở các thành phần câu; CB219: mở thành phần câu + danh từ; B2/Master: mở hết)
+    if (typeof window.applyClassPermissions === 'function') {
+        window.applyClassPermissions(className, name);
+    }
+    const currentView = document.querySelector('.nav-item.active')?.dataset.target;
+    if (currentView === 'chapter1') renderTopicsGrid();
+    else if (currentView === 'chapter2') renderChapter2TopicsGrid();
+    else if (currentView === 'practice' && typeof renderSelfPracticeView === 'function') renderSelfPracticeView();
 }
 
 // Initial Render
 document.addEventListener('DOMContentLoaded', () => {
+    const prevName = localStorage.getItem('studentName');
+    const prevClass = localStorage.getItem('studentClass');
+    if (prevName && prevClass) {
+        const infoEl = document.getElementById('student-info-display');
+        if (infoEl) infoEl.textContent = `🎓 Học viên: ${prevName} (${prevClass})`;
+    }
+    if (typeof window.applyClassPermissions === 'function') {
+        window.applyClassPermissions(prevClass, prevName);
+    }
     // Always show login modal on every visit
     const modal = document.getElementById('login-modal');
     if (modal) {
         // Prefill previous info if any to save time
-        const prevName = localStorage.getItem('studentName');
-        const prevClass = localStorage.getItem('studentClass');
         if (prevName) document.getElementById('student-name').value = prevName;
         if (prevClass) document.getElementById('student-class').value = prevClass;
         
@@ -5277,6 +5930,46 @@ window.checkPronounsParagraph = function() {
 };
 
 
+// ==================== TOGGLE MODAL INFOGRAPHIC VIEW ====================
+window.toggleModalInfographicView = function(view) {
+    const tableEl = document.getElementById('modal-table-container');
+    const imageEl = document.getElementById('modal-image-container');
+    const btnTable = document.getElementById('btn-modal-view-table');
+    const btnImage = document.getElementById('btn-modal-view-image');
+    if (!tableEl || !imageEl) return;
+    if (view === 'image') {
+        tableEl.style.display = 'none';
+        imageEl.style.display = 'block';
+        if (btnTable) {
+            btnTable.style.background = 'rgba(255,255,255,0.22)';
+            btnTable.style.color = 'white';
+            btnTable.style.border = '1px solid rgba(255,255,255,0.45)';
+            btnTable.style.boxShadow = 'none';
+        }
+        if (btnImage) {
+            btnImage.style.background = 'white';
+            btnImage.style.color = '#0284c7';
+            btnImage.style.border = 'none';
+            btnImage.style.boxShadow = '0 2px 4px rgba(0,0,0,0.1)';
+        }
+    } else {
+        tableEl.style.display = 'block';
+        imageEl.style.display = 'none';
+        if (btnTable) {
+            btnTable.style.background = 'white';
+            btnTable.style.color = '#0284c7';
+            btnTable.style.border = 'none';
+            btnTable.style.boxShadow = '0 2px 4px rgba(0,0,0,0.1)';
+        }
+        if (btnImage) {
+            btnImage.style.background = 'rgba(255,255,255,0.22)';
+            btnImage.style.color = 'white';
+            btnImage.style.border = '1px solid rgba(255,255,255,0.45)';
+            btnImage.style.boxShadow = 'none';
+        }
+    }
+};
+
 // ==================== VERBS LOGIC ====================
 window.renderVerbsDetail = function(activeTab = 'theory') {
     const contentWrapper = document.getElementById('content-wrapper');
@@ -5503,8 +6196,21 @@ window.renderVerbsDetail = function(activeTab = 'theory') {
 
                     <!-- BÀI 3 BOOK -->
                     <div style="background: white; border-radius: 16px; padding: 24px; box-shadow: var(--shadow-md); margin-bottom: 32px; border-top: 6px solid #10b981;">
-                        <h2 style="color: #059669; margin-bottom: 16px; font-size: 1.4rem;">Bài 3: Động từ khiếm khuyết (Dịch câu)</h2>
-                        <p style="font-size: 1.1rem; margin-bottom: 24px; color: var(--text-muted);">Chuyển những câu sau đây sang tiếng Anh.</p>
+                        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; margin-bottom: 16px;">
+                            <div>
+                                <h2 style="color: #059669; margin: 0 0 4px 0; font-size: 1.4rem;">Bài 3: Động từ khiếm khuyết (Dịch câu)</h2>
+                                <p style="font-size: 1.1rem; margin: 0; color: var(--text-muted);">Chuyển những câu sau đây sang tiếng Anh.</p>
+                            </div>
+                            <button type="button" onclick="const box = document.getElementById('quick-modal-ref-book'); box.style.display = box.style.display === 'none' ? 'block' : 'none'; this.innerHTML = box.style.display === 'none' ? '💡 Xem bảng Động từ khiếm khuyết' : '🔼 Thu gọn bảng tra cứu';" style="background: #ecfdf5; border: 1.5px solid #10b981; color: #047857; padding: 8px 16px; border-radius: 20px; font-weight: 700; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; font-size: 0.92rem; transition: all 0.2s;">
+                                💡 Xem bảng Động từ khiếm khuyết
+                            </button>
+                        </div>
+                        <div id="quick-modal-ref-book" style="display: none; margin-bottom: 24px; text-align: center; background: #f8fafc; padding: 14px; border-radius: 12px; border: 1px solid #cbd5e1;">
+                            <a href="modal_verbs_b1.jpg" target="_blank" title="Nhấp để xem ảnh lớn">
+                                <img src="modal_verbs_b1.jpg?v=20261125" alt="Bảng Động từ khiếm khuyết B1 Level" style="max-width: 100%; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+                            </a>
+                            <div style="margin-top: 8px; font-size: 0.9rem; color: #64748b; font-style: italic;">🔍 Nhấp vào ảnh để xem kích thước lớn</div>
+                        </div>
                         <div style="display: grid; gap: 16px;">
                             ${pBook3Html}
                         </div>
@@ -5561,8 +6267,21 @@ window.renderVerbsDetail = function(activeTab = 'theory') {
 
                     <!-- BÀI 3 EXTRA -->
                     <div style="background: white; border-radius: 16px; padding: 24px; box-shadow: var(--shadow-md); margin-bottom: 32px; border-top: 6px solid #14b8a6;">
-                        <h2 style="color: #0d9488; margin-bottom: 16px; font-size: 1.4rem;">Bài 3: Động từ khiếm khuyết (Dịch câu)</h2>
-                        <p style="font-size: 1.1rem; margin-bottom: 24px; color: var(--text-muted);">Dịch các câu sau sang tiếng Anh. Chú ý sử dụng Động từ khiếm khuyết.</p>
+                        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; margin-bottom: 16px;">
+                            <div>
+                                <h2 style="color: #0d9488; margin: 0 0 4px 0; font-size: 1.4rem;">Bài 3: Động từ khiếm khuyết (Dịch câu)</h2>
+                                <p style="font-size: 1.1rem; margin: 0; color: var(--text-muted);">Dịch các câu sau sang tiếng Anh. Chú ý sử dụng Động từ khiếm khuyết.</p>
+                            </div>
+                            <button type="button" onclick="const box = document.getElementById('quick-modal-ref-extra'); box.style.display = box.style.display === 'none' ? 'block' : 'none'; this.innerHTML = box.style.display === 'none' ? '💡 Xem bảng Động từ khiếm khuyết' : '🔼 Thu gọn bảng tra cứu';" style="background: #f0fdfa; border: 1.5px solid #14b8a6; color: #0f766e; padding: 8px 16px; border-radius: 20px; font-weight: 700; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; font-size: 0.92rem; transition: all 0.2s;">
+                                💡 Xem bảng Động từ khiếm khuyết
+                            </button>
+                        </div>
+                        <div id="quick-modal-ref-extra" style="display: none; margin-bottom: 24px; text-align: center; background: #f8fafc; padding: 14px; border-radius: 12px; border: 1px solid #cbd5e1;">
+                            <a href="modal_verbs_b1.jpg" target="_blank" title="Nhấp để xem ảnh lớn">
+                                <img src="modal_verbs_b1.jpg?v=20261125" alt="Bảng Động từ khiếm khuyết B1 Level" style="max-width: 100%; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+                            </a>
+                            <div style="margin-top: 8px; font-size: 0.9rem; color: #64748b; font-style: italic;">🔍 Nhấp vào ảnh để xem kích thước lớn</div>
+                        </div>
                         <div style="display: grid; gap: 16px;">
                             ${pExtra3Html}
                         </div>
@@ -6418,6 +7137,10 @@ window.loadProgress = function() {
         if (state.prepositionsAnswers2) window.prepositionsAnswers2 = state.prepositionsAnswers2;
         if (state.prepositionsAnswersExtra1) window.prepositionsAnswersExtra1 = state.prepositionsAnswersExtra1;
         if (state.prepositionsAnswersExtraPara) window.prepositionsAnswersExtraPara = state.prepositionsAnswersExtraPara;
+        
+        if (typeof window.applyClassPermissions === 'function') {
+            window.applyClassPermissions();
+        }
     } catch(e) {
         console.error('Error loading progress', e);
     }
