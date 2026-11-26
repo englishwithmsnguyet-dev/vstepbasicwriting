@@ -2714,7 +2714,7 @@ window.getTopicStatus = function(topicId) {
     if (typeof window.isGiaTueUser === 'function' && window.isGiaTueUser(sName, sClass)) {
         return 'unlocked';
     }
-    const masterPasses = ['cb206', 'cb211', 'cb210', 'missnguyet2026', 'cb212', 'onb103', 'b212', 'b2', 'giatue', 'gia tue'];
+    const masterPasses = ['cb206', 'cb211', 'cb210', 'missnguyet2026', 'cb212', 'onb103', 'b212'];
     if (masterPasses.includes(sClass)) {
         return 'unlocked';
     }
@@ -2914,8 +2914,8 @@ window.switchSelfTopic = function(topicId) {
         const pass = prompt('Chủ điểm này đang bị khóa. Vui lòng nhập mã lớp để mở khóa:');
         if (pass === null) return; // User cancelled
         
-        const allPasses = ['missnguyet2026', 'cb206', 'cb210', 'cb211', 'cb213', 'onb103', 'b212', 'cb212', 'b2', 'giatue', 'gia tue'];
-        const fullPasses = ['missnguyet2026', 'cb206', 'cb210', 'cb211', 'cb212', 'onb103', 'b212', 'b2', 'giatue', 'gia tue'];
+        const allPasses = ['missnguyet2026', 'cb206', 'cb210', 'cb211', 'cb213', 'onb103', 'b212', 'cb212'];
+        const fullPasses = ['missnguyet2026', 'cb206', 'cb210', 'cb211', 'cb212', 'onb103', 'b212'];
         const topicPasswords = {
             'components': [...allPasses, 'cb219', 'cb220'],
             'structures': allPasses,
@@ -2929,7 +2929,7 @@ window.switchSelfTopic = function(topicId) {
         };
         const enteredPass = pass.trim().toLowerCase().replace(/^(lop|lớp)\s*/i, '').replace(/\s+/g, '');
         const validPasses = topicPasswords[topicId] || fullPasses;
-        const masterPasses = ['cb206', 'cb211', 'cb210', 'missnguyet2026', 'cb212', 'onb103', 'b212', 'b2', 'giatue', 'gia tue'];
+        const masterPasses = ['cb206', 'cb211', 'cb210', 'missnguyet2026', 'cb212', 'onb103', 'b212'];
         
         if (enteredPass && (validPasses.includes(enteredPass) || masterPasses.includes(enteredPass))) {
             if (typeof topicsData !== 'undefined') {

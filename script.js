@@ -706,18 +706,14 @@ const chapter2TopicsData = [
 ];
 
 // Helper: Check if student is Gia Tuệ or class B2
-window.isGiaTueUser = function(nameCheck, classCheck) {
-    const sName = (nameCheck || localStorage.getItem('studentName') || document.getElementById('student-name')?.value || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[đĐ]/g, 'd').trim();
-    const sClass = (classCheck || localStorage.getItem('studentClass') || document.getElementById('student-class')?.value || '').toLowerCase().replace(/^(lop|lớp)\s*/i, '').replace(/\s+/g, '').trim();
-    return sName.includes('gia tue') || sClass === 'b2';
-};
+window.isGiaTueUser = function(nameCheck, classCheck) { return false; };
 
 // Helper: Apply class-based access permissions
 window.applyClassPermissions = function(classCheck, nameCheck) {
     const sName = (nameCheck || localStorage.getItem('studentName') || document.getElementById('student-name')?.value || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[đĐ]/g, 'd').trim();
     const sClass = (classCheck || localStorage.getItem('studentClass') || document.getElementById('student-class')?.value || '').toLowerCase().replace(/^(lop|lớp)\s*/i, '').replace(/\s+/g, '').trim();
 
-    const masterPasses = ['cb206', 'cb211', 'cb210', 'missnguyet2026', 'cb212', 'onb103', 'b212', 'b2', 'giatue', 'gia tue'];
+    const masterPasses = ['cb206', 'cb211', 'cb210', 'missnguyet2026', 'cb212', 'onb103', 'b212'];
 
     if (window.isGiaTueUser(sName, sClass) || masterPasses.includes(sClass)) {
         // Full access
@@ -2628,8 +2624,8 @@ window.openTopic = function(topicId, status) {
     }
     if (status === 'locked') {
         const pass = prompt('Vui lòng nhập mật khẩu để mở khóa chủ điểm này:');
-        const allPasses = ['missnguyet2026', 'cb206', 'cb210', 'cb211', 'cb213', 'onb103', 'b212', 'cb212', 'b2', 'giatue', 'gia tue'];
-        const fullPasses = ['missnguyet2026', 'cb206', 'cb210', 'cb211', 'cb212', 'onb103', 'b212', 'b2', 'giatue', 'gia tue'];
+        const allPasses = ['missnguyet2026', 'cb206', 'cb210', 'cb211', 'cb213', 'onb103', 'b212', 'cb212'];
+        const fullPasses = ['missnguyet2026', 'cb206', 'cb210', 'cb211', 'cb212', 'onb103', 'b212'];
         const topicPasswords = {
             'components': [...allPasses, 'cb219', 'cb220'],
             'structures': allPasses,
@@ -2645,7 +2641,7 @@ window.openTopic = function(topicId, status) {
         const validPasses = topicPasswords[topicId] || fullPasses;
         
         // Mật khẩu đặc biệt mở khóa tất cả các chủ điểm
-        const masterPasses = ['cb206', 'cb211', 'cb210', 'missnguyet2026', 'cb212', 'onb103', 'b212', 'b2', 'giatue', 'gia tue'];
+        const masterPasses = ['cb206', 'cb211', 'cb210', 'missnguyet2026', 'cb212', 'onb103', 'b212'];
         
         if (enteredPass && (validPasses.includes(enteredPass) || masterPasses.includes(enteredPass))) {
             const topic1 = topicsData.find(t => t.id === topicId);
@@ -3243,6 +3239,12 @@ window.saveStudentInfo = function() {
         alert("Vui lòng điền đầy đủ Họ Tên và Lớp!");
         return;
     }
+    const normNameVal = name.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[đĐ]/g, 'd');
+    const cleanClassVal = className.toUpperCase().replace(/\s+/g, '');
+    if (normNameVal.includes('gia tue') || normNameVal.replace(/\s+/g, '').includes('giatue') || cleanClassVal === 'B2') {
+        alert('Tài khoản học viên "Gia Tuệ" hiện đã bị KHÓA! Vui lòng liên hệ Giáo viên (Cô Nguyệt).');
+        return;
+    }
     localStorage.setItem('studentName', name);
     localStorage.setItem('studentClass', className);
     document.getElementById('login-modal').style.display = 'none';
@@ -3263,8 +3265,15 @@ window.saveStudentInfo = function() {
 
 // Initial Render
 document.addEventListener('DOMContentLoaded', () => {
-    const prevName = localStorage.getItem('studentName');
-    const prevClass = localStorage.getItem('studentClass');
+    let prevName = localStorage.getItem('studentName') || '';
+    let prevClass = localStorage.getItem('studentClass') || '';
+    const normSaved = prevName.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[đĐ]/g, 'd');
+    if (normSaved.includes('gia tue') || normSaved.replace(/\s+/g, '').includes('giatue') || prevClass.toUpperCase() === 'B2') {
+        localStorage.removeItem('studentName');
+        localStorage.removeItem('studentClass');
+        prevName = '';
+        prevClass = '';
+    }
     if (prevName && prevClass) {
         const infoEl = document.getElementById('student-info-display');
         if (infoEl) infoEl.textContent = `🎓 Học viên: ${prevName} (${prevClass})`;
@@ -3753,47 +3762,478 @@ const nounsTheoryData = [
     },
     {
         title: '3. PHÂN LOẠI DANH TỪ',
-        content: `<p style="margin-bottom: 16px; color: var(--text-main);">Trong tiếng Anh có rất nhiều cách phân loại danh từ (Danh từ chung/riêng, cụ thể/trừu tượng, tập hợp...). Tuy nhiên, <b style="color: var(--primary-color);">trong văn viết (Writing)</b>, sự phân loại quan trọng nhất ảnh hưởng trực tiếp đến ngữ pháp chính là <b>Danh từ Đếm được (Countable) & Không đếm được (Uncountable)</b>. Sự khác biệt cốt lõi giữa hai loại danh từ này quyết định việc bạn chia động từ và sử dụng lượng từ có chính xác hay không:</p>
-        <div style="overflow-x: auto;">
-            <table style="width: 100%; border-collapse: collapse; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
-                <thead>
-                    <tr style="background: var(--primary-color); color: white;">
-                        <th style="padding: 16px; text-align: left; width: 20%;">Tiêu chí</th>
-                        <th style="padding: 16px; text-align: left; width: 40%; background: #10b981;">Đếm được (Countable)</th>
-                        <th style="padding: 16px; text-align: left; width: 40%; background: #ef4444;">Không đếm được (Uncountable)</th>
-                    </tr>
-                </thead>
-                <tbody style="background: white;">
-                    <tr style="border-bottom: 1px solid #e2e8f0;">
-                        <td style="padding: 16px; font-weight: bold; color: #475569;">Đặc điểm</td>
-                        <td style="padding: 16px; line-height: 1.7;">
-                            <div style="display: flex; gap: 8px;"><span style="color: #10b981;">•</span> <span>Có dạng <b>số ít</b> (a book) & <b>số nhiều</b> (books).</span></div>
-                            <div style="display: flex; gap: 8px; margin-top: 4px;"><span style="color: #10b981;">•</span> <span>Đếm trực tiếp bằng số đếm (1, 2, 3...).</span></div>
-                        </td>
-                        <td style="padding: 16px; line-height: 1.7;">
-                            <div style="display: flex; gap: 8px;"><span style="color: #ef4444;">•</span> <span>Luôn ở dạng <b>số ít</b>.</span></div>
-                            <div style="display: flex; gap: 8px; margin-top: 4px;"><span style="color: #ef4444;">•</span> <span>Chỉ khối lượng/khái niệm không thể đếm.</span></div>
-                        </td>
-                    </tr>
-                    <tr style="border-bottom: 1px solid #e2e8f0;">
-                        <td style="padding: 16px; font-weight: bold; color: #475569;">Quy tắc s/es</td>
-                        <td style="padding: 16px; color: #10b981; font-weight: 500;">✅ CÓ THỂ THÊM S/ES</td>
-                        <td style="padding: 16px; color: #ef4444; font-weight: 500;">❌ KHÔNG BAO GIỜ THÊM S/ES<br><span style="font-size:0.9rem; color:#64748b; font-weight:normal;">(Ví dụ: information, money, advice, water)</span></td>
-                    </tr>
-                    <tr>
-                        <td style="padding: 16px; font-weight: bold; color: #475569;">Lượng từ đi kèm</td>
-                        <td style="padding: 16px; background: rgba(16,185,129,0.05); font-weight:500;">many, a few, a number of</td>
-                        <td style="padding: 16px; background: rgba(239,68,68,0.05); font-weight:500;">much, a little, an amount of</td>
-                    </tr>
-                    <tr>
-                        <td style="padding: 16px; font-weight: bold; color: #475569;">Dùng chung</td>
-                        <td colspan="2" style="padding: 16px; background: rgba(59,130,246,0.08); text-align: center; border-top: 1px dashed #cbd5e1;">
-                            <div style="font-weight: bold; color: #3b82f6; font-size: 1.1rem; margin-bottom: 4px;">some, any, a lot of, lots of, plenty of, most, all</div>
-                            <div style="font-size: 0.95rem; color: #475569;">(Đi kèm được với cả Danh từ Đếm được số nhiều & Không đếm được)</div>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+        content: `
+        <!-- PHẦN A: PHÂN LOẠI DANH TỪ THEO NGỮ NGHĨA (9 NHÓM TRỰC QUAN) -->
+        <div style="margin-bottom: 14px;">
+            <h4 style="color: #0f172a; font-size: 1.18rem; font-weight: 800; margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+                <span style="background: #1d4ed8; color: white; width: 28px; height: 28px; border-radius: 8px; display: inline-flex; align-items: center; justify-content: center; font-size: 0.95rem;">A</span>
+                PHÂN LOẠI DANH TỪ THEO NGỮ NGHĨA (Nouns by Meaning)
+            </h4>
+        </div>
+
+        <div class="nbm-poster-wrap">
+            <!-- Header Banner -->
+            <div class="nbm-banner">
+                <div class="nbm-banner-title-wrap">
+                    <div class="nbm-banner-title">📚 Các loại danh từ theo <span style="color: #fde047;">ngữ nghĩa</span></div>
+                    <div class="nbm-banner-sub">Nouns by Meaning — 9 nhóm cơ bản</div>
+                </div>
+                <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+                    <button type="button" onclick="window.toggleNounsMeaningView('grid')" id="btn-nbm-view-grid" style="background: white; color: #1e3a8a; border: none; padding: 6px 14px; border-radius: 20px; font-weight: 700; font-size: 0.88rem; cursor: pointer; transition: all 0.2s; box-shadow: 0 2px 4px rgba(0,0,0,0.12);">
+                        📋 Bảng thẻ tương tác
+                    </button>
+                    <button type="button" onclick="window.toggleNounsMeaningView('image')" id="btn-nbm-view-image" style="background: rgba(255,255,255,0.2); color: white; border: 1px solid rgba(255,255,255,0.45); padding: 6px 14px; border-radius: 20px; font-weight: 700; font-size: 0.88rem; cursor: pointer; transition: all 0.2s;">
+                        🖼️ Ảnh Infographic
+                    </button>
+                </div>
+            </div>
+
+            <!-- 9-Category Interactive Grid -->
+            <div id="nbm-grid-container" class="nbm-grid-9">
+
+                <!-- 1. People nouns -->
+                <div class="nbm-cat-card" style="border-color: #f9a8d4;">
+                    <div class="nbm-cat-header" style="background: #fce7f3;">
+                        <div class="nbm-cat-title">1. Danh từ chỉ người <span>(People nouns)</span></div>
+                        <div class="nbm-cat-desc">Chỉ người, nghề nghiệp, vai trò, mối quan hệ hoặc đặc điểm.</div>
+                    </div>
+                    <div class="nbm-vocab-grid">
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">👩‍🏫</span><span class="nbm-vocab-en">teacher</span><span class="nbm-vocab-vi">(giáo viên)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">👨‍🎓</span><span class="nbm-vocab-en">student</span><span class="nbm-vocab-vi">(sinh viên)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">👨‍⚕️</span><span class="nbm-vocab-en">doctor</span><span class="nbm-vocab-vi">(bác sĩ)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">👷</span><span class="nbm-vocab-en">engineer</span><span class="nbm-vocab-vi">(kỹ sư)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">👨‍🌾</span><span class="nbm-vocab-en">farmer</span><span class="nbm-vocab-vi">(nông dân)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">👮</span><span class="nbm-vocab-en">police officer</span><span class="nbm-vocab-vi">(cảnh sát)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">👩</span><span class="nbm-vocab-en">mother</span><span class="nbm-vocab-vi">(mẹ)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">👨</span><span class="nbm-vocab-en">father</span><span class="nbm-vocab-vi">(bố)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">🧒</span><span class="nbm-vocab-en">child</span><span class="nbm-vocab-vi">(đứa trẻ)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">🧑‍🤝‍🧑</span><span class="nbm-vocab-en">friend</span><span class="nbm-vocab-vi">(bạn bè)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">🏘️</span><span class="nbm-vocab-en">neighbor</span><span class="nbm-vocab-vi">(hàng xóm)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">👔</span><span class="nbm-vocab-en">boss</span><span class="nbm-vocab-vi">(sếp)</span></div>
+                    </div>
+                </div>
+
+                <!-- 2. Animal nouns -->
+                <div class="nbm-cat-card" style="border-color: #fde047;">
+                    <div class="nbm-cat-header" style="background: #fef9c3;">
+                        <div class="nbm-cat-title">2. Danh từ chỉ động vật <span>(Animal nouns)</span></div>
+                        <div class="nbm-cat-desc">Chỉ các loài động vật.</div>
+                    </div>
+                    <div class="nbm-vocab-grid">
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">🐶</span><span class="nbm-vocab-en">dog</span><span class="nbm-vocab-vi">(chó)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">🐱</span><span class="nbm-vocab-en">cat</span><span class="nbm-vocab-vi">(mèo)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">🐘</span><span class="nbm-vocab-en">elephant</span><span class="nbm-vocab-vi">(voi)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">🐯</span><span class="nbm-vocab-en">tiger</span><span class="nbm-vocab-vi">(hổ)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">🦁</span><span class="nbm-vocab-en">lion</span><span class="nbm-vocab-vi">(sư tử)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">🐦</span><span class="nbm-vocab-en">bird</span><span class="nbm-vocab-vi">(chim)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">🐠</span><span class="nbm-vocab-en">fish</span><span class="nbm-vocab-vi">(cá)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">🐄</span><span class="nbm-vocab-en">cow</span><span class="nbm-vocab-vi">(bò)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">🐴</span><span class="nbm-vocab-en">horse</span><span class="nbm-vocab-vi">(ngựa)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">🐰</span><span class="nbm-vocab-en">rabbit</span><span class="nbm-vocab-vi">(thỏ)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">🐵</span><span class="nbm-vocab-en">monkey</span><span class="nbm-vocab-vi">(khỉ)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">🦒</span><span class="nbm-vocab-en">giraffe</span><span class="nbm-vocab-vi">(hươu cao cổ)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">🐼</span><span class="nbm-vocab-en">panda</span><span class="nbm-vocab-vi">(gấu trúc)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">🐬</span><span class="nbm-vocab-en">dolphin</span><span class="nbm-vocab-vi">(cá heo)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">🦋</span><span class="nbm-vocab-en">butterfly</span><span class="nbm-vocab-vi">(bướm)</span></div>
+                    </div>
+                </div>
+
+                <!-- 3. Object nouns -->
+                <div class="nbm-cat-card" style="border-color: #7dd3fc;">
+                    <div class="nbm-cat-header" style="background: #e0f2fe;">
+                        <div class="nbm-cat-title">3. Danh từ chỉ vật thể <span>(Object nouns)</span></div>
+                        <div class="nbm-cat-desc">Chỉ những vật thể cụ thể, có thể nhận biết bằng giác quan.</div>
+                    </div>
+                    <div class="nbm-vocab-grid">
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">🛋️</span><span class="nbm-vocab-en">table</span><span class="nbm-vocab-vi">(bàn)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">🪑</span><span class="nbm-vocab-en">chair</span><span class="nbm-vocab-vi">(ghế)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">📚</span><span class="nbm-vocab-en">book</span><span class="nbm-vocab-vi">(sách)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">🖊️</span><span class="nbm-vocab-en">pen</span><span class="nbm-vocab-vi">(bút)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">📱</span><span class="nbm-vocab-en">phone</span><span class="nbm-vocab-vi">(điện thoại)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">💻</span><span class="nbm-vocab-en">computer</span><span class="nbm-vocab-vi">(máy tính)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">🎒</span><span class="nbm-vocab-en">bag</span><span class="nbm-vocab-vi">(cặp/túi)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">☂️</span><span class="nbm-vocab-en">umbrella</span><span class="nbm-vocab-vi">(ô dù)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">🧴</span><span class="nbm-vocab-en">bottle</span><span class="nbm-vocab-vi">(chai)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">🔑</span><span class="nbm-vocab-en">key</span><span class="nbm-vocab-vi">(chìa khóa)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">⌚</span><span class="nbm-vocab-en">watch</span><span class="nbm-vocab-vi">(đồng hồ)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">👓</span><span class="nbm-vocab-en">glasses</span><span class="nbm-vocab-vi">(kính mắt)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">🚗</span><span class="nbm-vocab-en">car</span><span class="nbm-vocab-vi">(ô tô)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">🚲</span><span class="nbm-vocab-en">bicycle</span><span class="nbm-vocab-vi">(xe đạp)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">📺</span><span class="nbm-vocab-en">television</span><span class="nbm-vocab-vi">(tivi)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">📷</span><span class="nbm-vocab-en">camera</span><span class="nbm-vocab-vi">(máy ảnh)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">⚽</span><span class="nbm-vocab-en">ball</span><span class="nbm-vocab-vi">(quả bóng)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">🚪</span><span class="nbm-vocab-en">door</span><span class="nbm-vocab-vi">(cánh cửa)</span></div>
+                    </div>
+                </div>
+
+                <!-- 4. Place nouns -->
+                <div class="nbm-cat-card" style="border-color: #86efac;">
+                    <div class="nbm-cat-header" style="background: #dcfce7;">
+                        <div class="nbm-cat-title">4. Danh từ chỉ địa điểm &amp; địa danh <span>(Place nouns)</span></div>
+                        <div class="nbm-cat-desc">Chỉ vị trí, khu vực, công trình hoặc địa danh.</div>
+                    </div>
+                    <div class="nbm-vocab-grid">
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">🏫</span><span class="nbm-vocab-en">school</span><span class="nbm-vocab-vi">(trường học)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">🏥</span><span class="nbm-vocab-en">hospital</span><span class="nbm-vocab-vi">(bệnh viện)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">🏠</span><span class="nbm-vocab-en">house</span><span class="nbm-vocab-vi">(ngôi nhà)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">🏡</span><span class="nbm-vocab-en">village</span><span class="nbm-vocab-vi">(ngôi làng)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">🏙️</span><span class="nbm-vocab-en">city</span><span class="nbm-vocab-vi">(thành phố)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">🏞️</span><span class="nbm-vocab-en">park</span><span class="nbm-vocab-vi">(công viên)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">🏖️</span><span class="nbm-vocab-en">beach</span><span class="nbm-vocab-vi">(bãi biển)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">🌊</span><span class="nbm-vocab-en">river</span><span class="nbm-vocab-vi">(sông)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">⛰️</span><span class="nbm-vocab-en">mountain</span><span class="nbm-vocab-vi">(núi)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">🗺️</span><span class="nbm-vocab-en">country</span><span class="nbm-vocab-vi">(quốc gia)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">🇻🇳</span><span class="nbm-vocab-en">Vietnam</span><span class="nbm-vocab-vi">(Việt Nam)</span></div>
+                    </div>
+                </div>
+
+                <!-- 5. Material nouns -->
+                <div class="nbm-cat-card" style="border-color: #c4b5fd;">
+                    <div class="nbm-cat-header" style="background: #ede9fe;">
+                        <div class="nbm-cat-title">5. Danh từ chỉ chất liệu và chất <span>(Material nouns)</span></div>
+                        <div class="nbm-cat-desc">Chỉ nguyên liệu, vật chất hoặc các chất.</div>
+                    </div>
+                    <div class="nbm-vocab-grid">
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">🪵</span><span class="nbm-vocab-en">wood</span><span class="nbm-vocab-vi">(gỗ)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">🪙</span><span class="nbm-vocab-en">gold</span><span class="nbm-vocab-vi">(vàng)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">🥈</span><span class="nbm-vocab-en">silver</span><span class="nbm-vocab-vi">(bạc)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">⚙️</span><span class="nbm-vocab-en">iron</span><span class="nbm-vocab-vi">(sắt)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">🧴</span><span class="nbm-vocab-en">plastic</span><span class="nbm-vocab-vi">(nhựa)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">🥂</span><span class="nbm-vocab-en">glass</span><span class="nbm-vocab-vi">(thủy tinh)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">💧</span><span class="nbm-vocab-en">water</span><span class="nbm-vocab-vi">(nước)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">🥛</span><span class="nbm-vocab-en">milk</span><span class="nbm-vocab-vi">(sữa)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">🍚</span><span class="nbm-vocab-en">rice</span><span class="nbm-vocab-vi">(gạo)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">🧊</span><span class="nbm-vocab-en">sugar</span><span class="nbm-vocab-vi">(đường)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">🧂</span><span class="nbm-vocab-en">salt</span><span class="nbm-vocab-vi">(muối)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">🫒</span><span class="nbm-vocab-en">oil</span><span class="nbm-vocab-vi">(dầu)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">☁️</span><span class="nbm-vocab-en">cotton</span><span class="nbm-vocab-vi">(bông)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">🧶</span><span class="nbm-vocab-en">wool</span><span class="nbm-vocab-vi">(len)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">👜</span><span class="nbm-vocab-en">leather</span><span class="nbm-vocab-vi">(da)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">📄</span><span class="nbm-vocab-en">paper</span><span class="nbm-vocab-vi">(giấy)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">🪨</span><span class="nbm-vocab-en">stone</span><span class="nbm-vocab-vi">(đá)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">🧱</span><span class="nbm-vocab-en">brick</span><span class="nbm-vocab-vi">(gạch)</span></div>
+                    </div>
+                </div>
+
+                <!-- 6. Abstract nouns -->
+                <div class="nbm-cat-card" style="border-color: #f9a8d4;">
+                    <div class="nbm-cat-header" style="background: #fce7f3;">
+                        <div class="nbm-cat-title">6. Danh từ trừu tượng <span>(Abstract nouns)</span></div>
+                        <div class="nbm-cat-desc">Chỉ cảm xúc, phẩm chất, trạng thái, ý tưởng hoặc khái niệm.</div>
+                    </div>
+                    <div class="nbm-vocab-grid">
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">❤️</span><span class="nbm-vocab-en">love</span><span class="nbm-vocab-vi">(tình yêu)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">☀️</span><span class="nbm-vocab-en">happiness</span><span class="nbm-vocab-vi">(hạnh phúc)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">🕊️</span><span class="nbm-vocab-en">freedom</span><span class="nbm-vocab-vi">(tự do)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">🛡️</span><span class="nbm-vocab-en">honesty</span><span class="nbm-vocab-vi">(sự trung thực)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">💡</span><span class="nbm-vocab-en">knowledge</span><span class="nbm-vocab-vi">(kiến thức)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">🏆</span><span class="nbm-vocab-en">success</span><span class="nbm-vocab-vi">(thành công)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">💪</span><span class="nbm-vocab-en">courage</span><span class="nbm-vocab-vi">(lòng dũng cảm)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">⏳</span><span class="nbm-vocab-en">patience</span><span class="nbm-vocab-vi">(sự kiên nhẫn)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">💖</span><span class="nbm-vocab-en">health</span><span class="nbm-vocab-vi">(sức khỏe)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">🪷</span><span class="nbm-vocab-en">beauty</span><span class="nbm-vocab-vi">(vẻ đẹp)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">🎓</span><span class="nbm-vocab-en">education</span><span class="nbm-vocab-vi">(sự giáo dục)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">⚖️</span><span class="nbm-vocab-en">justice</span><span class="nbm-vocab-vi">(công lý)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">🤝</span><span class="nbm-vocab-en">friendship</span><span class="nbm-vocab-vi">(tình bạn)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">🌿</span><span class="nbm-vocab-en">peace</span><span class="nbm-vocab-vi">(hòa bình)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">📈</span><span class="nbm-vocab-en">development</span><span class="nbm-vocab-vi">(sự phát triển)</span></div>
+                    </div>
+                </div>
+
+                <!-- 7. Collective nouns -->
+                <div class="nbm-cat-card" style="border-color: #86efac;">
+                    <div class="nbm-cat-header" style="background: #dcfce7;">
+                        <div class="nbm-cat-title">7. Danh từ tập hợp <span>(Collective nouns)</span></div>
+                        <div class="nbm-cat-desc">Chỉ một nhóm người, động vật hoặc sự vật được xem như một tập thể.</div>
+                    </div>
+                    <div class="nbm-vocab-grid">
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">⚽</span><span class="nbm-vocab-en">team</span><span class="nbm-vocab-vi">(đội)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">👩‍🏫</span><span class="nbm-vocab-en">class</span><span class="nbm-vocab-vi">(lớp học)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">👨‍👩‍👧‍👦</span><span class="nbm-vocab-en">family</span><span class="nbm-vocab-vi">(gia đình)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">🎭</span><span class="nbm-vocab-en">audience</span><span class="nbm-vocab-vi">(khán giả)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">👥</span><span class="nbm-vocab-en">group</span><span class="nbm-vocab-vi">(nhóm)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">👩‍💼</span><span class="nbm-vocab-en">staff</span><span class="nbm-vocab-vi">(nhân viên)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">🏛️</span><span class="nbm-vocab-en">committee</span><span class="nbm-vocab-vi">(ủy ban)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">🐄</span><span class="nbm-vocab-en">herd</span><span class="nbm-vocab-vi">(đàn gia súc)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">🐦</span><span class="nbm-vocab-en">flock</span><span class="nbm-vocab-vi">(đàn chim)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">🏟️</span><span class="nbm-vocab-en">crowd</span><span class="nbm-vocab-vi">(đám đông)</span></div>
+                    </div>
+                </div>
+
+                <!-- 8. Time nouns -->
+                <div class="nbm-cat-card" style="border-color: #7dd3fc;">
+                    <div class="nbm-cat-header" style="background: #e0f2fe;">
+                        <div class="nbm-cat-title">8. Danh từ chỉ thời gian <span>(Time nouns)</span></div>
+                        <div class="nbm-cat-desc">Chỉ thời điểm, khoảng thời gian hoặc đơn vị thời gian.</div>
+                    </div>
+                    <div class="nbm-vocab-grid">
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">☀️</span><span class="nbm-vocab-en">day</span><span class="nbm-vocab-vi">(ngày)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">🌙</span><span class="nbm-vocab-en">night</span><span class="nbm-vocab-vi">(đêm)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">📅</span><span class="nbm-vocab-en">week</span><span class="nbm-vocab-vi">(tuần)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">🗓️</span><span class="nbm-vocab-en">month</span><span class="nbm-vocab-vi">(tháng)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">📆</span><span class="nbm-vocab-en">year</span><span class="nbm-vocab-vi">(năm)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">🌅</span><span class="nbm-vocab-en">morning</span><span class="nbm-vocab-vi">(buổi sáng)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">🌤️</span><span class="nbm-vocab-en">afternoon</span><span class="nbm-vocab-vi">(buổi chiều)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">🌆</span><span class="nbm-vocab-en">evening</span><span class="nbm-vocab-vi">(buổi tối)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">🕐</span><span class="nbm-vocab-en">hour</span><span class="nbm-vocab-vi">(giờ)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">⏱️</span><span class="nbm-vocab-en">minute</span><span class="nbm-vocab-vi">(phút)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">⏲️</span><span class="nbm-vocab-en">second</span><span class="nbm-vocab-vi">(giây)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">⌛</span><span class="nbm-vocab-en">moment</span><span class="nbm-vocab-vi">(khoảnh khắc)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">🍂</span><span class="nbm-vocab-en">season</span><span class="nbm-vocab-vi">(mùa)</span></div>
+                    </div>
+                </div>
+
+                <!-- 9. Activity / Event nouns -->
+                <div class="nbm-cat-card" style="border-color: #fde047;">
+                    <div class="nbm-cat-header" style="background: #fef9c3;">
+                        <div class="nbm-cat-title">9. Danh từ chỉ hoạt động &amp; sự kiện <span>(Activity/Event nouns)</span></div>
+                        <div class="nbm-cat-desc">Chỉ hoạt động, quá trình hoặc sự kiện.</div>
+                    </div>
+                    <div class="nbm-vocab-grid">
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">🤝</span><span class="nbm-vocab-en">meeting</span><span class="nbm-vocab-vi">(cuộc họp)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">🏅</span><span class="nbm-vocab-en">competition</span><span class="nbm-vocab-vi">(cuộc thi)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">🎉</span><span class="nbm-vocab-en">celebration</span><span class="nbm-vocab-vi">(lễ kỷ niệm)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">💬</span><span class="nbm-vocab-en">discussion</span><span class="nbm-vocab-vi">(cuộc thảo luận)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">🏮</span><span class="nbm-vocab-en">festival</span><span class="nbm-vocab-vi">(lễ hội)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">✈️</span><span class="nbm-vocab-en">travel</span><span class="nbm-vocab-vi">(chuyến đi)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">📖</span><span class="nbm-vocab-en">study</span><span class="nbm-vocab-vi">(sự học tập)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">💼</span><span class="nbm-vocab-en">work</span><span class="nbm-vocab-vi">(công việc)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">🎯</span><span class="nbm-vocab-en">training</span><span class="nbm-vocab-vi">(sự đào tạo)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">💒</span><span class="nbm-vocab-en">wedding</span><span class="nbm-vocab-vi">(đám cưới)</span></div>
+                        <div class="nbm-vocab-item"><span class="nbm-vocab-icon">🥳</span><span class="nbm-vocab-en">party</span><span class="nbm-vocab-vi">(bữa tiệc)</span></div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Image View Container -->
+            <div id="nbm-image-container" style="display: none; padding: 18px; text-align: center; background: #f8fafc;">
+                <a href="nouns_by_meaning.jpg" target="_blank" title="Nhấp để mở ảnh cỡ lớn">
+                    <img src="nouns_by_meaning.jpg?v=20261125" alt="Các loại danh từ theo ngữ nghĩa (Nouns by Meaning)" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 6px 18px rgba(0,0,0,0.08); border: 1px solid #cbd5e1; cursor: zoom-in;">
+                </a>
+                <div style="margin-top: 10px; font-size: 0.95rem; color: #64748b; font-style: italic;">
+                    🔍 Nhấp vào hình ảnh để xem toàn màn hình (kích thước gốc) hoặc lưu về máy ôn tập.
+                </div>
+            </div>
+        </div>
+
+        <!-- PHẦN B: PHÂN LOẠI DANH TỪ THEO NGỮ PHÁP (ĐẾM ĐƯỢC & KHÔNG ĐẾM ĐƯỢC) -->
+        <div style="margin-bottom: 14px;">
+            <h4 style="color: #0f172a; font-size: 1.18rem; font-weight: 800; margin-bottom: 8px; display: flex; align-items: center; gap: 8px;">
+                <span style="background: #10b981; color: white; width: 28px; height: 28px; border-radius: 8px; display: inline-flex; align-items: center; justify-content: center; font-size: 0.95rem;">B</span>
+                PHÂN LOẠI DANH TỪ THEO NGỮ PHÁP (Đếm được &amp; Không đếm được)
+            </h4>
+            <p style="margin: 0; color: var(--text-main);"><b style="color: var(--primary-color);">Trong văn viết (Writing)</b>, đây là phân loại quan trọng nhất vì nó quyết định trực tiếp cách bạn <b>thêm s/es, chia động từ và chọn lượng từ</b> chính xác:</p>
+        </div>
+
+        <div class="cu-wrap">
+            <!-- 2 CỘT SO SÁNH TRỰC QUAN -->
+            <div class="cu-hero-grid">
+
+                <!-- CỘT TRÁI: DANH TỪ ĐẾM ĐƯỢC -->
+                <div class="cu-card" style="border-color: #6ee7b7; background: linear-gradient(180deg, #ffffff 0%, #f0fdf4 100%);">
+                    <div class="cu-card-head" style="background: linear-gradient(135deg, #059669 0%, #10b981 100%);">
+                        <div style="font-weight: 900; font-size: 1.18rem; display: flex; align-items: center; gap: 8px;">
+                            <span>✅</span> DANH TỪ ĐẾM ĐƯỢC <span style="font-weight: 700; opacity: 0.92; font-size: 0.95rem;">(Countable)</span>
+                        </div>
+                        <div style="font-size: 0.9rem; opacity: 0.95;">Đếm trực tiếp được bằng số đếm: 1, 2, 3...</div>
+                    </div>
+                    <div class="cu-card-body">
+                        <!-- Minh họa số ít -> số nhiều -->
+                        <div class="cu-block" style="background: #ecfdf5; border-color: #a7f3d0;">
+                            <div class="cu-block-title" style="color: #047857;">🔢 Có 2 dạng: Số ít ➔ Số nhiều</div>
+                            <div style="display: grid; gap: 7px; font-size: 0.96rem; font-weight: 700;">
+                                <div style="display: flex; align-items: center; justify-content: space-between; background: white; padding: 6px 12px; border-radius: 10px; border: 1px solid #d1fae5;">
+                                    <span>🍎 <b>a / one</b> apple</span>
+                                    <span style="color: #10b981;">➔</span>
+                                    <span>🍎🍎🍎 <b>three</b> apple<b style="color: #059669; background: #d1fae5; padding: 0 4px; border-radius: 4px;">s</b></span>
+                                </div>
+                                <div style="display: flex; align-items: center; justify-content: space-between; background: white; padding: 6px 12px; border-radius: 10px; border: 1px solid #d1fae5;">
+                                    <span>📖 <b>a</b> book</span>
+                                    <span style="color: #10b981;">➔</span>
+                                    <span>📚 <b>many</b> book<b style="color: #059669; background: #d1fae5; padding: 0 4px; border-radius: 4px;">s</b></span>
+                                </div>
+                                <div style="display: flex; align-items: center; justify-content: space-between; background: white; padding: 6px 12px; border-radius: 10px; border: 1px solid #d1fae5;">
+                                    <span>👨‍🎓 <b>a</b> student</span>
+                                    <span style="color: #10b981;">➔</span>
+                                    <span>👥 <b>five</b> student<b style="color: #059669; background: #d1fae5; padding: 0 4px; border-radius: 4px;">s</b></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 3 Quy tắc cốt lõi -->
+                        <div class="cu-block" style="background: white; border-color: #bbf7d0;">
+                            <div class="cu-block-title" style="color: #047857;">📌 3 Quy tắc vàng</div>
+                            <div style="display: grid; gap: 8px; font-size: 0.96rem; color: #1e293b; line-height: 1.5;">
+                                <div>✅ <b>Dùng được <code>a / an</code> &amp; số đếm</b> <i style="color: #64748b;">(a car, an idea, two cities)</i>.</div>
+                                <div>✅ <b>CÓ THỂ thêm <code>s / es</code></b> khi ở dạng số nhiều <i style="color: #64748b;">(books, boxes)</i>.</div>
+                                <div>✅ <b>Chia động từ theo số:</b><br>
+                                    <span style="display: inline-block; margin-top: 3px; background: #f0fdf4; padding: 3px 9px; border-radius: 8px; font-size: 0.9rem; border: 1px solid #bbf7d0;">
+                                        Số ít ➔ <b style="color: #059669;">is / was / V-s</b> &nbsp;|&nbsp; Số nhiều ➔ <b style="color: #059669;">are / were / Vo</b>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Lượng từ riêng -->
+                        <div class="cu-block" style="background: #ecfdf5; border-color: #a7f3d0;">
+                            <div class="cu-block-title" style="color: #047857;">🏷️ Lượng từ đi kèm RIÊNG</div>
+                            <div class="cu-pill-list">
+                                <span class="cu-q-pill" style="background: #d1fae5; color: #065f46; border: 1px solid #6ee7b7;">many <small>(nhiều)</small></span>
+                                <span class="cu-q-pill" style="background: #d1fae5; color: #065f46; border: 1px solid #6ee7b7;">a few <small>(một vài)</small></span>
+                                <span class="cu-q-pill" style="background: #d1fae5; color: #065f46; border: 1px solid #6ee7b7;">few <small>(rất ít)</small></span>
+                                <span class="cu-q-pill" style="background: #d1fae5; color: #065f46; border: 1px solid #6ee7b7;">several <small>(vài)</small></span>
+                                <span class="cu-q-pill" style="background: #d1fae5; color: #065f46; border: 1px solid #6ee7b7;">a number of <small>(một số)</small></span>
+                                <span class="cu-q-pill" style="background: #ffffff; color: #065f46; border: 1px dashed #34d399;">each / every <small>(+ N ít)</small></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CỘT PHẢI: DANH TỪ KHÔNG ĐẾM ĐƯỢC -->
+                <div class="cu-card" style="border-color: #fda4af; background: linear-gradient(180deg, #ffffff 0%, #fff1f2 100%);">
+                    <div class="cu-card-head" style="background: linear-gradient(135deg, #dc2626 0%, #f43f5e 100%);">
+                        <div style="font-weight: 900; font-size: 1.18rem; display: flex; align-items: center; gap: 8px;">
+                            <span>💧</span> DANH TỪ KHÔNG ĐẾM ĐƯỢC <span style="font-weight: 700; opacity: 0.92; font-size: 0.95rem;">(Uncountable)</span>
+                        </div>
+                        <div style="font-size: 0.9rem; opacity: 0.95;">Chất lỏng, vật liệu, khối lượng hoặc khái niệm trừu tượng...</div>
+                    </div>
+                    <div class="cu-card-body">
+                        <!-- Nhóm ví dụ trực quan -->
+                        <div class="cu-block" style="background: #fff1f2; border-color: #fecdd3;">
+                            <div class="cu-block-title" style="color: #be123c;">✨ Ví dụ điển hình</div>
+                            <div class="cu-pill-list">
+                                <span class="cu-q-pill" style="background: white; color: #1e293b; border: 1px solid #fecdd3;">💧 water <small>(nước)</small></span>
+                                <span class="cu-q-pill" style="background: white; color: #1e293b; border: 1px solid #fecdd3;">💰 money <small>(tiền)</small></span>
+                                <span class="cu-q-pill" style="background: white; color: #1e293b; border: 1px solid #fecdd3;">⏳ time <small>(thời gian)</small></span>
+                                <span class="cu-q-pill" style="background: white; color: #1e293b; border: 1px solid #fecdd3;">📄 information <small>(thông tin)</small></span>
+                                <span class="cu-q-pill" style="background: white; color: #1e293b; border: 1px solid #fecdd3;">💡 advice <small>(lời khuyên)</small></span>
+                                <span class="cu-q-pill" style="background: white; color: #1e293b; border: 1px solid #fecdd3;">🧠 knowledge <small>(kiến thức)</small></span>
+                            </div>
+                        </div>
+
+                        <!-- 3 Quy tắc cốt lõi -->
+                        <div class="cu-block" style="background: white; border-color: #fecdd3;">
+                            <div class="cu-block-title" style="color: #be123c;">🚫 3 Quy tắc cấm kỵ</div>
+                            <div style="display: grid; gap: 8px; font-size: 0.96rem; color: #1e293b; line-height: 1.5;">
+                                <div>❌ <b>KHÔNG dùng <code>a / an</code> hay số đếm</b> <i style="color: #dc2626;">(<del>an advice</del>, <del>two moneys</del>)</i>.</div>
+                                <div>❌ <b>KHÔNG BAO GIỜ thêm <code>s / es</code></b> <i style="color: #dc2626;">(<del>informations</del>, <del>waters</del>)</i>.</div>
+                                <div>✅ <b>LUÔN ở dạng số ít:</b><br>
+                                    <span style="display: inline-block; margin-top: 3px; background: #fff1f2; padding: 3px 9px; border-radius: 8px; font-size: 0.9rem; border: 1px solid #fecdd3;">
+                                        Luôn chia động từ số ít ➔ <b style="color: #dc2626;">is / was / has / V-s</b>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Lượng từ riêng -->
+                        <div class="cu-block" style="background: #fff1f2; border-color: #fecdd3;">
+                            <div class="cu-block-title" style="color: #be123c;">🏷️ Lượng từ đi kèm RIÊNG</div>
+                            <div class="cu-pill-list">
+                                <span class="cu-q-pill" style="background: #ffe4e6; color: #9f1239; border: 1px solid #fda4af;">much <small>(nhiều)</small></span>
+                                <span class="cu-q-pill" style="background: #ffe4e6; color: #9f1239; border: 1px solid #fda4af;">a little <small>(một chút)</small></span>
+                                <span class="cu-q-pill" style="background: #ffe4e6; color: #9f1239; border: 1px solid #fda4af;">little <small>(rất ít)</small></span>
+                                <span class="cu-q-pill" style="background: #ffe4e6; color: #9f1239; border: 1px solid #fda4af;">an amount of <small>(một lượng)</small></span>
+                                <span class="cu-q-pill" style="background: #ffe4e6; color: #9f1239; border: 1px solid #fda4af;">a great deal of <small>(rất nhiều)</small></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CẦU NỐI: LƯỢNG TỪ DÙNG CHUNG -->
+            <div style="background: linear-gradient(135deg, #eff6ff 0%, #e0f2fe 100%); border: 2px solid #7dd3fc; border-radius: 18px; padding: 16px 20px; text-align: center;">
+                <div style="display: inline-flex; align-items: center; gap: 8px; background: #0284c7; color: white; padding: 5px 18px; border-radius: 999px; font-weight: 800; font-size: 0.96rem; margin-bottom: 12px; box-shadow: 0 2px 6px rgba(2,132,199,0.22);">
+                    🤝 LƯỢNG TỪ DÙNG CHUNG CHO CẢ HAI LOẠI
+                </div>
+                <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-bottom: 12px;">
+                    <span class="cu-q-pill" style="background: white; color: #0369a1; border: 1.5px solid #38bdf8;">some</span>
+                    <span class="cu-q-pill" style="background: white; color: #0369a1; border: 1.5px solid #38bdf8;">any</span>
+                    <span class="cu-q-pill" style="background: white; color: #0369a1; border: 1.5px solid #38bdf8;">a lot of</span>
+                    <span class="cu-q-pill" style="background: white; color: #0369a1; border: 1.5px solid #38bdf8;">lots of</span>
+                    <span class="cu-q-pill" style="background: white; color: #0369a1; border: 1.5px solid #38bdf8;">plenty of</span>
+                    <span class="cu-q-pill" style="background: white; color: #0369a1; border: 1.5px solid #38bdf8;">most</span>
+                    <span class="cu-q-pill" style="background: white; color: #0369a1; border: 1.5px solid #38bdf8;">all</span>
+                    <span class="cu-q-pill" style="background: white; color: #0369a1; border: 1.5px solid #38bdf8;">no</span>
+                </div>
+                <div style="display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; font-size: 0.94rem; color: #0c4a6e;">
+                    <span style="background: rgba(255,255,255,0.8); padding: 5px 12px; border-radius: 10px;">✅ + N đếm được số nhiều: <b>a lot of books</b></span>
+                    <span style="background: rgba(255,255,255,0.8); padding: 5px 12px; border-radius: 10px;">✅ + N không đếm được: <b>a lot of water</b></span>
+                </div>
+            </div>
+
+            <!-- BẢNG BẪY VSTEP & CÁCH ĐẾM DANH TỪ KHÔNG ĐẾM ĐƯỢC -->
+            <div class="cu-hero-grid">
+                <!-- Bẫy không đếm được -->
+                <div style="background: #fffbeb; border: 2px dashed #f59e0b; border-radius: 18px; padding: 16px;">
+                    <div style="font-weight: 900; color: #b45309; font-size: 1.02rem; margin-bottom: 10px; display: flex; align-items: center; gap: 6px;">
+                        <span>🚨</span> 8 TỪ KHÔNG ĐẾM ĐƯỢC HAY BỊ THÊM "S" NHẤT
+                    </div>
+                    <div class="cu-trap-grid">
+                        <div class="cu-trap-chip">
+                            <span style="font-weight: 800; color: #0f172a;">✅ information</span>
+                            <span style="font-size: 0.78rem; color: #dc2626;">❌ <del>informations</del></span>
+                        </div>
+                        <div class="cu-trap-chip">
+                            <span style="font-weight: 800; color: #0f172a;">✅ advice</span>
+                            <span style="font-size: 0.78rem; color: #dc2626;">❌ <del>advices</del></span>
+                        </div>
+                        <div class="cu-trap-chip">
+                            <span style="font-weight: 800; color: #0f172a;">✅ knowledge</span>
+                            <span style="font-size: 0.78rem; color: #dc2626;">❌ <del>knowledges</del></span>
+                        </div>
+                        <div class="cu-trap-chip">
+                            <span style="font-weight: 800; color: #0f172a;">✅ equipment</span>
+                            <span style="font-size: 0.78rem; color: #dc2626;">❌ <del>equipments</del></span>
+                        </div>
+                        <div class="cu-trap-chip">
+                            <span style="font-weight: 800; color: #0f172a;">✅ furniture</span>
+                            <span style="font-size: 0.78rem; color: #dc2626;">❌ <del>furnitures</del></span>
+                        </div>
+                        <div class="cu-trap-chip">
+                            <span style="font-weight: 800; color: #0f172a;">✅ homework</span>
+                            <span style="font-size: 0.78rem; color: #dc2626;">❌ <del>homeworks</del></span>
+                        </div>
+                        <div class="cu-trap-chip">
+                            <span style="font-weight: 800; color: #0f172a;">✅ money</span>
+                            <span style="font-size: 0.78rem; color: #dc2626;">❌ <del>moneys</del></span>
+                        </div>
+                        <div class="cu-trap-chip">
+                            <span style="font-weight: 800; color: #0f172a;">✅ research</span>
+                            <span style="font-size: 0.78rem; color: #dc2626;">❌ <del>researches</del></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mẹo đếm danh từ không đếm được -->
+                <div style="background: #f5f3ff; border: 2px solid #c4b5fd; border-radius: 18px; padding: 16px; display: flex; flex-direction: column; justify-content: space-between;">
+                    <div>
+                        <div style="font-weight: 900; color: #5b21b6; font-size: 1.02rem; margin-bottom: 10px; display: flex; align-items: center; gap: 6px;">
+                            <span>💡</span> MẸO "ĐẾM" DANH TỪ KHÔNG ĐẾM ĐƯỢC
+                        </div>
+                        <div style="font-size: 0.92rem; color: #4c1d95; margin-bottom: 10px;">
+                            Muốn đếm số lượng, hãy thêm <b>đơn vị đo / vật chứa</b> phía trước:
+                        </div>
+                        <div style="display: grid; gap: 7px; font-size: 0.94rem;">
+                            <div style="background: white; padding: 7px 12px; border-radius: 10px; border: 1px solid #ddd6fe;">
+                                📄 <b style="color: #6d28d9;">a piece of</b> advice / information / news
+                            </div>
+                            <div style="background: white; padding: 7px 12px; border-radius: 10px; border: 1px solid #ddd6fe;">
+                                🥛 <b style="color: #6d28d9;">a glass / bottle of</b> water / milk
+                            </div>
+                            <div style="background: white; padding: 7px 12px; border-radius: 10px; border: 1px solid #ddd6fe;">
+                                ☕ <b style="color: #6d28d9;">a cup of</b> tea / coffee
+                            </div>
+                            <div style="background: white; padding: 7px 12px; border-radius: 10px; border: 1px solid #ddd6fe;">
+                                🍞 <b style="color: #6d28d9;">a slice / loaf of</b> bread
+                            </div>
+                        </div>
+                    </div>
+                    <div style="margin-top: 10px; background: #ede9fe; padding: 8px 12px; border-radius: 10px; font-size: 0.9rem; color: #4c1d95;">
+                        ✅ <b>VD:</b> She gave me <b style="color: #6d28d9;">two pieces of advice</b>.
+                    </div>
+                </div>
+            </div>
         </div>`
     },
     {
@@ -4165,6 +4605,46 @@ const nounsPracticeExtra3Data = [
 
 
 
+
+// Toggle view between interactive 9-card grid and infographic image for Nouns by Meaning
+window.toggleNounsMeaningView = function(view) {
+    const gridEl = document.getElementById('nbm-grid-container');
+    const imgEl = document.getElementById('nbm-image-container');
+    const btnGrid = document.getElementById('btn-nbm-view-grid');
+    const btnImg = document.getElementById('btn-nbm-view-image');
+    if (!gridEl || !imgEl) return;
+    if (view === 'image') {
+        gridEl.style.display = 'none';
+        imgEl.style.display = 'block';
+        if (btnGrid) {
+            btnGrid.style.background = 'rgba(255,255,255,0.2)';
+            btnGrid.style.color = 'white';
+            btnGrid.style.border = '1px solid rgba(255,255,255,0.45)';
+            btnGrid.style.boxShadow = 'none';
+        }
+        if (btnImg) {
+            btnImg.style.background = 'white';
+            btnImg.style.color = '#1e3a8a';
+            btnImg.style.border = 'none';
+            btnImg.style.boxShadow = '0 2px 4px rgba(0,0,0,0.12)';
+        }
+    } else {
+        gridEl.style.display = 'grid';
+        imgEl.style.display = 'none';
+        if (btnGrid) {
+            btnGrid.style.background = 'white';
+            btnGrid.style.color = '#1e3a8a';
+            btnGrid.style.border = 'none';
+            btnGrid.style.boxShadow = '0 2px 4px rgba(0,0,0,0.12)';
+        }
+        if (btnImg) {
+            btnImg.style.background = 'rgba(255,255,255,0.2)';
+            btnImg.style.color = 'white';
+            btnImg.style.border = '1px solid rgba(255,255,255,0.45)';
+            btnImg.style.boxShadow = 'none';
+        }
+    }
+};
 
 window.renderNounsDetail = function(activeTab = 'theory') {
     // init global vars for nouns quiz if not exist
