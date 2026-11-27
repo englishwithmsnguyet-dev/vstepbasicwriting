@@ -3436,402 +3436,354 @@ const nounsTheoryData = [
         </style>`
     },
     {
-        title: '2. NHẬN DIỆN QUA HẬU TỐ',
-        content: `<p style="margin-bottom: 16px; color: var(--text-main);">Một số đuôi (hậu tố) gần như mặc định là danh từ. Dưới đây là <b>20 hậu tố phổ biến nhất</b> được chia thành 6 nhóm lớn. Bấm vào từng nhóm để xem chi tiết các từ vựng thường gặp trong VSTEP:</p>
-
-<div style="margin-bottom: 24px;">
-    <a href="HẬU TỐ DANH TỪ - CHỦ ĐIỂM 01 - WRITING.pdf" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: var(--primary-color); color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.2s;">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-        Tải xuống bản gốc PDF
-    </a>
-</div>
-
-<div class="suffix-accordions">
-
-    <details class="suffix-group" style="margin-bottom: 12px; border: 1px solid #cbd5e1; border-radius: 8px; overflow: hidden; background: white; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
-        <summary style="background: #f8fafc; padding: 16px 20px; font-weight: 800; color: #1e293b; font-size: 1.15rem; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; border-left: 4px solid #ef4444;">
-            I. HẬU TỐ DANH TỪ CHỈ NGƯỜI <span style="font-size: 0.9rem; color: #64748b;">▼</span>
-        </summary>
-        <div style="padding: 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; border-top: 1px solid #cbd5e1; background: #fafafa;">
-
-            <div style="background: #fef2f2; border: 1px solid #fecaca; border-radius: 8px; padding: 16px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
-                <div style="font-weight: 700; color: #ef4444; font-size: 1.1rem; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px dashed #fecaca;">1. -er / -or (người thực hiện hành động)</div>
-                <ul style="list-style-type: none; padding: 0; margin: 0; line-height: 1.8; color: #334155; font-size: 1.05rem;">
-                    <li>• <b>teacher</b> – <span style="color: #64748b;">giáo viên</span></li>
-                    <li>• <b>dancer</b> – <span style="color: #64748b;">vũ công</span></li>
-                    <li>• <b>worker</b> – <span style="color: #64748b;">công nhân</span></li>
-                    <li>• <b>actor</b> – <span style="color: #64748b;">diễn viên</span></li>
-                    <li>• <b>driver</b> – <span style="color: #64748b;">tài xế</span></li>
-                    <li>• <b>director</b> – <span style="color: #64748b;">đạo diễn</span></li>
-                    <li>• <b>writer</b> – <span style="color: #64748b;">nhà văn</span></li>
-                    <li>• <b>visitor</b> – <span style="color: #64748b;">khách tham quan</span></li>
-                    <li>• <b>singer</b> – <span style="color: #64748b;">ca sĩ</span></li>
-                    <li>• <b>manager</b> – <span style="color: #64748b;">quản lý</span></li>
-
-                </ul>
+        title: '🔍 2. NHẬN DIỆN DANH TỪ QUA 20 HẬU TỐ',
+        content: `
+        <div class="adj-wrap">
+            <!-- Top Action Bar -->
+            <div style="background: linear-gradient(135deg, #f0f9ff 0%, #eef2ff 100%); border: 1.5px solid #c7d2fe; border-radius: 14px; padding: 14px 18px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;">
+                <div style="color: #0f172a; font-size: 1rem; line-height: 1.55; flex: 1; min-width: 240px;">
+                    Một số đuôi (hậu tố) gần như mặc định là <b>Danh từ</b>. Dưới đây là <b>20 hậu tố phổ biến nhất</b> chia thành <b>6 nhóm màu trực quan</b> — bấm vào từng nhóm để xem các từ vựng chuẩn VSTEP:
+                </div>
+                <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+                    <button type="button" onclick="window.toggleAllNounSuffixes(true)" style="background: white; color: #0284c7; border: 1.5px solid #38bdf8; padding: 8px 14px; border-radius: 20px; font-weight: 700; font-size: 0.88rem; cursor: pointer;">📂 Mở tất cả</button>
+                    <button type="button" onclick="window.toggleAllNounSuffixes(false)" style="background: white; color: #64748b; border: 1.5px solid #cbd5e1; padding: 8px 14px; border-radius: 20px; font-weight: 700; font-size: 0.88rem; cursor: pointer;">📁 Thu gọn</button>
+                    <a href="HẬU TỐ DANH TỪ - CHỦ ĐIỂM 01 - WRITING.pdf" target="_blank" style="display: inline-flex; align-items: center; gap: 6px; background: var(--primary-color); color: white; padding: 8px 16px; border-radius: 20px; text-decoration: none; font-weight: 700; font-size: 0.88rem; box-shadow: 0 3px 8px rgba(79,70,229,0.25);">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                        Tải PDF gốc
+                    </a>
+                </div>
             </div>
 
-            <div style="background: #fef2f2; border: 1px solid #fecaca; border-radius: 8px; padding: 16px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
-                <div style="font-weight: 700; color: #ef4444; font-size: 1.1rem; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px dashed #fecaca;">2. -ist (nghề nghiệp / người theo học thuyết)</div>
-                <ul style="list-style-type: none; padding: 0; margin: 0; line-height: 1.8; color: #334155; font-size: 1.05rem;">
-                    <li>• <b>artist</b> – <span style="color: #64748b;">nghệ sĩ</span></li>
-                    <li>• <b>tourist</b> – <span style="color: #64748b;">khách du lịch</span></li>
-                    <li>• <b>scientist</b> – <span style="color: #64748b;">nhà khoa học</span></li>
-                    <li>• <b>economist</b> – <span style="color: #64748b;">nhà kinh tế học</span></li>
-                    <li>• <b>dentist</b> – <span style="color: #64748b;">nha sĩ</span></li>
-                    <li>• <b>novelist</b> – <span style="color: #64748b;">tiểu thuyết gia</span></li>
-                    <li>• <b>journalist</b> – <span style="color: #64748b;">nhà báo</span></li>
-                    <li>• <b>psychologist</b> – <span style="color: #64748b;">nhà tâm lý học</span></li>
-                    <li>• <b>pianist</b> – <span style="color: #64748b;">nghệ sĩ piano</span></li>
-                    <li>• <b>realist</b> – <span style="color: #64748b;">người theo chủ nghĩa hiện thực</span></li>
+            <div class="suffix-accordions" id="noun-suffix-accordions">
 
-                </ul>
+                <!-- NHÓM I: CHỈ NGƯỜI -->
+                <details class="adj-suffix-group" style="border-color: #fca5a5;" open>
+                    <summary class="adj-suffix-summary" style="background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%); color: #991b1b;">
+                        <span style="display: flex; align-items: center; gap: 8px;"><span>👤</span> I. HẬU TỐ DANH TỪ CHỈ NGƯỜI</span>
+                        <span style="background: #ef4444; color: white; font-size: 0.8rem; padding: 3px 10px; border-radius: 999px;">6 hậu tố ▼</span>
+                    </summary>
+                    <div class="adj-suffix-cards" style="grid-template-columns: repeat(auto-fill, minmax(265px, 1fr));">
+                        <div class="adj-suf-tile" style="border-color: #fecaca;">
+                            <div class="adj-suf-head"><span class="adj-suf-pill" style="background: #fee2e2; color: #dc2626;">1. -er / -or</span><span class="adj-suf-mean">người thực hiện</span></div>
+                            <div class="adj-word-row"><span>teach<b style="color: #dc2626;">er</b></span><span style="color: #64748b; font-size: 0.85rem;">giáo viên</span></div>
+                            <div class="adj-word-row"><span>danc<b style="color: #dc2626;">er</b></span><span style="color: #64748b; font-size: 0.85rem;">vũ công</span></div>
+                            <div class="adj-word-row"><span>work<b style="color: #dc2626;">er</b></span><span style="color: #64748b; font-size: 0.85rem;">công nhân</span></div>
+                            <div class="adj-word-row"><span>act<b style="color: #dc2626;">or</b></span><span style="color: #64748b; font-size: 0.85rem;">diễn viên</span></div>
+                            <div class="adj-word-row"><span>driv<b style="color: #dc2626;">er</b></span><span style="color: #64748b; font-size: 0.85rem;">tài xế</span></div>
+                            <div class="adj-word-row"><span>direct<b style="color: #dc2626;">or</b></span><span style="color: #64748b; font-size: 0.85rem;">đạo diễn</span></div>
+                            <div class="adj-word-row"><span>writ<b style="color: #dc2626;">er</b></span><span style="color: #64748b; font-size: 0.85rem;">nhà văn</span></div>
+                            <div class="adj-word-row"><span>visit<b style="color: #dc2626;">or</b></span><span style="color: #64748b; font-size: 0.85rem;">khách tham quan</span></div>
+                            <div class="adj-word-row"><span>sing<b style="color: #dc2626;">er</b></span><span style="color: #64748b; font-size: 0.85rem;">ca sĩ</span></div>
+                            <div class="adj-word-row"><span>manag<b style="color: #dc2626;">er</b></span><span style="color: #64748b; font-size: 0.85rem;">quản lý</span></div>
+                        </div>
+
+                        <div class="adj-suf-tile" style="border-color: #fecaca;">
+                            <div class="adj-suf-head"><span class="adj-suf-pill" style="background: #fee2e2; color: #dc2626;">2. -ist</span><span class="adj-suf-mean">nghề / học thuyết</span></div>
+                            <div class="adj-word-row"><span>art<b style="color: #dc2626;">ist</b></span><span style="color: #64748b; font-size: 0.85rem;">nghệ sĩ</span></div>
+                            <div class="adj-word-row"><span>tour<b style="color: #dc2626;">ist</b></span><span style="color: #64748b; font-size: 0.85rem;">khách du lịch</span></div>
+                            <div class="adj-word-row"><span>scient<b style="color: #dc2626;">ist</b></span><span style="color: #64748b; font-size: 0.85rem;">nhà khoa học</span></div>
+                            <div class="adj-word-row"><span>econom<b style="color: #dc2626;">ist</b></span><span style="color: #64748b; font-size: 0.85rem;">nhà kinh tế học</span></div>
+                            <div class="adj-word-row"><span>dent<b style="color: #dc2626;">ist</b></span><span style="color: #64748b; font-size: 0.85rem;">nha sĩ</span></div>
+                            <div class="adj-word-row"><span>novel<b style="color: #dc2626;">ist</b></span><span style="color: #64748b; font-size: 0.85rem;">tiểu thuyết gia</span></div>
+                            <div class="adj-word-row"><span>journal<b style="color: #dc2626;">ist</b></span><span style="color: #64748b; font-size: 0.85rem;">nhà báo</span></div>
+                            <div class="adj-word-row"><span>psycholog<b style="color: #dc2626;">ist</b></span><span style="color: #64748b; font-size: 0.85rem;">nhà tâm lý học</span></div>
+                            <div class="adj-word-row"><span>pian<b style="color: #dc2626;">ist</b></span><span style="color: #64748b; font-size: 0.85rem;">nghệ sĩ piano</span></div>
+                            <div class="adj-word-row"><span>real<b style="color: #dc2626;">ist</b></span><span style="color: #64748b; font-size: 0.85rem;">người thực tế</span></div>
+                        </div>
+
+                        <div class="adj-suf-tile" style="border-color: #fecaca;">
+                            <div class="adj-suf-head"><span class="adj-suf-pill" style="background: #fee2e2; color: #dc2626;">3. -ian / -an</span><span class="adj-suf-mean">nghề, quốc tịch</span></div>
+                            <div class="adj-word-row"><span>music<b style="color: #dc2626;">ian</b></span><span style="color: #64748b; font-size: 0.85rem;">nhạc sĩ</span></div>
+                            <div class="adj-word-row"><span>Americ<b style="color: #dc2626;">an</b></span><span style="color: #64748b; font-size: 0.85rem;">người Mỹ</span></div>
+                            <div class="adj-word-row"><span>electric<b style="color: #dc2626;">ian</b></span><span style="color: #64748b; font-size: 0.85rem;">thợ điện</span></div>
+                            <div class="adj-word-row"><span>Ital<b style="color: #dc2626;">ian</b></span><span style="color: #64748b; font-size: 0.85rem;">người Ý</span></div>
+                            <div class="adj-word-row"><span>politic<b style="color: #dc2626;">ian</b></span><span style="color: #64748b; font-size: 0.85rem;">chính trị gia</span></div>
+                            <div class="adj-word-row"><span>As<b style="color: #dc2626;">ian</b></span><span style="color: #64748b; font-size: 0.85rem;">người châu Á</span></div>
+                            <div class="adj-word-row"><span>histor<b style="color: #dc2626;">ian</b></span><span style="color: #64748b; font-size: 0.85rem;">sử gia</span></div>
+                            <div class="adj-word-row"><span>Canad<b style="color: #dc2626;">ian</b></span><span style="color: #64748b; font-size: 0.85rem;">người Canada</span></div>
+                            <div class="adj-word-row"><span>librar<b style="color: #dc2626;">ian</b></span><span style="color: #64748b; font-size: 0.85rem;">thủ thư</span></div>
+                            <div class="adj-word-row"><span>Mexic<b style="color: #dc2626;">an</b></span><span style="color: #64748b; font-size: 0.85rem;">người Mexico</span></div>
+                        </div>
+
+                        <div class="adj-suf-tile" style="border-color: #fecaca;">
+                            <div class="adj-suf-head"><span class="adj-suf-pill" style="background: #fee2e2; color: #dc2626;">4. -ee</span><span class="adj-suf-mean">người nhận hành động</span></div>
+                            <div class="adj-word-row"><span>employ<b style="color: #dc2626;">ee</b></span><span style="color: #64748b; font-size: 0.85rem;">nhân viên</span></div>
+                            <div class="adj-word-row"><span>attend<b style="color: #dc2626;">ee</b></span><span style="color: #64748b; font-size: 0.85rem;">người tham dự</span></div>
+                            <div class="adj-word-row"><span>interview<b style="color: #dc2626;">ee</b></span><span style="color: #64748b; font-size: 0.85rem;">ứng viên phỏng vấn</span></div>
+                            <div class="adj-word-row"><span>pay<b style="color: #dc2626;">ee</b></span><span style="color: #64748b; font-size: 0.85rem;">người nhận tiền</span></div>
+                            <div class="adj-word-row"><span>train<b style="color: #dc2626;">ee</b></span><span style="color: #64748b; font-size: 0.85rem;">thực tập sinh</span></div>
+                            <div class="adj-word-row"><span>nomin<b style="color: #dc2626;">ee</b></span><span style="color: #64748b; font-size: 0.85rem;">người được đề cử</span></div>
+                            <div class="adj-word-row"><span>examin<b style="color: #dc2626;">ee</b></span><span style="color: #64748b; font-size: 0.85rem;">thí sinh</span></div>
+                            <div class="adj-word-row"><span>retir<b style="color: #dc2626;">ee</b></span><span style="color: #64748b; font-size: 0.85rem;">người nghỉ hưu</span></div>
+                            <div class="adj-word-row"><span>refug<b style="color: #dc2626;">ee</b></span><span style="color: #64748b; font-size: 0.85rem;">người tị nạn</span></div>
+                            <div class="adj-word-row"><span>address<b style="color: #dc2626;">ee</b></span><span style="color: #64748b; font-size: 0.85rem;">người nhận thư</span></div>
+                        </div>
+
+                        <div class="adj-suf-tile" style="border-color: #fecaca;">
+                            <div class="adj-suf-head"><span class="adj-suf-pill" style="background: #fee2e2; color: #dc2626;">5. -ant / -ent</span><span class="adj-suf-mean">người giữ vai trò</span></div>
+                            <div class="adj-word-row"><span>assist<b style="color: #dc2626;">ant</b></span><span style="color: #64748b; font-size: 0.85rem;">trợ lý</span></div>
+                            <div class="adj-word-row"><span>resid<b style="color: #dc2626;">ent</b></span><span style="color: #64748b; font-size: 0.85rem;">cư dân</span></div>
+                            <div class="adj-word-row"><span>applic<b style="color: #dc2626;">ant</b></span><span style="color: #64748b; font-size: 0.85rem;">người nộp đơn</span></div>
+                            <div class="adj-word-row"><span>stud<b style="color: #dc2626;">ent</b></span><span style="color: #64748b; font-size: 0.85rem;">học sinh</span></div>
+                            <div class="adj-word-row"><span>particip<b style="color: #dc2626;">ant</b></span><span style="color: #64748b; font-size: 0.85rem;">người tham gia</span></div>
+                            <div class="adj-word-row"><span>consult<b style="color: #dc2626;">ant</b></span><span style="color: #64748b; font-size: 0.85rem;">cố vấn</span></div>
+                            <div class="adj-word-row"><span>account<b style="color: #dc2626;">ant</b></span><span style="color: #64748b; font-size: 0.85rem;">kế toán</span></div>
+                            <div class="adj-word-row"><span>immigr<b style="color: #dc2626;">ant</b></span><span style="color: #64748b; font-size: 0.85rem;">người nhập cư</span></div>
+                            <div class="adj-word-row"><span>serv<b style="color: #dc2626;">ant</b></span><span style="color: #64748b; font-size: 0.85rem;">người hầu</span></div>
+                            <div class="adj-word-row"><span>defend<b style="color: #dc2626;">ant</b></span><span style="color: #64748b; font-size: 0.85rem;">bị đơn</span></div>
+                        </div>
+
+                        <div class="adj-suf-tile" style="border-color: #fecaca;">
+                            <div class="adj-suf-head"><span class="adj-suf-pill" style="background: #fee2e2; color: #dc2626;">6. -arian</span><span class="adj-suf-mean">theo nghề / tư tưởng</span></div>
+                            <div class="adj-word-row"><span>libr<b style="color: #dc2626;">arian</b></span><span style="color: #64748b; font-size: 0.85rem;">thủ thư</span></div>
+                            <div class="adj-word-row"><span>humanit<b style="color: #dc2626;">arian</b></span><span style="color: #64748b; font-size: 0.85rem;">nhà nhân đạo</span></div>
+                            <div class="adj-word-row"><span>veget<b style="color: #dc2626;">arian</b></span><span style="color: #64748b; font-size: 0.85rem;">người ăn chay</span></div>
+                            <div class="adj-word-row"><span>disciplin<b style="color: #dc2626;">arian</b></span><span style="color: #64748b; font-size: 0.85rem;">người nghiêm khắc</span></div>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- NHÓM II: HÀNH ĐỘNG - QUÁ TRÌNH - KẾT QUẢ -->
+                <details class="adj-suffix-group" style="border-color: #93c5fd;">
+                    <summary class="adj-suffix-summary" style="background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%); color: #1e40af;">
+                        <span style="display: flex; align-items: center; gap: 8px;"><span>⚡</span> II. HẬU TỐ CHỈ HÀNH ĐỘNG – QUÁ TRÌNH – KẾT QUẢ</span>
+                        <span style="background: #2563eb; color: white; font-size: 0.8rem; padding: 3px 10px; border-radius: 999px;">5 hậu tố ▼</span>
+                    </summary>
+                    <div class="adj-suffix-cards" style="grid-template-columns: repeat(auto-fill, minmax(265px, 1fr));">
+                        <div class="adj-suf-tile" style="border-color: #bfdbfe;">
+                            <div class="adj-suf-head"><span class="adj-suf-pill" style="background: #dbeafe; color: #1d4ed8;">7. -tion / -sion / -ation</span></div>
+                            <div class="adj-word-row"><span>educ<b style="color: #1d4ed8;">ation</b></span><span style="color: #64748b; font-size: 0.85rem;">giáo dục</span></div>
+                            <div class="adj-word-row"><span>communic<b style="color: #1d4ed8;">ation</b></span><span style="color: #64748b; font-size: 0.85rem;">sự giao tiếp</span></div>
+                            <div class="adj-word-row"><span>inform<b style="color: #1d4ed8;">ation</b></span><span style="color: #64748b; font-size: 0.85rem;">thông tin</span></div>
+                            <div class="adj-word-row"><span>transl<b style="color: #1d4ed8;">ation</b></span><span style="color: #64748b; font-size: 0.85rem;">sự dịch</span></div>
+                            <div class="adj-word-row"><span>pollu<b style="color: #1d4ed8;">tion</b></span><span style="color: #64748b; font-size: 0.85rem;">ô nhiễm</span></div>
+                            <div class="adj-word-row"><span>popul<b style="color: #1d4ed8;">ation</b></span><span style="color: #64748b; font-size: 0.85rem;">dân số</span></div>
+                            <div class="adj-word-row"><span>deci<b style="color: #1d4ed8;">sion</b></span><span style="color: #64748b; font-size: 0.85rem;">quyết định</span></div>
+                            <div class="adj-word-row"><span>organiz<b style="color: #1d4ed8;">ation</b></span><span style="color: #64748b; font-size: 0.85rem;">tổ chức</span></div>
+                            <div class="adj-word-row"><span>discus<b style="color: #1d4ed8;">sion</b></span><span style="color: #64748b; font-size: 0.85rem;">cuộc thảo luận</span></div>
+                            <div class="adj-word-row"><span>situ<b style="color: #1d4ed8;">ation</b></span><span style="color: #64748b; font-size: 0.85rem;">tình huống</span></div>
+                        </div>
+
+                        <div class="adj-suf-tile" style="border-color: #bfdbfe;">
+                            <div class="adj-suf-head"><span class="adj-suf-pill" style="background: #dbeafe; color: #1d4ed8;">8. -ment</span><span class="adj-suf-mean">quá trình / kết quả</span></div>
+                            <div class="adj-word-row"><span>develop<b style="color: #1d4ed8;">ment</b></span><span style="color: #64748b; font-size: 0.85rem;">sự phát triển</span></div>
+                            <div class="adj-word-row"><span>govern<b style="color: #1d4ed8;">ment</b></span><span style="color: #64748b; font-size: 0.85rem;">chính phủ</span></div>
+                            <div class="adj-word-row"><span>improve<b style="color: #1d4ed8;">ment</b></span><span style="color: #64748b; font-size: 0.85rem;">sự cải thiện</span></div>
+                            <div class="adj-word-row"><span>environ<b style="color: #1d4ed8;">ment</b></span><span style="color: #64748b; font-size: 0.85rem;">môi trường</span></div>
+                            <div class="adj-word-row"><span>agree<b style="color: #1d4ed8;">ment</b></span><span style="color: #64748b; font-size: 0.85rem;">sự đồng ý</span></div>
+                            <div class="adj-word-row"><span>punish<b style="color: #1d4ed8;">ment</b></span><span style="color: #64748b; font-size: 0.85rem;">sự trừng phạt</span></div>
+                            <div class="adj-word-row"><span>achieve<b style="color: #1d4ed8;">ment</b></span><span style="color: #64748b; font-size: 0.85rem;">thành tựu</span></div>
+                            <div class="adj-word-row"><span>entertain<b style="color: #1d4ed8;">ment</b></span><span style="color: #64748b; font-size: 0.85rem;">sự giải trí</span></div>
+                            <div class="adj-word-row"><span>manage<b style="color: #1d4ed8;">ment</b></span><span style="color: #64748b; font-size: 0.85rem;">sự quản lý</span></div>
+                            <div class="adj-word-row"><span>move<b style="color: #1d4ed8;">ment</b></span><span style="color: #64748b; font-size: 0.85rem;">sự di chuyển</span></div>
+                        </div>
+
+                        <div class="adj-suf-tile" style="border-color: #bfdbfe;">
+                            <div class="adj-suf-head"><span class="adj-suf-pill" style="background: #dbeafe; color: #1d4ed8;">9. -ance / -ence</span><span class="adj-suf-mean">trạng thái / tính chất</span></div>
+                            <div class="adj-word-row"><span>import<b style="color: #1d4ed8;">ance</b></span><span style="color: #64748b; font-size: 0.85rem;">tầm quan trọng</span></div>
+                            <div class="adj-word-row"><span>pati<b style="color: #1d4ed8;">ence</b></span><span style="color: #64748b; font-size: 0.85rem;">sự kiên nhẫn</span></div>
+                            <div class="adj-word-row"><span>differ<b style="color: #1d4ed8;">ence</b></span><span style="color: #64748b; font-size: 0.85rem;">sự khác biệt</span></div>
+                            <div class="adj-word-row"><span>independ<b style="color: #1d4ed8;">ence</b></span><span style="color: #64748b; font-size: 0.85rem;">sự độc lập</span></div>
+                            <div class="adj-word-row"><span>confid<b style="color: #1d4ed8;">ence</b></span><span style="color: #64748b; font-size: 0.85rem;">sự tự tin</span></div>
+                            <div class="adj-word-row"><span>exist<b style="color: #1d4ed8;">ence</b></span><span style="color: #64748b; font-size: 0.85rem;">sự tồn tại</span></div>
+                            <div class="adj-word-row"><span>appear<b style="color: #1d4ed8;">ance</b></span><span style="color: #64748b; font-size: 0.85rem;">vẻ ngoài</span></div>
+                            <div class="adj-word-row"><span>viol<b style="color: #1d4ed8;">ence</b></span><span style="color: #64748b; font-size: 0.85rem;">bạo lực</span></div>
+                            <div class="adj-word-row"><span>perform<b style="color: #1d4ed8;">ance</b></span><span style="color: #64748b; font-size: 0.85rem;">biểu diễn / hiệu suất</span></div>
+                            <div class="adj-word-row"><span>dist<b style="color: #1d4ed8;">ance</b></span><span style="color: #64748b; font-size: 0.85rem;">khoảng cách</span></div>
+                        </div>
+
+                        <div class="adj-suf-tile" style="border-color: #bfdbfe;">
+                            <div class="adj-suf-head"><span class="adj-suf-pill" style="background: #dbeafe; color: #1d4ed8;">10. -al</span><span class="adj-suf-mean">sự việc / kết quả</span></div>
+                            <div class="adj-word-row"><span>arriv<b style="color: #1d4ed8;">al</b></span><span style="color: #64748b; font-size: 0.85rem;">sự đến nơi</span></div>
+                            <div class="adj-word-row"><span>dismiss<b style="color: #1d4ed8;">al</b></span><span style="color: #64748b; font-size: 0.85rem;">sự sa thải</span></div>
+                            <div class="adj-word-row"><span>refus<b style="color: #1d4ed8;">al</b></span><span style="color: #64748b; font-size: 0.85rem;">sự từ chối</span></div>
+                            <div class="adj-word-row"><span>remov<b style="color: #1d4ed8;">al</b></span><span style="color: #64748b; font-size: 0.85rem;">sự loại bỏ</span></div>
+                            <div class="adj-word-row"><span>approv<b style="color: #1d4ed8;">al</b></span><span style="color: #64748b; font-size: 0.85rem;">sự chấp thuận</span></div>
+                            <div class="adj-word-row"><span>reviv<b style="color: #1d4ed8;">al</b></span><span style="color: #64748b; font-size: 0.85rem;">sự hồi sinh</span></div>
+                            <div class="adj-word-row"><span>surviv<b style="color: #1d4ed8;">al</b></span><span style="color: #64748b; font-size: 0.85rem;">sự sống sót</span></div>
+                            <div class="adj-word-row"><span>withdraw<b style="color: #1d4ed8;">al</b></span><span style="color: #64748b; font-size: 0.85rem;">sự rút lui</span></div>
+                            <div class="adj-word-row"><span>propos<b style="color: #1d4ed8;">al</b></span><span style="color: #64748b; font-size: 0.85rem;">đề xuất</span></div>
+                            <div class="adj-word-row"><span>deni<b style="color: #1d4ed8;">al</b></span><span style="color: #64748b; font-size: 0.85rem;">sự phủ nhận</span></div>
+                        </div>
+
+                        <div class="adj-suf-tile" style="border-color: #bfdbfe;">
+                            <div class="adj-suf-head"><span class="adj-suf-pill" style="background: #dbeafe; color: #1d4ed8;">11. -ure</span><span class="adj-suf-mean">hành động / kết quả</span></div>
+                            <div class="adj-word-row"><span>press<b style="color: #1d4ed8;">ure</b></span><span style="color: #64748b; font-size: 0.85rem;">áp lực</span></div>
+                            <div class="adj-word-row"><span>expos<b style="color: #1d4ed8;">ure</b></span><span style="color: #64748b; font-size: 0.85rem;">sự phơi bày</span></div>
+                            <div class="adj-word-row"><span>pleas<b style="color: #1d4ed8;">ure</b></span><span style="color: #64748b; font-size: 0.85rem;">niềm vui</span></div>
+                            <div class="adj-word-row"><span>depart<b style="color: #1d4ed8;">ure</b></span><span style="color: #64748b; font-size: 0.85rem;">sự khởi hành</span></div>
+                            <div class="adj-word-row"><span>fail<b style="color: #1d4ed8;">ure</b></span><span style="color: #64748b; font-size: 0.85rem;">sự thất bại</span></div>
+                            <div class="adj-word-row"><span>clos<b style="color: #1d4ed8;">ure</b></span><span style="color: #64748b; font-size: 0.85rem;">sự đóng cửa</span></div>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- NHÓM III: KHÁI NIỆM - TRẠNG THÁI -->
+                <details class="adj-suffix-group" style="border-color: #c4b5fd;">
+                    <summary class="adj-suffix-summary" style="background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%); color: #5b21b6;">
+                        <span style="display: flex; align-items: center; gap: 8px;"><span>💎</span> III. HẬU TỐ CHỈ KHÁI NIỆM – TRẠNG THÁI</span>
+                        <span style="background: #7c3aed; color: white; font-size: 0.8rem; padding: 3px 10px; border-radius: 999px;">4 hậu tố ▼</span>
+                    </summary>
+                    <div class="adj-suffix-cards" style="grid-template-columns: repeat(auto-fill, minmax(265px, 1fr));">
+                        <div class="adj-suf-tile" style="border-color: #ddd6fe;">
+                            <div class="adj-suf-head"><span class="adj-suf-pill" style="background: #ede9fe; color: #6d28d9;">12. -ness</span><span class="adj-suf-mean">trạng thái / phẩm chất</span></div>
+                            <div class="adj-word-row"><span>happi<b style="color: #6d28d9;">ness</b></span><span style="color: #64748b; font-size: 0.85rem;">hạnh phúc</span></div>
+                            <div class="adj-word-row"><span>dark<b style="color: #6d28d9;">ness</b></span><span style="color: #64748b; font-size: 0.85rem;">bóng tối</span></div>
+                            <div class="adj-word-row"><span>sad<b style="color: #6d28d9;">ness</b></span><span style="color: #64748b; font-size: 0.85rem;">nỗi buồn</span></div>
+                            <div class="adj-word-row"><span>loneli<b style="color: #6d28d9;">ness</b></span><span style="color: #64748b; font-size: 0.85rem;">sự cô đơn</span></div>
+                            <div class="adj-word-row"><span>kind<b style="color: #6d28d9;">ness</b></span><span style="color: #64748b; font-size: 0.85rem;">lòng tốt</span></div>
+                            <div class="adj-word-row"><span>serious<b style="color: #6d28d9;">ness</b></span><span style="color: #64748b; font-size: 0.85rem;">sự nghiêm túc</span></div>
+                            <div class="adj-word-row"><span>ill<b style="color: #6d28d9;">ness</b></span><span style="color: #64748b; font-size: 0.85rem;">bệnh tật</span></div>
+                            <div class="adj-word-row"><span>aware<b style="color: #6d28d9;">ness</b></span><span style="color: #64748b; font-size: 0.85rem;">nhận thức</span></div>
+                            <div class="adj-word-row"><span>weak<b style="color: #6d28d9;">ness</b></span><span style="color: #64748b; font-size: 0.85rem;">sự yếu đuối</span></div>
+                            <div class="adj-word-row"><span>nervous<b style="color: #6d28d9;">ness</b></span><span style="color: #64748b; font-size: 0.85rem;">sự lo lắng</span></div>
+                        </div>
+
+                        <div class="adj-suf-tile" style="border-color: #ddd6fe;">
+                            <div class="adj-suf-head"><span class="adj-suf-pill" style="background: #ede9fe; color: #6d28d9;">13. -ity</span><span class="adj-suf-mean">đặc tính / trạng thái</span></div>
+                            <div class="adj-word-row"><span>abil<b style="color: #6d28d9;">ity</b></span><span style="color: #64748b; font-size: 0.85rem;">khả năng</span></div>
+                            <div class="adj-word-row"><span>equal<b style="color: #6d28d9;">ity</b></span><span style="color: #64748b; font-size: 0.85rem;">sự bình đẳng</span></div>
+                            <div class="adj-word-row"><span>responsibil<b style="color: #6d28d9;">ity</b></span><span style="color: #64748b; font-size: 0.85rem;">trách nhiệm</span></div>
+                            <div class="adj-word-row"><span>stabil<b style="color: #6d28d9;">ity</b></span><span style="color: #64748b; font-size: 0.85rem;">sự ổn định</span></div>
+                            <div class="adj-word-row"><span>real<b style="color: #6d28d9;">ity</b></span><span style="color: #64748b; font-size: 0.85rem;">thực tế</span></div>
+                            <div class="adj-word-row"><span>secur<b style="color: #6d28d9;">ity</b></span><span style="color: #64748b; font-size: 0.85rem;">an ninh</span></div>
+                            <div class="adj-word-row"><span>personal<b style="color: #6d28d9;">ity</b></span><span style="color: #64748b; font-size: 0.85rem;">tính cách</span></div>
+                            <div class="adj-word-row"><span>national<b style="color: #6d28d9;">ity</b></span><span style="color: #64748b; font-size: 0.85rem;">quốc tịch</span></div>
+                            <div class="adj-word-row"><span>creativ<b style="color: #6d28d9;">ity</b></span><span style="color: #64748b; font-size: 0.85rem;">sự sáng tạo</span></div>
+                            <div class="adj-word-row"><span>possibil<b style="color: #6d28d9;">ity</b></span><span style="color: #64748b; font-size: 0.85rem;">khả năng xảy ra</span></div>
+                        </div>
+
+                        <div class="adj-suf-tile" style="border-color: #ddd6fe;">
+                            <div class="adj-suf-head"><span class="adj-suf-pill" style="background: #ede9fe; color: #6d28d9;">14. -ship</span><span class="adj-suf-mean">mối quan hệ / vị thế</span></div>
+                            <div class="adj-word-row"><span>friend<b style="color: #6d28d9;">ship</b></span><span style="color: #64748b; font-size: 0.85rem;">tình bạn</span></div>
+                            <div class="adj-word-row"><span>citizen<b style="color: #6d28d9;">ship</b></span><span style="color: #64748b; font-size: 0.85rem;">quyền công dân</span></div>
+                            <div class="adj-word-row"><span>leader<b style="color: #6d28d9;">ship</b></span><span style="color: #64748b; font-size: 0.85rem;">khả năng lãnh đạo</span></div>
+                            <div class="adj-word-row"><span>partner<b style="color: #6d28d9;">ship</b></span><span style="color: #64748b; font-size: 0.85rem;">quan hệ đối tác</span></div>
+                            <div class="adj-word-row"><span>relation<b style="color: #6d28d9;">ship</b></span><span style="color: #64748b; font-size: 0.85rem;">mối quan hệ</span></div>
+                            <div class="adj-word-row"><span>owner<b style="color: #6d28d9;">ship</b></span><span style="color: #64748b; font-size: 0.85rem;">quyền sở hữu</span></div>
+                            <div class="adj-word-row"><span>member<b style="color: #6d28d9;">ship</b></span><span style="color: #64748b; font-size: 0.85rem;">tư cách thành viên</span></div>
+                            <div class="adj-word-row"><span>intern<b style="color: #6d28d9;">ship</b></span><span style="color: #64748b; font-size: 0.85rem;">kỳ thực tập</span></div>
+                            <div class="adj-word-row"><span>scholar<b style="color: #6d28d9;">ship</b></span><span style="color: #64748b; font-size: 0.85rem;">học bổng</span></div>
+                            <div class="adj-word-row"><span>hard<b style="color: #6d28d9;">ship</b></span><span style="color: #64748b; font-size: 0.85rem;">sự khó khăn</span></div>
+                        </div>
+
+                        <div class="adj-suf-tile" style="border-color: #ddd6fe;">
+                            <div class="adj-suf-head"><span class="adj-suf-pill" style="background: #ede9fe; color: #6d28d9;">15. -ism</span><span class="adj-suf-mean">chủ nghĩa / học thuyết</span></div>
+                            <div class="adj-word-row"><span>capital<b style="color: #6d28d9;">ism</b></span><span style="color: #64748b; font-size: 0.85rem;">chủ nghĩa tư bản</span></div>
+                            <div class="adj-word-row"><span>rac<b style="color: #6d28d9;">ism</b></span><span style="color: #64748b; font-size: 0.85rem;">phân biệt chủng tộc</span></div>
+                            <div class="adj-word-row"><span>social<b style="color: #6d28d9;">ism</b></span><span style="color: #64748b; font-size: 0.85rem;">chủ nghĩa xã hội</span></div>
+                            <div class="adj-word-row"><span>optim<b style="color: #6d28d9;">ism</b></span><span style="color: #64748b; font-size: 0.85rem;">sự lạc quan</span></div>
+                            <div class="adj-word-row"><span>tour<b style="color: #6d28d9;">ism</b></span><span style="color: #64748b; font-size: 0.85rem;">du lịch</span></div>
+                            <div class="adj-word-row"><span>pessim<b style="color: #6d28d9;">ism</b></span><span style="color: #64748b; font-size: 0.85rem;">sự bi quan</span></div>
+                            <div class="adj-word-row"><span>real<b style="color: #6d28d9;">ism</b></span><span style="color: #64748b; font-size: 0.85rem;">chủ nghĩa hiện thực</span></div>
+                            <div class="adj-word-row"><span>national<b style="color: #6d28d9;">ism</b></span><span style="color: #64748b; font-size: 0.85rem;">chủ nghĩa dân tộc</span></div>
+                            <div class="adj-word-row"><span>femin<b style="color: #6d28d9;">ism</b></span><span style="color: #64748b; font-size: 0.85rem;">chủ nghĩa nữ quyền</span></div>
+                            <div class="adj-word-row"><span>ideal<b style="color: #6d28d9;">ism</b></span><span style="color: #64748b; font-size: 0.85rem;">chủ nghĩa lý tưởng</span></div>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- NHÓM IV: LĨNH VỰC - MÔN HỌC -->
+                <details class="adj-suffix-group" style="border-color: #6ee7b7;">
+                    <summary class="adj-suffix-summary" style="background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%); color: #065f46;">
+                        <span style="display: flex; align-items: center; gap: 8px;"><span>🔬</span> IV. HẬU TỐ CHỈ LĨNH VỰC – MÔN HỌC</span>
+                        <span style="background: #059669; color: white; font-size: 0.8rem; padding: 3px 10px; border-radius: 999px;">2 hậu tố ▼</span>
+                    </summary>
+                    <div class="adj-suffix-cards" style="grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));">
+                        <div class="adj-suf-tile" style="border-color: #a7f3d0;">
+                            <div class="adj-suf-head"><span class="adj-suf-pill" style="background: #d1fae5; color: #047857;">16. -logy</span><span class="adj-suf-mean">ngành khoa học</span></div>
+                            <div class="adj-word-row"><span>bio<b style="color: #047857;">logy</b></span><span style="color: #64748b; font-size: 0.85rem;">sinh học</span></div>
+                            <div class="adj-word-row"><span>techno<b style="color: #047857;">logy</b></span><span style="color: #64748b; font-size: 0.85rem;">công nghệ</span></div>
+                            <div class="adj-word-row"><span>psycho<b style="color: #047857;">logy</b></span><span style="color: #64748b; font-size: 0.85rem;">tâm lý học</span></div>
+                            <div class="adj-word-row"><span>archaeo<b style="color: #047857;">logy</b></span><span style="color: #64748b; font-size: 0.85rem;">khảo cổ học</span></div>
+                            <div class="adj-word-row"><span>socio<b style="color: #047857;">logy</b></span><span style="color: #64748b; font-size: 0.85rem;">xã hội học</span></div>
+                            <div class="adj-word-row"><span>anthropo<b style="color: #047857;">logy</b></span><span style="color: #64748b; font-size: 0.85rem;">nhân chủng học</span></div>
+                            <div class="adj-word-row"><span>geo<b style="color: #047857;">logy</b></span><span style="color: #64748b; font-size: 0.85rem;">địa chất học</span></div>
+                            <div class="adj-word-row"><span>meteoro<b style="color: #047857;">logy</b></span><span style="color: #64748b; font-size: 0.85rem;">khí tượng học</span></div>
+                            <div class="adj-word-row"><span>eco<b style="color: #047857;">logy</b></span><span style="color: #64748b; font-size: 0.85rem;">sinh thái học</span></div>
+                            <div class="adj-word-row"><span>crimino<b style="color: #047857;">logy</b></span><span style="color: #64748b; font-size: 0.85rem;">tội phạm học</span></div>
+                        </div>
+
+                        <div class="adj-suf-tile" style="border-color: #a7f3d0;">
+                            <div class="adj-suf-head"><span class="adj-suf-pill" style="background: #d1fae5; color: #047857;">17. -ics</span><span class="adj-suf-mean">môn học (luôn số ít!)</span></div>
+                            <div class="adj-word-row"><span>mathemat<b style="color: #047857;">ics</b></span><span style="color: #64748b; font-size: 0.85rem;">toán học</span></div>
+                            <div class="adj-word-row"><span>linguist<b style="color: #047857;">ics</b></span><span style="color: #64748b; font-size: 0.85rem;">ngôn ngữ học</span></div>
+                            <div class="adj-word-row"><span>phys<b style="color: #047857;">ics</b></span><span style="color: #64748b; font-size: 0.85rem;">vật lý</span></div>
+                            <div class="adj-word-row"><span>athlet<b style="color: #047857;">ics</b></span><span style="color: #64748b; font-size: 0.85rem;">điền kinh</span></div>
+                            <div class="adj-word-row"><span>econom<b style="color: #047857;">ics</b></span><span style="color: #64748b; font-size: 0.85rem;">kinh tế học</span></div>
+                            <div class="adj-word-row"><span>electron<b style="color: #047857;">ics</b></span><span style="color: #64748b; font-size: 0.85rem;">điện tử học</span></div>
+                            <div class="adj-word-row"><span>polit<b style="color: #047857;">ics</b></span><span style="color: #64748b; font-size: 0.85rem;">chính trị</span></div>
+                            <div class="adj-word-row"><span>mechan<b style="color: #047857;">ics</b></span><span style="color: #64748b; font-size: 0.85rem;">cơ học</span></div>
+                            <div class="adj-word-row"><span>statist<b style="color: #047857;">ics</b></span><span style="color: #64748b; font-size: 0.85rem;">thống kê</span></div>
+                            <div class="adj-word-row"><span>eth<b style="color: #047857;">ics</b></span><span style="color: #64748b; font-size: 0.85rem;">đạo đức học</span></div>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- NHÓM V: ĐỊA ĐIỂM - TẬP HỢP - VẬT CHỨA -->
+                <details class="adj-suffix-group" style="border-color: #fcd34d;">
+                    <summary class="adj-suffix-summary" style="background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%); color: #92400e;">
+                        <span style="display: flex; align-items: center; gap: 8px;"><span>🏛️</span> V. HẬU TỐ CHỈ ĐỊA ĐIỂM – TẬP HỢP – VẬT CHỨA</span>
+                        <span style="background: #d97706; color: white; font-size: 0.8rem; padding: 3px 10px; border-radius: 999px;">2 hậu tố ▼</span>
+                    </summary>
+                    <div class="adj-suffix-cards" style="grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));">
+                        <div class="adj-suf-tile" style="border-color: #fde68a;">
+                            <div class="adj-suf-head"><span class="adj-suf-pill" style="background: #fef3c7; color: #b45309;">18. -age</span><span class="adj-suf-mean">tập hợp / tình trạng</span></div>
+                            <div class="adj-word-row"><span>vill<b style="color: #b45309;">age</b></span><span style="color: #64748b; font-size: 0.85rem;">làng</span></div>
+                            <div class="adj-word-row"><span>short<b style="color: #b45309;">age</b></span><span style="color: #64748b; font-size: 0.85rem;">sự thiếu hụt</span></div>
+                            <div class="adj-word-row"><span>lugg<b style="color: #b45309;">age</b></span><span style="color: #64748b; font-size: 0.85rem;">hành lý</span></div>
+                            <div class="adj-word-row"><span>advant<b style="color: #b45309;">age</b></span><span style="color: #64748b; font-size: 0.85rem;">lợi thế</span></div>
+                            <div class="adj-word-row"><span>marri<b style="color: #b45309;">age</b></span><span style="color: #64748b; font-size: 0.85rem;">hôn nhân</span></div>
+                            <div class="adj-word-row"><span>disadvant<b style="color: #b45309;">age</b></span><span style="color: #64748b; font-size: 0.85rem;">bất lợi</span></div>
+                            <div class="adj-word-row"><span>dam<b style="color: #b45309;">age</b></span><span style="color: #64748b; font-size: 0.85rem;">thiệt hại</span></div>
+                            <div class="adj-word-row"><span>us<b style="color: #b45309;">age</b></span><span style="color: #64748b; font-size: 0.85rem;">cách dùng</span></div>
+                            <div class="adj-word-row"><span>pack<b style="color: #b45309;">age</b></span><span style="color: #64748b; font-size: 0.85rem;">gói hàng</span></div>
+                            <div class="adj-word-row"><span>percent<b style="color: #b45309;">age</b></span><span style="color: #64748b; font-size: 0.85rem;">phần trăm</span></div>
+                        </div>
+
+                        <div class="adj-suf-tile" style="border-color: #fde68a;">
+                            <div class="adj-suf-head"><span class="adj-suf-pill" style="background: #fef3c7; color: #b45309;">19. -ery / -ry</span><span class="adj-suf-mean">địa điểm / tập hợp</span></div>
+                            <div class="adj-word-row"><span>bak<b style="color: #b45309;">ery</b></span><span style="color: #64748b; font-size: 0.85rem;">tiệm bánh</span></div>
+                            <div class="adj-word-row"><span>machin<b style="color: #b45309;">ery</b></span><span style="color: #64748b; font-size: 0.85rem;">máy móc</span></div>
+                            <div class="adj-word-row"><span>libra<b style="color: #b45309;">ry</b></span><span style="color: #64748b; font-size: 0.85rem;">thư viện</span></div>
+                            <div class="adj-word-row"><span>jewel<b style="color: #b45309;">ry</b></span><span style="color: #64748b; font-size: 0.85rem;">trang sức</span></div>
+                            <div class="adj-word-row"><span>facto<b style="color: #b45309;">ry</b></span><span style="color: #64748b; font-size: 0.85rem;">nhà máy</span></div>
+                            <div class="adj-word-row"><span>scen<b style="color: #b45309;">ery</b></span><span style="color: #64748b; font-size: 0.85rem;">phong cảnh</span></div>
+                            <div class="adj-word-row"><span>gall<b style="color: #b45309;">ery</b></span><span style="color: #64748b; font-size: 0.85rem;">phòng trưng bày</span></div>
+                            <div class="adj-word-row"><span>slav<b style="color: #b45309;">ery</b></span><span style="color: #64748b; font-size: 0.85rem;">chế độ nô lệ</span></div>
+                            <div class="adj-word-row"><span>nurs<b style="color: #b45309;">ery</b></span><span style="color: #64748b; font-size: 0.85rem;">vườn ươm</span></div>
+                            <div class="adj-word-row"><span>discov<b style="color: #b45309;">ery</b></span><span style="color: #64748b; font-size: 0.85rem;">sự khám phá</span></div>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- NHÓM VI: HOẠT ĐỘNG -->
+                <details class="adj-suffix-group" style="border-color: #67e8f9;">
+                    <summary class="adj-suffix-summary" style="background: linear-gradient(135deg, #ecfeff 0%, #cffafe 100%); color: #155e75;">
+                        <span style="display: flex; align-items: center; gap: 8px;"><span>🏃</span> VI. HẬU TỐ DANH TỪ CHỈ HOẠT ĐỘNG</span>
+                        <span style="background: #0891b2; color: white; font-size: 0.8rem; padding: 3px 10px; border-radius: 999px;">1 hậu tố ▼</span>
+                    </summary>
+                    <div class="adj-suffix-cards" style="grid-template-columns: 1fr;">
+                        <div class="adj-suf-tile" style="border-color: #a5f3fc;">
+                            <div class="adj-suf-head"><span class="adj-suf-pill" style="background: #cffafe; color: #0e7490;">20. -ing</span><span class="adj-suf-mean">danh động từ (Gerund)</span></div>
+                            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(215px, 1fr)); gap: 8px;">
+                                <div class="adj-word-row"><span>read<b style="color: #0e7490;">ing</b></span><span style="color: #64748b; font-size: 0.85rem;">việc đọc</span></div>
+                                <div class="adj-word-row"><span>cook<b style="color: #0e7490;">ing</b></span><span style="color: #64748b; font-size: 0.85rem;">việc nấu ăn</span></div>
+                                <div class="adj-word-row"><span>writ<b style="color: #0e7490;">ing</b></span><span style="color: #64748b; font-size: 0.85rem;">việc viết</span></div>
+                                <div class="adj-word-row"><span>swimm<b style="color: #0e7490;">ing</b></span><span style="color: #64748b; font-size: 0.85rem;">việc bơi</span></div>
+                                <div class="adj-word-row"><span>learn<b style="color: #0e7490;">ing</b></span><span style="color: #64748b; font-size: 0.85rem;">việc học</span></div>
+                                <div class="adj-word-row"><span>train<b style="color: #0e7490;">ing</b></span><span style="color: #64748b; font-size: 0.85rem;">việc đào tạo</span></div>
+                                <div class="adj-word-row"><span>teach<b style="color: #0e7490;">ing</b></span><span style="color: #64748b; font-size: 0.85rem;">việc dạy</span></div>
+                                <div class="adj-word-row"><span>meet<b style="color: #0e7490;">ing</b></span><span style="color: #64748b; font-size: 0.85rem;">cuộc họp</span></div>
+                                <div class="adj-word-row"><span>shopp<b style="color: #0e7490;">ing</b></span><span style="color: #64748b; font-size: 0.85rem;">việc mua sắm</span></div>
+                                <div class="adj-word-row"><span>work<b style="color: #0e7490;">ing</b></span><span style="color: #64748b; font-size: 0.85rem;">công việc</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </details>
+
             </div>
-
-            <div style="background: #fef2f2; border: 1px solid #fecaca; border-radius: 8px; padding: 16px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
-                <div style="font-weight: 700; color: #ef4444; font-size: 1.1rem; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px dashed #fecaca;">3. -ian / -an (nghề nghiệp, quốc tịch)</div>
-                <ul style="list-style-type: none; padding: 0; margin: 0; line-height: 1.8; color: #334155; font-size: 1.05rem;">
-                    <li>• <b>musician</b> – <span style="color: #64748b;">nhạc sĩ</span></li>
-                    <li>• <b>American</b> – <span style="color: #64748b;">người Mỹ</span></li>
-                    <li>• <b>electrician</b> – <span style="color: #64748b;">thợ điện</span></li>
-                    <li>• <b>Italian</b> – <span style="color: #64748b;">người Ý</span></li>
-                    <li>• <b>politician</b> – <span style="color: #64748b;">chính trị gia</span></li>
-                    <li>• <b>Asian</b> – <span style="color: #64748b;">người châu Á</span></li>
-                    <li>• <b>historian</b> – <span style="color: #64748b;">sử gia</span></li>
-                    <li>• <b>Canadian</b> – <span style="color: #64748b;">người Canada</span></li>
-                    <li>• <b>librarian</b> – <span style="color: #64748b;">thủ thư</span></li>
-                    <li>• <b>Mexican</b> – <span style="color: #64748b;">người Mexico</span></li>
-
-                </ul>
-            </div>
-
-            <div style="background: #fef2f2; border: 1px solid #fecaca; border-radius: 8px; padding: 16px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
-                <div style="font-weight: 700; color: #ef4444; font-size: 1.1rem; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px dashed #fecaca;">4. -ee (người nhận hành động)</div>
-                <ul style="list-style-type: none; padding: 0; margin: 0; line-height: 1.8; color: #334155; font-size: 1.05rem;">
-                    <li>• <b>employee</b> – <span style="color: #64748b;">nhân viên</span></li>
-                    <li>• <b>attendee</b> – <span style="color: #64748b;">người tham dự</span></li>
-                    <li>• <b>interviewee</b> – <span style="color: #64748b;">người được phỏng vấn</span></li>
-                    <li>• <b>payee</b> – <span style="color: #64748b;">người nhận tiền</span></li>
-                    <li>• <b>trainee</b> – <span style="color: #64748b;">thực tập sinh</span></li>
-                    <li>• <b>nominee</b> – <span style="color: #64748b;">người được đề cử</span></li>
-                    <li>• <b>examinee</b> – <span style="color: #64748b;">thí sinh</span></li>
-                    <li>• <b>retiree</b> – <span style="color: #64748b;">người đã nghỉ hưu</span></li>
-                    <li>• <b>refugee</b> – <span style="color: #64748b;">người tị nạn</span></li>
-                    <li>• <b>addressee</b> – <span style="color: #64748b;">người nhận thư</span></li>
-
-                </ul>
-            </div>
-
-            <div style="background: #fef2f2; border: 1px solid #fecaca; border-radius: 8px; padding: 16px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
-                <div style="font-weight: 700; color: #ef4444; font-size: 1.1rem; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px dashed #fecaca;">5. -ant / -ent (người thực hiện vai trò)</div>
-                <ul style="list-style-type: none; padding: 0; margin: 0; line-height: 1.8; color: #334155; font-size: 1.05rem;">
-                    <li>• <b>assistant</b> – <span style="color: #64748b;">trợ lý</span></li>
-                    <li>• <b>resident</b> – <span style="color: #64748b;">cư dân</span></li>
-                    <li>• <b>applicant</b> – <span style="color: #64748b;">người nộp đơn</span></li>
-                    <li>• <b>student</b> – <span style="color: #64748b;">học sinh</span></li>
-                    <li>• <b>participant</b> – <span style="color: #64748b;">người tham gia</span></li>
-                    <li>• <b>consultant</b> – <span style="color: #64748b;">cố vấn</span></li>
-                    <li>• <b>accountant</b> – <span style="color: #64748b;">kế toán</span></li>
-                    <li>• <b>immigrant</b> – <span style="color: #64748b;">người nhập cư</span></li>
-                    <li>• <b>servant</b> – <span style="color: #64748b;">người hầu</span></li>
-                    <li>• <b>defendant</b> – <span style="color: #64748b;">bị đơn</span></li>
-
-                </ul>
-            </div>
-
-            <div style="background: #fef2f2; border: 1px solid #fecaca; border-radius: 8px; padding: 16px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
-                <div style="font-weight: 700; color: #ef4444; font-size: 1.1rem; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px dashed #fecaca;">6. -arian / -arian (người theo nghề / tư tưởng)</div>
-                <ul style="list-style-type: none; padding: 0; margin: 0; line-height: 1.8; color: #334155; font-size: 1.05rem;">
-                    <li>• <b>librarian</b> – <span style="color: #64748b;">thủ thư</span></li>
-                    <li>• <b>humanitarian</b> – <span style="color: #64748b;">nhà nhân đạo</span></li>
-                    <li>• <b>vegetarian</b> – <span style="color: #64748b;">người ăn chay</span></li>
-                    <li>• <b>disciplinarian</b> – <span style="color: #64748b;">người nghiêm khắc</span></li>
-
-                </ul>
-            </div>
-
-        </div>
-    </details>
-
-    <details class="suffix-group" style="margin-bottom: 12px; border: 1px solid #cbd5e1; border-radius: 8px; overflow: hidden; background: white; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
-        <summary style="background: #f8fafc; padding: 16px 20px; font-weight: 800; color: #1e293b; font-size: 1.15rem; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; border-left: 4px solid #3b82f6;">
-            II. HẬU TỐ DANH TỪ CHỈ HÀNH ĐỘNG – QUÁ TRÌNH – KẾT QUẢ <span style="font-size: 0.9rem; color: #64748b;">▼</span>
-        </summary>
-        <div style="padding: 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; border-top: 1px solid #cbd5e1; background: #fafafa;">
-
-            <div style="background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px; padding: 16px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
-                <div style="font-weight: 700; color: #3b82f6; font-size: 1.1rem; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px dashed #bfdbfe;">7. -tion / -sion / -ation</div>
-                <ul style="list-style-type: none; padding: 0; margin: 0; line-height: 1.8; color: #334155; font-size: 1.05rem;">
-                    <li>• <b>education</b> – <span style="color: #64748b;">giáo dục</span></li>
-                    <li>• <b>communication</b> – <span style="color: #64748b;">sự giao tiếp</span></li>
-                    <li>• <b>information</b> – <span style="color: #64748b;">thông tin</span></li>
-                    <li>• <b>translation</b> – <span style="color: #64748b;">sự dịch</span></li>
-                    <li>• <b>pollution</b> – <span style="color: #64748b;">ô nhiễm</span></li>
-                    <li>• <b>population</b> – <span style="color: #64748b;">dân số</span></li>
-                    <li>• <b>decision</b> – <span style="color: #64748b;">quyết định</span></li>
-                    <li>• <b>organization</b> – <span style="color: #64748b;">tổ chức</span></li>
-                    <li>• <b>discussion</b> – <span style="color: #64748b;">cuộc thảo luận</span></li>
-                    <li>• <b>situation</b> – <span style="color: #64748b;">tình huống</span></li>
-
-                </ul>
-            </div>
-
-            <div style="background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px; padding: 16px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
-                <div style="font-weight: 700; color: #3b82f6; font-size: 1.1rem; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px dashed #bfdbfe;">8. -ment</div>
-                <ul style="list-style-type: none; padding: 0; margin: 0; line-height: 1.8; color: #334155; font-size: 1.05rem;">
-                    <li>• <b>development</b> – <span style="color: #64748b;">sự phát triển</span></li>
-                    <li>• <b>government</b> – <span style="color: #64748b;">chính phủ</span></li>
-                    <li>• <b>improvement</b> – <span style="color: #64748b;">sự cải thiện</span></li>
-                    <li>• <b>environment</b> – <span style="color: #64748b;">môi trường</span></li>
-                    <li>• <b>agreement</b> – <span style="color: #64748b;">sự đồng ý</span></li>
-                    <li>• <b>punishment</b> – <span style="color: #64748b;">sự trừng phạt</span></li>
-                    <li>• <b>achievement</b> – <span style="color: #64748b;">thành tựu</span></li>
-                    <li>• <b>entertainment</b> – <span style="color: #64748b;">sự giải trí</span></li>
-                    <li>• <b>management</b> – <span style="color: #64748b;">sự quản lý</span></li>
-                    <li>• <b>movement</b> – <span style="color: #64748b;">sự di chuyển</span></li>
-
-                </ul>
-            </div>
-
-            <div style="background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px; padding: 16px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
-                <div style="font-weight: 700; color: #3b82f6; font-size: 1.1rem; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px dashed #bfdbfe;">9. -ance / -ence</div>
-                <ul style="list-style-type: none; padding: 0; margin: 0; line-height: 1.8; color: #334155; font-size: 1.05rem;">
-                    <li>• <b>importance</b> – <span style="color: #64748b;">tầm quan trọng</span></li>
-                    <li>• <b>patience</b> – <span style="color: #64748b;">sự kiên nhẫn</span></li>
-                    <li>• <b>difference</b> – <span style="color: #64748b;">sự khác biệt</span></li>
-                    <li>• <b>independence</b> – <span style="color: #64748b;">sự độc lập</span></li>
-                    <li>• <b>confidence</b> – <span style="color: #64748b;">sự tự tin</span></li>
-                    <li>• <b>existence</b> – <span style="color: #64748b;">sự tồn tại</span></li>
-                    <li>• <b>appearance</b> – <span style="color: #64748b;">vẻ ngoài</span></li>
-                    <li>• <b>violence</b> – <span style="color: #64748b;">bạo lực</span></li>
-                    <li>• <b>performance</b> – <span style="color: #64748b;">sự biểu diễn / hiệu suất</span></li>
-                    <li>• <b>distance</b> – <span style="color: #64748b;">khoảng cách</span></li>
-
-                </ul>
-            </div>
-
-            <div style="background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px; padding: 16px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
-                <div style="font-weight: 700; color: #3b82f6; font-size: 1.1rem; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px dashed #bfdbfe;">10. -al (sự việc / kết quả)</div>
-                <ul style="list-style-type: none; padding: 0; margin: 0; line-height: 1.8; color: #334155; font-size: 1.05rem;">
-                    <li>• <b>arrival</b> – <span style="color: #64748b;">sự đến nơi</span></li>
-                    <li>• <b>dismissal</b> – <span style="color: #64748b;">sự sa thải</span></li>
-                    <li>• <b>refusal</b> – <span style="color: #64748b;">sự từ chối</span></li>
-                    <li>• <b>removal</b> – <span style="color: #64748b;">sự loại bỏ</span></li>
-                    <li>• <b>approval</b> – <span style="color: #64748b;">sự chấp thuận</span></li>
-                    <li>• <b>revival</b> – <span style="color: #64748b;">sự hồi sinh</span></li>
-                    <li>• <b>survival</b> – <span style="color: #64748b;">sự sống sót</span></li>
-                    <li>• <b>withdrawal</b> – <span style="color: #64748b;">sự rút lui</span></li>
-                    <li>• <b>proposal</b> – <span style="color: #64748b;">đề xuất</span></li>
-                    <li>• <b>denial</b> – <span style="color: #64748b;">sự phủ nhận</span></li>
-
-                </ul>
-            </div>
-
-            <div style="background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px; padding: 16px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
-                <div style="font-weight: 700; color: #3b82f6; font-size: 1.1rem; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px dashed #bfdbfe;">11. -ure</div>
-                <ul style="list-style-type: none; padding: 0; margin: 0; line-height: 1.8; color: #334155; font-size: 1.05rem;">
-                    <li>• <b>pressure</b> – <span style="color: #64748b;">áp lực</span></li>
-                    <li>• <b>exposure</b> – <span style="color: #64748b;">sự phơi bày</span></li>
-                    <li>• <b>pleasure</b> – <span style="color: #64748b;">niềm vui</span></li>
-                    <li>• <b>departure</b> – <span style="color: #64748b;">sự khởi hành</span></li>
-                    <li>• <b>failure</b> – <span style="color: #64748b;">sự thất bại</span></li>
-                    <li>• <b>closure</b> – <span style="color: #64748b;">sự đóng cửa</span></li>
-
-                </ul>
-            </div>
-
-        </div>
-    </details>
-
-    <details class="suffix-group" style="margin-bottom: 12px; border: 1px solid #cbd5e1; border-radius: 8px; overflow: hidden; background: white; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
-        <summary style="background: #f8fafc; padding: 16px 20px; font-weight: 800; color: #1e293b; font-size: 1.15rem; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; border-left: 4px solid #8b5cf6;">
-            III. HẬU TỐ DANH TỪ CHỈ KHÁI NIỆM – TRẠNG THÁI <span style="font-size: 0.9rem; color: #64748b;">▼</span>
-        </summary>
-        <div style="padding: 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; border-top: 1px solid #cbd5e1; background: #fafafa;">
-
-            <div style="background: #f5f3ff; border: 1px solid #ddd6fe; border-radius: 8px; padding: 16px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
-                <div style="font-weight: 700; color: #8b5cf6; font-size: 1.1rem; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px dashed #ddd6fe;">12. -ness</div>
-                <ul style="list-style-type: none; padding: 0; margin: 0; line-height: 1.8; color: #334155; font-size: 1.05rem;">
-                    <li>• <b>happiness</b> – <span style="color: #64748b;">hạnh phúc</span></li>
-                    <li>• <b>darkness</b> – <span style="color: #64748b;">bóng tối</span></li>
-                    <li>• <b>sadness</b> – <span style="color: #64748b;">nỗi buồn</span></li>
-                    <li>• <b>loneliness</b> – <span style="color: #64748b;">sự cô đơn</span></li>
-                    <li>• <b>kindness</b> – <span style="color: #64748b;">lòng tốt</span></li>
-                    <li>• <b>seriousness</b> – <span style="color: #64748b;">sự nghiêm túc</span></li>
-                    <li>• <b>illness</b> – <span style="color: #64748b;">bệnh tật</span></li>
-                    <li>• <b>awareness</b> – <span style="color: #64748b;">nhận thức</span></li>
-                    <li>• <b>weakness</b> – <span style="color: #64748b;">sự yếu đuối</span></li>
-                    <li>• <b>nervousness</b> – <span style="color: #64748b;">sự lo lắng</span></li>
-
-                </ul>
-            </div>
-
-            <div style="background: #f5f3ff; border: 1px solid #ddd6fe; border-radius: 8px; padding: 16px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
-                <div style="font-weight: 700; color: #8b5cf6; font-size: 1.1rem; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px dashed #ddd6fe;">13. -ity</div>
-                <ul style="list-style-type: none; padding: 0; margin: 0; line-height: 1.8; color: #334155; font-size: 1.05rem;">
-                    <li>• <b>ability</b> – <span style="color: #64748b;">khả năng</span></li>
-                    <li>• <b>equality</b> – <span style="color: #64748b;">sự bình đẳng</span></li>
-                    <li>• <b>responsibility</b> – <span style="color: #64748b;">trách nhiệm</span></li>
-                    <li>• <b>stability</b> – <span style="color: #64748b;">sự ổn định</span></li>
-                    <li>• <b>reality</b> – <span style="color: #64748b;">thực tế</span></li>
-                    <li>• <b>security</b> – <span style="color: #64748b;">an ninh</span></li>
-                    <li>• <b>personality</b> – <span style="color: #64748b;">tính cách</span></li>
-                    <li>• <b>nationality</b> – <span style="color: #64748b;">quốc tịch</span></li>
-                    <li>• <b>creativity</b> – <span style="color: #64748b;">sự sáng tạo</span></li>
-                    <li>• <b>possibility</b> – <span style="color: #64748b;">khả năng xảy ra</span></li>
-
-                </ul>
-            </div>
-
-            <div style="background: #f5f3ff; border: 1px solid #ddd6fe; border-radius: 8px; padding: 16px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
-                <div style="font-weight: 700; color: #8b5cf6; font-size: 1.1rem; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px dashed #ddd6fe;">14. -ship</div>
-                <ul style="list-style-type: none; padding: 0; margin: 0; line-height: 1.8; color: #334155; font-size: 1.05rem;">
-                    <li>• <b>friendship</b> – <span style="color: #64748b;">tình bạn</span></li>
-                    <li>• <b>citizenship</b> – <span style="color: #64748b;">quyền công dân</span></li>
-                    <li>• <b>leadership</b> – <span style="color: #64748b;">khả năng lãnh đạo</span></li>
-                    <li>• <b>partnership</b> – <span style="color: #64748b;">quan hệ đối tác</span></li>
-                    <li>• <b>relationship</b> – <span style="color: #64748b;">mối quan hệ</span></li>
-                    <li>• <b>ownership</b> – <span style="color: #64748b;">quyền sở hữu</span></li>
-                    <li>• <b>membership</b> – <span style="color: #64748b;">tư cách thành viên</span></li>
-                    <li>• <b>internship</b> – <span style="color: #64748b;">kỳ thực tập</span></li>
-                    <li>• <b>scholarship</b> – <span style="color: #64748b;">học bổng</span></li>
-                    <li>• <b>hardship</b> – <span style="color: #64748b;">sự khó khăn</span></li>
-
-                </ul>
-            </div>
-
-            <div style="background: #f5f3ff; border: 1px solid #ddd6fe; border-radius: 8px; padding: 16px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
-                <div style="font-weight: 700; color: #8b5cf6; font-size: 1.1rem; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px dashed #ddd6fe;">15. -ism</div>
-                <ul style="list-style-type: none; padding: 0; margin: 0; line-height: 1.8; color: #334155; font-size: 1.05rem;">
-                    <li>• <b>capitalism</b> – <span style="color: #64748b;">chủ nghĩa tư bản</span></li>
-                    <li>• <b>racism</b> – <span style="color: #64748b;">phân biệt chủng tộc</span></li>
-                    <li>• <b>socialism</b> – <span style="color: #64748b;">chủ nghĩa xã hội</span></li>
-                    <li>• <b>optimism</b> – <span style="color: #64748b;">sự lạc quan</span></li>
-                    <li>• <b>tourism</b> – <span style="color: #64748b;">du lịch</span></li>
-                    <li>• <b>pessimism</b> – <span style="color: #64748b;">sự bi quan</span></li>
-                    <li>• <b>realism</b> – <span style="color: #64748b;">chủ nghĩa hiện thực</span></li>
-                    <li>• <b>nationalism</b> – <span style="color: #64748b;">chủ nghĩa dân tộc</span></li>
-                    <li>• <b>feminism</b> – <span style="color: #64748b;">chủ nghĩa nữ quyền</span></li>
-                    <li>• <b>idealism</b> – <span style="color: #64748b;">chủ nghĩa lý tưởng</span></li>
-
-                </ul>
-            </div>
-
-        </div>
-    </details>
-
-    <details class="suffix-group" style="margin-bottom: 12px; border: 1px solid #cbd5e1; border-radius: 8px; overflow: hidden; background: white; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
-        <summary style="background: #f8fafc; padding: 16px 20px; font-weight: 800; color: #1e293b; font-size: 1.15rem; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; border-left: 4px solid #10b981;">
-            IV. HẬU TỐ DANH TỪ CHỈ LĨNH VỰC – MÔN HỌC <span style="font-size: 0.9rem; color: #64748b;">▼</span>
-        </summary>
-        <div style="padding: 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; border-top: 1px solid #cbd5e1; background: #fafafa;">
-
-            <div style="background: #ecfdf5; border: 1px solid #a7f3d0; border-radius: 8px; padding: 16px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
-                <div style="font-weight: 700; color: #10b981; font-size: 1.1rem; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px dashed #a7f3d0;">16. -logy</div>
-                <ul style="list-style-type: none; padding: 0; margin: 0; line-height: 1.8; color: #334155; font-size: 1.05rem;">
-                    <li>• <b>biology</b> – <span style="color: #64748b;">sinh học</span></li>
-                    <li>• <b>technology</b> – <span style="color: #64748b;">công nghệ</span></li>
-                    <li>• <b>psychology</b> – <span style="color: #64748b;">tâm lý học</span></li>
-                    <li>• <b>archaeology</b> – <span style="color: #64748b;">khảo cổ học</span></li>
-                    <li>• <b>sociology</b> – <span style="color: #64748b;">xã hội học</span></li>
-                    <li>• <b>anthropology</b> – <span style="color: #64748b;">nhân chủng học</span></li>
-                    <li>• <b>geology</b> – <span style="color: #64748b;">địa chất học</span></li>
-                    <li>• <b>meteorology</b> – <span style="color: #64748b;">khí tượng học</span></li>
-                    <li>• <b>ecology</b> – <span style="color: #64748b;">sinh thái học</span></li>
-                    <li>• <b>criminology</b> – <span style="color: #64748b;">tội phạm học</span></li>
-
-                </ul>
-            </div>
-
-            <div style="background: #ecfdf5; border: 1px solid #a7f3d0; border-radius: 8px; padding: 16px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
-                <div style="font-weight: 700; color: #10b981; font-size: 1.1rem; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px dashed #a7f3d0;">17. -ics</div>
-                <ul style="list-style-type: none; padding: 0; margin: 0; line-height: 1.8; color: #334155; font-size: 1.05rem;">
-                    <li>• <b>mathematics</b> – <span style="color: #64748b;">toán học</span></li>
-                    <li>• <b>linguistics</b> – <span style="color: #64748b;">ngôn ngữ học</span></li>
-                    <li>• <b>physics</b> – <span style="color: #64748b;">vật lý</span></li>
-                    <li>• <b>athletics</b> – <span style="color: #64748b;">điền kinh</span></li>
-                    <li>• <b>economics</b> – <span style="color: #64748b;">kinh tế học</span></li>
-                    <li>• <b>electronics</b> – <span style="color: #64748b;">điện tử học</span></li>
-                    <li>• <b>politics</b> – <span style="color: #64748b;">chính trị</span></li>
-                    <li>• <b>mechanics</b> – <span style="color: #64748b;">cơ học</span></li>
-                    <li>• <b>statistics</b> – <span style="color: #64748b;">thống kê</span></li>
-                    <li>• <b>ethics</b> – <span style="color: #64748b;">đạo đức học</span></li>
-
-                </ul>
-            </div>
-
-        </div>
-    </details>
-
-    <details class="suffix-group" style="margin-bottom: 12px; border: 1px solid #cbd5e1; border-radius: 8px; overflow: hidden; background: white; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
-        <summary style="background: #f8fafc; padding: 16px 20px; font-weight: 800; color: #1e293b; font-size: 1.15rem; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; border-left: 4px solid #f59e0b;">
-            V. HẬU TỐ DANH TỪ CHỈ ĐỊA ĐIỂM – TẬP HỢP – VẬT CHỨA <span style="font-size: 0.9rem; color: #64748b;">▼</span>
-        </summary>
-        <div style="padding: 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; border-top: 1px solid #cbd5e1; background: #fafafa;">
-
-            <div style="background: #fffbeb; border: 1px solid #fde68a; border-radius: 8px; padding: 16px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
-                <div style="font-weight: 700; color: #f59e0b; font-size: 1.1rem; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px dashed #fde68a;">18. -age</div>
-                <ul style="list-style-type: none; padding: 0; margin: 0; line-height: 1.8; color: #334155; font-size: 1.05rem;">
-                    <li>• <b>village</b> – <span style="color: #64748b;">làng</span></li>
-                    <li>• <b>shortage</b> – <span style="color: #64748b;">sự thiếu hụt</span></li>
-                    <li>• <b>luggage</b> – <span style="color: #64748b;">hành lý</span></li>
-                    <li>• <b>advantage</b> – <span style="color: #64748b;">lợi thế</span></li>
-                    <li>• <b>marriage</b> – <span style="color: #64748b;">hôn nhân</span></li>
-                    <li>• <b>disadvantage</b> – <span style="color: #64748b;">bất lợi</span></li>
-                    <li>• <b>damage</b> – <span style="color: #64748b;">thiệt hại</span></li>
-                    <li>• <b>usage</b> – <span style="color: #64748b;">cách dùng</span></li>
-                    <li>• <b>package</b> – <span style="color: #64748b;">gói hàng</span></li>
-                    <li>• <b>percentage</b> – <span style="color: #64748b;">phần trăm</span></li>
-
-                </ul>
-            </div>
-
-            <div style="background: #fffbeb; border: 1px solid #fde68a; border-radius: 8px; padding: 16px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
-                <div style="font-weight: 700; color: #f59e0b; font-size: 1.1rem; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px dashed #fde68a;">19. -ery / -ry</div>
-                <ul style="list-style-type: none; padding: 0; margin: 0; line-height: 1.8; color: #334155; font-size: 1.05rem;">
-                    <li>• <b>bakery</b> – <span style="color: #64748b;">tiệm bánh</span></li>
-                    <li>• <b>machinery</b> – <span style="color: #64748b;">máy móc</span></li>
-                    <li>• <b>library</b> – <span style="color: #64748b;">thư viện</span></li>
-                    <li>• <b>jewelry</b> – <span style="color: #64748b;">trang sức</span></li>
-                    <li>• <b>factory</b> – <span style="color: #64748b;">nhà máy</span></li>
-                    <li>• <b>scenery</b> – <span style="color: #64748b;">phong cảnh</span></li>
-                    <li>• <b>gallery</b> – <span style="color: #64748b;">phòng trưng bày</span></li>
-                    <li>• <b>slavery</b> – <span style="color: #64748b;">chế độ nô lệ</span></li>
-                    <li>• <b>nursery</b> – <span style="color: #64748b;">vườn ươm</span></li>
-                    <li>• <b>discovery</b> – <span style="color: #64748b;">sự khám phá</span></li>
-
-                </ul>
-            </div>
-
-        </div>
-    </details>
-
-    <details class="suffix-group" style="margin-bottom: 12px; border: 1px solid #cbd5e1; border-radius: 8px; overflow: hidden; background: white; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
-        <summary style="background: #f8fafc; padding: 16px 20px; font-weight: 800; color: #1e293b; font-size: 1.15rem; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; border-left: 4px solid #06b6d4;">
-            VI. HẬU TỐ DANH TỪ CHỈ HOẠT ĐỘNG <span style="font-size: 0.9rem; color: #64748b;">▼</span>
-        </summary>
-        <div style="padding: 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; border-top: 1px solid #cbd5e1; background: #fafafa;">
-
-            <div style="background: #ecfeff; border: 1px solid #a5f3fc; border-radius: 8px; padding: 16px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
-                <div style="font-weight: 700; color: #06b6d4; font-size: 1.1rem; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px dashed #a5f3fc;">20. -ing (danh động từ)</div>
-                <ul style="list-style-type: none; padding: 0; margin: 0; line-height: 1.8; color: #334155; font-size: 1.05rem;">
-                    <li>• <b>reading</b> – <span style="color: #64748b;">việc đọc</span></li>
-                    <li>• <b>cooking</b> – <span style="color: #64748b;">việc nấu ăn</span></li>
-                    <li>• <b>writing</b> – <span style="color: #64748b;">việc viết</span></li>
-                    <li>• <b>swimming</b> – <span style="color: #64748b;">việc bơi</span></li>
-                    <li>• <b>learning</b> – <span style="color: #64748b;">việc học</span></li>
-                    <li>• <b>training</b> – <span style="color: #64748b;">việc đào tạo</span></li>
-                    <li>• <b>teaching</b> – <span style="color: #64748b;">việc dạy</span></li>
-                    <li>• <b>meeting</b> – <span style="color: #64748b;">cuộc họp</span></li>
-                    <li>• <b>shopping</b> – <span style="color: #64748b;">việc mua sắm</span></li>
-                    <li>• <b>working</b> – <span style="color: #64748b;">công việc</span></li>
-
-                </ul>
-            </div>
-
-        </div>
-    </details>
-</div>`
+        </div>`
     },
     {
         title: '3. PHÂN LOẠI DANH TỪ',
@@ -4678,6 +4630,12 @@ const nounsPracticeExtra3Data = [
 
 
 
+
+window.toggleAllNounSuffixes = function(open) {
+    document.querySelectorAll('#noun-suffix-accordions details').forEach(d => {
+        d.open = !!open;
+    });
+};
 
 // Toggle view between interactive 9-card grid and infographic image for Nouns by Meaning
 window.toggleNounsMeaningView = function(view) {
