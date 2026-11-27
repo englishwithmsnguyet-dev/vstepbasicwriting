@@ -7180,292 +7180,398 @@ window.checkVerbsParagraph = function() {
 // --- ADVERBS DATA ---
 const adverbsTheoryData = [
     {
-        title: "1. ĐỊNH NGHĨA VÀ CHỨC NĂNG",
+        title: "⚡ 1. ĐỊNH NGHĨA & 4 CHỨC NĂNG CỦA TRẠNG TỪ",
         content: `
-            <p style="font-size: 1.1rem; line-height: 1.6; color: var(--text-main); margin-bottom: 20px;">
-                <b>Trạng từ (Adverbs)</b> là những từ dùng để bổ nghĩa cho <span style="color: var(--primary-color); font-weight: 600;">động từ</span>, <span style="color: var(--primary-color); font-weight: 600;">tính từ</span>, một <span style="color: var(--primary-color); font-weight: 600;">trạng từ khác</span>, hoặc cho <span style="color: var(--primary-color); font-weight: 600;">cả câu</span>. Nó thường trả lời cho các câu hỏi <span style="background: #f1f5f9; padding: 2px 8px; border-radius: 6px; font-weight: 600; color: #334155; border: 1px solid #cbd5e1;">How? When? Where? How often?</span>
-            </p>
-            <div style="background: linear-gradient(135deg, #f8fafc, #f1f5f9); padding: 20px; border-radius: 12px; border-left: 5px solid var(--primary-color); box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
-                <p style="font-size: 1.15rem; font-weight: bold; color: var(--primary-color); margin-bottom: 16px; display: flex; align-items: center; gap: 8px;">
-                    <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L1 21h22L12 2zm1 14h-2v-2h2v2zm0-4h-2V7h2v5z"/></svg> 
-                    Các chức năng chính:
-                </p>
-                <div style="display: flex; flex-direction: column; gap: 12px;">
-                    <div style="background: white; padding: 12px 16px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; flex-direction: column; gap: 4px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
-                        <span style="font-weight: 600; color: #334155;">1. Bổ nghĩa cho động từ thường:</span>
-                        <span style="color: #475569;">Jenny plays basketball <span style="color: var(--primary-color); font-weight: 600; background: #e0e7ff; padding: 2px 6px; border-radius: 4px;">well</span>. <i style="color: #64748b; font-size: 0.95em;">(Cô ấy chơi bóng rổ như thế nào? &rarr; Giỏi)</i></span>
-                    </div>
-                    <div style="background: white; padding: 12px 16px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; flex-direction: column; gap: 4px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
-                        <span style="font-weight: 600; color: #334155;">2. Bổ nghĩa cho tính từ:</span>
-                        <span style="color: #475569;">She is <span style="color: var(--primary-color); font-weight: 600; background: #e0e7ff; padding: 2px 6px; border-radius: 4px;">extremely</span> intelligent. <i style="color: #64748b; font-size: 0.95em;">(Thông minh đến mức nào? &rarr; Cực kỳ)</i></span>
-                    </div>
-                    <div style="background: white; padding: 12px 16px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; flex-direction: column; gap: 4px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
-                        <span style="font-weight: 600; color: #334155;">3. Bổ nghĩa cho một trạng từ khác (nhằm mục đích nhấn mạnh):</span>
-                        <span style="color: #475569;">Jenny plays basketball <span style="color: var(--primary-color); font-weight: 600; background: #e0e7ff; padding: 2px 6px; border-radius: 4px;">very</span> well. <i style="color: #64748b; font-size: 0.95em;">(Giỏi đến mức nào? &rarr; 'Very' bổ nghĩa và nhấn mạnh cho trạng từ 'well')</i></span>
-                    </div>
-                    <div style="background: white; padding: 12px 16px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; flex-direction: column; gap: 4px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
-                        <span style="font-weight: 600; color: #334155;">4. Bổ nghĩa cho cả câu:</span>
-                        <span style="color: #475569;"><span style="color: var(--primary-color); font-weight: 600; background: #e0e7ff; padding: 2px 6px; border-radius: 4px;">Recently</span>, I have taken part in an English course. <i style="color: #64748b; font-size: 0.95em;">(Vào lúc nào? &rarr; Gần đây)</i></span>
+        <div class="adj-wrap">
+            <!-- Hero Banner -->
+            <div class="adj-banner" style="background: linear-gradient(135deg, #0f766e 0%, #0284c7 60%, #4f46e5 100%);">
+                <div style="display: flex; align-items: center; gap: 12px;">
+                    <span style="font-size: 2rem;">⚡</span>
+                    <div>
+                        <div style="font-weight: 900; font-size: 1.18rem; letter-spacing: 0.3px;">TRẠNG TỪ (ADVERBS) — "GIA VỊ" LÀM RÕ HÀNH ĐỘNG &amp; MỨC ĐỘ</div>
+                        <div style="font-size: 0.92rem; opacity: 0.95;">Trả lời cho 4 câu hỏi cốt lõi: <b>How?</b> (Như thế nào) · <b>When?</b> (Khi nào) · <b>Where?</b> (Ở đâu) · <b>How often?</b> (Bao lâu 1 lần)</div>
                     </div>
                 </div>
             </div>
-        `
+
+            <!-- Định nghĩa -->
+            <div style="background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%); border: 2px solid #fcd34d; border-radius: 16px; padding: 15px 18px; font-size: 1.04rem; line-height: 1.65; color: #1e293b;">
+                👉 <span style="background: #0284c7; color: white; font-weight: 800; padding: 2px 10px; border-radius: 8px;">Trạng từ (Adverbs)</span> là những từ dùng để bổ nghĩa cho <span style="background: #dbeafe; color: #1e40af; font-weight: 800; padding: 2px 8px; border-radius: 6px;">Động từ</span>, <span style="background: #ede9fe; color: #5b21b6; font-weight: 800; padding: 2px 8px; border-radius: 6px;">Tính từ</span>, một <span style="background: #fce7f3; color: #9d174d; font-weight: 800; padding: 2px 8px; border-radius: 6px;">Trạng từ khác</span> hoặc cho <span style="background: #dcfce7; color: #166534; font-weight: 800; padding: 2px 8px; border-radius: 6px;">Cả câu</span>.
+            </div>
+
+            <!-- 4 Chức năng chính dạng 2x2 Cards -->
+            <div class="adj-grid-2">
+                <div style="background: linear-gradient(180deg, #ffffff 0%, #eff6ff 100%); border: 2px solid #93c5fd; border-radius: 16px; padding: 14px 16px; display: flex; flex-direction: column; gap: 6px;">
+                    <div style="font-weight: 900; color: #1d4ed8; font-size: 1rem;">🏃 1. Bổ nghĩa cho Động từ thường</div>
+                    <div style="background: white; border: 1px solid #bfdbfe; border-radius: 10px; padding: 9px 12px; font-size: 1rem;">
+                        Jenny <u>plays</u> basketball <span style="background: #dbeafe; color: #1d4ed8; font-weight: 800; padding: 1px 7px; border-radius: 6px;">well</span>.
+                    </div>
+                    <div style="font-size: 0.88rem; color: #475569; font-style: italic;">❓ Chơi bóng rổ như thế nào? ➔ Giỏi</div>
+                </div>
+
+                <div style="background: linear-gradient(180deg, #ffffff 0%, #f5f3ff 100%); border: 2px solid #c4b5fd; border-radius: 16px; padding: 14px 16px; display: flex; flex-direction: column; gap: 6px;">
+                    <div style="font-weight: 900; color: #6d28d9; font-size: 1rem;">🎨 2. Bổ nghĩa cho Tính từ</div>
+                    <div style="background: white; border: 1px solid #ddd6fe; border-radius: 10px; padding: 9px 12px; font-size: 1rem;">
+                        She is <span style="background: #ede9fe; color: #6d28d9; font-weight: 800; padding: 1px 7px; border-radius: 6px;">extremely</span> <u>intelligent</u>.
+                    </div>
+                    <div style="font-size: 0.88rem; color: #475569; font-style: italic;">❓ Thông minh đến mức nào? ➔ Cực kỳ</div>
+                </div>
+
+                <div style="background: linear-gradient(180deg, #ffffff 0%, #fdf2f8 100%); border: 2px solid #f9a8d4; border-radius: 16px; padding: 14px 16px; display: flex; flex-direction: column; gap: 6px;">
+                    <div style="font-weight: 900; color: #be185d; font-size: 1rem;">🚀 3. Bổ nghĩa cho Trạng từ khác (nhấn mạnh)</div>
+                    <div style="background: white; border: 1px solid #fbcfe8; border-radius: 10px; padding: 9px 12px; font-size: 1rem;">
+                        Jenny plays basketball <span style="background: #fce7f3; color: #be185d; font-weight: 800; padding: 1px 7px; border-radius: 6px;">very</span> <u>well</u>.
+                    </div>
+                    <div style="font-size: 0.88rem; color: #475569; font-style: italic;">❓ Giỏi đến mức nào? ➔ <b>very</b> nhấn mạnh cho <b>well</b></div>
+                </div>
+
+                <div style="background: linear-gradient(180deg, #ffffff 0%, #f0fdf4 100%); border: 2px solid #86efac; border-radius: 16px; padding: 14px 16px; display: flex; flex-direction: column; gap: 6px;">
+                    <div style="font-weight: 900; color: #15803d; font-size: 1rem;">🌐 4. Bổ nghĩa cho Cả câu</div>
+                    <div style="background: white; border: 1px solid #bbf7d0; border-radius: 10px; padding: 9px 12px; font-size: 1rem;">
+                        <span style="background: #dcfce7; color: #15803d; font-weight: 800; padding: 1px 7px; border-radius: 6px;">Recently</span>, I have taken part in an English course.
+                    </div>
+                    <div style="font-size: 0.88rem; color: #475569; font-style: italic;">❓ Vào lúc nào? ➔ Gần đây</div>
+                </div>
+            </div>
+        </div>`
     },
     {
-        title: "2. PHÂN LOẠI TRẠNG TỪ THƯỜNG GẶP",
+        title: "🗂️ 2. PHÂN LOẠI 5 NHÓM TRẠNG TỪ THƯỜNG GẶP",
         content: `
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; margin-top: 16px;">
-                <div style="background: #fdf4ff; border: 1px solid #fae8ff; padding: 16px; border-radius: 12px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
-                    <h4 style="color: #a21caf; font-size: 1.15rem; margin-bottom: 8px; display: flex; align-items: center; gap: 6px;">⏱️ Thời gian (Time)</h4>
-                    <p style="color: #701a75; font-size: 0.95rem; margin-bottom: 12px;">Cho biết hành động xảy ra khi nào.</p>
-                    <div style="display: flex; flex-wrap: wrap; gap: 6px; align-items: center;">
-                        <span style="background: white; color: #86198f; padding: 4px 10px; border-radius: 20px; font-size: 0.9rem; font-weight: 500; border: 1px solid #f5d0fe; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">recently</span>
-                        <span style="background: white; color: #86198f; padding: 4px 10px; border-radius: 20px; font-size: 0.9rem; font-weight: 500; border: 1px solid #f5d0fe; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">lately</span>
-                        <span style="background: white; color: #86198f; padding: 4px 10px; border-radius: 20px; font-size: 0.9rem; font-weight: 500; border: 1px solid #f5d0fe; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">soon</span>
-                        <span style="background: white; color: #86198f; padding: 4px 10px; border-radius: 20px; font-size: 0.9rem; font-weight: 500; border: 1px solid #f5d0fe; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">yesterday</span>
-                        <span style="background: white; color: #86198f; padding: 4px 10px; border-radius: 20px; font-size: 0.9rem; font-weight: 500; border: 1px solid #f5d0fe; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">now</span>
-                        <span style="padding: 4px; font-size: 1rem; color: #a21caf; font-weight: 700; letter-spacing: 2px;">...</span>
+        <div class="adj-wrap">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 14px;">
+
+                <!-- 1. Time -->
+                <div class="nbm-cat-card" style="border-color: #f0abfc;">
+                    <div class="nbm-cat-header" style="background: #fdf4ff;">
+                        <div class="nbm-cat-title" style="color: #86198f;">⏱️ 1. Thời gian <span>(Time — When?)</span></div>
+                        <div class="nbm-cat-desc">Cho biết hành động xảy ra khi nào.</div>
+                    </div>
+                    <div style="padding: 12px; display: flex; flex-wrap: wrap; gap: 7px;">
+                        <span class="cu-q-pill" style="background: #fdf4ff; color: #86198f; border: 1px solid #f5d0fe;">recently <small>(gần đây)</small></span>
+                        <span class="cu-q-pill" style="background: #fdf4ff; color: #86198f; border: 1px solid #f5d0fe;">lately <small>(dạo này)</small></span>
+                        <span class="cu-q-pill" style="background: #fdf4ff; color: #86198f; border: 1px solid #f5d0fe;">soon <small>(sớm)</small></span>
+                        <span class="cu-q-pill" style="background: #fdf4ff; color: #86198f; border: 1px solid #f5d0fe;">yesterday <small>(hôm qua)</small></span>
+                        <span class="cu-q-pill" style="background: #fdf4ff; color: #86198f; border: 1px solid #f5d0fe;">now <small>(bây giờ)</small></span>
+                        <span class="cu-q-pill" style="background: #fdf4ff; color: #86198f; border: 1px solid #f5d0fe;">today <small>(hôm nay)</small></span>
                     </div>
                 </div>
 
-                <div style="background: #f0fdf4; border: 1px solid #dcfce7; padding: 16px; border-radius: 12px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
-                    <h4 style="color: #15803d; font-size: 1.15rem; margin-bottom: 8px; display: flex; align-items: center; gap: 6px;">📍 Nơi chốn (Place)</h4>
-                    <p style="color: #14532d; font-size: 0.95rem; margin-bottom: 12px;">Cho biết hành động xảy ra ở đâu.</p>
-                    <div style="display: flex; flex-wrap: wrap; gap: 6px; align-items: center;">
-                        <span style="background: white; color: #166534; padding: 4px 10px; border-radius: 20px; font-size: 0.9rem; font-weight: 500; border: 1px solid #bbf7d0; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">here</span>
-                        <span style="background: white; color: #166534; padding: 4px 10px; border-radius: 20px; font-size: 0.9rem; font-weight: 500; border: 1px solid #bbf7d0; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">there</span>
-                        <span style="background: white; color: #166534; padding: 4px 10px; border-radius: 20px; font-size: 0.9rem; font-weight: 500; border: 1px solid #bbf7d0; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">everywhere</span>
-                        <span style="background: white; color: #166534; padding: 4px 10px; border-radius: 20px; font-size: 0.9rem; font-weight: 500; border: 1px solid #bbf7d0; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">outside</span>
-                        <span style="background: white; color: #166534; padding: 4px 10px; border-radius: 20px; font-size: 0.9rem; font-weight: 500; border: 1px solid #bbf7d0; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">inside</span>
-                        <span style="padding: 4px; font-size: 1rem; color: #15803d; font-weight: 700; letter-spacing: 2px;">...</span>
+                <!-- 2. Place -->
+                <div class="nbm-cat-card" style="border-color: #86efac;">
+                    <div class="nbm-cat-header" style="background: #dcfce7;">
+                        <div class="nbm-cat-title" style="color: #166534;">📍 2. Nơi chốn <span>(Place — Where?)</span></div>
+                        <div class="nbm-cat-desc">Cho biết hành động xảy ra ở đâu.</div>
+                    </div>
+                    <div style="padding: 12px; display: flex; flex-wrap: wrap; gap: 7px;">
+                        <span class="cu-q-pill" style="background: #f0fdf4; color: #166534; border: 1px solid #bbf7d0;">here <small>(ở đây)</small></span>
+                        <span class="cu-q-pill" style="background: #f0fdf4; color: #166534; border: 1px solid #bbf7d0;">there <small>(ở kia)</small></span>
+                        <span class="cu-q-pill" style="background: #f0fdf4; color: #166534; border: 1px solid #bbf7d0;">everywhere <small>(mọi nơi)</small></span>
+                        <span class="cu-q-pill" style="background: #f0fdf4; color: #166534; border: 1px solid #bbf7d0;">outside <small>(bên ngoài)</small></span>
+                        <span class="cu-q-pill" style="background: #f0fdf4; color: #166534; border: 1px solid #bbf7d0;">inside <small>(bên trong)</small></span>
+                        <span class="cu-q-pill" style="background: #f0fdf4; color: #166534; border: 1px solid #bbf7d0;">abroad <small>(nước ngoài)</small></span>
                     </div>
                 </div>
 
-                <div style="background: #eff6ff; border: 1px solid #dbeafe; padding: 16px; border-radius: 12px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
-                    <h4 style="color: #1d4ed8; font-size: 1.15rem; margin-bottom: 8px; display: flex; align-items: center; gap: 6px;">🎭 Cách thức (Manner)</h4>
-                    <p style="color: #1e3a8a; font-size: 0.95rem; margin-bottom: 12px;">Cho biết hành động diễn ra như thế nào.</p>
-                    <div style="display: flex; flex-wrap: wrap; gap: 6px; align-items: center;">
-                        <span style="background: white; color: #1e40af; padding: 4px 10px; border-radius: 20px; font-size: 0.9rem; font-weight: 500; border: 1px solid #bfdbfe; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">fluently</span>
-                        <span style="background: white; color: #1e40af; padding: 4px 10px; border-radius: 20px; font-size: 0.9rem; font-weight: 500; border: 1px solid #bfdbfe; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">carefully</span>
-                        <span style="background: white; color: #1e40af; padding: 4px 10px; border-radius: 20px; font-size: 0.9rem; font-weight: 500; border: 1px solid #bfdbfe; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">reluctantly</span>
-                        <span style="background: white; color: #1e40af; padding: 4px 10px; border-radius: 20px; font-size: 0.9rem; font-weight: 500; border: 1px solid #bfdbfe; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">quickly</span>
-                        <span style="background: white; color: #1e40af; padding: 4px 10px; border-radius: 20px; font-size: 0.9rem; font-weight: 500; border: 1px solid #bfdbfe; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">slowly</span>
-                        <span style="padding: 4px; font-size: 1rem; color: #1d4ed8; font-weight: 700; letter-spacing: 2px;">...</span>
+                <!-- 3. Manner -->
+                <div class="nbm-cat-card" style="border-color: #93c5fd;">
+                    <div class="nbm-cat-header" style="background: #dbeafe;">
+                        <div class="nbm-cat-title" style="color: #1e40af;">🎭 3. Cách thức <span>(Manner — How?)</span></div>
+                        <div class="nbm-cat-desc">Cho biết hành động diễn ra như thế nào.</div>
+                    </div>
+                    <div style="padding: 12px; display: flex; flex-wrap: wrap; gap: 7px;">
+                        <span class="cu-q-pill" style="background: #eff6ff; color: #1e40af; border: 1px solid #bfdbfe;">fluently <small>(trôi chảy)</small></span>
+                        <span class="cu-q-pill" style="background: #eff6ff; color: #1e40af; border: 1px solid #bfdbfe;">carefully <small>(cẩn thận)</small></span>
+                        <span class="cu-q-pill" style="background: #eff6ff; color: #1e40af; border: 1px solid #bfdbfe;">reluctantly <small>(miễn cưỡng)</small></span>
+                        <span class="cu-q-pill" style="background: #eff6ff; color: #1e40af; border: 1px solid #bfdbfe;">quickly <small>(nhanh chóng)</small></span>
+                        <span class="cu-q-pill" style="background: #eff6ff; color: #1e40af; border: 1px solid #bfdbfe;">slowly <small>(chậm rãi)</small></span>
+                        <span class="cu-q-pill" style="background: #eff6ff; color: #1e40af; border: 1px solid #bfdbfe;">effectively <small>(hiệu quả)</small></span>
                     </div>
                 </div>
 
-                <div style="background: #fffbeb; border: 1px solid #fef3c7; padding: 16px; border-radius: 12px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
-                    <h4 style="color: #b45309; font-size: 1.15rem; margin-bottom: 8px; display: flex; align-items: center; gap: 6px;">🔄 Tần suất (Frequency)</h4>
-                    <p style="color: #78350f; font-size: 0.95rem; margin-bottom: 12px;">Cho biết mức độ thường xuyên.</p>
-                    <div style="display: flex; flex-wrap: wrap; gap: 6px; align-items: center;">
-                        <span style="background: white; color: #92400e; padding: 4px 10px; border-radius: 20px; font-size: 0.9rem; font-weight: 500; border: 1px solid #fde68a; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">always</span>
-                        <span style="background: white; color: #92400e; padding: 4px 10px; border-radius: 20px; font-size: 0.9rem; font-weight: 500; border: 1px solid #fde68a; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">usually</span>
-                        <span style="background: white; color: #92400e; padding: 4px 10px; border-radius: 20px; font-size: 0.9rem; font-weight: 500; border: 1px solid #fde68a; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">occasionally</span>
-                        <span style="background: white; color: #92400e; padding: 4px 10px; border-radius: 20px; font-size: 0.9rem; font-weight: 500; border: 1px solid #fde68a; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">rarely</span>
-                        <span style="background: white; color: #92400e; padding: 4px 10px; border-radius: 20px; font-size: 0.9rem; font-weight: 500; border: 1px solid #fde68a; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">never</span>
-                        <span style="padding: 4px; font-size: 1rem; color: #b45309; font-weight: 700; letter-spacing: 2px;">...</span>
+                <!-- 4. Frequency -->
+                <div class="nbm-cat-card" style="border-color: #fcd34d;">
+                    <div class="nbm-cat-header" style="background: #fef3c7;">
+                        <div class="nbm-cat-title" style="color: #92400e;">🔄 4. Tần suất <span>(Frequency — How often?)</span></div>
+                        <div class="nbm-cat-desc">Cho biết mức độ thường xuyên của hành động.</div>
+                    </div>
+                    <div style="padding: 12px; display: flex; flex-wrap: wrap; gap: 7px;">
+                        <span class="cu-q-pill" style="background: #fffbeb; color: #92400e; border: 1px solid #fde68a;">always <small>(100%)</small></span>
+                        <span class="cu-q-pill" style="background: #fffbeb; color: #92400e; border: 1px solid #fde68a;">usually <small>(80%)</small></span>
+                        <span class="cu-q-pill" style="background: #fffbeb; color: #92400e; border: 1px solid #fde68a;">often <small>(60%)</small></span>
+                        <span class="cu-q-pill" style="background: #fffbeb; color: #92400e; border: 1px solid #fde68a;">occasionally <small>(30%)</small></span>
+                        <span class="cu-q-pill" style="background: #fffbeb; color: #92400e; border: 1px solid #fde68a;">rarely <small>(10%)</small></span>
+                        <span class="cu-q-pill" style="background: #fffbeb; color: #92400e; border: 1px solid #fde68a;">never <small>(0%)</small></span>
                     </div>
                 </div>
 
-                <div style="background: #fef2f2; border: 1px solid #fee2e2; padding: 16px; border-radius: 12px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
-                    <h4 style="color: #b91c1c; font-size: 1.15rem; margin-bottom: 8px; display: flex; align-items: center; gap: 6px;">📈 Mức độ (Degree)</h4>
-                    <p style="color: #7f1d1d; font-size: 0.95rem; margin-bottom: 12px;">Cho biết cường độ của tính/trạng từ khác.</p>
-                    <div style="display: flex; flex-wrap: wrap; gap: 6px; align-items: center;">
-                        <span style="background: white; color: #991b1b; padding: 4px 10px; border-radius: 20px; font-size: 0.9rem; font-weight: 500; border: 1px solid #fecaca; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">extremely</span>
-                        <span style="background: white; color: #991b1b; padding: 4px 10px; border-radius: 20px; font-size: 0.9rem; font-weight: 500; border: 1px solid #fecaca; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">completely</span>
-                        <span style="background: white; color: #991b1b; padding: 4px 10px; border-radius: 20px; font-size: 0.9rem; font-weight: 500; border: 1px solid #fecaca; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">quite</span>
-                        <span style="background: white; color: #991b1b; padding: 4px 10px; border-radius: 20px; font-size: 0.9rem; font-weight: 500; border: 1px solid #fecaca; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">slightly</span>
-                        <span style="background: white; color: #991b1b; padding: 4px 10px; border-radius: 20px; font-size: 0.9rem; font-weight: 500; border: 1px solid #fecaca; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">very</span>
-                        <span style="padding: 4px; font-size: 1rem; color: #b91c1c; font-weight: 700; letter-spacing: 2px;">...</span>
+                <!-- 5. Degree -->
+                <div class="nbm-cat-card" style="border-color: #fca5a5;">
+                    <div class="nbm-cat-header" style="background: #fee2e2;">
+                        <div class="nbm-cat-title" style="color: #991b1b;">📈 5. Mức độ <span>(Degree — How much?)</span></div>
+                        <div class="nbm-cat-desc">Cho biết cường độ của tính từ / trạng từ khác.</div>
+                    </div>
+                    <div style="padding: 12px; display: flex; flex-wrap: wrap; gap: 7px;">
+                        <span class="cu-q-pill" style="background: #fef2f2; color: #991b1b; border: 1px solid #fecaca;">extremely <small>(cực kỳ)</small></span>
+                        <span class="cu-q-pill" style="background: #fef2f2; color: #991b1b; border: 1px solid #fecaca;">completely <small>(hoàn toàn)</small></span>
+                        <span class="cu-q-pill" style="background: #fef2f2; color: #991b1b; border: 1px solid #fecaca;">very <small>(rất)</small></span>
+                        <span class="cu-q-pill" style="background: #fef2f2; color: #991b1b; border: 1px solid #fecaca;">quite <small>(khá)</small></span>
+                        <span class="cu-q-pill" style="background: #fef2f2; color: #991b1b; border: 1px solid #fecaca;">slightly <small>(hơi, 1 chút)</small></span>
+                        <span class="cu-q-pill" style="background: #fef2f2; color: #991b1b; border: 1px solid #fecaca;">too <small>(quá)</small></span>
                     </div>
                 </div>
+
             </div>
-        `
+        </div>`
     },
     {
-        title: "3. VỊ TRÍ CỦA TRẠNG TỪ TRONG CÂU",
+        title: "📍 3. VỊ TRÍ CỦA TRẠNG TỪ TRONG CÂU (3 VỊ TRÍ VÀNG)",
         content: `
-            <div style="font-size: 1.1rem; line-height: 1.6; color: var(--text-main);">
-                <div style="margin-bottom: 24px;">
-                    <h4 style="font-size: 1.15rem; font-weight: 800; color: #475569; margin-bottom: 8px; display: flex; align-items: center; gap: 8px;">
-                        <span style="background: var(--primary-color); color: white; width: 24px; height: 24px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: 0.9rem;">a</span>
-                        Bổ nghĩa cho Động từ
-                    </h4>
-                    <p style="margin-bottom: 12px; margin-left: 32px; color: #475569;">Đứng <span style="font-weight: 800; color: #1e40af; background: #dbeafe; padding: 2px 8px; border-radius: 6px; border: 1px solid #bfdbfe;">TRƯỚC</span> hoặc <span style="font-weight: 800; color: #1e40af; background: #dbeafe; padding: 2px 8px; border-radius: 6px; border: 1px solid #bfdbfe;">SAU</span> động từ chính. <span style="color: #ef4444; font-weight: 700; background: #fef2f2; padding: 2px 8px; border-radius: 6px; border: 1px solid #fecaca;">(KHÔNG chen vào giữa Động từ và Tân ngữ)</span></p>
-                    <div style="background: #f0fdf4; padding: 12px 16px; border-radius: 8px; margin-left: 32px; border-left: 4px solid #22c55e;">
-                        <p style="color: #166534; margin-bottom: 6px;">✔ He drives <b style="color: #7c3aed; background: #ede9fe; padding: 2px 8px; border-radius: 4px; font-weight: 800;">carefully</b>.</p>
-                        <p style="color: #166534; margin-bottom: 6px;">✔ She <b style="color: #7c3aed; background: #ede9fe; padding: 2px 8px; border-radius: 4px; font-weight: 800;">completely</b> focuses on reading.</p>
-                        <p style="color: #991b1b; font-style: italic; margin-bottom: 0;">✘ She reads <b style="color: #dc2626; background: #fee2e2; padding: 2px 8px; border-radius: 4px; font-weight: 800; text-decoration: line-through;">completely</b> the book. (Sai vị trí)</p>
+        <div class="adj-wrap">
+
+            <!-- VỊ TRÍ 1: BỔ NGHĨA CHO ĐỘNG TỪ -->
+            <div class="mv-rule-card" style="border-color: #93c5fd; background: linear-gradient(180deg, #ffffff 0%, #eff6ff 100%);">
+                <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px; flex-wrap: wrap;">
+                    <div style="background: linear-gradient(135deg, #2563eb, #4f46e5); color: white; width: 40px; height: 40px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: 900; font-size: 1.25rem; flex-shrink: 0;">1</div>
+                    <div style="font-weight: 900; font-size: 1.15rem; color: #0f172a;">
+                        Bổ nghĩa cho Động từ — Đứng <span style="background: #dbeafe; color: #1d4ed8; padding: 2px 8px; border-radius: 6px;">TRƯỚC</span> hoặc <span style="background: #dbeafe; color: #1d4ed8; padding: 2px 8px; border-radius: 6px;">SAU</span> động từ chính
                     </div>
                 </div>
 
-                <div style="margin-bottom: 24px;">
-                    <h4 style="font-size: 1.15rem; font-weight: 800; color: #475569; margin-bottom: 8px; display: flex; align-items: center; gap: 8px;">
-                        <span style="background: var(--primary-color); color: white; width: 24px; height: 24px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: 0.9rem;">b</span>
-                        Bổ nghĩa cho Tính từ / Trạng từ khác
-                    </h4>
-                    <p style="margin-bottom: 12px; margin-left: 32px; color: #475569;">Luôn đứng <span style="font-weight: 800; color: #1e40af; background: #dbeafe; padding: 2px 8px; border-radius: 6px; border: 1px solid #bfdbfe;">TRƯỚC</span> từ mà nó bổ nghĩa.</p>
-                    <div style="background: #f0fdf4; padding: 12px 16px; border-radius: 8px; margin-left: 32px; border-left: 4px solid #22c55e;">
-                        <p style="color: #166534; margin-bottom: 6px;">✔ She is <b style="color: #7c3aed; background: #ede9fe; padding: 2px 8px; border-radius: 4px; font-weight: 800;">very</b> intelligent. <i>(<b style="color: #7c3aed;">very</b> bổ nghĩa cho tính từ intelligent)</i></p>
-                        <p style="color: #166534; margin-bottom: 0;">✔ He speaks <b style="color: #7c3aed; background: #ede9fe; padding: 2px 8px; border-radius: 4px; font-weight: 800;">quite</b> fluently. <i>(<b style="color: #7c3aed;">quite</b> bổ nghĩa cho trạng từ fluently)</i></p>
+                <div class="adj-formula-bar" style="border-color: #93c5fd; background: white;">
+                    <span class="adj-f-box" style="background: #e0f2fe; color: #0c4a6e; border: 1.5px solid #7dd3fc;">S</span>
+                    <span style="font-weight: 900; color: #64748b;">+</span>
+                    <span class="adj-f-box" style="background: #ede9fe; color: #5b21b6; border: 2px dashed #a78bfa;">(Adv)</span>
+                    <span style="font-weight: 900; color: #64748b;">+</span>
+                    <span class="adj-f-box" style="background: #dcfce7; color: #166534; border: 2px solid #4ade80;">Động từ (V)</span>
+                    <span style="font-weight: 900; color: #64748b;">+</span>
+                    <span class="adj-f-box" style="background: #fef9c3; color: #854d0e; border: 1.5px solid #facc15;">(Tân ngữ O)</span>
+                    <span style="font-weight: 900; color: #64748b;">+</span>
+                    <span class="adj-f-box" style="background: #ede9fe; color: #5b21b6; border: 2px dashed #a78bfa;">(Adv)</span>
+                </div>
+
+                <div style="display: grid; gap: 8px; margin-bottom: 12px;">
+                    <div style="background: #f0fdf4; border: 1.5px solid #86efac; border-radius: 12px; padding: 9px 14px; font-weight: 700; color: #14532d;">
+                        ✅ He drives <span style="background: #ede9fe; color: #6d28d9; padding: 1px 8px; border-radius: 6px; font-weight: 800;">carefully</span>.
+                    </div>
+                    <div style="background: #f0fdf4; border: 1.5px solid #86efac; border-radius: 12px; padding: 9px 14px; font-weight: 700; color: #14532d;">
+                        ✅ She <span style="background: #ede9fe; color: #6d28d9; padding: 1px 8px; border-radius: 6px; font-weight: 800;">completely</span> focuses on reading.
+                    </div>
+                    <div style="background: #fff1f2; border: 1.5px solid #fecdd3; border-radius: 12px; padding: 9px 14px; font-weight: 700; color: #991b1b;">
+                        ❌ She reads <span style="background: #fee2e2; color: #dc2626; padding: 1px 8px; border-radius: 6px; text-decoration: line-through;">completely</span> the book. <i style="font-weight: 600; font-size: 0.9rem;">(CẤM chen vào giữa Động từ &amp; Tân ngữ!)</i>
                     </div>
                 </div>
 
-                <div style="margin-bottom: 24px;">
-                    <h4 style="font-size: 1.15rem; font-weight: 800; color: #475569; margin-bottom: 8px; display: flex; align-items: center; gap: 8px;">
-                        <span style="background: var(--primary-color); color: white; width: 24px; height: 24px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: 0.9rem;">c</span>
-                        Bổ nghĩa cho Cả câu
-                    </h4>
-                    <p style="margin-bottom: 12px; margin-left: 32px; color: #475569;">Thường đứng <span style="font-weight: 800; color: #1e40af; background: #dbeafe; padding: 2px 8px; border-radius: 6px; border: 1px solid #bfdbfe;">ĐẦU CÂU</span> hoặc <span style="font-weight: 800; color: #1e40af; background: #dbeafe; padding: 2px 8px; border-radius: 6px; border: 1px solid #bfdbfe;">CUỐI CÂU</span>, ngăn cách với mệnh đề chính bằng dấu phẩy (,).</p>
-                    <div style="background: #f0fdf4; padding: 12px 16px; border-radius: 8px; margin-left: 32px; border-left: 4px solid #22c55e;">
-                        <p style="color: #166534; margin-bottom: 6px;">✔ <b style="color: #7c3aed; background: #ede9fe; padding: 2px 8px; border-radius: 4px; font-weight: 800;">Fortunately</b>, nobody was hurt.</p>
-                        <p style="color: #166534; margin-bottom: 0;">✔ We missed the last bus, <b style="color: #7c3aed; background: #ede9fe; padding: 2px 8px; border-radius: 4px; font-weight: 800;">unfortunately</b>.</p>
+                <div style="background: #fffbeb; border: 1.5px dashed #f59e0b; border-radius: 10px; padding: 9px 14px; font-size: 0.93rem; color: #78350f;">
+                    💡 <b>Mẹo nhớ Trạng từ tần suất</b> (<i>always, usually, often, never...</i>): <b>SAU</b> <i>To Be</i> &amp; <b>TRƯỚC</b> <i>Động từ thường</i> — VD: <i>I am <b>always</b> happy. / I <b>always</b> do homework.</i>
+                </div>
+            </div>
+
+            <!-- VỊ TRÍ 2 & 3: 2 CỘT SONG SONG -->
+            <div class="adj-grid-2">
+                <!-- VỊ TRÍ 2 -->
+                <div class="mv-rule-card" style="border-color: #c4b5fd; background: linear-gradient(180deg, #ffffff 0%, #faf5ff 100%);">
+                    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
+                        <div style="background: linear-gradient(135deg, #7c3aed, #9333ea); color: white; width: 38px; height: 38px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: 900; font-size: 1.2rem; flex-shrink: 0;">2</div>
+                        <div style="font-weight: 900; font-size: 1.08rem; color: #0f172a;">Bổ nghĩa cho Tính từ / Trạng từ khác</div>
+                    </div>
+                    <div class="adj-formula-bar" style="border-color: #c4b5fd; background: white; padding: 9px 10px;">
+                        <span class="adj-f-box" style="background: #ede9fe; color: #5b21b6; border: 2px solid #a78bfa; font-size: 0.92rem;">⚡ Trạng từ (Adv)</span>
+                        <span style="font-weight: 900;">+</span>
+                        <span class="adj-f-box" style="background: #fef08a; color: #854d0e; border: 2px solid #facc15; font-size: 0.92rem;">Adj / Adv</span>
+                    </div>
+                    <div style="font-size: 0.95rem; color: #475569; margin-bottom: 10px;">
+                        👉 Luôn đứng <b style="color: #6d28d9;">TRƯỚC</b> từ mà nó bổ nghĩa.
+                    </div>
+                    <div style="display: grid; gap: 8px;">
+                        <div class="adj-ex-chip">
+                            <span style="font-size: 1.35rem;">🌟</span>
+                            <div>
+                                <div>She is <b style="background: #ede9fe; color: #6d28d9; padding: 1px 6px; border-radius: 5px;">very</b> <u>intelligent</u>.</div>
+                                <div style="font-size: 0.84rem; color: #64748b;">(bổ nghĩa cho tính từ intelligent)</div>
+                            </div>
+                        </div>
+                        <div class="adj-ex-chip">
+                            <span style="font-size: 1.35rem;">🗣️</span>
+                            <div>
+                                <div>He speaks <b style="background: #ede9fe; color: #6d28d9; padding: 1px 6px; border-radius: 5px;">quite</b> <u>fluently</u>.</div>
+                                <div style="font-size: 0.84rem; color: #64748b;">(bổ nghĩa cho trạng từ fluently)</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- VỊ TRÍ 3 -->
+                <div class="mv-rule-card" style="border-color: #86efac; background: linear-gradient(180deg, #ffffff 0%, #f0fdf4 100%);">
+                    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
+                        <div style="background: linear-gradient(135deg, #059669, #10b981); color: white; width: 38px; height: 38px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: 900; font-size: 1.2rem; flex-shrink: 0;">3</div>
+                        <div style="font-weight: 900; font-size: 1.08rem; color: #0f172a;">Bổ nghĩa cho Cả câu</div>
+                    </div>
+                    <div class="adj-formula-bar" style="border-color: #86efac; background: white; padding: 9px 10px;">
+                        <span class="adj-f-box" style="background: #dcfce7; color: #166534; border: 2px solid #4ade80; font-size: 0.92rem;">Adv,</span>
+                        <span style="font-weight: 900;">+</span>
+                        <span class="adj-f-box" style="background: #e0f2fe; color: #0c4a6e; border: 1.5px solid #7dd3fc; font-size: 0.92rem;">Mệnh đề chính</span>
+                    </div>
+                    <div style="font-size: 0.95rem; color: #475569; margin-bottom: 10px;">
+                        👉 Đứng <b style="color: #059669;">ĐẦU CÂU</b> hoặc <b style="color: #059669;">CUỐI CÂU</b>, ngăn cách bằng dấu phẩy <b>(,)</b>.
+                    </div>
+                    <div style="display: grid; gap: 8px;">
+                        <div class="adj-ex-chip">
+                            <span style="font-size: 1.35rem;">🍀</span>
+                            <div>
+                                <div><b style="background: #dcfce7; color: #15803d; padding: 1px 6px; border-radius: 5px;">Fortunately</b>, nobody was hurt.</div>
+                                <div style="font-size: 0.84rem; color: #64748b;">(May mắn thay, không ai bị thương.)</div>
+                            </div>
+                        </div>
+                        <div class="adj-ex-chip">
+                            <span style="font-size: 1.35rem;">🚌</span>
+                            <div>
+                                <div>We missed the last bus, <b style="background: #dcfce7; color: #15803d; padding: 1px 6px; border-radius: 5px;">unfortunately</b>.</div>
+                                <div style="font-size: 0.84rem; color: #64748b;">(Thật không may, chúng tôi lỡ chuyến xe cuối.)</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        `
+        </div>`
     },
     {
-        title: "4. CÁCH THÀNH LẬP TRẠNG TỪ (TỪ TÍNH TỪ)",
+        title: "🔧 4. CÁCH THÀNH LẬP TRẠNG TỪ & CÁC BẪY BẤT QUY TẮC",
         content: `
-            <div style="font-size: 1.1rem; line-height: 1.7; color: var(--text-main);">
-                <p style="margin-bottom: 24px; font-size: 1.15rem; color: #475569;">Để tạo ra một trạng từ chỉ cách thức, ta thường thêm đuôi <b style="color: var(--primary-color); background: #e0e7ff; padding: 2px 8px; border-radius: 4px; border: 1px solid #c7d2fe;">-ly</b> vào sau Tính từ.</p>
+        <div class="adj-wrap">
+            <!-- Công thức chung -->
+            <div class="adj-formula-bar" style="background: linear-gradient(135deg, #eef2ff 0%, #e0e7ff 100%); border-color: #818cf8; margin-bottom: 0;">
+                <span class="adj-f-box" style="background: white; color: #3730a3; border: 2px solid #818cf8;">🎨 Tính từ (Adj)</span>
+                <span style="font-weight: 900; font-size: 1.25rem; color: #4f46e5;">+</span>
+                <span class="adj-f-box" style="background: #fef08a; color: #92400e; border: 2px solid #facc15;">-ly</span>
+                <span style="font-weight: 900; font-size: 1.25rem; color: #4f46e5;">➔</span>
+                <span class="adj-f-box" style="background: #4f46e5; color: white;">⚡ Trạng từ chỉ cách thức (Adv)</span>
+            </div>
 
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-bottom: 32px;">
-                    <!-- Quy tắc chung -->
-                    <div style="background: white; border: 1px solid #e2e8f0; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); overflow: hidden; transition: transform 0.2s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
-                        <div style="background: linear-gradient(135deg, #eff6ff, #dbeafe); padding: 16px; border-bottom: 1px solid #bfdbfe;">
-                            <h4 style="color: #1e40af; font-size: 1.15rem; font-weight: 800; display: flex; align-items: center; gap: 8px; margin: 0;">
-                                <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
-                                Quy tắc chung
-                            </h4>
-                            <p style="color: #3b82f6; font-size: 0.95rem; margin-top: 4px; margin-bottom: 0;">Thêm trực tiếp -ly vào tính từ</p>
-                        </div>
-                        <div style="padding: 16px;">
-                            <div style="display: flex; flex-direction: column; gap: 12px;">
-                                <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px dashed #e2e8f0; padding-bottom: 8px;">
-                                    <span style="color: #475569; font-weight: 500;">careful</span>
-                                    <span style="color: #94a3b8;">&rarr;</span>
-                                    <span style="color: #1d4ed8; background: #eff6ff; padding: 4px 12px; border-radius: 20px;">careful<b style="font-weight: 800;">ly</b></span>
-                                </div>
-                                <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px dashed #e2e8f0; padding-bottom: 8px;">
-                                    <span style="color: #475569; font-weight: 500;">quick</span>
-                                    <span style="color: #94a3b8;">&rarr;</span>
-                                    <span style="color: #1d4ed8; background: #eff6ff; padding: 4px 12px; border-radius: 20px;">quick<b style="font-weight: 800;">ly</b></span>
-                                </div>
-                                <div style="display: flex; align-items: center; justify-content: space-between;">
-                                    <span style="color: #475569; font-weight: 500;">extreme</span>
-                                    <span style="color: #94a3b8;">&rarr;</span>
-                                    <span style="color: #1d4ed8; background: #eff6ff; padding: 4px 12px; border-radius: 20px;">extreme<b style="font-weight: 800;">ly</b></span>
-                                </div>
-                            </div>
-                        </div>
+            <!-- 2 Cột Quy tắc thêm -ly -->
+            <div class="adj-grid-2">
+                <!-- Quy tắc chung -->
+                <div class="cu-card" style="border-color: #93c5fd;">
+                    <div class="cu-card-head" style="background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);">
+                        <div style="font-weight: 900; font-size: 1.08rem;">✅ Quy tắc chung</div>
+                        <div style="font-size: 0.88rem; opacity: 0.95;">Thêm trực tiếp <b>-ly</b> vào sau tính từ</div>
                     </div>
-
-                    <!-- Quy tắc đổi đuôi -->
-                    <div style="background: white; border: 1px solid #e2e8f0; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); overflow: hidden; transition: transform 0.2s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
-                        <div style="background: linear-gradient(135deg, #fdf4ff, #fae8ff); padding: 16px; border-bottom: 1px solid #f5d0fe;">
-                            <h4 style="color: #86198f; font-size: 1.15rem; font-weight: 800; display: flex; align-items: center; gap: 8px; margin: 0;">
-                                <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M7 7h10v3l4-4-4-4v3H5v6h2V7zm10 10H7v-3l-4 4 4 4v-3h12v-6h-2v4z"/></svg>
-                                Quy tắc đổi đuôi
-                            </h4>
-                            <p style="color: #a21caf; font-size: 0.95rem; margin-top: 4px; margin-bottom: 0;">Biến đổi chữ cái cuối trước khi thêm -ly</p>
+                    <div class="cu-card-body" style="gap: 9px;">
+                        <div class="mv-arrow-row">
+                            <div class="mv-pill-cell" style="background: #f1f5f9; color: #334155;">careful</div>
+                            <span style="color: #2563eb; font-weight: 900;">➔</span>
+                            <div class="mv-pill-cell" style="background: #dbeafe; color: #1e40af;">careful<b style="color: #dc2626;">ly</b></div>
                         </div>
-                        <div style="padding: 16px;">
-                            <div style="display: flex; flex-direction: column; gap: 12px;">
-                                <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px dashed #e2e8f0; padding-bottom: 8px;">
-                                    <span style="color: #475569; font-weight: 500;">happ<b style="color: #d946ef">y</b></span>
-                                    <span style="color: #94a3b8;">&rarr;</span>
-                                    <span style="color: #701a75; background: #fdf4ff; padding: 4px 12px; border-radius: 20px;">happ<b style="color: #d946ef; font-weight: 800;">ily</b></span>
-                                </div>
-                                <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px dashed #e2e8f0; padding-bottom: 8px;">
-                                    <span style="color: #475569; font-weight: 500;">terrib<b style="color: #d946ef">le</b></span>
-                                    <span style="color: #94a3b8;">&rarr;</span>
-                                    <span style="color: #701a75; background: #fdf4ff; padding: 4px 12px; border-radius: 20px;">terrib<b style="color: #d946ef; font-weight: 800;">ly</b></span>
-                                </div>
-                                <div style="display: flex; align-items: center; justify-content: space-between;">
-                                    <span style="color: #475569; font-weight: 500;">bas<b style="color: #d946ef">ic</b></span>
-                                    <span style="color: #94a3b8;">&rarr;</span>
-                                    <span style="color: #701a75; background: #fdf4ff; padding: 4px 12px; border-radius: 20px;">bas<b style="color: #d946ef; font-weight: 800;">ically</b></span>
-                                </div>
-                            </div>
+                        <div class="mv-arrow-row">
+                            <div class="mv-pill-cell" style="background: #f1f5f9; color: #334155;">quick</div>
+                            <span style="color: #2563eb; font-weight: 900;">➔</span>
+                            <div class="mv-pill-cell" style="background: #dbeafe; color: #1e40af;">quick<b style="color: #dc2626;">ly</b></div>
+                        </div>
+                        <div class="mv-arrow-row">
+                            <div class="mv-pill-cell" style="background: #f1f5f9; color: #334155;">extreme</div>
+                            <span style="color: #2563eb; font-weight: 900;">➔</span>
+                            <div class="mv-pill-cell" style="background: #dbeafe; color: #1e40af;">extreme<b style="color: #dc2626;">ly</b></div>
                         </div>
                     </div>
                 </div>
 
-                <div style="background: linear-gradient(135deg, #fff1f2, #fef2f2); border: 2px solid #fecaca; padding: 24px; border-radius: 12px; box-shadow: 0 4px 12px rgba(220,38,38,0.08);">
-                    <h4 style="color: #b91c1c; font-size: 1.25rem; font-weight: 800; margin-bottom: 24px; display: flex; align-items: center; gap: 10px;">
-                        <svg width="28" height="28" fill="currentColor" viewBox="0 0 24 24"><path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/></svg>
-                        CÁC TRƯỜNG HỢP BẤT QUY TẮC HAY THI
-                    </h4>
-                    
-                    <div style="display: flex; flex-direction: column; gap: 16px;">
-                        <!-- good -> well -->
-                        <div style="background: white; padding: 16px; border-radius: 8px; border-left: 4px solid #ef4444; box-shadow: 0 1px 3px rgba(0,0,0,0.05); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;">
-                            <div style="display: flex; align-items: center; gap: 12px;">
-                                <span style="font-size: 1.2rem; font-weight: 700; color: #334155; width: 60px;">good</span>
-                                <span style="color: #94a3b8; font-style: italic;">(Tốt)</span>
-                            </div>
-                            <div style="display: flex; align-items: center; gap: 16px;">
-                                <svg width="24" height="24" fill="#cbd5e1" viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
-                                <span style="font-size: 1.2rem; font-weight: 800; color: #b91c1c; background: #fef2f2; padding: 4px 16px; border-radius: 8px; border: 1px solid #fecaca;">well</span>
-                            </div>
+                <!-- Quy tắc đổi đuôi -->
+                <div class="cu-card" style="border-color: #f0abfc;">
+                    <div class="cu-card-head" style="background: linear-gradient(135deg, #9333ea 0%, #c026d3 100%);">
+                        <div style="font-weight: 900; font-size: 1.08rem;">🔄 Quy tắc đổi đuôi</div>
+                        <div style="font-size: 0.88rem; opacity: 0.95;">Biến đổi chữ cái cuối trước khi thêm <b>-ly</b></div>
+                    </div>
+                    <div class="cu-card-body" style="gap: 9px;">
+                        <div class="mv-arrow-row">
+                            <div class="mv-pill-cell" style="background: #f1f5f9; color: #334155;">happ<b style="color: #c026d3;">y</b></div>
+                            <span style="color: #9333ea; font-weight: 900;">➔</span>
+                            <div class="mv-pill-cell" style="background: #fae8ff; color: #701a75;">happ<b style="color: #c026d3;">ily</b></div>
                         </div>
-
-                        <!-- fast -> fast -->
-                        <div style="background: white; padding: 16px; border-radius: 8px; border-left: 4px solid #ef4444; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
-                            <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; margin-bottom: 8px;">
-                                <div style="display: flex; align-items: center; gap: 12px;">
-                                    <span style="font-size: 1.2rem; font-weight: 700; color: #334155; width: 60px;">fast</span>
-                                    <span style="color: #94a3b8; font-style: italic;">(Nhanh)</span>
-                                </div>
-                                <div style="display: flex; align-items: center; gap: 16px;">
-                                    <svg width="24" height="24" fill="#cbd5e1" viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
-                                    <span style="font-size: 1.2rem; font-weight: 800; color: #b91c1c; background: #fef2f2; padding: 4px 16px; border-radius: 8px; border: 1px solid #fecaca;">fast</span>
-                                </div>
-                            </div>
-                            <div style="background: #fff7ed; color: #c2410c; padding: 8px 12px; border-radius: 6px; font-size: 0.95rem; font-weight: 600; display: flex; align-items: center; gap: 6px;">
-                                <span>⚠️</span> Tuyệt đối KHÔNG có từ "fastly"
-                            </div>
+                        <div class="mv-arrow-row">
+                            <div class="mv-pill-cell" style="background: #f1f5f9; color: #334155;">terrib<b style="color: #c026d3;">le</b></div>
+                            <span style="color: #9333ea; font-weight: 900;">➔</span>
+                            <div class="mv-pill-cell" style="background: #fae8ff; color: #701a75;">terrib<b style="color: #c026d3;">ly</b></div>
                         </div>
-
-                        <!-- hard -> hard -->
-                        <div style="background: white; padding: 16px; border-radius: 8px; border-left: 4px solid #ef4444; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
-                            <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; margin-bottom: 8px;">
-                                <div style="display: flex; align-items: center; gap: 12px;">
-                                    <span style="font-size: 1.2rem; font-weight: 700; color: #334155; width: 60px;">hard</span>
-                                    <span style="color: #94a3b8; font-style: italic;">(Khó/Chăm chỉ)</span>
-                                </div>
-                                <div style="display: flex; align-items: center; gap: 16px;">
-                                    <svg width="24" height="24" fill="#cbd5e1" viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
-                                    <span style="font-size: 1.2rem; font-weight: 800; color: #b91c1c; background: #fef2f2; padding: 4px 16px; border-radius: 8px; border: 1px solid #fecaca;">hard</span>
-                                </div>
-                            </div>
-                            <div style="background: #fff7ed; color: #c2410c; padding: 8px 12px; border-radius: 6px; font-size: 0.95rem; font-weight: 500; display: flex; align-items: center; gap: 6px;">
-                                <span>⚠️</span> "hardly" mang nghĩa là "hầu như không" (trạng từ chỉ tần suất)
-                            </div>
-                        </div>
-
-                        <!-- late -> late -->
-                        <div style="background: white; padding: 16px; border-radius: 8px; border-left: 4px solid #ef4444; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
-                            <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; margin-bottom: 8px;">
-                                <div style="display: flex; align-items: center; gap: 12px;">
-                                    <span style="font-size: 1.2rem; font-weight: 700; color: #334155; width: 60px;">late</span>
-                                    <span style="color: #94a3b8; font-style: italic;">(Muộn)</span>
-                                </div>
-                                <div style="display: flex; align-items: center; gap: 16px;">
-                                    <svg width="24" height="24" fill="#cbd5e1" viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
-                                    <span style="font-size: 1.2rem; font-weight: 800; color: #b91c1c; background: #fef2f2; padding: 4px 16px; border-radius: 8px; border: 1px solid #fecaca;">late</span>
-                                </div>
-                            </div>
-                            <div style="background: #fff7ed; color: #c2410c; padding: 8px 12px; border-radius: 6px; font-size: 0.95rem; font-weight: 500; display: flex; align-items: center; gap: 6px;">
-                                <span>⚠️</span> "lately" mang nghĩa là "dạo gần đây" (= recently)
-                            </div>
+                        <div class="mv-arrow-row">
+                            <div class="mv-pill-cell" style="background: #f1f5f9; color: #334155;">bas<b style="color: #c026d3;">ic</b></div>
+                            <span style="color: #9333ea; font-weight: 900;">➔</span>
+                            <div class="mv-pill-cell" style="background: #fae8ff; color: #701a75;">bas<b style="color: #c026d3;">ically</b></div>
                         </div>
                     </div>
                 </div>
             </div>
-        `
+
+            <!-- 4 TRƯỜNG HỢP BẤT QUY TẮC HAY THI -->
+            <div class="mv-rule-card" style="border-color: #fda4af; background: linear-gradient(180deg, #fff1f2 0%, #ffffff 100%);">
+                <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 14px; flex-wrap: wrap;">
+                    <span style="background: #dc2626; color: white; padding: 5px 16px; border-radius: 999px; font-weight: 900; font-size: 1.02rem; box-shadow: 0 3px 8px rgba(220,38,38,0.25);">
+                        🚨 4 TRƯỜNG HỢP BẤT QUY TẮC HAY THI VSTEP
+                    </span>
+                </div>
+
+                <div class="adj-grid-2">
+                    <!-- good -> well -->
+                    <div style="background: white; border: 1.5px solid #fecdd3; border-radius: 14px; padding: 12px 14px; display: flex; flex-direction: column; gap: 8px;">
+                        <div class="mv-arrow-row">
+                            <div class="mv-pill-cell" style="background: #f1f5f9; color: #1e293b;">good <small style="font-weight: 600; color: #64748b;">(tốt)</small></div>
+                            <span style="color: #ef4444; font-weight: 900;">➔</span>
+                            <div class="mv-pill-cell" style="background: #fee2e2; color: #b91c1c;">well</div>
+                        </div>
+                        <div style="background: #fff7ed; color: #9a3412; padding: 6px 10px; border-radius: 8px; font-size: 0.88rem; font-weight: 600;">
+                            ⚠️ Không có <del>goodly</del>! VD: <i>He speaks English <b>well</b>.</i>
+                        </div>
+                    </div>
+
+                    <!-- fast -> fast -->
+                    <div style="background: white; border: 1.5px solid #fecdd3; border-radius: 14px; padding: 12px 14px; display: flex; flex-direction: column; gap: 8px;">
+                        <div class="mv-arrow-row">
+                            <div class="mv-pill-cell" style="background: #f1f5f9; color: #1e293b;">fast <small style="font-weight: 600; color: #64748b;">(nhanh)</small></div>
+                            <span style="color: #ef4444; font-weight: 900;">➔</span>
+                            <div class="mv-pill-cell" style="background: #fee2e2; color: #b91c1c;">fast</div>
+                        </div>
+                        <div style="background: #fff7ed; color: #9a3412; padding: 6px 10px; border-radius: 8px; font-size: 0.88rem; font-weight: 600;">
+                            ⚠️ Tuyệt đối KHÔNG có từ <b><del>"fastly"</del></b>!
+                        </div>
+                    </div>
+
+                    <!-- hard -> hard -->
+                    <div style="background: white; border: 1.5px solid #fecdd3; border-radius: 14px; padding: 12px 14px; display: flex; flex-direction: column; gap: 8px;">
+                        <div class="mv-arrow-row">
+                            <div class="mv-pill-cell" style="background: #f1f5f9; color: #1e293b;">hard <small style="font-weight: 600; color: #64748b;">(chăm)</small></div>
+                            <span style="color: #ef4444; font-weight: 900;">➔</span>
+                            <div class="mv-pill-cell" style="background: #fee2e2; color: #b91c1c;">hard</div>
+                        </div>
+                        <div style="background: #fff7ed; color: #9a3412; padding: 6px 10px; border-radius: 8px; font-size: 0.88rem; font-weight: 600;">
+                            ⚠️ <b>"hardly"</b> mang nghĩa <b>"hầu như không"</b> (tần suất)!
+                        </div>
+                    </div>
+
+                    <!-- late -> late -->
+                    <div style="background: white; border: 1.5px solid #fecdd3; border-radius: 14px; padding: 12px 14px; display: flex; flex-direction: column; gap: 8px;">
+                        <div class="mv-arrow-row">
+                            <div class="mv-pill-cell" style="background: #f1f5f9; color: #1e293b;">late <small style="font-weight: 600; color: #64748b;">(muộn)</small></div>
+                            <span style="color: #ef4444; font-weight: 900;">➔</span>
+                            <div class="mv-pill-cell" style="background: #fee2e2; color: #b91c1c;">late</div>
+                        </div>
+                        <div style="background: #fff7ed; color: #9a3412; padding: 6px 10px; border-radius: 8px; font-size: 0.88rem; font-weight: 600;">
+                            ⚠️ <b>"lately"</b> mang nghĩa <b>"dạo gần đây"</b> (= recently)!
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Thanh lưu ý Tính từ đuôi -ly -->
+            <div style="background: #f5f3ff; border: 2px dashed #a78bfa; border-radius: 14px; padding: 12px 16px; display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 8px; font-size: 0.94rem; color: #3b0764;">
+                <span>📢</span>
+                <b>Coi chừng "cú lừa" Tính từ đuôi -ly:</b>
+                <span style="background: white; border: 1px solid #c4b5fd; padding: 3px 10px; border-radius: 999px; font-weight: 700;">friendly</span>
+                <span style="background: white; border: 1px solid #c4b5fd; padding: 3px 10px; border-radius: 999px; font-weight: 700;">lovely</span>
+                <span style="background: white; border: 1px solid #c4b5fd; padding: 3px 10px; border-radius: 999px; font-weight: 700;">lively</span>
+                <span style="background: white; border: 1px solid #c4b5fd; padding: 3px 10px; border-radius: 999px; font-weight: 700;">costly</span>
+                <span style="background: white; border: 1px solid #c4b5fd; padding: 3px 10px; border-radius: 999px; font-weight: 700;">lonely</span>
+                <span>➔ Đây là <b>TÍNH TỪ</b>, không phải trạng từ!</span>
+            </div>
+        </div>`
     }
 ];
 
