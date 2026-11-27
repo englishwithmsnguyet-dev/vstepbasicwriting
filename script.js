@@ -8880,217 +8880,247 @@ window.renderAdjectivesDetail = function(activeTab = 'theory') {
 
 const prepositionsTheoryData = [
     {
-        title: '1. Giới từ chỉ Thời gian (Prepositions of Time)',
+        title: '⏰ 1. GIỚI TỪ CHỈ THỜI GIAN (PREPOSITIONS OF TIME)',
         content: `
-        <div class="theory-rich-content">
-            <p style="margin-bottom: 24px; color: var(--text-main);">Ba giới từ cơ bản nhất chỉ thời gian là <b style="color:#2563eb;">IN</b>, <b style="color:#16a34a;">ON</b>, và <b style="color:#dc2626;">AT</b>. Quy tắc hình phễu (từ rộng đến hẹp):</p>
-            
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-bottom: 32px;">
-                <!-- Card IN -->
-                <div style="background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 12px; padding: 20px; transition: all 0.3s;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 10px 15px -3px rgba(37,99,235,0.1)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
-                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
-                        <div style="width: 48px; height: 48px; border-radius: 12px; background: #2563eb; color: white; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold;">IN</div>
-                        <h4 style="color: #1e3a8a; font-size: 1.2rem; margin: 0;">Khoảng Rộng</h4>
-                    </div>
-                    <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px;">
-                        <span style="background: white; color: #2563eb; padding: 4px 10px; border-radius: 6px; font-size: 0.9rem; font-weight: 500; border: 1px solid #bfdbfe;">Năm</span>
-                        <span style="background: white; color: #2563eb; padding: 4px 10px; border-radius: 6px; font-size: 0.9rem; font-weight: 500; border: 1px solid #bfdbfe;">Tháng</span>
-                        <span style="background: white; color: #2563eb; padding: 4px 10px; border-radius: 6px; font-size: 0.9rem; font-weight: 500; border: 1px solid #bfdbfe;">Mùa</span>
-                        <span style="background: white; color: #2563eb; padding: 4px 10px; border-radius: 6px; font-size: 0.9rem; font-weight: 500; border: 1px solid #bfdbfe;">Buổi</span>
-                    </div>
-                    <div style="background: white; padding: 12px; border-radius: 8px; border-left: 3px solid #2563eb; font-style: italic; color: #475569; font-size: 0.95rem;">
-                        in 2024, in July, in spring, in the morning...
-                    </div>
-                </div>
-
-                <!-- Card ON -->
-                <div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 12px; padding: 20px; transition: all 0.3s;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 10px 15px -3px rgba(22,163,74,0.1)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
-                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
-                        <div style="width: 48px; height: 48px; border-radius: 12px; background: #16a34a; color: white; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold;">ON</div>
-                        <h4 style="color: #14532d; font-size: 1.2rem; margin: 0;">Cụ thể hơn</h4>
-                    </div>
-                    <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px;">
-                        <span style="background: white; color: #16a34a; padding: 4px 10px; border-radius: 6px; font-size: 0.9rem; font-weight: 500; border: 1px solid #bbf7d0;">Ngày</span>
-                        <span style="background: white; color: #16a34a; padding: 4px 10px; border-radius: 6px; font-size: 0.9rem; font-weight: 500; border: 1px solid #bbf7d0;">Thứ</span>
-                        <span style="background: white; color: #16a34a; padding: 4px 10px; border-radius: 6px; font-size: 0.9rem; font-weight: 500; border: 1px solid #bbf7d0;">Dịp Lễ</span>
-                    </div>
-                    <div style="background: white; padding: 12px; border-radius: 8px; border-left: 3px solid #16a34a; font-style: italic; color: #475569; font-size: 0.95rem;">
-                        on Tuesday, on July 5th, on Tet holiday...
-                    </div>
-                </div>
-
-                <!-- Card AT -->
-                <div style="background: #fef2f2; border: 1px solid #fecaca; border-radius: 12px; padding: 20px; transition: all 0.3s;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 10px 15px -3px rgba(220,38,38,0.1)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
-                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
-                        <div style="width: 48px; height: 48px; border-radius: 12px; background: #dc2626; color: white; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold;">AT</div>
-                        <h4 style="color: #7f1d1d; font-size: 1.2rem; margin: 0;">Chi tiết nhất</h4>
-                    </div>
-                    <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px;">
-                        <span style="background: white; color: #dc2626; padding: 4px 10px; border-radius: 6px; font-size: 0.9rem; font-weight: 500; border: 1px solid #fecaca;">Giờ giấc</span>
-                        <span style="background: white; color: #dc2626; padding: 4px 10px; border-radius: 6px; font-size: 0.9rem; font-weight: 500; border: 1px solid #fecaca;">Thời điểm nhất định</span>
-                    </div>
-                    <div style="background: white; padding: 12px; border-radius: 8px; border-left: 3px solid #dc2626; font-style: italic; color: #475569; font-size: 0.95rem;">
-                        at 5:30 p.m., at midnight, at noon...
+        <div class="adj-wrap">
+            <!-- Funnel Banner -->
+            <div class="adj-banner" style="background: linear-gradient(135deg, #1d4ed8 0%, #059669 55%, #dc2626 100%);">
+                <div style="display: flex; align-items: center; gap: 12px;">
+                    <span style="font-size: 1.9rem;">⏳</span>
+                    <div>
+                        <div style="font-weight: 900; font-size: 1.15rem;">QUY TẮC HÌNH PHỄU: IN ➔ ON ➔ AT (TỪ RỘNG ĐẾN HẸP)</div>
+                        <div style="font-size: 0.9rem; opacity: 0.95;">🌍 IN (Khoảng rộng) &nbsp;➔&nbsp; 📅 ON (Ngày / Thứ) &nbsp;➔&nbsp; 🎯 AT (Giờ / Mốc chính xác)</div>
                     </div>
                 </div>
             </div>
 
-            <h4 style="color: var(--primary-color); font-size: 1.15rem; margin-bottom: 16px; border-bottom: 2px solid #e2e8f0; padding-bottom: 8px;">Các giới từ chỉ thời gian khác:</h4>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
-                <div style="background: #faf5ff; border: 1px solid #e9d5ff; border-radius: 10px; padding: 16px; transition: all 0.2s;" onmouseover="this.style.background='#f3e8ff'" onmouseout="this.style.background='#faf5ff'">
-                    <b style="color: #9333ea; font-size: 1.1rem; display: block; margin-bottom: 4px;">FOR</b>
-                    <div style="color: #475569; font-size: 0.95rem;">Khoảng thời gian (for 3 years)</div>
+            <!-- 3 Cột IN - ON - AT -->
+            <div class="adj-grid-3">
+                <!-- IN -->
+                <div class="cu-card" style="border-color: #93c5fd; background: linear-gradient(180deg, #ffffff 0%, #eff6ff 100%);">
+                    <div class="cu-card-head" style="background: linear-gradient(135deg, #1d4ed8, #3b82f6);">
+                        <div style="font-weight: 900; font-size: 1.25rem; display: flex; align-items: center; justify-content: space-between;">
+                            <span>🌍 IN</span>
+                            <span style="font-size: 0.85rem; background: rgba(255,255,255,0.22); padding: 2px 10px; border-radius: 999px;">Khoảng rộng</span>
+                        </div>
+                    </div>
+                    <div class="cu-card-body" style="gap: 10px;">
+                        <div class="cu-pill-list">
+                            <span class="cu-q-pill" style="background: #dbeafe; color: #1e40af;">Năm</span>
+                            <span class="cu-q-pill" style="background: #dbeafe; color: #1e40af;">Tháng</span>
+                            <span class="cu-q-pill" style="background: #dbeafe; color: #1e40af;">Mùa</span>
+                            <span class="cu-q-pill" style="background: #dbeafe; color: #1e40af;">Buổi</span>
+                        </div>
+                        <div style="background: white; border: 1.5px solid #bfdbfe; border-left: 4px solid #2563eb; border-radius: 10px; padding: 10px 12px; font-size: 0.94rem; color: #1e293b; line-height: 1.6;">
+                            • <b style="color: #1d4ed8;">in</b> 2024, <b style="color: #1d4ed8;">in</b> July<br>
+                            • <b style="color: #1d4ed8;">in</b> spring, <b style="color: #1d4ed8;">in</b> the morning
+                        </div>
+                    </div>
                 </div>
-                <div style="background: #faf5ff; border: 1px solid #e9d5ff; border-radius: 10px; padding: 16px; transition: all 0.2s;" onmouseover="this.style.background='#f3e8ff'" onmouseout="this.style.background='#faf5ff'">
-                    <b style="color: #9333ea; font-size: 1.1rem; display: block; margin-bottom: 4px;">SINCE</b>
-                    <div style="color: #475569; font-size: 0.95rem;">Mốc thời gian (since 2023)</div>
+
+                <!-- ON -->
+                <div class="cu-card" style="border-color: #86efac; background: linear-gradient(180deg, #ffffff 0%, #f0fdf4 100%);">
+                    <div class="cu-card-head" style="background: linear-gradient(135deg, #15803d, #22c55e);">
+                        <div style="font-weight: 900; font-size: 1.25rem; display: flex; align-items: center; justify-content: space-between;">
+                            <span>📅 ON</span>
+                            <span style="font-size: 0.85rem; background: rgba(255,255,255,0.22); padding: 2px 10px; border-radius: 999px;">Cụ thể hơn</span>
+                        </div>
+                    </div>
+                    <div class="cu-card-body" style="gap: 10px;">
+                        <div class="cu-pill-list">
+                            <span class="cu-q-pill" style="background: #dcfce7; color: #166534;">Thứ</span>
+                            <span class="cu-q-pill" style="background: #dcfce7; color: #166534;">Ngày tháng</span>
+                            <span class="cu-q-pill" style="background: #dcfce7; color: #166534;">Dịp Lễ</span>
+                            <span class="cu-q-pill" style="background: #dcfce7; color: #166534;">Thứ + Buổi</span>
+                        </div>
+                        <div style="background: white; border: 1.5px solid #bbf7d0; border-left: 4px solid #16a34a; border-radius: 10px; padding: 10px 12px; font-size: 0.94rem; color: #1e293b; line-height: 1.6;">
+                            • <b style="color: #15803d;">on</b> Tuesday, <b style="color: #15803d;">on</b> July 5th<br>
+                            • <b style="color: #15803d;">on</b> Tet holiday, <b style="color: #15803d;">on</b> Monday morning
+                        </div>
+                    </div>
                 </div>
-                <div style="background: #faf5ff; border: 1px solid #e9d5ff; border-radius: 10px; padding: 16px; transition: all 0.2s;" onmouseover="this.style.background='#f3e8ff'" onmouseout="this.style.background='#faf5ff'">
-                    <b style="color: #9333ea; font-size: 1.1rem; display: block; margin-bottom: 4px;">DURING</b>
-                    <div style="color: #475569; font-size: 0.95rem;">Trong suốt sự kiện (during class)</div>
-                </div>
-                <div style="background: #faf5ff; border: 1px solid #e9d5ff; border-radius: 10px; padding: 16px; transition: all 0.2s;" onmouseover="this.style.background='#f3e8ff'" onmouseout="this.style.background='#faf5ff'">
-                    <b style="color: #9333ea; font-size: 1.1rem; display: block; margin-bottom: 4px;">UNTIL / BEFORE</b>
-                    <div style="color: #475569; font-size: 0.95rem;">Cho đến khi / Trước khi</div>
+
+                <!-- AT -->
+                <div class="cu-card" style="border-color: #fca5a5; background: linear-gradient(180deg, #ffffff 0%, #fef2f2 100%);">
+                    <div class="cu-card-head" style="background: linear-gradient(135deg, #b91c1c, #ef4444);">
+                        <div style="font-weight: 900; font-size: 1.25rem; display: flex; align-items: center; justify-content: space-between;">
+                            <span>🎯 AT</span>
+                            <span style="font-size: 0.85rem; background: rgba(255,255,255,0.22); padding: 2px 10px; border-radius: 999px;">Chi tiết nhất</span>
+                        </div>
+                    </div>
+                    <div class="cu-card-body" style="gap: 10px;">
+                        <div class="cu-pill-list">
+                            <span class="cu-q-pill" style="background: #fee2e2; color: #991b1b;">Giờ giấc</span>
+                            <span class="cu-q-pill" style="background: #fee2e2; color: #991b1b;">Thời điểm cố định</span>
+                        </div>
+                        <div style="background: white; border: 1.5px solid #fecaca; border-left: 4px solid #dc2626; border-radius: 10px; padding: 10px 12px; font-size: 0.94rem; color: #1e293b; line-height: 1.6;">
+                            • <b style="color: #dc2626;">at</b> 5:30 p.m., <b style="color: #dc2626;">at</b> noon<br>
+                            • <b style="color: #dc2626;">at</b> midnight, <b style="color: #dc2626;">at</b> night
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-        `
+
+            <!-- 4 Giới từ thời gian khác -->
+            <div style="background: #faf5ff; border: 2px solid #d8b4fe; border-radius: 16px; padding: 16px;">
+                <div style="font-weight: 900; color: #6b21a8; font-size: 1.02rem; margin-bottom: 12px;">✨ 4 Giới từ chỉ thời gian quan trọng khác:</div>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px;">
+                    <div style="background: white; border: 1.5px solid #e9d5ff; border-radius: 12px; padding: 12px;">
+                        <span style="background: #ede9fe; color: #7c3aed; font-weight: 900; padding: 2px 10px; border-radius: 999px; font-size: 0.95rem;">⏳ FOR</span>
+                        <div style="margin-top: 6px; font-size: 0.92rem; color: #334155;"><b>Khoảng</b> thời gian<br><i style="color: #64748b;">(for 3 years, for 2 weeks)</i></div>
+                    </div>
+                    <div style="background: white; border: 1.5px solid #e9d5ff; border-radius: 12px; padding: 12px;">
+                        <span style="background: #ede9fe; color: #7c3aed; font-weight: 900; padding: 2px 10px; border-radius: 999px; font-size: 0.95rem;">📌 SINCE</span>
+                        <div style="margin-top: 6px; font-size: 0.92rem; color: #334155;"><b>Mốc</b> thời gian bắt đầu<br><i style="color: #64748b;">(since 2023, since last year)</i></div>
+                    </div>
+                    <div style="background: white; border: 1.5px solid #e9d5ff; border-radius: 12px; padding: 12px;">
+                        <span style="background: #ede9fe; color: #7c3aed; font-weight: 900; padding: 2px 10px; border-radius: 999px; font-size: 0.95rem;">🗓️ DURING</span>
+                        <div style="margin-top: 6px; font-size: 0.92rem; color: #334155;">Trong suốt <b>sự kiện (+ N)</b><br><i style="color: #64748b;">(during class, during holiday)</i></div>
+                    </div>
+                    <div style="background: white; border: 1.5px solid #e9d5ff; border-radius: 12px; padding: 12px;">
+                        <span style="background: #ede9fe; color: #7c3aed; font-weight: 900; padding: 2px 10px; border-radius: 999px; font-size: 0.95rem;">⏩ BEFORE / AFTER / UNTIL</span>
+                        <div style="margin-top: 6px; font-size: 0.92rem; color: #334155;">Trước khi / Sau khi / Cho đến khi<br><i style="color: #64748b;">(before the exam, after work)</i></div>
+                    </div>
+                </div>
+            </div>
+        </div>`
     },
     {
-        title: '2. Giới từ chỉ Nơi chốn (Prepositions of Place)',
+        title: '📍 2. GIỚI TỪ CHỈ NƠI CHỐN (PREPOSITIONS OF PLACE)',
         content: `
-        <div class="theory-rich-content">
-            <p style="margin-bottom: 24px; color: var(--text-main);">Tương tự như thời gian, ta cũng dùng <b style="color:#2563eb;">IN</b>, <b style="color:#16a34a;">ON</b>, <b style="color:#dc2626;">AT</b> cho Nơi chốn với quy tắc "Từ rộng đến hẹp":</p>
-            
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-bottom: 32px;">
-                <!-- Card IN -->
-                <div style="background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 12px; padding: 20px; transition: all 0.3s;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 10px 15px -3px rgba(37,99,235,0.1)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
-                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
-                        <div style="width: 48px; height: 48px; border-radius: 12px; background: #2563eb; color: white; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold;">IN</div>
-                        <h4 style="color: #1e3a8a; font-size: 1.2rem; margin: 0;">Khu vực rộng / Bên trong</h4>
-                    </div>
-                    <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px;">
-                        <span style="background: white; color: #2563eb; padding: 4px 10px; border-radius: 6px; font-size: 0.9rem; font-weight: 500; border: 1px solid #bfdbfe;">Quốc gia</span>
-                        <span style="background: white; color: #2563eb; padding: 4px 10px; border-radius: 6px; font-size: 0.9rem; font-weight: 500; border: 1px solid #bfdbfe;">Thành phố</span>
-                        <span style="background: white; color: #2563eb; padding: 4px 10px; border-radius: 6px; font-size: 0.9rem; font-weight: 500; border: 1px solid #bfdbfe;">Tài liệu in ấn</span>
-                    </div>
-                    <div style="background: white; padding: 12px; border-radius: 8px; border-left: 3px solid #2563eb; font-style: italic; color: #475569; font-size: 0.95rem;">
-                        in Viet Nam, in Can Tho city, in a book, in a picture...
-                    </div>
-                </div>
-
-                <!-- Card ON -->
-                <div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 12px; padding: 20px; transition: all 0.3s;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 10px 15px -3px rgba(22,163,74,0.1)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
-                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
-                        <div style="width: 48px; height: 48px; border-radius: 12px; background: #16a34a; color: white; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold;">ON</div>
-                        <h4 style="color: #14532d; font-size: 1.2rem; margin: 0;">Bề mặt / Mạng lưới</h4>
-                    </div>
-                    <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px;">
-                        <span style="background: white; color: #16a34a; padding: 4px 10px; border-radius: 6px; font-size: 0.9rem; font-weight: 500; border: 1px solid #bbf7d0;">Tên đường</span>
-                        <span style="background: white; color: #16a34a; padding: 4px 10px; border-radius: 6px; font-size: 0.9rem; font-weight: 500; border: 1px solid #bbf7d0;">Tầng lầu</span>
-                        <span style="background: white; color: #16a34a; padding: 4px 10px; border-radius: 6px; font-size: 0.9rem; font-weight: 500; border: 1px solid #bbf7d0;">Mạng Xã Hội</span>
-                    </div>
-                    <div style="background: white; padding: 12px; border-radius: 8px; border-left: 3px solid #16a34a; font-style: italic; color: #475569; font-size: 0.95rem;">
-                        on 3/2 street, on the first floor, on Facebook...
-                    </div>
-                </div>
-
-                <!-- Card AT -->
-                <div style="background: #fef2f2; border: 1px solid #fecaca; border-radius: 12px; padding: 20px; transition: all 0.3s;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 10px 15px -3px rgba(220,38,38,0.1)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
-                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
-                        <div style="width: 48px; height: 48px; border-radius: 12px; background: #dc2626; color: white; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold;">AT</div>
-                        <h4 style="color: #7f1d1d; font-size: 1.2rem; margin: 0;">Điểm cụ thể</h4>
-                    </div>
-                    <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px;">
-                        <span style="background: white; color: #dc2626; padding: 4px 10px; border-radius: 6px; font-size: 0.9rem; font-weight: 500; border: 1px solid #fecaca;">Địa chỉ nhà</span>
-                        <span style="background: white; color: #dc2626; padding: 4px 10px; border-radius: 6px; font-size: 0.9rem; font-weight: 500; border: 1px solid #fecaca;">Địa điểm công cộng</span>
-                    </div>
-                    <div style="background: white; padding: 12px; border-radius: 8px; border-left: 3px solid #dc2626; font-style: italic; color: #475569; font-size: 0.95rem;">
-                        at 132 3/2 street, at the hospital...
+        <div class="adj-wrap">
+            <!-- Funnel Banner -->
+            <div class="adj-banner" style="background: linear-gradient(135deg, #0284c7 0%, #10b981 55%, #f43f5e 100%);">
+                <div style="display: flex; align-items: center; gap: 12px;">
+                    <span style="font-size: 1.9rem;">🗺️</span>
+                    <div>
+                        <div style="font-weight: 900; font-size: 1.15rem;">QUY TẮC HÌNH PHỄU NƠI CHỐN: IN ➔ ON ➔ AT</div>
+                        <div style="font-size: 0.9rem; opacity: 0.95;">🏙️ IN (Vùng rộng / Bên trong) &nbsp;➔&nbsp; 🛣️ ON (Bề mặt / Đường / MXH) &nbsp;➔&nbsp; 📌 AT (Địa chỉ cụ thể)</div>
                     </div>
                 </div>
             </div>
 
-            <div style="background: #fff7ed; border: 1px solid #ffedd5; border-radius: 12px; padding: 16px; display: flex; align-items: center; gap: 16px; transition: all 0.2s;" onmouseover="this.style.background='#ffedd5'" onmouseout="this.style.background='#fff7ed'">
-                <div style="font-size: 2rem;">📍</div>
-                <div>
-                    <b style="color: #c2410c; font-size: 1.15rem; display: block; margin-bottom: 4px;">By / Near / Close to</b>
-                    <div style="color: #475569; font-size: 1rem;">Nghĩa là "gần với" một vị trí nào đó (by the lake, near the cinema...).</div>
+            <!-- 3 Cột IN - ON - AT -->
+            <div class="adj-grid-3">
+                <!-- IN -->
+                <div class="cu-card" style="border-color: #93c5fd; background: linear-gradient(180deg, #ffffff 0%, #eff6ff 100%);">
+                    <div class="cu-card-head" style="background: linear-gradient(135deg, #1d4ed8, #3b82f6);">
+                        <div style="font-weight: 900; font-size: 1.25rem; display: flex; align-items: center; justify-content: space-between;">
+                            <span>🏙️ IN</span>
+                            <span style="font-size: 0.84rem; background: rgba(255,255,255,0.22); padding: 2px 10px; border-radius: 999px;">Vùng rộng / Bên trong</span>
+                        </div>
+                    </div>
+                    <div class="cu-card-body" style="gap: 10px;">
+                        <div class="cu-pill-list">
+                            <span class="cu-q-pill" style="background: #dbeafe; color: #1e40af;">Quốc gia</span>
+                            <span class="cu-q-pill" style="background: #dbeafe; color: #1e40af;">Thành phố</span>
+                            <span class="cu-q-pill" style="background: #dbeafe; color: #1e40af;">Không gian kín</span>
+                            <span class="cu-q-pill" style="background: #dbeafe; color: #1e40af;">Sách / Ảnh</span>
+                        </div>
+                        <div style="background: white; border: 1.5px solid #bfdbfe; border-left: 4px solid #2563eb; border-radius: 10px; padding: 10px 12px; font-size: 0.94rem; color: #1e293b; line-height: 1.6;">
+                            • <b style="color: #1d4ed8;">in</b> Viet Nam, <b style="color: #1d4ed8;">in</b> Can Tho city<br>
+                            • <b style="color: #1d4ed8;">in</b> a book, <b style="color: #1d4ed8;">in</b> a picture
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ON -->
+                <div class="cu-card" style="border-color: #86efac; background: linear-gradient(180deg, #ffffff 0%, #f0fdf4 100%);">
+                    <div class="cu-card-head" style="background: linear-gradient(135deg, #15803d, #22c55e);">
+                        <div style="font-weight: 900; font-size: 1.25rem; display: flex; align-items: center; justify-content: space-between;">
+                            <span>🛣️ ON</span>
+                            <span style="font-size: 0.84rem; background: rgba(255,255,255,0.22); padding: 2px 10px; border-radius: 999px;">Bề mặt / Mạng XH</span>
+                        </div>
+                    </div>
+                    <div class="cu-card-body" style="gap: 10px;">
+                        <div class="cu-pill-list">
+                            <span class="cu-q-pill" style="background: #dcfce7; color: #166534;">Tên đường</span>
+                            <span class="cu-q-pill" style="background: #dcfce7; color: #166534;">Tầng lầu</span>
+                            <span class="cu-q-pill" style="background: #dcfce7; color: #166534;">Màn hình / MXH</span>
+                        </div>
+                        <div style="background: white; border: 1.5px solid #bbf7d0; border-left: 4px solid #16a34a; border-radius: 10px; padding: 10px 12px; font-size: 0.94rem; color: #1e293b; line-height: 1.6;">
+                            • <b style="color: #15803d;">on</b> 3/2 street, <b style="color: #15803d;">on</b> the first floor<br>
+                            • <b style="color: #15803d;">on</b> Facebook, <b style="color: #15803d;">on</b> campus
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AT -->
+                <div class="cu-card" style="border-color: #fca5a5; background: linear-gradient(180deg, #ffffff 0%, #fef2f2 100%);">
+                    <div class="cu-card-head" style="background: linear-gradient(135deg, #b91c1c, #ef4444);">
+                        <div style="font-weight: 900; font-size: 1.25rem; display: flex; align-items: center; justify-content: space-between;">
+                            <span>📌 AT</span>
+                            <span style="font-size: 0.84rem; background: rgba(255,255,255,0.22); padding: 2px 10px; border-radius: 999px;">Điểm cụ thể</span>
+                        </div>
+                    </div>
+                    <div class="cu-card-body" style="gap: 10px;">
+                        <div class="cu-pill-list">
+                            <span class="cu-q-pill" style="background: #fee2e2; color: #991b1b;">Địa chỉ có số nhà</span>
+                            <span class="cu-q-pill" style="background: #fee2e2; color: #991b1b;">Địa điểm công cộng</span>
+                        </div>
+                        <div style="background: white; border: 1.5px solid #fecaca; border-left: 4px solid #dc2626; border-radius: 10px; padding: 10px 12px; font-size: 0.94rem; color: #1e293b; line-height: 1.6;">
+                            • <b style="color: #dc2626;">at</b> 132 3/2 street<br>
+                            • <b style="color: #dc2626;">at</b> the hospital, <b style="color: #dc2626;">at</b> the bookstore
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-        `
+
+            <!-- Giới từ chỉ khoảng cách gần -->
+            <div style="background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%); border: 2px solid #fdba74; border-radius: 14px; padding: 14px 18px; display: flex; align-items: center; gap: 14px; flex-wrap: wrap;">
+                <span style="font-size: 1.8rem;">📍</span>
+                <div style="flex: 1;">
+                    <div style="font-weight: 900; color: #c2410c; font-size: 1.05rem;">BY / NEAR / CLOSE TO — Nghĩa là "gần với"</div>
+                    <div style="color: #7c2d12; font-size: 0.96rem; margin-top: 2px;">VD: <b>by</b> the lake <i>(cạnh hồ)</i> · <b>near</b> the cinema <i>(gần rạp phim)</i> · <b>close to</b> the school library <i>(gần thư viện)</i>.</div>
+                </div>
+            </div>
+        </div>`
     },
     {
-        title: '3. Các cụm Giới từ đi với Động từ / Tính từ (Collocations)',
+        title: '🔗 3. CỤM GIỚI TỪ CỐ ĐỊNH (COLLOCATIONS HAY THI VSTEP)',
         content: `
-        <div class="theory-rich-content">
-            <p style="margin-bottom: 24px; color: var(--text-main);">Nhiều động từ và tính từ luôn đi kèm với một <strong>giới từ cố định</strong>. Đây là phần bạn cần học thuộc lòng vì không có quy tắc tuyệt đối.</p>
-            
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
-                <!-- Động từ -->
-                <div style="background: white; border: 1px solid #e2e8f0; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); transition: all 0.3s;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 10px 15px -3px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px -1px rgba(0,0,0,0.05)'">
-                    <div style="background: #0ea5e9; color: white; padding: 16px; font-weight: bold; font-size: 1.15rem; display: flex; align-items: center; gap: 8px;">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path></svg>
-                        ĐỘNG TỪ + GIỚI TỪ
+        <div class="adj-wrap">
+            <p style="margin: 0; color: #334155; font-size: 1.02rem;">Nhiều động từ và tính từ luôn đi kèm với một <b>giới từ cố định</b> — học thuộc theo cụm sẽ giúp bạn tránh sai ngữ pháp tuyệt đối khi viết câu:</p>
+
+            <div class="adj-grid-2">
+                <!-- ĐỘNG TỪ + GIỚI TỪ -->
+                <div class="cu-card" style="border-color: #7dd3fc;">
+                    <div class="cu-card-head" style="background: linear-gradient(135deg, #0284c7 0%, #0ea5e9 100%);">
+                        <div style="font-weight: 900; font-size: 1.1rem;">⚡ ĐỘNG TỪ + GIỚI TỪ</div>
+                        <div style="font-size: 0.88rem; opacity: 0.95;">Verb + Preposition Collocations</div>
                     </div>
-                    <div style="padding: 20px; display: flex; flex-direction: column; gap: 12px; font-size: 1.05rem;">
-                        <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px dashed #e2e8f0; padding-bottom: 8px;">
-                            <div><span style="font-weight: 600; color: #0f172a;">depend</span> <span style="background: #e0f2fe; color: #0369a1; padding: 2px 8px; border-radius: 4px; font-size: 0.95rem; font-weight: bold;">on</span></div>
-                            <div style="color: #64748b; font-style: italic;">phụ thuộc vào</div>
-                        </div>
-                        <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px dashed #e2e8f0; padding-bottom: 8px;">
-                            <div><span style="font-weight: 600; color: #0f172a;">wait</span> <span style="background: #e0f2fe; color: #0369a1; padding: 2px 8px; border-radius: 4px; font-size: 0.95rem; font-weight: bold;">for</span></div>
-                            <div style="color: #64748b; font-style: italic;">chờ đợi</div>
-                        </div>
-                        <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px dashed #e2e8f0; padding-bottom: 8px;">
-                            <div><span style="font-weight: 600; color: #0f172a;">listen</span> <span style="background: #e0f2fe; color: #0369a1; padding: 2px 8px; border-radius: 4px; font-size: 0.95rem; font-weight: bold;">to</span></div>
-                            <div style="color: #64748b; font-style: italic;">lắng nghe</div>
-                        </div>
-                        <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px dashed #e2e8f0; padding-bottom: 8px;">
-                            <div><span style="font-weight: 600; color: #0f172a;">look forward</span> <span style="background: #e0f2fe; color: #0369a1; padding: 2px 8px; border-radius: 4px; font-size: 0.95rem; font-weight: bold;">to</span></div>
-                            <div style="color: #64748b; font-style: italic;">mong đợi</div>
-                        </div>
-                        <div style="display: flex; justify-content: space-between; align-items: center;">
-                            <div><span style="font-weight: 600; color: #0f172a;">apologize</span> <span style="background: #e0f2fe; color: #0369a1; padding: 2px 8px; border-radius: 4px; font-size: 0.95rem; font-weight: bold;">for</span></div>
-                            <div style="color: #64748b; font-style: italic;">xin lỗi vì</div>
-                        </div>
+                    <div class="cu-card-body" style="gap: 8px;">
+                        <div class="adj-word-row" style="padding: 8px 12px;"><span><b>depend</b> <span style="background: #e0f2fe; color: #0369a1; padding: 2px 8px; border-radius: 999px; font-weight: 800;">on</span></span><span style="color: #64748b; font-size: 0.9rem;">phụ thuộc vào</span></div>
+                        <div class="adj-word-row" style="padding: 8px 12px;"><span><b>focus / concentrate</b> <span style="background: #e0f2fe; color: #0369a1; padding: 2px 8px; border-radius: 999px; font-weight: 800;">on</span></span><span style="color: #64748b; font-size: 0.9rem;">tập trung vào</span></div>
+                        <div class="adj-word-row" style="padding: 8px 12px;"><span><b>wait</b> <span style="background: #e0f2fe; color: #0369a1; padding: 2px 8px; border-radius: 999px; font-weight: 800;">for</span></span><span style="color: #64748b; font-size: 0.9rem;">chờ đợi</span></div>
+                        <div class="adj-word-row" style="padding: 8px 12px;"><span><b>apologize</b> <span style="background: #e0f2fe; color: #0369a1; padding: 2px 8px; border-radius: 999px; font-weight: 800;">for</span></span><span style="color: #64748b; font-size: 0.9rem;">xin lỗi vì</span></div>
+                        <div class="adj-word-row" style="padding: 8px 12px;"><span><b>listen</b> <span style="background: #e0f2fe; color: #0369a1; padding: 2px 8px; border-radius: 999px; font-weight: 800;">to</span></span><span style="color: #64748b; font-size: 0.9rem;">lắng nghe</span></div>
+                        <div class="adj-word-row" style="padding: 8px 12px;"><span><b>look forward</b> <span style="background: #e0f2fe; color: #0369a1; padding: 2px 8px; border-radius: 999px; font-weight: 800;">to (+ V-ing)</span></span><span style="color: #64748b; font-size: 0.9rem;">mong đợi</span></div>
                     </div>
                 </div>
 
-                <!-- Tính từ -->
-                <div style="background: white; border: 1px solid #e2e8f0; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); transition: all 0.3s;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 10px 15px -3px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px -1px rgba(0,0,0,0.05)'">
-                    <div style="background: #10b981; color: white; padding: 16px; font-weight: bold; font-size: 1.15rem; display: flex; align-items: center; gap: 8px;">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path d="M12 8h.01"></path></svg>
-                        TÍNH TỪ + GIỚI TỪ
+                <!-- TÍNH TỪ + GIỚI TỪ -->
+                <div class="cu-card" style="border-color: #6ee7b7;">
+                    <div class="cu-card-head" style="background: linear-gradient(135deg, #059669 0%, #10b981 100%);">
+                        <div style="font-weight: 900; font-size: 1.1rem;">🎨 TÍNH TỪ + GIỚI TỪ</div>
+                        <div style="font-size: 0.88rem; opacity: 0.95;">Adjective + Preposition Collocations</div>
                     </div>
-                    <div style="padding: 20px; display: flex; flex-direction: column; gap: 12px; font-size: 1.05rem;">
-                        <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px dashed #e2e8f0; padding-bottom: 8px;">
-                            <div><span style="font-weight: 600; color: #0f172a;">good / bad</span> <span style="background: #d1fae5; color: #047857; padding: 2px 8px; border-radius: 4px; font-size: 0.95rem; font-weight: bold;">at</span></div>
-                            <div style="color: #64748b; font-style: italic;">giỏi / tệ về</div>
-                        </div>
-                        <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px dashed #e2e8f0; padding-bottom: 8px;">
-                            <div><span style="font-weight: 600; color: #0f172a;">interested</span> <span style="background: #d1fae5; color: #047857; padding: 2px 8px; border-radius: 4px; font-size: 0.95rem; font-weight: bold;">in</span></div>
-                            <div style="color: #64748b; font-style: italic;">thích thú với</div>
-                        </div>
-                        <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px dashed #e2e8f0; padding-bottom: 8px;">
-                            <div><span style="font-weight: 600; color: #0f172a;">famous</span> <span style="background: #d1fae5; color: #047857; padding: 2px 8px; border-radius: 4px; font-size: 0.95rem; font-weight: bold;">for</span></div>
-                            <div style="color: #64748b; font-style: italic;">nổi tiếng vì</div>
-                        </div>
-                        <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px dashed #e2e8f0; padding-bottom: 8px;">
-                            <div><span style="font-weight: 600; color: #0f172a;">afraid</span> <span style="background: #d1fae5; color: #047857; padding: 2px 8px; border-radius: 4px; font-size: 0.95rem; font-weight: bold;">of</span></div>
-                            <div style="color: #64748b; font-style: italic;">sợ hãi</div>
-                        </div>
-                        <div style="display: flex; justify-content: space-between; align-items: center;">
-                            <div><span style="font-weight: 600; color: #0f172a;">responsible</span> <span style="background: #d1fae5; color: #047857; padding: 2px 8px; border-radius: 4px; font-size: 0.95rem; font-weight: bold;">for</span></div>
-                            <div style="color: #64748b; font-style: italic;">chịu trách nhiệm</div>
-                        </div>
+                    <div class="cu-card-body" style="gap: 8px;">
+                        <div class="adj-word-row" style="padding: 8px 12px;"><span><b>good / bad</b> <span style="background: #d1fae5; color: #047857; padding: 2px 8px; border-radius: 999px; font-weight: 800;">at</span></span><span style="color: #64748b; font-size: 0.9rem;">giỏi / tệ về</span></div>
+                        <div class="adj-word-row" style="padding: 8px 12px;"><span><b>interested</b> <span style="background: #d1fae5; color: #047857; padding: 2px 8px; border-radius: 999px; font-weight: 800;">in</span></span><span style="color: #64748b; font-size: 0.9rem;">thích thú với</span></div>
+                        <div class="adj-word-row" style="padding: 8px 12px;"><span><b>famous</b> <span style="background: #d1fae5; color: #047857; padding: 2px 8px; border-radius: 999px; font-weight: 800;">for</span></span><span style="color: #64748b; font-size: 0.9rem;">nổi tiếng vì</span></div>
+                        <div class="adj-word-row" style="padding: 8px 12px;"><span><b>responsible</b> <span style="background: #d1fae5; color: #047857; padding: 2px 8px; border-radius: 999px; font-weight: 800;">for</span></span><span style="color: #64748b; font-size: 0.9rem;">chịu trách nhiệm</span></div>
+                        <div class="adj-word-row" style="padding: 8px 12px;"><span><b>afraid</b> <span style="background: #d1fae5; color: #047857; padding: 2px 8px; border-radius: 999px; font-weight: 800;">of</span></span><span style="color: #64748b; font-size: 0.9rem;">sợ hãi</span></div>
                     </div>
                 </div>
             </div>
-        </div>
-        `
+
+            <!-- Quy tắc vàng V-ing sau Giới từ -->
+            <div style="background: #fffbeb; border: 2px dashed #f59e0b; border-radius: 14px; padding: 12px 16px; font-size: 0.96rem; color: #78350f; display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+                <span style="font-size: 1.35rem;">💡</span>
+                <div><b>Quy tắc vàng:</b> Sau mọi <b>Giới từ</b>, nếu đi kèm động từ thì luôn chia <span style="background: #fef08a; color: #b45309; padding: 1px 8px; border-radius: 6px; font-weight: 900;">V-ing</span>! &nbsp;<i>(VD: good at <b>playing</b>, interested in <b>learning</b>, apologize for <b>being</b> late.)</i></div>
+            </div>
+        </div>`
     }
 ];
 const prepositionsPracticeBook1 = [
@@ -10717,226 +10747,331 @@ window.renderAdverbsDetail = function(activeTab = 'theory') {
 
 const conjunctionsTheoryData = [
     {
-        title: "🔍 1. Định nghĩa & Tầm quan trọng của Từ nối trong VSTEP Writing",
+        title: "🔍 1. ĐỊNH NGHĨA & TẦM QUAN TRỌNG CỦA TỪ NỐI TRONG VSTEP",
         content: `
-        <div style="font-size: 1.1rem; line-height: 1.7; color: var(--text-main);">
-            <p><b>Từ nối (Connectors / Linking words)</b> là những từ hoặc cụm từ giúp kết nối các câu, các đoạn văn hoặc các ý tưởng lại với nhau một cách logic, giúp bài viết mạch lạc, trôi chảy và dễ hiểu hơn.</p>
-            
-            <div style="background: #f0fdf4; border-left: 5px solid #22c55e; padding: 16px; border-radius: 8px; margin: 16px 0;">
-                <b style="color: #166534; font-size: 1.15rem;">🎯 Tại sao cần dùng từ nối trong kỹ năng WRITING VSTEP?</b>
-                <ul style="margin: 8px 0 0 0; padding-left: 20px; color: #15803d; display: grid; gap: 6px;">
-                    <li>Từ nối giúp bài viết không bị rời rạc, chắp vá; giúp người đọc/người chấm nắm rõ mối quan hệ giữa các ý (thêm ý, đối lập, nguyên nhân – kết quả, trình tự...).</li>
-                    <li>Giúp tăng trực tiếp điểm tiêu chí <b>"Coherence and Cohesion"</b> (Tính mạch lạc và liên kết) trong thang chấm điểm bài thi Writing Task 1 & Task 2.</li>
-                </ul>
-            </div>
-
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 20px 0;">
-                <div style="background: #fef2f2; border: 1px solid #fecaca; border-radius: 10px; padding: 16px;">
-                    <div style="font-weight: 800; color: #dc2626; margin-bottom: 8px; font-size: 1.05rem;">❌ Không có từ nối (Rời rạc)</div>
-                    <div style="color: #475569; font-style: italic;">"I like playing badminton. It helps me keep fit. It is fun."</div>
-                    <div style="font-size: 0.95rem; color: #991b1b; margin-top: 8px;">👉 Câu ngắn, nghe rời rạc giống như liệt kê đơn thuần.</div>
-                </div>
-                <div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 10px; padding: 16px;">
-                    <div style="font-weight: 800; color: #16a34a; margin-bottom: 8px; font-size: 1.05rem;">✅ Có từ nối (Mạch lạc, tự nhiên)</div>
-                    <div style="color: #1e293b; font-style: italic;">"I like playing badminton <b style="color: #2563eb;">because</b> it helps me keep fit. <b style="color: #2563eb;">Moreover</b>, it is fun."</div>
-                    <div style="font-size: 0.95rem; color: #166534; margin-top: 8px;">👉 Câu tự nhiên, giàu liên kết, thể hiện tư duy ngữ pháp tốt.</div>
+        <div class="adj-wrap">
+            <!-- Hero Banner -->
+            <div class="adj-banner" style="background: linear-gradient(135deg, #4f46e5 0%, #0284c7 55%, #10b981 100%);">
+                <div style="display: flex; align-items: center; gap: 12px;">
+                    <span style="font-size: 2rem;">🔗</span>
+                    <div>
+                        <div style="font-weight: 900; font-size: 1.18rem;">TỪ NỐI (CONNECTORS) — CHÌA KHÓA ĂN ĐIỂM COHERENCE &amp; COHESION</div>
+                        <div style="font-size: 0.92rem; opacity: 0.95;">Kết nối các câu, đoạn văn và ý tưởng logic giúp bài thi Writing Task 1 &amp; Task 2 trôi chảy, mạch lạc</div>
+                    </div>
                 </div>
             </div>
 
-            <div style="background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 10px; padding: 16px;">
-                <b style="color: #1e40af;">📌 Phân loại Tổng quát:</b>
-                <div style="color: #1e3a8a; margin-top: 4px;">
-                    Từ nối được chia thành 2 nhóm lớn phổ biến nhất:
-                    <ol style="margin: 6px 0 0 0; padding-left: 20px;">
-                        <li><b>LIÊN TỪ (Conjunctions):</b> Dùng để nối từ, cụm từ hoặc mệnh đề trong cùng một câu.</li>
-                        <li><b>TỪ/CỤM TỪ LIÊN KẾT (Linking Adverbs / Transitional Words):</b> Dùng để nối 2 câu độc lập hoặc các đoạn văn với nhau.</li>
-                    </ol>
+            <!-- So sánh Không có vs Có từ nối -->
+            <div class="adj-grid-2">
+                <div style="background: linear-gradient(180deg, #ffffff 0%, #fff1f2 100%); border: 2px solid #fda4af; border-radius: 16px; padding: 16px;">
+                    <div style="font-weight: 900; color: #dc2626; margin-bottom: 8px; font-size: 1.02rem;">❌ Không có từ nối (Rời rạc)</div>
+                    <div style="background: white; border: 1px solid #fecdd3; border-radius: 10px; padding: 10px 12px; font-style: italic; color: #475569; font-size: 0.98rem;">
+                        "I like playing badminton. It helps me keep fit. It is fun."
+                    </div>
+                    <div style="font-size: 0.88rem; color: #991b1b; margin-top: 8px;">👉 Câu ngắn, nghe chắp vá như liệt kê đơn thuần.</div>
+                </div>
+
+                <div style="background: linear-gradient(180deg, #ffffff 0%, #f0fdf4 100%); border: 2px solid #86efac; border-radius: 16px; padding: 16px;">
+                    <div style="font-weight: 900; color: #15803d; margin-bottom: 8px; font-size: 1.02rem;">✅ Có từ nối (Mạch lạc, ăn điểm)</div>
+                    <div style="background: white; border: 1px solid #bbf7d0; border-radius: 10px; padding: 10px 12px; font-style: italic; color: #0f172a; font-size: 0.98rem;">
+                        "I like playing badminton <b style="background: #dbeafe; color: #1d4ed8; padding: 1px 6px; border-radius: 5px; font-style: normal;">because</b> it helps me keep fit. <b style="background: #dcfce7; color: #15803d; padding: 1px 6px; border-radius: 5px; font-style: normal;">Moreover,</b> it is fun."
+                    </div>
+                    <div style="font-size: 0.88rem; color: #166534; margin-top: 8px;">👉 Liên kết tự nhiên, tăng trực tiếp điểm <b>Coherence &amp; Cohesion</b>.</div>
+                </div>
+            </div>
+
+            <!-- 2 Nhóm lớn -->
+            <div style="background: #eff6ff; border: 2px solid #93c5fd; border-radius: 16px; padding: 16px;">
+                <div style="font-weight: 900; color: #1e40af; margin-bottom: 10px; font-size: 1.02rem;">📌 Phân loại Tổng quát — 2 Nhóm lớn cốt lõi:</div>
+                <div class="adj-grid-2">
+                    <div style="background: white; border: 1.5px solid #bfdbfe; border-radius: 12px; padding: 12px 14px;">
+                        <div style="font-weight: 900; color: #2563eb; margin-bottom: 4px;">1️⃣ LIÊN TỪ (Conjunctions)</div>
+                        <div style="font-size: 0.94rem; color: #334155;">Nối từ, cụm từ hoặc mệnh đề <b>trong cùng 1 câu</b>.</div>
+                    </div>
+                    <div style="background: white; border: 1.5px solid #bfdbfe; border-radius: 12px; padding: 12px 14px;">
+                        <div style="font-weight: 900; color: #7c3aed; margin-bottom: 4px;">2️⃣ TỪ LIÊN KẾT (Transitional Words)</div>
+                        <div style="font-size: 0.94rem; color: #334155;">Nối <b>2 câu độc lập</b> hoặc các đoạn văn với nhau.</div>
+                    </div>
                 </div>
             </div>
         </div>`
     },
     {
-        title: "🔗 2. Nhóm 1: LIÊN TỪ (Conjunctions) trong câu",
+        title: "🔗 2. NHÓM 1: 3 LOẠI LIÊN TỪ (CONJUNCTIONS) TRONG CÂU",
         content: `
-        <div style="font-size: 1.1rem; line-height: 1.7; color: var(--text-main);">
-            <p>Liên từ dùng để kết nối các từ, cụm từ hoặc mệnh đề lại với nhau <b>trong cùng một câu</b>. Có 3 loại liên từ chính:</p>
+        <div class="adj-wrap">
 
-            <!-- 1. LIÊN TỪ KẾT HỢP -->
-            <div style="background: white; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px; margin-bottom: 20px; border-left: 6px solid #3b82f6; box-shadow: 0 2px 4px rgba(0,0,0,0.03);">
-                <div style="font-weight: 800; color: #1d4ed8; font-size: 1.2rem; margin-bottom: 8px; display: flex; align-items: center; justify-content: space-between;">
-                    <span>2.1. Liên từ kết hợp (Coordinating Conjunctions)</span>
-                    <span style="background: #dbeafe; color: #1e40af; font-size: 0.9rem; padding: 3px 12px; border-radius: 20px;">7 từ FANBOYS</span>
+            <!-- 2.1 FANBOYS -->
+            <div class="mv-rule-card" style="border-color: #93c5fd; background: linear-gradient(180deg, #ffffff 0%, #eff6ff 100%);">
+                <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; margin-bottom: 12px;">
+                    <div style="font-weight: 900; color: #1d4ed8; font-size: 1.18rem;">2.1. Liên từ kết hợp (Coordinating Conjunctions)</div>
+                    <span style="background: #2563eb; color: white; padding: 4px 14px; border-radius: 999px; font-weight: 800; font-size: 0.88rem;">7 từ FANBOYS</span>
                 </div>
-                <p style="color: #334155; margin-bottom: 12px;">Dùng để nối 2 hoặc nhiều thành phần ngang hàng về mặt ngữ pháp (từ + từ, cụm + cụm, mệnh đề + mệnh đề).</p>
-                
-                <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 14px; margin-bottom: 12px; display: flex; flex-wrap: wrap; gap: 10px; justify-content: space-around;">
-                    <div style="text-align: center;"><b style="color: #2563eb; font-size: 1.15rem;">F</b> - For <span style="font-size: 0.9rem; color: #64748b;">(vì)</span></div>
-                    <div style="text-align: center;"><b style="color: #2563eb; font-size: 1.15rem;">A</b> - And <span style="font-size: 0.9rem; color: #64748b;">(và)</span></div>
-                    <div style="text-align: center;"><b style="color: #2563eb; font-size: 1.15rem;">N</b> - Nor <span style="font-size: 0.9rem; color: #64748b;">(cũng không)</span></div>
-                    <div style="text-align: center;"><b style="color: #2563eb; font-size: 1.15rem;">B</b> - But <span style="font-size: 0.9rem; color: #64748b;">(nhưng)</span></div>
-                    <div style="text-align: center;"><b style="color: #2563eb; font-size: 1.15rem;">O</b> - Or <span style="font-size: 0.9rem; color: #64748b;">(hoặc)</span></div>
-                    <div style="text-align: center;"><b style="color: #2563eb; font-size: 1.15rem;">Y</b> - Yet <span style="font-size: 0.9rem; color: #64748b;">(nhưng/tuy nhiên)</span></div>
-                    <div style="text-align: center;"><b style="color: #2563eb; font-size: 1.15rem;">S</b> - So <span style="font-size: 0.9rem; color: #64748b;">(vì vậy)</span></div>
+                <p style="margin: 0 0 12px 0; color: #334155; font-size: 0.98rem;">Nối 2 thành phần ngang hàng ngữ pháp (từ + từ, cụm + cụm, mệnh đề + mệnh đề):</p>
+
+                <!-- 7 Ô FANBOYS -->
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(105px, 1fr)); gap: 8px; margin-bottom: 14px;">
+                    <div style="background: white; border: 1.5px solid #bfdbfe; border-radius: 12px; padding: 8px; text-align: center;"><div style="font-weight: 900; font-size: 1.25rem; color: #2563eb;">F</div><div style="font-weight: 800; color: #0f172a;">For</div><div style="font-size: 0.8rem; color: #64748b;">(vì)</div></div>
+                    <div style="background: white; border: 1.5px solid #bfdbfe; border-radius: 12px; padding: 8px; text-align: center;"><div style="font-weight: 900; font-size: 1.25rem; color: #2563eb;">A</div><div style="font-weight: 800; color: #0f172a;">And</div><div style="font-size: 0.8rem; color: #64748b;">(và)</div></div>
+                    <div style="background: white; border: 1.5px solid #bfdbfe; border-radius: 12px; padding: 8px; text-align: center;"><div style="font-weight: 900; font-size: 1.25rem; color: #2563eb;">N</div><div style="font-weight: 800; color: #0f172a;">Nor</div><div style="font-size: 0.8rem; color: #64748b;">(cũng không)</div></div>
+                    <div style="background: white; border: 1.5px solid #bfdbfe; border-radius: 12px; padding: 8px; text-align: center;"><div style="font-weight: 900; font-size: 1.25rem; color: #2563eb;">B</div><div style="font-weight: 800; color: #0f172a;">But</div><div style="font-size: 0.8rem; color: #64748b;">(nhưng)</div></div>
+                    <div style="background: white; border: 1.5px solid #bfdbfe; border-radius: 12px; padding: 8px; text-align: center;"><div style="font-weight: 900; font-size: 1.25rem; color: #2563eb;">O</div><div style="font-weight: 800; color: #0f172a;">Or</div><div style="font-size: 0.8rem; color: #64748b;">(hoặc)</div></div>
+                    <div style="background: white; border: 1.5px solid #bfdbfe; border-radius: 12px; padding: 8px; text-align: center;"><div style="font-weight: 900; font-size: 1.25rem; color: #2563eb;">Y</div><div style="font-weight: 800; color: #0f172a;">Yet</div><div style="font-size: 0.8rem; color: #64748b;">(tuy nhiên)</div></div>
+                    <div style="background: white; border: 1.5px solid #bfdbfe; border-radius: 12px; padding: 8px; text-align: center;"><div style="font-weight: 900; font-size: 1.25rem; color: #2563eb;">S</div><div style="font-weight: 800; color: #0f172a;">So</div><div style="font-size: 0.8rem; color: #64748b;">(vì vậy)</div></div>
                 </div>
 
-                <div style="background: #fffbeb; border: 1px solid #fef08a; padding: 14px 16px; border-radius: 8px; font-size: 1rem; color: #854d0e;">
-                    <b>⚡ Quy tắc dấu phẩy với FANBOYS:</b>
-                    <ul style="margin: 8px 0 0 0; padding-left: 20px; display: grid; gap: 10px;">
-                        <li><b>1. Khi nối 2 mệnh đề độc lập (S₁ + V₁ <b style="color: #dc2626;">,</b> FANBOYS + S₂ + V₂):</b><br>
-                        ➔ <b>BẮT BUỘC có dấu phẩy</b> trước bất kỳ từ nào trong FANBOYS (kể cả <i>and</i> hay <i>or</i>).<br>
-                        <span style="color: #475569; font-style: italic;">• VD 1: I stayed at home<b style="color: #dc2626;">,</b> <b>and</b> my brother went out.</span><br>
-                        <span style="color: #475569; font-style: italic;">• VD 2: You must study hard<b style="color: #dc2626;">,</b> <b>or</b> you will fail the exam.</span><br>
-                        <span style="color: #475569; font-style: italic;">• VD 3: I was hungry<b style="color: #dc2626;">,</b> <b>so</b> I made a sandwich.</span></li>
-                        
-                        <li><b>2. Khi liệt kê các từ hoặc cụm từ (Danh từ, Tính từ, Động từ...):</b>
-                            <div style="margin-top: 6px; display: grid; gap: 6px; padding-left: 8px;">
-                                <div>• <b>Trường hợp 1 (Chỉ có 2 từ / 2 cụm từ):</b> ➔ <b>KHÔNG dùng dấu phẩy</b> trước <i>and / or</i>.<br>
-                                <span style="color: #475569; font-style: italic;">VD: You can choose tea <b>or</b> coffee. / She is kind <b>and</b> friendly.</span></div>
-                                <div>• <b>Trường hợp 2 (Liệt kê từ 3 từ / cụm từ trở lên):</b> ➔ <b>DÙNG DẤU PHẨY</b> ngăn cách từng mục, và đặt dấu phẩy trước <i>and / or</i> (dấu phẩy Oxford).<br>
-                                <span style="color: #475569; font-style: italic;">VD: You can choose tea<b style="color: #dc2626;">,</b> coffee<b style="color: #dc2626;">,</b> <b>or</b> juice. / She likes apples<b style="color: #dc2626;">,</b> bananas<b style="color: #dc2626;">,</b> <b>and</b> oranges.</span></div>
-                            </div>
-                        </li>
-                    </ul>
+                <!-- Quy tắc dấu phẩy FANBOYS -->
+                <div style="background: #fffbeb; border: 1.5px solid #fde68a; border-radius: 14px; padding: 14px 16px; display: grid; gap: 10px; font-size: 0.96rem; color: #78350f;">
+                    <div style="font-weight: 900; color: #b45309;">⚡ Quy tắc dấu phẩy BẮT BUỘC nhớ với FANBOYS:</div>
+                    <div style="background: white; border-radius: 10px; padding: 10px 12px; border: 1px solid #fef08a;">
+                        <b>1. Nối 2 mệnh đề độc lập:</b> <code>S₁ + V₁ <b style="color: #dc2626;">,</b> FANBOYS + S₂ + V₂</code> ➔ <b>BẮT BUỘC có dấu phẩy</b>!<br>
+                        <span style="color: #475569; font-style: italic;">• I stayed at home<b style="color: #dc2626;">,</b> <b>and</b> my brother went out.</span><br>
+                        <span style="color: #475569; font-style: italic;">• You must study hard<b style="color: #dc2626;">,</b> <b>or</b> you will fail the exam.</span><br>
+                        <span style="color: #475569; font-style: italic;">• I was hungry<b style="color: #dc2626;">,</b> <b>so</b> I made a sandwich.</span>
+                    </div>
+                    <div style="background: white; border-radius: 10px; padding: 10px 12px; border: 1px solid #fef08a;">
+                        <b>2. Liệt kê từ / cụm từ:</b><br>
+                        • <b>2 mục:</b> <b>KHÔNG</b> dùng dấu phẩy ➔ <i>tea <b>or</b> coffee / kind <b>and</b> friendly.</i><br>
+                        • <b>Từ 3 mục trở lên:</b> <b>DÙNG dấu phẩy</b> (kể cả dấu phẩy Oxford) ➔ <i>tea<b style="color: #dc2626;">,</b> coffee<b style="color: #dc2626;">,</b> <b>or</b> juice.</i>
+                    </div>
                 </div>
             </div>
 
-            <!-- 2. LIÊN TỪ PHỤ THUỘC -->
-            <div style="background: white; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px; margin-bottom: 20px; border-left: 6px solid #10b981; box-shadow: 0 2px 4px rgba(0,0,0,0.03);">
-                <div style="font-weight: 800; color: #047857; font-size: 1.2rem; margin-bottom: 8px;">2.2. Liên từ phụ thuộc (Subordinating Conjunctions)</div>
-                <p style="color: #334155; margin-bottom: 12px;">Dùng để mở đầu mệnh đề phụ, gắn kết mệnh đề phụ với mệnh đề chính để tạo thành <b>câu phức (Complex Sentence)</b>.</p>
+            <!-- 2.2 LIÊN TỪ PHỤ THUỘC -->
+            <div class="mv-rule-card" style="border-color: #86efac; background: linear-gradient(180deg, #ffffff 0%, #f0fdf4 100%);">
+                <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; margin-bottom: 12px;">
+                    <div style="font-weight: 900; color: #047857; font-size: 1.18rem;">2.2. Liên từ phụ thuộc (Subordinating Conjunctions)</div>
+                    <span style="background: #10b981; color: white; padding: 4px 14px; border-radius: 999px; font-weight: 800; font-size: 0.88rem;">Tạo Câu Phức</span>
+                </div>
 
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin-bottom: 14px;">
-                    <div style="background: #f0fdf4; border: 1px solid #bbf7d0; padding: 10px; border-radius: 8px;">
-                        <b style="color: #166534;">🌱 Nguyên nhân:</b><br>
-                        <span style="font-family: monospace; color: #047857;">because, since, as</span>
+                <div class="adj-grid-2" style="margin-bottom: 14px;">
+                    <div style="background: white; border: 1.5px solid #bbf7d0; border-radius: 12px; padding: 10px 14px;">
+                        <div style="font-weight: 800; color: #166534; margin-bottom: 6px;">🌱 Nguyên nhân:</div>
+                        <div class="cu-pill-list">
+                            <span class="cu-q-pill" style="background: #dcfce7; color: #15803d;">because</span>
+                            <span class="cu-q-pill" style="background: #dcfce7; color: #15803d;">since</span>
+                            <span class="cu-q-pill" style="background: #dcfce7; color: #15803d;">as</span>
+                        </div>
                     </div>
-                    <div style="background: #f0fdf4; border: 1px solid #bbf7d0; padding: 10px; border-radius: 8px;">
-                        <b style="color: #166534;">🌓 Tương phản / Nhượng bộ:</b><br>
-                        <span style="font-family: monospace; color: #047857;">although, even though, though, while</span>
+                    <div style="background: white; border: 1.5px solid #bbf7d0; border-radius: 12px; padding: 10px 14px;">
+                        <div style="font-weight: 800; color: #166534; margin-bottom: 6px;">🌓 Tương phản / Nhượng bộ:</div>
+                        <div class="cu-pill-list">
+                            <span class="cu-q-pill" style="background: #dcfce7; color: #15803d;">although</span>
+                            <span class="cu-q-pill" style="background: #dcfce7; color: #15803d;">even though</span>
+                            <span class="cu-q-pill" style="background: #dcfce7; color: #15803d;">though</span>
+                            <span class="cu-q-pill" style="background: #dcfce7; color: #15803d;">while</span>
+                        </div>
                     </div>
-                    <div style="background: #f0fdf4; border: 1px solid #bbf7d0; padding: 10px; border-radius: 8px;">
-                        <b style="color: #166534;">⏰ Thời gian:</b><br>
-                        <span style="font-family: monospace; color: #047857;">when, while, as soon as, before, after, until</span>
+                    <div style="background: white; border: 1.5px solid #bbf7d0; border-radius: 12px; padding: 10px 14px;">
+                        <div style="font-weight: 800; color: #166534; margin-bottom: 6px;">⏰ Thời gian:</div>
+                        <div class="cu-pill-list">
+                            <span class="cu-q-pill" style="background: #dcfce7; color: #15803d;">when</span>
+                            <span class="cu-q-pill" style="background: #dcfce7; color: #15803d;">while</span>
+                            <span class="cu-q-pill" style="background: #dcfce7; color: #15803d;">as soon as</span>
+                            <span class="cu-q-pill" style="background: #dcfce7; color: #15803d;">before / after / until</span>
+                        </div>
                     </div>
-                    <div style="background: #f0fdf4; border: 1px solid #bbf7d0; padding: 10px; border-radius: 8px;">
-                        <b style="color: #166534;">🎯 Mục đích / Điều kiện:</b><br>
-                        <span style="font-family: monospace; color: #047857;">so that, in order that, if, unless</span>
+                    <div style="background: white; border: 1.5px solid #bbf7d0; border-radius: 12px; padding: 10px 14px;">
+                        <div style="font-weight: 800; color: #166534; margin-bottom: 6px;">🎯 Mục đích / Điều kiện:</div>
+                        <div class="cu-pill-list">
+                            <span class="cu-q-pill" style="background: #dcfce7; color: #15803d;">so that</span>
+                            <span class="cu-q-pill" style="background: #dcfce7; color: #15803d;">in order that</span>
+                            <span class="cu-q-pill" style="background: #dcfce7; color: #15803d;">if</span>
+                            <span class="cu-q-pill" style="background: #dcfce7; color: #15803d;">unless</span>
+                        </div>
                     </div>
                 </div>
 
-                <div style="background: #f0fdf4; border: 1px solid #86efac; padding: 12px 16px; border-radius: 8px; font-size: 1rem; color: #14532d;">
-                    <b>⚡ Quy tắc vị trí và Dấu phẩy:</b>
-                    <ul style="margin: 6px 0 0 0; padding-left: 20px; display: grid; gap: 4px;">
-                        <li><b>Mệnh đề phụ đứng ĐẦU câu</b> ➔ <b>PHẢI CÓ DẤU PHẨY</b> ngăn cách với mệnh đề chính.<br><i>(VD: <b style="color: #047857;">Although</b> she was tired<b style="color: #dc2626;">,</b> she kept smiling.)</i></li>
-                        <li><b>Mệnh đề phụ đứng SAU mệnh đề chính</b> ➔ <b>KHÔNG CẦN DẤU PHẨY</b>.<br><i>(VD: She kept smiling <b style="color: #047857;">although</b> she was tired.)</i></li>
-                    </ul>
+                <!-- Quy tắc vị trí & Dấu phẩy -->
+                <div style="background: #ecfdf5; border: 1.5px solid #6ee7b7; border-radius: 12px; padding: 12px 14px; display: grid; gap: 8px; font-size: 0.96rem; color: #14532d;">
+                    <div>✅ <b>Mệnh đề phụ ĐẦU câu ➔ CÓ DẤU PHẨY:</b> <i><b style="color: #047857;">Although</b> she was tired<b style="color: #dc2626;">,</b> she kept smiling.</i></div>
+                    <div>✅ <b>Mệnh đề phụ SAU mệnh đề chính ➔ KHÔNG PHẨY:</b> <i>She kept smiling <b style="color: #047857;">although</b> she was tired.</i></div>
                 </div>
             </div>
 
-            <!-- 3. LIÊN TỪ TƯƠNG QUAN -->
-            <div style="background: white; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px; border-left: 6px solid #8b5cf6; box-shadow: 0 2px 4px rgba(0,0,0,0.03);">
-                <div style="font-weight: 800; color: #6d28d9; font-size: 1.2rem; margin-bottom: 8px;">2.3. Liên từ tương quan (Correlative Conjunctions)</div>
-                <p style="color: #334155; margin-bottom: 12px;">Luôn đi thành cặp để nhấn mạnh, đối chiếu, lựa chọn giữa hai thành phần tương đương nhau trong câu.</p>
-                <div style="display: grid; gap: 8px; font-family: monospace; color: #581c87; background: #faf5ff; padding: 12px; border-radius: 8px; border: 1px solid #f3e8ff;">
-                    <div>• <b>both ... and ...</b> <i>(cả ... và ...)</i> ➔ VD: She is <b>both</b> intelligent <b>and</b> hard-working.</div>
-                    <div>• <b>not only ... but also ...</b> <i>(không những ... mà còn ...)</i> ➔ VD: It is <b>not only</b> cheap <b>but also</b> effective.</div>
-                    <div>• <b>either ... or ...</b> <i>(hoặc ... hoặc ...)</i> ➔ VD: You can <b>either</b> call <b>or</b> email me.</div>
-                    <div>• <b>neither ... nor ...</b> <i>(không ... cũng không ...)</i> ➔ VD: He likes <b>neither</b> tea <b>nor</b> coffee.</div>
+            <!-- 2.3 LIÊN TỪ TƯƠNG QUAN -->
+            <div class="mv-rule-card" style="border-color: #c4b5fd; background: linear-gradient(180deg, #ffffff 0%, #faf5ff 100%);">
+                <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; margin-bottom: 12px;">
+                    <div style="font-weight: 900; color: #6d28d9; font-size: 1.18rem;">2.3. Liên từ tương quan (Correlative Conjunctions)</div>
+                    <span style="background: #7c3aed; color: white; padding: 4px 14px; border-radius: 999px; font-weight: 800; font-size: 0.88rem;">4 cặp đôi cố định</span>
+                </div>
+                <div class="adj-grid-2">
+                    <div style="background: white; border: 1.5px solid #ddd6fe; border-radius: 12px; padding: 11px 14px;">
+                        <div style="font-weight: 900; color: #6d28d9;">both ... and ... <span style="font-weight: 600; color: #64748b; font-size: 0.88rem;">(cả ... và ...)</span></div>
+                        <div style="font-size: 0.92rem; color: #334155; margin-top: 4px;">She is <b>both</b> intelligent <b>and</b> hard-working.</div>
+                    </div>
+                    <div style="background: white; border: 1.5px solid #ddd6fe; border-radius: 12px; padding: 11px 14px;">
+                        <div style="font-weight: 900; color: #6d28d9;">not only ... but also ... <span style="font-weight: 600; color: #64748b; font-size: 0.88rem;">(không những ... mà còn)</span></div>
+                        <div style="font-size: 0.92rem; color: #334155; margin-top: 4px;">It is <b>not only</b> cheap <b>but also</b> effective.</div>
+                    </div>
+                    <div style="background: white; border: 1.5px solid #ddd6fe; border-radius: 12px; padding: 11px 14px;">
+                        <div style="font-weight: 900; color: #6d28d9;">either ... or ... <span style="font-weight: 600; color: #64748b; font-size: 0.88rem;">(hoặc ... hoặc ...)</span></div>
+                        <div style="font-size: 0.92rem; color: #334155; margin-top: 4px;">You can <b>either</b> call <b>or</b> email me.</div>
+                    </div>
+                    <div style="background: white; border: 1.5px solid #ddd6fe; border-radius: 12px; padding: 11px 14px;">
+                        <div style="font-weight: 900; color: #6d28d9;">neither ... nor ... <span style="font-weight: 600; color: #64748b; font-size: 0.88rem;">(không ... cũng không)</span></div>
+                        <div style="font-size: 0.92rem; color: #334155; margin-top: 4px;">He likes <b>neither</b> tea <b>nor</b> coffee.</div>
+                    </div>
                 </div>
             </div>
         </div>`
     },
     {
-        title: "🚀 3. Nhóm 2: TỪ/CỤM TỪ LIÊN KẾT (Transitional Words) trong VSTEP Writing",
+        title: "🚀 3. NHÓM 2: 6 NHÓM TỪ LIÊN KẾT (TRANSITIONAL WORDS)",
         content: `
-        <div style="font-size: 1.1rem; line-height: 1.7; color: var(--text-main);">
-            <p>Từ/Cụm từ liên kết dùng để <b>kết nối 2 câu độc lập</b> hoặc kết nối các đoạn văn trong bài viết, giúp bài văn mạch lạc và logic.</p>
-            
-            <div style="background: #fffbeb; border-left: 5px solid #f59e0b; padding: 14px 16px; border-radius: 8px; margin-bottom: 20px; color: #78350f;">
-                <b>🔍 ĐẶC ĐIỂM NGỮ PHÁP QUAN TRỌNG:</b><br>
-                Từ/Cụm từ liên kết thường đứng ở <b>ĐẦU CÂU và SAU NÓ BẮT BUỘC CÓ DẤU PHẨY (,)</b> trước khi vào mệnh đề chính.<br>
-                <span style="font-family: monospace; color: #b45309; font-weight: bold;">[Câu 1]. [Từ liên kết], [Câu 2].</span>
+        <div class="adj-wrap">
+            <!-- Formula Bar -->
+            <div class="adj-formula-bar" style="background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%); border-color: #f59e0b; margin-bottom: 0;">
+                <span class="adj-f-box" style="background: white; color: #1e293b; border: 1.5px solid #cbd5e1;">Câu 1.</span>
+                <span class="adj-f-box" style="background: #f59e0b; color: white;">🚀 Từ liên kết</span>
+                <span class="adj-f-box" style="background: #fee2e2; color: #dc2626; border: 2px solid #ef4444; font-size: 1.2rem; padding: 4px 12px;">,</span>
+                <span class="adj-f-box" style="background: white; color: #1e293b; border: 1.5px solid #cbd5e1;">Câu 2.</span>
+            </div>
+            <div style="text-align: center; font-size: 0.94rem; color: #92400e; font-weight: 700;">
+                ⚠️ Đứng ĐẦU CÂU và <b>SAU NÓ BẮT BUỘC CÓ DẤU PHẨY (,)</b> trước khi vào mệnh đề chính!
             </div>
 
-            <!-- BẢNG TỪ LIÊN KẾT PHÂN THEO MỤC ĐÍCH -->
-            <div style="display: grid; gap: 16px;">
-                
-                <!-- 1. THÊM Ý -->
-                <div style="background: white; border: 1px solid #e2e8f0; border-radius: 12px; padding: 16px; border-left: 5px solid #3b82f6;">
-                    <div style="font-weight: 800; color: #1d4ed8; font-size: 1.1rem; margin-bottom: 6px;">1. THÊM Ý / BỔ SUNG THÔNG TIN</div>
-                    <div style="color: #2563eb; font-weight: bold; margin-bottom: 6px;">Moreover, In addition, Additionally, Furthermore, Also, Besides, ...</div>
-                    <div style="color: #475569; font-style: italic; font-size: 0.98rem;">📍 VD: The app is easy to use. <b>Furthermore,</b> it is completely free.</div>
+            <!-- 6 Nhóm Màu -->
+            <div class="adj-grid-2">
+                <!-- 1. Thêm ý -->
+                <div class="nbm-cat-card" style="border-color: #93c5fd;">
+                    <div class="nbm-cat-header" style="background: #dbeafe;">
+                        <div class="nbm-cat-title" style="color: #1e40af;">➕ 1. THÊM Ý / BỔ SUNG</div>
+                    </div>
+                    <div style="padding: 12px 14px; display: grid; gap: 10px;">
+                        <div class="cu-pill-list">
+                            <span class="cu-q-pill" style="background: #eff6ff; color: #1d4ed8; border: 1px solid #bfdbfe;">Moreover,</span>
+                            <span class="cu-q-pill" style="background: #eff6ff; color: #1d4ed8; border: 1px solid #bfdbfe;">In addition,</span>
+                            <span class="cu-q-pill" style="background: #eff6ff; color: #1d4ed8; border: 1px solid #bfdbfe;">Additionally,</span>
+                            <span class="cu-q-pill" style="background: #eff6ff; color: #1d4ed8; border: 1px solid #bfdbfe;">Furthermore,</span>
+                            <span class="cu-q-pill" style="background: #eff6ff; color: #1d4ed8; border: 1px solid #bfdbfe;">Besides,</span>
+                        </div>
+                        <div style="font-size: 0.92rem; color: #475569; font-style: italic; background: #f8fafc; padding: 8px 10px; border-radius: 8px;">📍 The app is easy to use. <b style="color: #1d4ed8;">Furthermore,</b> it is completely free.</div>
+                    </div>
                 </div>
 
-                <!-- 2. KẾT QUẢ -->
-                <div style="background: white; border: 1px solid #e2e8f0; border-radius: 12px; padding: 16px; border-left: 5px solid #10b981;">
-                    <div style="font-weight: 800; color: #047857; font-size: 1.1rem; margin-bottom: 6px;">2. KẾT QUẢ / HỆ QUẢ</div>
-                    <div style="color: #059669; font-weight: bold; margin-bottom: 6px;">Therefore, As a result, Consequently, Thus, Hence, ...</div>
-                    <div style="color: #475569; font-style: italic; font-size: 0.98rem;">📍 VD: He studied hard. <b>As a result,</b> he passed the test with high scores.</div>
+                <!-- 2. Kết quả -->
+                <div class="nbm-cat-card" style="border-color: #86efac;">
+                    <div class="nbm-cat-header" style="background: #dcfce7;">
+                        <div class="nbm-cat-title" style="color: #166534;">🎯 2. KẾT QUẢ / HỆ QUẢ</div>
+                    </div>
+                    <div style="padding: 12px 14px; display: grid; gap: 10px;">
+                        <div class="cu-pill-list">
+                            <span class="cu-q-pill" style="background: #f0fdf4; color: #15803d; border: 1px solid #bbf7d0;">Therefore,</span>
+                            <span class="cu-q-pill" style="background: #f0fdf4; color: #15803d; border: 1px solid #bbf7d0;">As a result,</span>
+                            <span class="cu-q-pill" style="background: #f0fdf4; color: #15803d; border: 1px solid #bbf7d0;">Consequently,</span>
+                            <span class="cu-q-pill" style="background: #f0fdf4; color: #15803d; border: 1px solid #bbf7d0;">Thus,</span>
+                            <span class="cu-q-pill" style="background: #f0fdf4; color: #15803d; border: 1px solid #bbf7d0;">Hence,</span>
+                        </div>
+                        <div style="font-size: 0.92rem; color: #475569; font-style: italic; background: #f8fafc; padding: 8px 10px; border-radius: 8px;">📍 He studied hard. <b style="color: #15803d;">As a result,</b> he passed the test with high scores.</div>
+                    </div>
                 </div>
 
-                <!-- 3. TƯƠNG PHẢN -->
-                <div style="background: white; border: 1px solid #e2e8f0; border-radius: 12px; padding: 16px; border-left: 5px solid #ef4444;">
-                    <div style="font-weight: 800; color: #b91c1c; font-size: 1.1rem; margin-bottom: 6px;">3. TƯƠNG PHẢN / ĐỐI LẬP</div>
-                    <div style="color: #dc2626; font-weight: bold; margin-bottom: 6px;">However, Nevertheless, On the other hand, In contrast, ...</div>
-                    <div style="color: #475569; font-style: italic; font-size: 0.98rem;">📍 VD: Online learning is convenient. <b>However,</b> it requires strong self-discipline.</div>
+                <!-- 3. Tương phản -->
+                <div class="nbm-cat-card" style="border-color: #fca5a5;">
+                    <div class="nbm-cat-header" style="background: #fee2e2;">
+                        <div class="nbm-cat-title" style="color: #991b1b;">⚡ 3. TƯƠNG PHẢN / ĐỐI LẬP</div>
+                    </div>
+                    <div style="padding: 12px 14px; display: grid; gap: 10px;">
+                        <div class="cu-pill-list">
+                            <span class="cu-q-pill" style="background: #fef2f2; color: #dc2626; border: 1px solid #fecaca;">However,</span>
+                            <span class="cu-q-pill" style="background: #fef2f2; color: #dc2626; border: 1px solid #fecaca;">Nevertheless,</span>
+                            <span class="cu-q-pill" style="background: #fef2f2; color: #dc2626; border: 1px solid #fecaca;">On the other hand,</span>
+                            <span class="cu-q-pill" style="background: #fef2f2; color: #dc2626; border: 1px solid #fecaca;">In contrast,</span>
+                        </div>
+                        <div style="font-size: 0.92rem; color: #475569; font-style: italic; background: #f8fafc; padding: 8px 10px; border-radius: 8px;">📍 Online learning is convenient. <b style="color: #dc2626;">However,</b> it requires strong self-discipline.</div>
+                    </div>
                 </div>
 
-                <!-- 4. LIỆT KÊ / TRÌNH TỰ -->
-                <div style="background: white; border: 1px solid #e2e8f0; border-radius: 12px; padding: 16px; border-left: 5px solid #8b5cf6;">
-                    <div style="font-weight: 800; color: #6d28d9; font-size: 1.1rem; margin-bottom: 6px;">4. LIỆT KÊ / TRÌNH TỰ Ý TƯỞNG (Mở đoạn / Thân bài)</div>
-                    <div style="color: #7c3aed; font-weight: bold; margin-bottom: 6px;">Firstly, First of all, To begin with, Secondly, Next, Finally, ...</div>
-                    <div style="color: #475569; font-style: italic; font-size: 0.98rem;">📍 VD: <b>Firstly,</b> we need to understand the problem. <b>Secondly,</b> we should discuss possible solutions.</div>
+                <!-- 4. Liệt kê / Trình tự -->
+                <div class="nbm-cat-card" style="border-color: #c4b5fd;">
+                    <div class="nbm-cat-header" style="background: #ede9fe;">
+                        <div class="nbm-cat-title" style="color: #5b21b6;">🔢 4. LIỆT KÊ / TRÌNH TỰ Ý TƯỞNG</div>
+                    </div>
+                    <div style="padding: 12px 14px; display: grid; gap: 10px;">
+                        <div class="cu-pill-list">
+                            <span class="cu-q-pill" style="background: #f5f3ff; color: #6d28d9; border: 1px solid #ddd6fe;">Firstly,</span>
+                            <span class="cu-q-pill" style="background: #f5f3ff; color: #6d28d9; border: 1px solid #ddd6fe;">First of all,</span>
+                            <span class="cu-q-pill" style="background: #f5f3ff; color: #6d28d9; border: 1px solid #ddd6fe;">Secondly,</span>
+                            <span class="cu-q-pill" style="background: #f5f3ff; color: #6d28d9; border: 1px solid #ddd6fe;">Next,</span>
+                            <span class="cu-q-pill" style="background: #f5f3ff; color: #6d28d9; border: 1px solid #ddd6fe;">Finally,</span>
+                        </div>
+                        <div style="font-size: 0.92rem; color: #475569; font-style: italic; background: #f8fafc; padding: 8px 10px; border-radius: 8px;">📍 <b style="color: #6d28d9;">Firstly,</b> we need to understand the problem. <b style="color: #6d28d9;">Secondly,</b> we should discuss solutions.</div>
+                    </div>
                 </div>
 
-                <!-- 5. VÍ DỤ -->
-                <div style="background: white; border: 1px solid #e2e8f0; border-radius: 12px; padding: 16px; border-left: 5px solid #f59e0b;">
-                    <div style="font-weight: 800; color: #b45309; font-size: 1.1rem; margin-bottom: 6px;">5. ĐƯA RA VÍ DỤ MINH HỌA</div>
-                    <div style="color: #d97706; font-weight: bold; margin-bottom: 6px;">For example, For instance, To illustrate, ...</div>
-                    <div style="color: #475569; font-style: italic; font-size: 0.98rem;">📍 VD: We all should protect the environment. <b>For instance,</b> we can plant more trees and recycle waste.</div>
+                <!-- 5. Ví dụ -->
+                <div class="nbm-cat-card" style="border-color: #fcd34d;">
+                    <div class="nbm-cat-header" style="background: #fef3c7;">
+                        <div class="nbm-cat-title" style="color: #92400e;">💡 5. ĐƯA RA VÍ DỤ MINH HỌA</div>
+                    </div>
+                    <div style="padding: 12px 14px; display: grid; gap: 10px;">
+                        <div class="cu-pill-list">
+                            <span class="cu-q-pill" style="background: #fffbeb; color: #b45309; border: 1px solid #fde68a;">For example,</span>
+                            <span class="cu-q-pill" style="background: #fffbeb; color: #b45309; border: 1px solid #fde68a;">For instance,</span>
+                            <span class="cu-q-pill" style="background: #fffbeb; color: #b45309; border: 1px solid #fde68a;">To illustrate,</span>
+                        </div>
+                        <div style="font-size: 0.92rem; color: #475569; font-style: italic; background: #f8fafc; padding: 8px 10px; border-radius: 8px;">📍 We should protect the environment. <b style="color: #b45309;">For instance,</b> we can plant more trees.</div>
+                    </div>
                 </div>
 
-                <!-- 6. KẾT LUẬN -->
-                <div style="background: white; border: 1px solid #e2e8f0; border-radius: 12px; padding: 16px; border-left: 5px solid #06b6d4;">
-                    <div style="font-weight: 800; color: #0e7490; font-size: 1.1rem; margin-bottom: 6px;">6. TỔNG KẾT / KẾT BÀI</div>
-                    <div style="color: #0891b2; font-weight: bold; margin-bottom: 6px;">In conclusion, To sum up, In summary, Overall, ...</div>
-                    <div style="color: #475569; font-style: italic; font-size: 0.98rem;">📍 VD: <b>In conclusion,</b> regular practice is the key to improving English writing skills.</div>
+                <!-- 6. Kết luận -->
+                <div class="nbm-cat-card" style="border-color: #67e8f9;">
+                    <div class="nbm-cat-header" style="background: #cffafe;">
+                        <div class="nbm-cat-title" style="color: #155e75;">🏁 6. TỔNG KẾT / KẾT BÀI</div>
+                    </div>
+                    <div style="padding: 12px 14px; display: grid; gap: 10px;">
+                        <div class="cu-pill-list">
+                            <span class="cu-q-pill" style="background: #ecfeff; color: #0e7490; border: 1px solid #a5f3fc;">In conclusion,</span>
+                            <span class="cu-q-pill" style="background: #ecfeff; color: #0e7490; border: 1px solid #a5f3fc;">To sum up,</span>
+                            <span class="cu-q-pill" style="background: #ecfeff; color: #0e7490; border: 1px solid #a5f3fc;">In summary,</span>
+                            <span class="cu-q-pill" style="background: #ecfeff; color: #0e7490; border: 1px solid #a5f3fc;">Overall,</span>
+                        </div>
+                        <div style="font-size: 0.92rem; color: #475569; font-style: italic; background: #f8fafc; padding: 8px 10px; border-radius: 8px;">📍 <b style="color: #0e7490;">In conclusion,</b> regular practice is the key to improving English writing skills.</div>
+                    </div>
                 </div>
-
             </div>
         </div>`
     },
     {
-        title: "⚡ 4. Các Bẫy & Lỗi Sai Thường Gặp Cần Tránh trong VSTEP",
+        title: "🚨 4. 3 BẪY TỪ NỐI KINH ĐIỂN CẦN TRÁNH TRONG VSTEP",
         content: `
-        <div style="font-size: 1.1rem; line-height: 1.7; color: var(--text-main);">
-            <div style="background: white; border: 1px solid #e2e8f0; border-radius: 12px; overflow: hidden; margin-bottom: 20px;">
-                <div style="background: #f8fafc; padding: 12px 16px; border-bottom: 1px solid #e2e8f0; font-weight: 800; color: #334155;">
-                    ⚠️ BẢNG TỔNG HỢP CÁC LỖI DÙNG TỪ NỐI PHỔ BIẾN
+        <div class="adj-wrap">
+            <div style="display: grid; gap: 12px;">
+                <!-- Bẫy 1 -->
+                <div class="adj-grid-2" style="background: #f8fafc; border: 2px solid #e2e8f0; border-radius: 16px; padding: 12px; gap: 10px;">
+                    <div style="background: #fff1f2; border: 1.5px solid #fda4af; border-radius: 12px; padding: 12px 14px;">
+                        <div style="font-weight: 900; color: #dc2626; margin-bottom: 4px;">❌ Sai — Dùng thừa cặp "Although ..., but ..."</div>
+                        <div style="color: #7f1d1d; font-size: 0.96rem;"><i><del>Although</del> it was raining, <del>but</del> we went out.</i></div>
+                    </div>
+                    <div style="background: #f0fdf4; border: 1.5px solid #86efac; border-radius: 12px; padding: 12px 14px;">
+                        <div style="font-weight: 900; color: #15803d; margin-bottom: 4px;">✅ Đúng — Chỉ dùng 1 trong 2 từ</div>
+                        <div style="color: #14532d; font-size: 0.96rem;"><i><b>Although</b> it was raining, we went out.</i></div>
+                    </div>
                 </div>
-                <div style="overflow-x: auto;">
-                    <table style="width: 100%; border-collapse: collapse; font-size: 1rem; text-align: left;">
-                        <thead>
-                            <tr style="background: #f1f5f9; color: #475569;">
-                                <th style="padding: 12px; border-bottom: 1px solid #e2e8f0; width: 45%;">❌ Lỗi Sai Thường Gặp</th>
-                                <th style="padding: 12px; border-bottom: 1px solid #e2e8f0; width: 55%;">✅ Cách Dùng Đúng</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr style="border-bottom: 1px solid #f1f5f9;">
-                                <td style="padding: 12px; color: #dc2626;"><b>Although ..., but ...</b><br><i>(Although it was raining, but we went out.)</i></td>
-                                <td style="padding: 12px; color: #16a34a;"><b>Chỉ dùng 1 trong 2 từ:</b><br><i>Although it was raining, we went out.</i></td>
-                            </tr>
-                            <tr style="border-bottom: 1px solid #f1f5f9; background: #fafafa;">
-                                <td style="padding: 12px; color: #dc2626;"><b>Because ..., so ...</b><br><i>(Because I was sick, so I stayed home.)</i></td>
-                                <td style="padding: 12px; color: #16a34a;"><b>Chỉ dùng 1 trong 2 từ:</b><br><i>Because I was sick, I stayed home.</i></td>
-                            </tr>
-                            <tr style="border-bottom: 1px solid #f1f5f9;">
-                                <td style="padding: 12px; color: #dc2626;"><b>Dùng However nối 2 câu mà không có dấu chấm phẩy / dấu phẩy:</b><br><i>(He studied hard however he failed.)</i></td>
-                                <td style="padding: 12px; color: #16a34a;"><b>Tách câu hoặc dùng dấu ; và ,:</b><br><i>He studied hard. However, he failed.</i></td>
-                            </tr>
-                        </tbody>
-                    </table>
+
+                <!-- Bẫy 2 -->
+                <div class="adj-grid-2" style="background: #f8fafc; border: 2px solid #e2e8f0; border-radius: 16px; padding: 12px; gap: 10px;">
+                    <div style="background: #fff1f2; border: 1.5px solid #fda4af; border-radius: 12px; padding: 12px 14px;">
+                        <div style="font-weight: 900; color: #dc2626; margin-bottom: 4px;">❌ Sai — Dùng thừa cặp "Because ..., so ..."</div>
+                        <div style="color: #7f1d1d; font-size: 0.96rem;"><i><del>Because</del> I was sick, <del>so</del> I stayed home.</i></div>
+                    </div>
+                    <div style="background: #f0fdf4; border: 1.5px solid #86efac; border-radius: 12px; padding: 12px 14px;">
+                        <div style="font-weight: 900; color: #15803d; margin-bottom: 4px;">✅ Đúng — Chỉ dùng 1 trong 2 từ</div>
+                        <div style="color: #14532d; font-size: 0.96rem;"><i><b>Because</b> I was sick, I stayed home.</i></div>
+                    </div>
+                </div>
+
+                <!-- Bẫy 3 -->
+                <div class="adj-grid-2" style="background: #f8fafc; border: 2px solid #e2e8f0; border-radius: 16px; padding: 12px; gap: 10px;">
+                    <div style="background: #fff1f2; border: 1.5px solid #fda4af; border-radius: 12px; padding: 12px 14px;">
+                        <div style="font-weight: 900; color: #dc2626; margin-bottom: 4px;">❌ Sai — Dùng However thiếu dấu câu</div>
+                        <div style="color: #7f1d1d; font-size: 0.96rem;"><i>He studied hard <del>however</del> he failed.</i></div>
+                    </div>
+                    <div style="background: #f0fdf4; border: 1.5px solid #86efac; border-radius: 12px; padding: 12px 14px;">
+                        <div style="font-weight: 900; color: #15803d; margin-bottom: 4px;">✅ Đúng — Tách câu bằng "." hoặc ";" và thêm ","</div>
+                        <div style="color: #14532d; font-size: 0.96rem;"><i>He studied hard<b>. However,</b> he failed.</i></div>
+                    </div>
                 </div>
             </div>
         </div>`
