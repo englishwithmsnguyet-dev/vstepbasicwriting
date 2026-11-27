@@ -7743,403 +7743,536 @@ window.checkNounsDragDropExtra = function() {
 
 const adjectivesTheoryData = [
     {
-        title: "1. TÍNH TỪ LÀ GÌ?",
+        title: "🎨 1. TÍNH TỪ LÀ GÌ? (ADJECTIVES)",
         content: `
-            <div style="font-size: 1.15rem; color: #1e293b; line-height: 1.85; margin-bottom: 20px; background: #ffffff; padding: 22px 24px; border-radius: 14px; border-left: 6px solid var(--primary-color); border-right: 1.5px solid #e2e8f0; border-top: 1.5px solid #e2e8f0; border-bottom: 1.5px solid #e2e8f0; box-shadow: 0 4px 12px rgba(0,0,0,0.04);">
-                <p style="margin: 0;">
-                    👉 <span style="background: var(--primary-light); color: var(--primary-color); font-weight: 800; padding: 3px 10px; border-radius: 6px; font-size: 1.15rem;">Tính từ (Adjectives)</span> là những từ dùng để chỉ <span style="background: #fef08a; color: #854d0e; font-weight: 800; padding: 2px 8px; border-radius: 6px;">tính chất, đặc điểm</span> của người, sự vật hoặc hiện tượng.
-                </p>
-                <p style="margin: 12px 0 0 0; padding-top: 12px; border-top: 1px dashed #cbd5e1;">
-                    🎯 <b style="color: #0f172a;">Chức năng cốt lõi:</b> Tính từ đóng vai trò chính trong việc <span style="background: #e0e7ff; color: #3730a3; font-weight: 800; padding: 2px 8px; border-radius: 6px;">miêu tả</span> và <span style="background: #dcfce7; color: #166534; font-weight: 800; padding: 2px 8px; border-radius: 6px;">bổ sung ý nghĩa</span> rõ nét cho <b style="color: var(--primary-color);">Danh từ</b> hoặc <b style="color: var(--primary-color);">Đại từ</b>.
-                </p>
-            </div>
-            
-            <div style="background: linear-gradient(135deg, #eff6ff 0%, #f5f3ff 100%); border: 1.5px solid #dbeafe; border-radius: 14px; padding: 20px 24px; box-shadow: 0 4px 12px rgba(139, 92, 246, 0.06);">
-                <div style="display: flex; align-items: center; gap: 8px; font-weight: 800; color: var(--primary-color); font-size: 1.15rem; margin-bottom: 14px;">
-                    <span style="font-size: 1.3rem;">💡</span> VÍ DỤ MINH HỌA:
-                </div>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px;">
-                    <div style="background: white; padding: 12px 18px; border-radius: 10px; border: 1.5px solid #e2e8f0; box-shadow: 0 2px 5px rgba(0,0,0,0.03); display: flex; flex-direction: column; gap: 4px;">
-                        <div style="font-size: 1.1rem; color: #1e293b;">• a <b style="color: var(--primary-color); font-size: 1.15rem; text-decoration: underline;">beautiful</b> girl</div>
-                        <div style="font-size: 0.95rem; color: #64748b; font-style: italic;">(một cô gái đẹp)</div>
-                    </div>
-                    <div style="background: white; padding: 12px 18px; border-radius: 10px; border: 1.5px solid #e2e8f0; box-shadow: 0 2px 5px rgba(0,0,0,0.03); display: flex; flex-direction: column; gap: 4px;">
-                        <div style="font-size: 1.1rem; color: #1e293b;">• <b style="color: var(--primary-color); font-size: 1.15rem; text-decoration: underline;">long</b> trips</div>
-                        <div style="font-size: 0.95rem; color: #64748b; font-style: italic;">(những chuyến đi dài)</div>
-                    </div>
-                    <div style="background: white; padding: 12px 18px; border-radius: 10px; border: 1.5px solid #e2e8f0; box-shadow: 0 2px 5px rgba(0,0,0,0.03); display: flex; flex-direction: column; gap: 4px;">
-                        <div style="font-size: 1.1rem; color: #1e293b;">• <b style="color: var(--primary-color); font-size: 1.15rem; text-decoration: underline;">useful</b> information</div>
-                        <div style="font-size: 0.95rem; color: #64748b; font-style: italic;">(thông tin hữu ích)</div>
+        <div class="adj-wrap">
+            <!-- Hero Banner -->
+            <div class="adj-banner" style="background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 55%, #ec4899 100%);">
+                <div style="display: flex; align-items: center; gap: 12px;">
+                    <span style="font-size: 2rem;">🎨</span>
+                    <div>
+                        <div style="font-weight: 900; font-size: 1.2rem; letter-spacing: 0.3px;">TÍNH TỪ — "BẢNG MÀU" CHO CÂU TIẾNG ANH</div>
+                        <div style="font-size: 0.92rem; opacity: 0.95;">Giúp miêu tả người, vật, hiện tượng sinh động và ghi điểm cao trong VSTEP Writing</div>
                     </div>
                 </div>
             </div>
-        `
+
+            <!-- Khái niệm cốt lõi -->
+            <div style="background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%); border: 2px solid #fcd34d; border-radius: 16px; padding: 16px 20px; display: grid; gap: 10px; font-size: 1.05rem; line-height: 1.65; color: #1e293b;">
+                <div style="display: flex; align-items: flex-start; gap: 10px;">
+                    <span style="font-size: 1.35rem;">👉</span>
+                    <div>
+                        <span style="background: #4f46e5; color: white; font-weight: 800; padding: 2px 10px; border-radius: 8px;">Tính từ (Adjectives)</span> là những từ dùng để chỉ <span style="background: #fde047; color: #78350f; font-weight: 800; padding: 2px 8px; border-radius: 6px;">tính chất, đặc điểm, trạng thái</span> của người, sự vật hoặc hiện tượng.
+                    </div>
+                </div>
+                <div style="display: flex; align-items: flex-start; gap: 10px; padding-top: 10px; border-top: 1.5px dashed #f59e0b;">
+                    <span style="font-size: 1.35rem;">🎯</span>
+                    <div>
+                        <b>Chức năng cốt lõi:</b> <span style="background: #e0e7ff; color: #3730a3; font-weight: 800; padding: 2px 8px; border-radius: 6px;">Miêu tả</span> và <span style="background: #dcfce7; color: #166534; font-weight: 800; padding: 2px 8px; border-radius: 6px;">bổ sung ý nghĩa</span> rõ nét cho <b style="color: #4f46e5;">Danh từ (Noun)</b> hoặc <b style="color: #4f46e5;">Đại từ (Pronoun)</b>.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sức mạnh biến hóa: Trước -> Sau khi thêm Tính từ -->
+            <div>
+                <div style="font-weight: 900; color: #4338ca; font-size: 1.05rem; margin-bottom: 10px; display: flex; align-items: center; gap: 6px;">
+                    <span>✨</span> SỨC MẠNH BIẾN HÓA KHI THÊM TÍNH TỪ:
+                </div>
+                <div class="adj-grid-3">
+                    <div class="adj-magic-card" style="border-color: #f9a8d4; background: linear-gradient(180deg, #ffffff 0%, #fdf2f8 100%);">
+                        <div style="font-size: 0.85rem; color: #64748b; font-weight: 700;">👩 Danh từ trơn: <span style="color: #334155;">a girl</span></div>
+                        <div style="text-align: center; color: #ec4899; font-weight: 900;">⬇️ + Tính từ</div>
+                        <div style="background: white; border: 1.5px solid #fbcfe8; border-radius: 10px; padding: 8px 10px; text-align: center;">
+                            <div style="font-size: 1.08rem; font-weight: 800; color: #0f172a;">a <span style="background: #fce7f3; color: #be185d; padding: 1px 7px; border-radius: 6px;">beautiful</span> girl</div>
+                            <div style="font-size: 0.88rem; color: #64748b; margin-top: 2px;">(một cô gái xinh đẹp)</div>
+                        </div>
+                    </div>
+
+                    <div class="adj-magic-card" style="border-color: #93c5fd; background: linear-gradient(180deg, #ffffff 0%, #eff6ff 100%);">
+                        <div style="font-size: 0.85rem; color: #64748b; font-weight: 700;">✈️ Danh từ trơn: <span style="color: #334155;">trips</span></div>
+                        <div style="text-align: center; color: #2563eb; font-weight: 900;">⬇️ + Tính từ</div>
+                        <div style="background: white; border: 1.5px solid #bfdbfe; border-radius: 10px; padding: 8px 10px; text-align: center;">
+                            <div style="font-size: 1.08rem; font-weight: 800; color: #0f172a;"><span style="background: #dbeafe; color: #1d4ed8; padding: 1px 7px; border-radius: 6px;">long</span> trips</div>
+                            <div style="font-size: 0.88rem; color: #64748b; margin-top: 2px;">(những chuyến đi dài)</div>
+                        </div>
+                    </div>
+
+                    <div class="adj-magic-card" style="border-color: #86efac; background: linear-gradient(180deg, #ffffff 0%, #f0fdf4 100%);">
+                        <div style="font-size: 0.85rem; color: #64748b; font-weight: 700;">📄 Danh từ trơn: <span style="color: #334155;">information</span></div>
+                        <div style="text-align: center; color: #16a34a; font-weight: 900;">⬇️ + Tính từ</div>
+                        <div style="background: white; border: 1.5px solid #bbf7d0; border-radius: 10px; padding: 8px 10px; text-align: center;">
+                            <div style="font-size: 1.08rem; font-weight: 800; color: #0f172a;"><span style="background: #dcfce7; color: #15803d; padding: 1px 7px; border-radius: 6px;">useful</span> information</div>
+                            <div style="font-size: 0.88rem; color: #64748b; margin-top: 2px;">(thông tin hữu ích)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 6 Khía cạnh miêu tả -->
+            <div style="background: #f8fafc; border: 1.5px solid #e2e8f0; border-radius: 14px; padding: 14px 16px;">
+                <div style="font-weight: 800; color: #334155; font-size: 0.94rem; margin-bottom: 10px;">🌈 Tính từ giúp bạn miêu tả 6 khía cạnh quen thuộc:</div>
+                <div style="display: flex; flex-wrap: wrap; gap: 8px; font-size: 0.9rem;">
+                    <span style="background: #fce7f3; color: #9d174d; padding: 5px 12px; border-radius: 999px; font-weight: 700;">💖 Cảm xúc: happy, excited</span>
+                    <span style="background: #fef9c3; color: #854d0e; padding: 5px 12px; border-radius: 999px; font-weight: 700;">⭐ Đánh giá: useful, effective</span>
+                    <span style="background: #e0f2fe; color: #075985; padding: 5px 12px; border-radius: 999px; font-weight: 700;">📏 Kích thước: spacious, large</span>
+                    <span style="background: #dcfce7; color: #166534; padding: 5px 12px; border-radius: 999px; font-weight: 700;">😊 Tính cách: friendly, sociable</span>
+                    <span style="background: #ede9fe; color: #5b21b6; padding: 5px 12px; border-radius: 999px; font-weight: 700;">⏱️ Thời đại: modern, traditional</span>
+                    <span style="background: #ffedd5; color: #9a3412; padding: 5px 12px; border-radius: 999px; font-weight: 700;">💰 Chi phí: affordable, costly</span>
+                </div>
+            </div>
+        </div>`
     },
     {
-        title: "2. VỊ TRÍ CỦA TÍNH TỪ",
+        title: "📍 2. VỊ TRÍ CỦA TÍNH TỪ (2 VỊ TRÍ VÀNG)",
         content: `
-            <div style="display: flex; flex-direction: column; gap: 20px;">
-                <div style="background: #ffffff; border: 1.5px solid #e2e8f0; border-radius: 14px; padding: 22px 24px; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
-                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 14px;">
-                        <div style="width: 40px; height: 40px; background: #e0e7ff; color: #4f46e5; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.25rem;">
-                            1
-                        </div>
-                        <h3 style="margin: 0; color: #1e293b; font-size: 1.25rem; font-weight: 800;">
-                            <span style="background: #e0e7ff; color: #3730a3; padding: 2px 10px; border-radius: 6px;">Tính từ</span> + <span style="background: #fef08a; color: #854d0e; padding: 2px 10px; border-radius: 6px;">Danh từ</span> <span style="color: #64748b; font-size: 1rem; font-weight: 600;">(Adj + Noun)</span>
-                        </h3>
-                    </div>
-                    <p style="color: #334155; margin-bottom: 14px; font-size: 1.1rem; line-height: 1.7;">
-                        👉 Tính từ đứng <span style="background: #fef08a; color: #854d0e; font-weight: 800; padding: 2px 8px; border-radius: 6px;">TRƯỚC</span> danh từ để <b>miêu tả</b> và <b>xác định đặc điểm</b> cho danh từ đó.
-                    </p>
-                    <div style="display: flex; flex-wrap: wrap; gap: 10px;">
-                        <span style="background: #f8fafc; border: 1.5px solid #cbd5e1; padding: 8px 14px; border-radius: 10px; color: #1e293b; font-size: 1.05rem; box-shadow: 0 1px 3px rgba(0,0,0,0.04);"><b style="color: var(--primary-color); text-decoration: underline;">comfortable</b> rooms (phòng tiện nghi)</span>
-                        <span style="background: #f8fafc; border: 1.5px solid #cbd5e1; padding: 8px 14px; border-radius: 10px; color: #1e293b; font-size: 1.05rem; box-shadow: 0 1px 3px rgba(0,0,0,0.04);">a <b style="color: var(--primary-color); text-decoration: underline;">friendly</b> friend (người bạn thân thiện)</span>
-                        <span style="background: #f8fafc; border: 1.5px solid #cbd5e1; padding: 8px 14px; border-radius: 10px; color: #1e293b; font-size: 1.05rem; box-shadow: 0 1px 3px rgba(0,0,0,0.04);"><b style="color: var(--primary-color); text-decoration: underline;">private</b> information (thông tin riêng tư)</span>
+        <div class="adj-wrap">
+
+            <!-- VỊ TRÍ 1 -->
+            <div class="mv-rule-card" style="border-color: #93c5fd; background: linear-gradient(180deg, #ffffff 0%, #eff6ff 100%);">
+                <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 14px; flex-wrap: wrap;">
+                    <div style="background: linear-gradient(135deg, #2563eb, #4f46e5); color: white; width: 42px; height: 42px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: 900; font-size: 1.35rem; box-shadow: 0 3px 10px rgba(37, 99, 235, 0.3); flex-shrink: 0;">1</div>
+                    <div style="font-weight: 900; font-size: 1.2rem; color: #0f172a;">
+                        Đứng <span style="background: #fef08a; color: #854d0e; padding: 2px 10px; border-radius: 8px;">TRƯỚC DANH TỪ</span> để miêu tả đặc điểm
                     </div>
                 </div>
 
-                <div style="background: #ffffff; border: 1.5px solid #e2e8f0; border-radius: 14px; padding: 22px 24px; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
-                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 14px;">
-                        <div style="width: 40px; height: 40px; background: #dcfce7; color: #16a34a; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.25rem;">
-                            2
-                        </div>
-                        <h3 style="margin: 0; color: #1e293b; font-size: 1.25rem; font-weight: 800;">
-                            Chủ ngữ + <span style="background: #dcfce7; color: #166534; padding: 2px 10px; border-radius: 6px;">Động từ liên kết (Linking Verbs)</span> + <span style="background: #e0e7ff; color: #3730a3; padding: 2px 10px; border-radius: 6px;">Tính từ</span>
-                        </h3>
+                <!-- Công thức đóng khối -->
+                <div class="adj-formula-bar" style="border-color: #93c5fd; background: white;">
+                    <span class="adj-f-box" style="background: #f1f5f9; color: #475569; border: 1.5px solid #cbd5e1;">(a / an / the / lượng từ)</span>
+                    <span style="font-weight: 900; color: #64748b;">+</span>
+                    <span class="adj-f-box" style="background: #e0e7ff; color: #3730a3; border: 2px solid #818cf8;">🎨 Tính từ (Adj)</span>
+                    <span style="font-weight: 900; color: #64748b;">+</span>
+                    <span class="adj-f-box" style="background: #fef08a; color: #854d0e; border: 2px solid #facc15;">📦 Danh từ (Noun)</span>
+                </div>
+
+                <!-- So sánh ngược với tiếng Việt -->
+                <div style="background: #fffbeb; border: 1.5px dashed #f59e0b; border-radius: 12px; padding: 10px 14px; margin-bottom: 14px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; font-size: 0.96rem;">
+                    <div>⚠️ <b style="color: #b45309;">Nhớ đảo ngược với tiếng Việt:</b> Tiếng Việt nói <i>"phòng thoải mái"</i> ➔ Tiếng Anh đặt <b>Tính từ lên trước</b>!</div>
+                    <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                        <span style="background: #fee2e2; color: #dc2626; padding: 3px 10px; border-radius: 8px; font-weight: 800;">❌ <del>rooms comfortable</del></span>
+                        <span style="background: #dcfce7; color: #15803d; padding: 3px 10px; border-radius: 8px; font-weight: 800;">✅ comfortable rooms</span>
                     </div>
-                    <p style="color: #334155; margin-bottom: 16px; font-size: 1.1rem; line-height: 1.8;">
-                        👉 Tính từ đứng <span style="background: #fef08a; color: #854d0e; font-weight: 800; padding: 2px 8px; border-radius: 6px;">SAU</span> các <b>động từ liên kết</b> (phổ biến nhất là <span style="background: #f3e8ff; color: var(--primary-color); font-weight: 800; padding: 2px 8px; border-radius: 6px;">To Be: am/is/are/was/were</span> và các động từ chỉ cảm giác, trạng thái như <i>seem, feel, look, become, sound, taste, smell...</i>) để miêu tả cho chủ ngữ.
-                    </p>
-                    
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 10px;">
-                        <div style="background: #f8fafc; padding: 10px 16px; border-radius: 8px; border: 1px solid #e2e8f0; font-size: 1.05rem;">
-                            • These rooms <b>are</b> <b style="color: var(--primary-color); text-decoration: underline;">comfortable</b>.<br>
-                            <span style="font-size: 0.95rem; color: #64748b; font-style: italic;">(Những căn phòng này rất thoải mái.)</span>
+                </div>
+
+                <!-- 3 Ví dụ minh họa -->
+                <div class="adj-grid-3">
+                    <div class="adj-ex-chip">
+                        <span style="font-size: 1.65rem;">🛋️</span>
+                        <div>
+                            <div style="font-weight: 800; color: #0f172a;"><span style="color: #4f46e5; background: #e0e7ff; padding: 1px 6px; border-radius: 5px;">comfortable</span> rooms</div>
+                            <div style="font-size: 0.88rem; color: #64748b;">phòng tiện nghi</div>
                         </div>
-                        <div style="background: #f8fafc; padding: 10px 16px; border-radius: 8px; border: 1px solid #e2e8f0; font-size: 1.05rem;">
-                            • My school <b>is</b> <b style="color: var(--primary-color); text-decoration: underline;">spacious</b> and <b style="color: var(--primary-color); text-decoration: underline;">beautiful</b>.<br>
-                            <span style="font-size: 0.95rem; color: #64748b; font-style: italic;">(Trường học của tôi rất rộng rãi và đẹp.)</span>
+                    </div>
+                    <div class="adj-ex-chip">
+                        <span style="font-size: 1.65rem;">🤝</span>
+                        <div>
+                            <div style="font-weight: 800; color: #0f172a;">a <span style="color: #4f46e5; background: #e0e7ff; padding: 1px 6px; border-radius: 5px;">friendly</span> friend</div>
+                            <div style="font-size: 0.88rem; color: #64748b;">người bạn thân thiện</div>
                         </div>
-                        <div style="background: #f8fafc; padding: 10px 16px; border-radius: 8px; border: 1px solid #e2e8f0; font-size: 1.05rem;">
-                            • My new friend <b>is</b> very <b style="color: var(--primary-color); text-decoration: underline;">sociable</b> and <b style="color: var(--primary-color); text-decoration: underline;">humorous</b>.<br>
-                            <span style="font-size: 0.95rem; color: #64748b; font-style: italic;">(Bạn mới của tôi rất hòa đồng và hài hước.)</span>
-                        </div>
-                        <div style="background: #f8fafc; padding: 10px 16px; border-radius: 8px; border: 1px solid #e2e8f0; font-size: 1.05rem;">
-                            • She <b>looks</b> <b style="color: var(--primary-color); text-decoration: underline;">tired</b> after work.<br>
-                            <span style="font-size: 0.95rem; color: #64748b; font-style: italic;">(Cô ấy trông có vẻ mệt mỏi sau giờ làm.)</span>
-                        </div>
-                        <div style="background: #f8fafc; padding: 10px 16px; border-radius: 8px; border: 1px solid #e2e8f0; font-size: 1.05rem;">
-                            • This food <b>tastes</b> <b style="color: var(--primary-color); text-decoration: underline;">delicious</b>.<br>
-                            <span style="font-size: 0.95rem; color: #64748b; font-style: italic;">(Món ăn này có vị rất ngon.)</span>
+                    </div>
+                    <div class="adj-ex-chip">
+                        <span style="font-size: 1.65rem;">🔒</span>
+                        <div>
+                            <div style="font-weight: 800; color: #0f172a;"><span style="color: #4f46e5; background: #e0e7ff; padding: 1px 6px; border-radius: 5px;">private</span> information</div>
+                            <div style="font-size: 0.88rem; color: #64748b;">thông tin riêng tư</div>
                         </div>
                     </div>
                 </div>
             </div>
-        `
-    }
-,
+
+            <!-- VỊ TRÍ 2 -->
+            <div class="mv-rule-card" style="border-color: #86efac; background: linear-gradient(180deg, #ffffff 0%, #f0fdf4 100%);">
+                <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 14px; flex-wrap: wrap;">
+                    <div style="background: linear-gradient(135deg, #059669, #10b981); color: white; width: 42px; height: 42px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: 900; font-size: 1.35rem; box-shadow: 0 3px 10px rgba(16, 185, 129, 0.3); flex-shrink: 0;">2</div>
+                    <div style="font-weight: 900; font-size: 1.2rem; color: #0f172a;">
+                        Đứng <span style="background: #fef08a; color: #854d0e; padding: 2px 10px; border-radius: 8px;">SAU ĐỘNG TỪ LIÊN KẾT</span> để miêu tả Chủ ngữ
+                    </div>
+                </div>
+
+                <!-- Công thức đóng khối -->
+                <div class="adj-formula-bar" style="border-color: #86efac; background: white;">
+                    <span class="adj-f-box" style="background: #e0f2fe; color: #0c4a6e; border: 2px solid #7dd3fc;">👤 Chủ ngữ (S)</span>
+                    <span style="font-weight: 900; color: #64748b;">+</span>
+                    <span class="adj-f-box" style="background: #dcfce7; color: #166534; border: 2px solid #4ade80;">🔗 Linking Verb (Be / look / feel...)</span>
+                    <span style="font-weight: 900; color: #64748b;">+</span>
+                    <span class="adj-f-box" style="background: #e0e7ff; color: #3730a3; border: 2px solid #818cf8;">🎨 Tính từ (Adj)</span>
+                </div>
+
+                <!-- 2 Nhóm Linking Verbs -->
+                <div class="adj-grid-2" style="margin-bottom: 14px;">
+                    <div style="background: white; border: 1.5px solid #bbf7d0; border-radius: 12px; padding: 10px 14px;">
+                        <div style="font-weight: 800; color: #15803d; font-size: 0.92rem; margin-bottom: 6px;">👑 Phổ biến nhất — TO BE:</div>
+                        <div style="display: flex; flex-wrap: wrap; gap: 6px;">
+                            <span style="background: #dcfce7; color: #166534; padding: 3px 10px; border-radius: 999px; font-weight: 800; font-size: 0.9rem;">am</span>
+                            <span style="background: #dcfce7; color: #166534; padding: 3px 10px; border-radius: 999px; font-weight: 800; font-size: 0.9rem;">is</span>
+                            <span style="background: #dcfce7; color: #166534; padding: 3px 10px; border-radius: 999px; font-weight: 800; font-size: 0.9rem;">are</span>
+                            <span style="background: #dcfce7; color: #166534; padding: 3px 10px; border-radius: 999px; font-weight: 800; font-size: 0.9rem;">was</span>
+                            <span style="background: #dcfce7; color: #166534; padding: 3px 10px; border-radius: 999px; font-weight: 800; font-size: 0.9rem;">were</span>
+                        </div>
+                    </div>
+                    <div style="background: white; border: 1.5px solid #ddd6fe; border-radius: 12px; padding: 10px 14px;">
+                        <div style="font-weight: 800; color: #6d28d9; font-size: 0.92rem; margin-bottom: 6px;">🎭 Động từ giác quan / trạng thái:</div>
+                        <div style="display: flex; flex-wrap: wrap; gap: 6px; font-size: 0.88rem;">
+                            <span style="background: #f3e8ff; color: #581c87; padding: 3px 9px; border-radius: 999px; font-weight: 700;">look (trông)</span>
+                            <span style="background: #f3e8ff; color: #581c87; padding: 3px 9px; border-radius: 999px; font-weight: 700;">feel (cảm thấy)</span>
+                            <span style="background: #f3e8ff; color: #581c87; padding: 3px 9px; border-radius: 999px; font-weight: 700;">seem (dường như)</span>
+                            <span style="background: #f3e8ff; color: #581c87; padding: 3px 9px; border-radius: 999px; font-weight: 700;">become (trở nên)</span>
+                            <span style="background: #f3e8ff; color: #581c87; padding: 3px 9px; border-radius: 999px; font-weight: 700;">sound / taste / smell</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5 Ví dụ trực quan -->
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 10px;">
+                    <div class="adj-ex-chip">
+                        <span style="font-size: 1.5rem;">🛋️</span>
+                        <div>
+                            <div style="font-size: 1rem;">These rooms <b style="color: #16a34a;">are</b> <b style="color: #4f46e5; background: #e0e7ff; padding: 1px 6px; border-radius: 5px;">comfortable</b>.</div>
+                            <div style="font-size: 0.86rem; color: #64748b; font-style: italic;">Những căn phòng này rất thoải mái.</div>
+                        </div>
+                    </div>
+                    <div class="adj-ex-chip">
+                        <span style="font-size: 1.5rem;">🏫</span>
+                        <div>
+                            <div style="font-size: 1rem;">My school <b style="color: #16a34a;">is</b> <b style="color: #4f46e5; background: #e0e7ff; padding: 1px 6px; border-radius: 5px;">spacious</b> and <b style="color: #4f46e5; background: #e0e7ff; padding: 1px 6px; border-radius: 5px;">beautiful</b>.</div>
+                            <div style="font-size: 0.86rem; color: #64748b; font-style: italic;">Trường học của tôi rất rộng rãi và đẹp.</div>
+                        </div>
+                    </div>
+                    <div class="adj-ex-chip">
+                        <span style="font-size: 1.5rem;">😄</span>
+                        <div>
+                            <div style="font-size: 1rem;">My new friend <b style="color: #16a34a;">is</b> very <b style="color: #4f46e5; background: #e0e7ff; padding: 1px 6px; border-radius: 5px;">sociable</b> and <b style="color: #4f46e5; background: #e0e7ff; padding: 1px 6px; border-radius: 5px;">humorous</b>.</div>
+                            <div style="font-size: 0.86rem; color: #64748b; font-style: italic;">Bạn mới của tôi rất hòa đồng và hài hước.</div>
+                        </div>
+                    </div>
+                    <div class="adj-ex-chip">
+                        <span style="font-size: 1.5rem;">😮‍💨</span>
+                        <div>
+                            <div style="font-size: 1rem;">She <b style="color: #7c3aed;">looks</b> <b style="color: #4f46e5; background: #e0e7ff; padding: 1px 6px; border-radius: 5px;">tired</b> after work.</div>
+                            <div style="font-size: 0.86rem; color: #64748b; font-style: italic;">Cô ấy trông có vẻ mệt mỏi sau giờ làm.</div>
+                        </div>
+                    </div>
+                    <div class="adj-ex-chip">
+                        <span style="font-size: 1.5rem;">🍲</span>
+                        <div>
+                            <div style="font-size: 1rem;">This food <b style="color: #7c3aed;">tastes</b> <b style="color: #4f46e5; background: #e0e7ff; padding: 1px 6px; border-radius: 5px;">delicious</b>.</div>
+                            <div style="font-size: 0.86rem; color: #64748b; font-style: italic;">Món ăn này có vị rất ngon.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Thanh cảnh báo bẫy VSTEP -->
+            <div style="background: #fff1f2; border: 2px dashed #fb7185; border-radius: 14px; padding: 12px 16px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; font-size: 0.96rem;">
+                <div>🚨 <b style="color: #be123c;">Bẫy hay mất điểm:</b> Sau <b>To Be / Linking Verbs</b> dùng <b>TÍNH TỪ</b> (không dùng trạng từ <i>-ly</i> hay danh từ).</div>
+                <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                    <span style="background: #fee2e2; color: #dc2626; padding: 3px 10px; border-radius: 8px; font-weight: 800;">❌ This food tastes <del>deliciously</del>.</span>
+                    <span style="background: #dcfce7; color: #15803d; padding: 3px 10px; border-radius: 8px; font-weight: 800;">✅ This food tastes delicious.</span>
+                </div>
+            </div>
+        </div>`
+    },
     {
-        title: '3. NHẬN DIỆN QUA HẬU TỐ',
-        content: `<p style="margin-bottom: 16px; color: var(--text-main);">Một số đuôi (hậu tố) gần như mặc định là tính từ. Dưới đây là <b>29 hậu tố phổ biến nhất</b> được chia thành 6 nhóm lớn. Bấm vào từng nhóm để xem chi tiết các từ vựng thường gặp trong VSTEP:</p>
+        title: "🎭 3. PHÂN BIỆT NHANH TÍNH TỪ ĐUÔI -ED & -ING",
+        content: `
+        <div class="adj-wrap">
+            <div class="adj-grid-2">
+                <!-- Cột -ING -->
+                <div class="cu-card" style="border-color: #fbbf24; background: linear-gradient(180deg, #ffffff 0%, #fffbeb 100%);">
+                    <div class="cu-card-head" style="background: linear-gradient(135deg, #d97706 0%, #f59e0b 100%);">
+                        <div style="font-weight: 900; font-size: 1.15rem;">⚡ TÍNH TỪ ĐUÔI <span style="background: rgba(255,255,255,0.25); padding: 1px 10px; border-radius: 8px;">-ING</span></div>
+                        <div style="font-size: 0.9rem; opacity: 0.95;">Chỉ bản chất sự vật / vật GÂY RA cảm xúc</div>
+                    </div>
+                    <div class="cu-card-body">
+                        <div style="display: grid; gap: 9px; font-size: 0.98rem;">
+                            <div style="background: white; border: 1.5px solid #fde68a; border-radius: 10px; padding: 9px 12px;">
+                                🎬 The movie is <b style="color: #b45309; background: #fef08a; padding: 1px 6px; border-radius: 5px;">boring</b>.<br>
+                                <span style="font-size: 0.86rem; color: #64748b;">(Bộ phim thật nhàm chán — gây chán)</span>
+                            </div>
+                            <div style="background: white; border: 1.5px solid #fde68a; border-radius: 10px; padding: 9px 12px;">
+                                📚 This lesson is <b style="color: #b45309; background: #fef08a; padding: 1px 6px; border-radius: 5px;">interesting</b>.<br>
+                                <span style="font-size: 0.86rem; color: #64748b;">(Bài học này rất thú vị — gây hứng thú)</span>
+                            </div>
+                            <div style="background: white; border: 1.5px solid #fde68a; border-radius: 10px; padding: 9px 12px;">
+                                💼 Working all day is <b style="color: #b45309; background: #fef08a; padding: 1px 6px; border-radius: 5px;">tiring</b>.<br>
+                                <span style="font-size: 0.86rem; color: #64748b;">(Làm việc cả ngày thật gây mệt mỏi)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-<div style="margin-bottom: 24px;">
-    <a href="HẬU TỐ TÍNH TỪ - CHỦ ĐIỂM 02 - WRITING.pdf" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: var(--primary-color); color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.2s;">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-        Tải xuống bản gốc PDF
-    </a>
-</div>
-
-<div class="suffix-accordions">
-
-    <details class="suffix-group" style="margin-bottom: 12px; border: 1px solid #cbd5e1; border-radius: 8px; overflow: hidden; background: white; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
-        <summary style="background: #f8fafc; padding: 16px 20px; font-weight: 800; color: #1e293b; font-size: 1.15rem; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; border-left: 4px solid #ef4444;">
-            I. HẬU TỐ TÍNH TỪ CHỈ TÍNH CHẤT – ĐẶC ĐIỂM <span style="font-size: 0.9rem; color: #64748b;">▼</span>
-        </summary>
-        <div style="padding: 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; border-top: 1px solid #cbd5e1; background: #fafafa;">
-
-            <div style="background: #fef2f2; border: 1px solid #fecaca; border-radius: 8px; padding: 16px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
-                <div style="font-weight: 700; color: #ef4444; font-size: 1.1rem; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px dashed #fecaca;">1. -ful (đầy, có nhiều)</div>
-                <ul style="list-style-type: none; padding: 0; margin: 0; line-height: 1.8; color: #334155; font-size: 1.05rem;">
-                    <li>• <b>useful</b> – <span style="color: #64748b;">hữu ích</span></li>
-                    <li>• <b>careful</b> – <span style="color: #64748b;">cẩn thận</span></li>
-                </ul>
+                <!-- Cột -ED -->
+                <div class="cu-card" style="border-color: #f472b6; background: linear-gradient(180deg, #ffffff 0%, #fdf2f8 100%);">
+                    <div class="cu-card-head" style="background: linear-gradient(135deg, #db2777 0%, #ec4899 100%);">
+                        <div style="font-weight: 900; font-size: 1.15rem;">😊 TÍNH TỪ ĐUÔI <span style="background: rgba(255,255,255,0.25); padding: 1px 10px; border-radius: 8px;">-ED</span></div>
+                        <div style="font-size: 0.9rem; opacity: 0.95;">Chỉ CẢM NHẬN của con người (bị tác động)</div>
+                    </div>
+                    <div class="cu-card-body">
+                        <div style="display: grid; gap: 9px; font-size: 0.98rem;">
+                            <div style="background: white; border: 1.5px solid #fbcfe8; border-radius: 10px; padding: 9px 12px;">
+                                🥱 I feel <b style="color: #be185d; background: #fce7f3; padding: 1px 6px; border-radius: 5px;">bored</b> with the movie.<br>
+                                <span style="font-size: 0.86rem; color: #64748b;">(Tôi cảm thấy chán bộ phim đó)</span>
+                            </div>
+                            <div style="background: white; border: 1.5px solid #fbcfe8; border-radius: 10px; padding: 9px 12px;">
+                                🤩 Students are <b style="color: #be185d; background: #fce7f3; padding: 1px 6px; border-radius: 5px;">interested</b> in the lesson.<br>
+                                <span style="font-size: 0.86rem; color: #64748b;">(Học sinh cảm thấy hứng thú với bài học)</span>
+                            </div>
+                            <div style="background: white; border: 1.5px solid #fbcfe8; border-radius: 10px; padding: 9px 12px;">
+                                😮‍💨 She looks <b style="color: #be185d; background: #fce7f3; padding: 1px 6px; border-radius: 5px;">tired</b> after work.<br>
+                                <span style="font-size: 0.86rem; color: #64748b;">(Cô ấy cảm thấy mệt mỏi sau giờ làm)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <div style="background: #fef2f2; border: 1px solid #fecaca; border-radius: 8px; padding: 16px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
-                <div style="font-weight: 700; color: #ef4444; font-size: 1.1rem; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px dashed #fecaca;">2. -less (không có, thiếu)</div>
-                <ul style="list-style-type: none; padding: 0; margin: 0; line-height: 1.8; color: #334155; font-size: 1.05rem;">
-                    <li>• <b>useless</b> – <span style="color: #64748b;">vô dụng</span></li>
-                    <li>• <b>careless</b> – <span style="color: #64748b;">bất cẩn</span></li>
-                </ul>
+            <!-- Cặp từ hay gặp -->
+            <div style="background: #f8fafc; border: 1.5px solid #e2e8f0; border-radius: 14px; padding: 12px 16px; display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 8px; font-size: 0.92rem;">
+                <span style="font-weight: 800; color: #334155;">🔥 Các cặp hay thi VSTEP:</span>
+                <span style="background: white; border: 1px solid #cbd5e1; padding: 4px 10px; border-radius: 999px; font-weight: 700;">boring / bored</span>
+                <span style="background: white; border: 1px solid #cbd5e1; padding: 4px 10px; border-radius: 999px; font-weight: 700;">interesting / interested</span>
+                <span style="background: white; border: 1px solid #cbd5e1; padding: 4px 10px; border-radius: 999px; font-weight: 700;">tiring / tired</span>
+                <span style="background: white; border: 1px solid #cbd5e1; padding: 4px 10px; border-radius: 999px; font-weight: 700;">exciting / excited</span>
+                <span style="background: white; border: 1px solid #cbd5e1; padding: 4px 10px; border-radius: 999px; font-weight: 700;">surprising / surprised</span>
+                <span style="background: white; border: 1px solid #cbd5e1; padding: 4px 10px; border-radius: 999px; font-weight: 700;">disappointing / disappointed</span>
+            </div>
+        </div>`
+    },
+    {
+        title: "🔍 4. NHẬN DIỆN TÍNH TỪ QUA 29 HẬU TỐ",
+        content: `
+        <div class="adj-wrap">
+            <div style="background: linear-gradient(135deg, #f0f9ff 0%, #eff6ff 100%); border: 1.5px solid #bae6fd; border-radius: 14px; padding: 14px 18px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;">
+                <div style="color: #0f172a; font-size: 1rem; line-height: 1.55; flex: 1; min-width: 240px;">
+                    Một số đuôi (hậu tố) gần như mặc định là <b>Tính từ</b>. Dưới đây là <b>29 hậu tố phổ biến nhất</b> chia thành <b>6 nhóm màu trực quan</b> — bấm vào từng nhóm để xem từ vựng VSTEP:
+                </div>
+                <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+                    <button type="button" onclick="window.toggleAllAdjSuffixes(true)" style="background: white; color: #0284c7; border: 1.5px solid #38bdf8; padding: 8px 14px; border-radius: 20px; font-weight: 700; font-size: 0.88rem; cursor: pointer;">📂 Mở tất cả</button>
+                    <button type="button" onclick="window.toggleAllAdjSuffixes(false)" style="background: white; color: #64748b; border: 1.5px solid #cbd5e1; padding: 8px 14px; border-radius: 20px; font-weight: 700; font-size: 0.88rem; cursor: pointer;">📁 Thu gọn</button>
+                    <a href="HẬU TỐ TÍNH TỪ - CHỦ ĐIỂM 02 - WRITING.pdf" target="_blank" style="display: inline-flex; align-items: center; gap: 6px; background: var(--primary-color); color: white; padding: 8px 16px; border-radius: 20px; text-decoration: none; font-weight: 700; font-size: 0.88rem; box-shadow: 0 3px 8px rgba(79,70,229,0.25);">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                        Tải PDF gốc
+                    </a>
+                </div>
             </div>
 
-            <div style="background: #fef2f2; border: 1px solid #fecaca; border-radius: 8px; padding: 16px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
-                <div style="font-weight: 700; color: #ef4444; font-size: 1.1rem; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px dashed #fecaca;">3. -ous (có tính chất)</div>
-                <ul style="list-style-type: none; padding: 0; margin: 0; line-height: 1.8; color: #334155; font-size: 1.05rem;">
-                    <li>• <b>dangerous</b> – <span style="color: #64748b;">nguy hiểm</span></li>
-                    <li>• <b>famous</b> – <span style="color: #64748b;">nổi tiếng</span></li>
-                </ul>
-            </div>
-            
-            <div style="background: #fef2f2; border: 1px solid #fecaca; border-radius: 8px; padding: 16px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
-                <div style="font-weight: 700; color: #ef4444; font-size: 1.1rem; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px dashed #fecaca;">4. -y (có đặc điểm)</div>
-                <ul style="list-style-type: none; padding: 0; margin: 0; line-height: 1.8; color: #334155; font-size: 1.05rem;">
-                    <li>• <b>healthy</b> – <span style="color: #64748b;">khỏe mạnh</span></li>
-                    <li>• <b>rainy</b> – <span style="color: #64748b;">nhiều mưa</span></li>
-                </ul>
-            </div>
+            <div class="suffix-accordions" id="adj-suffix-accordions">
 
-            <div style="background: #fef2f2; border: 1px solid #fecaca; border-radius: 8px; padding: 16px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
-                <div style="font-weight: 700; color: #ef4444; font-size: 1.1rem; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px dashed #fecaca;">5. -ly (mang đặc điểm)</div>
-                <ul style="list-style-type: none; padding: 0; margin: 0; line-height: 1.8; color: #334155; font-size: 1.05rem;">
-                    <li>• <b>friendly</b> – <span style="color: #64748b;">thân thiện</span></li>
-                    <li>• <b>costly</b> – <span style="color: #64748b;">đắt đỏ</span></li>
-                </ul>
-            </div>
+                <!-- NHÓM I -->
+                <details class="adj-suffix-group" style="border-color: #fca5a5;" open>
+                    <summary class="adj-suffix-summary" style="background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%); color: #991b1b;">
+                        <span style="display: flex; align-items: center; gap: 8px;"><span>🔥</span> I. HẬU TỐ CHỈ TÍNH CHẤT – ĐẶC ĐIỂM</span>
+                        <span style="background: #ef4444; color: white; font-size: 0.8rem; padding: 3px 10px; border-radius: 999px;">6 hậu tố ▼</span>
+                    </summary>
+                    <div class="adj-suffix-cards">
+                        <div class="adj-suf-tile" style="border-color: #fecaca;">
+                            <div class="adj-suf-head"><span class="adj-suf-pill" style="background: #fee2e2; color: #dc2626;">1. -ful</span><span class="adj-suf-mean">đầy, có nhiều</span></div>
+                            <div class="adj-word-row"><span>use<b style="color: #dc2626;">ful</b></span><span style="color: #64748b; font-size: 0.86rem;">hữu ích</span></div>
+                            <div class="adj-word-row"><span>care<b style="color: #dc2626;">ful</b></span><span style="color: #64748b; font-size: 0.86rem;">cẩn thận</span></div>
+                        </div>
+                        <div class="adj-suf-tile" style="border-color: #fecaca;">
+                            <div class="adj-suf-head"><span class="adj-suf-pill" style="background: #fee2e2; color: #dc2626;">2. -less</span><span class="adj-suf-mean">không có, thiếu</span></div>
+                            <div class="adj-word-row"><span>use<b style="color: #dc2626;">less</b></span><span style="color: #64748b; font-size: 0.86rem;">vô dụng</span></div>
+                            <div class="adj-word-row"><span>care<b style="color: #dc2626;">less</b></span><span style="color: #64748b; font-size: 0.86rem;">bất cẩn</span></div>
+                        </div>
+                        <div class="adj-suf-tile" style="border-color: #fecaca;">
+                            <div class="adj-suf-head"><span class="adj-suf-pill" style="background: #fee2e2; color: #dc2626;">3. -ous</span><span class="adj-suf-mean">có tính chất</span></div>
+                            <div class="adj-word-row"><span>danger<b style="color: #dc2626;">ous</b></span><span style="color: #64748b; font-size: 0.86rem;">nguy hiểm</span></div>
+                            <div class="adj-word-row"><span>fam<b style="color: #dc2626;">ous</b></span><span style="color: #64748b; font-size: 0.86rem;">nổi tiếng</span></div>
+                        </div>
+                        <div class="adj-suf-tile" style="border-color: #fecaca;">
+                            <div class="adj-suf-head"><span class="adj-suf-pill" style="background: #fee2e2; color: #dc2626;">4. -y</span><span class="adj-suf-mean">có đặc điểm</span></div>
+                            <div class="adj-word-row"><span>health<b style="color: #dc2626;">y</b></span><span style="color: #64748b; font-size: 0.86rem;">khỏe mạnh</span></div>
+                            <div class="adj-word-row"><span>rain<b style="color: #dc2626;">y</b></span><span style="color: #64748b; font-size: 0.86rem;">nhiều mưa</span></div>
+                        </div>
+                        <div class="adj-suf-tile" style="border-color: #fecaca;">
+                            <div class="adj-suf-head"><span class="adj-suf-pill" style="background: #fee2e2; color: #dc2626;">5. -ly</span><span class="adj-suf-mean">mang đặc điểm</span></div>
+                            <div class="adj-word-row"><span>friend<b style="color: #dc2626;">ly</b></span><span style="color: #64748b; font-size: 0.86rem;">thân thiện</span></div>
+                            <div class="adj-word-row"><span>cost<b style="color: #dc2626;">ly</b></span><span style="color: #64748b; font-size: 0.86rem;">đắt đỏ</span></div>
+                        </div>
+                        <div class="adj-suf-tile" style="border-color: #fecaca;">
+                            <div class="adj-suf-head"><span class="adj-suf-pill" style="background: #fee2e2; color: #dc2626;">6. -some</span><span class="adj-suf-mean">gây cảm giác</span></div>
+                            <div class="adj-word-row"><span>trouble<b style="color: #dc2626;">some</b></span><span style="color: #64748b; font-size: 0.86rem;">phiền phức</span></div>
+                            <div class="adj-word-row"><span>awe<b style="color: #dc2626;">some</b></span><span style="color: #64748b; font-size: 0.86rem;">tuyệt vời</span></div>
+                        </div>
+                    </div>
+                </details>
 
-            <div style="background: #fef2f2; border: 1px solid #fecaca; border-radius: 8px; padding: 16px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
-                <div style="font-weight: 700; color: #ef4444; font-size: 1.1rem; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px dashed #fecaca;">6. -some (gây cảm giác)</div>
-                <ul style="list-style-type: none; padding: 0; margin: 0; line-height: 1.8; color: #334155; font-size: 1.05rem;">
-                    <li>• <b>troublesome</b> – <span style="color: #64748b;">phiền phức</span></li>
-                    <li>• <b>awesome</b> – <span style="color: #64748b;">tuyệt vời</span></li>
-                </ul>
-            </div>
+                <!-- NHÓM II -->
+                <details class="adj-suffix-group" style="border-color: #93c5fd;">
+                    <summary class="adj-suffix-summary" style="background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%); color: #1e40af;">
+                        <span style="display: flex; align-items: center; gap: 8px;"><span>💎</span> II. HẬU TỐ CHỈ KHẢ NĂNG – SỰ ĐÁNG GIÁ</span>
+                        <span style="background: #2563eb; color: white; font-size: 0.8rem; padding: 3px 10px; border-radius: 999px;">3 hậu tố ▼</span>
+                    </summary>
+                    <div class="adj-suffix-cards">
+                        <div class="adj-suf-tile" style="border-color: #bfdbfe;">
+                            <div class="adj-suf-head"><span class="adj-suf-pill" style="background: #dbeafe; color: #1d4ed8;">7. -able</span><span class="adj-suf-mean">có thể</span></div>
+                            <div class="adj-word-row"><span>manage<b style="color: #1d4ed8;">able</b></span><span style="color: #64748b; font-size: 0.86rem;">quản lý được</span></div>
+                            <div class="adj-word-row"><span>afford<b style="color: #1d4ed8;">able</b></span><span style="color: #64748b; font-size: 0.86rem;">chi trả được</span></div>
+                        </div>
+                        <div class="adj-suf-tile" style="border-color: #bfdbfe;">
+                            <div class="adj-suf-head"><span class="adj-suf-pill" style="background: #dbeafe; color: #1d4ed8;">8. -ible</span><span class="adj-suf-mean">có thể</span></div>
+                            <div class="adj-word-row"><span>poss<b style="color: #1d4ed8;">ible</b></span><span style="color: #64748b; font-size: 0.86rem;">có thể xảy ra</span></div>
+                            <div class="adj-word-row"><span>respons<b style="color: #1d4ed8;">ible</b></span><span style="color: #64748b; font-size: 0.86rem;">có trách nhiệm</span></div>
+                        </div>
+                        <div class="adj-suf-tile" style="border-color: #bfdbfe;">
+                            <div class="adj-suf-head"><span class="adj-suf-pill" style="background: #dbeafe; color: #1d4ed8;">9. -worthy</span><span class="adj-suf-mean">đáng</span></div>
+                            <div class="adj-word-row"><span>trust<b style="color: #1d4ed8;">worthy</b></span><span style="color: #64748b; font-size: 0.86rem;">đáng tin cậy</span></div>
+                            <div class="adj-word-row"><span>note<b style="color: #1d4ed8;">worthy</b></span><span style="color: #64748b; font-size: 0.86rem;">đáng chú ý</span></div>
+                        </div>
+                    </div>
+                </details>
 
-        </div>
-    </details>
+                <!-- NHÓM III -->
+                <details class="adj-suffix-group" style="border-color: #c4b5fd;">
+                    <summary class="adj-suffix-summary" style="background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%); color: #5b21b6;">
+                        <span style="display: flex; align-items: center; gap: 8px;"><span>🏛️</span> III. HẬU TỐ CHỈ SỰ LIÊN QUAN – LĨNH VỰC</span>
+                        <span style="background: #7c3aed; color: white; font-size: 0.8rem; padding: 3px 10px; border-radius: 999px;">8 hậu tố ▼</span>
+                    </summary>
+                    <div class="adj-suffix-cards">
+                        <div class="adj-suf-tile" style="border-color: #ddd6fe;">
+                            <div class="adj-suf-head"><span class="adj-suf-pill" style="background: #ede9fe; color: #6d28d9;">10. -al</span><span class="adj-suf-mean">thuộc về</span></div>
+                            <div class="adj-word-row"><span>cultur<b style="color: #6d28d9;">al</b></span><span style="color: #64748b; font-size: 0.86rem;">thuộc văn hóa</span></div>
+                            <div class="adj-word-row"><span>nation<b style="color: #6d28d9;">al</b></span><span style="color: #64748b; font-size: 0.86rem;">thuộc quốc gia</span></div>
+                        </div>
+                        <div class="adj-suf-tile" style="border-color: #ddd6fe;">
+                            <div class="adj-suf-head"><span class="adj-suf-pill" style="background: #ede9fe; color: #6d28d9;">11. -ial</span><span class="adj-suf-mean">liên quan đến</span></div>
+                            <div class="adj-word-row"><span>offic<b style="color: #6d28d9;">ial</b></span><span style="color: #64748b; font-size: 0.86rem;">chính thức</span></div>
+                            <div class="adj-word-row"><span>industr<b style="color: #6d28d9;">ial</b></span><span style="color: #64748b; font-size: 0.86rem;">thuộc công nghiệp</span></div>
+                        </div>
+                        <div class="adj-suf-tile" style="border-color: #ddd6fe;">
+                            <div class="adj-suf-head"><span class="adj-suf-pill" style="background: #ede9fe; color: #6d28d9;">12. -ical</span><span class="adj-suf-mean">mang tính</span></div>
+                            <div class="adj-word-row"><span>polit<b style="color: #6d28d9;">ical</b></span><span style="color: #64748b; font-size: 0.86rem;">chính trị</span></div>
+                            <div class="adj-word-row"><span>histor<b style="color: #6d28d9;">ical</b></span><span style="color: #64748b; font-size: 0.86rem;">thuộc lịch sử</span></div>
+                        </div>
+                        <div class="adj-suf-tile" style="border-color: #ddd6fe;">
+                            <div class="adj-suf-head"><span class="adj-suf-pill" style="background: #ede9fe; color: #6d28d9;">13. -ary</span><span class="adj-suf-mean">liên quan</span></div>
+                            <div class="adj-word-row"><span>prim<b style="color: #6d28d9;">ary</b></span><span style="color: #64748b; font-size: 0.86rem;">chính, chủ yếu</span></div>
+                            <div class="adj-word-row"><span>tempor<b style="color: #6d28d9;">ary</b></span><span style="color: #64748b; font-size: 0.86rem;">tạm thời</span></div>
+                        </div>
+                        <div class="adj-suf-tile" style="border-color: #ddd6fe;">
+                            <div class="adj-suf-head"><span class="adj-suf-pill" style="background: #ede9fe; color: #6d28d9;">14. -ory</span><span class="adj-suf-mean">có chức năng</span></div>
+                            <div class="adj-word-row"><span>compuls<b style="color: #6d28d9;">ory</b></span><span style="color: #64748b; font-size: 0.86rem;">bắt buộc</span></div>
+                            <div class="adj-word-row"><span>satisfact<b style="color: #6d28d9;">ory</b></span><span style="color: #64748b; font-size: 0.86rem;">đạt yêu cầu</span></div>
+                        </div>
+                        <div class="adj-suf-tile" style="border-color: #ddd6fe;">
+                            <div class="adj-suf-head"><span class="adj-suf-pill" style="background: #ede9fe; color: #6d28d9;">15. -ic</span><span class="adj-suf-mean">mang tính</span></div>
+                            <div class="adj-word-row"><span>econom<b style="color: #6d28d9;">ic</b></span><span style="color: #64748b; font-size: 0.86rem;">thuộc kinh tế</span></div>
+                            <div class="adj-word-row"><span>scientif<b style="color: #6d28d9;">ic</b></span><span style="color: #64748b; font-size: 0.86rem;">thuộc khoa học</span></div>
+                        </div>
+                        <div class="adj-suf-tile" style="border-color: #ddd6fe;">
+                            <div class="adj-suf-head"><span class="adj-suf-pill" style="background: #ede9fe; color: #6d28d9;">16. -atic</span><span class="adj-suf-mean">có hệ thống</span></div>
+                            <div class="adj-word-row"><span>autom<b style="color: #6d28d9;">atic</b></span><span style="color: #64748b; font-size: 0.86rem;">tự động</span></div>
+                            <div class="adj-word-row"><span>problem<b style="color: #6d28d9;">atic</b></span><span style="color: #64748b; font-size: 0.86rem;">có vấn đề</span></div>
+                        </div>
+                        <div class="adj-suf-tile" style="border-color: #ddd6fe;">
+                            <div class="adj-suf-head"><span class="adj-suf-pill" style="background: #ede9fe; color: #6d28d9;">17. -etic</span><span class="adj-suf-mean">thuộc lĩnh vực</span></div>
+                            <div class="adj-word-row"><span>gen<b style="color: #6d28d9;">etic</b></span><span style="color: #64748b; font-size: 0.86rem;">thuộc di truyền</span></div>
+                            <div class="adj-word-row"><span>po<b style="color: #6d28d9;">etic</b></span><span style="color: #64748b; font-size: 0.86rem;">mang tính thơ ca</span></div>
+                        </div>
+                    </div>
+                </details>
 
-    <details class="suffix-group" style="margin-bottom: 12px; border: 1px solid #cbd5e1; border-radius: 8px; overflow: hidden; background: white; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
-        <summary style="background: #f8fafc; padding: 16px 20px; font-weight: 800; color: #1e293b; font-size: 1.15rem; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; border-left: 4px solid #3b82f6;">
-            II. HẬU TỐ TÍNH TỪ CHỈ KHẢ NĂNG – SỰ ĐÁNG GIÁ <span style="font-size: 0.9rem; color: #64748b;">▼</span>
-        </summary>
-        <div style="padding: 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; border-top: 1px solid #cbd5e1; background: #fafafa;">
+                <!-- NHÓM IV -->
+                <details class="adj-suffix-group" style="border-color: #6ee7b7;">
+                    <summary class="adj-suffix-summary" style="background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%); color: #065f46;">
+                        <span style="display: flex; align-items: center; gap: 8px;"><span>⚡</span> IV. HẬU TỐ CHỈ TÁC ĐỘNG – TRẠNG THÁI</span>
+                        <span style="background: #059669; color: white; font-size: 0.8rem; padding: 3px 10px; border-radius: 999px;">5 hậu tố ▼</span>
+                    </summary>
+                    <div class="adj-suffix-cards">
+                        <div class="adj-suf-tile" style="border-color: #a7f3d0;">
+                            <div class="adj-suf-head"><span class="adj-suf-pill" style="background: #d1fae5; color: #047857;">18. -ive</span><span class="adj-suf-mean">có xu hướng</span></div>
+                            <div class="adj-word-row"><span>act<b style="color: #047857;">ive</b></span><span style="color: #64748b; font-size: 0.86rem;">năng động</span></div>
+                            <div class="adj-word-row"><span>effect<b style="color: #047857;">ive</b></span><span style="color: #64748b; font-size: 0.86rem;">hiệu quả</span></div>
+                        </div>
+                        <div class="adj-suf-tile" style="border-color: #a7f3d0;">
+                            <div class="adj-suf-head"><span class="adj-suf-pill" style="background: #d1fae5; color: #047857;">19. -ative</span><span class="adj-suf-mean">có chức năng</span></div>
+                            <div class="adj-word-row"><span>cre<b style="color: #047857;">ative</b></span><span style="color: #64748b; font-size: 0.86rem;">sáng tạo</span></div>
+                            <div class="adj-word-row"><span>inform<b style="color: #047857;">ative</b></span><span style="color: #64748b; font-size: 0.86rem;">nhiều thông tin</span></div>
+                        </div>
+                        <div class="adj-suf-tile" style="border-color: #a7f3d0;">
+                            <div class="adj-suf-head"><span class="adj-suf-pill" style="background: #d1fae5; color: #047857;">20. -ent / -ant</span><span class="adj-suf-mean">ở trạng thái</span></div>
+                            <div class="adj-word-row"><span>confid<b style="color: #047857;">ent</b></span><span style="color: #64748b; font-size: 0.86rem;">tự tin</span></div>
+                            <div class="adj-word-row"><span>import<b style="color: #047857;">ant</b></span><span style="color: #64748b; font-size: 0.86rem;">quan trọng</span></div>
+                        </div>
+                        <div class="adj-suf-tile" style="border-color: #a7f3d0;">
+                            <div class="adj-suf-head"><span class="adj-suf-pill" style="background: #d1fae5; color: #047857;">23. -en</span><span class="adj-suf-mean">chất liệu / trạng thái</span></div>
+                            <div class="adj-word-row"><span>brok<b style="color: #047857;">en</b></span><span style="color: #64748b; font-size: 0.86rem;">bị vỡ</span></div>
+                            <div class="adj-word-row"><span>wood<b style="color: #047857;">en</b></span><span style="color: #64748b; font-size: 0.86rem;">bằng gỗ</span></div>
+                        </div>
+                        <div class="adj-suf-tile" style="border-color: #a7f3d0;">
+                            <div class="adj-suf-head"><span class="adj-suf-pill" style="background: #d1fae5; color: #047857;">24. -ish</span><span class="adj-suf-mean">hơi / mang tính</span></div>
+                            <div class="adj-word-row"><span>child<b style="color: #047857;">ish</b></span><span style="color: #64748b; font-size: 0.86rem;">trẻ con</span></div>
+                            <div class="adj-word-row"><span>self<b style="color: #047857;">ish</b></span><span style="color: #64748b; font-size: 0.86rem;">ích kỷ</span></div>
+                        </div>
+                    </div>
+                </details>
 
-            <div style="background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px; padding: 16px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
-                <div style="font-weight: 700; color: #3b82f6; font-size: 1.1rem; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px dashed #bfdbfe;">7. -able (có thể)</div>
-                <ul style="list-style-type: none; padding: 0; margin: 0; line-height: 1.8; color: #334155; font-size: 1.05rem;">
-                    <li>• <b>manageable</b> – <span style="color: #64748b;">có thể quản lý được</span></li>
-                    <li>• <b>affordable</b> – <span style="color: #64748b;">có thể chi trả</span></li>
-                </ul>
-            </div>
+                <!-- NHÓM V -->
+                <details class="adj-suffix-group" style="border-color: #fcd34d;">
+                    <summary class="adj-suffix-summary" style="background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%); color: #92400e;">
+                        <span style="display: flex; align-items: center; gap: 8px;"><span>🎭</span> V. HẬU TỐ CHỈ CẢM XÚC (V-ED / V-ING)</span>
+                        <span style="background: #d97706; color: white; font-size: 0.8rem; padding: 3px 10px; border-radius: 999px;">2 hậu tố ▼</span>
+                    </summary>
+                    <div class="adj-suffix-cards">
+                        <div class="adj-suf-tile" style="border-color: #fde68a;">
+                            <div class="adj-suf-head"><span class="adj-suf-pill" style="background: #fef3c7; color: #b45309;">21. -ed</span><span class="adj-suf-mean">bị tác động / người</span></div>
+                            <div class="adj-word-row"><span>bor<b style="color: #b45309;">ed</b></span><span style="color: #64748b; font-size: 0.86rem;">cảm thấy chán</span></div>
+                            <div class="adj-word-row"><span>tir<b style="color: #b45309;">ed</b></span><span style="color: #64748b; font-size: 0.86rem;">cảm thấy mệt</span></div>
+                        </div>
+                        <div class="adj-suf-tile" style="border-color: #fde68a;">
+                            <div class="adj-suf-head"><span class="adj-suf-pill" style="background: #fef3c7; color: #b45309;">22. -ing</span><span class="adj-suf-mean">gây cảm xúc / vật</span></div>
+                            <div class="adj-word-row"><span>bor<b style="color: #b45309;">ing</b></span><span style="color: #64748b; font-size: 0.86rem;">gây nhàm chán</span></div>
+                            <div class="adj-word-row"><span>tir<b style="color: #b45309;">ing</b></span><span style="color: #64748b; font-size: 0.86rem;">gây mệt mỏi</span></div>
+                        </div>
+                    </div>
+                </details>
 
-            <div style="background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px; padding: 16px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
-                <div style="font-weight: 700; color: #3b82f6; font-size: 1.1rem; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px dashed #bfdbfe;">8. -ible (có thể)</div>
-                <ul style="list-style-type: none; padding: 0; margin: 0; line-height: 1.8; color: #334155; font-size: 1.05rem;">
-                    <li>• <b>possible</b> – <span style="color: #64748b;">có thể xảy ra</span></li>
-                    <li>• <b>responsible</b> – <span style="color: #64748b;">có trách nhiệm</span></li>
-                </ul>
-            </div>
+                <!-- NHÓM VI -->
+                <details class="adj-suffix-group" style="border-color: #67e8f9;">
+                    <summary class="adj-suffix-summary" style="background: linear-gradient(135deg, #ecfeff 0%, #cffafe 100%); color: #155e75;">
+                        <span style="display: flex; align-items: center; gap: 8px;"><span>🌍</span> VI. HẬU TỐ CHỈ QUỐC TỊCH – PHƯƠNG HƯỚNG – PHẠM VI</span>
+                        <span style="background: #0891b2; color: white; font-size: 0.8rem; padding: 3px 10px; border-radius: 999px;">5 hậu tố ▼</span>
+                    </summary>
+                    <div class="adj-suffix-cards">
+                        <div class="adj-suf-tile" style="border-color: #a5f3fc;">
+                            <div class="adj-suf-head"><span class="adj-suf-pill" style="background: #cffafe; color: #0e7490;">25. -ese</span><span class="adj-suf-mean">quốc tịch / ngôn ngữ</span></div>
+                            <div class="adj-word-row"><span>Vietnam<b style="color: #0e7490;">ese</b></span><span style="color: #64748b; font-size: 0.86rem;">người/tiếng Việt</span></div>
+                            <div class="adj-word-row"><span>Chin<b style="color: #0e7490;">ese</b></span><span style="color: #64748b; font-size: 0.86rem;">người/tiếng Trung</span></div>
+                        </div>
+                        <div class="adj-suf-tile" style="border-color: #a5f3fc;">
+                            <div class="adj-suf-head"><span class="adj-suf-pill" style="background: #cffafe; color: #0e7490;">26. -ian / -an</span><span class="adj-suf-mean">thuộc khu vực</span></div>
+                            <div class="adj-word-row"><span>As<b style="color: #0e7490;">ian</b></span><span style="color: #64748b; font-size: 0.86rem;">thuộc châu Á</span></div>
+                            <div class="adj-word-row"><span>Europe<b style="color: #0e7490;">an</b></span><span style="color: #64748b; font-size: 0.86rem;">thuộc châu Âu</span></div>
+                        </div>
+                        <div class="adj-suf-tile" style="border-color: #a5f3fc;">
+                            <div class="adj-suf-head"><span class="adj-suf-pill" style="background: #cffafe; color: #0e7490;">27. -ern</span><span class="adj-suf-mean">thuộc vùng</span></div>
+                            <div class="adj-word-row"><span>mod<b style="color: #0e7490;">ern</b></span><span style="color: #64748b; font-size: 0.86rem;">hiện đại</span></div>
+                            <div class="adj-word-row"><span>west<b style="color: #0e7490;">ern</b></span><span style="color: #64748b; font-size: 0.86rem;">thuộc phương Tây</span></div>
+                        </div>
+                        <div class="adj-suf-tile" style="border-color: #a5f3fc;">
+                            <div class="adj-suf-head"><span class="adj-suf-pill" style="background: #cffafe; color: #0e7490;">28. -proof</span><span class="adj-suf-mean">chống, không ảnh hưởng</span></div>
+                            <div class="adj-word-row"><span>water<b style="color: #0e7490;">proof</b></span><span style="color: #64748b; font-size: 0.86rem;">chống nước</span></div>
+                            <div class="adj-word-row"><span>sound<b style="color: #0e7490;">proof</b></span><span style="color: #64748b; font-size: 0.86rem;">cách âm</span></div>
+                        </div>
+                        <div class="adj-suf-tile" style="border-color: #a5f3fc;">
+                            <div class="adj-suf-head"><span class="adj-suf-pill" style="background: #cffafe; color: #0e7490;">29. -wide / -long</span><span class="adj-suf-mean">phạm vi / thời gian</span></div>
+                            <div class="adj-word-row"><span>world<b style="color: #0e7490;">wide</b></span><span style="color: #64748b; font-size: 0.86rem;">toàn cầu</span></div>
+                            <div class="adj-word-row"><span>life<b style="color: #0e7490;">long</b></span><span style="color: #64748b; font-size: 0.86rem;">suốt đời</span></div>
+                        </div>
+                    </div>
+                </details>
 
-            <div style="background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px; padding: 16px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
-                <div style="font-weight: 700; color: #3b82f6; font-size: 1.1rem; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px dashed #bfdbfe;">9. -worthy (đáng)</div>
-                <ul style="list-style-type: none; padding: 0; margin: 0; line-height: 1.8; color: #334155; font-size: 1.05rem;">
-                    <li>• <b>trustworthy</b> – <span style="color: #64748b;">đáng tin cậy</span></li>
-                    <li>• <b>noteworthy</b> – <span style="color: #64748b;">đáng chú ý</span></li>
-                </ul>
             </div>
-
-        </div>
-    </details>
-
-    <details class="suffix-group" style="margin-bottom: 12px; border: 1px solid #cbd5e1; border-radius: 8px; overflow: hidden; background: white; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
-        <summary style="background: #f8fafc; padding: 16px 20px; font-weight: 800; color: #1e293b; font-size: 1.15rem; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; border-left: 4px solid #8b5cf6;">
-            III. HẬU TỐ TÍNH TỪ CHỈ SỰ LIÊN QUAN – LĨNH VỰC <span style="font-size: 0.9rem; color: #64748b;">▼</span>
-        </summary>
-        <div style="padding: 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; border-top: 1px solid #cbd5e1; background: #fafafa;">
-
-            <div style="background: #f5f3ff; border: 1px solid #ddd6fe; border-radius: 8px; padding: 16px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
-                <div style="font-weight: 700; color: #8b5cf6; font-size: 1.1rem; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px dashed #ddd6fe;">10. -al (thuộc về)</div>
-                <ul style="list-style-type: none; padding: 0; margin: 0; line-height: 1.8; color: #334155; font-size: 1.05rem;">
-                    <li>• <b>cultural</b> – <span style="color: #64748b;">thuộc văn hóa</span></li>
-                    <li>• <b>national</b> – <span style="color: #64748b;">thuộc quốc gia</span></li>
-                </ul>
-            </div>
-
-            <div style="background: #f5f3ff; border: 1px solid #ddd6fe; border-radius: 8px; padding: 16px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
-                <div style="font-weight: 700; color: #8b5cf6; font-size: 1.1rem; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px dashed #ddd6fe;">11. -ial (liên quan đến)</div>
-                <ul style="list-style-type: none; padding: 0; margin: 0; line-height: 1.8; color: #334155; font-size: 1.05rem;">
-                    <li>• <b>official</b> – <span style="color: #64748b;">chính thức</span></li>
-                    <li>• <b>industrial</b> – <span style="color: #64748b;">thuộc công nghiệp</span></li>
-                </ul>
-            </div>
-
-            <div style="background: #f5f3ff; border: 1px solid #ddd6fe; border-radius: 8px; padding: 16px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
-                <div style="font-weight: 700; color: #8b5cf6; font-size: 1.1rem; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px dashed #ddd6fe;">12. -ical (mang tính)</div>
-                <ul style="list-style-type: none; padding: 0; margin: 0; line-height: 1.8; color: #334155; font-size: 1.05rem;">
-                    <li>• <b>political</b> – <span style="color: #64748b;">mang tính chính trị</span></li>
-                    <li>• <b>historical</b> – <span style="color: #64748b;">thuộc lịch sử</span></li>
-                </ul>
-            </div>
-
-            <div style="background: #f5f3ff; border: 1px solid #ddd6fe; border-radius: 8px; padding: 16px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
-                <div style="font-weight: 700; color: #8b5cf6; font-size: 1.1rem; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px dashed #ddd6fe;">13. -ary (liên quan)</div>
-                <ul style="list-style-type: none; padding: 0; margin: 0; line-height: 1.8; color: #334155; font-size: 1.05rem;">
-                    <li>• <b>primary</b> – <span style="color: #64748b;">chính, chủ yếu</span></li>
-                    <li>• <b>temporary</b> – <span style="color: #64748b;">tạm thời</span></li>
-                </ul>
-            </div>
-
-            <div style="background: #f5f3ff; border: 1px solid #ddd6fe; border-radius: 8px; padding: 16px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
-                <div style="font-weight: 700; color: #8b5cf6; font-size: 1.1rem; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px dashed #ddd6fe;">14. -ory (có chức năng)</div>
-                <ul style="list-style-type: none; padding: 0; margin: 0; line-height: 1.8; color: #334155; font-size: 1.05rem;">
-                    <li>• <b>compulsory</b> – <span style="color: #64748b;">bắt buộc</span></li>
-                    <li>• <b>satisfactory</b> – <span style="color: #64748b;">đạt yêu cầu</span></li>
-                </ul>
-            </div>
-            
-            <div style="background: #f5f3ff; border: 1px solid #ddd6fe; border-radius: 8px; padding: 16px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
-                <div style="font-weight: 700; color: #8b5cf6; font-size: 1.1rem; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px dashed #ddd6fe;">15. -ic (mang tính)</div>
-                <ul style="list-style-type: none; padding: 0; margin: 0; line-height: 1.8; color: #334155; font-size: 1.05rem;">
-                    <li>• <b>economic</b> – <span style="color: #64748b;">thuộc kinh tế</span></li>
-                    <li>• <b>scientific</b> – <span style="color: #64748b;">thuộc khoa học</span></li>
-                </ul>
-            </div>
-            
-            <div style="background: #f5f3ff; border: 1px solid #ddd6fe; border-radius: 8px; padding: 16px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
-                <div style="font-weight: 700; color: #8b5cf6; font-size: 1.1rem; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px dashed #ddd6fe;">16. -atic (có hệ thống)</div>
-                <ul style="list-style-type: none; padding: 0; margin: 0; line-height: 1.8; color: #334155; font-size: 1.05rem;">
-                    <li>• <b>automatic</b> – <span style="color: #64748b;">tự động</span></li>
-                    <li>• <b>problematic</b> – <span style="color: #64748b;">có vấn đề</span></li>
-                </ul>
-            </div>
-            
-            <div style="background: #f5f3ff; border: 1px solid #ddd6fe; border-radius: 8px; padding: 16px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
-                <div style="font-weight: 700; color: #8b5cf6; font-size: 1.1rem; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px dashed #ddd6fe;">17. -etic (thuộc lĩnh vực)</div>
-                <ul style="list-style-type: none; padding: 0; margin: 0; line-height: 1.8; color: #334155; font-size: 1.05rem;">
-                    <li>• <b>genetic</b> – <span style="color: #64748b;">thuộc di truyền</span></li>
-                    <li>• <b>poetic</b> – <span style="color: #64748b;">mang tính thơ ca</span></li>
-                </ul>
-            </div>
-
-        </div>
-    </details>
-
-    <details class="suffix-group" style="margin-bottom: 12px; border: 1px solid #cbd5e1; border-radius: 8px; overflow: hidden; background: white; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
-        <summary style="background: #f8fafc; padding: 16px 20px; font-weight: 800; color: #1e293b; font-size: 1.15rem; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; border-left: 4px solid #10b981;">
-            IV. HẬU TỐ TÍNH TỪ CHỈ TÁC ĐỘNG – TRẠNG THÁI <span style="font-size: 0.9rem; color: #64748b;">▼</span>
-        </summary>
-        <div style="padding: 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; border-top: 1px solid #cbd5e1; background: #fafafa;">
-
-            <div style="background: #ecfdf5; border: 1px solid #a7f3d0; border-radius: 8px; padding: 16px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
-                <div style="font-weight: 700; color: #10b981; font-size: 1.1rem; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px dashed #a7f3d0;">18. -ive (có xu hướng)</div>
-                <ul style="list-style-type: none; padding: 0; margin: 0; line-height: 1.8; color: #334155; font-size: 1.05rem;">
-                    <li>• <b>active</b> – <span style="color: #64748b;">năng động</span></li>
-                    <li>• <b>effective</b> – <span style="color: #64748b;">hiệu quả</span></li>
-                </ul>
-            </div>
-
-            <div style="background: #ecfdf5; border: 1px solid #a7f3d0; border-radius: 8px; padding: 16px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
-                <div style="font-weight: 700; color: #10b981; font-size: 1.1rem; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px dashed #a7f3d0;">19. -ative (có chức năng)</div>
-                <ul style="list-style-type: none; padding: 0; margin: 0; line-height: 1.8; color: #334155; font-size: 1.05rem;">
-                    <li>• <b>creative</b> – <span style="color: #64748b;">sáng tạo</span></li>
-                    <li>• <b>informative</b> – <span style="color: #64748b;">mang tính cung cấp thông tin</span></li>
-                </ul>
-            </div>
-            
-            <div style="background: #ecfdf5; border: 1px solid #a7f3d0; border-radius: 8px; padding: 16px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
-                <div style="font-weight: 700; color: #10b981; font-size: 1.1rem; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px dashed #a7f3d0;">20. -ent / -ant (ở trạng thái)</div>
-                <ul style="list-style-type: none; padding: 0; margin: 0; line-height: 1.8; color: #334155; font-size: 1.05rem;">
-                    <li>• <b>confident</b> – <span style="color: #64748b;">tự tin</span></li>
-                    <li>• <b>important</b> – <span style="color: #64748b;">quan trọng</span></li>
-                </ul>
-            </div>
-            
-            <div style="background: #ecfdf5; border: 1px solid #a7f3d0; border-radius: 8px; padding: 16px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
-                <div style="font-weight: 700; color: #10b981; font-size: 1.1rem; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px dashed #a7f3d0;">23. -en (chất liệu/trạng thái)</div>
-                <ul style="list-style-type: none; padding: 0; margin: 0; line-height: 1.8; color: #334155; font-size: 1.05rem;">
-                    <li>• <b>broken</b> – <span style="color: #64748b;">bị vỡ</span></li>
-                    <li>• <b>wooden</b> – <span style="color: #64748b;">bằng gỗ</span></li>
-                </ul>
-            </div>
-            
-            <div style="background: #ecfdf5; border: 1px solid #a7f3d0; border-radius: 8px; padding: 16px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
-                <div style="font-weight: 700; color: #10b981; font-size: 1.1rem; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px dashed #a7f3d0;">24. -ish (hơi / mang tính)</div>
-                <ul style="list-style-type: none; padding: 0; margin: 0; line-height: 1.8; color: #334155; font-size: 1.05rem;">
-                    <li>• <b>childish</b> – <span style="color: #64748b;">trẻ con</span></li>
-                    <li>• <b>selfish</b> – <span style="color: #64748b;">ích kỷ</span></li>
-                </ul>
-            </div>
-
-        </div>
-    </details>
-    
-    <details class="suffix-group" style="margin-bottom: 12px; border: 1px solid #cbd5e1; border-radius: 8px; overflow: hidden; background: white; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
-        <summary style="background: #f8fafc; padding: 16px 20px; font-weight: 800; color: #1e293b; font-size: 1.15rem; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; border-left: 4px solid #f59e0b;">
-            V. HẬU TỐ TÍNH TỪ CHỈ CẢM XÚC (V-ED / V-ING) <span style="font-size: 0.9rem; color: #64748b;">▼</span>
-        </summary>
-        <div style="padding: 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; border-top: 1px solid #cbd5e1; background: #fafafa;">
-
-            <div style="background: #fffbeb; border: 1px solid #fde68a; border-radius: 8px; padding: 16px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
-                <div style="font-weight: 700; color: #f59e0b; font-size: 1.1rem; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px dashed #fde68a;">21. -ed (bị tác động/người)</div>
-                <ul style="list-style-type: none; padding: 0; margin: 0; line-height: 1.8; color: #334155; font-size: 1.05rem;">
-                    <li>• <b>bored</b> – <span style="color: #64748b;">chán</span></li>
-                    <li>• <b>tired</b> – <span style="color: #64748b;">mệt</span></li>
-                </ul>
-            </div>
-
-            <div style="background: #fffbeb; border: 1px solid #fde68a; border-radius: 8px; padding: 16px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
-                <div style="font-weight: 700; color: #f59e0b; font-size: 1.1rem; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px dashed #fde68a;">22. -ing (gây ra cảm xúc/vật)</div>
-                <ul style="list-style-type: none; padding: 0; margin: 0; line-height: 1.8; color: #334155; font-size: 1.05rem;">
-                    <li>• <b>boring</b> – <span style="color: #64748b;">gây chán</span></li>
-                    <li>• <b>tiring</b> – <span style="color: #64748b;">gây mệt</span></li>
-                </ul>
-            </div>
-
-        </div>
-    </details>
-    
-    <details class="suffix-group" style="margin-bottom: 12px; border: 1px solid #cbd5e1; border-radius: 8px; overflow: hidden; background: white; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
-        <summary style="background: #f8fafc; padding: 16px 20px; font-weight: 800; color: #1e293b; font-size: 1.15rem; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; border-left: 4px solid #06b6d4;">
-            VI. HẬU TỐ TÍNH TỪ CHỈ QUỐC TỊCH – PHƯƠNG HƯỚNG – PHẠM VI <span style="font-size: 0.9rem; color: #64748b;">▼</span>
-        </summary>
-        <div style="padding: 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; border-top: 1px solid #cbd5e1; background: #fafafa;">
-
-            <div style="background: #ecfeff; border: 1px solid #a5f3fc; border-radius: 8px; padding: 16px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
-                <div style="font-weight: 700; color: #06b6d4; font-size: 1.1rem; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px dashed #a5f3fc;">25. -ese (quốc tịch / ngôn ngữ)</div>
-                <ul style="list-style-type: none; padding: 0; margin: 0; line-height: 1.8; color: #334155; font-size: 1.05rem;">
-                    <li>• <b>Vietnamese</b> – <span style="color: #64748b;">người/tiếng Việt</span></li>
-                    <li>• <b>Chinese</b> – <span style="color: #64748b;">người/tiếng Trung</span></li>
-                </ul>
-            </div>
-            
-            <div style="background: #ecfeff; border: 1px solid #a5f3fc; border-radius: 8px; padding: 16px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
-                <div style="font-weight: 700; color: #06b6d4; font-size: 1.1rem; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px dashed #a5f3fc;">26. -ian / -an (thuộc khu vực)</div>
-                <ul style="list-style-type: none; padding: 0; margin: 0; line-height: 1.8; color: #334155; font-size: 1.05rem;">
-                    <li>• <b>Asian</b> – <span style="color: #64748b;">thuộc châu Á</span></li>
-                    <li>• <b>European</b> – <span style="color: #64748b;">thuộc châu Âu</span></li>
-                </ul>
-            </div>
-            
-            <div style="background: #ecfeff; border: 1px solid #a5f3fc; border-radius: 8px; padding: 16px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
-                <div style="font-weight: 700; color: #06b6d4; font-size: 1.1rem; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px dashed #a5f3fc;">27. -ern (thuộc vùng)</div>
-                <ul style="list-style-type: none; padding: 0; margin: 0; line-height: 1.8; color: #334155; font-size: 1.05rem;">
-                    <li>• <b>modern</b> – <span style="color: #64748b;">hiện đại</span></li>
-                    <li>• <b>western</b> – <span style="color: #64748b;">thuộc phương Tây</span></li>
-                </ul>
-            </div>
-            
-            <div style="background: #ecfeff; border: 1px solid #a5f3fc; border-radius: 8px; padding: 16px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
-                <div style="font-weight: 700; color: #06b6d4; font-size: 1.1rem; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px dashed #a5f3fc;">28. -proof (chống, không ảnh hưởng)</div>
-                <ul style="list-style-type: none; padding: 0; margin: 0; line-height: 1.8; color: #334155; font-size: 1.05rem;">
-                    <li>• <b>waterproof</b> – <span style="color: #64748b;">chống nước</span></li>
-                    <li>• <b>soundproof</b> – <span style="color: #64748b;">cách âm</span></li>
-                </ul>
-            </div>
-            
-            <div style="background: #ecfeff; border: 1px solid #a5f3fc; border-radius: 8px; padding: 16px; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
-                <div style="font-weight: 700; color: #06b6d4; font-size: 1.1rem; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px dashed #a5f3fc;">29. -wide / -long (phạm vi / thời gian)</div>
-                <ul style="list-style-type: none; padding: 0; margin: 0; line-height: 1.8; color: #334155; font-size: 1.05rem;">
-                    <li>• <b>worldwide</b> – <span style="color: #64748b;">toàn cầu</span></li>
-                    <li>• <b>lifelong</b> – <span style="color: #64748b;">suốt đời</span></li>
-                </ul>
-            </div>
-
-        </div>
-    </details>
-
-</div>`
+        </div>`
     }
 ];
+
+window.toggleAllAdjSuffixes = function(open) {
+    document.querySelectorAll('#adj-suffix-accordions details').forEach(d => {
+        d.open = !!open;
+    });
+};
 
 const adjectivesPracticeBook1 = [
     { q: "một vấn đề nghiêm trọng", a: ["a serious problem", "a severe problem"] },
